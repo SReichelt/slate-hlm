@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @remarks “_s_ is _p_” is shorthand for “_s_ has property _p_.”
+ */
 $"has property"(
   S: %Set(auto = %true),
   p: %Element($Properties(S = {S})),
