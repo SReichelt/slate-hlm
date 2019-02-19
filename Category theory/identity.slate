@@ -1,5 +1,8 @@
 %../../../logics/hlm%
 
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Identity_Morphism
+ */
 $identity(
   U: %Symbol(auto = %true),
   𝓒: %Element(
