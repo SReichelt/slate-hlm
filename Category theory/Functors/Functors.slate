@@ -4,6 +4,8 @@
  * @remarks This definition requires both categories to live in a common universe, which is not strictly required.
  *
  * @references * https://en.wikipedia.org/wiki/Functor
+ *             * http://mathworld.wolfram.com/Functor.html
+ *             * https://proofwiki.org/wiki/Definition:Functor
  *             * https://ncatlab.org/nlab/show/functor
  */
 $Functors(
