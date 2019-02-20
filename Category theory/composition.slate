@@ -1,5 +1,8 @@
 %../../../logics/hlm%
 
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Composition_of_Morphisms
+ */
 $composition(
   U: %Symbol(auto = %true),
   𝓒: %Element(
