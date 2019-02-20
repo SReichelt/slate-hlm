@@ -2,6 +2,8 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Natural_transformation
+ *             * http://mathworld.wolfram.com/NaturalTransformation.html
+ *             * https://proofwiki.org/wiki/Definition:Natural_Transformation
  *             * https://ncatlab.org/nlab/show/natural+transformation
  */
 $"Natural transformations"(
