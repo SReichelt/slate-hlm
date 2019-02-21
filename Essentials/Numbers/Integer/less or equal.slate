@@ -47,11 +47,9 @@ $"less or equal"(
                 m = {n_b},
                 n = {m_a}
               )}
-            ),
-            rewrite = %true
+            )
           }]
-        ),
-        rewrite = %true
+        )
       }]
     ),
     %exists(
