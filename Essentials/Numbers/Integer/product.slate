@@ -55,11 +55,9 @@ $product(
                   n = {n_b}
                 )}
               )}
-          ),
-          rewrite = %true
+          )
         }]
-      ),
-      rewrite = %true
+      )
     }]
   )]
 }
