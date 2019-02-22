@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @remarks This definition lets us multiply elements without decomposing the magma.
+ */
 $operation(
   𝐌: %Element(
     $Magmas,
