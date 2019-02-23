@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B7-conversion
+ *             * https://ncatlab.org/nlab/show/eta-conversion
+ */
 $"eta conversion"(
   V: %Subset($../Variables),
   _1: %Constraint($../../Essentials/Sets/finite(S = {V}))
