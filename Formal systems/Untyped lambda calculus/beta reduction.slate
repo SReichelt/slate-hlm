@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Beta_normal_form#Beta_reduction
+ *             * https://ncatlab.org/nlab/show/beta-reduction
+ */
 $"beta reduction"(
   V: %Subset($../Variables),
   _1: %Constraint($../../Essentials/Sets/finite(S = {V}))
