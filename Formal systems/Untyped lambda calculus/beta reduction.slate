@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @references * https://en.wikipedia.org/wiki/Beta_normal_form#Beta_reduction
+ * @references * https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B2-reduction
  *             * https://ncatlab.org/nlab/show/beta-reduction
  */
 $"beta reduction"(
