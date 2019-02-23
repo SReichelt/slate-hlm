@@ -4,6 +4,7 @@
  * @remarks The generalized Cartesian product over an index set can be constructed in HLM via its integrated bound variable concept. It is essentially the same as a set of dependent functions.
  *
  * @references * https://en.wikipedia.org/wiki/Cartesian_product#Infinite_Cartesian_products
+ *             * https://proofwiki.org/wiki/Definition:Cartesian_Product/Family_of_Sets
  */
 $"Generalized cartesian product"(
   I: %Set,
