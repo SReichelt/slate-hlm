@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Lambda_calculus#Standard_terms
+ */
 $omega: %ExplicitOperator {
   display = ['𝞈'],
   definition = [$../Terms(V = {$../../../Essentials/Sets/"Empty set"}).abstraction(x = {
