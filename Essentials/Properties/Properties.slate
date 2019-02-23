@@ -4,6 +4,7 @@
  * @remarks This definition encodes a property (aka unary relation) on _S_ as a proposition depending on an element of _S_ (up to equivalence). Since it is equally possible to encode a unary relation on _S_ as a subset of _S_, this definition is interchangeable with the definition of the [power set](../Sets/Power%20set). The given definition is just more convenient.
  *
  * @references * https://en.wikipedia.org/wiki/Property_(mathematics)
+ *             * https://proofwiki.org/wiki/Definition:Propositional_Function
  */
 $Properties(S: %Set(
   auto = %true,
