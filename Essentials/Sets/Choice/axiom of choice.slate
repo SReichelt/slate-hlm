@@ -19,6 +19,9 @@
  *          * The user interface could provide a mode that hides all references to the axiom of choice, and manages them automatically based on dependencies.
  *
  * @references * https://en.wikipedia.org/wiki/Axiom_of_choice
+ *             * http://mathworld.wolfram.com/AxiomofChoice.html
+ *             * https://proofwiki.org/wiki/Axiom:Axiom_of_Choice
+ *             *
  */
 $"axiom of choice": %Predicate {
   display = ['AC'],
