@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Rational_number#Subtraction
+ */
 $difference(
   b: %Element($"Rational numbers"),
   a: %Element(%previous)
