@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Rational_number#Ordering
+ */
 $"less or equal"(
   a: %Element($"Rational numbers"),
   b: %Element(%previous)
