@@ -2,6 +2,9 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Absolute_value
+ *             * http://mathworld.wolfram.com/AbsoluteValue.html
+ *             * https://proofwiki.org/wiki/Definition:Absolute_Value
+ *             * https://coq.inria.fr/library/Coq.QArith.Qabs.html
  */
 $absolute(a: %Element($"Rational numbers")): %ExplicitOperator {
   display = [$Parens(
