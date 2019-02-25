@@ -17,7 +17,8 @@ $limit(
     under = $Relation(
       symbol = '→',
       operands = [n, '∞']
-    )
+    ),
+    style = 'shallow'
   )],
   parameter = #(l: %Element($../"Rational numbers")),
   definition = [$converges(
