@@ -2,6 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Rational_number#Subtraction
+ *             * https://proofwiki.org/wiki/Definition:Subtraction/Rational_Numbers
  */
 $difference(
   b: %Element($"Rational numbers"),
