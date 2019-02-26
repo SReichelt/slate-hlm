@@ -6,6 +6,7 @@
  * @references * https://en.wikipedia.org/wiki/Power_set
  *             * http://mathworld.wolfram.com/PowerSet.html
  *             * https://proofwiki.org/wiki/Definition:Power_Set
+ *             * https://ncatlab.org/nlab/show/power+set
  *             * https://coq.inria.fr/library/Coq.Sets.Powerset.html
  */
 $"Power set"(S: %Set(
