@@ -4,6 +4,7 @@
  * @remarks This definition captures propositions up to equivalence. Since HLM uses classical logic, it can be proved to contain only two values, true and false. It can therefore be used interchangeably with the set of [binary digits](../Numbers/Natural/Subsets/Binary%20digits).
  *
  * @references * https://en.wikipedia.org/wiki/Truth_value
+ *             * https://proofwiki.org/wiki/Definition:Truth_Value
  *             * https://ncatlab.org/nlab/show/truth+value
  */
 $"Truth values": %Construction {
