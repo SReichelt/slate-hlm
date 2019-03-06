@@ -4,7 +4,10 @@
  * @references * https://proofwiki.org/wiki/Definition:Composition_of_Morphisms
  */
 $composition(
-  u: %Element($../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
+  u: %Element(
+    $../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
   𝓒: %Element(
     $Categories(u = {u}),
     auto = %true

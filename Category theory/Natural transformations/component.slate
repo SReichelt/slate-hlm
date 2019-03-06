@@ -1,7 +1,10 @@
 %../../../../logics/hlm%
 
 $component(
-  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
+  u: %Element(
+    $../../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true

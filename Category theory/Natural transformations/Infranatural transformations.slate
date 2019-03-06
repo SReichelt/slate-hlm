@@ -4,7 +4,10 @@
  * @references * https://en.wikipedia.org/wiki/Natural_transformation
  */
 $"Infranatural transformations"(
-  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
+  u: %Element(
+    $../../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true

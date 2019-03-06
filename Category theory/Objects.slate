@@ -4,7 +4,10 @@
  * @remarks This definition retrieves a representative set of objects from a category (which is actually an equivalence class of categories), and enables typical abuse of notation.
  */
 $Objects(
-  u: %Element($../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
+  u: %Element(
+    $../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
   𝓒: %Element($Categories(u = {u}))
 ): %SetOperator {
   display = [$Function(
