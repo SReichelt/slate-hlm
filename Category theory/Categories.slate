@@ -5,14 +5,14 @@
  *
  *          For skeletal categories, the two concepts coincide. Since in HLM, all of the usual examples of categories happen to be skeletal anyway, and we care about equivalence much more than isomorphism, it makes sense to include this requirement directly in the definition of a category.
  *
- *          The symbol _U_ is required to be able to define a category of (smaller) categories, which would normally be prevented by non-circularity rules. A symbol parameter essentially creates multiple distinct copies of a definition, in particular these definitions are considered distinct in the context of non-circularity. So the set of categories “in _U_” can be used to build a category “in _V_” if _V_ is a different symbol. _V_ is then considered “larger.” Informally, _U_ denotes a “universe.”
+ *          The natural number _u_ is required to be able to define a category of (smaller) categories or functors, which would otherwise be prevented by non-circularity rules. Informally, _u_ can be regarded as a “universe size” that is relevant only in the context of category theory. (The “universes” that are implicit in other contexts are already large enough.)
  *
  * @references * https://en.wikipedia.org/wiki/Category_(mathematics)
  *             * http://mathworld.wolfram.com/Category.html
  *             * https://proofwiki.org/wiki/Definition:Category
  *             * https://ncatlab.org/nlab/show/category
  */
-$Categories(U: %Symbol): %Construction {
+$Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Construction {
   $category(
     O: %Set,
     𝐀: %Binding(
@@ -189,7 +189,7 @@ $Categories(U: %Symbol): %Construction {
         ],
         style = '[]'
       ),
-      sub = U
+      sub = u
     )],
     equalityDefinition = {
       leftParameters = #(
@@ -607,11 +607,11 @@ $Categories(U: %Symbol): %Construction {
 
   display = [$SubSup(
     body = '𝓒𝓪𝓽',
-    sub = U
+    sub = u
   )],
   definitionDisplay = {
     parameter = #(𝓒: %Expr),
-    singularName = ['category', ' in ', U],
-    pluralName = ['categories', ' in ', U]
+    singularName = [u, '-small category'],
+    pluralName = [u, '-small categories']
   }
 }

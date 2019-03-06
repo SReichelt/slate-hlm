@@ -6,12 +6,12 @@
  * @references * https://en.wikipedia.org/wiki/Category_of_sets
  *             * https://ncatlab.org/nlab/show/Set
  */
-$cardinals(U: %Symbol): %ExplicitOperator {
+$cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$SubSup(
     body = '𝐒𝐞𝐭',
-    sub = U
+    sub = u
   )],
-  definition = [$../Categories(U = {U}).category(
+  definition = [$../Categories(u = {u}).category(
       O = {$../../Essentials/Numbers/Cardinal/"Cardinal numbers"},
       𝐀 = {
         #(𝐀: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),

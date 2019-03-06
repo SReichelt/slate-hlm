@@ -9,37 +9,37 @@
  *             * https://ncatlab.org/nlab/show/functor
  */
 $Functors(
-  U: %Symbol(auto = %true),
-  𝓒: %Element($../Categories(U = {U})),
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
+  𝓒: %Element($../Categories(u = {u})),
   𝓓: %Element(%previous)
 ): %Construction {
   $functor(
     𝐗: %Binding(
       $../Objects(
-        U = {U},
+        u = {u},
         𝓒 = {𝓒}
       ),
       #(𝐃: %Element($../Objects(
-        U = {U},
+        u = {u},
         𝓒 = {𝓓}
       )))
     ),
     𝐘: %Binding(
       $../Objects(
-        U = {U},
+        u = {u},
         𝓒 = {𝓒}
       ),
       #(𝐙: %Binding(
         %previous,
         #(f: %Binding(
           $../Morphisms(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝐗 = {𝐘},
             𝐘 = {𝐙}
           ),
           #(d: %Element($../Morphisms(
-            U = {U},
+            u = {u},
             𝓒 = {𝓓},
             𝐗 = {𝐃[𝐘]},
             𝐘 = {𝐃[𝐙]}
@@ -49,7 +49,7 @@ $Functors(
     ),
     _1: %Constraint(%forall(
       #(𝐗: %Element($../Objects(
-        U = {U},
+        u = {u},
         𝓒 = {𝓒}
       ))),
       %equals(
@@ -57,13 +57,13 @@ $Functors(
           𝐗,
           𝐗,
           $../identity(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝐗 = {𝐗}
           )
         ],
         $../identity(
-          U = {U},
+          u = {u},
           𝓒 = {𝓓},
           𝐗 = {𝐃[𝐗]}
         )
@@ -72,19 +72,19 @@ $Functors(
     _2: %Constraint(%forall(
       #(
         𝐗: %Element($../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         )),
         𝐘: %Element(%previous),
         𝐙: %Element(%previous),
         f: %Element($../Morphisms(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝐗 = {𝐗},
           𝐘 = {𝐘}
         )),
         g: %Element($../Morphisms(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝐗 = {𝐘},
           𝐘 = {𝐙}
@@ -95,7 +95,7 @@ $Functors(
           𝐗,
           𝐙,
           $../composition(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝐗 = {𝐗},
             𝐘 = {𝐘},
@@ -105,7 +105,7 @@ $Functors(
           )
         ],
         $../composition(
-          U = {U},
+          u = {u},
           𝓒 = {𝓓},
           𝐗 = {𝐃[𝐗]},
           𝐘 = {𝐃[𝐘]},
@@ -190,30 +190,30 @@ $Functors(
       leftParameters = #(
         𝐗: %Binding(
           $../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ),
           #(𝐃: %Element($../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓓}
           )))
         ),
         𝐘: %Binding(
           $../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ),
           #(𝐙: %Binding(
             %previous,
             #(f: %Binding(
               $../Morphisms(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐘},
                 𝐘 = {𝐙}
               ),
               #(d: %Element($../Morphisms(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓓},
                 𝐗 = {𝐃[𝐘]},
                 𝐘 = {𝐃[𝐙]}
@@ -223,7 +223,7 @@ $Functors(
         ),
         _1: %Constraint(%forall(
           #(𝐗: %Element($../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ))),
           %equals(
@@ -231,13 +231,13 @@ $Functors(
               𝐗,
               𝐗,
               $../identity(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐗}
               )
             ],
             $../identity(
-              U = {U},
+              u = {u},
               𝓒 = {𝓓},
               𝐗 = {𝐃[𝐗]}
             )
@@ -246,19 +246,19 @@ $Functors(
         _2: %Constraint(%forall(
           #(
             𝐗: %Element($../Objects(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒}
             )),
             𝐘: %Element(%previous),
             𝐙: %Element(%previous),
             f: %Element($../Morphisms(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒},
               𝐗 = {𝐗},
               𝐘 = {𝐘}
             )),
             g: %Element($../Morphisms(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒},
               𝐗 = {𝐘},
               𝐘 = {𝐙}
@@ -269,7 +269,7 @@ $Functors(
               𝐗,
               𝐙,
               $../composition(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐗},
                 𝐘 = {𝐘},
@@ -279,7 +279,7 @@ $Functors(
               )
             ],
             $../composition(
-              U = {U},
+              u = {u},
               𝓒 = {𝓓},
               𝐗 = {𝐃[𝐗]},
               𝐘 = {𝐃[𝐘]},
@@ -293,30 +293,30 @@ $Functors(
       rightParameters = #(
         𝐗: %Binding(
           $../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ),
           #("𝐃'": %Element($../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓓}
           )))
         ),
         𝐘: %Binding(
           $../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ),
           #(𝐙: %Binding(
             %previous,
             #(f: %Binding(
               $../Morphisms(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐘},
                 𝐘 = {𝐙}
               ),
               #("d'": %Element($../Morphisms(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓓},
                 𝐗 = {"𝐃'"[𝐘]},
                 𝐘 = {"𝐃'"[𝐙]}
@@ -326,7 +326,7 @@ $Functors(
         ),
         _1: %Constraint(%forall(
           #(𝐗: %Element($../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ))),
           %equals(
@@ -334,13 +334,13 @@ $Functors(
               𝐗,
               𝐗,
               $../identity(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐗}
               )
             ],
             $../identity(
-              U = {U},
+              u = {u},
               𝓒 = {𝓓},
               𝐗 = {"𝐃'"[𝐗]}
             )
@@ -349,19 +349,19 @@ $Functors(
         _2: %Constraint(%forall(
           #(
             𝐗: %Element($../Objects(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒}
             )),
             𝐘: %Element(%previous),
             𝐙: %Element(%previous),
             f: %Element($../Morphisms(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒},
               𝐗 = {𝐗},
               𝐘 = {𝐘}
             )),
             g: %Element($../Morphisms(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒},
               𝐗 = {𝐘},
               𝐘 = {𝐙}
@@ -372,7 +372,7 @@ $Functors(
               𝐗,
               𝐙,
               $../composition(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐗},
                 𝐘 = {𝐘},
@@ -382,7 +382,7 @@ $Functors(
               )
             ],
             $../composition(
-              U = {U},
+              u = {u},
               𝓒 = {𝓓},
               𝐗 = {"𝐃'"[𝐗]},
               𝐘 = {"𝐃'"[𝐘]},
@@ -396,7 +396,7 @@ $Functors(
       definition = [%and(
         %forall(
           #(𝐗: %Element($../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ))),
           %equals(𝐃[𝐗], "𝐃'"[𝐗])
@@ -404,12 +404,12 @@ $Functors(
         %forall(
           #(
             𝐘: %Element($../Objects(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒}
             )),
             𝐙: %Element(%previous),
             f: %Element($../Morphisms(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒},
               𝐗 = {𝐘},
               𝐘 = {𝐙}

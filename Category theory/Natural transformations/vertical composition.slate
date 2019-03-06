@@ -4,9 +4,9 @@
  * @references * https://en.wikipedia.org/wiki/Natural_transformation#Operations_with_natural_transformations
  */
 $"vertical composition"(
-  U: %Symbol(auto = %true),
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(U = {U}),
+    $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
@@ -15,7 +15,7 @@ $"vertical composition"(
   ),
   F: %Element(
     $../Functors/Functors(
-      U = {U},
+      u = {u},
       𝓒 = {𝓒},
       𝓓 = {𝓓}
     ),
@@ -30,14 +30,14 @@ $"vertical composition"(
     auto = %true
   ),
   η: %Element($"Infranatural transformations"(
-    U = {U},
+    u = {u},
     𝓒 = {𝓒},
     𝓓 = {𝓓},
     F = {F},
     G = {G}
   )),
   ε: %Element($"Infranatural transformations"(
-    U = {U},
+    u = {u},
     𝓒 = {𝓒},
     𝓓 = {𝓓},
     F = {G},
@@ -51,42 +51,42 @@ $"vertical composition"(
     maxParenLevel = 2
   )],
   definition = [$"Infranatural transformations"(
-      U = {U},
+      u = {u},
       𝓒 = {𝓒},
       𝓓 = {𝓓},
       F = {F},
       G = {H}
     ).transformation(𝐗 = {
       parameter = #(𝐗: %Element($../Objects(
-        U = {U},
+        u = {u},
         𝓒 = {𝓒}
       ))),
       arguments = {n = {$../composition(
-        U = {U},
+        u = {u},
         𝓒 = {𝓓},
         𝐗 = {$../Functors/"object value"(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {F},
           𝐗 = {𝐗}
         )},
         𝐘 = {$../Functors/"object value"(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {G},
           𝐗 = {𝐗}
         )},
         𝐙 = {$../Functors/"object value"(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {H},
           𝐗 = {𝐗}
         )},
         f = {$component(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {F},
@@ -95,7 +95,7 @@ $"vertical composition"(
           𝐗 = {𝐗}
         )},
         g = {$component(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {G},

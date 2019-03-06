@@ -7,17 +7,17 @@
  *             * https://ncatlab.org/nlab/show/discrete+category#CategoricalMeaning
  */
 $elements(
-  U: %Symbol,
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
   S: %Set
 ): %ExplicitOperator {
   display = [$Function(
     function = $SubSup(
       body = '𝐄𝐥𝐞𝐦',
-      sub = U
+      sub = u
     ),
     arguments = [S]
   )],
-  definition = [$../Categories(U = {U}).category(
+  definition = [$../Categories(u = {u}).category(
       O = {S},
       𝐀 = {
         #(a: %Element(S)),

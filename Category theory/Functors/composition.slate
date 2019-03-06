@@ -1,9 +1,9 @@
 %../../../../logics/hlm%
 
 $composition(
-  U: %Symbol(auto = %true),
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(U = {U}),
+    $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
@@ -15,12 +15,12 @@ $composition(
     auto = %true
   ),
   F: %Element($Functors(
-    U = {U},
+    u = {u},
     𝓒 = {𝓒},
     𝓓 = {𝓓}
   )),
   G: %Element($Functors(
-    U = {U},
+    u = {u},
     𝓒 = {𝓓},
     𝓓 = {𝓔}
   ))
@@ -32,22 +32,22 @@ $composition(
     maxParenLevel = 2
   )],
   definition = [$Functors(
-      U = {U},
+      u = {u},
       𝓒 = {𝓒},
       𝓓 = {𝓔}
     ).functor(
       𝐗 = {
         #(𝐗: %Element($../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         ))),
         {𝐃 = {$"object value"(
-          U = {U},
+          u = {u},
           𝓒 = {𝓓},
           𝓓 = {𝓔},
           F = {G},
           𝐗 = {$"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -57,42 +57,42 @@ $composition(
       },
       𝐘 = {
         #(𝐘: %Element($../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         ))),
         {𝐙 = {
           #(𝐙: %Element($../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ))),
           {f = {
             #(f: %Element($../Morphisms(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒},
               𝐗 = {𝐘},
               𝐘 = {𝐙}
             ))),
             {d = {$"morphism value"(
-              U = {U},
+              u = {u},
               𝓒 = {𝓓},
               𝓓 = {𝓔},
               F = {G},
               𝐘 = {$"object value"(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {F},
                 𝐗 = {𝐘}
               )},
               𝐙 = {$"object value"(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {F},
                 𝐗 = {𝐙}
               )},
               f = {$"morphism value"(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {F},

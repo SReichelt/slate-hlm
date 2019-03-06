@@ -4,8 +4,8 @@
  * @remarks This definition retrieves a representative set of objects from a category (which is actually an equivalence class of categories), and enables typical abuse of notation.
  */
 $Objects(
-  U: %Symbol(auto = %true),
-  𝓒: %Element($Categories(U = {U}))
+  u: %Element($../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
+  𝓒: %Element($Categories(u = {u}))
 ): %SetOperator {
   display = [$Function(
     function = 'Ob',
@@ -20,9 +20,9 @@ $Objects(
   },
   definition = [%setStructuralCases(
     𝓒,
-    $Categories(U = {U}),
+    $Categories(u = {u}),
     [{
-      constructor = $Categories(U = {U}).category,
+      constructor = $Categories(u = {u}).category,
       parameters = #(
         O: %Set,
         𝐀: %Binding(

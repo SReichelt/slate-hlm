@@ -1,9 +1,9 @@
 %../../../../logics/hlm%
 
 $"morphism value"(
-  U: %Symbol(auto = %true),
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(U = {U}),
+    $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
@@ -11,17 +11,17 @@ $"morphism value"(
     auto = %true
   ),
   F: %Element($Functors(
-    U = {U},
+    u = {u},
     𝓒 = {𝓒},
     𝓓 = {𝓓}
   )),
   𝐘: %Element($../Objects(
-    U = {U},
+    u = {u},
     𝓒 = {𝓒}
   )),
   𝐙: %Element(%previous),
   f: %Element($../Morphisms(
-    U = {U},
+    u = {u},
     𝓒 = {𝓒},
     𝐗 = {𝐘},
     𝐘 = {𝐙}
@@ -34,43 +34,43 @@ $"morphism value"(
   definition = [%structuralCases(
     F,
     $Functors(
-      U = {U},
+      u = {u},
       𝓒 = {𝓒},
       𝓓 = {𝓓}
     ),
     [{
       constructor = $Functors(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝓓 = {𝓓}
         ).functor,
       parameters = #(
         𝐀: %Binding(
           $../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ),
           #(𝐃: %Element($../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓓}
           )))
         ),
         𝐁: %Binding(
           $../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ),
           #(𝐂: %Binding(
             %previous,
             #(f: %Binding(
               $../Morphisms(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐁},
                 𝐘 = {𝐂}
               ),
               #(d: %Element($../Morphisms(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓓},
                 𝐗 = {𝐃[𝐁]},
                 𝐘 = {𝐃[𝐂]}
@@ -80,7 +80,7 @@ $"morphism value"(
         ),
         _1: %Constraint(%forall(
           #(𝐀: %Element($../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ))),
           %equals(
@@ -88,13 +88,13 @@ $"morphism value"(
               𝐀,
               𝐀,
               $../identity(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐀}
               )
             ],
             $../identity(
-              U = {U},
+              u = {u},
               𝓒 = {𝓓},
               𝐗 = {𝐃[𝐀]}
             )
@@ -103,19 +103,19 @@ $"morphism value"(
         _2: %Constraint(%forall(
           #(
             𝐀: %Element($../Objects(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒}
             )),
             𝐁: %Element(%previous),
             𝐂: %Element(%previous),
             f: %Element($../Morphisms(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒},
               𝐗 = {𝐀},
               𝐘 = {𝐁}
             )),
             g: %Element($../Morphisms(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒},
               𝐗 = {𝐁},
               𝐘 = {𝐂}
@@ -126,7 +126,7 @@ $"morphism value"(
               𝐀,
               𝐂,
               $../composition(
-                U = {U},
+                u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐀},
                 𝐘 = {𝐁},
@@ -136,7 +136,7 @@ $"morphism value"(
               )
             ],
             $../composition(
-              U = {U},
+              u = {u},
               𝓒 = {𝓓},
               𝐗 = {𝐃[𝐀]},
               𝐘 = {𝐃[𝐁]},

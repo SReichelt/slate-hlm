@@ -1,9 +1,9 @@
 %../../../../logics/hlm%
 
 $identity(
-  U: %Symbol(auto = %true),
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(U = {U}),
+    $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
@@ -12,7 +12,7 @@ $identity(
   ),
   F: %Element(
     $../Functors/Functors(
-      U = {U},
+      u = {u},
       𝓒 = {𝓒},
       𝓓 = {𝓓}
     ),
@@ -25,21 +25,21 @@ $identity(
   )],
   definition = [
     $"Infranatural transformations"(
-        U = {U},
+        u = {u},
         𝓒 = {𝓒},
         𝓓 = {𝓓},
         F = {F},
         G = {F}
       ).transformation(𝐗 = {
         parameter = #(𝐗: %Element($../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         ))),
         arguments = {n = {$../identity(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝐗 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -48,37 +48,37 @@ $identity(
         )}}
     }),
     $"Infranatural transformations"(
-        U = {U},
+        u = {u},
         𝓒 = {𝓒},
         𝓓 = {𝓓},
         F = {F},
         G = {F}
       ).transformation(𝐗 = {
         parameter = #(𝐗: %Element($../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         ))),
         arguments = {n = {$../Functors/"morphism value"(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {F},
           𝐘 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
             𝐗 = {𝐗}
           )},
           𝐙 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
             𝐗 = {𝐗}
           )},
           f = {$../identity(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝐗 = {𝐗}
           )}

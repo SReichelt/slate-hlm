@@ -7,9 +7,9 @@
  *             * https://ncatlab.org/nlab/show/natural+transformation
  */
 $"Natural transformations"(
-  U: %Symbol(auto = %true),
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(U = {U}),
+    $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
@@ -17,7 +17,7 @@ $"Natural transformations"(
     auto = %true
   ),
   F: %Element($../Functors/Functors(
-    U = {U},
+    u = {u},
     𝓒 = {𝓒},
     𝓓 = {𝓓}
   )),
@@ -41,7 +41,7 @@ $"Natural transformations"(
   },
   definition = [%subset(
     #(η: %Element($"Infranatural transformations"(
-      U = {U},
+      u = {u},
       𝓒 = {𝓒},
       𝓓 = {𝓓},
       F = {F},
@@ -50,12 +50,12 @@ $"Natural transformations"(
     %forall(
       #(
         𝐗: %Element($../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         )),
         𝐘: %Element(%previous),
         f: %Element($../Morphisms(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒},
           𝐗 = {𝐗},
           𝐘 = {𝐘}
@@ -63,31 +63,31 @@ $"Natural transformations"(
       ),
       %equals(
         $../composition(
-          U = {U},
+          u = {u},
           𝓒 = {𝓓},
           𝐗 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
             𝐗 = {𝐗}
           )},
           𝐘 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
             𝐗 = {𝐘}
           )},
           𝐙 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},
             𝐗 = {𝐘}
           )},
           f = {$../Functors/"morphism value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -96,7 +96,7 @@ $"Natural transformations"(
             f = {f}
           )},
           g = {$component(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -106,31 +106,31 @@ $"Natural transformations"(
           )}
         ),
         $../composition(
-          U = {U},
+          u = {u},
           𝓒 = {𝓓},
           𝐗 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
             𝐗 = {𝐗}
           )},
           𝐘 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},
             𝐗 = {𝐗}
           )},
           𝐙 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},
             𝐗 = {𝐘}
           )},
           f = {$component(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -139,7 +139,7 @@ $"Natural transformations"(
             𝐗 = {𝐗}
           )},
           g = {$../Functors/"morphism value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},

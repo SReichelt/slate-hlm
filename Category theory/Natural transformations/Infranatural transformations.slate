@@ -4,9 +4,9 @@
  * @references * https://en.wikipedia.org/wiki/Natural_transformation
  */
 $"Infranatural transformations"(
-  U: %Symbol(auto = %true),
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(U = {U}),
+    $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
@@ -14,7 +14,7 @@ $"Infranatural transformations"(
     auto = %true
   ),
   F: %Element($../Functors/Functors(
-    U = {U},
+    u = {u},
     𝓒 = {𝓒},
     𝓓 = {𝓓}
   )),
@@ -22,21 +22,21 @@ $"Infranatural transformations"(
 ): %Construction {
   $transformation(𝐗: %Binding(
     $../Objects(
-      U = {U},
+      u = {u},
       𝓒 = {𝓒}
     ),
     #(n: %Element($../Morphisms(
-      U = {U},
+      u = {u},
       𝓒 = {𝓓},
       𝐗 = {$../Functors/"object value"(
-        U = {U},
+        u = {u},
         𝓒 = {𝓒},
         𝓓 = {𝓓},
         F = {F},
         𝐗 = {𝐗}
       )},
       𝐘 = {$../Functors/"object value"(
-        U = {U},
+        u = {u},
         𝓒 = {𝓒},
         𝓓 = {𝓓},
         F = {G},
@@ -57,21 +57,21 @@ $"Infranatural transformations"(
     equalityDefinition = {
       leftParameters = #(𝐗: %Binding(
         $../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         ),
         #(n: %Element($../Morphisms(
-          U = {U},
+          u = {u},
           𝓒 = {𝓓},
           𝐗 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
             𝐗 = {𝐗}
           )},
           𝐘 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},
@@ -81,21 +81,21 @@ $"Infranatural transformations"(
       )),
       rightParameters = #(𝐗: %Binding(
         $../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         ),
         #(m: %Element($../Morphisms(
-          U = {U},
+          u = {u},
           𝓒 = {𝓓},
           𝐗 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
             𝐗 = {𝐗}
           )},
           𝐘 = {$../Functors/"object value"(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},
@@ -105,7 +105,7 @@ $"Infranatural transformations"(
       )),
       definition = [%forall(
         #(𝐗: %Element($../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         ))),
         %equals(n[𝐗], m[𝐗])

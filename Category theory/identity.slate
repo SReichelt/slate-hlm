@@ -4,14 +4,14 @@
  * @references * https://proofwiki.org/wiki/Definition:Identity_Morphism
  */
 $identity(
-  U: %Symbol(auto = %true),
+  u: %Element($../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
   𝓒: %Element(
-    $Categories(U = {U}),
+    $Categories(u = {u}),
     auto = %true
   ),
   𝐗: %Element(
     $Objects(
-      U = {U},
+      u = {u},
       𝓒 = {𝓒}
     ),
     auto = %true
@@ -23,9 +23,9 @@ $identity(
   )],
   definition = [%structuralCases(
     𝓒,
-    $Categories(U = {U}),
+    $Categories(u = {u}),
     [{
-      constructor = $Categories(U = {U}).category,
+      constructor = $Categories(u = {u}).category,
       parameters = #(
         O: %Set,
         𝐀: %Binding(

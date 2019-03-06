@@ -1,9 +1,9 @@
 %../../../../logics/hlm%
 
 $identity(
-  U: %Symbol(auto = %true),
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(U = {U}),
+    $../Categories(u = {u}),
     auto = %true
   )
 ): %ExplicitOperator {
@@ -12,30 +12,30 @@ $identity(
     sub = 𝓒
   )],
   definition = [$Functors(
-      U = {U},
+      u = {u},
       𝓒 = {𝓒},
       𝓓 = {𝓒}
     ).functor(
       𝐗 = {
         #(𝐗: %Element($../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         ))),
         {𝐃 = {𝐗}}
       },
       𝐘 = {
         #(𝐘: %Element($../Objects(
-          U = {U},
+          u = {u},
           𝓒 = {𝓒}
         ))),
         {𝐙 = {
           #(𝐙: %Element($../Objects(
-            U = {U},
+            u = {u},
             𝓒 = {𝓒}
           ))),
           {f = {
             #(f: %Element($../Morphisms(
-              U = {U},
+              u = {u},
               𝓒 = {𝓒},
               𝐗 = {𝐘},
               𝐘 = {𝐙}
