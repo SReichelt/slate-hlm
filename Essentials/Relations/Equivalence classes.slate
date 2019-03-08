@@ -30,7 +30,7 @@ $"Equivalence classes"(
     )],
     equalityDefinition = {
       leftParameters = #(s: %Element(S)),
-      rightParameters = #(t: %Element(S)),
+      rightParameters = #(t: %Element(%previous)),
       definition = [$related(
         S = {S},
         T = {S},

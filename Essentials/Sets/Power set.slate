@@ -20,7 +20,7 @@ $"Power set"(S: %Set(
     )],
     equalityDefinition = {
       leftParameters = #(T: %Subset(S)),
-      rightParameters = #("T'": %Subset(S)),
+      rightParameters = #("T'": %Subset(%previous)),
       definition = [%setEquals(T, "T'")],
       isomorphic = %true
     }

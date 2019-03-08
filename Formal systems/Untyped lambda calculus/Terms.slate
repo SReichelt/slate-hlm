@@ -21,7 +21,7 @@ $Terms(
     )],
     equalityDefinition = {
       leftParameters = #(x: %Element(V)),
-      rightParameters = #(y: %Element(V)),
+      rightParameters = #(y: %Element(%previous)),
       definition = [%equals(x, y)],
       isomorphic = %true
     }
@@ -147,7 +147,7 @@ $Terms(
         N: %Element(%previous)
       ),
       rightParameters = #(
-        "M'": %Element($Terms(V = {V})),
+        "M'": %Element(%previous),
         "N'": %Element(%previous)
       ),
       definition = [%and(

@@ -21,7 +21,7 @@ $"Rewriting rules"(T: %Set(
         r: %Element(%previous)
       ),
       rightParameters = #(
-        "l'": %Element(T),
+        "l'": %Element(%previous),
         "r'": %Element(%previous)
       ),
       definition = [%and(

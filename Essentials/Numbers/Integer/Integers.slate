@@ -34,7 +34,7 @@ $Integers: %Construction {
         m: %Element(%previous)
       ),
       rightParameters = #(
-        "n'": %Element($../Natural/"Natural numbers"),
+        "n'": %Element(%previous),
         "m'": %Element(%previous)
       ),
       definition = [%equals(

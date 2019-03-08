@@ -33,7 +33,7 @@ $"Complex numbers": %Construction {
         i: %Element(%previous)
       ),
       rightParameters = #(
-        "r'": %Element($../Real/"Real numbers"),
+        "r'": %Element(%previous),
         "i'": %Element(%previous)
       ),
       definition = [%and(

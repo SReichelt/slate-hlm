@@ -14,7 +14,7 @@ $"Binary trees"(S: %Set(
     )],
     equalityDefinition = {
       leftParameters = #(s: %Element(S)),
-      rightParameters = #("s'": %Element(S)),
+      rightParameters = #("s'": %Element(%previous)),
       definition = [%equals(s, "s'")],
       isomorphic = %true
     }
@@ -35,7 +35,7 @@ $"Binary trees"(S: %Set(
         b: %Element(%previous)
       ),
       rightParameters = #(
-        "a'": %Element($"Binary trees"(S = {S})),
+        "a'": %Element(%previous),
         "b'": %Element(%previous)
       ),
       definition = [%and(

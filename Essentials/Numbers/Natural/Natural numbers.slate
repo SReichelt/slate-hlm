@@ -36,7 +36,7 @@ $"Natural numbers": %Construction {
     )],
     equalityDefinition = {
       leftParameters = #(m: %Element($"Natural numbers")),
-      rightParameters = #(n: %Element($"Natural numbers")),
+      rightParameters = #(n: %Element(%previous)),
       definition = [%equals(m, n)],
       isomorphic = %true
     },

@@ -28,7 +28,7 @@ $"Disjoint union"(
     )],
     equalityDefinition = {
       leftParameters = #(s: %Element(S)),
-      rightParameters = #("s'": %Element(S)),
+      rightParameters = #("s'": %Element(%previous)),
       definition = [%equals(s, "s'")],
       isomorphic = %true
     }
@@ -41,7 +41,7 @@ $"Disjoint union"(
     )],
     equalityDefinition = {
       leftParameters = #(t: %Element(T)),
-      rightParameters = #("t'": %Element(T)),
+      rightParameters = #("t'": %Element(%previous)),
       definition = [%equals(t, "t'")],
       isomorphic = %true
     }
