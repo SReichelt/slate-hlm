@@ -39,7 +39,7 @@ $substitution(
           },
           {
             formula = %not(%equals(x, y)),
-            value = y
+            value = $Terms(V = {V}).variable(x = {y})
           }
         ])
       },
