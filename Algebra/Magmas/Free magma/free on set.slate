@@ -2,7 +2,7 @@
 
 $"free on set"(
   𝐌: %Element($../Magmas),
-  S: %Subset($../Elements(𝐌 = {𝐌}))
+  S: %Subset($../Carrier(𝐌 = {𝐌}))
 ): %Predicate {
   display = [$Property(
     operand = 𝐌,
@@ -18,7 +18,7 @@ $"free on set"(
         𝐍: %Element($../Magmas),
         f: %Element($../../../Essentials/Functions/Functions(
           X = {S},
-          Y = {$../Elements(𝐌 = {𝐍})}
+          Y = {$../Carrier(𝐌 = {𝐍})}
         ))
       ),
       %existsUnique(
@@ -28,8 +28,8 @@ $"free on set"(
         ))),
         formula = %equals(
           $../../../Essentials/Functions/restriction(
-            X = {$../Elements(𝐌 = {𝐌})},
-            Y = {$../Elements(𝐌 = {𝐍})},
+            X = {$../Carrier(𝐌 = {𝐌})},
+            Y = {$../Carrier(𝐌 = {𝐍})},
             A = {S},
             f = {φ}
           ),

@@ -1,11 +1,11 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition retrieves a representative set from a magma (which is actually an equivalence class of magmas), and enables typical abuse of notation.
+ * @remarks This definition retrieves a representative carrier set from a magma (which is actually an equivalence class of magmas), and enables typical abuse of notation.
  */
-$Elements(𝐌: %Element($Magmas)): %SetOperator {
+$Carrier(𝐌: %Element($Magmas)): %SetOperator {
   display = [$Function(
-    function = 'El',
+    function = 'Carrier',
     arguments = [𝐌]
   )],
   definitionDisplay = {

@@ -4,7 +4,7 @@ $Ordinal: %Section {
   logic = 'hlm',
   items = [
     %item($"Ordinal numbers"),
-    %item($Elements),
+    %item($Carrier),
     %item($before),
     %item($Homomorphisms),
     %item($Isomorphisms),

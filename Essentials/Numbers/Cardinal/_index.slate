@@ -8,7 +8,7 @@ $Cardinal: %Section {
       type = 'lemma'
     ),
     %item($"Cardinal numbers"),
-    %item($Elements),
+    %item($Carrier),
     %item($Homomorphisms),
     %item($Isomorphisms),
     %item($identity),

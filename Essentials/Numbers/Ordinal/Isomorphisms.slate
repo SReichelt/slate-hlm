@@ -26,19 +26,19 @@ $Isomorphisms(
         𝐲 = {𝐲}
       ))),
       $../../Functions/bijective(
-        X = {$Elements(𝐱 = {𝐱})},
-        Y = {$Elements(𝐱 = {𝐲})},
+        X = {$Carrier(𝐱 = {𝐱})},
+        Y = {$Carrier(𝐱 = {𝐲})},
         f = {φ}
       )
     ),
     %subset(
       #(f: %Element($../../Functions/Bijections(
-        X = {$Elements(𝐱 = {𝐱})},
-        Y = {$Elements(𝐱 = {𝐲})}
+        X = {$Carrier(𝐱 = {𝐱})},
+        Y = {$Carrier(𝐱 = {𝐲})}
       ))),
       %forall(
         #(
-          a: %Element($Elements(𝐱 = {𝐱})),
+          a: %Element($Carrier(𝐱 = {𝐱})),
           b: %Element(%previous),
           _1: %Constraint($before(
             𝐱 = {𝐱},
@@ -49,14 +49,14 @@ $Isomorphisms(
         $before(
           𝐱 = {𝐲},
           a = {$../../Functions/value(
-            X = {$Elements(𝐱 = {𝐱})},
-            Y = {$Elements(𝐱 = {𝐲})},
+            X = {$Carrier(𝐱 = {𝐱})},
+            Y = {$Carrier(𝐱 = {𝐲})},
             f = {f},
             x = {a}
           )},
           b = {$../../Functions/value(
-            X = {$Elements(𝐱 = {𝐱})},
-            Y = {$Elements(𝐱 = {𝐲})},
+            X = {$Carrier(𝐱 = {𝐱})},
+            Y = {$Carrier(𝐱 = {𝐲})},
             f = {f},
             x = {b}
           )}

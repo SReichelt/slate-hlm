@@ -3,9 +3,9 @@
 /**
  * @remarks This definition retrieves a representative set from an ordinal number, and enables typical abuse of notation.
  */
-$Elements(𝐱: %Element($"Ordinal numbers")): %SetOperator {
+$Carrier(𝐱: %Element($"Ordinal numbers")): %SetOperator {
   display = [$Function(
-    function = 'El',
+    function = 'Carrier',
     arguments = [𝐱]
   )],
   definitionDisplay = {

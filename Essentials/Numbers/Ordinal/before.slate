@@ -5,7 +5,7 @@ $before(
     $"Ordinal numbers",
     auto = %true
   ),
-  a: %Element($Elements(𝐱 = {𝐱})),
+  a: %Element($Carrier(𝐱 = {𝐱})),
   b: %Element(%previous)
 ): %Predicate {
   display = [$Relation(

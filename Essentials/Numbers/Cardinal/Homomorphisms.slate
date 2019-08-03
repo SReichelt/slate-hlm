@@ -25,7 +25,7 @@ $Homomorphisms(
     nameOptional = %true
   },
   definition = [$../../Functions/Functions(
-    X = {$Elements(𝐱 = {𝐱})},
-    Y = {$Elements(𝐱 = {𝐲})}
+    X = {$Carrier(𝐱 = {𝐱})},
+    Y = {$Carrier(𝐱 = {𝐲})}
   )]
 }

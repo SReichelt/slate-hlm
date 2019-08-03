@@ -20,18 +20,18 @@ $Homomorphisms(
   },
   definition = [%subset(
     #(f: %Element($../../Essentials/Functions/Functions(
-      X = {$Elements(𝐌 = {𝐌})},
-      Y = {$Elements(𝐌 = {𝐍})}
+      X = {$Carrier(𝐌 = {𝐌})},
+      Y = {$Carrier(𝐌 = {𝐍})}
     ))),
     %forall(
       #(
-        a: %Element($Elements(𝐌 = {𝐌})),
+        a: %Element($Carrier(𝐌 = {𝐌})),
         b: %Element(%previous)
       ),
       %equals(
         $../../Essentials/Functions/value(
-          X = {$Elements(𝐌 = {𝐌})},
-          Y = {$Elements(𝐌 = {𝐍})},
+          X = {$Carrier(𝐌 = {𝐌})},
+          Y = {$Carrier(𝐌 = {𝐍})},
           f = {f},
           x = {$operation(
             𝐌 = {𝐌},
@@ -42,14 +42,14 @@ $Homomorphisms(
         $operation(
           𝐌 = {𝐍},
           a = {$../../Essentials/Functions/value(
-            X = {$Elements(𝐌 = {𝐌})},
-            Y = {$Elements(𝐌 = {𝐍})},
+            X = {$Carrier(𝐌 = {𝐌})},
+            Y = {$Carrier(𝐌 = {𝐍})},
             f = {f},
             x = {a}
           )},
           b = {$../../Essentials/Functions/value(
-            X = {$Elements(𝐌 = {𝐌})},
-            Y = {$Elements(𝐌 = {𝐍})},
+            X = {$Carrier(𝐌 = {𝐌})},
+            Y = {$Carrier(𝐌 = {𝐍})},
             f = {f},
             x = {b}
           )}

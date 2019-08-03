@@ -4,7 +4,7 @@ $Magmas: %Section {
   logic = 'hlm',
   items = [
     %item($Magmas),
-    %item($Elements),
+    %item($Carrier),
     %item($operation),
     %item($associative),
     %item($commutative),

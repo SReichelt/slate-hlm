@@ -8,5 +8,5 @@ $identity(𝐱: %Element(
     body = 'id',
     sub = 𝐱
   )],
-  definition = [$../../Functions/identity(X = {$Elements(𝐱 = {𝐱})})]
+  definition = [$../../Functions/identity(X = {$Carrier(𝐱 = {𝐱})})]
 }
