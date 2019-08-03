@@ -15,7 +15,7 @@ $rewritable(
 ): %Predicate {
   display = [$Relation(
     symbol = $SubSup(
-      body = '→',
+      body = %neg('→', '↛'),
       sub = ℜ
     ),
     operands = [L, R]

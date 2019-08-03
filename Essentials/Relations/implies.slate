@@ -13,7 +13,7 @@ $implies(
   ⊂: %Element(%previous)
 ): %Predicate {
   display = [$Relation(
-    symbol = '⇒',
+    symbol = %neg('⇒', '⇏'),
     operands = [≺, ⊂],
     space = ' ',
     parenLevel = -3
