@@ -9,8 +9,9 @@ $"least element"(
   T: %Subset(S),
   t: %Element(T)
 ): %Predicate {
-  display = [$TextualRelation(
-    symbol = ['is a ', ≺, '-least element of'],
+  display = [$NounRelation(
+    singular = [≺, '-least element'],
+    plural = [≺, '-least elements'],
     operands = [t, T]
   )],
   definition = [$"lower bound"(

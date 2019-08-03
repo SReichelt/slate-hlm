@@ -6,8 +6,9 @@ $"lower bound"(
   T: %Subset(S),
   s: %Element(S)
 ): %Predicate {
-  display = [$TextualRelation(
-    symbol = ['is a ', ≺, '-lower bound of'],
+  display = [$NounRelation(
+    singular = [≺, '-lower bound'],
+    plural = [≺, '-lower bounds'],
     operands = [s, T]
   )],
   definition = [%forall(

@@ -6,8 +6,9 @@ $"upper bound"(
   T: %Subset(S),
   s: %Element(S)
 ): %Predicate {
-  display = [$TextualRelation(
-    symbol = ['is a ', ≺, '-upper bound of'],
+  display = [$NounRelation(
+    singular = [≺, '-upper bound'],
+    plural = [≺, '-upper bounds'],
     operands = [s, T]
   )],
   definition = [

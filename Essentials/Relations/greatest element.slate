@@ -9,8 +9,9 @@ $"greatest element"(
   T: %Subset(S),
   t: %Element(T)
 ): %Predicate {
-  display = [$TextualRelation(
-    symbol = ['is a ', ≺, '-greatest element of'],
+  display = [$NounRelation(
+    singular = [≺, '-greatest element'],
+    plural = [≺, '-greatest elements'],
     operands = [t, T]
   )],
   definition = [
