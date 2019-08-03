@@ -8,10 +8,16 @@ $before(
   a: %Element($Carrier(𝐱 = {𝐱})),
   b: %Element(%previous)
 ): %Predicate {
-  display = [$Relation(
-    symbol = '≤',
-    operands = [a, b]
-  )],
+  display = [
+    $Relation(
+      symbol = %neg('≤', '≰'),
+      operands = [a, b]
+    ),
+    $Relation(
+      symbol = %neg('≥', '≱'),
+      operands = [b, a]
+    )
+  ],
   definition = [%structural(
     𝐱,
     $"Ordinal numbers",
