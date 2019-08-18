@@ -52,7 +52,8 @@ $Matrices(
           j: %Element($../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
         ),
         %equals(a[i,j], b[i,j])
-      )]
+      )],
+      isomorphic = %true
     }
   }
 
