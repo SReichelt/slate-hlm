@@ -68,7 +68,7 @@ $Endorelations(S: %Set(
       S = {S},
       T = {S}
     ))),
-    target = $Endorelations(S = {S}).relation(s = {
+    target = $Endorelations.relation(s = {
         #(s: %Element(S)),
         {t = {
           #(t: %Element(S)),
