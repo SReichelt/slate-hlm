@@ -30,7 +30,30 @@ $Matrices(
           operands = [j, n]
         )
       ])
-    )]
+    )],
+    equalityDefinition = {
+      leftParameters = #(i: %Binding(
+        $../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
+        #(j: %Binding(
+          $../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+          #(a: %Element(S))
+        ))
+      )),
+      rightParameters = #(i: %Binding(
+        $../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
+        #(j: %Binding(
+          $../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+          #(b: %Element(S))
+        ))
+      )),
+      definition = [%forall(
+        #(
+          i: %Element($../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
+          j: %Element($../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+        ),
+        %equals(a[i,j], b[i,j])
+      )]
+    }
   }
 
   display = [$SubSup(
