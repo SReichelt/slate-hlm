@@ -25,12 +25,12 @@ $"lexicographical order"(
       S = {S},
       T = {T}
     )}).relation(s = {
-      #(_a: %Element($../Sets/"Disjoint union"(
+      #(_a: %Element($../Sets/"Cartesian product"(
         S = {S},
         T = {T}
       ))),
       {t = {
-        #(_b: %Element($../Sets/"Disjoint union"(
+        #(_b: %Element($../Sets/"Cartesian product"(
           S = {S},
           T = {T}
         ))),
