@@ -70,12 +70,12 @@ $"morphism transform"(
               _y,
               $../../Essentials/Sets/"Cartesian product"(
                 S = {Y_1},
-                T = {Y_1}
+                T = {Y_2}
               ),
               [{
                 constructor = $../../Essentials/Sets/"Cartesian product"(
                     S = {Y_1},
-                    T = {Y_1}
+                    T = {Y_2}
                   ).pair,
                 parameters = #(
                   y_1: %Element(Y_1),

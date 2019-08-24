@@ -58,7 +58,7 @@ $rewritable(
                   V = {$Terms(V = {$../../Essentials/Sets/Union(
                     U = {$../Variables},
                     S = {V},
-                    T = {%enumeration(z)}
+                    T = {%enumeration(a)}
                   )})},
                   T = {N[a]},
                   x = {a},
@@ -98,7 +98,7 @@ $rewritable(
                         V = {$Terms(V = {$../../Essentials/Sets/Union(
                           U = {$../Variables},
                           S = {V},
-                          T = {%enumeration(y)}
+                          T = {%enumeration(a)}
                         )})},
                         T = {M[a]},
                         x = {a},
@@ -169,7 +169,7 @@ $rewritable(
                         V = {$Terms(V = {$../../Essentials/Sets/Union(
                           U = {$../Variables},
                           S = {V},
-                          T = {%enumeration(y)}
+                          T = {%enumeration(a)}
                         )})},
                         T = {M[a]},
                         x = {a},
