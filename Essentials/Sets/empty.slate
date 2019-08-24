@@ -49,21 +49,19 @@ $empty(S: %Set): %Predicate {
       goal = %not(%exists(#(x: %Element(S)))),
       steps = #(_: %ProveNeg({
         parameters = #(_: %Constraint(%exists(#(x: %Element(S))))),
-        steps = #(_: %UseExists({
-          parameters = #(x: %Element(S)),
-          steps = #(
-            _: %Consider(@),
-            _: %UseDef(result = %forall(
-              #(s: %Element(S)),
-              %in(
-                s,
-                $"Empty set"
-              )
-            )),
-            _: %UseForAll({s = {x}}),
-            _: %UseDef(result = %or)
-          )
-        }))
+        steps = #(
+          _: %UseExists(#(x: %Element(S))),
+          _: %Consider(@),
+          _: %UseDef(result = %forall(
+            #(s: %Element(S)),
+            %in(
+              s,
+              $"Empty set"
+            )
+          )),
+          _: %UseForAll({s = {x}}),
+          _: %UseDef(result = %or)
+        )
       }))
     },
     {

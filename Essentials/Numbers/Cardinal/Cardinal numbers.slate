@@ -53,20 +53,18 @@ $"Cardinal numbers": %Construction {
           X = {$../Natural/Subsets/"Segment (less)"(n = {m})},
           Y = {$../Natural/Subsets/"Segment (less)"(n = {n})}
         ))))),
-        _: %UseExists({
-          parameters = #(f: %Element($../../Functions/Bijections(
-            X = {$../Natural/Subsets/"Segment (less)"(n = {m})},
-            Y = {$../Natural/Subsets/"Segment (less)"(n = {n})}
-          ))),
-          steps = #(_: %UseTheorem(
-            $"Natural cardinality lemma"(
-              m = {m},
-              n = {n},
-              f = {f}
-            ),
-            %equals(m, n)
-          ))
-        })
+        _: %UseExists(#(f: %Element($../../Functions/Bijections(
+          X = {$../Natural/Subsets/"Segment (less)"(n = {m})},
+          Y = {$../Natural/Subsets/"Segment (less)"(n = {n})}
+        )))),
+        _: %UseTheorem(
+          $"Natural cardinality lemma"(
+            m = {m},
+            n = {n},
+            f = {f}
+          ),
+          %equals(m, n)
+        )
       )
     }
   }

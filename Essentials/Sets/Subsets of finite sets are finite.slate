@@ -40,27 +40,43 @@ $"Subsets of finite sets are finite"(
           f = {g}
         )
       )),
-      _: %UseExists({
-        parameters = #(
-          n: %Element($../Numbers/Natural/"Natural numbers"),
-          g: %Element($../Functions/Functions(
+      _: %UseExists(#(
+        n: %Element($../Numbers/Natural/"Natural numbers"),
+        g: %Element($../Functions/Functions(
+          X = {S},
+          Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})}
+        ))
+      )),
+      _: %ProveExists(
+        {
+          m = {n},
+          f = {$../Functions/restriction(
             X = {S},
-            Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})}
-          ))
-        ),
-        steps = #(_: %ProveExists(
-          {
-            m = {n},
+            Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
+            f = {g},
+            A = {T}
+          )}
+        },
+        proof = {
+          goal = $../Functions/injective(
+            X = {S},
+            Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
             f = {$../Functions/restriction(
               X = {S},
               Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
               f = {g},
               A = {T}
             )}
-          },
-          proof = {
-            goal = $../Functions/injective(
+          ),
+          steps = #(_: %UseTheorem(
+            $../Functions/"Restriction preserves injectivity"(
               X = {S},
+              Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
+              f = {g},
+              A = {T}
+            ),
+            $../Functions/injective(
+              X = {T},
               Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
               f = {$../Functions/restriction(
                 X = {S},
@@ -68,28 +84,10 @@ $"Subsets of finite sets are finite"(
                 f = {g},
                 A = {T}
               )}
-            ),
-            steps = #(_: %UseTheorem(
-              $../Functions/"Restriction preserves injectivity"(
-                X = {S},
-                Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
-                f = {g},
-                A = {T}
-              ),
-              $../Functions/injective(
-                X = {T},
-                Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
-                f = {$../Functions/restriction(
-                  X = {S},
-                  Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
-                  f = {g},
-                  A = {T}
-                )}
-              )
-            ))
-          }
-        ))
-      })
+            )
+          ))
+        }
+      )
     )
   }))}]
 }

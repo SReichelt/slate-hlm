@@ -135,40 +135,38 @@ $"Finiteness criterion lemma"(
               )
             )
           ),
-          _: %UseExists({
-            parameters = #(i: %Element(M)),
-            steps = #(_: %ProveExists({c = {%cases([
-              {
-                formula = $less(
-                  n = {$../../Functions/value(
-                    X = {$Subsets/"Segment (less or equal)"(n = {k})},
-                    Y = {M},
-                    f = {f},
-                    x = {k}
-                  )},
-                  m = {i}
-                ),
-                value = $../../Functions/value(
+          _: %UseExists(#(i: %Element(M))),
+          _: %ProveExists({c = {%cases([
+            {
+              formula = $less(
+                n = {$../../Functions/value(
                   X = {$Subsets/"Segment (less or equal)"(n = {k})},
                   Y = {M},
                   f = {f},
                   x = {k}
-                )
-              },
-              {
-                formula = $"less or equal"(
-                  m = {$../../Functions/value(
-                    X = {$Subsets/"Segment (less or equal)"(n = {k})},
-                    Y = {M},
-                    f = {f},
-                    x = {k}
-                  )},
-                  n = {i}
-                ),
-                value = i
-              }
-            ])}}))
-          })
+                )},
+                m = {i}
+              ),
+              value = $../../Functions/value(
+                X = {$Subsets/"Segment (less or equal)"(n = {k})},
+                Y = {M},
+                f = {f},
+                x = {k}
+              )
+            },
+            {
+              formula = $"less or equal"(
+                m = {$../../Functions/value(
+                  X = {$Subsets/"Segment (less or equal)"(n = {k})},
+                  Y = {M},
+                  f = {f},
+                  x = {k}
+                )},
+                n = {i}
+              ),
+              value = i
+            }
+          ])}})
         )
       }
     ]))}
