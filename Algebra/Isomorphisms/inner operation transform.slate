@@ -70,8 +70,8 @@ $"inner operation transform"(
                   Y = {Y},
                   f = {φ},
                   x = {z[$../../Essentials/Sets/"Cartesian product"(
-                      S = {Y},
-                      T = {Y}
+                      S = {X},
+                      T = {X}
                     ).pair(
                       s = {$../../Essentials/Functions/value(
                         X = {Y},

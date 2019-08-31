@@ -418,7 +418,18 @@ $Functors(
               𝐘 = {𝐙}
             ))
           ),
-          %equals(d[𝐘,𝐙,f], "d'"[𝐘,𝐙,f])
+          %equals(
+            d[𝐘,𝐙,f],
+            %asElementOf(
+              "d'"[𝐘,𝐙,f],
+              $../Morphisms(
+                u = {u},
+                𝓒 = {𝓓},
+                𝐗 = {𝐃[𝐘]},
+                𝐘 = {𝐃[𝐙]}
+              )
+            )
+          )
         )
       )],
       isomorphic = %true

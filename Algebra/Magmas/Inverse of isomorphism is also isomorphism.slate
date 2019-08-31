@@ -10,30 +10,8 @@ $"Inverse of isomorphism is also isomorphism"(
 ): %StandardTheorem {
   claim = %in(
     $../../Essentials/Functions/inverse(
-      X = {%setStructuralCases(
-        𝐌,
-        $Magmas,
-        [{
-          constructor = $Magmas.magma,
-          parameters = #(
-            M: %Set,
-            ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
-          ),
-          value = M
-        }]
-      )},
-      Y = {%setStructuralCases(
-        𝐍,
-        $Magmas,
-        [{
-          constructor = $Magmas.magma,
-          parameters = #(
-            N: %Set,
-            ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {N}))
-          ),
-          value = N
-        }]
-      )},
+      X = {$Carrier(𝐌 = {𝐌})},
+      Y = {$Carrier(𝐌 = {𝐍})},
       f = {φ}
     ),
     $Isomorphisms(

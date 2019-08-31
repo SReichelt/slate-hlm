@@ -9,8 +9,7 @@
 $Terms(
   V: %Subset(
     $../Variables,
-    auto = %true,
-    embedSubsets = %true
+    auto = %true
   ),
   _1: %Constraint($../../Essentials/Sets/finite(S = {V}))
 ): %Construction {

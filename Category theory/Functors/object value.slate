@@ -27,123 +27,129 @@ $"object value"(
     function = F,
     arguments = [𝐗]
   )],
-  definition = [%structuralCases(
-    F,
-    $Functors(
-      u = {u},
-      𝓒 = {𝓒},
-      𝓓 = {𝓓}
-    ),
-    [{
-      constructor = $Functors(
-          u = {u},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓}
-        ).functor,
-      parameters = #(
-        𝐀: %Binding(
-          $../Objects(
+  definition = [%asElementOf(
+    %structuralCases(
+      F,
+      $Functors(
+        u = {u},
+        𝓒 = {𝓒},
+        𝓓 = {𝓓}
+      ),
+      [{
+        constructor = $Functors(
             u = {u},
-            𝓒 = {𝓒}
+            𝓒 = {𝓒},
+            𝓓 = {𝓓}
+          ).functor,
+        parameters = #(
+          𝐀: %Binding(
+            $../Objects(
+              u = {u},
+              𝓒 = {𝓒}
+            ),
+            #(𝐃: %Element($../Objects(
+              u = {u},
+              𝓒 = {𝓓}
+            )))
           ),
-          #(𝐃: %Element($../Objects(
-            u = {u},
-            𝓒 = {𝓓}
-          )))
-        ),
-        𝐁: %Binding(
-          $../Objects(
-            u = {u},
-            𝓒 = {𝓒}
+          𝐁: %Binding(
+            $../Objects(
+              u = {u},
+              𝓒 = {𝓒}
+            ),
+            #(𝐂: %Binding(
+              %previous,
+              #(f: %Binding(
+                $../Morphisms(
+                  u = {u},
+                  𝓒 = {𝓒},
+                  𝐗 = {𝐁},
+                  𝐘 = {𝐂}
+                ),
+                #(d: %Element($../Morphisms(
+                  u = {u},
+                  𝓒 = {𝓓},
+                  𝐗 = {𝐃[𝐁]},
+                  𝐘 = {𝐃[𝐂]}
+                )))
+              ))
+            ))
           ),
-          #(𝐂: %Binding(
-            %previous,
-            #(f: %Binding(
-              $../Morphisms(
+          _1: %Constraint(%forall(
+            #(𝐀: %Element($../Objects(
+              u = {u},
+              𝓒 = {𝓒}
+            ))),
+            %equals(
+              d[
+                𝐀,
+                𝐀,
+                $../identity(
+                  u = {u},
+                  𝓒 = {𝓒},
+                  𝐗 = {𝐀}
+                )
+              ],
+              $../identity(
+                u = {u},
+                𝓒 = {𝓓},
+                𝐗 = {𝐃[𝐀]}
+              )
+            )
+          )),
+          _2: %Constraint(%forall(
+            #(
+              𝐀: %Element($../Objects(
+                u = {u},
+                𝓒 = {𝓒}
+              )),
+              𝐁: %Element(%previous),
+              𝐂: %Element(%previous),
+              f: %Element($../Morphisms(
+                u = {u},
+                𝓒 = {𝓒},
+                𝐗 = {𝐀},
+                𝐘 = {𝐁}
+              )),
+              g: %Element($../Morphisms(
                 u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐁},
                 𝐘 = {𝐂}
-              ),
-              #(d: %Element($../Morphisms(
-                u = {u},
-                𝓒 = {𝓓},
-                𝐗 = {𝐃[𝐁]},
-                𝐘 = {𝐃[𝐂]}
-              )))
-            ))
-          ))
-        ),
-        _1: %Constraint(%forall(
-          #(𝐀: %Element($../Objects(
-            u = {u},
-            𝓒 = {𝓒}
-          ))),
-          %equals(
-            d[
-              𝐀,
-              𝐀,
-              $../identity(
-                u = {u},
-                𝓒 = {𝓒},
-                𝐗 = {𝐀}
-              )
-            ],
-            $../identity(
-              u = {u},
-              𝓒 = {𝓓},
-              𝐗 = {𝐃[𝐀]}
-            )
-          )
-        )),
-        _2: %Constraint(%forall(
-          #(
-            𝐀: %Element($../Objects(
-              u = {u},
-              𝓒 = {𝓒}
-            )),
-            𝐁: %Element(%previous),
-            𝐂: %Element(%previous),
-            f: %Element($../Morphisms(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐀},
-              𝐘 = {𝐁}
-            )),
-            g: %Element($../Morphisms(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐁},
-              𝐘 = {𝐂}
-            ))
-          ),
-          %equals(
-            d[
-              𝐀,
-              𝐂,
+              ))
+            ),
+            %equals(
+              d[
+                𝐀,
+                𝐂,
+                $../composition(
+                  u = {u},
+                  𝓒 = {𝓒},
+                  𝐗 = {𝐀},
+                  𝐘 = {𝐁},
+                  𝐙 = {𝐂},
+                  g = {g},
+                  f = {f}
+                )
+              ],
               $../composition(
                 u = {u},
-                𝓒 = {𝓒},
-                𝐗 = {𝐀},
-                𝐘 = {𝐁},
-                𝐙 = {𝐂},
-                g = {g},
-                f = {f}
+                𝓒 = {𝓓},
+                𝐗 = {𝐃[𝐀]},
+                𝐘 = {𝐃[𝐁]},
+                𝐙 = {𝐃[𝐂]},
+                g = {d[𝐁,𝐂,g]},
+                f = {d[𝐀,𝐁,f]}
               )
-            ],
-            $../composition(
-              u = {u},
-              𝓒 = {𝓓},
-              𝐗 = {𝐃[𝐀]},
-              𝐘 = {𝐃[𝐁]},
-              𝐙 = {𝐃[𝐂]},
-              g = {d[𝐁,𝐂,g]},
-              f = {d[𝐀,𝐁,f]}
             )
-          )
-        ))
-      ),
-      value = 𝐃[𝐗]
-    }]
+          ))
+        ),
+        value = 𝐃[𝐗]
+      }]
+    ),
+    $../Objects(
+      u = {u},
+      𝓒 = {𝓓}
+    )
   )]
 }

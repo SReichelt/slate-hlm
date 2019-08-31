@@ -86,8 +86,8 @@ $"morphism transform"(
                   Y = {Y_3},
                   f = {φ_3},
                   x = {z[$../../Essentials/Sets/"Cartesian product"(
-                      S = {Y_1},
-                      T = {Y_2}
+                      S = {X_1},
+                      T = {X_2}
                     ).pair(
                       s = {$../../Essentials/Functions/value(
                         X = {Y_1},
