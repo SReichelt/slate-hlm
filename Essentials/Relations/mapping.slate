@@ -26,7 +26,7 @@ $mapping(
       #(t: %Element(T)),
       formula = $related(
         S = {S},
-        T = {S},
+        T = {T},
         s = {s},
         ≺ = {≺},
         t = {t}

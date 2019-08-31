@@ -20,38 +20,8 @@ $"less or equal"(
       𝐲 = {𝐲}
     ))),
     formula = $../../Functions/injective(
-      X = {%setStructuralCases(
-        𝐱,
-        $"Ordinal numbers",
-        [{
-          constructor = $"Ordinal numbers"."order type",
-          parameters = #(
-            X: %Set,
-            ⪯: %Element($../../Relations/Endorelations(S = {X})),
-            _1: %Constraint($../../Relations/"well-order"(
-              S = {X},
-              ≺ = {⪯}
-            ))
-          ),
-          value = X
-        }]
-      )},
-      Y = {%setStructuralCases(
-        𝐲,
-        $"Ordinal numbers",
-        [{
-          constructor = $"Ordinal numbers"."order type",
-          parameters = #(
-            Y: %Set,
-            ⊑: %Element($../../Relations/Endorelations(S = {Y})),
-            _1: %Constraint($../../Relations/"well-order"(
-              S = {Y},
-              ≺ = {⊑}
-            ))
-          ),
-          value = Y
-        }]
-      )},
+      X = {$Carrier(𝐱 = {𝐱})},
+      Y = {$Carrier(𝐱 = {𝐲})},
       f = {φ}
     )
   )]
