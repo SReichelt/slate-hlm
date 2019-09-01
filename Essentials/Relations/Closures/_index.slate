@@ -1,6 +1,6 @@
 %../../../../../logics/library%
 
-$Relations: %Section {
+$Closures: %Section {
   logic = 'hlm',
   items = [
     %item($closure),
