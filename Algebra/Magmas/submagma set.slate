@@ -1,0 +1,26 @@
+%../../../../logics/hlm%
+
+$"submagma set"(
+  𝐌: %Element($Magmas),
+  U: %Subset($Carrier(𝐌 = {𝐌}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [U, 𝐌],
+    singular = 'submagma',
+    plural = 'submagmas'
+  )],
+  definition = [%forall(
+    #(
+      a: %Element(U),
+      b: %Element(%previous)
+    ),
+    %in(
+      $operation(
+        𝐌 = {𝐌},
+        a = {a},
+        b = {b}
+      ),
+      U
+    )
+  )]
+}

@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @remarks This follows immediately from the HLM-specific definition of equality of magmas.
+ */
 $"Equality criterion"(
   𝐌: %Element($Magmas),
   𝐍: %Element(%previous)

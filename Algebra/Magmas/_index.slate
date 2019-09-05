@@ -13,6 +13,9 @@ $Magmas: %Section {
     %item($identity),
     %item($"Equality criterion"),
     %item($"Inverse of isomorphism is also isomorphism"),
+    %item($"submagma set"),
+    %item($"subset magma"),
+    %item($submagma),
     %subsection(
       $"Free magma",
       'Free magma'

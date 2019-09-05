@@ -1,0 +1,45 @@
+%../../../../../logics/hlm%
+
+$"inner operation restriction"(
+  X: %Set(auto = %true),
+  A: %Subset(X),
+  ∗: %Element($"Inner operations"(X = {X})),
+  _1: %Constraint(%forall(
+    #(
+      x: %Element(A),
+      y: %Element(%previous)
+    ),
+    %in(
+      $value(
+        X = {X},
+        Y = {X},
+        Z = {X},
+        ∗ = {∗},
+        x = {x},
+        y = {y}
+      ),
+      A
+    )
+  ))
+): %ExplicitOperator {
+  display = [$UnaryOperator(
+    symbol = $SubSup(
+      body = '∣',
+      sub = A
+    ),
+    operand = ∗
+  )],
+  definition = [$../"codomain restriction"(
+    X = {$../../Sets/"Cartesian product"(
+      S = {X},
+      T = {X}
+    )},
+    A = {$../../Sets/"Cartesian product"(
+      S = {A},
+      T = {A}
+    )},
+    Y = {X},
+    B = {A},
+    f = {∗}
+  )]
+}
