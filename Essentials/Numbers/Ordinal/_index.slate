@@ -9,6 +9,8 @@ $Ordinal: %Section {
     %item($Homomorphisms),
     %item($Isomorphisms),
     %item($identity),
+    %item($"ordered subset"),
+    %item($"subset ordinal"),
     %item($"less or equal"),
     %item($less),
     %item($"Less or equal is a well-order"),

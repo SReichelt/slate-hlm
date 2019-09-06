@@ -5,14 +5,14 @@ $"subset magma"(
     $Magmas,
     auto = %true
   ),
-  U: %Subset($Carrier(𝐌 = {𝐌})),
+  S: %Subset($Carrier(𝐌 = {𝐌})),
   _1: %Constraint($"submagma set"(
     𝐌 = {𝐌},
-    U = {U}
+    S = {S}
   ))
 ): %ExplicitOperator {
   display = [$Parens(
-    body = U,
+    body = S,
     style = '[]'
   )],
   definition = [%structuralCases(
@@ -25,10 +25,10 @@ $"subset magma"(
         ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
       ),
       value = $Magmas.magma(
-          S = {U},
+          S = {S},
           ∗ = {$../../Essentials/Functions/Operations/"inner operation restriction"(
             X = {M},
-            A = {U},
+            A = {S},
             ∗ = {∗}
           )}
       )

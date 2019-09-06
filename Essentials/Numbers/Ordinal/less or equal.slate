@@ -14,15 +14,33 @@ $"less or equal"(
       operands = [𝐲, 𝐱]
     )
   ],
-  definition = [%exists(
-    #(φ: %Element($Homomorphisms(
-      𝐱 = {𝐱},
-      𝐲 = {𝐲}
-    ))),
-    formula = $../../Functions/injective(
-      X = {$Carrier(𝐱 = {𝐱})},
-      Y = {$Carrier(𝐱 = {𝐲})},
-      f = {φ}
+  definition = [
+    %exists(
+      #(φ: %Element($Homomorphisms(
+        𝐱 = {𝐱},
+        𝐲 = {𝐲}
+      ))),
+      formula = $../../Functions/injective(
+        X = {$Carrier(𝐱 = {𝐱})},
+        Y = {$Carrier(𝐱 = {𝐲})},
+        f = {φ}
+      )
+    ),
+    %exists(
+      #(S: %Subset($Carrier(𝐱 = {𝐲}))),
+      formula = %and(
+        $"ordered subset"(
+          𝐱 = {𝐲},
+          S = {S}
+        ),
+        %equals(
+          𝐱,
+          $"subset ordinal"(
+            𝐱 = {𝐲},
+            S = {S}
+          )
+        )
+      )
     )
-  )]
+  ]
 }

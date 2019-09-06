@@ -1,0 +1,41 @@
+%../../../../../logics/hlm%
+
+$"subset ordinal"(
+  𝐱: %Element(
+    $"Ordinal numbers",
+    auto = %true
+  ),
+  S: %Subset($Carrier(𝐱 = {𝐱})),
+  _1: %Constraint($"ordered subset"(
+    𝐱 = {𝐱},
+    S = {S}
+  ))
+): %ExplicitOperator {
+  display = [$Parens(
+    body = S,
+    style = '[]'
+  )],
+  definition = [%structuralCases(
+    𝐱,
+    $"Ordinal numbers",
+    [{
+      constructor = $"Ordinal numbers"."order type",
+      parameters = #(
+        X: %Set,
+        ⪯: %Element($../../Relations/Endorelations(S = {X})),
+        _1: %Constraint($../../Relations/"well-order"(
+          S = {X},
+          ≺ = {⪯}
+        ))
+      ),
+      value = $"Ordinal numbers"."order type"(
+          S = {S},
+          ⪯ = {$../../Relations/restriction(
+            S = {X},
+            ≺ = {⪯},
+            T = {S}
+          )}
+      )
+    }]
+  )]
+}

@@ -2,16 +2,16 @@
 
 $"submagma set"(
   𝐌: %Element($Magmas),
-  U: %Subset($Carrier(𝐌 = {𝐌}))
+  S: %Subset($Carrier(𝐌 = {𝐌}))
 ): %Predicate {
   display = [$NounRelation(
-    operands = [U, 𝐌],
+    operands = [S, 𝐌],
     singular = 'submagma',
     plural = 'submagmas'
   )],
   definition = [%forall(
     #(
-      a: %Element(U),
+      a: %Element(S),
       b: %Element(%previous)
     ),
     %in(
@@ -20,7 +20,7 @@ $"submagma set"(
         a = {a},
         b = {b}
       ),
-      U
+      S
     )
   )]
 }

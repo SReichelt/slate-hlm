@@ -27,17 +27,17 @@ $submagma(
       )
     ),
     %exists(
-      #(U: %Subset($Carrier(𝐌 = {𝐍}))),
+      #(S: %Subset($Carrier(𝐌 = {𝐍}))),
       formula = %and(
         $"submagma set"(
           𝐌 = {𝐍},
-          U = {U}
+          S = {S}
         ),
         %equals(
           𝐌,
           $"subset magma"(
             𝐌 = {𝐍},
-            U = {U}
+            S = {S}
           )
         )
       )
