@@ -4,6 +4,10 @@ $"less or equal"(
   a: %Element($"Real numbers"),
   b: %Element(%previous)
 ): %Predicate {
+  properties = {negation = $less(
+    b = {a},
+    a = {b}
+  )},
   display = [
     $Relation(
       symbol = %neg('≤', '≰'),

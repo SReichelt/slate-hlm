@@ -4,6 +4,10 @@ $less(
   a: %Element($"Rational numbers"),
   b: %Element(%previous)
 ): %Predicate {
+  properties = {negation = $"less or equal"(
+    b = {a},
+    a = {b}
+  )},
   display = [
     $Relation(
       symbol = %neg('<', '≮'),

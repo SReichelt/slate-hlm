@@ -10,6 +10,10 @@ $"less or equal"(
   m: %Element($"Natural numbers"),
   n: %Element(%previous)
 ): %Predicate {
+  properties = {negation = $less(
+    n = {m},
+    m = {n}
+  )},
   display = [
     $Relation(
       symbol = %neg('≤', '≰'),
