@@ -1,0 +1,49 @@
+%../../../../logics/hlm%
+
+$Isomorphisms(
+  𝐒: %Element($"Pointed sets"),
+  𝐓: %Element(%previous)
+): %SetOperator {
+  display = [$Function(
+    function = 'Iso',
+    arguments = [𝐒, 𝐓]
+  )],
+  definitionDisplay = {
+    parameter = #(φ: %Expr),
+    display = [$FunctionDefinition(
+      function = φ,
+      symbol = '↔',
+      operands = [𝐒, 𝐓]
+    )],
+    singularName = 'isomorphism',
+    pluralName = 'isomorphisms'
+  },
+  definition = [
+    %subset(
+      #(φ: %Element($Homomorphisms(
+        𝐒 = {𝐒},
+        𝐓 = {𝐓}
+      ))),
+      $../../Essentials/Functions/bijective(
+        X = {$Carrier(𝐒 = {𝐒})},
+        Y = {$Carrier(𝐒 = {𝐓})},
+        f = {φ}
+      )
+    ),
+    %subset(
+      #(f: %Element($../../Essentials/Functions/Bijections(
+        X = {$Carrier(𝐒 = {𝐒})},
+        Y = {$Carrier(𝐒 = {𝐓})}
+      ))),
+      %equals(
+        $../../Essentials/Functions/value(
+          X = {$Carrier(𝐒 = {𝐒})},
+          Y = {$Carrier(𝐒 = {𝐓})},
+          f = {f},
+          x = {$"base point"(𝐒 = {𝐒})}
+        ),
+        $"base point"(𝐒 = {𝐓})
+      )
+    )
+  ]
+}

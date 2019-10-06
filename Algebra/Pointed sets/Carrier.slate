@@ -1,0 +1,30 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition retrieves a representative carrier set from a pointed set (which is actually an equivalence class of pointed sets), and enables typical abuse of notation.
+ */
+$Carrier(𝐒: %Element($"Pointed sets")): %SetOperator {
+  display = [$Function(
+    function = 'Carrier',
+    arguments = [𝐒]
+  )],
+  definitionDisplay = {
+    parameter = #(x: %Expr),
+    display = [$ElementParameter(
+      element = x,
+      set = 𝐒
+    )]
+  },
+  definition = [%setStructuralCases(
+    𝐒,
+    $"Pointed sets",
+    [{
+      constructor = $"Pointed sets"."pointed set",
+      parameters = #(
+        S: %Set,
+        s: %Element(S)
+      ),
+      value = S
+    }]
+  )]
+}

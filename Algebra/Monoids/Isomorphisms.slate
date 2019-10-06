@@ -1,0 +1,84 @@
+%../../../../logics/hlm%
+
+$Isomorphisms(
+  𝐌: %Element($Monoids),
+  𝐍: %Element(%previous)
+): %SetOperator {
+  display = [$Function(
+    function = 'Iso',
+    arguments = [𝐌, 𝐍]
+  )],
+  definitionDisplay = {
+    parameter = #(φ: %Expr),
+    display = [$FunctionDefinition(
+      function = φ,
+      symbol = '↔',
+      operands = [𝐌, 𝐍]
+    )],
+    singularName = 'isomorphism',
+    pluralName = 'isomorphisms'
+  },
+  definition = [
+    %subset(
+      #(φ: %Element($Homomorphisms(
+        𝐌 = {𝐌},
+        𝐍 = {𝐍}
+      ))),
+      $../../Essentials/Functions/bijective(
+        X = {$Carrier(𝐌 = {𝐌})},
+        Y = {$Carrier(𝐌 = {𝐍})},
+        f = {φ}
+      )
+    ),
+    %subset(
+      #(f: %Element($../../Essentials/Functions/Bijections(
+        X = {$Carrier(𝐌 = {𝐌})},
+        Y = {$Carrier(𝐌 = {𝐍})}
+      ))),
+      %and(
+        %forall(
+          #(
+            a: %Element($Carrier(𝐌 = {𝐌})),
+            b: %Element(%previous)
+          ),
+          %equals(
+            $../../Essentials/Functions/value(
+              X = {$Carrier(𝐌 = {𝐌})},
+              Y = {$Carrier(𝐌 = {𝐍})},
+              f = {f},
+              x = {$operation(
+                𝐌 = {𝐌},
+                a = {a},
+                b = {b}
+              )}
+            ),
+            $operation(
+              𝐌 = {𝐍},
+              a = {$../../Essentials/Functions/value(
+                X = {$Carrier(𝐌 = {𝐌})},
+                Y = {$Carrier(𝐌 = {𝐍})},
+                f = {f},
+                x = {a}
+              )},
+              b = {$../../Essentials/Functions/value(
+                X = {$Carrier(𝐌 = {𝐌})},
+                Y = {$Carrier(𝐌 = {𝐍})},
+                f = {f},
+                x = {b}
+              )}
+            )
+          )
+        ),
+        %equals(
+          $../../Essentials/Functions/value(
+            X = {$Carrier(𝐌 = {𝐌})},
+            Y = {$Carrier(𝐌 = {𝐍})},
+            f = {f},
+            x = {$"identity element"(𝐌 = {𝐌})}
+          ),
+          $"identity element"(𝐌 = {𝐍})
+        )
+      )
+    )
+  ]
+}

@@ -1,0 +1,156 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Monoid
+ */
+$Monoids: %Construction {
+  $monoid(
+    S: %Set,
+    ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+    _1: %Constraint($../../Essentials/Functions/Operations/associative(
+      X = {S},
+      ∗ = {∗}
+    )),
+    e: %Element(S),
+    _2: %Constraint(%forall(
+      #(a: %Element(S)),
+      %and(
+        %equals(
+          $../../Essentials/Functions/Operations/value(
+            X = {S},
+            Y = {S},
+            Z = {S},
+            ∗ = {∗},
+            x = {a},
+            y = {e}
+          ),
+          e
+        ),
+        %equals(
+          $../../Essentials/Functions/Operations/value(
+            X = {S},
+            Y = {S},
+            Z = {S},
+            ∗ = {∗},
+            x = {e},
+            y = {a}
+          ),
+          e
+        )
+      )
+    ))
+  ): %Constructor {
+    display = [$Tuple(
+      items = [S, ∗, e],
+      style = '[]'
+    )],
+    equalityDefinition = {
+      leftParameters = #(
+        S: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+        _1: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {S},
+          ∗ = {∗}
+        )),
+        e: %Element(S),
+        _2: %Constraint(%forall(
+          #(a: %Element(S)),
+          %and(
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {S},
+                Y = {S},
+                Z = {S},
+                ∗ = {∗},
+                x = {a},
+                y = {e}
+              ),
+              e
+            ),
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {S},
+                Y = {S},
+                Z = {S},
+                ∗ = {∗},
+                x = {e},
+                y = {a}
+              ),
+              e
+            )
+          )
+        ))
+      ),
+      rightParameters = #(
+        T: %Set,
+        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {T})),
+        _3: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {T},
+          ∗ = {⋆}
+        )),
+        f: %Element(T),
+        _4: %Constraint(%forall(
+          #(b: %Element(T)),
+          %and(
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {T},
+                Y = {T},
+                Z = {T},
+                ∗ = {⋆},
+                x = {b},
+                y = {f}
+              ),
+              f
+            ),
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {T},
+                Y = {T},
+                Z = {T},
+                ∗ = {⋆},
+                x = {f},
+                y = {b}
+              ),
+              f
+            )
+          )
+        ))
+      ),
+      definition = [%exists(
+        #(φ: %Element($../../Essentials/Functions/Bijections(
+          X = {S},
+          Y = {T}
+        ))),
+        formula = %and(
+          %equals(
+            $../Isomorphisms/"inner operation transform"(
+              X = {S},
+              Y = {T},
+              φ = {φ},
+              ∗ = {∗}
+            ),
+            ⋆
+          ),
+          %equals(
+            $../Isomorphisms/"element transform"(
+              X = {S},
+              Y = {T},
+              φ = {φ},
+              x = {e}
+            ),
+            f
+          )
+        )
+      )],
+      isomorphic = %true
+    }
+  }
+
+  display = ['𝓜𝓸𝓷'],
+  definitionDisplay = {
+    parameter = #(𝐌: %Expr),
+    singularName = 'monoid',
+    pluralName = 'monoids'
+  }
+}

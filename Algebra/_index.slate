@@ -8,8 +8,20 @@ $Algebra: %Section {
       'Isomorphisms'
     ),
     %subsection(
+      $"Pointed sets",
+      'Pointed sets'
+    ),
+    %subsection(
       $Magmas,
       'Magmas'
+    ),
+    %subsection(
+      $Semigroups,
+      'Semigroups'
+    ),
+    %subsection(
+      $Monoids,
+      'Monoids'
     )
   ]
 }

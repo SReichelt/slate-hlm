@@ -1,0 +1,62 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition retrieves a representative carrier set from a monoid (which is actually an equivalence class of monoids), and enables typical abuse of notation.
+ */
+$Carrier(𝐌: %Element($Monoids)): %SetOperator {
+  display = [$Function(
+    function = 'Carrier',
+    arguments = [𝐌]
+  )],
+  definitionDisplay = {
+    parameter = #(a: %Expr),
+    display = [$ElementParameter(
+      element = a,
+      set = 𝐌
+    )]
+  },
+  definition = [%setStructuralCases(
+    𝐌,
+    $Monoids,
+    [{
+      constructor = $Monoids.monoid,
+      parameters = #(
+        M: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        _1: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {M},
+          ∗ = {∗}
+        )),
+        e: %Element(M),
+        _2: %Constraint(%forall(
+          #(a: %Element(M)),
+          %and(
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {M},
+                Y = {M},
+                Z = {M},
+                ∗ = {∗},
+                x = {a},
+                y = {e}
+              ),
+              e
+            ),
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {M},
+                Y = {M},
+                Z = {M},
+                ∗ = {∗},
+                x = {e},
+                y = {a}
+              ),
+              e
+            )
+          )
+        ))
+      ),
+      value = M
+    }]
+  )]
+}

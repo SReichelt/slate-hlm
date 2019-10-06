@@ -1,0 +1,20 @@
+%../../../../logics/library%
+
+$Monoids: %Section {
+  logic = 'hlm',
+  items = [
+    %item($Monoids),
+    %item($Carrier),
+    %item($operation),
+    %item($"identity element"),
+    %item($commutative),
+    %item($Homomorphisms),
+    %item($Isomorphisms),
+    %item($identity),
+    %item($"Equality criterion"),
+    %item($"Inverse of isomorphism is also isomorphism"),
+    %item($"submonoid set"),
+    %item($"subset monoid"),
+    %item($submonoid)
+  ]
+}

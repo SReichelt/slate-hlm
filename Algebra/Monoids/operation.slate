@@ -1,0 +1,69 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition lets us multiply elements without decomposing the monoid.
+ */
+$operation(
+  𝐌: %Element(
+    $Monoids,
+    auto = %true
+  ),
+  a: %Element($Carrier(𝐌 = {𝐌})),
+  b: %Element(%previous)
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '•',
+    operands = [a, b]
+  )],
+  definition = [%structuralCases(
+    𝐌,
+    $Monoids,
+    [{
+      constructor = $Monoids.monoid,
+      parameters = #(
+        M: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        _1: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {M},
+          ∗ = {∗}
+        )),
+        e: %Element(M),
+        _2: %Constraint(%forall(
+          #(a: %Element(M)),
+          %and(
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {M},
+                Y = {M},
+                Z = {M},
+                ∗ = {∗},
+                x = {a},
+                y = {e}
+              ),
+              e
+            ),
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {M},
+                Y = {M},
+                Z = {M},
+                ∗ = {∗},
+                x = {e},
+                y = {a}
+              ),
+              e
+            )
+          )
+        ))
+      ),
+      value = $../../Essentials/Functions/Operations/value(
+        X = {M},
+        Y = {M},
+        Z = {M},
+        ∗ = {∗},
+        x = {a},
+        y = {b}
+      )
+    }]
+  )]
+}

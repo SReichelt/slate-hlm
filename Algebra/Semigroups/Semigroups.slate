@@ -1,0 +1,17 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Semigroup
+ */
+$Semigroups: %SetOperator {
+  display = ['𝓢𝓮𝓶𝓲𝓖𝓻𝓹'],
+  definitionDisplay = {
+    parameter = #(𝐒: %Expr),
+    singularName = 'semigroup',
+    pluralName = 'semigroups'
+  },
+  definition = [%subset(
+    #(𝐒: %Element($../Magmas/Magmas)),
+    $../Magmas/associative(𝐌 = {𝐒})
+  )]
+}

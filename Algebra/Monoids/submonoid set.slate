@@ -1,0 +1,32 @@
+%../../../../logics/hlm%
+
+$"submonoid set"(
+  𝐌: %Element($Monoids),
+  S: %Subset($Carrier(𝐌 = {𝐌}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [S, 𝐌],
+    singular = 'submonoid',
+    plural = 'submonoids'
+  )],
+  definition = [%and(
+    %forall(
+      #(
+        a: %Element(S),
+        b: %Element(%previous)
+      ),
+      %in(
+        $operation(
+          𝐌 = {𝐌},
+          a = {a},
+          b = {b}
+        ),
+        S
+      )
+    ),
+    %in(
+      $"identity element"(𝐌 = {𝐌}),
+      S
+    )
+  )]
+}

@@ -1,0 +1,6 @@
+%../../../../logics/library%
+
+$Semigroups: %Section {
+  logic = 'hlm',
+  items = [%item($Semigroups)]
+}
