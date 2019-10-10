@@ -40,7 +40,7 @@ $Carrier(𝐌: %Element($Monoids)): %SetOperator {
                 x = {a},
                 y = {e}
               ),
-              e
+              a
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
@@ -51,7 +51,7 @@ $Carrier(𝐌: %Element($Monoids)): %SetOperator {
                 x = {e},
                 y = {a}
               ),
-              e
+              a
             )
           )
         ))

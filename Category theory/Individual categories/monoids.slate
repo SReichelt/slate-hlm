@@ -1,0 +1,101 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks The objects of this category are actually isomorphism classes of monoids.
+ */
+$monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+  display = [$SubSup(
+    body = '𝐌𝐨𝐧',
+    sub = u
+  )],
+  definition = [$../Categories(u = {u}).category(
+      O = {$../../Algebra/Monoids/Monoids},
+      𝐀 = {
+        #(𝐀: %Element($../../Algebra/Monoids/Monoids)),
+        {𝐁 = {
+          #(𝐁: %Element($../../Algebra/Monoids/Monoids)),
+          {M = {$../../Algebra/Monoids/Homomorphisms(
+            𝐌 = {𝐀},
+            𝐍 = {𝐁}
+          )}}
+        }}
+      },
+      𝐂 = {
+        #(𝐂: %Element($../../Algebra/Monoids/Monoids)),
+        {i = {$../../Algebra/Monoids/identity(𝐌 = {𝐂})}}
+      },
+      𝐃 = {
+        #(𝐃: %Element($../../Algebra/Monoids/Monoids)),
+        {𝐄 = {
+          #(𝐄: %Element($../../Algebra/Monoids/Monoids)),
+          {𝐅 = {
+            #(𝐅: %Element($../../Algebra/Monoids/Monoids)),
+            {∘ = {$../../Essentials/Functions/Operations/operator(
+              X = {$../../Algebra/Monoids/Homomorphisms(
+                𝐌 = {𝐄},
+                𝐍 = {𝐅}
+              )},
+              Y = {$../../Algebra/Monoids/Homomorphisms(
+                𝐌 = {𝐃},
+                𝐍 = {𝐄}
+              )},
+              Z = {$../../Algebra/Monoids/Homomorphisms(
+                𝐌 = {𝐃},
+                𝐍 = {𝐅}
+              )},
+              parameters = #(
+                ψ: %Element($../../Algebra/Monoids/Homomorphisms(
+                  𝐌 = {𝐄},
+                  𝐍 = {𝐅}
+                )),
+                φ: %Element($../../Algebra/Monoids/Homomorphisms(
+                  𝐌 = {𝐃},
+                  𝐍 = {𝐄}
+                ))
+              ),
+              operator = $../../Essentials/Functions/composition(
+                X = {%setStructuralCases(
+                  𝐃,
+                  $../../Algebra/Monoids/Monoids,
+                  [{
+                    constructor = $../../Algebra/Monoids/Monoids.monoid,
+                    parameters = #(
+                      M: %Set,
+                      ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+                    ),
+                    value = M
+                  }]
+                )},
+                Y = {%setStructuralCases(
+                  𝐄,
+                  $../../Algebra/Monoids/Monoids,
+                  [{
+                    constructor = $../../Algebra/Monoids/Monoids.monoid,
+                    parameters = #(
+                      M: %Set,
+                      ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+                    ),
+                    value = M
+                  }]
+                )},
+                Z = {%setStructuralCases(
+                  𝐅,
+                  $../../Algebra/Monoids/Monoids,
+                  [{
+                    constructor = $../../Algebra/Monoids/Monoids.monoid,
+                    parameters = #(
+                      N: %Set,
+                      ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {N}))
+                    ),
+                    value = N
+                  }]
+                )},
+                f = {φ},
+                g = {ψ}
+              )
+            )}}
+          }}
+        }}
+      }
+  )]
+}

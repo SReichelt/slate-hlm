@@ -1,0 +1,110 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition lets us multiply elements without decomposing the group.
+ */
+$operation(
+  𝐆: %Element(
+    $Groups,
+    auto = %true
+  ),
+  a: %Element($Carrier(𝐆 = {𝐆})),
+  b: %Element(%previous)
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '•',
+    operands = [a, b]
+  )],
+  definition = [%structuralCases(
+    𝐆,
+    $Groups,
+    [{
+      constructor = $Groups.group,
+      parameters = #(
+        G: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+        _1: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {G},
+          ∗ = {∗}
+        )),
+        e: %Element(G),
+        _2: %Constraint(%forall(
+          #(a: %Element(G)),
+          %and(
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {G},
+                Y = {G},
+                Z = {G},
+                ∗ = {∗},
+                x = {a},
+                y = {e}
+              ),
+              a
+            ),
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {G},
+                Y = {G},
+                Z = {G},
+                ∗ = {∗},
+                x = {e},
+                y = {a}
+              ),
+              a
+            )
+          )
+        )),
+        i: %Element($../../Essentials/Functions/Functions(
+          X = {G},
+          Y = {G}
+        )),
+        _3: %Constraint(%forall(
+          #(a: %Element(G)),
+          %and(
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {G},
+                Y = {G},
+                Z = {G},
+                ∗ = {∗},
+                x = {a},
+                y = {$../../Essentials/Functions/value(
+                  X = {G},
+                  Y = {G},
+                  f = {i},
+                  x = {a}
+                )}
+              ),
+              e
+            ),
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {G},
+                Y = {G},
+                Z = {G},
+                ∗ = {∗},
+                x = {$../../Essentials/Functions/value(
+                  X = {G},
+                  Y = {G},
+                  f = {i},
+                  x = {a}
+                )},
+                y = {a}
+              ),
+              e
+            )
+          )
+        ))
+      ),
+      value = $../../Essentials/Functions/Operations/value(
+        X = {G},
+        Y = {G},
+        Z = {G},
+        ∗ = {∗},
+        x = {a},
+        y = {b}
+      )
+    }]
+  )]
+}

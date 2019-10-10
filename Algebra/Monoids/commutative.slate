@@ -30,7 +30,7 @@ $commutative(𝐌: %Element($Monoids)): %Predicate {
                 x = {a},
                 y = {e}
               ),
-              e
+              a
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
@@ -41,7 +41,7 @@ $commutative(𝐌: %Element($Monoids)): %Predicate {
                 x = {e},
                 y = {a}
               ),
-              e
+              a
             )
           )
         ))

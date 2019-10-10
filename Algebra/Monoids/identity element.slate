@@ -30,7 +30,7 @@ $"identity element"(𝐌: %Element($Monoids)): %ExplicitOperator {
                 x = {a},
                 y = {e}
               ),
-              e
+              a
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
@@ -41,7 +41,7 @@ $"identity element"(𝐌: %Element($Monoids)): %ExplicitOperator {
                 x = {e},
                 y = {a}
               ),
-              e
+              a
             )
           )
         ))

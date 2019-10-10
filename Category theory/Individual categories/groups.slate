@@ -1,0 +1,101 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks The objects of this category are actually isomorphism classes of groups.
+ */
+$groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+  display = [$SubSup(
+    body = '𝐆𝐫𝐩',
+    sub = u
+  )],
+  definition = [$../Categories(u = {u}).category(
+      O = {$../../Algebra/Groups/Groups},
+      𝐀 = {
+        #(𝐀: %Element($../../Algebra/Groups/Groups)),
+        {𝐁 = {
+          #(𝐁: %Element($../../Algebra/Groups/Groups)),
+          {M = {$../../Algebra/Groups/Homomorphisms(
+            𝐆 = {𝐀},
+            𝐇 = {𝐁}
+          )}}
+        }}
+      },
+      𝐂 = {
+        #(𝐂: %Element($../../Algebra/Groups/Groups)),
+        {i = {$../../Algebra/Groups/identity(𝐆 = {𝐂})}}
+      },
+      𝐃 = {
+        #(𝐃: %Element($../../Algebra/Groups/Groups)),
+        {𝐄 = {
+          #(𝐄: %Element($../../Algebra/Groups/Groups)),
+          {𝐅 = {
+            #(𝐅: %Element($../../Algebra/Groups/Groups)),
+            {∘ = {$../../Essentials/Functions/Operations/operator(
+              X = {$../../Algebra/Groups/Homomorphisms(
+                𝐆 = {𝐄},
+                𝐇 = {𝐅}
+              )},
+              Y = {$../../Algebra/Groups/Homomorphisms(
+                𝐆 = {𝐃},
+                𝐇 = {𝐄}
+              )},
+              Z = {$../../Algebra/Groups/Homomorphisms(
+                𝐆 = {𝐃},
+                𝐇 = {𝐅}
+              )},
+              parameters = #(
+                ψ: %Element($../../Algebra/Groups/Homomorphisms(
+                  𝐆 = {𝐄},
+                  𝐇 = {𝐅}
+                )),
+                φ: %Element($../../Algebra/Groups/Homomorphisms(
+                  𝐆 = {𝐃},
+                  𝐇 = {𝐄}
+                ))
+              ),
+              operator = $../../Essentials/Functions/composition(
+                X = {%setStructuralCases(
+                  𝐃,
+                  $../../Algebra/Groups/Groups,
+                  [{
+                    constructor = $../../Algebra/Groups/Groups.group,
+                    parameters = #(
+                      M: %Set,
+                      ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+                    ),
+                    value = M
+                  }]
+                )},
+                Y = {%setStructuralCases(
+                  𝐄,
+                  $../../Algebra/Groups/Groups,
+                  [{
+                    constructor = $../../Algebra/Groups/Groups.group,
+                    parameters = #(
+                      M: %Set,
+                      ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+                    ),
+                    value = M
+                  }]
+                )},
+                Z = {%setStructuralCases(
+                  𝐅,
+                  $../../Algebra/Groups/Groups,
+                  [{
+                    constructor = $../../Algebra/Groups/Groups.group,
+                    parameters = #(
+                      N: %Set,
+                      ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {N}))
+                    ),
+                    value = N
+                  }]
+                )},
+                f = {φ},
+                g = {ψ}
+              )
+            )}}
+          }}
+        }}
+      }
+  )]
+}

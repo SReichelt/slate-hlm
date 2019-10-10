@@ -24,7 +24,7 @@ $Monoids: %Construction {
             x = {a},
             y = {e}
           ),
-          e
+          a
         ),
         %equals(
           $../../Essentials/Functions/Operations/value(
@@ -35,7 +35,7 @@ $Monoids: %Construction {
             x = {e},
             y = {a}
           ),
-          e
+          a
         )
       )
     ))
@@ -65,7 +65,7 @@ $Monoids: %Construction {
                 x = {a},
                 y = {e}
               ),
-              e
+              a
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
@@ -76,7 +76,7 @@ $Monoids: %Construction {
                 x = {e},
                 y = {a}
               ),
-              e
+              a
             )
           )
         ))
@@ -101,7 +101,7 @@ $Monoids: %Construction {
                 x = {b},
                 y = {f}
               ),
-              f
+              b
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
@@ -112,7 +112,7 @@ $Monoids: %Construction {
                 x = {f},
                 y = {b}
               ),
-              f
+              b
             )
           )
         ))

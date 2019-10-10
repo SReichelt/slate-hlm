@@ -40,7 +40,7 @@ $"subset monoid"(
                 x = {a},
                 y = {e}
               ),
-              e
+              a
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
@@ -51,7 +51,7 @@ $"subset monoid"(
                 x = {e},
                 y = {a}
               ),
-              e
+              a
             )
           )
         ))

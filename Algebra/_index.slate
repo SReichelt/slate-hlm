@@ -22,6 +22,10 @@ $Algebra: %Section {
     %subsection(
       $Monoids,
       'Monoids'
+    ),
+    %subsection(
+      $Groups,
+      'Groups'
     )
   ]
 }
