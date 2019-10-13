@@ -43,12 +43,12 @@ $"quotient group"(
           )},
           Y = {T}
         ).function(x = {
-          #(x: %Element($../../Essentials/Sets/"Cartesian product"(
+          #(_x: %Element($../../Essentials/Sets/"Cartesian product"(
             S = {T},
             T = {T}
           ))),
           {y = {%structuralCases(
-            x,
+            _x,
             $../../Essentials/Sets/"Cartesian product"(
               S = {T},
               T = {T}
@@ -59,11 +59,11 @@ $"quotient group"(
                   T = {T}
                 ).pair,
               parameters = #(
-                t: %Element(T),
-                u: %Element(T)
+                _t: %Element(T),
+                _u: %Element(T)
               ),
               value = %structuralCases(
-                t,
+                _t,
                 $../../Essentials/Relations/"Equivalence classes"(
                   S = {$Carrier(𝐆 = {𝐆})},
                   ∼ = {∼}
@@ -75,7 +75,7 @@ $"quotient group"(
                     ).class,
                   parameters = #(g: %Element($Carrier(𝐆 = {𝐆}))),
                   value = %structuralCases(
-                    u,
+                    _u,
                     $../../Essentials/Relations/"Equivalence classes"(
                       S = {$Carrier(𝐆 = {𝐆})},
                       ∼ = {∼}
@@ -109,9 +109,9 @@ $"quotient group"(
           X = {T},
           Y = {T}
         ).function(x = {
-          #(t: %Element(T)),
+          #(_t: %Element(T)),
           {y = {%structuralCases(
-            t,
+            _t,
             $../../Essentials/Relations/"Equivalence classes"(
               S = {$Carrier(𝐆 = {𝐆})},
               ∼ = {∼}
