@@ -1,0 +1,136 @@
+%../../../../logics/hlm%
+
+$"quotient group"(
+  𝐆: %Element($Groups),
+  S: %Subset($Carrier(𝐆 = {𝐆})),
+  _1: %Constraint($"normal subgroup set"(
+    𝐆 = {𝐆},
+    S = {S}
+  )),
+  ∼: %Def($../../Essentials/Relations/Endorelations(S = {$Carrier(𝐆 = {𝐆})}).relation(s = {
+      #(g: %Element($Carrier(𝐆 = {𝐆}))),
+      {t = {
+        #(h: %Element($Carrier(𝐆 = {𝐆}))),
+        {p = {%exists(
+          #(s: %Element(S)),
+          formula = %equals(
+            $operation(
+              𝐆 = {𝐆},
+              a = {g},
+              b = {s}
+            ),
+            h
+          )
+        )}}
+      }}
+  })),
+  T: %SetDef($../../Essentials/Relations/"Equivalence classes"(
+    S = {$Carrier(𝐆 = {𝐆})},
+    ∼ = {∼}
+  ))
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '∕',
+    operands = [𝐆, S],
+    space = ''
+  )],
+  definition = [$Groups.group(
+      S = {T},
+      ∗ = {$../../Essentials/Functions/Functions(
+          X = {$../../Essentials/Sets/"Cartesian product"(
+            S = {T},
+            T = {T}
+          )},
+          Y = {T}
+        ).function(x = {
+          #(x: %Element($../../Essentials/Sets/"Cartesian product"(
+            S = {T},
+            T = {T}
+          ))),
+          {y = {%structuralCases(
+            x,
+            $../../Essentials/Sets/"Cartesian product"(
+              S = {T},
+              T = {T}
+            ),
+            [{
+              constructor = $../../Essentials/Sets/"Cartesian product"(
+                  S = {T},
+                  T = {T}
+                ).pair,
+              parameters = #(
+                t: %Element(T),
+                u: %Element(T)
+              ),
+              value = %structuralCases(
+                t,
+                $../../Essentials/Relations/"Equivalence classes"(
+                  S = {$Carrier(𝐆 = {𝐆})},
+                  ∼ = {∼}
+                ),
+                [{
+                  constructor = $../../Essentials/Relations/"Equivalence classes"(
+                      S = {$Carrier(𝐆 = {𝐆})},
+                      ∼ = {∼}
+                    ).class,
+                  parameters = #(g: %Element($Carrier(𝐆 = {𝐆}))),
+                  value = %structuralCases(
+                    u,
+                    $../../Essentials/Relations/"Equivalence classes"(
+                      S = {$Carrier(𝐆 = {𝐆})},
+                      ∼ = {∼}
+                    ),
+                    [{
+                      constructor = $../../Essentials/Relations/"Equivalence classes"(
+                          S = {$Carrier(𝐆 = {𝐆})},
+                          ∼ = {∼}
+                        ).class,
+                      parameters = #(h: %Element($Carrier(𝐆 = {𝐆}))),
+                      value = $../../Essentials/Relations/"Equivalence classes"(
+                          S = {$Carrier(𝐆 = {𝐆})},
+                          ∼ = {∼}
+                        ).class(s = {$operation(
+                          𝐆 = {𝐆},
+                          a = {g},
+                          b = {h}
+                      )})
+                    }]
+                  )
+                }]
+              )
+            }]
+          )}}
+      })},
+      e = {$../../Essentials/Relations/"Equivalence classes"(
+          S = {$Carrier(𝐆 = {𝐆})},
+          ∼ = {∼}
+        ).class(s = {$"identity element"(𝐆 = {𝐆})})},
+      i = {$../../Essentials/Functions/Functions(
+          X = {T},
+          Y = {T}
+        ).function(x = {
+          #(t: %Element(T)),
+          {y = {%structuralCases(
+            t,
+            $../../Essentials/Relations/"Equivalence classes"(
+              S = {$Carrier(𝐆 = {𝐆})},
+              ∼ = {∼}
+            ),
+            [{
+              constructor = $../../Essentials/Relations/"Equivalence classes"(
+                  S = {$Carrier(𝐆 = {𝐆})},
+                  ∼ = {∼}
+                ).class,
+              parameters = #(g: %Element($Carrier(𝐆 = {𝐆}))),
+              value = $../../Essentials/Relations/"Equivalence classes"(
+                  S = {$Carrier(𝐆 = {𝐆})},
+                  ∼ = {∼}
+                ).class(s = {$"inverse element"(
+                  𝐆 = {𝐆},
+                  a = {g}
+              )})
+            }]
+          )}}
+      })}
+  )]
+}

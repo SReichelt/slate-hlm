@@ -11,11 +11,15 @@ $Groups: %Section {
     %item($abelian),
     %item($Homomorphisms),
     %item($Isomorphisms),
+    %item($Kernel),
     %item($identity),
     %item($"Equality criterion"),
     %item($"Inverse of isomorphism is also isomorphism"),
     %item($"subgroup set"),
     %item($"subset group"),
-    %item($subgroup)
+    %item($subgroup),
+    %item($"normal subgroup set"),
+    %item($"normal subgroup"),
+    %item($"quotient group")
   ]
 }
