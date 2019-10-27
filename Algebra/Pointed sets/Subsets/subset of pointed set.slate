@@ -1,0 +1,16 @@
+%../../../../../logics/hlm%
+
+$"subset of pointed set"(
+  𝐒: %Element($../"Pointed sets"),
+  S: %Subset($../Carrier(𝐒 = {𝐒}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [S, 𝐒],
+    singular = 'pointed subset',
+    plural = 'pointed subsets'
+  )],
+  definition = [%in(
+    $../"base point"(𝐒 = {𝐒}),
+    S
+  )]
+}

@@ -1,0 +1,36 @@
+%../../../../../../logics/hlm%
+
+$"ordered subset"(
+  𝐱: %Element($../"Ordinal numbers"),
+  S: %Subset($../Carrier(𝐱 = {𝐱}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [S, 𝐱],
+    singular = 'ordered subset',
+    plural = 'ordered subsets',
+    article = 'an'
+  )],
+  definition = [%structural(
+    𝐱,
+    $../"Ordinal numbers",
+    [{
+      constructor = $../"Ordinal numbers"."order type",
+      parameters = #(
+        X: %Set,
+        ⪯: %Element($../../../Relations/Endorelations(S = {X})),
+        _1: %Constraint($../../../Relations/"well-order"(
+          S = {X},
+          ≺ = {⪯}
+        ))
+      ),
+      value = $../../../Relations/"well-order"(
+        S = {S},
+        ≺ = {$../../../Relations/restriction(
+          S = {X},
+          ≺ = {⪯},
+          T = {S}
+        )}
+      )
+    }]
+  )]
+}

@@ -1,0 +1,10 @@
+%../../../../../logics/library%
+
+$Subsets: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"subset of pointed set"),
+    %item($"subset as pointed set"),
+    %item($"pointed subset")
+  ]
+}

@@ -22,7 +22,7 @@ $"free on set"(
         ))
       ),
       %existsUnique(
-        #(φ: %Element($../Homomorphisms(
+        #(φ: %Element($../Homomorphisms/Homomorphisms(
           𝐌 = {𝐌},
           𝐍 = {𝐍}
         ))),

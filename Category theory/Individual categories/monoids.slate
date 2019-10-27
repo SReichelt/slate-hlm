@@ -14,7 +14,7 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
         #(𝐀: %Element($../../Algebra/Monoids/Monoids)),
         {𝐁 = {
           #(𝐁: %Element($../../Algebra/Monoids/Monoids)),
-          {M = {$../../Algebra/Monoids/Homomorphisms(
+          {M = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
             𝐌 = {𝐀},
             𝐍 = {𝐁}
           )}}
@@ -22,7 +22,7 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
       },
       𝐂 = {
         #(𝐂: %Element($../../Algebra/Monoids/Monoids)),
-        {i = {$../../Algebra/Monoids/identity(𝐌 = {𝐂})}}
+        {i = {$../../Algebra/Monoids/Homomorphisms/identity(𝐌 = {𝐂})}}
       },
       𝐃 = {
         #(𝐃: %Element($../../Algebra/Monoids/Monoids)),
@@ -31,15 +31,15 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Monoids/Monoids)),
             {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../../Algebra/Monoids/Homomorphisms(
+              X = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
                 𝐌 = {𝐄},
                 𝐍 = {𝐅}
               )},
-              Y = {$../../Algebra/Monoids/Homomorphisms(
+              Y = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
                 𝐌 = {𝐃},
                 𝐍 = {𝐄}
               )},
-              Z = {$../../Algebra/Monoids/Homomorphisms(
+              Z = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
                 𝐌 = {𝐃},
                 𝐍 = {𝐅}
               )},
@@ -54,42 +54,9 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
                 ))
               ),
               operator = $../../Essentials/Functions/composition(
-                X = {%setStructuralCases(
-                  𝐃,
-                  $../../Algebra/Monoids/Monoids,
-                  [{
-                    constructor = $../../Algebra/Monoids/Monoids.monoid,
-                    parameters = #(
-                      M: %Set,
-                      ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
-                    ),
-                    value = M
-                  }]
-                )},
-                Y = {%setStructuralCases(
-                  𝐄,
-                  $../../Algebra/Monoids/Monoids,
-                  [{
-                    constructor = $../../Algebra/Monoids/Monoids.monoid,
-                    parameters = #(
-                      M: %Set,
-                      ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
-                    ),
-                    value = M
-                  }]
-                )},
-                Z = {%setStructuralCases(
-                  𝐅,
-                  $../../Algebra/Monoids/Monoids,
-                  [{
-                    constructor = $../../Algebra/Monoids/Monoids.monoid,
-                    parameters = #(
-                      N: %Set,
-                      ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {N}))
-                    ),
-                    value = N
-                  }]
-                )},
+                X = {$../../Algebra/Monoids/Carrier(𝐌 = {𝐃})},
+                Y = {$../../Algebra/Monoids/Carrier(𝐌 = {𝐄})},
+                Z = {$../../Algebra/Monoids/Carrier(𝐌 = {𝐅})},
                 f = {φ},
                 g = {ψ}
               )

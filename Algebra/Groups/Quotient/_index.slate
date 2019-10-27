@@ -1,0 +1,6 @@
+%../../../../../logics/library%
+
+$Quotient: %Section {
+  logic = 'hlm',
+  items = [%item($"quotient group")]
+}

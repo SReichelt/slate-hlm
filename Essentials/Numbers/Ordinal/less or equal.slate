@@ -16,7 +16,7 @@ $"less or equal"(
   ],
   definition = [
     %exists(
-      #(φ: %Element($Homomorphisms(
+      #(φ: %Element($Homomorphisms/Homomorphisms(
         𝐱 = {𝐱},
         𝐲 = {𝐲}
       ))),
@@ -29,13 +29,13 @@ $"less or equal"(
     %exists(
       #(S: %Subset($Carrier(𝐱 = {𝐲}))),
       formula = %and(
-        $"ordered subset"(
+        $Subsets/"ordered subset"(
           𝐱 = {𝐲},
           S = {S}
         ),
         %equals(
           𝐱,
-          $"subset ordinal"(
+          $Subsets/"subset ordinal"(
             𝐱 = {𝐲},
             S = {S}
           )

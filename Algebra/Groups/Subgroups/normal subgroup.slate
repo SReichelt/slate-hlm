@@ -1,0 +1,33 @@
+%../../../../../logics/hlm%
+
+$"normal subgroup"(
+  𝐆: %Element($../Groups),
+  𝐇: %Element(%previous)
+): %Predicate {
+  display = [
+    $Relation(
+      symbol = %neg('⊴', '⋬'),
+      operands = [𝐆, 𝐇]
+    ),
+    $Relation(
+      symbol = %neg('⊵', '⋭'),
+      operands = [𝐇, 𝐆]
+    )
+  ],
+  definition = [%exists(
+    #(S: %Subset($../Carrier(𝐆 = {𝐇}))),
+    formula = %and(
+      $"normal subgroup set"(
+        𝐆 = {𝐇},
+        S = {S}
+      ),
+      %equals(
+        𝐆,
+        $"subset group"(
+          𝐆 = {𝐇},
+          S = {S}
+        )
+      )
+    )
+  )]
+}

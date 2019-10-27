@@ -8,14 +8,14 @@ $Magmas: %Section {
     %item($operation),
     %item($associative),
     %item($commutative),
-    %item($Homomorphisms),
-    %item($Isomorphisms),
-    %item($identity),
-    %item($"Equality criterion"),
-    %item($"Inverse of isomorphism is also isomorphism"),
-    %item($"submagma set"),
-    %item($"subset magma"),
-    %item($submagma),
+    %subsection(
+      $Homomorphisms,
+      'Homomorphisms'
+    ),
+    %subsection(
+      $Submagmas,
+      'Submagmas'
+    ),
     %subsection(
       $"Free magma",
       'Free magma'

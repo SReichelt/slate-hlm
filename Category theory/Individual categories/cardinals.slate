@@ -17,7 +17,7 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
         #(𝐀: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
         {𝐁 = {
           #(𝐁: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-          {M = {$../../Essentials/Numbers/Cardinal/Homomorphisms(
+          {M = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
             𝐱 = {𝐀},
             𝐲 = {𝐁}
           )}}
@@ -25,7 +25,7 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
       },
       𝐂 = {
         #(𝐂: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-        {i = {$../../Essentials/Numbers/Cardinal/identity(𝐱 = {𝐂})}}
+        {i = {$../../Essentials/Numbers/Cardinal/Homomorphisms/identity(𝐱 = {𝐂})}}
       },
       𝐃 = {
         #(𝐃: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
@@ -34,56 +34,32 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
           {𝐅 = {
             #(𝐅: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
             {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../../Essentials/Numbers/Cardinal/Homomorphisms(
+              X = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
                 𝐱 = {𝐄},
                 𝐲 = {𝐅}
               )},
-              Y = {$../../Essentials/Numbers/Cardinal/Homomorphisms(
+              Y = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
                 𝐱 = {𝐃},
                 𝐲 = {𝐄}
               )},
-              Z = {$../../Essentials/Numbers/Cardinal/Homomorphisms(
+              Z = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
                 𝐱 = {𝐃},
                 𝐲 = {𝐅}
               )},
               parameters = #(
-                ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms(
+                ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
                   𝐱 = {𝐄},
                   𝐲 = {𝐅}
                 )),
-                φ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms(
+                φ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
                   𝐱 = {𝐃},
                   𝐲 = {𝐄}
                 ))
               ),
               operator = $../../Essentials/Functions/composition(
-                X = {%setStructuralCases(
-                  𝐃,
-                  $../../Essentials/Numbers/Cardinal/"Cardinal numbers",
-                  [{
-                    constructor = $../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality,
-                    parameters = #(X: %Set),
-                    value = X
-                  }]
-                )},
-                Y = {%setStructuralCases(
-                  𝐄,
-                  $../../Essentials/Numbers/Cardinal/"Cardinal numbers",
-                  [{
-                    constructor = $../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality,
-                    parameters = #(Y: %Set),
-                    value = Y
-                  }]
-                )},
-                Z = {%setStructuralCases(
-                  𝐅,
-                  $../../Essentials/Numbers/Cardinal/"Cardinal numbers",
-                  [{
-                    constructor = $../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality,
-                    parameters = #(Z: %Set),
-                    value = Z
-                  }]
-                )},
+                X = {$../../Essentials/Numbers/Cardinal/Carrier(𝐱 = {𝐃})},
+                Y = {$../../Essentials/Numbers/Cardinal/Carrier(𝐱 = {𝐄})},
+                Z = {$../../Essentials/Numbers/Cardinal/Carrier(𝐱 = {𝐅})},
                 f = {φ},
                 g = {ψ}
               )

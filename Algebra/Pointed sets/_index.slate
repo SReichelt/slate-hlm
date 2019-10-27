@@ -6,13 +6,13 @@ $"Pointed sets": %Section {
     %item($"Pointed sets"),
     %item($Carrier),
     %item($"base point"),
-    %item($Homomorphisms),
-    %item($Isomorphisms),
-    %item($identity),
-    %item($"Equality criterion"),
-    %item($"Inverse of isomorphism is also isomorphism"),
-    %item($"subset of pointed set"),
-    %item($"subset as pointed set"),
-    %item($"pointed subset")
+    %subsection(
+      $Homomorphisms,
+      'Homomorphisms'
+    ),
+    %subsection(
+      $Subsets,
+      'Subsets'
+    )
   ]
 }

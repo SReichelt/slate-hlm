@@ -1,0 +1,12 @@
+%../../../../../logics/library%
+
+$Subgroups: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"subgroup set"),
+    %item($"subset group"),
+    %item($subgroup),
+    %item($"normal subgroup set"),
+    %item($"normal subgroup")
+  ]
+}

@@ -8,14 +8,14 @@ $Monoids: %Section {
     %item($operation),
     %item($"identity element"),
     %item($commutative),
-    %item($Homomorphisms),
-    %item($Isomorphisms),
-    %item($identity),
-    %item($"Equality criterion"),
-    %item($"Inverse of isomorphism is also isomorphism"),
-    %item($"submonoid set"),
-    %item($"subset monoid"),
-    %item($submonoid),
+    %subsection(
+      $Homomorphisms,
+      'Homomorphisms'
+    ),
+    %subsection(
+      $Submonoids,
+      'Submonoids'
+    ),
     %subsection(
       $Examples,
       'Examples'

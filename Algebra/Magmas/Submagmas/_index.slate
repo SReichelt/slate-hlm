@@ -1,0 +1,10 @@
+%../../../../../logics/library%
+
+$Submagmas: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"submagma set"),
+    %item($"subset magma"),
+    %item($submagma)
+  ]
+}

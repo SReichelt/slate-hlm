@@ -1,0 +1,10 @@
+%../../../../../logics/library%
+
+$Submonoids: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"submonoid set"),
+    %item($"subset monoid"),
+    %item($submonoid)
+  ]
+}

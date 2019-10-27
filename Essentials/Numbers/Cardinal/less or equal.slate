@@ -19,7 +19,7 @@ $"less or equal"(
   ],
   definition = [
     %exists(
-      #(φ: %Element($Homomorphisms(
+      #(φ: %Element($Homomorphisms/Homomorphisms(
         𝐱 = {𝐱},
         𝐲 = {𝐲}
       ))),

@@ -9,14 +9,14 @@ $Cardinal: %Section {
     ),
     %item($"Cardinal numbers"),
     %item($Carrier),
-    %item($Homomorphisms),
-    %item($Isomorphisms),
-    %item($identity),
+    %subsection(
+      $Homomorphisms,
+      'Homomorphisms'
+    ),
     %item($"less or equal"),
     %item($less),
     %item($"Less or equal is a partial order"),
     %item($"AC is equivalent to total order"),
-    %item($"Equality criterion"),
     %item($sum),
     %item($product),
     %item($power),
