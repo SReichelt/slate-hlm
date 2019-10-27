@@ -3,7 +3,7 @@
 $"Natural numbers with addition": %ExplicitOperator {
   display = [$Tuple(items = ['ℕ', '+'])],
   definition = [$../Monoids.monoid(
-      S = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
+      M = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
       ∗ = {$../../../Essentials/Functions/Operations/operator(
         X = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Y = {$../../../Essentials/Numbers/Natural/"Natural numbers"},

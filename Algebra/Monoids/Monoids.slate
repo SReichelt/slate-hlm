@@ -5,21 +5,21 @@
  */
 $Monoids: %Construction {
   $monoid(
-    S: %Set,
-    ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+    M: %Set,
+    ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
     _1: %Constraint($../../Essentials/Functions/Operations/associative(
-      X = {S},
+      X = {M},
       ∗ = {∗}
     )),
-    e: %Element(S),
+    e: %Element(M),
     _2: %Constraint(%forall(
-      #(a: %Element(S)),
+      #(a: %Element(M)),
       %and(
         %equals(
           $../../Essentials/Functions/Operations/value(
-            X = {S},
-            Y = {S},
-            Z = {S},
+            X = {M},
+            Y = {M},
+            Z = {M},
             ∗ = {∗},
             x = {a},
             y = {e}
@@ -28,9 +28,9 @@ $Monoids: %Construction {
         ),
         %equals(
           $../../Essentials/Functions/Operations/value(
-            X = {S},
-            Y = {S},
-            Z = {S},
+            X = {M},
+            Y = {M},
+            Z = {M},
             ∗ = {∗},
             x = {e},
             y = {a}
@@ -41,26 +41,26 @@ $Monoids: %Construction {
     ))
   ): %Constructor {
     display = [$Tuple(
-      items = [S, ∗, e],
+      items = [M, ∗, e],
       style = '[]'
     )],
     equalityDefinition = {
       leftParameters = #(
-        S: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+        M: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
         _1: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {S},
+          X = {M},
           ∗ = {∗}
         )),
-        e: %Element(S),
+        e: %Element(M),
         _2: %Constraint(%forall(
-          #(a: %Element(S)),
+          #(a: %Element(M)),
           %and(
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {S},
-                Y = {S},
-                Z = {S},
+                X = {M},
+                Y = {M},
+                Z = {M},
                 ∗ = {∗},
                 x = {a},
                 y = {e}
@@ -69,9 +69,9 @@ $Monoids: %Construction {
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {S},
-                Y = {S},
-                Z = {S},
+                X = {M},
+                Y = {M},
+                Z = {M},
                 ∗ = {∗},
                 x = {e},
                 y = {a}
@@ -82,21 +82,21 @@ $Monoids: %Construction {
         ))
       ),
       rightParameters = #(
-        T: %Set,
-        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {T})),
+        N: %Set,
+        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {N})),
         _3: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {T},
+          X = {N},
           ∗ = {⋆}
         )),
-        f: %Element(T),
+        f: %Element(N),
         _4: %Constraint(%forall(
-          #(b: %Element(T)),
+          #(b: %Element(N)),
           %and(
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {T},
-                Y = {T},
-                Z = {T},
+                X = {N},
+                Y = {N},
+                Z = {N},
                 ∗ = {⋆},
                 x = {b},
                 y = {f}
@@ -105,9 +105,9 @@ $Monoids: %Construction {
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {T},
-                Y = {T},
-                Z = {T},
+                X = {N},
+                Y = {N},
+                Z = {N},
                 ∗ = {⋆},
                 x = {f},
                 y = {b}
@@ -119,14 +119,14 @@ $Monoids: %Construction {
       ),
       definition = [%exists(
         #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = {S},
-          Y = {T}
+          X = {M},
+          Y = {N}
         ))),
         formula = %and(
           %equals(
             $../Isomorphisms/"inner operation transform"(
-              X = {S},
-              Y = {T},
+              X = {M},
+              Y = {N},
               φ = {φ},
               ∗ = {∗}
             ),
@@ -134,8 +134,8 @@ $Monoids: %Construction {
           ),
           %equals(
             $../Isomorphisms/"element transform"(
-              X = {S},
-              Y = {T},
+              X = {M},
+              Y = {N},
               φ = {φ},
               x = {e}
             ),

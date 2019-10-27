@@ -25,7 +25,7 @@ $"subset magma"(
         ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
       ),
       value = $Magmas.magma(
-          S = {S},
+          M = {S},
           ∗ = {$../../Essentials/Functions/Operations/"inner operation restriction"(
             X = {M},
             A = {S},

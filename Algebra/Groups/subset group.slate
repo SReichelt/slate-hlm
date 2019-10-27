@@ -98,7 +98,7 @@ $"subset group"(
         ))
       ),
       value = $Groups.group(
-          S = {S},
+          G = {S},
           ∗ = {$../../Essentials/Functions/Operations/"inner operation restriction"(
             X = {G},
             A = {S},

@@ -57,7 +57,7 @@ $"subset monoid"(
         ))
       ),
       value = $Monoids.monoid(
-          S = {S},
+          M = {S},
           ∗ = {$../../Essentials/Functions/Operations/"inner operation restriction"(
             X = {M},
             A = {S},

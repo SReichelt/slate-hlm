@@ -5,21 +5,21 @@
  */
 $Groups: %Construction {
   $group(
-    S: %Set,
-    ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+    G: %Set,
+    ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
     _1: %Constraint($../../Essentials/Functions/Operations/associative(
-      X = {S},
+      X = {G},
       ∗ = {∗}
     )),
-    e: %Element(S),
+    e: %Element(G),
     _2: %Constraint(%forall(
-      #(a: %Element(S)),
+      #(a: %Element(G)),
       %and(
         %equals(
           $../../Essentials/Functions/Operations/value(
-            X = {S},
-            Y = {S},
-            Z = {S},
+            X = {G},
+            Y = {G},
+            Z = {G},
             ∗ = {∗},
             x = {a},
             y = {e}
@@ -28,9 +28,9 @@ $Groups: %Construction {
         ),
         %equals(
           $../../Essentials/Functions/Operations/value(
-            X = {S},
-            Y = {S},
-            Z = {S},
+            X = {G},
+            Y = {G},
+            Z = {G},
             ∗ = {∗},
             x = {e},
             y = {a}
@@ -40,22 +40,22 @@ $Groups: %Construction {
       )
     )),
     i: %Element($../../Essentials/Functions/Functions(
-      X = {S},
-      Y = {S}
+      X = {G},
+      Y = {G}
     )),
     _3: %Constraint(%forall(
-      #(a: %Element(S)),
+      #(a: %Element(G)),
       %and(
         %equals(
           $../../Essentials/Functions/Operations/value(
-            X = {S},
-            Y = {S},
-            Z = {S},
+            X = {G},
+            Y = {G},
+            Z = {G},
             ∗ = {∗},
             x = {a},
             y = {$../../Essentials/Functions/value(
-              X = {S},
-              Y = {S},
+              X = {G},
+              Y = {G},
               f = {i},
               x = {a}
             )}
@@ -64,13 +64,13 @@ $Groups: %Construction {
         ),
         %equals(
           $../../Essentials/Functions/Operations/value(
-            X = {S},
-            Y = {S},
-            Z = {S},
+            X = {G},
+            Y = {G},
+            Z = {G},
             ∗ = {∗},
             x = {$../../Essentials/Functions/value(
-              X = {S},
-              Y = {S},
+              X = {G},
+              Y = {G},
               f = {i},
               x = {a}
             )},
@@ -82,26 +82,26 @@ $Groups: %Construction {
     ))
   ): %Constructor {
     display = [$Tuple(
-      items = [S, ∗, e, i],
+      items = [G, ∗, e, i],
       style = '[]'
     )],
     equalityDefinition = {
       leftParameters = #(
-        S: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+        G: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
         _1: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {S},
+          X = {G},
           ∗ = {∗}
         )),
-        e: %Element(S),
+        e: %Element(G),
         _2: %Constraint(%forall(
-          #(a: %Element(S)),
+          #(a: %Element(G)),
           %and(
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {S},
-                Y = {S},
-                Z = {S},
+                X = {G},
+                Y = {G},
+                Z = {G},
                 ∗ = {∗},
                 x = {a},
                 y = {e}
@@ -110,9 +110,9 @@ $Groups: %Construction {
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {S},
-                Y = {S},
-                Z = {S},
+                X = {G},
+                Y = {G},
+                Z = {G},
                 ∗ = {∗},
                 x = {e},
                 y = {a}
@@ -122,22 +122,22 @@ $Groups: %Construction {
           )
         )),
         i: %Element($../../Essentials/Functions/Functions(
-          X = {S},
-          Y = {S}
+          X = {G},
+          Y = {G}
         )),
         _3: %Constraint(%forall(
-          #(a: %Element(S)),
+          #(a: %Element(G)),
           %and(
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {S},
-                Y = {S},
-                Z = {S},
+                X = {G},
+                Y = {G},
+                Z = {G},
                 ∗ = {∗},
                 x = {a},
                 y = {$../../Essentials/Functions/value(
-                  X = {S},
-                  Y = {S},
+                  X = {G},
+                  Y = {G},
                   f = {i},
                   x = {a}
                 )}
@@ -146,13 +146,13 @@ $Groups: %Construction {
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {S},
-                Y = {S},
-                Z = {S},
+                X = {G},
+                Y = {G},
+                Z = {G},
                 ∗ = {∗},
                 x = {$../../Essentials/Functions/value(
-                  X = {S},
-                  Y = {S},
+                  X = {G},
+                  Y = {G},
                   f = {i},
                   x = {a}
                 )},
@@ -164,21 +164,21 @@ $Groups: %Construction {
         ))
       ),
       rightParameters = #(
-        T: %Set,
-        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {T})),
+        H: %Set,
+        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {H})),
         _4: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {T},
+          X = {H},
           ∗ = {⋆}
         )),
-        f: %Element(T),
+        f: %Element(H),
         _5: %Constraint(%forall(
-          #(b: %Element(T)),
+          #(b: %Element(H)),
           %and(
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {T},
-                Y = {T},
-                Z = {T},
+                X = {H},
+                Y = {H},
+                Z = {H},
                 ∗ = {⋆},
                 x = {b},
                 y = {f}
@@ -187,9 +187,9 @@ $Groups: %Construction {
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {T},
-                Y = {T},
-                Z = {T},
+                X = {H},
+                Y = {H},
+                Z = {H},
                 ∗ = {⋆},
                 x = {f},
                 y = {b}
@@ -199,22 +199,22 @@ $Groups: %Construction {
           )
         )),
         j: %Element($../../Essentials/Functions/Functions(
-          X = {T},
-          Y = {T}
+          X = {H},
+          Y = {H}
         )),
         _3: %Constraint(%forall(
-          #(c: %Element(T)),
+          #(c: %Element(H)),
           %and(
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {T},
-                Y = {T},
-                Z = {T},
+                X = {H},
+                Y = {H},
+                Z = {H},
                 ∗ = {⋆},
                 x = {c},
                 y = {$../../Essentials/Functions/value(
-                  X = {T},
-                  Y = {T},
+                  X = {H},
+                  Y = {H},
                   f = {j},
                   x = {c}
                 )}
@@ -223,13 +223,13 @@ $Groups: %Construction {
             ),
             %equals(
               $../../Essentials/Functions/Operations/value(
-                X = {T},
-                Y = {T},
-                Z = {T},
+                X = {H},
+                Y = {H},
+                Z = {H},
                 ∗ = {⋆},
                 x = {$../../Essentials/Functions/value(
-                  X = {T},
-                  Y = {T},
+                  X = {H},
+                  Y = {H},
                   f = {j},
                   x = {c}
                 )},
@@ -242,14 +242,14 @@ $Groups: %Construction {
       ),
       definition = [%exists(
         #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = {S},
-          Y = {T}
+          X = {G},
+          Y = {H}
         ))),
         formula = %and(
           %equals(
             $../Isomorphisms/"inner operation transform"(
-              X = {S},
-              Y = {T},
+              X = {G},
+              Y = {H},
               φ = {φ},
               ∗ = {∗}
             ),
@@ -257,8 +257,8 @@ $Groups: %Construction {
           ),
           %equals(
             $../Isomorphisms/"element transform"(
-              X = {S},
-              Y = {T},
+              X = {G},
+              Y = {H},
               φ = {φ},
               x = {e}
             ),
@@ -266,8 +266,8 @@ $Groups: %Construction {
           ),
           %equals(
             $../Isomorphisms/"function transform"(
-              X = {S},
-              Y = {T},
+              X = {G},
+              Y = {H},
               φ = {φ},
               f = {i}
             ),

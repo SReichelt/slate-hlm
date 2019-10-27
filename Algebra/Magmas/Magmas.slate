@@ -7,31 +7,31 @@
  */
 $Magmas: %Construction {
   $magma(
-    S: %Set,
-    ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S}))
+    M: %Set,
+    ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
   ): %Constructor {
     display = [$Tuple(
-      items = [S, ∗],
+      items = [M, ∗],
       style = '[]'
     )],
     equalityDefinition = {
       leftParameters = #(
-        S: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S}))
+        M: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
       ),
       rightParameters = #(
-        T: %Set,
-        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {T}))
+        N: %Set,
+        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {N}))
       ),
       definition = [%exists(
         #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = {S},
-          Y = {T}
+          X = {M},
+          Y = {N}
         ))),
         formula = %equals(
           $../Isomorphisms/"inner operation transform"(
-            X = {S},
-            Y = {T},
+            X = {M},
+            Y = {N},
             φ = {φ},
             ∗ = {∗}
           ),

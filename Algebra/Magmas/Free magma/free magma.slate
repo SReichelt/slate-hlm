@@ -12,7 +12,7 @@ $"free magma"(
     arguments = [S]
   )],
   definition = [$../Magmas.magma(
-      S = {T},
+      M = {T},
       ∗ = {$../../../Essentials/Functions/Functions(
           X = {$../../../Essentials/Sets/"Cartesian product"(
             S = {T},
