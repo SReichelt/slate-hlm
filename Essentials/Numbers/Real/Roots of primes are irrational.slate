@@ -208,13 +208,13 @@ $"Roots of primes are irrational"(
       )),
       _: %ResolveDef(%equals(
         $../Integer/product(
-          a = {$../Integer/product(
+          a = {%associative($../Integer/product(
             a = {$../Integer/power(
               a = {b},
               n = {l}
             )},
             b = {b}
-          )},
+          ))},
           b = {b}
         ),
         $../Integer/product(
@@ -230,20 +230,20 @@ $"Roots of primes are irrational"(
         %right,
         %equals(
           $../Integer/product(
-            a = {$../Integer/product(
+            a = {%associative($../Integer/product(
               a = {$../Integer/power(
                 a = {b},
                 n = {l}
               )},
-              b = {$../Integer/product(
+              b = {%associative($../Integer/product(
                 a = {p},
                 b = {y}
-              )}
-            )},
-            b = {$../Integer/product(
+              ))}
+            ))},
+            b = {%associative($../Integer/product(
               a = {p},
               b = {y}
-            )}
+            ))}
           ),
           $../Integer/product(
             a = {$../Integer/power(
@@ -257,16 +257,16 @@ $"Roots of primes are irrational"(
       _: %UseTheorem(
         $../Integer/"Multiplication of a nonzero number is injective"(
           a = {$../Integer/product(
-            a = {$../Integer/product(
+            a = {%associative($../Integer/product(
               a = {$../Integer/power(
                 a = {b},
                 n = {l}
               )},
-              b = {$../Integer/product(
+              b = {%associative($../Integer/product(
                 a = {p},
                 b = {y}
-              )}
-            )},
+              ))}
+            ))},
             b = {y}
           )},
           b = {$../Integer/power(
@@ -277,16 +277,16 @@ $"Roots of primes are irrational"(
         ),
         %equals(
           $../Integer/product(
-            a = {$../Integer/product(
+            a = {%associative($../Integer/product(
               a = {$../Integer/power(
                 a = {b},
                 n = {l}
               )},
-              b = {$../Integer/product(
+              b = {%associative($../Integer/product(
                 a = {p},
                 b = {y}
-              )}
-            )},
+              ))}
+            ))},
             b = {y}
           ),
           $../Integer/power(
@@ -318,13 +318,13 @@ $"Roots of primes are irrational"(
             )
           ),
           steps = #(_: %ProveExists({z = {$../Integer/product(
-            a = {$../Integer/product(
+            a = {%associative($../Integer/product(
               a = {$../Integer/power(
                 a = {b},
                 n = {l}
               )},
               b = {y}
-            )},
+            ))},
             b = {y}
           )}}))
         }))}

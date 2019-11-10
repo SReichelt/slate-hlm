@@ -23,11 +23,11 @@ $"normal subgroup set"(
         %in(
           $../operation(
             𝐆 = {𝐆},
-            a = {$../operation(
+            a = {%associative($../operation(
               𝐆 = {𝐆},
               a = {g},
               b = {s}
-            )},
+            ))},
             b = {$../"inverse element"(
               𝐆 = {𝐆},
               a = {g}

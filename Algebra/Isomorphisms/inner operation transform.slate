@@ -108,7 +108,7 @@ $"inner operation transform"(
       Y = {X},
       Z = {Y},
       g = {φ},
-      f = {$../../Essentials/Functions/composition(
+      f = {%associative($../../Essentials/Functions/composition(
         X = {$../../Essentials/Sets/"Cartesian product"(
           S = {Y},
           T = {Y}
@@ -137,7 +137,7 @@ $"inner operation transform"(
             g = {φ}
           )}
         )}
-      )}
+      ))}
     )
   ]
 }
