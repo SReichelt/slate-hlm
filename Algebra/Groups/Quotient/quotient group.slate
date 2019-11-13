@@ -104,7 +104,7 @@ $"quotient group"(
       e = {$../../../Essentials/Relations/"Equivalence classes"(
           S = {$../Carrier(𝐆 = {𝐆})},
           ∼ = {∼}
-        ).class(s = {$../"identity element"(𝐆 = {𝐆})})},
+        ).class(s = {$../identity(𝐆 = {𝐆})})},
       i = {$../../../Essentials/Functions/Functions(
           X = {T},
           Y = {T}
@@ -125,7 +125,7 @@ $"quotient group"(
               value = $../../../Essentials/Relations/"Equivalence classes"(
                   S = {$../Carrier(𝐆 = {𝐆})},
                   ∼ = {∼}
-                ).class(s = {$../"inverse element"(
+                ).class(s = {$../inverse(
                   𝐆 = {𝐆},
                   a = {g}
               )})

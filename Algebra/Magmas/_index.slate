@@ -19,6 +19,8 @@ $Magmas: %Section {
     %subsection(
       $"Free magma",
       'Free magma'
-    )
+    ),
+    %item($"identity element"),
+    %item($identity)
   ]
 }

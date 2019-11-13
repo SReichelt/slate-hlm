@@ -25,7 +25,7 @@ $"submonoid set"(
       )
     ),
     %in(
-      $../"identity element"(𝐌 = {𝐌}),
+      $../identity(𝐌 = {𝐌}),
       S
     )
   )]

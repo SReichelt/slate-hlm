@@ -1,17 +1,17 @@
 %../../../../../logics/hlm%
 
 $Kernel(
-  𝐆: %Element(
-    $../Groups,
+  𝐑: %Element(
+    $../Rings,
     auto = %true
   ),
-  𝐇: %Element(
+  𝐒: %Element(
     %previous,
     auto = %true
   ),
   φ: %Element($Homomorphisms(
-    𝐆 = {𝐆},
-    𝐇 = {𝐇}
+    𝐑 = {𝐑},
+    𝐒 = {𝐒}
   ))
 ): %SetOperator {
   display = [$Function(
@@ -19,15 +19,15 @@ $Kernel(
     arguments = [φ]
   )],
   definition = [%subset(
-    #(g: %Element($../Carrier(𝐆 = {𝐆}))),
+    #(g: %Element($../Carrier(𝐑 = {𝐑}))),
     %equals(
       $../../../Essentials/Functions/value(
-        X = {$../Carrier(𝐆 = {𝐆})},
-        Y = {$../Carrier(𝐆 = {𝐇})},
+        X = {$../Carrier(𝐑 = {𝐑})},
+        Y = {$../Carrier(𝐑 = {𝐒})},
         f = {φ},
         x = {g}
       ),
-      $../identity(𝐆 = {𝐇})
+      $../zero(𝐑 = {𝐒})
     )
   )]
 }

@@ -1,15 +1,9 @@
 %../../../../logics/hlm%
 
-$"inverse element"(
-  𝐆: %Element(
-    $Groups,
-    auto = %true
-  ),
-  a: %Element($Carrier(𝐆 = {𝐆}))
-): %ExplicitOperator {
+$identity(𝐆: %Element($Groups)): %ExplicitOperator {
   display = [$SubSup(
-    body = a,
-    sup = '-1'
+    body = '1',
+    sub = 𝐆
   )],
   definition = [%structuralCases(
     𝐆,
@@ -93,12 +87,7 @@ $"inverse element"(
           )
         ))
       ),
-      value = $../../Essentials/Functions/value(
-        X = {G},
-        Y = {G},
-        f = {i},
-        x = {a}
-      )
+      value = e
     }]
   )]
 }

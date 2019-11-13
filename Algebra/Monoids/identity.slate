@@ -1,6 +1,6 @@
 %../../../../logics/hlm%
 
-$"identity element"(𝐌: %Element($Monoids)): %ExplicitOperator {
+$identity(𝐌: %Element($Monoids)): %ExplicitOperator {
   display = [$SubSup(
     body = '1',
     sub = 𝐌

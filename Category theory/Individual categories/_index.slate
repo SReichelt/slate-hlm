@@ -11,6 +11,7 @@ $"Individual categories": %Section {
     %item($semigroups),
     %item($monoids),
     %item($groups),
+    %item($rings),
     %item($categories),
     %item($functors)
   ]

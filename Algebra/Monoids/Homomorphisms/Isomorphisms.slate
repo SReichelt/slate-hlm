@@ -74,9 +74,9 @@ $Isomorphisms(
             X = {$../Carrier(𝐌 = {𝐌})},
             Y = {$../Carrier(𝐌 = {𝐍})},
             f = {f},
-            x = {$../"identity element"(𝐌 = {𝐌})}
+            x = {$../identity(𝐌 = {𝐌})}
           ),
-          $../"identity element"(𝐌 = {𝐍})
+          $../identity(𝐌 = {𝐍})
         )
       )
     )

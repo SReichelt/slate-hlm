@@ -44,6 +44,7 @@ $Natural: %Section {
     %item($"Multiplication by one is neutral"),
     %item($"Product is associative"),
     %item($"Product is commutative"),
+    %item($"Product is distributive over sum"),
     %item($divisible),
     %item($Divisors),
     %item($"Divisors are less or equal"),

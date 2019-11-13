@@ -4,9 +4,10 @@ $Monoids: %Section {
   logic = 'hlm',
   items = [
     %item($Monoids),
+    %item($"semigroup with identity"),
     %item($Carrier),
     %item($operation),
-    %item($"identity element"),
+    %item($identity),
     %item($commutative),
     %subsection(
       $Homomorphisms,
@@ -19,6 +20,8 @@ $Monoids: %Section {
     %subsection(
       $Examples,
       'Examples'
-    )
+    ),
+    %item($invertible),
+    %item($inverse)
   ]
 }

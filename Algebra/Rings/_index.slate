@@ -1,0 +1,20 @@
+%../../../../logics/library%
+
+$Rings: %Section {
+  logic = 'hlm',
+  items = [
+    %item($Rings),
+    %item($Carrier),
+    %item($sum),
+    %item($zero),
+    %item($"additive inverse"),
+    %item($product),
+    %item($one),
+    %subsection(
+      $Homomorphisms,
+      'Homomorphisms'
+    ),
+    %item($unit),
+    %item($units)
+  ]
+}

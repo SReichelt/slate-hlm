@@ -1,0 +1,27 @@
+%../../../../logics/hlm%
+
+$inverse(
+  𝐌: %Element(
+    $Monoids,
+    auto = %true
+  ),
+  a: %Element($Carrier(𝐌 = {𝐌})),
+  _1: %Constraint($invertible(
+    𝐌 = {𝐌},
+    a = {a}
+  ))
+): %ImplicitOperator {
+  display = [$SubSup(
+    body = a,
+    sup = '-1'
+  )],
+  parameter = #(m: %Element($Carrier(𝐌 = {𝐌}))),
+  definition = [%equals(
+    $operation(
+      𝐌 = {𝐌},
+      a = {a},
+      b = {m}
+    ),
+    $identity(𝐌 = {𝐌})
+  )]
+}

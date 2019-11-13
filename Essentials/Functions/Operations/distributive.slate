@@ -1,0 +1,30 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Distributive_property
+ */
+$distributive(
+  X: %Set(auto = %true),
+  ∗: %Element($"Inner operations"(X = {X})),
+  ⋆: %Element(%previous)
+): %Predicate {
+  display = [$RelationalProperty(
+    operands = [∗, ⋆],
+    property = 'distributive',
+    preposition = 'over'
+  )],
+  definition = [%and(
+    $"left-distributive"(
+      X = {X},
+      Y = {X},
+      ∗ = {∗},
+      ⋆ = {⋆}
+    ),
+    $"right-distributive"(
+      X = {X},
+      Y = {X},
+      ∗ = {∗},
+      ⋆ = {⋆}
+    )
+  )]
+}

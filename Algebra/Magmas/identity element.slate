@@ -1,0 +1,34 @@
+%../../../../logics/hlm%
+
+$"identity element"(
+  𝐌: %Element($Magmas),
+  e: %Element($Carrier(𝐌 = {𝐌}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [e, 𝐌],
+    singular = 'identity element',
+    plural = 'identity elements',
+    article = 'an'
+  )],
+  definition = [%forall(
+    #(a: %Element($Carrier(𝐌 = {𝐌}))),
+    %and(
+      %equals(
+        $operation(
+          𝐌 = {𝐌},
+          a = {e},
+          b = {a}
+        ),
+        e
+      ),
+      %equals(
+        $operation(
+          𝐌 = {𝐌},
+          a = {a},
+          b = {e}
+        ),
+        e
+      )
+    )
+  )]
+}

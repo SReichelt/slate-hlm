@@ -4,10 +4,11 @@ $Groups: %Section {
   logic = 'hlm',
   items = [
     %item($Groups),
+    %item($"monoid with inverses"),
     %item($Carrier),
     %item($operation),
-    %item($"identity element"),
-    %item($"inverse element"),
+    %item($identity),
+    %item($inverse),
     %item($abelian),
     %subsection(
       $Homomorphisms,

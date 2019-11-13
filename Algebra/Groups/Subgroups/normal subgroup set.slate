@@ -28,7 +28,7 @@ $"normal subgroup set"(
               a = {g},
               b = {s}
             ))},
-            b = {$../"inverse element"(
+            b = {$../inverse(
               𝐆 = {𝐆},
               a = {g}
             )}

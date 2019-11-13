@@ -1,0 +1,118 @@
+%../../../../logics/hlm%
+
+$"additive inverse"(
+  𝐑: %Element(
+    $Rings,
+    auto = %true
+  ),
+  a: %Element($Carrier(𝐑 = {𝐑}))
+): %ExplicitOperator {
+  display = [$PrefixUnaryOperator(
+    symbol = '−',
+    operand = a,
+    minParenLevel = 1,
+    maxParenLevel = 1
+  )],
+  definition = [%structuralCases(
+    𝐑,
+    $Rings,
+    [{
+      constructor = $Rings.ring,
+      parameters = #(
+        R: %Set,
+        ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        _1: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {R},
+          ∗ = {⊕}
+        )),
+        _2: %Constraint($../../Essentials/Functions/Operations/commutative(
+          X = {R},
+          Z = {R},
+          ∗ = {⊕}
+        )),
+        "0": %Element(R),
+        _3: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {a},
+              y = {"0"}
+            ),
+            a
+          )
+        )),
+        ⊖: %Element($../../Essentials/Functions/Functions(
+          X = {R},
+          Y = {R}
+        )),
+        _4: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {a},
+              y = {$../../Essentials/Functions/value(
+                X = {R},
+                Y = {R},
+                f = {⊖},
+                x = {a}
+              )}
+            ),
+            "0"
+          )
+        )),
+        ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        _5: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {R},
+          ∗ = {⊙}
+        )),
+        "1": %Element(R),
+        _6: %Constraint(%forall(
+          #(a: %Element(R)),
+          %and(
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {R},
+                Y = {R},
+                Z = {R},
+                ∗ = {⊙},
+                x = {a},
+                y = {"1"}
+              ),
+              a
+            ),
+            %equals(
+              $../../Essentials/Functions/Operations/value(
+                X = {R},
+                Y = {R},
+                Z = {R},
+                ∗ = {⊙},
+                x = {"1"},
+                y = {a}
+              ),
+              a
+            )
+          )
+        )),
+        _7: %Constraint($../../Essentials/Functions/Operations/distributive(
+          X = {R},
+          ∗ = {⊙},
+          ⋆ = {⊕}
+        ))
+      ),
+      value = $../../Essentials/Functions/value(
+        X = {R},
+        Y = {R},
+        f = {⊖},
+        x = {a}
+      )
+    }]
+  )]
+}

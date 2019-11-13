@@ -1,0 +1,221 @@
+%../../../../../logics/hlm%
+
+$Homomorphisms(
+  𝐑: %Element($../Rings),
+  𝐒: %Element(%previous)
+): %SetOperator {
+  display = [$Function(
+    function = 'Hom',
+    arguments = [𝐑, 𝐒]
+  )],
+  definitionDisplay = {
+    parameter = #(φ: %Expr),
+    display = [$FunctionDefinition(
+      function = φ,
+      symbol = '→',
+      operands = [𝐑, 𝐒]
+    )],
+    singularName = 'homomorphism',
+    pluralName = 'homomorphisms'
+  },
+  definition = [
+    %subset(
+      #(f: %Element($../../../Essentials/Functions/Functions(
+        X = {$../Carrier(𝐑 = {𝐑})},
+        Y = {$../Carrier(𝐑 = {𝐒})}
+      ))),
+      %and(
+        %forall(
+          #(
+            a: %Element($../Carrier(𝐑 = {𝐑})),
+            b: %Element(%previous)
+          ),
+          %equals(
+            $../../../Essentials/Functions/value(
+              X = {$../Carrier(𝐑 = {𝐑})},
+              Y = {$../Carrier(𝐑 = {𝐒})},
+              f = {f},
+              x = {$../sum(
+                𝐑 = {𝐑},
+                a = {a},
+                b = {b}
+              )}
+            ),
+            $../sum(
+              𝐑 = {𝐒},
+              a = {$../../../Essentials/Functions/value(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                Y = {$../Carrier(𝐑 = {𝐒})},
+                f = {f},
+                x = {a}
+              )},
+              b = {$../../../Essentials/Functions/value(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                Y = {$../Carrier(𝐑 = {𝐒})},
+                f = {f},
+                x = {b}
+              )}
+            )
+          )
+        ),
+        %equals(
+          $../../../Essentials/Functions/value(
+            X = {$../Carrier(𝐑 = {𝐑})},
+            Y = {$../Carrier(𝐑 = {𝐒})},
+            f = {f},
+            x = {$../zero(𝐑 = {𝐑})}
+          ),
+          $../zero(𝐑 = {𝐒})
+        ),
+        %forall(
+          #(c: %Element($../Carrier(𝐑 = {𝐑}))),
+          %equals(
+            $../../../Essentials/Functions/value(
+              X = {$../Carrier(𝐑 = {𝐑})},
+              Y = {$../Carrier(𝐑 = {𝐒})},
+              f = {f},
+              x = {$../"additive inverse"(
+                𝐑 = {𝐑},
+                a = {c}
+              )}
+            ),
+            $../"additive inverse"(
+              𝐑 = {𝐒},
+              a = {$../../../Essentials/Functions/value(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                Y = {$../Carrier(𝐑 = {𝐒})},
+                f = {f},
+                x = {c}
+              )}
+            )
+          )
+        ),
+        %forall(
+          #(
+            d: %Element($../Carrier(𝐑 = {𝐑})),
+            e: %Element(%previous)
+          ),
+          %equals(
+            $../../../Essentials/Functions/value(
+              X = {$../Carrier(𝐑 = {𝐑})},
+              Y = {$../Carrier(𝐑 = {𝐒})},
+              f = {f},
+              x = {$../product(
+                𝐑 = {𝐑},
+                a = {d},
+                b = {e}
+              )}
+            ),
+            $../product(
+              𝐑 = {𝐒},
+              a = {$../../../Essentials/Functions/value(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                Y = {$../Carrier(𝐑 = {𝐒})},
+                f = {f},
+                x = {d}
+              )},
+              b = {$../../../Essentials/Functions/value(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                Y = {$../Carrier(𝐑 = {𝐒})},
+                f = {f},
+                x = {e}
+              )}
+            )
+          )
+        ),
+        %equals(
+          $../../../Essentials/Functions/value(
+            X = {$../Carrier(𝐑 = {𝐑})},
+            Y = {$../Carrier(𝐑 = {𝐒})},
+            f = {f},
+            x = {$../one(𝐑 = {𝐑})}
+          ),
+          $../one(𝐑 = {𝐒})
+        )
+      )
+    ),
+    %subset(
+      #(f: %Element($../../../Essentials/Functions/Functions(
+        X = {$../Carrier(𝐑 = {𝐑})},
+        Y = {$../Carrier(𝐑 = {𝐒})}
+      ))),
+      %and(
+        %forall(
+          #(
+            a: %Element($../Carrier(𝐑 = {𝐑})),
+            b: %Element(%previous)
+          ),
+          %equals(
+            $../../../Essentials/Functions/value(
+              X = {$../Carrier(𝐑 = {𝐑})},
+              Y = {$../Carrier(𝐑 = {𝐒})},
+              f = {f},
+              x = {$../sum(
+                𝐑 = {𝐑},
+                a = {a},
+                b = {b}
+              )}
+            ),
+            $../sum(
+              𝐑 = {𝐒},
+              a = {$../../../Essentials/Functions/value(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                Y = {$../Carrier(𝐑 = {𝐒})},
+                f = {f},
+                x = {a}
+              )},
+              b = {$../../../Essentials/Functions/value(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                Y = {$../Carrier(𝐑 = {𝐒})},
+                f = {f},
+                x = {b}
+              )}
+            )
+          )
+        ),
+        %forall(
+          #(
+            d: %Element($../Carrier(𝐑 = {𝐑})),
+            e: %Element(%previous)
+          ),
+          %equals(
+            $../../../Essentials/Functions/value(
+              X = {$../Carrier(𝐑 = {𝐑})},
+              Y = {$../Carrier(𝐑 = {𝐒})},
+              f = {f},
+              x = {$../product(
+                𝐑 = {𝐑},
+                a = {d},
+                b = {e}
+              )}
+            ),
+            $../product(
+              𝐑 = {𝐒},
+              a = {$../../../Essentials/Functions/value(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                Y = {$../Carrier(𝐑 = {𝐒})},
+                f = {f},
+                x = {d}
+              )},
+              b = {$../../../Essentials/Functions/value(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                Y = {$../Carrier(𝐑 = {𝐒})},
+                f = {f},
+                x = {e}
+              )}
+            )
+          )
+        ),
+        %equals(
+          $../../../Essentials/Functions/value(
+            X = {$../Carrier(𝐑 = {𝐑})},
+            Y = {$../Carrier(𝐑 = {𝐒})},
+            f = {f},
+            x = {$../one(𝐑 = {𝐑})}
+          ),
+          $../one(𝐑 = {𝐒})
+        )
+      )
+    )
+  ]
+}

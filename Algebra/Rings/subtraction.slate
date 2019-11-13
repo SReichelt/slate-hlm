@@ -1,0 +1,25 @@
+%../../../../logics/hlm%
+
+$subtraction(
+  𝐑: %Element(
+    $Rings,
+    auto = %true
+  ),
+  a: %Element($Carrier(𝐑 = {𝐑})),
+  b: %Element(%previous)
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '−',
+    operands = [a, b],
+    minParenLevel = 1,
+    maxParenLevel = 1
+  )],
+  definition = [$sum(
+    𝐑 = {𝐑},
+    a = {a},
+    b = {$"additive inverse"(
+      𝐑 = {𝐑},
+      a = {b}
+    )}
+  )]
+}

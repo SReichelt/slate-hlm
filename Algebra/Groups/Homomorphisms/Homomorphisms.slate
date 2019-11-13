@@ -63,9 +63,9 @@ $Homomorphisms(
             X = {$../Carrier(𝐆 = {𝐆})},
             Y = {$../Carrier(𝐆 = {𝐇})},
             f = {f},
-            x = {$../"identity element"(𝐆 = {𝐆})}
+            x = {$../identity(𝐆 = {𝐆})}
           ),
-          $../"identity element"(𝐆 = {𝐇})
+          $../identity(𝐆 = {𝐇})
         ),
         %forall(
           #(c: %Element($../Carrier(𝐆 = {𝐆}))),
@@ -74,12 +74,12 @@ $Homomorphisms(
               X = {$../Carrier(𝐆 = {𝐆})},
               Y = {$../Carrier(𝐆 = {𝐇})},
               f = {f},
-              x = {$../"inverse element"(
+              x = {$../inverse(
                 𝐆 = {𝐆},
                 a = {c}
               )}
             ),
-            $../"inverse element"(
+            $../inverse(
               𝐆 = {𝐇},
               a = {$../../../Essentials/Functions/value(
                 X = {$../Carrier(𝐆 = {𝐆})},

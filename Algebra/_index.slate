@@ -26,6 +26,10 @@ $Algebra: %Section {
     %subsection(
       $Groups,
       'Groups'
+    ),
+    %subsection(
+      $Rings,
+      'Rings'
     )
   ]
 }

@@ -15,6 +15,9 @@ $Operations: %Section {
     ),
     %item($associative),
     %item($commutative),
+    %item($"left-distributive"),
+    %item($"right-distributive"),
+    %item($distributive),
     %item($"inner operation restriction")
   ]
 }

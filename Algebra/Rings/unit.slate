@@ -1,0 +1,36 @@
+%../../../../logics/hlm%
+
+$unit(
+  𝐑: %Element(
+    $Rings,
+    auto = %true
+  ),
+  r: %Element($Carrier(𝐑 = {𝐑}))
+): %Predicate {
+  display = [$NounProperty(
+    operand = r,
+    singular = 'unit',
+    plural = 'units'
+  )],
+  definition = [%exists(
+    #(s: %Element($Carrier(𝐑 = {𝐑}))),
+    formula = %and(
+      %equals(
+        $product(
+          𝐑 = {𝐑},
+          a = {r},
+          b = {s}
+        ),
+        $one(𝐑 = {𝐑})
+      ),
+      %equals(
+        $product(
+          𝐑 = {𝐑},
+          a = {s},
+          b = {r}
+        ),
+        $one(𝐑 = {𝐑})
+      )
+    )
+  )]
+}
