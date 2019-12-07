@@ -1,0 +1,16 @@
+%../../../../../logics/library%
+
+$Matrices: %Section {
+  logic = 'hlm',
+  items = [
+    %item($Matrices),
+    %item($Vectors),
+    %item($sum),
+    %item($zero),
+    %item($"additive inverse"),
+    %item($difference),
+    %item($product),
+    %item($identity),
+    %item($"matrix ring")
+  ]
+}

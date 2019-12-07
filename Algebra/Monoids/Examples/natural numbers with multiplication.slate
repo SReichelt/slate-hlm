@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
-$"Natural numbers with addition": %ExplicitOperator {
-  display = [$Tuple(items = ['ℕ', '+'])],
+$"natural numbers with multiplication": %ExplicitOperator {
+  display = [$Tuple(items = ['ℕ', '⋅'])],
   definition = [$../Monoids.monoid(
       M = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
       ∗ = {$../../../Essentials/Functions/Operations/operator(
@@ -12,11 +12,11 @@ $"Natural numbers with addition": %ExplicitOperator {
           m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
           n: %Element(%previous)
         ),
-        operator = $../../../Essentials/Numbers/Natural/sum(
+        operator = $../../../Essentials/Numbers/Natural/product(
           m = {m},
           n = {n}
         )
       )},
-      e = {$../../../Essentials/Numbers/Natural/number(value = 0)}
+      e = {$../../../Essentials/Numbers/Natural/number(value = 1)}
   )]
 }

@@ -1,0 +1,88 @@
+%../../../../../logics/hlm%
+
+$sum(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  m: %Element(
+    $../../../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
+  n: %Element(
+    %previous,
+    auto = %true
+  ),
+  A: %Element($Matrices(
+    𝐑 = {𝐑},
+    m = {m},
+    n = {n}
+  )),
+  B: %Element(%previous)
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '+',
+    operands = [A, B],
+    minParenLevel = 1,
+    maxParenLevel = 1
+  )],
+  definition = [%structuralCases(
+    B,
+    $Matrices(
+      𝐑 = {𝐑},
+      m = {m},
+      n = {n}
+    ),
+    [{
+      constructor = $Matrices(
+          𝐑 = {𝐑},
+          m = {m},
+          n = {n}
+        ).matrix,
+      parameters = #(i: %Binding(
+        $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
+        #(j: %Binding(
+          $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+          #(b: %Element($../Carrier(𝐑 = {𝐑})))
+        ))
+      )),
+      value = %structuralCases(
+        A,
+        $Matrices(
+          𝐑 = {𝐑},
+          m = {m},
+          n = {n}
+        ),
+        [{
+          constructor = $Matrices(
+              𝐑 = {𝐑},
+              m = {m},
+              n = {n}
+            ).matrix,
+          parameters = #(i: %Binding(
+            $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
+            #(j: %Binding(
+              $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+              #(a: %Element($../Carrier(𝐑 = {𝐑})))
+            ))
+          )),
+          value = $Matrices(
+              𝐑 = {𝐑},
+              m = {m},
+              n = {n}
+            ).matrix(i = {
+              #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
+              {j = {
+                #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+                {a = {$../sum(
+                  𝐑 = {𝐑},
+                  a = {a[i,j]},
+                  b = {b[i,j]}
+                )}}
+              }}
+          })
+        }]
+      )
+    }]
+  )]
+}

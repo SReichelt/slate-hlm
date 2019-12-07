@@ -1,6 +1,6 @@
 %../../../../logics/hlm%
 
-$subtraction(
+$difference(
   𝐑: %Element(
     $Rings,
     auto = %true

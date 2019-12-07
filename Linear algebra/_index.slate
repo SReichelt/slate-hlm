@@ -2,8 +2,5 @@
 
 $"Linear algebra": %Section {
   logic = 'hlm',
-  items = [%subsection(
-    $Essentials,
-    'Essentials'
-  )]
+  items = []
 }

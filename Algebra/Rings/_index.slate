@@ -8,6 +8,7 @@ $Rings: %Section {
     %item($sum),
     %item($zero),
     %item($"additive inverse"),
+    %item($difference),
     %item($product),
     %item($one),
     %subsection(
@@ -15,6 +16,19 @@ $Rings: %Section {
       'Homomorphisms'
     ),
     %item($unit),
-    %item($units)
+    %item($units),
+    %subsection(
+      $Examples,
+      'Examples'
+    ),
+    %item($"kronecker delta"),
+    %subsection(
+      $"Generalized sums and products",
+      'Generalized sums and products'
+    ),
+    %subsection(
+      $Matrices,
+      'Matrices'
+    )
   ]
 }

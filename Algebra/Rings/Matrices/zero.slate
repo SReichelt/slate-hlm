@@ -1,0 +1,30 @@
+%../../../../../logics/hlm%
+
+$zero(
+  𝐑: %Element($../Rings),
+  m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
+  n: %Element(%previous)
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = '0',
+    sub = $SubSup(
+      body = 𝐑,
+      sup = $Operator(
+        symbol = '×',
+        space = ' ',
+        operands = [m, n]
+      )
+    )
+  )],
+  definition = [$Matrices(
+      𝐑 = {𝐑},
+      m = {m},
+      n = {n}
+    ).matrix(i = {
+      #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
+      {j = {
+        #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+        {a = {$../zero(𝐑 = {𝐑})}}
+      }}
+  })]
+}

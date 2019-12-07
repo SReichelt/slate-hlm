@@ -1,0 +1,23 @@
+%../../../../logics/hlm%
+
+$"kronecker delta"(
+  𝐑: %Element($Rings),
+  S: %Set(auto = %true),
+  i: %Element(S),
+  j: %Element(%previous)
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = 'δ',
+    sub = $Group(items = [𝐑, i, j])
+  )],
+  definition = [%cases([
+    {
+      formula = %equals(i, j),
+      value = $one(𝐑 = {𝐑})
+    },
+    {
+      formula = %not(%equals(i, j)),
+      value = $zero(𝐑 = {𝐑})
+    }
+  ])]
+}

@@ -3,7 +3,7 @@
 $Examples: %Section {
   logic = 'hlm',
   items = [
-    %item($"Natural numbers with addition"),
-    %item($"Natural numbers with multiplication")
+    %item($"natural numbers with addition"),
+    %item($"natural numbers with multiplication")
   ]
 }

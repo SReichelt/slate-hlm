@@ -1,0 +1,122 @@
+%../../../../../logics/hlm%
+
+$"matrix ring"(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = 𝐑,
+    sup = $Operator(
+      symbol = '×',
+      space = ' ',
+      operands = [n, n]
+    )
+  )],
+  definition = [$../Rings.ring(
+      R = {$Matrices(
+        𝐑 = {𝐑},
+        m = {n},
+        n = {n}
+      )},
+      ⊕ = {$../../../Essentials/Functions/Operations/operator(
+        X = {$Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        )},
+        Y = {$Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        )},
+        Z = {$Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        )},
+        parameters = #(
+          A: %Element($Matrices(
+            𝐑 = {𝐑},
+            m = {n},
+            n = {n}
+          )),
+          B: %Element(%previous)
+        ),
+        operator = $sum(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n},
+          A = {A},
+          B = {B}
+        )
+      )},
+      "0" = {$zero(
+        𝐑 = {𝐑},
+        m = {n},
+        n = {n}
+      )},
+      ⊖ = {$../../../Essentials/Functions/operator(
+        X = {$Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        )},
+        Y = {$Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        )},
+        parameter = #(A: %Element($Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        ))),
+        operator = $"additive inverse"(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n},
+          A = {A}
+        )
+      )},
+      ⊙ = {$../../../Essentials/Functions/Operations/operator(
+        X = {$Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        )},
+        Y = {$Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        )},
+        Z = {$Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        )},
+        parameters = #(
+          A: %Element($Matrices(
+            𝐑 = {𝐑},
+            m = {n},
+            n = {n}
+          )),
+          B: %Element(%previous)
+        ),
+        operator = $product(
+          𝐑 = {𝐑},
+          l = {n},
+          m = {n},
+          n = {n},
+          A = {A},
+          B = {B}
+        )
+      )},
+      "1" = {$identity(
+        𝐑 = {𝐑},
+        n = {n}
+      )}
+  )]
+}

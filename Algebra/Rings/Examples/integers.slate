@@ -1,0 +1,42 @@
+%../../../../../logics/hlm%
+
+$integers: %ExplicitOperator {
+  display = ['ℤ'],
+  definition = [$../Rings.ring(
+      R = {$../../../Essentials/Numbers/Integer/Integers},
+      ⊕ = {$../../../Essentials/Functions/Operations/operator(
+        X = {$../../../Essentials/Numbers/Integer/Integers},
+        Y = {$../../../Essentials/Numbers/Integer/Integers},
+        Z = {$../../../Essentials/Numbers/Integer/Integers},
+        parameters = #(
+          a: %Element($../../../Essentials/Numbers/Integer/Integers),
+          b: %Element(%previous)
+        ),
+        operator = $../../../Essentials/Numbers/Integer/sum(
+          a = {a},
+          b = {b}
+        )
+      )},
+      "0" = {$../../../Essentials/Numbers/Natural/number(value = 0)},
+      ⊖ = {$../../../Essentials/Functions/operator(
+        X = {$../../../Essentials/Numbers/Integer/Integers},
+        Y = {$../../../Essentials/Numbers/Integer/Integers},
+        parameter = #(a: %Element($../../../Essentials/Numbers/Integer/Integers)),
+        operator = $../../../Essentials/Numbers/Integer/inverse(a = {a})
+      )},
+      ⊙ = {$../../../Essentials/Functions/Operations/operator(
+        X = {$../../../Essentials/Numbers/Integer/Integers},
+        Y = {$../../../Essentials/Numbers/Integer/Integers},
+        Z = {$../../../Essentials/Numbers/Integer/Integers},
+        parameters = #(
+          a: %Element($../../../Essentials/Numbers/Integer/Integers),
+          b: %Element(%previous)
+        ),
+        operator = $../../../Essentials/Numbers/Integer/product(
+          a = {a},
+          b = {b}
+        )
+      )},
+      "1" = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+  )]
+}

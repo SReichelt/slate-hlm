@@ -1,0 +1,64 @@
+%../../../../../logics/hlm%
+
+$"additive inverse"(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  m: %Element(
+    $../../../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
+  n: %Element(
+    %previous,
+    auto = %true
+  ),
+  A: %Element($Matrices(
+    𝐑 = {𝐑},
+    m = {m},
+    n = {n}
+  ))
+): %ExplicitOperator {
+  display = [$PrefixUnaryOperator(
+    symbol = '−',
+    operand = A,
+    minParenLevel = 1,
+    maxParenLevel = 1
+  )],
+  definition = [%structuralCases(
+    A,
+    $Matrices(
+      𝐑 = {𝐑},
+      m = {m},
+      n = {n}
+    ),
+    [{
+      constructor = $Matrices(
+          𝐑 = {𝐑},
+          m = {m},
+          n = {n}
+        ).matrix,
+      parameters = #(i: %Binding(
+        $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
+        #(j: %Binding(
+          $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+          #(a: %Element($../Carrier(𝐑 = {𝐑})))
+        ))
+      )),
+      value = $Matrices(
+          𝐑 = {𝐑},
+          m = {m},
+          n = {n}
+        ).matrix(i = {
+          #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
+          {j = {
+            #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+            {a = {$../"additive inverse"(
+              𝐑 = {𝐑},
+              a = {a[i,j]}
+            )}}
+          }}
+      })
+    }]
+  )]
+}

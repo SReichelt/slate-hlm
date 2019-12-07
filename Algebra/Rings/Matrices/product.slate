@@ -1,0 +1,104 @@
+%../../../../../logics/hlm%
+
+$product(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  l: %Element(
+    $../../../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
+  m: %Element(
+    %previous,
+    auto = %true
+  ),
+  n: %Element(
+    %previous,
+    auto = %true
+  ),
+  A: %Element($Matrices(
+    𝐑 = {𝐑},
+    m = {l},
+    n = {m}
+  )),
+  B: %Element($Matrices(
+    𝐑 = {𝐑},
+    m = {m},
+    n = {n}
+  ))
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '⋅',
+    operands = [A, B],
+    space = ' ',
+    minParenLevel = 2,
+    maxParenLevel = 2
+  )],
+  definition = [%structuralCases(
+    B,
+    $Matrices(
+      𝐑 = {𝐑},
+      m = {m},
+      n = {n}
+    ),
+    [{
+      constructor = $Matrices(
+          𝐑 = {𝐑},
+          m = {m},
+          n = {n}
+        ).matrix,
+      parameters = #(j: %Binding(
+        $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
+        #(k: %Binding(
+          $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+          #(b: %Element($../Carrier(𝐑 = {𝐑})))
+        ))
+      )),
+      value = %structuralCases(
+        A,
+        $Matrices(
+          𝐑 = {𝐑},
+          m = {l},
+          n = {m}
+        ),
+        [{
+          constructor = $Matrices(
+              𝐑 = {𝐑},
+              m = {l},
+              n = {m}
+            ).matrix,
+          parameters = #(i: %Binding(
+            $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {l}),
+            #(j: %Binding(
+              $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
+              #(a: %Element($../Carrier(𝐑 = {𝐑})))
+            ))
+          )),
+          value = $Matrices(
+              𝐑 = {𝐑},
+              m = {l},
+              n = {n}
+            ).matrix(i = {
+              #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {l}))),
+              {j = {
+                #(k: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+                {a = {$../"Generalized sums and products"/"inductive sum (exclusive)"(
+                  𝐑 = {𝐑},
+                  n = {m},
+                  i = {
+                    #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
+                    {a = {$../product(
+                      𝐑 = {𝐑},
+                      a = {a[i,j]},
+                      b = {b[j,k]}
+                    )}}
+                  }
+                )}}
+              }}
+          })
+        }]
+      )
+    }]
+  )]
+}

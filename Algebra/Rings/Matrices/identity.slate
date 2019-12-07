@@ -1,0 +1,34 @@
+%../../../../../logics/hlm%
+
+$identity(
+  𝐑: %Element($../Rings),
+  n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = 'I',
+    sub = $SubSup(
+      body = 𝐑,
+      sup = $Operator(
+        symbol = '×',
+        space = ' ',
+        operands = [n, n]
+      )
+    )
+  )],
+  definition = [$Matrices(
+      𝐑 = {𝐑},
+      m = {n},
+      n = {n}
+    ).matrix(i = {
+      #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+      {j = {
+        #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+        {a = {$../"kronecker delta"(
+          𝐑 = {𝐑},
+          S = {$../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
+          i = {i},
+          j = {j}
+        )}}
+      }}
+  })]
+}
