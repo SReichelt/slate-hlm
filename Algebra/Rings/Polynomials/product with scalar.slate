@@ -1,0 +1,85 @@
+%../../../../../logics/hlm%
+
+$"product with scalar"(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element(
+    $../../../"Formal systems"/Variables,
+    auto = %true
+  ),
+  a: %Element($../Carrier(𝐑 = {𝐑})),
+  p: %Element($Polynomials(
+    𝐑 = {𝐑},
+    X = {X}
+  ))
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '⋅',
+    operands = [a, p],
+    space = ' ',
+    minParenLevel = 2,
+    maxParenLevel = 2
+  )],
+  definition = [%structuralCases(
+    p,
+    $Polynomials(
+      𝐑 = {𝐑},
+      X = {X}
+    ),
+    [
+      {
+        constructor = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).zero,
+        value = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).zero
+      },
+      {
+        constructor = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).term,
+        parameters = #(
+          q: %Element($Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )),
+          b: %Element($../Carrier(𝐑 = {𝐑})),
+          _1: %Constraint(%or(
+            %not(%equals(
+              q,
+              $Polynomials(
+                  𝐑 = {𝐑},
+                  X = {X}
+                ).zero
+            )),
+            %not(%equals(
+              b,
+              $../zero(𝐑 = {𝐑})
+            ))
+          ))
+        ),
+        value = $normalized(
+          𝐑 = {𝐑},
+          X = {X},
+          p = {$"product with scalar"(
+            𝐑 = {𝐑},
+            X = {X},
+            a = {a},
+            p = {q}
+          )},
+          a = {$../product(
+            𝐑 = {𝐑},
+            a = {a},
+            b = {b}
+          )}
+        )
+      }
+    ]
+  )]
+}

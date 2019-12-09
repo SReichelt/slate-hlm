@@ -1,0 +1,70 @@
+%../../../../../logics/hlm%
+
+$constant(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element(
+    $../../../"Formal systems"/Variables,
+    auto = %true
+  ),
+  a: %Element($../Carrier(𝐑 = {𝐑}))
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = $Parens(
+      body = a,
+      style = '[]'
+    ),
+    sub = $Function(
+      function = 𝐑,
+      arguments = [X],
+      style = '[]'
+    )
+  )],
+  definition = [
+    $normalized(
+      𝐑 = {𝐑},
+      X = {X},
+      p = {$Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ).zero},
+      a = {a}
+    ),
+    $term(
+      𝐑 = {𝐑},
+      X = {X},
+      a = {a},
+      n = {$../../../Essentials/Numbers/Natural/number(value = 0)}
+    ),
+    %cases([
+      {
+        formula = %not(%equals(
+          a,
+          $../zero(𝐑 = {𝐑})
+        )),
+        value = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).term(
+            p = {$Polynomials(
+                𝐑 = {𝐑},
+                X = {X}
+              ).zero},
+            a = {a}
+        )
+      },
+      {
+        formula = %equals(
+          a,
+          $../zero(𝐑 = {𝐑})
+        ),
+        value = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).zero
+      }
+    ])
+  ]
+}

@@ -17,13 +17,10 @@ $"Complex numbers": %Construction {
             symbol = '𝒊',
             operand = i,
             space = '',
-            minParenLevel = 2,
-            maxParenLevel = 2
+            minParenLevel = 3
           )
         ],
-        space = '',
-        minParenLevel = 1,
-        maxParenLevel = 1
+        space = ''
       ),
       style = '()'
     )],

@@ -1,0 +1,129 @@
+%../../../../../logics/hlm%
+
+$sum(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element(
+    $../../../"Formal systems"/Variables,
+    auto = %true
+  ),
+  p: %Element($Polynomials(
+    𝐑 = {𝐑},
+    X = {X}
+  )),
+  q: %Element(%previous)
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '+',
+    operands = [p, q],
+    minParenLevel = 1,
+    maxParenLevel = 1
+  )],
+  definition = [%structuralCases(
+    q,
+    $Polynomials(
+      𝐑 = {𝐑},
+      X = {X}
+    ),
+    [
+      {
+        constructor = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).zero,
+        value = p
+      },
+      {
+        constructor = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).term,
+        parameters = #(
+          s: %Element($Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )),
+          b: %Element($../Carrier(𝐑 = {𝐑})),
+          _2: %Constraint(%or(
+            %not(%equals(
+              s,
+              $Polynomials(
+                  𝐑 = {𝐑},
+                  X = {X}
+                ).zero
+            )),
+            %not(%equals(
+              b,
+              $../zero(𝐑 = {𝐑})
+            ))
+          ))
+        ),
+        value = %structuralCases(
+          p,
+          $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ),
+          [
+            {
+              constructor = $Polynomials(
+                  𝐑 = {𝐑},
+                  X = {X}
+                ).zero,
+              value = $Polynomials(
+                  𝐑 = {𝐑},
+                  X = {X}
+                ).term(
+                  p = {s},
+                  a = {b}
+              )
+            },
+            {
+              constructor = $Polynomials(
+                  𝐑 = {𝐑},
+                  X = {X}
+                ).term,
+              parameters = #(
+                r: %Element($Polynomials(
+                  𝐑 = {𝐑},
+                  X = {X}
+                )),
+                a: %Element($../Carrier(𝐑 = {𝐑})),
+                _1: %Constraint(%or(
+                  %not(%equals(
+                    r,
+                    $Polynomials(
+                        𝐑 = {𝐑},
+                        X = {X}
+                      ).zero
+                  )),
+                  %not(%equals(
+                    a,
+                    $../zero(𝐑 = {𝐑})
+                  ))
+                ))
+              ),
+              value = $normalized(
+                𝐑 = {𝐑},
+                X = {X},
+                p = {$sum(
+                  𝐑 = {𝐑},
+                  X = {X},
+                  p = {r},
+                  q = {s}
+                )},
+                a = {$../sum(
+                  𝐑 = {𝐑},
+                  a = {a},
+                  b = {b}
+                )}
+              )
+            }
+          ]
+        )
+      }
+    ]
+  )]
+}

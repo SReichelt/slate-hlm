@@ -1,0 +1,39 @@
+%../../../../../logics/hlm%
+
+$degree(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element(
+    $../../../"Formal systems"/Variables,
+    auto = %true
+  ),
+  p: %Element($../../../Essentials/Sets/"Relative complement"(
+    U = {$Polynomials(
+      𝐑 = {𝐑},
+      X = {X}
+    )},
+    S = {$Polynomials(
+      𝐑 = {𝐑},
+      X = {X}
+    )},
+    T = {%enumeration($Polynomials(
+        𝐑 = {𝐑},
+        X = {X}
+      ).zero)}
+  ))
+): %ExplicitOperator {
+  display = [$Function(
+    function = 'deg',
+    arguments = [p]
+  )],
+  definition = [$../../../Essentials/Numbers/Natural/difference(
+    n = {$dimension(
+      𝐑 = {𝐑},
+      X = {X},
+      p = {p}
+    )},
+    m = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+  )]
+}

@@ -1,0 +1,71 @@
+%../../../../../logics/hlm%
+
+$dimension(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element(
+    $../../../"Formal systems"/Variables,
+    auto = %true
+  ),
+  p: %Element($Polynomials(
+    𝐑 = {𝐑},
+    X = {X}
+  ))
+): %ExplicitOperator {
+  display = [$Function(
+    function = 'dim',
+    arguments = [p]
+  )],
+  definition = [%structuralCases(
+    p,
+    $Polynomials(
+      𝐑 = {𝐑},
+      X = {X}
+    ),
+    [
+      {
+        constructor = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).zero,
+        value = $../../../Essentials/Numbers/Natural/number(value = 0)
+      },
+      {
+        constructor = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).term,
+        parameters = #(
+          q: %Element($Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )),
+          a: %Element($../Carrier(𝐑 = {𝐑})),
+          _1: %Constraint(%or(
+            %not(%equals(
+              q,
+              $Polynomials(
+                  𝐑 = {𝐑},
+                  X = {X}
+                ).zero
+            )),
+            %not(%equals(
+              a,
+              $../zero(𝐑 = {𝐑})
+            ))
+          ))
+        ),
+        value = $../../../Essentials/Numbers/Natural/sum(
+          m = {$dimension(
+            𝐑 = {𝐑},
+            X = {X},
+            p = {q}
+          )},
+          n = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+        )
+      }
+    ]
+  )]
+}

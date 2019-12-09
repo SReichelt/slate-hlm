@@ -1,0 +1,82 @@
+%../../../../../logics/hlm%
+
+$term(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element(
+    $../../../"Formal systems"/Variables,
+    auto = %true
+  ),
+  a: %Element($../Carrier(𝐑 = {𝐑})),
+  n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '',
+    operands = [
+      a,
+      $SubSup(
+        body = X,
+        sup = n
+      )
+    ],
+    space = '',
+    minParenLevel = 3
+  )],
+  definition = [%cases([
+    {
+      formula = %not(%equals(
+        a,
+        $../zero(𝐑 = {𝐑})
+      )),
+      value = %structuralCases(
+        n,
+        $../../../Essentials/Numbers/Natural/"Natural numbers",
+        [
+          {
+            constructor = $../../../Essentials/Numbers/Natural/"Natural numbers".zero,
+            value = $Polynomials(
+                𝐑 = {𝐑},
+                X = {X}
+              ).term(
+                p = {$Polynomials(
+                    𝐑 = {𝐑},
+                    X = {X}
+                  ).zero},
+                a = {a}
+            ),
+            rewrite = %true
+          },
+          {
+            constructor = $../../../Essentials/Numbers/Natural/"Natural numbers".successor,
+            parameters = #(m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
+            value = $Polynomials(
+                𝐑 = {𝐑},
+                X = {X}
+              ).term(
+                p = {$term(
+                  𝐑 = {𝐑},
+                  X = {X},
+                  a = {a},
+                  n = {m}
+                )},
+                a = {$../zero(𝐑 = {𝐑})}
+            ),
+            rewrite = %true
+          }
+        ]
+      )
+    },
+    {
+      formula = %equals(
+        a,
+        $../zero(𝐑 = {𝐑})
+      ),
+      value = $Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ).zero
+    }
+  ])]
+}

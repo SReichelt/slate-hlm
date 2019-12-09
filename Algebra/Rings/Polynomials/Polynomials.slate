@@ -1,0 +1,114 @@
+%../../../../../logics/hlm%
+
+$Polynomials(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element($../../../"Formal systems"/Variables)
+): %Construction {
+  $zero: %Constructor {
+    display = [$SubSup(
+      body = $Parens(
+        body = $ConstructorName(name = '0'),
+        style = '()'
+      ),
+      sub = $Function(
+        function = 𝐑,
+        arguments = [X],
+        style = '[]'
+      )
+    )]
+  }
+
+  $term(
+    p: %Element($Polynomials(
+      𝐑 = {𝐑},
+      X = {X}
+    )),
+    a: %Element($../Carrier(𝐑 = {𝐑})),
+    _1: %Constraint(%or(
+      %not(%equals(
+        p,
+        $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).zero
+      )),
+      %not(%equals(
+        a,
+        $../zero(𝐑 = {𝐑})
+      ))
+    ))
+  ): %Constructor {
+    display = [$Parens(
+      body = $Operator(
+        symbol = $ConstructorName(name = '+'),
+        operands = [
+          $Operator(
+            symbol = '',
+            operands = [p, X],
+            space = '',
+            minParenLevel = 3
+          ),
+          a
+        ],
+        space = ''
+      ),
+      style = '()'
+    )],
+    equalityDefinition = {
+      leftParameters = #(
+        p: %Element($Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )),
+        a: %Element($../Carrier(𝐑 = {𝐑})),
+        _1: %Constraint(%or(
+          %not(%equals(
+            p,
+            $Polynomials(
+                𝐑 = {𝐑},
+                X = {X}
+              ).zero
+          )),
+          %not(%equals(
+            a,
+            $../zero(𝐑 = {𝐑})
+          ))
+        ))
+      ),
+      rightParameters = #(
+        q: %Element($Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )),
+        b: %Element($../Carrier(𝐑 = {𝐑})),
+        _2: %Constraint(%or(
+          %not(%equals(
+            q,
+            $Polynomials(
+                𝐑 = {𝐑},
+                X = {X}
+              ).zero
+          )),
+          %not(%equals(
+            b,
+            $../zero(𝐑 = {𝐑})
+          ))
+        ))
+      ),
+      definition = [%and(
+        %equals(p, q),
+        %equals(a, b)
+      )],
+      isomorphic = %true
+    }
+  }
+
+  display = [$Function(
+    function = 𝐑,
+    arguments = [X],
+    style = '[]'
+  )]
+}

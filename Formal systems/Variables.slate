@@ -21,5 +21,10 @@ $Variables: %Construction {
     }
   }
 
-  display = ['𝓥𝓪𝓻']
+  display = ['𝓥𝓪𝓻'],
+  definitionDisplay = {
+    parameter = #(v: %Expr),
+    singularName = 'variable',
+    pluralName = 'variables'
+  }
 }

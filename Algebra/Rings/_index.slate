@@ -27,6 +27,10 @@ $Rings: %Section {
       'Generalized sums and products'
     ),
     %subsection(
+      $Polynomials,
+      'Polynomials'
+    ),
+    %subsection(
       $Matrices,
       'Matrices'
     )

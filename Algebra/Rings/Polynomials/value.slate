@@ -1,0 +1,78 @@
+%../../../../../logics/hlm%
+
+$value(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element(
+    $../../../"Formal systems"/Variables,
+    auto = %true
+  ),
+  p: %Element($Polynomials(
+    𝐑 = {𝐑},
+    X = {X}
+  )),
+  a: %Element($../Carrier(𝐑 = {𝐑}))
+): %ExplicitOperator {
+  display = [$Function(
+    function = p,
+    arguments = [a]
+  )],
+  definition = [%structuralCases(
+    p,
+    $Polynomials(
+      𝐑 = {𝐑},
+      X = {X}
+    ),
+    [
+      {
+        constructor = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).zero,
+        value = $../zero(𝐑 = {𝐑})
+      },
+      {
+        constructor = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).term,
+        parameters = #(
+          q: %Element($Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )),
+          b: %Element($../Carrier(𝐑 = {𝐑})),
+          _1: %Constraint(%or(
+            %not(%equals(
+              q,
+              $Polynomials(
+                  𝐑 = {𝐑},
+                  X = {X}
+                ).zero
+            )),
+            %not(%equals(
+              b,
+              $../zero(𝐑 = {𝐑})
+            ))
+          ))
+        ),
+        value = $../sum(
+          𝐑 = {𝐑},
+          a = {$../product(
+            𝐑 = {𝐑},
+            a = {$value(
+              𝐑 = {𝐑},
+              X = {X},
+              p = {q},
+              a = {a}
+            )},
+            b = {a}
+          )},
+          b = {b}
+        )
+      }
+    ]
+  )]
+}

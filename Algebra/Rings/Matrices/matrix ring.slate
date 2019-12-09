@@ -1,10 +1,7 @@
 %../../../../../logics/hlm%
 
 $"matrix ring"(
-  𝐑: %Element(
-    $../Rings,
-    auto = %true
-  ),
+  𝐑: %Element($../Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
   display = [$SubSup(
