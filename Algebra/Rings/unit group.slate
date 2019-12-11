@@ -1,18 +1,12 @@
 %../../../../logics/hlm%
 
-$units(
-  𝐑: %Element($Rings),
-  U: %SetDef(%subset(
-    #(r: %Element($Carrier(𝐑 = {𝐑}))),
-    $unit(
-      𝐑 = {𝐑},
-      r = {r}
-    )
-  ))
-): %ExplicitOperator {
-  display = [$SubSup(
-    body = 𝐑,
-    sup = '×'
+$"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
+  display = [$Parens(
+    body = $SubSup(
+      body = 𝐑,
+      sup = '×'
+    ),
+    style = '[]'
   )],
   definition = [%structuralCases(
     𝐑,
@@ -108,15 +102,25 @@ $units(
           ⋆ = {⊕}
         ))
       ),
-      value = $../Groups/"monoid with inverses"(𝐌 = {$../Monoids/Monoids.monoid(
-          M = {U},
+      value = $../Groups/Groups.group(
+          G = {$Units(𝐑 = {𝐑})},
           ∗ = {$../../Essentials/Functions/Operations/"inner operation restriction"(
             X = {R},
-            A = {U},
+            A = {$Units(𝐑 = {𝐑})},
             ∗ = {⊙}
           )},
-          e = {"1"}
-      )})
+          e = {"1"},
+          i = {$../../Essentials/Functions/Functions(
+              X = {$Units(𝐑 = {𝐑})},
+              Y = {$Units(𝐑 = {𝐑})}
+            ).function(x = {
+              #(a: %Element($Units(𝐑 = {𝐑}))),
+              {y = {$"multiplicative inverse"(
+                𝐑 = {𝐑},
+                a = {a}
+              )}}
+          })}
+      )
     }]
   )]
 }

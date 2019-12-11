@@ -1,0 +1,42 @@
+%../../../../../logics/hlm%
+
+$ideal(
+  𝐑: %Element($../Rings),
+  I: %Subset($../Carrier(𝐑 = {𝐑}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [I, 𝐑],
+    singular = 'ideal',
+    plural = 'ideals',
+    article = 'an'
+  )],
+  definition = [
+    %and(
+      $"left ideal"(
+        𝐑 = {𝐑},
+        I = {I}
+      ),
+      $"right ideal"(
+        𝐑 = {𝐑},
+        I = {I}
+      )
+    ),
+    %exists(
+      #(
+        𝐒: %Element($../Rings),
+        φ: %Element($../Homomorphisms/Homomorphisms(
+          𝐑 = {𝐑},
+          𝐒 = {𝐒}
+        ))
+      ),
+      formula = %setEquals(
+        I,
+        $../Homomorphisms/Kernel(
+          𝐑 = {𝐑},
+          𝐒 = {𝐒},
+          φ = {φ}
+        )
+      )
+    )
+  ]
+}

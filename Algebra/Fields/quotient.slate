@@ -1,0 +1,21 @@
+%../../../../logics/hlm%
+
+$quotient(
+  𝐅: %Element($Fields),
+  b: %Element($../Rings/Carrier(𝐑 = {𝐅})),
+  a: %Element($../Rings/Units(𝐑 = {𝐅}))
+): %ImplicitOperator {
+  display = [$Fraction(
+    numerator = b,
+    denominator = a
+  )],
+  parameter = #(x: %Element($../Rings/Carrier(𝐑 = {𝐅}))),
+  definition = [%equals(
+    b,
+    $../Rings/product(
+      𝐑 = {𝐅},
+      a = {x},
+      b = {a}
+    )
+  )]
+}

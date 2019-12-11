@@ -1,0 +1,10 @@
+%../../../../../logics/library%
+
+$Ideals: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"left ideal"),
+    %item($"right ideal"),
+    %item($ideal)
+  ]
+}

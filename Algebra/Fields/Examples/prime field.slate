@@ -1,0 +1,12 @@
+%../../../../../logics/hlm%
+
+$"prime field"(p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers")): %ExplicitOperator {
+  display = [$SubSup(
+    body = '𝔽',
+    sub = p
+  )],
+  definition = [$../../Rings/Quotients/"quotient ring"(
+    𝐑 = {$../../Rings/Examples/integers},
+    I = {$../../Rings/Ideals/Examples/"Integer ideal"(a = {p})}
+  )]
+}

@@ -1,0 +1,17 @@
+%../../../../../../logics/hlm%
+
+$"Integer ideal"(a: %Element($../../../../Essentials/Numbers/Integer/Integers)): %SetOperator {
+  display = [$Operator(
+    symbol = '',
+    operands = [a, 'ℤ'],
+    space = '',
+    minParenLevel = 3
+  )],
+  definition = [%extendedSubset(
+    #(b: %Element($../../../../Essentials/Numbers/Integer/Integers)),
+    $../../../../Essentials/Numbers/Integer/product(
+      a = {a},
+      b = {b}
+    )
+  )]
+}

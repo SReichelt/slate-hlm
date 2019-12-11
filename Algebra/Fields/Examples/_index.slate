@@ -1,0 +1,11 @@
+%../../../../../logics/library%
+
+$Examples: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"rational numbers"),
+    %item($"real numbers"),
+    %item($"complex numbers"),
+    %item($"prime field")
+  ]
+}

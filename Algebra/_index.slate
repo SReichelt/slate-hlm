@@ -30,6 +30,10 @@ $Algebra: %Section {
     %subsection(
       $Rings,
       'Rings'
+    ),
+    %subsection(
+      $Fields,
+      'Fields'
     )
   ]
 }

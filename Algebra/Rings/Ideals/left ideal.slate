@@ -1,0 +1,32 @@
+%../../../../../logics/hlm%
+
+$"left ideal"(
+  𝐑: %Element($../Rings),
+  I: %Subset($../Carrier(𝐑 = {𝐑}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [I, 𝐑],
+    singular = 'left ideal',
+    plural = 'left ideals'
+  )],
+  definition = [%and(
+    $../../Groups/Subgroups/"subgroup set"(
+      𝐆 = {$../"additive group"(𝐑 = {𝐑})},
+      S = {I}
+    ),
+    %forall(
+      #(
+        i: %Element(I),
+        r: %Element($../Carrier(𝐑 = {𝐑}))
+      ),
+      %in(
+        $../product(
+          𝐑 = {𝐑},
+          a = {r},
+          b = {i}
+        ),
+        I
+      )
+    )
+  )]
+}

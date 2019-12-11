@@ -1,0 +1,42 @@
+%../../../../../logics/hlm%
+
+$"complex numbers": %ExplicitOperator {
+  display = ['ℂ'],
+  definition = [$../../Rings/Rings.ring(
+      R = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
+      ⊕ = {$../../../Essentials/Functions/Operations/operator(
+        X = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
+        Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
+        Z = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
+        parameters = #(
+          a: %Element($../../../Essentials/Numbers/Complex/"Complex numbers"),
+          b: %Element(%previous)
+        ),
+        operator = $../../../Essentials/Numbers/Complex/sum(
+          a = {a},
+          b = {b}
+        )
+      )},
+      "0" = {$../../../Essentials/Numbers/Natural/number(value = 0)},
+      ⊖ = {$../../../Essentials/Functions/operator(
+        X = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
+        Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
+        parameter = #(a: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
+        operator = $../../../Essentials/Numbers/Complex/inverse(a = {a})
+      )},
+      ⊙ = {$../../../Essentials/Functions/Operations/operator(
+        X = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
+        Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
+        Z = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
+        parameters = #(
+          a: %Element($../../../Essentials/Numbers/Complex/"Complex numbers"),
+          b: %Element(%previous)
+        ),
+        operator = $../../../Essentials/Numbers/Complex/product(
+          a = {a},
+          b = {b}
+        )
+      )},
+      "1" = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+  )]
+}

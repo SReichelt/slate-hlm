@@ -2,7 +2,5 @@
 
 $Examples: %Section {
   logic = 'hlm',
-  items = [
-    %item($integers)
-  ]
+  items = [%item($integers)]
 }

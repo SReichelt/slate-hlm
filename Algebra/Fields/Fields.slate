@@ -1,0 +1,27 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Field_(mathematics)
+ */
+$Fields: %SetOperator {
+  display = ['𝓕𝓵𝓭'],
+  definitionDisplay = {
+    parameter = #(𝐅: %Expr),
+    singularName = 'field',
+    pluralName = 'fields'
+  },
+  definition = [%subset(
+    #(𝐑: %Element($../Rings/Rings)),
+    %and(
+      $../Rings/commutative(𝐑 = {𝐑}),
+      %setEquals(
+        $../Rings/Units(𝐑 = {𝐑}),
+        $../../Essentials/Sets/"Relative complement"(
+          U = {$../Rings/Carrier(𝐑 = {𝐑})},
+          S = {$../Rings/Carrier(𝐑 = {𝐑})},
+          T = {%enumeration($../Rings/zero(𝐑 = {𝐑}))}
+        )
+      )
+    )
+  )]
+}

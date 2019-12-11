@@ -19,7 +19,7 @@ $Groups: %Section {
       'Subgroups'
     ),
     %subsection(
-      $Quotient,
+      $Quotients,
       'Quotient groups'
     )
   ]

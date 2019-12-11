@@ -1,0 +1,15 @@
+%../../../../logics/hlm%
+
+$Units(𝐑: %Element($Rings)): %SetOperator {
+  display = [$SubSup(
+    body = 𝐑,
+    sup = '×'
+  )],
+  definition = [%subset(
+    #(a: %Element($Carrier(𝐑 = {𝐑}))),
+    $unit(
+      𝐑 = {𝐑},
+      a = {a}
+    )
+  )]
+}

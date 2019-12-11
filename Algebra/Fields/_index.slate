@@ -1,0 +1,13 @@
+%../../../../logics/library%
+
+$Fields: %Section {
+  logic = 'hlm',
+  items = [
+    %item($Fields),
+    %item($quotient),
+    %subsection(
+      $Examples,
+      'Examples'
+    )
+  ]
+}

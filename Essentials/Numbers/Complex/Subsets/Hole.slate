@@ -1,0 +1,13 @@
+%../../../../../../logics/hlm%
+
+$Hole(a: %Element($../"Complex numbers")): %SetOperator {
+  display = [$Segment(
+    set = 'ℂ',
+    symbol = '≠',
+    limit = a
+  )],
+  definition = [%subset(
+    #(b: %Element($../"Complex numbers")),
+    %not(%equals(b, a))
+  )]
+}

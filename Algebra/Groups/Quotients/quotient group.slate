@@ -24,7 +24,7 @@ $"quotient group"(
         )}}
       }}
   })),
-  T: %SetDef($../../../Essentials/Relations/"Equivalence classes"(
+  Q: %SetDef($../../../Essentials/Relations/"Equivalence classes"(
     S = {$../Carrier(𝐆 = {𝐆})},
     ∼ = {∼}
   ))
@@ -35,32 +35,32 @@ $"quotient group"(
     space = ''
   )],
   definition = [$../Groups.group(
-      G = {T},
+      G = {Q},
       ∗ = {$../../../Essentials/Functions/Functions(
           X = {$../../../Essentials/Sets/"Cartesian product"(
-            S = {T},
-            T = {T}
+            S = {Q},
+            T = {Q}
           )},
-          Y = {T}
+          Y = {Q}
         ).function(x = {
           #(_x: %Element($../../../Essentials/Sets/"Cartesian product"(
-            S = {T},
-            T = {T}
+            S = {Q},
+            T = {Q}
           ))),
           {y = {%structuralCases(
             _x,
             $../../../Essentials/Sets/"Cartesian product"(
-              S = {T},
-              T = {T}
+              S = {Q},
+              T = {Q}
             ),
             [{
               constructor = $../../../Essentials/Sets/"Cartesian product"(
-                  S = {T},
-                  T = {T}
+                  S = {Q},
+                  T = {Q}
                 ).pair,
               parameters = #(
-                _t: %Element(T),
-                _u: %Element(T)
+                _t: %Element(Q),
+                _u: %Element(Q)
               ),
               value = %structuralCases(
                 _t,
@@ -106,10 +106,10 @@ $"quotient group"(
           ∼ = {∼}
         ).class(s = {$../identity(𝐆 = {𝐆})})},
       i = {$../../../Essentials/Functions/Functions(
-          X = {T},
-          Y = {T}
+          X = {Q},
+          Y = {Q}
         ).function(x = {
-          #(_t: %Element(T)),
+          #(_t: %Element(Q)),
           {y = {%structuralCases(
             _t,
             $../../../Essentials/Relations/"Equivalence classes"(

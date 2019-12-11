@@ -9,6 +9,7 @@ $Rings: %Section {
     %item($zero),
     %item($"additive inverse"),
     %item($difference),
+    %item($"additive group"),
     %item($product),
     %item($one),
     %subsection(
@@ -16,10 +17,20 @@ $Rings: %Section {
       'Homomorphisms'
     ),
     %item($unit),
-    %item($units),
+    %item($Units),
+    %item($"multiplicative inverse"),
+    %item($"unit group"),
     %subsection(
       $Examples,
       'Examples'
+    ),
+    %subsection(
+      $Ideals,
+      'Ideals'
+    ),
+    %subsection(
+      $Quotients,
+      'Quotient rings'
     ),
     %item($"kronecker delta"),
     %subsection(

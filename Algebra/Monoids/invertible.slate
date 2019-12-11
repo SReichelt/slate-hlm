@@ -1,13 +1,15 @@
 %../../../../logics/hlm%
 
 $invertible(
-  𝐌: %Element($Monoids),
+  𝐌: %Element(
+    $Monoids,
+    auto = %true
+  ),
   a: %Element($Carrier(𝐌 = {𝐌}))
 ): %Predicate {
-  display = [$RelationalProperty(
-    operands = [a, 𝐌],
-    property = 'invertible',
-    preposition = 'in'
+  display = [$Property(
+    operand = a,
+    property = 'invertible'
   )],
   definition = [%exists(
     #(b: %Element($Carrier(𝐌 = {𝐌}))),

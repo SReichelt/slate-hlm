@@ -1,0 +1,23 @@
+%../../../../logics/hlm%
+
+$"multiplicative inverse"(
+  𝐑: %Element(
+    $Rings,
+    auto = %true
+  ),
+  a: %Element($Units(𝐑 = {𝐑}))
+): %ImplicitOperator {
+  display = [$SubSup(
+    body = a,
+    sup = '-1'
+  )],
+  parameter = #(b: %Element($Units(𝐑 = {𝐑}))),
+  definition = [%equals(
+    $product(
+      𝐑 = {𝐑},
+      a = {a},
+      b = {b}
+    ),
+    $one(𝐑 = {𝐑})
+  )]
+}

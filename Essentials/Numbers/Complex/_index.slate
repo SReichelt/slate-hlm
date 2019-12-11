@@ -13,6 +13,11 @@ $Complex: %Section {
     %item($product),
     %item($"Product is associative"),
     %item($"Product is commutative"),
-    %item($"Actual linear combination equals formal linear combination")
+    %item($"Actual linear combination equals formal linear combination"),
+    %subsection(
+      $Subsets,
+      'Subsets'
+    ),
+    %item($quotient)
   ]
 }
