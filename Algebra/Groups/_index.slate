@@ -21,6 +21,10 @@ $Groups: %Section {
     %subsection(
       $Quotients,
       'Quotient groups'
+    ),
+    %subsection(
+      $Examples,
+      'Examples'
     )
   ]
 }

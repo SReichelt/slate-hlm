@@ -2,5 +2,8 @@
 
 $Examples: %Section {
   logic = 'hlm',
-  items = [%item($integers)]
+  items = [
+    %item($integers),
+    %item($"Multiples are an ideal of integers")
+  ]
 }

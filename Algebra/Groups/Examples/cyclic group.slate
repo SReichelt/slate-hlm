@@ -1,0 +1,12 @@
+%../../../../../logics/hlm%
+
+$"cyclic group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+  display = [$SubSup(
+    body = '𝐶',
+    sub = n
+  )],
+  definition = [$../Quotients/"quotient group"(
+    𝐆 = {$integers},
+    S = {$../../../Essentials/Numbers/Integer/Subsets/Multiples(n = {n})}
+  )]
+}

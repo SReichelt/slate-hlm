@@ -1,0 +1,11 @@
+%../../../../../logics/hlm%
+
+$"finite symmetric group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+  display = [$SubSup(
+    body = '𝑆',
+    sub = n
+  )],
+  definition = [$"symmetric group"(
+    X = {$../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n})}
+  )]
+}

@@ -1,0 +1,8 @@
+%../../../../../logics/hlm%
+
+$"Multiples are an ideal of integers"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %StandardTheorem {
+  claim = $../Ideals/ideal(
+    𝐑 = {$integers},
+    I = {$../../../Essentials/Numbers/Integer/Subsets/Multiples(n = {n})}
+  )
+}

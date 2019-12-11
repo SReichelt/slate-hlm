@@ -21,16 +21,16 @@ $Rings: %Section {
     %item($"multiplicative inverse"),
     %item($"unit group"),
     %subsection(
-      $Examples,
-      'Examples'
-    ),
-    %subsection(
       $Ideals,
       'Ideals'
     ),
     %subsection(
       $Quotients,
       'Quotient rings'
+    ),
+    %subsection(
+      $Examples,
+      'Examples'
     ),
     %item($"kronecker delta"),
     %subsection(

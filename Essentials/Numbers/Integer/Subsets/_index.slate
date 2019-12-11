@@ -12,6 +12,7 @@ $Subsets: %Section {
     %item($"Nonpositive numbers"),
     %item($"Nonnegative numbers"),
     %item($"Positive numbers"),
-    %item($"Nonzero numbers")
+    %item($"Nonzero numbers"),
+    %item($Multiples)
   ]
 }

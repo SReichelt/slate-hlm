@@ -1,0 +1,12 @@
+%../../../../../logics/library%
+
+$Examples: %Section {
+  logic = 'hlm',
+  items = [
+    %item($integers),
+    %item($"Multiples are a normal subgroup of integers"),
+    %item($"cyclic group"),
+    %item($"symmetric group"),
+    %item($"finite symmetric group")
+  ]
+}
