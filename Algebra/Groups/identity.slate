@@ -2,7 +2,7 @@
 
 $identity(𝐆: %Element($Groups)): %ExplicitOperator {
   display = [$SubSup(
-    body = '1',
+    body = 'e',
     sub = 𝐆
   )],
   definition = [%structuralCases(
