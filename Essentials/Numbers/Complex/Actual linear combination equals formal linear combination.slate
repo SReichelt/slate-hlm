@@ -9,8 +9,8 @@ $"Actual linear combination equals formal linear combination"(
 ): %StandardTheorem {
   claim = %equals(
     $"Complex numbers".complex(
-        r = {r},
-        i = {i}
+      r = {r},
+      i = {i}
     ),
     $sum(
       a = {r},

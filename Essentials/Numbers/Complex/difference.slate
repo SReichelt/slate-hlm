@@ -30,14 +30,14 @@ $difference(
               i_b: %Element(%previous)
             ),
             value = $"Complex numbers".complex(
-                r = {$../Real/difference(
-                  b = {r_b},
-                  a = {r_a}
-                )},
-                i = {$../Real/difference(
-                  b = {i_b},
-                  a = {i_a}
-                )}
+              r = {$../Real/difference(
+                b = {r_b},
+                a = {r_a}
+              )},
+              i = {$../Real/difference(
+                b = {i_b},
+                a = {i_a}
+              )}
             )
           }]
         )

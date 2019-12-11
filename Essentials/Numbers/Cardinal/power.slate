@@ -26,8 +26,8 @@ $power(
           constructor = $"Cardinal numbers".cardinality,
           parameters = #(X: %Set),
           value = $"Cardinal numbers".cardinality(S = {$../../Functions/Functions(
-              X = {Y},
-              Y = {X}
+            X = {Y},
+            Y = {X}
           )})
         }]
       )

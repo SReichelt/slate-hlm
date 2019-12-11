@@ -16,7 +16,7 @@ $"subset as pointed set"(
     style = '[]'
   )],
   definition = [$../"Pointed sets"."pointed set"(
-      S = {S},
-      s = {$../"base point"(𝐒 = {𝐒})}
+    S = {S},
+    s = {$../"base point"(𝐒 = {𝐒})}
   )]
 }

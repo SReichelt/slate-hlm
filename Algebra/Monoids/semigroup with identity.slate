@@ -24,9 +24,9 @@ $"semigroup with identity"(
         ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
       ),
       value = $Monoids.monoid(
-          M = {M},
-          ∗ = {∗},
-          e = {$../Magmas/identity(𝐌 = {𝐌})}
+        M = {M},
+        ∗ = {∗},
+        e = {$../Magmas/identity(𝐌 = {𝐌})}
       )
     }]
   )]

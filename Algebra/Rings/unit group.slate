@@ -103,23 +103,23 @@ $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
         ))
       ),
       value = $../Groups/Groups.group(
-          G = {$Units(𝐑 = {𝐑})},
-          ∗ = {$../../Essentials/Functions/Operations/"inner operation restriction"(
-            X = {R},
-            A = {$Units(𝐑 = {𝐑})},
-            ∗ = {⊙}
-          )},
-          e = {"1"},
-          i = {$../../Essentials/Functions/Functions(
-              X = {$Units(𝐑 = {𝐑})},
-              Y = {$Units(𝐑 = {𝐑})}
-            ).function(x = {
-              #(a: %Element($Units(𝐑 = {𝐑}))),
-              {y = {$"multiplicative inverse"(
-                𝐑 = {𝐑},
-                a = {a}
-              )}}
-          })}
+        G = {$Units(𝐑 = {𝐑})},
+        ∗ = {$../../Essentials/Functions/Operations/"inner operation restriction"(
+          X = {R},
+          A = {$Units(𝐑 = {𝐑})},
+          ∗ = {⊙}
+        )},
+        e = {"1"},
+        i = {$../../Essentials/Functions/Functions(
+            X = {$Units(𝐑 = {𝐑})},
+            Y = {$Units(𝐑 = {𝐑})}
+          ).function(x = {
+            #(a: %Element($Units(𝐑 = {𝐑}))),
+            {y = {$"multiplicative inverse"(
+              𝐑 = {𝐑},
+              a = {a}
+            )}}
+        })}
       )
     }]
   )]

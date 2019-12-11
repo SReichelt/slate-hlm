@@ -29,8 +29,8 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
             constructor = $"Natural numbers".successor,
             parameters = #(x: %Element($"Natural numbers")),
             value = $"Natural numbers".successor(n = {$sum(
-                m = {$number(value = 0)},
-                n = {x}
+              m = {$number(value = 0)},
+              n = {x}
             )})
           }
         ]
@@ -51,8 +51,8 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
           parameters = #(x: %Element($"Natural numbers")),
           goal = %equals(
             $"Natural numbers".successor(n = {$sum(
-                m = {$number(value = 0)},
-                n = {x}
+              m = {$number(value = 0)},
+              n = {x}
             )}),
             $"Natural numbers".successor(n = {x})
           ),

@@ -55,8 +55,8 @@ $"Complex numbers": %Construction {
   embedding = {
     parameter = #(r: %Element($../Real/"Real numbers")),
     target = $"Complex numbers".complex(
-        r = {r},
-        i = {$../Natural/number(value = 0)}
+      r = {r},
+      i = {$../Natural/number(value = 0)}
     )
   }
 }

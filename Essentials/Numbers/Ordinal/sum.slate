@@ -37,16 +37,16 @@ $sum(
             ))
           ),
           value = $"Ordinal numbers"."order type"(
-              S = {$../../Sets/"Disjoint union"(
-                S = {X},
-                T = {Y}
-              )},
-              ⪯ = {$../../Relations/succession(
-                S = {X},
-                T = {Y},
-                ⪯ = {⪯},
-                ⊑ = {⊑}
-              )}
+            S = {$../../Sets/"Disjoint union"(
+              S = {X},
+              T = {Y}
+            )},
+            ⪯ = {$../../Relations/succession(
+              S = {X},
+              T = {Y},
+              ⪯ = {⪯},
+              ⊑ = {⊑}
+            )}
           )
         }]
       )

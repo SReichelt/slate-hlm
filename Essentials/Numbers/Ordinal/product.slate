@@ -38,16 +38,16 @@ $product(
             ))
           ),
           value = $"Ordinal numbers"."order type"(
-              S = {$../../Sets/"Cartesian product"(
-                S = {X},
-                T = {Y}
-              )},
-              ⪯ = {$../../Relations/"lexicographical order"(
-                S = {X},
-                T = {Y},
-                ⪯ = {⪯},
-                ⊑ = {⊑}
-              )}
+            S = {$../../Sets/"Cartesian product"(
+              S = {X},
+              T = {Y}
+            )},
+            ⪯ = {$../../Relations/"lexicographical order"(
+              S = {X},
+              T = {Y},
+              ⪯ = {⪯},
+              ⊑ = {⊑}
+            )}
           )
         }]
       )

@@ -36,14 +36,14 @@ $sum(
             m_a: %Element(%previous)
           ),
           value = $Integers.difference(
-              n = {$../Natural/sum(
-                m = {n_a},
-                n = {n_b}
-              )},
-              m = {$../Natural/sum(
-                m = {m_a},
-                n = {m_b}
-              )}
+            n = {$../Natural/sum(
+              m = {n_a},
+              n = {n_b}
+            )},
+            m = {$../Natural/sum(
+              m = {m_a},
+              n = {m_b}
+            )}
           )
         }]
       )

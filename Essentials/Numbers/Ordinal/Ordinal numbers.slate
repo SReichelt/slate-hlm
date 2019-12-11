@@ -53,23 +53,23 @@ $"Ordinal numbers": %Construction {
   embedding = {
     parameter = #(n: %Element($../Natural/"Natural numbers")),
     target = $"Ordinal numbers"."order type"(
-        S = {$../Natural/Subsets/"Segment (less)"(n = {n})},
-        ⪯ = {$../../Relations/restriction(
+      S = {$../Natural/Subsets/"Segment (less)"(n = {n})},
+      ⪯ = {$../../Relations/restriction(
+        S = {$../Natural/"Natural numbers"},
+        T = {$../Natural/Subsets/"Segment (less)"(n = {n})},
+        ≺ = {$../../Relations/predicate(
           S = {$../Natural/"Natural numbers"},
-          T = {$../Natural/Subsets/"Segment (less)"(n = {n})},
-          ≺ = {$../../Relations/predicate(
-            S = {$../Natural/"Natural numbers"},
-            T = {$../Natural/"Natural numbers"},
-            parameters = #(
-              m: %Element($../Natural/"Natural numbers"),
-              n: %Element(%previous)
-            ),
-            predicate = $../Natural/"less or equal"(
-              m = {m},
-              n = {n}
-            )
-          )}
+          T = {$../Natural/"Natural numbers"},
+          parameters = #(
+            m: %Element($../Natural/"Natural numbers"),
+            n: %Element(%previous)
+          ),
+          predicate = $../Natural/"less or equal"(
+            m = {m},
+            n = {n}
+          )
         )}
+      )}
     )
   }
 }

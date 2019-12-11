@@ -3,20 +3,20 @@
 $"natural numbers with multiplication": %ExplicitOperator {
   display = [$Tuple(items = ['ℕ', '⋅'])],
   definition = [$../Monoids.monoid(
-      M = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
-      ∗ = {$../../../Essentials/Functions/Operations/operator(
-        X = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
-        Y = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
-        Z = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
-        parameters = #(
-          m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
-          n: %Element(%previous)
-        ),
-        operator = $../../../Essentials/Numbers/Natural/product(
-          m = {m},
-          n = {n}
-        )
-      )},
-      e = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+    M = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
+    ∗ = {$../../../Essentials/Functions/Operations/operator(
+      X = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
+      Y = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
+      Z = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
+      parameters = #(
+        m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
+        n: %Element(%previous)
+      ),
+      operator = $../../../Essentials/Numbers/Natural/product(
+        m = {m},
+        n = {n}
+      )
+    )},
+    e = {$../../../Essentials/Numbers/Natural/number(value = 1)}
   )]
 }

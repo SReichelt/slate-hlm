@@ -30,8 +30,8 @@ $difference(
               _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = {r_b}))
             ),
             value = $"Real numbers".class(r = {$../Rational/Sequences/"sequence difference"(
-                𝐛 = {r_b},
-                𝐚 = {r_a}
+              𝐛 = {r_b},
+              𝐚 = {r_a}
             )})
           }]
         )

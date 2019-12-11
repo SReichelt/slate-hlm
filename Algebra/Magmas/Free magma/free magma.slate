@@ -12,39 +12,39 @@ $"free magma"(
     arguments = [S]
   )],
   definition = [$../Magmas.magma(
-      M = {T},
-      ∗ = {$../../../Essentials/Functions/Functions(
-          X = {$../../../Essentials/Sets/"Cartesian product"(
+    M = {T},
+    ∗ = {$../../../Essentials/Functions/Functions(
+        X = {$../../../Essentials/Sets/"Cartesian product"(
+          S = {T},
+          T = {T}
+        )},
+        Y = {T}
+      ).function(x = {
+        #(_x: %Element($../../../Essentials/Sets/"Cartesian product"(
+          S = {T},
+          T = {T}
+        ))),
+        {y = {%structuralCases(
+          _x,
+          $../../../Essentials/Sets/"Cartesian product"(
             S = {T},
             T = {T}
-          )},
-          Y = {T}
-        ).function(x = {
-          #(_x: %Element($../../../Essentials/Sets/"Cartesian product"(
-            S = {T},
-            T = {T}
-          ))),
-          {y = {%structuralCases(
-            _x,
-            $../../../Essentials/Sets/"Cartesian product"(
-              S = {T},
-              T = {T}
+          ),
+          [{
+            constructor = $../../../Essentials/Sets/"Cartesian product"(
+                S = {T},
+                T = {T}
+              ).pair,
+            parameters = #(
+              a: %Element(T),
+              b: %Element(T)
             ),
-            [{
-              constructor = $../../../Essentials/Sets/"Cartesian product"(
-                  S = {T},
-                  T = {T}
-                ).pair,
-              parameters = #(
-                a: %Element(T),
-                b: %Element(T)
-              ),
-              value = $"Binary trees"(S = {S}).join(
-                  a = {a},
-                  b = {b}
-              )
-            }]
-          )}}
-      })}
+            value = $"Binary trees"(S = {S}).join(
+                a = {a},
+                b = {b}
+            )
+          }]
+        )}}
+    })}
   )]
 }

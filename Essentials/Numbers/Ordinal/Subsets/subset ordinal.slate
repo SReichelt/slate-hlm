@@ -29,12 +29,12 @@ $"subset ordinal"(
         ))
       ),
       value = $../"Ordinal numbers"."order type"(
-          S = {S},
-          ⪯ = {$../../../Relations/restriction(
-            S = {X},
-            ≺ = {⪯},
-            T = {S}
-          )}
+        S = {S},
+        ⪯ = {$../../../Relations/restriction(
+          S = {X},
+          ≺ = {⪯},
+          T = {S}
+        )}
       )
     }]
   )]

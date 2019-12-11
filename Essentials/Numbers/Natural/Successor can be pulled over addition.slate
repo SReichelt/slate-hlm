@@ -14,8 +14,8 @@ $"Successor can be pulled over addition"(
       n = {n}
     ),
     $"Natural numbers".successor(n = {$sum(
-        m = {m},
-        n = {n}
+      m = {m},
+      n = {n}
     )})
   ),
   proofs = [{
@@ -32,15 +32,15 @@ $"Successor can be pulled over addition"(
             constructor = $"Natural numbers".successor,
             parameters = #(x: %Element($"Natural numbers")),
             value = $"Natural numbers".successor(n = {$sum(
-                m = {$"Natural numbers".successor(n = {m})},
-                n = {x}
+              m = {$"Natural numbers".successor(n = {m})},
+              n = {x}
             )})
           }
         ]
       ),
       $"Natural numbers".successor(n = {$sum(
-          m = {m},
-          n = {n}
+        m = {m},
+        n = {n}
       )})
     ),
     steps = #(_: %ProveCases(
@@ -57,12 +57,12 @@ $"Successor can be pulled over addition"(
           parameters = #(x: %Element($"Natural numbers")),
           goal = %equals(
             $"Natural numbers".successor(n = {$sum(
-                m = {$"Natural numbers".successor(n = {m})},
-                n = {x}
+              m = {$"Natural numbers".successor(n = {m})},
+              n = {x}
             )}),
             $"Natural numbers".successor(n = {$"Natural numbers".successor(n = {$sum(
-                  m = {m},
-                  n = {x}
+              m = {m},
+              n = {x}
             )})})
           ),
           steps = #(
@@ -77,8 +77,8 @@ $"Successor can be pulled over addition"(
                   n = {x}
                 ),
                 $"Natural numbers".successor(n = {$sum(
-                    m = {m},
-                    n = {x}
+                  m = {m},
+                  n = {x}
                 )})
               )
             ),

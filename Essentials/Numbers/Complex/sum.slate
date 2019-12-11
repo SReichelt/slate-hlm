@@ -29,14 +29,14 @@ $sum(
             i_a: %Element(%previous)
           ),
           value = $"Complex numbers".complex(
-              r = {$../Real/sum(
-                a = {r_a},
-                b = {r_b}
-              )},
-              i = {$../Real/sum(
-                a = {i_a},
-                b = {i_b}
-              )}
+            r = {$../Real/sum(
+              a = {r_a},
+              b = {r_b}
+            )},
+            i = {$../Real/sum(
+              a = {i_a},
+              b = {i_b}
+            )}
           )
         }]
       )

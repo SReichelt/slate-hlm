@@ -3,40 +3,40 @@
 $"real numbers": %ExplicitOperator {
   display = ['ℝ'],
   definition = [$../../Rings/Rings.ring(
-      R = {$../../../Essentials/Numbers/Real/"Real numbers"},
-      ⊕ = {$../../../Essentials/Functions/Operations/operator(
-        X = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Z = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        parameters = #(
-          a: %Element($../../../Essentials/Numbers/Real/"Real numbers"),
-          b: %Element(%previous)
-        ),
-        operator = $../../../Essentials/Numbers/Real/sum(
-          a = {a},
-          b = {b}
-        )
-      )},
-      "0" = {$../../../Essentials/Numbers/Natural/number(value = 0)},
-      ⊖ = {$../../../Essentials/Functions/operator(
-        X = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        parameter = #(a: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
-        operator = $../../../Essentials/Numbers/Real/inverse(a = {a})
-      )},
-      ⊙ = {$../../../Essentials/Functions/Operations/operator(
-        X = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Z = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        parameters = #(
-          a: %Element($../../../Essentials/Numbers/Real/"Real numbers"),
-          b: %Element(%previous)
-        ),
-        operator = $../../../Essentials/Numbers/Real/product(
-          a = {a},
-          b = {b}
-        )
-      )},
-      "1" = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+    R = {$../../../Essentials/Numbers/Real/"Real numbers"},
+    ⊕ = {$../../../Essentials/Functions/Operations/operator(
+      X = {$../../../Essentials/Numbers/Real/"Real numbers"},
+      Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
+      Z = {$../../../Essentials/Numbers/Real/"Real numbers"},
+      parameters = #(
+        a: %Element($../../../Essentials/Numbers/Real/"Real numbers"),
+        b: %Element(%previous)
+      ),
+      operator = $../../../Essentials/Numbers/Real/sum(
+        a = {a},
+        b = {b}
+      )
+    )},
+    "0" = {$../../../Essentials/Numbers/Natural/number(value = 0)},
+    ⊖ = {$../../../Essentials/Functions/operator(
+      X = {$../../../Essentials/Numbers/Real/"Real numbers"},
+      Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
+      parameter = #(a: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
+      operator = $../../../Essentials/Numbers/Real/inverse(a = {a})
+    )},
+    ⊙ = {$../../../Essentials/Functions/Operations/operator(
+      X = {$../../../Essentials/Numbers/Real/"Real numbers"},
+      Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
+      Z = {$../../../Essentials/Numbers/Real/"Real numbers"},
+      parameters = #(
+        a: %Element($../../../Essentials/Numbers/Real/"Real numbers"),
+        b: %Element(%previous)
+      ),
+      operator = $../../../Essentials/Numbers/Real/product(
+        a = {a},
+        b = {b}
+      )
+    )},
+    "1" = {$../../../Essentials/Numbers/Natural/number(value = 1)}
   )]
 }

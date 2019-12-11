@@ -57,13 +57,13 @@ $"subset monoid"(
         ))
       ),
       value = $../Monoids.monoid(
-          M = {S},
-          ∗ = {$../../../Essentials/Functions/Operations/"inner operation restriction"(
-            X = {M},
-            A = {S},
-            ∗ = {∗}
-          )},
-          e = {e}
+        M = {S},
+        ∗ = {$../../../Essentials/Functions/Operations/"inner operation restriction"(
+          X = {M},
+          A = {S},
+          ∗ = {∗}
+        )},
+        e = {e}
       )
     }]
   )]

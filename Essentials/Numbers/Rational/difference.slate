@@ -34,20 +34,20 @@ $difference(
               d_b: %Element($../Natural/Subsets/"Positive numbers")
             ),
             value = $"Rational numbers".quotient(
-                n = {$../Integer/difference(
-                  b = {$../Integer/product(
-                    a = {n_b},
-                    b = {d_a}
-                  )},
-                  a = {$../Integer/product(
-                    a = {n_a},
-                    b = {d_b}
-                  )}
+              n = {$../Integer/difference(
+                b = {$../Integer/product(
+                  a = {n_b},
+                  b = {d_a}
                 )},
-                d = {$../Natural/product(
-                  m = {d_b},
-                  n = {d_a}
+                a = {$../Integer/product(
+                  a = {n_a},
+                  b = {d_b}
                 )}
+              )},
+              d = {$../Natural/product(
+                m = {d_b},
+                n = {d_a}
+              )}
             )
           }]
         )

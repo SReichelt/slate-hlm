@@ -98,20 +98,20 @@ $"subset group"(
         ))
       ),
       value = $../Groups.group(
-          G = {S},
-          ∗ = {$../../../Essentials/Functions/Operations/"inner operation restriction"(
-            X = {G},
-            A = {S},
-            ∗ = {∗}
-          )},
-          e = {e},
-          i = {$../../../Essentials/Functions/"codomain restriction"(
-            X = {G},
-            A = {S},
-            Y = {G},
-            B = {S},
-            f = {i}
-          )}
+        G = {S},
+        ∗ = {$../../../Essentials/Functions/Operations/"inner operation restriction"(
+          X = {G},
+          A = {S},
+          ∗ = {∗}
+        )},
+        e = {e},
+        i = {$../../../Essentials/Functions/"codomain restriction"(
+          X = {G},
+          A = {S},
+          Y = {G},
+          B = {S},
+          f = {i}
+        )}
       )
     }]
   )]

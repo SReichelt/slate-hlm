@@ -20,8 +20,8 @@ $inverse(a: %Element($Integers)): %ExplicitOperator {
         m_a: %Element(%previous)
       ),
       value = $Integers.difference(
-          n = {m_a},
-          m = {n_a}
+        n = {m_a},
+        m = {n_a}
       )
     }]
   )]

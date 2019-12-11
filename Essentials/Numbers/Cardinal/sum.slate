@@ -28,8 +28,8 @@ $sum(
           constructor = $"Cardinal numbers".cardinality,
           parameters = #(X: %Set),
           value = $"Cardinal numbers".cardinality(S = {$../../Sets/"Disjoint union"(
-              S = {X},
-              T = {Y}
+            S = {X},
+            T = {Y}
           )})
         }]
       )

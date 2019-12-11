@@ -56,19 +56,19 @@ $"monoid with inverses"(
         ))
       ),
       value = $Groups.group(
-          G = {M},
-          ∗ = {∗},
-          e = {e},
-          i = {$../../Essentials/Functions/Functions(
-              X = {M},
-              Y = {M}
-            ).function(x = {
-              #(a: %Element(M)),
-              {y = {$../Monoids/inverse(
-                𝐌 = {𝐌},
-                a = {a}
-              )}}
-          })}
+        G = {M},
+        ∗ = {∗},
+        e = {e},
+        i = {$../../Essentials/Functions/Functions(
+            X = {M},
+            Y = {M}
+          ).function(x = {
+            #(a: %Element(M)),
+            {y = {$../Monoids/inverse(
+              𝐌 = {𝐌},
+              a = {a}
+            )}}
+        })}
       )
     }]
   )]

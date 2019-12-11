@@ -6,11 +6,40 @@ $"symmetric group"(X: %Set): %ExplicitOperator {
     sub = X
   )],
   definition = [$../Groups.group(
-      G = {$../../../Essentials/Functions/Bijections(
+    G = {$../../../Essentials/Functions/Bijections(
+      X = {X},
+      Y = {X}
+    )},
+    ∗ = {$../../../Essentials/Functions/Operations/operator(
+      X = {$../../../Essentials/Functions/Bijections(
         X = {X},
         Y = {X}
       )},
-      ∗ = {$../../../Essentials/Functions/Operations/operator(
+      Y = {$../../../Essentials/Functions/Bijections(
+        X = {X},
+        Y = {X}
+      )},
+      Z = {$../../../Essentials/Functions/Bijections(
+        X = {X},
+        Y = {X}
+      )},
+      parameters = #(
+        g: %Element($../../../Essentials/Functions/Bijections(
+          X = {X},
+          Y = {X}
+        )),
+        f: %Element(%previous)
+      ),
+      operator = $../../../Essentials/Functions/composition(
+        X = {X},
+        Y = {X},
+        Z = {X},
+        f = {f},
+        g = {g}
+      )
+    )},
+    e = {$../../../Essentials/Functions/identity(X = {X})},
+    i = {$../../../Essentials/Functions/Functions(
         X = {$../../../Essentials/Functions/Bijections(
           X = {X},
           Y = {X}
@@ -18,46 +47,17 @@ $"symmetric group"(X: %Set): %ExplicitOperator {
         Y = {$../../../Essentials/Functions/Bijections(
           X = {X},
           Y = {X}
-        )},
-        Z = {$../../../Essentials/Functions/Bijections(
+        )}
+      ).function(x = {
+        #(f: %Element($../../../Essentials/Functions/Bijections(
           X = {X},
           Y = {X}
-        )},
-        parameters = #(
-          g: %Element($../../../Essentials/Functions/Bijections(
-            X = {X},
-            Y = {X}
-          )),
-          f: %Element(%previous)
-        ),
-        operator = $../../../Essentials/Functions/composition(
+        ))),
+        {y = {$../../../Essentials/Functions/inverse(
           X = {X},
           Y = {X},
-          Z = {X},
-          f = {f},
-          g = {g}
-        )
-      )},
-      e = {$../../../Essentials/Functions/identity(X = {X})},
-      i = {$../../../Essentials/Functions/Functions(
-          X = {$../../../Essentials/Functions/Bijections(
-            X = {X},
-            Y = {X}
-          )},
-          Y = {$../../../Essentials/Functions/Bijections(
-            X = {X},
-            Y = {X}
-          )}
-        ).function(x = {
-          #(f: %Element($../../../Essentials/Functions/Bijections(
-            X = {X},
-            Y = {X}
-          ))),
-          {y = {$../../../Essentials/Functions/inverse(
-            X = {X},
-            Y = {X},
-            f = {f}
-          )}}
-      })}
+          f = {f}
+        )}}
+    })}
   )]
 }

@@ -100,10 +100,10 @@ $"additive group"(𝐑: %Element($Rings)): %ExplicitOperator {
         ))
       ),
       value = $../Groups/Groups.group(
-          G = {R},
-          ∗ = {⊕},
-          e = {"0"},
-          i = {⊖}
+        G = {R},
+        ∗ = {⊕},
+        e = {"0"},
+        i = {⊖}
       )
     }]
   )]

@@ -30,26 +30,26 @@ $product(
             i_a: %Element(%previous)
           ),
           value = $"Complex numbers".complex(
-              r = {$../Real/difference(
-                b = {$../Real/product(
-                  a = {r_a},
-                  b = {r_b}
-                )},
-                a = {$../Real/product(
-                  a = {i_a},
-                  b = {i_b}
-                )}
+            r = {$../Real/difference(
+              b = {$../Real/product(
+                a = {r_a},
+                b = {r_b}
               )},
-              i = {$../Real/sum(
-                a = {$../Real/product(
-                  a = {r_a},
-                  b = {i_b}
-                )},
-                b = {$../Real/product(
-                  a = {i_a},
-                  b = {r_b}
-                )}
+              a = {$../Real/product(
+                a = {i_a},
+                b = {i_b}
               )}
+            )},
+            i = {$../Real/sum(
+              a = {$../Real/product(
+                a = {r_a},
+                b = {i_b}
+              )},
+              b = {$../Real/product(
+                a = {i_a},
+                b = {r_b}
+              )}
+            )}
           )
         }]
       )
