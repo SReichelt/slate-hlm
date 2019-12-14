@@ -1,0 +1,16 @@
+%../../../../../../logics/hlm%
+
+$"Identity matrix of dimension 1"(𝐑: %Element($../../Rings)): %StandardTheorem {
+  claim = %equals(
+    $../identity(
+      𝐑 = {𝐑},
+      n = {$../../../../Essentials/Numbers/Natural/number(value = 1)}
+    ),
+    $../matrix(
+      𝐑 = {𝐑},
+      m = 1,
+      n = 1,
+      items = [[{$../../one(𝐑 = {𝐑})}]]
+    )
+  )
+}

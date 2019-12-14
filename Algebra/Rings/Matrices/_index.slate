@@ -5,12 +5,20 @@ $Matrices: %Section {
   items = [
     %item($Matrices),
     %item($Vectors),
+    %item(
+      $matrix,
+      title = 'Matrix notation'
+    ),
     %item($sum),
     %item($zero),
     %item($"additive inverse"),
     %item($difference),
     %item($product),
     %item($identity),
-    %item($"matrix ring")
+    %item($"matrix ring"),
+    %subsection(
+      $Examples,
+      'Examples'
+    )
   ]
 }

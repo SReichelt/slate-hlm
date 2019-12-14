@@ -1,0 +1,24 @@
+%../../../../../logics/hlm%
+
+$matrix(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  m: %Nat,
+  n: %Nat,
+  items: %Element($../Carrier(𝐑 = {𝐑}))[,]
+): %MacroOperator {
+  display = [$Parens(
+    body = $Table(
+      items = items,
+      style = 'matrix'
+    ),
+    style = '()'
+  )],
+  references = {Matrices = $Matrices(
+    𝐑 = {𝐑},
+    m = {$../../../Essentials/Numbers/Natural/number(value = m)},
+    n = {$../../../Essentials/Numbers/Natural/number(value = n)}
+  )}
+}
