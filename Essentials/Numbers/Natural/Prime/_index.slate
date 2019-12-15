@@ -9,6 +9,7 @@ $Prime: %Section {
       type = 'example'
     ),
     %item($"Prime numbers"),
+    %item($"Small primes"),
     %item($"Every number greater than one has a prime factor"),
     %item(
       $"Euclids theorem",

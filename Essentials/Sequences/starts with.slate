@@ -1,0 +1,41 @@
+%../../../../logics/hlm%
+
+$"starts with"(
+  S: %Set(auto = %true),
+  𝐚: %Element($"Infinite sequences"(S = {S})),
+  𝐛: %Element($"Finite sequences"(S = {S}))
+): %Predicate {
+  display = [$TextualRelation(
+    symbol = 'starts with',
+    operands = [𝐚, 𝐛]
+  )],
+  definition = [%structural(
+    𝐛,
+    $"Finite sequences"(S = {S}),
+    [{
+      constructor = $"Finite sequences"(S = {S}).sequence,
+      parameters = #(
+        n: %Element($../Numbers/Natural/"Natural numbers"),
+        k: %Binding(
+          $../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+          #(b: %Element(S))
+        )
+      ),
+      value = %structural(
+        𝐚,
+        $"Infinite sequences"(S = {S}),
+        [{
+          constructor = $"Infinite sequences"(S = {S}).sequence,
+          parameters = #(k: %Binding(
+            $../Numbers/Natural/"Natural numbers",
+            #(a: %Element(S))
+          )),
+          value = %forall(
+            #(k: %Element($../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+            %equals(a[k], b[k])
+          )
+        }]
+      )
+    }]
+  )]
+}

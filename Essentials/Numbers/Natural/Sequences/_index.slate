@@ -3,6 +3,10 @@
 $Sequences: %Section {
   logic = 'hlm',
   items = [
+    %item(
+      $"finite sequence of numbers",
+      title = 'Tuple'
+    ),
     %item($"finite sequence"),
     %item($"infinite sequence")
   ]

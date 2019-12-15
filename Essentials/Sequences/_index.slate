@@ -4,6 +4,11 @@ $Sequences: %Section {
   logic = 'hlm',
   items = [
     %item($"Finite sequences"),
-    %item($"Infinite sequences")
+    %item(
+      $"finite sequence",
+      title = 'Tuple'
+    ),
+    %item($"Infinite sequences"),
+    %item($"starts with")
   ]
 }

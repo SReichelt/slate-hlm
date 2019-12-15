@@ -1,0 +1,18 @@
+%../../../../logics/hlm%
+
+$"finite sequence"(
+  S: %Set,
+  items: %Element(S)[]
+): %MacroOperator {
+  display = [$SubSup(
+    body = $Tuple(
+      items = items,
+      style = '()'
+    ),
+    sub = S
+  )],
+  references = {
+    "Finite sequences" = $"Finite sequences"(S = {S}),
+    number = $../Numbers/Natural/number
+  }
+}

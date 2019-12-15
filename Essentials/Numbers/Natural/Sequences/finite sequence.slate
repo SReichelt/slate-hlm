@@ -8,10 +8,7 @@ $"finite sequence"(
   _1: %Constraint($../../../Sets/finite(S = {M}))
 ): %ExplicitOperator {
   display = [$Function(
-    function = $SubSup(
-      body = 'seq',
-      sub = 'fin'
-    ),
+    function = 'seq',
     arguments = [M]
   )],
   definition = [$../../../Sequences/"Finite sequences"(S = {$../"Natural numbers"}).sequence(

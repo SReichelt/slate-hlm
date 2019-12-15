@@ -25,6 +25,10 @@ $Groups: %Section {
     %subsection(
       $Examples,
       'Examples'
+    ),
+    %subsection(
+      $Order,
+      'Order'
     )
   ]
 }

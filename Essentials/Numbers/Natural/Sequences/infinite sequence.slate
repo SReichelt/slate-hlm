@@ -8,10 +8,7 @@ $"infinite sequence"(
   _1: %Constraint(%not($../../../Sets/finite(S = {M})))
 ): %ExplicitOperator {
   display = [$Function(
-    function = $SubSup(
-      body = 'seq',
-      sub = 'inf'
-    ),
+    function = 'seq',
     arguments = [M]
   )],
   definition = [$../../../Sequences/"Infinite sequences"(S = {$../"Natural numbers"}).sequence(n = {

@@ -1,0 +1,20 @@
+%../../../../../logics/hlm%
+
+$"Groups with order"(𝐱: %Element($../../../Essentials/Numbers/Cardinal/"Cardinal numbers")): %SetOperator {
+  display = [$SubSup(
+    body = '𝓖𝓻𝓹',
+    sub = 𝐱
+  )],
+  definitionDisplay = {
+    parameter = #(𝐆: %Expr),
+    singularName = ['group of order ', 𝐱],
+    pluralName = ['groups of order ', 𝐱]
+  },
+  definition = [%subset(
+    #(𝐆: %Element($../Groups)),
+    %equals(
+      $"group order"(𝐆 = {𝐆}),
+      𝐱
+    )
+  )]
+}

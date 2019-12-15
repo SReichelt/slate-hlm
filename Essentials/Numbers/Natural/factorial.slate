@@ -5,6 +5,7 @@
  *             * http://mathworld.wolfram.com/Factorial.html
  *             * https://proofwiki.org/wiki/Definition:Factorial
  *             * https://coq.inria.fr/library/Coq.Arith.Factorial.html#fact
+ *             * http://oeis.org/A000142
  */
 $factorial(n: %Element($"Natural numbers")): %ExplicitOperator {
   display = [$UnaryOperator(

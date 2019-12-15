@@ -1,0 +1,15 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * http://oeis.org/A000001
+ */
+$"number of groups with order": %ExplicitOperator {
+  display = [$SubSup(
+    body = 'num',
+    sub = '𝓖𝓻𝓹'
+  )],
+  definition = [$../../../Essentials/Sequences/"Infinite sequences"(S = {$../../../Essentials/Numbers/Natural/"Natural numbers"}).sequence(n = {
+      #(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
+      {a = {$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$"Groups with order"(𝐱 = {n})})}}
+  })]
+}

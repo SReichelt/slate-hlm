@@ -1,0 +1,13 @@
+%../../../../../../logics/hlm%
+
+$"finite sequence of numbers"(items: %Nat[]): %MacroOperator {
+  display = [$Tuple(
+    items = items,
+    style = '()'
+  )],
+  references = {
+    "Finite sequences" = $../../../Sequences/"Finite sequences"(S = {$../"Natural numbers"}),
+    "finite sequence" = $../../../Sequences/"finite sequence",
+    number = $../number
+  }
+}
