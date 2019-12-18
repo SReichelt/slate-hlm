@@ -79,14 +79,14 @@ $Isomorphisms(
               x = {$../product(
                 𝐑 = {𝐑},
                 𝐌 = {𝐌},
-                a = {a},
-                x = {x}
+                x = {x},
+                a = {a}
               )},
               y = {$../product(
                 𝐑 = {𝐑},
                 𝐌 = {𝐌},
-                a = {b},
-                x = {y}
+                x = {y},
+                a = {b}
               )}
             )}
           ),
@@ -96,7 +96,6 @@ $Isomorphisms(
             x = {$../product(
               𝐑 = {𝐑},
               𝐌 = {𝐍},
-              a = {a},
               x = {$../../../../../Essentials/Functions/value(
                 X = {$../Carrier(
                   𝐑 = {𝐑},
@@ -108,12 +107,12 @@ $Isomorphisms(
                 )},
                 f = {f},
                 x = {x}
-              )}
+              )},
+              a = {a}
             )},
             y = {$../product(
               𝐑 = {𝐑},
               𝐌 = {𝐍},
-              a = {b},
               x = {$../../../../../Essentials/Functions/value(
                 X = {$../Carrier(
                   𝐑 = {𝐑},
@@ -125,7 +124,8 @@ $Isomorphisms(
                 )},
                 f = {f},
                 x = {y}
-              )}
+              )},
+              a = {b}
             )}
           )
         )
