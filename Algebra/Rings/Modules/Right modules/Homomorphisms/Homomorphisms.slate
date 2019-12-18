@@ -174,8 +174,8 @@ $Homomorphisms(
               x = {$../product(
                 𝐑 = {𝐑},
                 𝐌 = {𝐌},
-                a = {a},
-                x = {w}
+                x = {w},
+                a = {a}
               )}
             ),
             $../product(
@@ -191,8 +191,8 @@ $Homomorphisms(
                   𝐑 = {𝐑},
                   𝐌 = {𝐍}
                 )},
-                f = {f},
-                x = {w}
+                x = {w},
+                f = {f}
               )}
             )
           )
@@ -237,14 +237,14 @@ $Homomorphisms(
               x = {$../product(
                 𝐑 = {𝐑},
                 𝐌 = {𝐌},
-                a = {a},
-                x = {x}
+                x = {x},
+                a = {a}
               )},
               y = {$../product(
                 𝐑 = {𝐑},
                 𝐌 = {𝐌},
-                a = {b},
-                x = {y}
+                x = {y},
+                a = {b}
               )}
             )}
           ),
@@ -254,7 +254,6 @@ $Homomorphisms(
             x = {$../product(
               𝐑 = {𝐑},
               𝐌 = {𝐍},
-              a = {a},
               x = {$../../../../../Essentials/Functions/value(
                 X = {$../Carrier(
                   𝐑 = {𝐑},
@@ -266,12 +265,12 @@ $Homomorphisms(
                 )},
                 f = {f},
                 x = {x}
-              )}
+              )},
+              a = {a}
             )},
             y = {$../product(
               𝐑 = {𝐑},
               𝐌 = {𝐍},
-              a = {b},
               x = {$../../../../../Essentials/Functions/value(
                 X = {$../Carrier(
                   𝐑 = {𝐑},
@@ -283,7 +282,8 @@ $Homomorphisms(
                 )},
                 f = {f},
                 x = {y}
-              )}
+              )},
+              a = {b}
             )}
           )
         )

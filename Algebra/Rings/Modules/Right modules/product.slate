@@ -12,15 +12,15 @@ $product(
     $"Right modules"(𝐑 = {𝐑}),
     auto = %true
   ),
-  a: %Element($../../Carrier(𝐑 = {𝐑})),
   x: %Element($Carrier(
     𝐑 = {𝐑},
     𝐌 = {𝐌}
-  ))
+  )),
+  a: %Element($../../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
   display = [$Operator(
     symbol = '⋅',
-    operands = [a, x],
+    operands = [x, a],
     space = ' ',
     minParenLevel = 2,
     maxParenLevel = 2
