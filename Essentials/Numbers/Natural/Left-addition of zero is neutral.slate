@@ -38,7 +38,7 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
       n
     ),
     steps = #(_: %ProveCases(
-      side = %left,
+      side = 0,
       caseProofs = [
         {
           goal = %equals(

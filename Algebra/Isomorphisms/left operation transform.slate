@@ -1,0 +1,139 @@
+%../../../../logics/hlm%
+
+$"left operation transform"(
+  S: %Set(auto = %true),
+  X: %Set(auto = %true),
+  Y: %Set(auto = %true),
+  φ: %Element($../../Essentials/Functions/Bijections(
+    X = {X},
+    Y = {Y}
+  )),
+  ∗: %Element($../../Essentials/Functions/Operations/Operations(
+    X = {S},
+    Y = {X},
+    Z = {X}
+  ))
+): %ExplicitOperator {
+  display = [$Function(
+    function = φ,
+    arguments = [∗],
+    style = '[]'
+  )],
+  definition = [
+    %structuralCases(
+      ∗,
+      $../../Essentials/Functions/Functions(
+        X = {$../../Essentials/Sets/"Cartesian product"(
+          S = {S},
+          T = {X}
+        )},
+        Y = {X}
+      ),
+      [{
+        constructor = $../../Essentials/Functions/Functions(
+            X = {$../../Essentials/Sets/"Cartesian product"(
+              S = {S},
+              T = {X}
+            )},
+            Y = {X}
+          ).function,
+        parameters = #(x: %Binding(
+          $../../Essentials/Sets/"Cartesian product"(
+            S = {S},
+            T = {X}
+          ),
+          #(z: %Element(X))
+        )),
+        value = $../../Essentials/Functions/Functions(
+            X = {$../../Essentials/Sets/"Cartesian product"(
+              S = {S},
+              T = {Y}
+            )},
+            Y = {Y}
+          ).function(x = {
+            parameter = #(_y: %Element($../../Essentials/Sets/"Cartesian product"(
+              S = {S},
+              T = {Y}
+            ))),
+            arguments = {y = {%structuralCases(
+              _y,
+              $../../Essentials/Sets/"Cartesian product"(
+                S = {S},
+                T = {Y}
+              ),
+              [{
+                constructor = $../../Essentials/Sets/"Cartesian product"(
+                    S = {S},
+                    T = {Y}
+                  ).pair,
+                parameters = #(
+                  s: %Element(S),
+                  y: %Element(Y)
+                ),
+                value = $../../Essentials/Functions/value(
+                  X = {X},
+                  Y = {Y},
+                  f = {φ},
+                  x = {z[$../../Essentials/Sets/"Cartesian product"(
+                      S = {S},
+                      T = {X}
+                    ).pair(
+                      s = {s},
+                      t = {$../../Essentials/Functions/value(
+                        X = {Y},
+                        Y = {X},
+                        f = {$../../Essentials/Functions/inverse(
+                          X = {X},
+                          Y = {Y},
+                          f = {φ}
+                        )},
+                        x = {y}
+                      )}
+                  )]}
+                )
+              }]
+            )}}
+        })
+      }]
+    ),
+    $../../Essentials/Functions/composition(
+      X = {$../../Essentials/Sets/"Cartesian product"(
+        S = {S},
+        T = {Y}
+      )},
+      Y = {X},
+      Z = {Y},
+      g = {φ},
+      f = {%associative($../../Essentials/Functions/composition(
+        X = {$../../Essentials/Sets/"Cartesian product"(
+          S = {S},
+          T = {Y}
+        )},
+        Y = {$../../Essentials/Sets/"Cartesian product"(
+          S = {S},
+          T = {X}
+        )},
+        Z = {X},
+        g = {∗},
+        f = {$../../Essentials/Functions/inverse(
+          X = {$../../Essentials/Sets/"Cartesian product"(
+            S = {S},
+            T = {X}
+          )},
+          Y = {$../../Essentials/Sets/"Cartesian product"(
+            S = {S},
+            T = {Y}
+          )},
+          f = {$../../Essentials/Functions/"cartesian product"(
+            V = {S},
+            W = {S},
+            X = {X},
+            Y = {Y},
+            f = {$../../Essentials/Functions/identity(X = {S})},
+            g = {φ}
+          )}
+        )}
+      ))}
+    )
+  ]
+}

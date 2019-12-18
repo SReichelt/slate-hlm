@@ -197,7 +197,7 @@ $finite(S: %Set): %Predicate {
             l,
             $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {l})})
           )),
-          %right,
+          1,
           %equals(
             l,
             $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})
@@ -206,7 +206,7 @@ $finite(S: %Set): %Predicate {
         _: %Consider(l),
         _: %Substitute(
           #(_: %Consider(_1)),
-          %left,
+          0,
           %in(
             $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S}),
             $../Numbers/Natural/"Natural numbers"

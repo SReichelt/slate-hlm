@@ -1,0 +1,19 @@
+%../../../../../../logics/library%
+
+$"Left modules": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"Left modules"),
+    %item($Carrier),
+    %item($sum),
+    %item($zero),
+    %item($"additive inverse"),
+    %item($difference),
+    %item($"additive group"),
+    %item($product),
+    %subsection(
+      $Homomorphisms,
+      'Homomorphisms'
+    )
+  ]
+}

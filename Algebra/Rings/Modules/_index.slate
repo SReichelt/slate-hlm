@@ -1,0 +1,15 @@
+%../../../../../logics/library%
+
+$Modules: %Section {
+  logic = 'hlm',
+  items = [
+    %subsection(
+      $"Left modules",
+      'Left modules'
+    ),
+    %subsection(
+      $"Right modules",
+      'Right modules'
+    )
+  ]
+}

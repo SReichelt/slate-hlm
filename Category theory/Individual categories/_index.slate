@@ -12,6 +12,8 @@ $"Individual categories": %Section {
     %item($monoids),
     %item($groups),
     %item($rings),
+    %item($"left modules"),
+    %item($"right modules"),
     %item($fields),
     %item($categories),
     %item($functors)

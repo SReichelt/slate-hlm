@@ -1,0 +1,21 @@
+%../../../../../../../logics/hlm%
+
+$identity(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element(
+    $../"Right modules"(𝐑 = {𝐑}),
+    auto = %true
+  )
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = 'id',
+    sub = 𝐌
+  )],
+  definition = [$../../../../../Essentials/Functions/identity(X = {$../Carrier(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  )})]
+}

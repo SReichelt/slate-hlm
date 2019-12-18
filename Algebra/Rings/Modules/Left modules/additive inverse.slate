@@ -1,0 +1,282 @@
+%../../../../../../logics/hlm%
+
+$"additive inverse"(
+  𝐑: %Element(
+    $../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element($"Left modules"(𝐑 = {𝐑})),
+  x: %Element($Carrier(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  ))
+): %ExplicitOperator {
+  display = [$PrefixUnaryOperator(
+    symbol = '−',
+    operand = x,
+    minParenLevel = 1,
+    maxParenLevel = 1
+  )],
+  definition = [%structuralCases(
+    𝐌,
+    $"Left modules"(𝐑 = {𝐑}),
+    [{
+      constructor = $"Left modules"(𝐑 = {𝐑}).module,
+      parameters = #(
+        M: %Set,
+        ⊕: %Element($../../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        _1: %Constraint($../../../../Essentials/Functions/Operations/associative(
+          X = {M},
+          ∗ = {⊕}
+        )),
+        _2: %Constraint($../../../../Essentials/Functions/Operations/commutative(
+          X = {M},
+          Z = {M},
+          ∗ = {⊕}
+        )),
+        "0": %Element(M),
+        _3: %Constraint(%forall(
+          #(x: %Element(M)),
+          %equals(
+            $../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊕},
+              x = {x},
+              y = {"0"}
+            ),
+            $../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊕},
+              x = {"0"},
+              y = {x}
+            ),
+            x
+          )
+        )),
+        ⊖: %Element($../../../../Essentials/Functions/Functions(
+          X = {M},
+          Y = {M}
+        )),
+        _4: %Constraint(%forall(
+          #(x: %Element(M)),
+          %equals(
+            $../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊕},
+              x = {x},
+              y = {$../../../../Essentials/Functions/value(
+                X = {M},
+                Y = {M},
+                f = {⊖},
+                x = {x}
+              )}
+            ),
+            $../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊕},
+              x = {$../../../../Essentials/Functions/value(
+                X = {M},
+                Y = {M},
+                f = {⊖},
+                x = {x}
+              )},
+              y = {x}
+            ),
+            "0"
+          )
+        )),
+        ⊙: %Element($../../../../Essentials/Functions/Operations/Operations(
+          X = {$../../Carrier(𝐑 = {𝐑})},
+          Y = {M},
+          Z = {M}
+        )),
+        _5: %Constraint($../../../../Essentials/Functions/Operations/"left-distributive"(
+          X = {$../../Carrier(𝐑 = {𝐑})},
+          Y = {M},
+          ∗ = {⊙},
+          ⋆ = {⊕}
+        )),
+        _6: %Constraint(%forall(
+          #(
+            a: %Element($../../Carrier(𝐑 = {𝐑})),
+            b: %Element(%previous),
+            x: %Element(M)
+          ),
+          %equals(
+            $../../../../Essentials/Functions/Operations/value(
+              X = {$../../Carrier(𝐑 = {𝐑})},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊙},
+              x = {$../../sum(
+                𝐑 = {𝐑},
+                a = {a},
+                b = {b}
+              )},
+              y = {x}
+            ),
+            $../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊕},
+              x = {$../../../../Essentials/Functions/Operations/value(
+                X = {$../../Carrier(𝐑 = {𝐑})},
+                Y = {M},
+                Z = {M},
+                ∗ = {⊙},
+                x = {a},
+                y = {x}
+              )},
+              y = {$../../../../Essentials/Functions/Operations/value(
+                X = {$../../Carrier(𝐑 = {𝐑})},
+                Y = {M},
+                Z = {M},
+                ∗ = {⊙},
+                x = {b},
+                y = {x}
+              )}
+            )
+          )
+        )),
+        _7: %Constraint(%forall(
+          #(x: %Element(M)),
+          %equals(
+            $../../../../Essentials/Functions/Operations/value(
+              X = {$../../Carrier(𝐑 = {𝐑})},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊙},
+              x = {$../../zero(𝐑 = {𝐑})},
+              y = {x}
+            ),
+            "0"
+          )
+        )),
+        _8: %Constraint(%forall(
+          #(a: %Element($../../Carrier(𝐑 = {𝐑}))),
+          %equals(
+            $../../../../Essentials/Functions/Operations/value(
+              X = {$../../Carrier(𝐑 = {𝐑})},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊙},
+              x = {a},
+              y = {"0"}
+            ),
+            "0"
+          )
+        )),
+        _9: %Constraint(%forall(
+          #(
+            a: %Element($../../Carrier(𝐑 = {𝐑})),
+            x: %Element(M)
+          ),
+          %equals(
+            $../../../../Essentials/Functions/Operations/value(
+              X = {$../../Carrier(𝐑 = {𝐑})},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊙},
+              x = {$../../"additive inverse"(
+                𝐑 = {𝐑},
+                a = {a}
+              )},
+              y = {x}
+            ),
+            $../../../../Essentials/Functions/Operations/value(
+              X = {$../../Carrier(𝐑 = {𝐑})},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊙},
+              x = {a},
+              y = {$../../../../Essentials/Functions/value(
+                X = {M},
+                Y = {M},
+                f = {⊖},
+                x = {x}
+              )}
+            ),
+            $../../../../Essentials/Functions/value(
+              X = {M},
+              Y = {M},
+              f = {⊖},
+              x = {$../../../../Essentials/Functions/Operations/value(
+                X = {$../../Carrier(𝐑 = {𝐑})},
+                Y = {M},
+                Z = {M},
+                ∗ = {⊙},
+                x = {a},
+                y = {x}
+              )}
+            )
+          )
+        )),
+        _10: %Constraint(%forall(
+          #(
+            a: %Element($../../Carrier(𝐑 = {𝐑})),
+            b: %Element(%previous),
+            x: %Element(M)
+          ),
+          %equals(
+            $../../../../Essentials/Functions/Operations/value(
+              X = {$../../Carrier(𝐑 = {𝐑})},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊙},
+              x = {$../../product(
+                𝐑 = {𝐑},
+                a = {a},
+                b = {b}
+              )},
+              y = {x}
+            ),
+            $../../../../Essentials/Functions/Operations/value(
+              X = {$../../Carrier(𝐑 = {𝐑})},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊙},
+              x = {a},
+              y = {$../../../../Essentials/Functions/Operations/value(
+                X = {$../../Carrier(𝐑 = {𝐑})},
+                Y = {M},
+                Z = {M},
+                ∗ = {⊙},
+                x = {b},
+                y = {x}
+              )}
+            )
+          )
+        )),
+        _11: %Constraint(%forall(
+          #(x: %Element(M)),
+          %equals(
+            $../../../../Essentials/Functions/Operations/value(
+              X = {$../../Carrier(𝐑 = {𝐑})},
+              Y = {M},
+              Z = {M},
+              ∗ = {⊙},
+              x = {$../../one(𝐑 = {𝐑})},
+              y = {x}
+            ),
+            x
+          )
+        ))
+      ),
+      value = $../../../../Essentials/Functions/value(
+        X = {M},
+        Y = {M},
+        f = {⊖},
+        x = {x}
+      )
+    }]
+  )]
+}

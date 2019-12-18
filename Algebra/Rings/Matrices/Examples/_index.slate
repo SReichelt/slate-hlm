@@ -3,7 +3,13 @@
 $Examples: %Section {
   logic = 'hlm',
   items = [
-    %item($"Identity matrix of dimension 1", type = 'example'),
-    %item($"Identity matrix of dimension 2", type = 'example')
+    %item(
+      $"Identity matrix of dimension 1",
+      type = 'example'
+    ),
+    %item(
+      $"Identity matrix of dimension 2",
+      type = 'example'
+    )
   ]
 }

@@ -1,0 +1,34 @@
+%../../../../../../logics/hlm%
+
+$difference(
+  𝐑: %Element(
+    $../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element(
+    $"Right modules"(𝐑 = {𝐑}),
+    auto = %true
+  ),
+  x: %Element($Carrier(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  )),
+  y: %Element(%previous)
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '−',
+    operands = [x, y],
+    minParenLevel = 1,
+    maxParenLevel = 1
+  )],
+  definition = [$sum(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌},
+    x = {x},
+    y = {$"additive inverse"(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌},
+      x = {y}
+    )}
+  )]
+}

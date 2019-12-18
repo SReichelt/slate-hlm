@@ -1,0 +1,22 @@
+%../../../../../../../logics/hlm%
+
+/**
+ * @remarks This follows immediately from the HLM-specific definition of equality of modules.
+ */
+$"Equality criterion"(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element($../"Right modules"(𝐑 = {𝐑})),
+  𝐍: %Element(%previous)
+): %EquivalenceTheorem {
+  conditions = [
+    %not($../../../../../Essentials/Sets/empty(S = {$Isomorphisms(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌},
+      𝐍 = {𝐍}
+    )})),
+    %equals(𝐌, 𝐍)
+  ]
+}

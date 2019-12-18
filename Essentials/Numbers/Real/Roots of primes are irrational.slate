@@ -83,7 +83,7 @@ $"Roots of primes are irrational"(
             )
           )
         )),
-        %left,
+        0,
         %equals(
           p,
           $quotient(
@@ -227,7 +227,7 @@ $"Roots of primes are irrational"(
       )),
       _: %Substitute(
         #(_: %Consider(_3)),
-        %right,
+        1,
         %equals(
           $../Integer/product(
             a = {%associative($../Integer/product(

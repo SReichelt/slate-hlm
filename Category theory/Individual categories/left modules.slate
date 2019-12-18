@@ -1,0 +1,92 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks The objects of this category are actually isomorphism classes of modules.
+ */
+$"left modules"(
+  u: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
+  𝐑: %Element($../../Algebra/Rings/Rings)
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = $Function(
+      function = '𝐋𝐌𝐨𝐝',
+      arguments = [𝐑]
+    ),
+    sub = u
+  )],
+  definition = [$../Categories(u = {u}).category(
+      O = {$../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑})},
+      𝐀 = {
+        #(𝐀: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
+        {𝐁 = {
+          #(𝐁: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
+          {M = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+            𝐑 = {𝐑},
+            𝐌 = {𝐀},
+            𝐍 = {𝐁}
+          )}}
+        }}
+      },
+      𝐂 = {
+        #(𝐂: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
+        {i = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/identity(
+          𝐑 = {𝐑},
+          𝐌 = {𝐂}
+        )}}
+      },
+      𝐃 = {
+        #(𝐃: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
+        {𝐄 = {
+          #(𝐄: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
+          {𝐅 = {
+            #(𝐅: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
+            {∘ = {$../../Essentials/Functions/Operations/operator(
+              X = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+                𝐑 = {𝐑},
+                𝐌 = {𝐄},
+                𝐍 = {𝐅}
+              )},
+              Y = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+                𝐑 = {𝐑},
+                𝐌 = {𝐃},
+                𝐍 = {𝐄}
+              )},
+              Z = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+                𝐑 = {𝐑},
+                𝐌 = {𝐃},
+                𝐍 = {𝐅}
+              )},
+              parameters = #(
+                ψ: %Element($../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐄},
+                  𝐍 = {𝐅}
+                )),
+                φ: %Element($../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐃},
+                  𝐍 = {𝐄}
+                ))
+              ),
+              operator = $../../Essentials/Functions/composition(
+                X = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐃}
+                )},
+                Y = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐄}
+                )},
+                Z = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐅}
+                )},
+                f = {φ},
+                g = {ψ}
+              )
+            )}}
+          }}
+        }}
+      }
+  )]
+}

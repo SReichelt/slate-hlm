@@ -6,6 +6,8 @@ $Isomorphisms: %Section {
     %item($"element transform"),
     %item($"function transform"),
     %item($"inner operation transform"),
+    %item($"left operation transform"),
+    %item($"right operation transform"),
     %item($"relation transform"),
     %item($"morphism transform")
   ]

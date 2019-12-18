@@ -1,0 +1,135 @@
+%../../../../../../../logics/hlm%
+
+$Isomorphisms(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element($../"Left modules"(𝐑 = {𝐑})),
+  𝐍: %Element(%previous)
+): %SetOperator {
+  display = [$Function(
+    function = 'Iso',
+    arguments = [𝐌, 𝐍]
+  )],
+  definitionDisplay = {
+    parameter = #(φ: %Expr),
+    display = [$FunctionDefinition(
+      function = φ,
+      symbol = '↔',
+      operands = [𝐌, 𝐍]
+    )],
+    singularName = 'isomorphism',
+    pluralName = 'isomorphisms'
+  },
+  definition = [
+    %subset(
+      #(φ: %Element($Homomorphisms(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌},
+        𝐍 = {𝐍}
+      ))),
+      $../../../../../Essentials/Functions/bijective(
+        X = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌}
+        )},
+        Y = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐍}
+        )},
+        f = {φ}
+      )
+    ),
+    %subset(
+      #(f: %Element($../../../../../Essentials/Functions/Bijections(
+        X = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌}
+        )},
+        Y = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐍}
+        )}
+      ))),
+      %forall(
+        #(
+          a: %Element($../../../Carrier(𝐑 = {𝐑})),
+          b: %Element(%previous),
+          x: %Element($../Carrier(
+            𝐑 = {𝐑},
+            𝐌 = {𝐌}
+          )),
+          y: %Element(%previous)
+        ),
+        %equals(
+          $../../../../../Essentials/Functions/value(
+            X = {$../Carrier(
+              𝐑 = {𝐑},
+              𝐌 = {𝐌}
+            )},
+            Y = {$../Carrier(
+              𝐑 = {𝐑},
+              𝐌 = {𝐍}
+            )},
+            f = {f},
+            x = {$../sum(
+              𝐑 = {𝐑},
+              𝐌 = {𝐌},
+              x = {$../product(
+                𝐑 = {𝐑},
+                𝐌 = {𝐌},
+                a = {a},
+                x = {x}
+              )},
+              y = {$../product(
+                𝐑 = {𝐑},
+                𝐌 = {𝐌},
+                a = {b},
+                x = {y}
+              )}
+            )}
+          ),
+          $../sum(
+            𝐑 = {𝐑},
+            𝐌 = {𝐍},
+            x = {$../product(
+              𝐑 = {𝐑},
+              𝐌 = {𝐍},
+              a = {a},
+              x = {$../../../../../Essentials/Functions/value(
+                X = {$../Carrier(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐌}
+                )},
+                Y = {$../Carrier(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐍}
+                )},
+                f = {f},
+                x = {x}
+              )}
+            )},
+            y = {$../product(
+              𝐑 = {𝐑},
+              𝐌 = {𝐍},
+              a = {b},
+              x = {$../../../../../Essentials/Functions/value(
+                X = {$../Carrier(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐌}
+                )},
+                Y = {$../Carrier(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐍}
+                )},
+                f = {f},
+                x = {y}
+              )}
+            )}
+          )
+        )
+      )
+    )
+  ]
+}

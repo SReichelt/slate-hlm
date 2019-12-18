@@ -44,7 +44,7 @@ $"Successor can be pulled over addition"(
       )})
     ),
     steps = #(_: %ProveCases(
-      side = %left,
+      side = 0,
       caseProofs = [
         {
           goal = %equals(

@@ -1,0 +1,13 @@
+%../../../../../../../logics/library%
+
+$Homomorphisms: %Section {
+  logic = 'hlm',
+  items = [
+    %item($Homomorphisms),
+    %item($Isomorphisms),
+    %item($Kernel),
+    %item($identity),
+    %item($"Equality criterion"),
+    %item($"Inverse of isomorphism is also isomorphism")
+  ]
+}

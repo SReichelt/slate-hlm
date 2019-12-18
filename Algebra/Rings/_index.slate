@@ -44,6 +44,10 @@ $Rings: %Section {
     %subsection(
       $Matrices,
       'Matrices'
+    ),
+    %subsection(
+      $Modules,
+      'Modules'
     )
   ]
 }

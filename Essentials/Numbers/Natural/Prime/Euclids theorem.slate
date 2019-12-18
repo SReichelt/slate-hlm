@@ -164,7 +164,7 @@ $"Euclids theorem": %StandardTheorem {
             p
           )
         )),
-        %left,
+        0,
         $../divisible(
           m = {p},
           n = {a}
