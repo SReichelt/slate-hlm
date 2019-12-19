@@ -1,0 +1,89 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Ordinal_number#Transfinite_sequence (but we use arbitrary ordinals, not only limit ordinals)
+ */
+$"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
+  $sequence(
+    α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
+    k: %Binding(
+      $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+      #(a: %Element(S))
+    )
+  ): %Constructor {
+    display = [$SubSup(
+      body = $Parens(
+        body = a,
+        style = '()'
+      ),
+      sub = $Relation(
+        symbol = '<',
+        operands = [k, α]
+      )
+    )],
+    equalityDefinition = {
+      leftParameters = #(
+        α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
+        k: %Binding(
+          $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+          #(a: %Element(S))
+        )
+      ),
+      rightParameters = #(
+        "α'": %Element($../Numbers/Ordinal/"Ordinal numbers"),
+        k: %Binding(
+          $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {"α'"}),
+          #("a'": %Element(S))
+        )
+      ),
+      definition = [%and(
+        %equals(α, "α'"),
+        %forall(
+          #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+          %equals(a[k], "a'"[k])
+        )
+      )],
+      isomorphic = %true
+    }
+  }
+
+  display = [$SubSup(
+    body = S,
+    sup = '⋆'
+  )],
+  definitionDisplay = {
+    parameter = #(𝐚: %Expr),
+    singularName = ['ordinal-indexed sequence', ' on ', S],
+    pluralName = ['ordinal-indexed sequences', ' on ', S]
+  },
+  embedding = {
+    parameter = #(𝐚: %Element($"Finite sequences"(S = {S}))),
+    target = $"Ordinal-indexed sequences".sequence(
+      α = {$"finite sequence length"(
+        S = {S},
+        𝐚 = {𝐚}
+      )},
+      k = {
+        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {$"finite sequence length"(
+          S = {S},
+          𝐚 = {𝐚}
+        )}))),
+        {a = {%structuralCases(
+          𝐚,
+          $"Finite sequences"(S = {S}),
+          [{
+            constructor = $"Finite sequences"(S = {S}).sequence,
+            parameters = #(
+              n: %Element($../Numbers/Natural/"Natural numbers"),
+              j: %Binding(
+                $../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+                #(a: %Element(S))
+              )
+            ),
+            value = a[k]
+          }]
+        )}}
+      }
+    )
+  }
+}

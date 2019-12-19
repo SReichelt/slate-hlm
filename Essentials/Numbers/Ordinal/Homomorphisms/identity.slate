@@ -1,9 +1,9 @@
 %../../../../../../logics/hlm%
 
-$identity(𝐱: %Element($../"Ordinal numbers")): %ExplicitOperator {
+$identity(α: %Element($../"Ordinal numbers")): %ExplicitOperator {
   display = [$SubSup(
     body = 'id',
-    sub = 𝐱
+    sub = α
   )],
-  definition = [$../../../Functions/identity(X = {$../Carrier(𝐱 = {𝐱})})]
+  definition = [$../../../Functions/identity(X = {$../Carrier(α = {α})})]
 }

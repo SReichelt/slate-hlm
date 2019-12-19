@@ -1,0 +1,18 @@
+%../../../../../../logics/hlm%
+
+$"Segment (greater)"(κ: %Element($../"Cardinal numbers")): %SetOperator {
+  display = [$Segment(
+    set = '𝓒𝓻𝓭',
+    symbol = '>',
+    limit = κ
+  )],
+  definition = [
+    %subset(
+      #(μ: %Element($../"Cardinal numbers")),
+      $../less(
+        μ = {μ},
+        κ = {κ}
+      )
+    )
+  ]
+}

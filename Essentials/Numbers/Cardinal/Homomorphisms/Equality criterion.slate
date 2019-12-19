@@ -6,24 +6,24 @@
  *             * [https://proofwiki.org/wiki/Cantor-Bernstein-Schröder_Theorem](https://proofwiki.org/wiki/Cantor-Bernstein-Schr%C3%B6der_Theorem)
  */
 $"Equality criterion"(
-  𝐱: %Element($../"Cardinal numbers"),
-  𝐲: %Element(%previous)
+  κ: %Element($../"Cardinal numbers"),
+  μ: %Element(%previous)
 ): %EquivalenceTheorem {
   conditions = [
     %and(
       $../"less or equal"(
-        𝐱 = {𝐱},
-        𝐲 = {𝐲}
+        κ = {κ},
+        μ = {μ}
       ),
       $../"less or equal"(
-        𝐱 = {𝐲},
-        𝐲 = {𝐱}
+        κ = {μ},
+        μ = {κ}
       )
     ),
     %not($../../../Sets/empty(S = {$Isomorphisms(
-      𝐱 = {𝐱},
-      𝐲 = {𝐲}
+      κ = {κ},
+      μ = {μ}
     )})),
-    %equals(𝐱, 𝐲)
+    %equals(κ, μ)
   ]
 }

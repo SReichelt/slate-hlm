@@ -1,0 +1,9 @@
+%../../../../../../logics/library%
+
+$"Ordered subsets": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"ordered subset"),
+    %item($"subset ordinal")
+  ]
+}

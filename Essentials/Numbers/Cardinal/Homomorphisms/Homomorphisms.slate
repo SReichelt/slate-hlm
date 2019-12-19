@@ -6,26 +6,26 @@
  *          Although these sets are not unique, the type system prevents the ambiguities that could arise, as long as the equality definition of the structure does not define any non-isomorphic elements as equal.
  */
 $Homomorphisms(
-  𝐱: %Element($../"Cardinal numbers"),
-  𝐲: %Element(%previous)
+  κ: %Element($../"Cardinal numbers"),
+  μ: %Element(%previous)
 ): %SetOperator {
   display = [$Function(
     function = 'Hom',
-    arguments = [𝐱, 𝐲]
+    arguments = [κ, μ]
   )],
   definitionDisplay = {
     parameter = #(φ: %Expr),
     display = [$FunctionDefinition(
       function = φ,
       symbol = '→',
-      operands = [𝐱, 𝐲]
+      operands = [κ, μ]
     )],
     singularName = 'homomorphism',
     pluralName = 'homomorphisms',
     nameOptional = %true
   },
   definition = [$../../../Functions/Functions(
-    X = {$../Carrier(𝐱 = {𝐱})},
-    Y = {$../Carrier(𝐱 = {𝐲})}
+    X = {$../Carrier(κ = {κ})},
+    Y = {$../Carrier(κ = {μ})}
   )]
 }

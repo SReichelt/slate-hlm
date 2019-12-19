@@ -32,15 +32,15 @@ $finite(S: %Set): %Predicate {
     %exists(
       #(y: %Element($../Numbers/Natural/"Natural numbers")),
       formula = $../Numbers/Cardinal/"less or equal"(
-        𝐱 = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
-        𝐲 = {y}
+        κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
+        μ = {y}
       )
     ),
     %exists(
       #(z: %Element($../Numbers/Natural/"Natural numbers")),
       formula = $../Numbers/Cardinal/less(
-        𝐱 = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
-        𝐲 = {z}
+        κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
+        μ = {z}
       )
     ),
     %exists(#(
@@ -335,8 +335,8 @@ $finite(S: %Set): %Predicate {
       goal = %exists(
         #(y: %Element($../Numbers/Natural/"Natural numbers")),
         formula = $../Numbers/Cardinal/"less or equal"(
-          𝐱 = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
-          𝐲 = {y}
+          κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
+          μ = {y}
         )
       ),
       steps = #(
@@ -359,8 +359,8 @@ $finite(S: %Set): %Predicate {
           {y = {$../Numbers/Natural/"Natural numbers".successor(n = {n})}},
           proof = {
             goal = $../Numbers/Cardinal/"less or equal"(
-              𝐱 = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
-              𝐲 = {$../Numbers/Natural/"Natural numbers".successor(n = {n})}
+              κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
+              μ = {$../Numbers/Natural/"Natural numbers".successor(n = {n})}
             ),
             steps = #(_: %ProveDef(proof = {
               goal = %exists(
@@ -386,8 +386,8 @@ $finite(S: %Set): %Predicate {
       parameters = #(@: %Constraint(%exists(
         #(y: %Element($../Numbers/Natural/"Natural numbers")),
         formula = $../Numbers/Cardinal/"less or equal"(
-          𝐱 = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
-          𝐲 = {y}
+          κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
+          μ = {y}
         )
       ))),
       goal = %exists(#(

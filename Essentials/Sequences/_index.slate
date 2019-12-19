@@ -8,7 +8,10 @@ $Sequences: %Section {
       $"finite sequence",
       title = 'Tuple'
     ),
+    %item($"finite sequence length"),
     %item($"Infinite sequences"),
+    %item($"Ordinal-indexed sequences"),
+    %item($"ordinal-indexed sequence length"),
     %item($"starts with")
   ]
 }

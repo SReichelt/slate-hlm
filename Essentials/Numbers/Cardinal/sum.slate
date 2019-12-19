@@ -6,23 +6,23 @@
  *             * https://proofwiki.org/wiki/Definition:Sum_of_Cardinals
  */
 $sum(
-  𝐱: %Element($"Cardinal numbers"),
-  𝐲: %Element(%previous)
+  κ: %Element($"Cardinal numbers"),
+  μ: %Element(%previous)
 ): %ExplicitOperator {
   display = [$Operator(
     symbol = '+',
-    operands = [𝐱, 𝐲],
+    operands = [κ, μ],
     minParenLevel = 1,
     maxParenLevel = 1
   )],
   definition = [%structuralCases(
-    𝐲,
+    μ,
     $"Cardinal numbers",
     [{
       constructor = $"Cardinal numbers".cardinality,
       parameters = #(Y: %Set),
       value = %structuralCases(
-        𝐱,
+        κ,
         $"Cardinal numbers",
         [{
           constructor = $"Cardinal numbers".cardinality,

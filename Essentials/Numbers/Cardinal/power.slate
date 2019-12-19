@@ -6,21 +6,21 @@
  *             * https://proofwiki.org/wiki/Definition:Exponentiation_of_Cardinals
  */
 $power(
-  𝐱: %Element($"Cardinal numbers"),
-  𝐲: %Element(%previous)
+  κ: %Element($"Cardinal numbers"),
+  μ: %Element(%previous)
 ): %ExplicitOperator {
   display = [$SubSup(
-    body = 𝐱,
-    sup = 𝐲
+    body = κ,
+    sup = μ
   )],
   definition = [%structuralCases(
-    𝐲,
+    μ,
     $"Cardinal numbers",
     [{
       constructor = $"Cardinal numbers".cardinality,
       parameters = #(Y: %Set),
       value = %structuralCases(
-        𝐱,
+        κ,
         $"Cardinal numbers",
         [{
           constructor = $"Cardinal numbers".cardinality,

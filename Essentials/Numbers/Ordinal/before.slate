@@ -1,11 +1,11 @@
 %../../../../../logics/hlm%
 
 $before(
-  𝐱: %Element(
+  α: %Element(
     $"Ordinal numbers",
     auto = %true
   ),
-  a: %Element($Carrier(𝐱 = {𝐱})),
+  a: %Element($Carrier(α = {α})),
   b: %Element(%previous)
 ): %Predicate {
   display = [
@@ -19,7 +19,7 @@ $before(
     )
   ],
   definition = [%structural(
-    𝐱,
+    α,
     $"Ordinal numbers",
     [{
       constructor = $"Ordinal numbers"."order type",

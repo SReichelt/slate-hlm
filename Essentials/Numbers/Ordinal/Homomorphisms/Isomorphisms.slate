@@ -1,19 +1,19 @@
 %../../../../../../logics/hlm%
 
 $Isomorphisms(
-  𝐱: %Element($../"Ordinal numbers"),
-  𝐲: %Element(%previous)
+  α: %Element($../"Ordinal numbers"),
+  β: %Element(%previous)
 ): %SetOperator {
   display = [$Function(
     function = 'Iso',
-    arguments = [𝐱, 𝐲]
+    arguments = [α, β]
   )],
   definitionDisplay = {
     parameter = #(φ: %Expr),
     display = [$FunctionDefinition(
       function = φ,
       symbol = '↔',
-      operands = [𝐱, 𝐲]
+      operands = [α, β]
     )],
     singularName = 'isomorphism',
     pluralName = 'isomorphisms',
@@ -22,41 +22,41 @@ $Isomorphisms(
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(
-        𝐱 = {𝐱},
-        𝐲 = {𝐲}
+        α = {α},
+        β = {β}
       ))),
       $../../../Functions/bijective(
-        X = {$../Carrier(𝐱 = {𝐱})},
-        Y = {$../Carrier(𝐱 = {𝐲})},
+        X = {$../Carrier(α = {α})},
+        Y = {$../Carrier(α = {β})},
         f = {φ}
       )
     ),
     %subset(
       #(f: %Element($../../../Functions/Bijections(
-        X = {$../Carrier(𝐱 = {𝐱})},
-        Y = {$../Carrier(𝐱 = {𝐲})}
+        X = {$../Carrier(α = {α})},
+        Y = {$../Carrier(α = {β})}
       ))),
       %forall(
         #(
-          a: %Element($../Carrier(𝐱 = {𝐱})),
+          a: %Element($../Carrier(α = {α})),
           b: %Element(%previous),
           _1: %Constraint($../before(
-            𝐱 = {𝐱},
+            α = {α},
             a = {a},
             b = {b}
           ))
         ),
         $../before(
-          𝐱 = {𝐲},
+          α = {β},
           a = {$../../../Functions/value(
-            X = {$../Carrier(𝐱 = {𝐱})},
-            Y = {$../Carrier(𝐱 = {𝐲})},
+            X = {$../Carrier(α = {α})},
+            Y = {$../Carrier(α = {β})},
             f = {f},
             x = {a}
           )},
           b = {$../../../Functions/value(
-            X = {$../Carrier(𝐱 = {𝐱})},
-            Y = {$../Carrier(𝐱 = {𝐲})},
+            X = {$../Carrier(α = {α})},
+            Y = {$../Carrier(α = {β})},
             f = {f},
             x = {b}
           )}

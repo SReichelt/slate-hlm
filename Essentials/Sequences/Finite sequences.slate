@@ -58,7 +58,7 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
     sup = '∗'
   )],
   definitionDisplay = {
-    parameter = #(a: %Expr),
+    parameter = #(𝐚: %Expr),
     singularName = ['finite sequence', ' on ', S],
     pluralName = ['finite sequences', ' on ', S]
   }

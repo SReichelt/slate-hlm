@@ -3,20 +3,20 @@
 /**
  * @remarks This definition retrieves a representative set from an ordinal number, and enables typical abuse of notation.
  */
-$Carrier(𝐱: %Element($"Ordinal numbers")): %SetOperator {
+$Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
   display = [$Function(
     function = 'Carrier',
-    arguments = [𝐱]
+    arguments = [α]
   )],
   definitionDisplay = {
     parameter = #(a: %Expr),
     display = [$ElementParameter(
       element = a,
-      set = 𝐱
+      set = α
     )]
   },
   definition = [%setStructuralCases(
-    𝐱,
+    α,
     $"Ordinal numbers",
     [{
       constructor = $"Ordinal numbers"."order type",

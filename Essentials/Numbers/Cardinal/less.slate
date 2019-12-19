@@ -4,24 +4,24 @@
  * @remarks Note that without the axiom of choice, this is not equivalent to the negation of “greater or equal”.
  */
 $less(
-  𝐱: %Element($"Cardinal numbers"),
-  𝐲: %Element(%previous)
+  κ: %Element($"Cardinal numbers"),
+  μ: %Element(%previous)
 ): %Predicate {
   display = [
     $Relation(
       symbol = %neg('<', '≮'),
-      operands = [𝐱, 𝐲]
+      operands = [κ, μ]
     ),
     $Relation(
       symbol = %neg('>', '≯'),
-      operands = [𝐲, 𝐱]
+      operands = [μ, κ]
     )
   ],
   definition = [%and(
     $"less or equal"(
-      𝐱 = {𝐱},
-      𝐲 = {𝐲}
+      κ = {κ},
+      μ = {μ}
     ),
-    %not(%equals(𝐱, 𝐲))
+    %not(%equals(κ, μ))
   )]
 }

@@ -1,0 +1,18 @@
+%../../../../../../logics/hlm%
+
+$"Segment (greater or equal)"(α: %Element($../"Ordinal numbers")): %SetOperator {
+  display = [$Segment(
+    set = '𝓞𝓻𝓭',
+    symbol = '≥',
+    limit = α
+  )],
+  definition = [
+    %subset(
+      #(β: %Element($../"Ordinal numbers")),
+      $../"less or equal"(
+        β = {β},
+        α = {α}
+      )
+    )
+  ]
+}

@@ -1,17 +1,22 @@
 %../../../../../../logics/hlm%
 
-$"ordered subset"(
-  𝐱: %Element($../"Ordinal numbers"),
-  S: %Subset($../Carrier(𝐱 = {𝐱}))
-): %Predicate {
-  display = [$NounRelation(
-    operands = [S, 𝐱],
-    singular = 'ordered subset',
-    plural = 'ordered subsets',
-    article = 'an'
+$"subset ordinal"(
+  α: %Element(
+    $../"Ordinal numbers",
+    auto = %true
+  ),
+  S: %Subset($../Carrier(α = {α})),
+  _1: %Constraint($"ordered subset"(
+    α = {α},
+    S = {S}
+  ))
+): %ExplicitOperator {
+  display = [$Parens(
+    body = S,
+    style = '[]'
   )],
-  definition = [%structural(
-    𝐱,
+  definition = [%structuralCases(
+    α,
     $../"Ordinal numbers",
     [{
       constructor = $../"Ordinal numbers"."order type",
@@ -23,9 +28,9 @@ $"ordered subset"(
           ≺ = {⪯}
         ))
       ),
-      value = $../../../Relations/"well-order"(
+      value = $../"Ordinal numbers"."order type"(
         S = {S},
-        ≺ = {$../../../Relations/restriction(
+        ⪯ = {$../../../Relations/restriction(
           S = {X},
           ≺ = {⪯},
           T = {S}

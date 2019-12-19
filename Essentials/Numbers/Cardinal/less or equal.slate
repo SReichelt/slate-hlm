@@ -4,36 +4,36 @@
  * @references * https://en.wikipedia.org/wiki/Cardinal_number
  */
 $"less or equal"(
-  𝐱: %Element($"Cardinal numbers"),
-  𝐲: %Element(%previous)
+  κ: %Element($"Cardinal numbers"),
+  μ: %Element(%previous)
 ): %Predicate {
   display = [
     $Relation(
       symbol = %neg('≤', '≰'),
-      operands = [𝐱, 𝐲]
+      operands = [κ, μ]
     ),
     $Relation(
       symbol = %neg('≥', '≱'),
-      operands = [𝐲, 𝐱]
+      operands = [μ, κ]
     )
   ],
   definition = [
     %exists(
       #(φ: %Element($Homomorphisms/Homomorphisms(
-        𝐱 = {𝐱},
-        𝐲 = {𝐲}
+        κ = {κ},
+        μ = {μ}
       ))),
       formula = $../../Functions/injective(
-        X = {$Carrier(𝐱 = {𝐱})},
-        Y = {$Carrier(𝐱 = {𝐲})},
+        X = {$Carrier(κ = {κ})},
+        Y = {$Carrier(κ = {μ})},
         f = {φ}
       )
     ),
     %exists(
-      #(S: %Subset($Carrier(𝐱 = {𝐲}))),
+      #(S: %Subset($Carrier(κ = {μ}))),
       formula = %equals(
         $"Cardinal numbers".cardinality(S = {S}),
-        𝐱
+        κ
       )
     )
   ]

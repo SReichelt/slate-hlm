@@ -1,0 +1,26 @@
+%../../../../logics/hlm%
+
+$"finite sequence length"(
+  S: %Set(auto = %true),
+  𝐚: %Element($"Finite sequences"(S = {S}))
+): %ExplicitOperator {
+  display = [$Parens(
+    body = 𝐚,
+    style = '||'
+  )],
+  definition = [%structuralCases(
+    𝐚,
+    $"Finite sequences"(S = {S}),
+    [{
+      constructor = $"Finite sequences"(S = {S}).sequence,
+      parameters = #(
+        n: %Element($../Numbers/Natural/"Natural numbers"),
+        k: %Binding(
+          $../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+          #(a: %Element(S))
+        )
+      ),
+      value = n
+    }]
+  )]
+}

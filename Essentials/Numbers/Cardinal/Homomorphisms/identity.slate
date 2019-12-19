@@ -1,12 +1,12 @@
 %../../../../../../logics/hlm%
 
-$identity(𝐱: %Element(
+$identity(κ: %Element(
   $../"Cardinal numbers",
   auto = %true
 )): %ExplicitOperator {
   display = [$SubSup(
     body = 'id',
-    sub = 𝐱
+    sub = κ
   )],
-  definition = [$../../../Functions/identity(X = {$../Carrier(𝐱 = {𝐱})})]
+  definition = [$../../../Functions/identity(X = {$../Carrier(κ = {κ})})]
 }

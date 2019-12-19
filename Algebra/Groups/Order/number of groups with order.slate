@@ -10,6 +10,6 @@ $"number of groups with order": %ExplicitOperator {
   )],
   definition = [$../../../Essentials/Sequences/"Infinite sequences"(S = {$../../../Essentials/Numbers/Natural/"Natural numbers"}).sequence(n = {
       #(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-      {a = {$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$"Groups with order"(𝐱 = {n})})}}
+      {a = {$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$"Groups with order"(κ = {n})})}}
   })]
 }

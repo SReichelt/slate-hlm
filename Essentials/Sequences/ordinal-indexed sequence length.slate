@@ -1,0 +1,26 @@
+%../../../../logics/hlm%
+
+$"ordinal-indexed sequence length"(
+  S: %Set(auto = %true),
+  𝐚: %Element($"Ordinal-indexed sequences"(S = {S}))
+): %ExplicitOperator {
+  display = [$Parens(
+    body = 𝐚,
+    style = '||'
+  )],
+  definition = [%structuralCases(
+    𝐚,
+    $"Ordinal-indexed sequences"(S = {S}),
+    [{
+      constructor = $"Ordinal-indexed sequences"(S = {S}).sequence,
+      parameters = #(
+        α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
+        k: %Binding(
+          $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+          #(a: %Element(S))
+        )
+      ),
+      value = α
+    }]
+  )]
+}

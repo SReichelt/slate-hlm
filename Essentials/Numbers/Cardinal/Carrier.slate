@@ -3,20 +3,20 @@
 /**
  * @remarks This definition retrieves a representative set from a cardinal number, and enables typical abuse of notation.
  */
-$Carrier(𝐱: %Element($"Cardinal numbers")): %SetOperator {
+$Carrier(κ: %Element($"Cardinal numbers")): %SetOperator {
   display = [$Function(
     function = 'Carrier',
-    arguments = [𝐱]
+    arguments = [κ]
   )],
   definitionDisplay = {
     parameter = #(a: %Expr),
     display = [$ElementParameter(
       element = a,
-      set = 𝐱
+      set = κ
     )]
   },
   definition = [%setStructuralCases(
-    𝐱,
+    κ,
     $"Cardinal numbers",
     [{
       constructor = $"Cardinal numbers".cardinality,

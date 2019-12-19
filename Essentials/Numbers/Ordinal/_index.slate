@@ -11,11 +11,15 @@ $Ordinal: %Section {
       'Homomorphisms'
     ),
     %subsection(
-      $Subsets,
-      'Subsets'
+      $"Ordered subsets",
+      'Ordered subsets'
     ),
     %item($"less or equal"),
     %item($less),
+    %subsection(
+      $Subsets,
+      'Subsets'
+    ),
     %item($"Less or equal is a well-order"),
     %item($sum),
     %item($product)

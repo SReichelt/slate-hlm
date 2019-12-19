@@ -1,19 +1,19 @@
 %../../../../../../logics/hlm%
 
 $Isomorphisms(
-  𝐱: %Element($../"Cardinal numbers"),
-  𝐲: %Element(%previous)
+  κ: %Element($../"Cardinal numbers"),
+  μ: %Element(%previous)
 ): %SetOperator {
   display = [$Function(
     function = 'Iso',
-    arguments = [𝐱, 𝐲]
+    arguments = [κ, μ]
   )],
   definitionDisplay = {
     parameter = #(φ: %Expr),
     display = [$FunctionDefinition(
       function = φ,
       symbol = '↔',
-      operands = [𝐱, 𝐲]
+      operands = [κ, μ]
     )],
     singularName = 'isomorphism',
     pluralName = 'isomorphisms',
@@ -22,18 +22,18 @@ $Isomorphisms(
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(
-        𝐱 = {𝐱},
-        𝐲 = {𝐲}
+        κ = {κ},
+        μ = {μ}
       ))),
       $../../../Functions/bijective(
-        X = {$../Carrier(𝐱 = {𝐱})},
-        Y = {$../Carrier(𝐱 = {𝐲})},
+        X = {$../Carrier(κ = {κ})},
+        Y = {$../Carrier(κ = {μ})},
         f = {φ}
       )
     ),
     $../../../Functions/Bijections(
-      X = {$../Carrier(𝐱 = {𝐱})},
-      Y = {$../Carrier(𝐱 = {𝐲})}
+      X = {$../Carrier(κ = {κ})},
+      Y = {$../Carrier(κ = {μ})}
     )
   ]
 }

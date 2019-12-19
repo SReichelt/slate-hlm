@@ -1,20 +1,20 @@
 %../../../../../logics/hlm%
 
-$"Groups with order"(𝐱: %Element($../../../Essentials/Numbers/Cardinal/"Cardinal numbers")): %SetOperator {
+$"Groups with order"(κ: %Element($../../../Essentials/Numbers/Cardinal/"Cardinal numbers")): %SetOperator {
   display = [$SubSup(
     body = '𝓖𝓻𝓹',
-    sub = 𝐱
+    sub = κ
   )],
   definitionDisplay = {
     parameter = #(𝐆: %Expr),
-    singularName = ['group of order ', 𝐱],
-    pluralName = ['groups of order ', 𝐱]
+    singularName = ['group of order ', κ],
+    pluralName = ['groups of order ', κ]
   },
   definition = [%subset(
     #(𝐆: %Element($../Groups)),
     %equals(
       $"group order"(𝐆 = {𝐆}),
-      𝐱
+      κ
     )
   )]
 }

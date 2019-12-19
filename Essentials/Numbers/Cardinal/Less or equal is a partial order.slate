@@ -7,12 +7,12 @@ $"Less or equal is a partial order": %StandardTheorem {
       S = {$"Cardinal numbers"},
       T = {$"Cardinal numbers"},
       parameters = #(
-        𝐱: %Element($"Cardinal numbers"),
-        𝐲: %Element(%previous)
+        κ: %Element($"Cardinal numbers"),
+        μ: %Element(%previous)
       ),
       predicate = $"less or equal"(
-        𝐱 = {𝐱},
-        𝐲 = {𝐲}
+        κ = {κ},
+        μ = {μ}
       )
     )}
   )

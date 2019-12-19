@@ -1,24 +1,24 @@
 %../../../../../logics/hlm%
 
 $less(
-  𝐱: %Element($"Ordinal numbers"),
-  𝐲: %Element(%previous)
+  α: %Element($"Ordinal numbers"),
+  β: %Element(%previous)
 ): %Predicate {
   display = [
     $Relation(
       symbol = %neg('<', '≮'),
-      operands = [𝐱, 𝐲]
+      operands = [α, β]
     ),
     $Relation(
       symbol = %neg('>', '≯'),
-      operands = [𝐲, 𝐱]
+      operands = [β, α]
     )
   ],
   definition = [%and(
     $"less or equal"(
-      𝐱 = {𝐱},
-      𝐲 = {𝐲}
+      α = {α},
+      β = {β}
     ),
-    %not(%equals(𝐱, 𝐲))
+    %not(%equals(α, β))
   )]
 }

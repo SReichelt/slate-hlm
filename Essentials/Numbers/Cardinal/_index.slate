@@ -15,6 +15,10 @@ $Cardinal: %Section {
     ),
     %item($"less or equal"),
     %item($less),
+    %subsection(
+      $Subsets,
+      'Subsets'
+    ),
     %item($"Less or equal is a partial order"),
     %item($"AC is equivalent to total order"),
     %item($sum),
