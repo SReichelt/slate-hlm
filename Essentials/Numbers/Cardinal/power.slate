@@ -18,16 +18,16 @@ $power(
     $"Cardinal numbers",
     [{
       constructor = $"Cardinal numbers".cardinality,
-      parameters = #(Y: %Set),
+      parameters = #(J: %Set),
       value = %structuralCases(
         κ,
         $"Cardinal numbers",
         [{
           constructor = $"Cardinal numbers".cardinality,
-          parameters = #(X: %Set),
+          parameters = #(K: %Set),
           value = $"Cardinal numbers".cardinality(S = {$../../Functions/Functions(
-            X = {Y},
-            Y = {X}
+            X = {J},
+            Y = {K}
           )})
         }]
       )

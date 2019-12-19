@@ -16,10 +16,10 @@ $sum(
     [{
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
-        Y: %Set,
-        ⊑: %Element($../../Relations/Endorelations(S = {Y})),
+        B: %Set,
+        ⊑: %Element($../../Relations/Endorelations(S = {B})),
         _1: %Constraint($../../Relations/"well-order"(
-          S = {Y},
+          S = {B},
           ≺ = {⊑}
         ))
       ),
@@ -29,21 +29,21 @@ $sum(
         [{
           constructor = $"Ordinal numbers"."order type",
           parameters = #(
-            X: %Set,
-            ⪯: %Element($../../Relations/Endorelations(S = {X})),
+            A: %Set,
+            ⪯: %Element($../../Relations/Endorelations(S = {A})),
             _1: %Constraint($../../Relations/"well-order"(
-              S = {X},
+              S = {A},
               ≺ = {⪯}
             ))
           ),
           value = $"Ordinal numbers"."order type"(
             S = {$../../Sets/"Disjoint union"(
-              S = {X},
-              T = {Y}
+              S = {A},
+              T = {B}
             )},
             ⪯ = {$../../Relations/succession(
-              S = {X},
-              T = {Y},
+              S = {A},
+              T = {B},
               ⪯ = {⪯},
               ⊑ = {⊑}
             )}

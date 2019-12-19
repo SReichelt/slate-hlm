@@ -20,16 +20,16 @@ $sum(
     $"Cardinal numbers",
     [{
       constructor = $"Cardinal numbers".cardinality,
-      parameters = #(Y: %Set),
+      parameters = #(J: %Set),
       value = %structuralCases(
         κ,
         $"Cardinal numbers",
         [{
           constructor = $"Cardinal numbers".cardinality,
-          parameters = #(X: %Set),
+          parameters = #(K: %Set),
           value = $"Cardinal numbers".cardinality(S = {$../../Sets/"Disjoint union"(
-            S = {X},
-            T = {Y}
+            S = {K},
+            T = {J}
           )})
         }]
       )

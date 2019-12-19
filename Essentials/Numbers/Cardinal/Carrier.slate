@@ -20,8 +20,8 @@ $Carrier(κ: %Element($"Cardinal numbers")): %SetOperator {
     $"Cardinal numbers",
     [{
       constructor = $"Cardinal numbers".cardinality,
-      parameters = #(S: %Set),
-      value = S
+      parameters = #(K: %Set),
+      value = K
     }]
   )]
 }

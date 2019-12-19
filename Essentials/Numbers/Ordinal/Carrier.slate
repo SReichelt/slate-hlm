@@ -21,14 +21,14 @@ $Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
     [{
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
-        S: %Set,
-        ⪯: %Element($../../Relations/Endorelations(S = {S})),
+        A: %Set,
+        ⪯: %Element($../../Relations/Endorelations(S = {A})),
         _1: %Constraint($../../Relations/"well-order"(
-          S = {S},
+          S = {A},
           ≺ = {⪯}
         ))
       ),
-      value = S
+      value = A
     }]
   )]
 }

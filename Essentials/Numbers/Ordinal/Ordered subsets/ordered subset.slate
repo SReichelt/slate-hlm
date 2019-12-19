@@ -16,17 +16,17 @@ $"ordered subset"(
     [{
       constructor = $../"Ordinal numbers"."order type",
       parameters = #(
-        X: %Set,
-        ⪯: %Element($../../../Relations/Endorelations(S = {X})),
+        A: %Set,
+        ⪯: %Element($../../../Relations/Endorelations(S = {A})),
         _1: %Constraint($../../../Relations/"well-order"(
-          S = {X},
+          S = {A},
           ≺ = {⪯}
         ))
       ),
       value = $../../../Relations/"well-order"(
         S = {S},
         ≺ = {$../../../Relations/restriction(
-          S = {X},
+          S = {A},
           ≺ = {⪯},
           T = {S}
         )}
