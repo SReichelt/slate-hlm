@@ -12,7 +12,7 @@ $"ordinal-indexed sequence length"(
     𝐚,
     $"Ordinal-indexed sequences"(S = {S}),
     [{
-      constructor = $"Ordinal-indexed sequences"(S = {S}).sequence,
+      constructor = $"Ordinal-indexed sequences".sequence,
       parameters = #(
         α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
         k: %Binding(

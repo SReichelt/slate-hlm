@@ -30,7 +30,7 @@ $substitution(
     $Terms(V = {V}),
     [
       {
-        constructor = $Terms(V = {V}).variable,
+        constructor = $Terms.variable,
         parameters = #(y: %Element(V)),
         value = %cases([
           {
@@ -44,7 +44,7 @@ $substitution(
         ])
       },
       {
-        constructor = $Terms(V = {V}).abstraction,
+        constructor = $Terms.abstraction,
         parameters = #(
           y: %Binding(
             $../"Fresh variables"(V = {V}),
@@ -93,7 +93,7 @@ $substitution(
         })
       },
       {
-        constructor = $Terms(V = {V}).application,
+        constructor = $Terms.application,
         parameters = #(
           M: %Element($Terms(V = {V})),
           N: %Element(%previous)

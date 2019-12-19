@@ -42,10 +42,7 @@ $succession(
           ),
           [
             {
-              constructor = $../Sets/"Disjoint union"(
-                  S = {S},
-                  T = {T}
-                ).left,
+              constructor = $../Sets/"Disjoint union".left,
               parameters = #(s_b: %Element(S)),
               value = %structural(
                 a,
@@ -55,10 +52,7 @@ $succession(
                 ),
                 [
                   {
-                    constructor = $../Sets/"Disjoint union"(
-                        S = {S},
-                        T = {T}
-                      ).left,
+                    constructor = $../Sets/"Disjoint union".left,
                     parameters = #(s_a: %Element(S)),
                     value = $related(
                       S = {S},
@@ -69,10 +63,7 @@ $succession(
                     )
                   },
                   {
-                    constructor = $../Sets/"Disjoint union"(
-                        S = {S},
-                        T = {T}
-                      ).right,
+                    constructor = $../Sets/"Disjoint union".right,
                     parameters = #(t_a: %Element(T)),
                     value = %or
                   }
@@ -80,10 +71,7 @@ $succession(
               )
             },
             {
-              constructor = $../Sets/"Disjoint union"(
-                  S = {S},
-                  T = {T}
-                ).right,
+              constructor = $../Sets/"Disjoint union".right,
               parameters = #(t_b: %Element(T)),
               value = %structural(
                 a,
@@ -93,18 +81,12 @@ $succession(
                 ),
                 [
                   {
-                    constructor = $../Sets/"Disjoint union"(
-                        S = {S},
-                        T = {T}
-                      ).left,
+                    constructor = $../Sets/"Disjoint union".left,
                     parameters = #(s_a: %Element(S)),
                     value = %and
                   },
                   {
-                    constructor = $../Sets/"Disjoint union"(
-                        S = {S},
-                        T = {T}
-                      ).right,
+                    constructor = $../Sets/"Disjoint union".right,
                     parameters = #(t_a: %Element(T)),
                     value = $related(
                       S = {T},

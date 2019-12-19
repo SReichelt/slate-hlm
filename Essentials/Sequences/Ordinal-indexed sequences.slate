@@ -72,7 +72,7 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
           𝐚,
           $"Finite sequences"(S = {S}),
           [{
-            constructor = $"Finite sequences"(S = {S}).sequence,
+            constructor = $"Finite sequences".sequence,
             parameters = #(
               n: %Element($../Numbers/Natural/"Natural numbers"),
               j: %Binding(

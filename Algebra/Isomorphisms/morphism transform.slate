@@ -41,13 +41,7 @@ $"morphism transform"(
         Y = {X_3}
       ),
       [{
-        constructor = $../../Essentials/Functions/Functions(
-            X = {$../../Essentials/Sets/"Cartesian product"(
-              S = {X_1},
-              T = {X_2}
-            )},
-            Y = {X_3}
-          ).function,
+        constructor = $../../Essentials/Functions/Functions.function,
         parameters = #(x: %Binding(
           $../../Essentials/Sets/"Cartesian product"(
             S = {X_1},
@@ -73,10 +67,7 @@ $"morphism transform"(
                 T = {Y_2}
               ),
               [{
-                constructor = $../../Essentials/Sets/"Cartesian product"(
-                    S = {Y_1},
-                    T = {Y_2}
-                  ).pair,
+                constructor = $../../Essentials/Sets/"Cartesian product".pair,
                 parameters = #(
                   y_1: %Element(Y_1),
                   y_2: %Element(Y_2)

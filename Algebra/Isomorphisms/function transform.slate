@@ -25,10 +25,7 @@ $"function transform"(
         Y = {X}
       ),
       [{
-        constructor = $../../Essentials/Functions/Functions(
-            X = {X},
-            Y = {X}
-          ).function,
+        constructor = $../../Essentials/Functions/Functions.function,
         parameters = #(x: %Binding(
           X,
           #(z: %Element(X))

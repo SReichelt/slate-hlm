@@ -33,12 +33,12 @@ $rewritable(
       $Terms(V = {V}),
       [
         {
-          constructor = $Terms(V = {V}).variable,
+          constructor = $Terms.variable,
           parameters = #(z: %Element(V)),
           value = %or
         },
         {
-          constructor = $Terms(V = {V}).abstraction,
+          constructor = $Terms.abstraction,
           parameters = #(
             z: %Binding(
               $../"Fresh variables"(V = {V}),
@@ -73,12 +73,12 @@ $rewritable(
             $Terms(V = {V}),
             [
               {
-                constructor = $Terms(V = {V}).variable,
+                constructor = $Terms.variable,
                 parameters = #(y: %Element(V)),
                 value = %or
               },
               {
-                constructor = $Terms(V = {V}).abstraction,
+                constructor = $Terms.abstraction,
                 parameters = #(
                   y: %Binding(
                     $../"Fresh variables"(V = {V}),
@@ -123,7 +123,7 @@ $rewritable(
                 )
               },
               {
-                constructor = $Terms(V = {V}).application,
+                constructor = $Terms.application,
                 parameters = #(
                   M: %Element($Terms(V = {V})),
                   N: %Element(%previous)
@@ -134,7 +134,7 @@ $rewritable(
           )
         },
         {
-          constructor = $Terms(V = {V}).application,
+          constructor = $Terms.application,
           parameters = #(
             O: %Element($Terms(V = {V})),
             P: %Element(%previous)
@@ -144,12 +144,12 @@ $rewritable(
             $Terms(V = {V}),
             [
               {
-                constructor = $Terms(V = {V}).variable,
+                constructor = $Terms.variable,
                 parameters = #(y: %Element(V)),
                 value = %or
               },
               {
-                constructor = $Terms(V = {V}).abstraction,
+                constructor = $Terms.abstraction,
                 parameters = #(
                   y: %Binding(
                     $../"Fresh variables"(V = {V}),
@@ -182,7 +182,7 @@ $rewritable(
                 value = %or
               },
               {
-                constructor = $Terms(V = {V}).application,
+                constructor = $Terms.application,
                 parameters = #(
                   M: %Element($Terms(V = {V})),
                   N: %Element(%previous)

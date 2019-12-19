@@ -30,13 +30,7 @@ $"right operation transform"(
         Y = {X}
       ),
       [{
-        constructor = $../../Essentials/Functions/Functions(
-            X = {$../../Essentials/Sets/"Cartesian product"(
-              S = {X},
-              T = {S}
-            )},
-            Y = {X}
-          ).function,
+        constructor = $../../Essentials/Functions/Functions.function,
         parameters = #(x: %Binding(
           $../../Essentials/Sets/"Cartesian product"(
             S = {X},
@@ -62,10 +56,7 @@ $"right operation transform"(
                 T = {S}
               ),
               [{
-                constructor = $../../Essentials/Sets/"Cartesian product"(
-                    S = {Y},
-                    T = {S}
-                  ).pair,
+                constructor = $../../Essentials/Sets/"Cartesian product".pair,
                 parameters = #(
                   y: %Element(Y),
                   s: %Element(S)

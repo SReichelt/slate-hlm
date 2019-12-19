@@ -12,7 +12,7 @@ $"finite sequence length"(
     𝐚,
     $"Finite sequences"(S = {S}),
     [{
-      constructor = $"Finite sequences"(S = {S}).sequence,
+      constructor = $"Finite sequences".sequence,
       parameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
         k: %Binding(

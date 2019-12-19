@@ -48,7 +48,7 @@ $composition(
     𝓒,
     $Categories(u = {u}),
     [{
-      constructor = $Categories(u = {u}).category,
+      constructor = $Categories.category,
       parameters = #(
         O: %Set,
         𝐀: %Binding(

@@ -18,7 +18,7 @@ $"relation transform"(
     ≺,
     $../../Essentials/Relations/Endorelations(S = {X}),
     [{
-      constructor = $../../Essentials/Relations/Endorelations(S = {X}).relation,
+      constructor = $../../Essentials/Relations/Endorelations.relation,
       parameters = #(x_1: %Binding(
         X,
         #(x_2: %Binding(

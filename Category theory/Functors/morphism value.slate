@@ -43,11 +43,7 @@ $"morphism value"(
         𝓓 = {𝓓}
       ),
       [{
-        constructor = $Functors(
-            u = {u},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓}
-          ).functor,
+        constructor = $Functors.functor,
         parameters = #(
           𝐀: %Binding(
             $../Objects(

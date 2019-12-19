@@ -30,20 +30,14 @@ $product(
     ),
     [
       {
-        constructor = $Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          ).zero,
+        constructor = $Polynomials.zero,
         value = $Polynomials(
             𝐑 = {𝐑},
             X = {X}
           ).zero
       },
       {
-        constructor = $Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          ).term,
+        constructor = $Polynomials.term,
         parameters = #(
           r: %Element($Polynomials(
             𝐑 = {𝐑},

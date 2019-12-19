@@ -40,7 +40,7 @@ $"less or equal"(
             r_b,
             $../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}),
             [{
-              constructor = $../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}).sequence,
+              constructor = $../../Sequences/"Infinite sequences".sequence,
               parameters = #(n: %Binding(
                 $../Natural/"Natural numbers",
                 #(y: %Element($../Rational/"Rational numbers"))
@@ -49,7 +49,7 @@ $"less or equal"(
                 r_a,
                 $../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}),
                 [{
-                  constructor = $../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}).sequence,
+                  constructor = $../../Sequences/"Infinite sequences".sequence,
                   parameters = #(n: %Binding(
                     $../Natural/"Natural numbers",
                     #(x: %Element($../Rational/"Rational numbers"))

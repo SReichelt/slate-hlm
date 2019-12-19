@@ -28,20 +28,14 @@ $"additive inverse"(
     ),
     [
       {
-        constructor = $Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          ).zero,
+        constructor = $Polynomials.zero,
         value = $Polynomials(
             𝐑 = {𝐑},
             X = {X}
           ).zero
       },
       {
-        constructor = $Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          ).term,
+        constructor = $Polynomials.term,
         parameters = #(
           q: %Element($Polynomials(
             𝐑 = {𝐑},

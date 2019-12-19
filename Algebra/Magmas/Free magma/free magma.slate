@@ -31,10 +31,7 @@ $"free magma"(
             T = {T}
           ),
           [{
-            constructor = $../../../Essentials/Sets/"Cartesian product"(
-                S = {T},
-                T = {T}
-              ).pair,
+            constructor = $../../../Essentials/Sets/"Cartesian product".pair,
             parameters = #(
               a: %Element(T),
               b: %Element(T)

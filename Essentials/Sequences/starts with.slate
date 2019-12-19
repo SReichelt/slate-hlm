@@ -13,7 +13,7 @@ $"starts with"(
     𝐛,
     $"Finite sequences"(S = {S}),
     [{
-      constructor = $"Finite sequences"(S = {S}).sequence,
+      constructor = $"Finite sequences".sequence,
       parameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
         k: %Binding(
@@ -25,7 +25,7 @@ $"starts with"(
         𝐚,
         $"Infinite sequences"(S = {S}),
         [{
-          constructor = $"Infinite sequences"(S = {S}).sequence,
+          constructor = $"Infinite sequences".sequence,
           parameters = #(k: %Binding(
             $../Numbers/Natural/"Natural numbers",
             #(a: %Element(S))

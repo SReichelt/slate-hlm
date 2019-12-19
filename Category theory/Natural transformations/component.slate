@@ -51,13 +51,7 @@ $component(
       G = {G}
     ),
     [{
-      constructor = $"Infranatural transformations"(
-          u = {u},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓},
-          F = {F},
-          G = {G}
-        ).transformation,
+      constructor = $"Infranatural transformations".transformation,
       parameters = #(𝐘: %Binding(
         $../Objects(
           u = {u},

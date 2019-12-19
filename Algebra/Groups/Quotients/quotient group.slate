@@ -54,10 +54,7 @@ $"quotient group"(
             T = {Q}
           ),
           [{
-            constructor = $../../../Essentials/Sets/"Cartesian product"(
-                S = {Q},
-                T = {Q}
-              ).pair,
+            constructor = $../../../Essentials/Sets/"Cartesian product".pair,
             parameters = #(
               _t: %Element(Q),
               _u: %Element(Q)
@@ -69,10 +66,7 @@ $"quotient group"(
                 ∼ = {∼}
               ),
               [{
-                constructor = $../../../Essentials/Relations/"Equivalence classes"(
-                    S = {$../Carrier(𝐆 = {𝐆})},
-                    ∼ = {∼}
-                  ).class,
+                constructor = $../../../Essentials/Relations/"Equivalence classes".class,
                 parameters = #(g: %Element($../Carrier(𝐆 = {𝐆}))),
                 value = %structuralCases(
                   _u,
@@ -81,10 +75,7 @@ $"quotient group"(
                     ∼ = {∼}
                   ),
                   [{
-                    constructor = $../../../Essentials/Relations/"Equivalence classes"(
-                        S = {$../Carrier(𝐆 = {𝐆})},
-                        ∼ = {∼}
-                      ).class,
+                    constructor = $../../../Essentials/Relations/"Equivalence classes".class,
                     parameters = #(h: %Element($../Carrier(𝐆 = {𝐆}))),
                     value = $../../../Essentials/Relations/"Equivalence classes"(
                         S = {$../Carrier(𝐆 = {𝐆})},
@@ -117,10 +108,7 @@ $"quotient group"(
             ∼ = {∼}
           ),
           [{
-            constructor = $../../../Essentials/Relations/"Equivalence classes"(
-                S = {$../Carrier(𝐆 = {𝐆})},
-                ∼ = {∼}
-              ).class,
+            constructor = $../../../Essentials/Relations/"Equivalence classes".class,
             parameters = #(g: %Element($../Carrier(𝐆 = {𝐆}))),
             value = $../../../Essentials/Relations/"Equivalence classes"(
                 S = {$../Carrier(𝐆 = {𝐆})},

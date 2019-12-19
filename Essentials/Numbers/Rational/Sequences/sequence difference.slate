@@ -15,7 +15,7 @@ $"sequence difference"(
       𝐚,
       $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
       [{
-        constructor = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence,
+        constructor = $../../../Sequences/"Infinite sequences".sequence,
         parameters = #(n: %Binding(
           $../../Natural/"Natural numbers",
           #(a: %Element($../"Rational numbers"))
@@ -24,7 +24,7 @@ $"sequence difference"(
           𝐛,
           $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
           [{
-            constructor = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence,
+            constructor = $../../../Sequences/"Infinite sequences".sequence,
             parameters = #(n: %Binding(
               $../../Natural/"Natural numbers",
               #(b: %Element($../"Rational numbers"))

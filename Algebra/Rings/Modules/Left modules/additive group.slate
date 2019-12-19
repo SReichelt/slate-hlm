@@ -15,7 +15,7 @@ $"additive group"(
     𝐌,
     $"Left modules"(𝐑 = {𝐑}),
     [{
-      constructor = $"Left modules"(𝐑 = {𝐑}).module,
+      constructor = $"Left modules".module,
       parameters = #(
         M: %Set,
         ⊕: %Element($../../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),

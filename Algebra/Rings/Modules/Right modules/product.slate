@@ -29,7 +29,7 @@ $product(
     𝐌,
     $"Right modules"(𝐑 = {𝐑}),
     [{
-      constructor = $"Right modules"(𝐑 = {𝐑}).module,
+      constructor = $"Right modules".module,
       parameters = #(
         M: %Set,
         ⊕: %Element($../../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),

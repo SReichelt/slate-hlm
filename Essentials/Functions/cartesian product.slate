@@ -42,10 +42,7 @@ $"cartesian product"(
           T = {X}
         ),
         [{
-          constructor = $../Sets/"Cartesian product"(
-              S = {V},
-              T = {X}
-            ).pair,
+          constructor = $../Sets/"Cartesian product".pair,
           parameters = #(
             v: %Element(V),
             x: %Element(X)

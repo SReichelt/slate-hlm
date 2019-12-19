@@ -41,10 +41,7 @@ $"lexicographical order"(
             T = {T}
           ),
           [{
-            constructor = $../Sets/"Cartesian product"(
-                S = {S},
-                T = {T}
-              ).pair,
+            constructor = $../Sets/"Cartesian product".pair,
             parameters = #(
               "s'": %Element(S),
               "t'": %Element(T)
@@ -56,10 +53,7 @@ $"lexicographical order"(
                 T = {T}
               ),
               [{
-                constructor = $../Sets/"Cartesian product"(
-                    S = {S},
-                    T = {T}
-                  ).pair,
+                constructor = $../Sets/"Cartesian product".pair,
                 parameters = #(
                   s: %Element(S),
                   t: %Element(T)

@@ -9,7 +9,7 @@ $cauchy(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Ration
     𝐚,
     $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
     [{
-      constructor = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence,
+      constructor = $../../../Sequences/"Infinite sequences".sequence,
       parameters = #(n: %Binding(
         $../../Natural/"Natural numbers",
         #(a: %Element($../"Rational numbers"))

@@ -25,10 +25,7 @@ $value(
       Y = {Y}
     ),
     [{
-      constructor = $Functions(
-          X = {X},
-          Y = {Y}
-        ).function,
+      constructor = $Functions.function,
       parameters = #(z: %Binding(
         X,
         #(y: %Element(Y))

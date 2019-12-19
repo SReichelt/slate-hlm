@@ -18,7 +18,7 @@ $"Generalized intersection using power set"(
         _i,
         $"Power set"(S = {U}),
         [{
-          constructor = $"Power set"(S = {U}).subset,
+          constructor = $"Power set".subset,
           parameters = #(T: %Subset(U)),
           value = T
         }]

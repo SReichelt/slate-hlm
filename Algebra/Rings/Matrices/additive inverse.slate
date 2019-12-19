@@ -33,11 +33,7 @@ $"additive inverse"(
       n = {n}
     ),
     [{
-      constructor = $Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
-        ).matrix,
+      constructor = $Matrices.matrix,
       parameters = #(i: %Binding(
         $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
         #(j: %Binding(
