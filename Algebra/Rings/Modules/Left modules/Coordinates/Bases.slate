@@ -1,0 +1,30 @@
+%../../../../../../../logics/hlm%
+
+$Bases(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element($../"Left modules"(𝐑 = {𝐑}))
+): %SetOperator {
+  display = [$Function(
+    function = 'Ba',
+    arguments = [𝐌]
+  )],
+  definitionDisplay = {
+    parameter = #(𝐱: %Expr),
+    singularName = ['basis', ' of ', 𝐌],
+    pluralName = ['bases', ' of ', 𝐌]
+  },
+  definition = [%subset(
+    #(𝐱: %Element($"Element sequences"(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌}
+    ))),
+    $basis(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌},
+      𝐱 = {𝐱}
+    )
+  )]
+}

@@ -1,0 +1,9 @@
+%../../../../../logics/library%
+
+$Examples: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"column vector space"),
+    %item($"Finite-dimensional vector spaces are isomorphic to column vector spaces")
+  ]
+}

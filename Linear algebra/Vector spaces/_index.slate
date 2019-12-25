@@ -2,5 +2,13 @@
 
 $"Vector spaces": %Section {
   logic = 'hlm',
-  items = [%item($"Vector spaces")]
+  items = [
+    %item($"Vector spaces"),
+    %item($"finite-dimensional"),
+    %item($dimension),
+    %subsection(
+      $Examples,
+      'Examples'
+    )
+  ]
 }

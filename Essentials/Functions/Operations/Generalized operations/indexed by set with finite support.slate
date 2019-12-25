@@ -38,36 +38,70 @@ $"indexed by set with finite support"(
     )
   )],
   parameter = #(x: %Element(X)),
-  definition = [%forall(
-    #(
-      J: %Subset(I),
-      _2: %Constraint($../../../Sets/finite(S = {J})),
-      _3: %Constraint(%forall(
-        #(k: %Element($../../../Sets/"Relative complement"(
-          U = {I},
-          S = {I},
-          T = {J}
-        ))),
-        %equals(
-          a[k],
-          $"neutral element"(
-            X = {X},
-            ⨂ = {⨂}
+  definition = [
+    %forall(
+      #(
+        J: %Subset(I),
+        _2: %Constraint($../../../Sets/finite(S = {J})),
+        _3: %Constraint(%forall(
+          #(k: %Element($../../../Sets/"Relative complement"(
+            U = {I},
+            S = {I},
+            T = {J}
+          ))),
+          %equals(
+            a[k],
+            $"neutral element"(
+              X = {X},
+              ⨂ = {⨂}
+            )
           )
-        )
-      ))
-    ),
-    %equals(
-      $"indexed by finite set"(
-        X = {X},
-        ⨂ = {⨂},
-        I = {J},
-        i = {
-          #(j: %Element(J)),
-          {a = {a[j]}}
-        }
+        ))
       ),
-      x
+      %equals(
+        $"indexed by finite set"(
+          X = {X},
+          ⨂ = {⨂},
+          I = {J},
+          i = {
+            #(j: %Element(J)),
+            {a = {a[j]}}
+          }
+        ),
+        x
+      )
+    ),
+    %exists(
+      #(J: %Subset(I)),
+      formula = %and(
+        $../../../Sets/finite(S = {J}),
+        %forall(
+          #(k: %Element($../../../Sets/"Relative complement"(
+            U = {I},
+            S = {I},
+            T = {J}
+          ))),
+          %equals(
+            a[k],
+            $"neutral element"(
+              X = {X},
+              ⨂ = {⨂}
+            )
+          )
+        ),
+        %equals(
+          $"indexed by finite set"(
+            X = {X},
+            ⨂ = {⨂},
+            I = {J},
+            i = {
+              #(j: %Element(J)),
+              {a = {a[j]}}
+            }
+          ),
+          x
+        )
+      )
     )
-  )]
+  ]
 }

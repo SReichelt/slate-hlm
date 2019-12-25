@@ -1,0 +1,63 @@
+%../../../../../logics/hlm%
+
+$"product with left scalar"(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  m: %Element(
+    $../../../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
+  n: %Element(
+    %previous,
+    auto = %true
+  ),
+  r: %Element($../Carrier(𝐑 = {𝐑})),
+  A: %Element($Matrices(
+    𝐑 = {𝐑},
+    m = {m},
+    n = {n}
+  ))
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '⋅',
+    operands = [r, A],
+    space = ' ',
+    minParenLevel = 2,
+    maxParenLevel = 2
+  )],
+  definition = [%structuralCases(
+    A,
+    $Matrices(
+      𝐑 = {𝐑},
+      m = {m},
+      n = {n}
+    ),
+    [{
+      constructor = $Matrices.matrix,
+      parameters = #(i: %Binding(
+        $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
+        #(j: %Binding(
+          $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+          #(a: %Element($../Carrier(𝐑 = {𝐑})))
+        ))
+      )),
+      value = $Matrices(
+          𝐑 = {𝐑},
+          m = {m},
+          n = {n}
+        ).matrix(i = {
+          #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
+          {j = {
+            #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+            {a = {$../product(
+              𝐑 = {𝐑},
+              a = {r},
+              b = {a[i,j]}
+            )}}
+          }}
+      })
+    }]
+  )]
+}

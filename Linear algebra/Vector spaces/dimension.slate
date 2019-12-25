@@ -1,0 +1,53 @@
+%../../../../logics/hlm%
+
+$dimension(
+  𝐅: %Element(
+    $../../Algebra/Fields/Fields,
+    auto = %true
+  ),
+  𝐕: %Element($"Vector spaces"(𝐅 = {𝐅})),
+  _1: %Constraint($"finite-dimensional"(
+    𝐅 = {𝐅},
+    𝐕 = {𝐕}
+  ))
+): %ImplicitOperator {
+  display = [$Function(
+    function = 'dim',
+    arguments = [𝐕]
+  )],
+  parameter = #(n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")),
+  definition = [
+    %forall(
+      #(𝐱: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
+        𝐑 = {𝐅},
+        𝐌 = {𝐕}
+      ))),
+      %equals(
+        $../../Essentials/Sequences/"ordinal-indexed sequence length"(
+          S = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+            𝐑 = {𝐅},
+            𝐌 = {𝐕}
+          )},
+          𝒂 = {𝐱}
+        ),
+        n
+      )
+    ),
+    %exists(
+      #(𝐱: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
+        𝐑 = {𝐅},
+        𝐌 = {𝐕}
+      ))),
+      formula = %equals(
+        $../../Essentials/Sequences/"ordinal-indexed sequence length"(
+          S = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+            𝐑 = {𝐅},
+            𝐌 = {𝐕}
+          )},
+          𝒂 = {𝐱}
+        ),
+        n
+      )
+    )
+  ]
+}

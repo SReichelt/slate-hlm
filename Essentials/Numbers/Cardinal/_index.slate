@@ -24,6 +24,7 @@ $Cardinal: %Section {
     %item($sum),
     %item($product),
     %item($power),
+    %item($finite),
     %item($"Cardinality of power set")
   ]
 }

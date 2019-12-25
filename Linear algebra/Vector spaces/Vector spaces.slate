@@ -1,6 +1,8 @@
 %../../../../logics/hlm%
 
 /**
+ * @remarks For vector spaces, we reuse the definitions related to modules over a ring where applicable.
+ *
  * @references * https://en.wikipedia.org/wiki/Vector_space
  */
 $"Vector spaces"(𝐅: %Element($../../Algebra/Fields/Fields)): %SetOperator {
@@ -10,8 +12,8 @@ $"Vector spaces"(𝐅: %Element($../../Algebra/Fields/Fields)): %SetOperator {
   )],
   definitionDisplay = {
     parameter = #(𝐕: %Expr),
-    singularName = [[𝐅, '-vector space']],
-    pluralName = [[𝐅, '-vector spaces']]
+    singularName = ['vector space', ' over ', 𝐅],
+    pluralName = ['vector spaces', ' over ', 𝐅]
   },
   definition = [$../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐅})]
 }

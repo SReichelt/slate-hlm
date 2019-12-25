@@ -1,0 +1,42 @@
+%../../../../../../../logics/hlm%
+
+$"basis coordinates"(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element(
+    $../"Left modules"(𝐑 = {𝐑}),
+    auto = %true
+  ),
+  𝐱: %Element($Bases(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  )),
+  m: %Element($../Carrier(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  ))
+): %ImplicitOperator {
+  display = [$Function(
+    function = $SubSup(
+      body = 'coord',
+      sub = 𝐱
+    ),
+    arguments = [m]
+  )],
+  parameter = #(𝐚: %Element($Coordinates(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌},
+    𝐱 = {𝐱}
+  ))),
+  definition = [%equals(
+    $"linear combination"(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌},
+      𝐱 = {𝐱},
+      𝐚 = {𝐚}
+    ),
+    m
+  )]
+}

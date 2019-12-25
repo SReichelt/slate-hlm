@@ -13,6 +13,7 @@ $Sequences: %Section {
     %item($"Infinite sequences"),
     %item($"Ordinal-indexed sequences"),
     %item($"ordinal-indexed sequence length"),
+    %item($finite),
     %item($"starts with")
   ]
 }

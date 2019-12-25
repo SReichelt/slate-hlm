@@ -1,0 +1,30 @@
+%../../../../../logics/hlm%
+
+$finite(α: %Element($"Ordinal numbers")): %Predicate {
+  display = [$Property(
+    operand = α,
+    property = %neg('finite', 'infinite')
+  )],
+  definition = [
+    %in(
+      α,
+      $../Natural/"Natural numbers"
+    ),
+    %structural(
+      α,
+      $"Ordinal numbers",
+      [{
+        constructor = $"Ordinal numbers"."order type",
+        parameters = #(
+          A: %Set,
+          ⪯: %Element($../../Relations/Endorelations(S = {A})),
+          _1: %Constraint($../../Relations/"well-order"(
+            S = {A},
+            ≺ = {⪯}
+          ))
+        ),
+        value = $../../Sets/finite(S = {A})
+      }]
+    )
+  ]
+}

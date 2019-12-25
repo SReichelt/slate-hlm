@@ -1,0 +1,23 @@
+%../../../../../logics/hlm%
+
+$finite(κ: %Element($"Cardinal numbers")): %Predicate {
+  display = [$Property(
+    operand = κ,
+    property = %neg('finite', 'infinite')
+  )],
+  definition = [
+    %in(
+      κ,
+      $../Natural/"Natural numbers"
+    ),
+    %structural(
+      κ,
+      $"Cardinal numbers",
+      [{
+        constructor = $"Cardinal numbers".cardinality,
+        parameters = #(K: %Set),
+        value = $../../Sets/finite(S = {K})
+      }]
+    )
+  ]
+}

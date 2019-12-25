@@ -19,22 +19,46 @@ $basis(
     singular = 'basis',
     plural = 'bases'
   )],
-  definition = [%and(
-    %not($"linearly dependent"(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌},
-      𝐱 = {𝐱}
-    )),
-    %setEquals(
-      $Span(
+  definition = [
+    %and(
+      %not($"linearly dependent"(
         𝐑 = {𝐑},
         𝐌 = {𝐌},
         𝐱 = {𝐱}
-      ),
-      $../Carrier(
+      )),
+      %setEquals(
+        $Span(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌},
+          𝐱 = {𝐱}
+        ),
+        $../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌}
+        )
+      )
+    ),
+    %forall(
+      #(m: %Element($../Carrier(
         𝐑 = {𝐑},
         𝐌 = {𝐌}
+      ))),
+      %existsUnique(
+        #(𝐚: %Element($Coordinates(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌},
+          𝐱 = {𝐱}
+        ))),
+        formula = %equals(
+          $"linear combination"(
+            𝐑 = {𝐑},
+            𝐌 = {𝐌},
+            𝐱 = {𝐱},
+            𝐚 = {𝐚}
+          ),
+          m
+        )
       )
     )
-  )]
+  ]
 }
