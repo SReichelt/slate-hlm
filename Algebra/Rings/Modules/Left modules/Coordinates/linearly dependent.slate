@@ -1,0 +1,66 @@
+%../../../../../../../logics/hlm%
+
+$"linearly dependent"(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element(
+    $../"Left modules"(𝐑 = {𝐑}),
+    auto = %true
+  ),
+  𝐱: %Element($"Element sequences"(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  ))
+): %Predicate {
+  display = [$Property(
+    operand = 𝐱,
+    property = %neg('linearly dependent', 'linearly independent')
+  )],
+  definition = [%exists(
+    #(𝐚: %Element($../../../../../Essentials/Sets/"Relative complement"(
+      U = {$Coordinates(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌},
+        𝐱 = {𝐱}
+      )},
+      S = {$Coordinates(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌},
+        𝐱 = {𝐱}
+      )},
+      T = {%enumeration($../../../../../Essentials/Sequences/"Fixed-length sequences"(
+          S = {$../../../Carrier(𝐑 = {𝐑})},
+          α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
+            S = {$../Carrier(
+              𝐑 = {𝐑},
+              𝐌 = {𝐌}
+            )},
+            𝒂 = {𝐱}
+          )}
+        ).sequence(k = {
+          #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
+            S = {$../Carrier(
+              𝐑 = {𝐑},
+              𝐌 = {𝐌}
+            )},
+            𝒂 = {𝐱}
+          )}))),
+          {a = {$../../../zero(𝐑 = {𝐑})}}
+      }))}
+    ))),
+    formula = %equals(
+      $"linear combination"(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌},
+        𝐱 = {𝐱},
+        𝐚 = {𝐚}
+      ),
+      $../zero(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌}
+      )
+    )
+  )]
+}

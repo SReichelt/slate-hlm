@@ -20,6 +20,10 @@ $Rational: %Section {
     %item($power),
     %item($"power to integer"),
     %subsection(
+      $"Generalized operators",
+      'Generalized operators'
+    ),
+    %subsection(
       $Sequences,
       'Sequences'
     )

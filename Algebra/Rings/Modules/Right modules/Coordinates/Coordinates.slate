@@ -1,0 +1,68 @@
+%../../../../../../../logics/hlm%
+
+/**
+ * @remarks This defines the set of valid coordinate sequences corresponding to a given element sequence. This set only depends on the length of the element sequence. A coordinate sequence is a sequence of ring elements with the same length and finite support.
+ */
+$Coordinates(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element(
+    $../"Right modules"(𝐑 = {𝐑}),
+    auto = %true
+  ),
+  𝐱: %Element($"Element sequences"(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  )),
+  α: %Def($../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
+    S = {$../Carrier(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌}
+    )},
+    𝒂 = {𝐱}
+  ))
+): %SetOperator {
+  display = [$Function(
+    function = 'Coord',
+    arguments = [𝐱]
+  )],
+  definition = [%subset(
+    #(_a: %Element($../../../../../Essentials/Sequences/"Fixed-length sequences"(
+      S = {$../../../Carrier(𝐑 = {𝐑})},
+      α = {α}
+    ))),
+    %structural(
+      _a,
+      $../../../../../Essentials/Sequences/"Fixed-length sequences"(
+        S = {$../../../Carrier(𝐑 = {𝐑})},
+        α = {α}
+      ),
+      [{
+        constructor = $../../../../../Essentials/Sequences/"Fixed-length sequences".sequence,
+        parameters = #(k: %Binding(
+          $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+          #(a: %Element($../../../Carrier(𝐑 = {𝐑})))
+        )),
+        value = %exists(
+          #(S: %Subset($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+          formula = %and(
+            $../../../../../Essentials/Sets/finite(S = {S}),
+            %forall(
+              #(j: %Element($../../../../../Essentials/Sets/"Relative complement"(
+                U = {$../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
+                S = {$../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
+                T = {S}
+              ))),
+              %equals(
+                a[j],
+                $../../../zero(𝐑 = {𝐑})
+              )
+            )
+          )
+        )
+      }]
+    )
+  )]
+}

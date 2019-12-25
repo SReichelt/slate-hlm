@@ -14,29 +14,24 @@ $Groups: %Construction {
     e: %Element(G),
     _2: %Constraint(%forall(
       #(a: %Element(G)),
-      %and(
-        %equals(
-          $../../Essentials/Functions/Operations/value(
-            X = {G},
-            Y = {G},
-            Z = {G},
-            ∗ = {∗},
-            x = {a},
-            y = {e}
-          ),
-          a
+      %equals(
+        $../../Essentials/Functions/Operations/value(
+          X = {G},
+          Y = {G},
+          Z = {G},
+          ∗ = {∗},
+          x = {a},
+          y = {e}
         ),
-        %equals(
-          $../../Essentials/Functions/Operations/value(
-            X = {G},
-            Y = {G},
-            Z = {G},
-            ∗ = {∗},
-            x = {e},
-            y = {a}
-          ),
-          a
-        )
+        $../../Essentials/Functions/Operations/value(
+          X = {G},
+          Y = {G},
+          Z = {G},
+          ∗ = {∗},
+          x = {e},
+          y = {a}
+        ),
+        a
       )
     )),
     i: %Element($../../Essentials/Functions/Functions(
@@ -45,39 +40,34 @@ $Groups: %Construction {
     )),
     _3: %Constraint(%forall(
       #(a: %Element(G)),
-      %and(
-        %equals(
-          $../../Essentials/Functions/Operations/value(
+      %equals(
+        $../../Essentials/Functions/Operations/value(
+          X = {G},
+          Y = {G},
+          Z = {G},
+          ∗ = {∗},
+          x = {a},
+          y = {$../../Essentials/Functions/value(
             X = {G},
             Y = {G},
-            Z = {G},
-            ∗ = {∗},
-            x = {a},
-            y = {$../../Essentials/Functions/value(
-              X = {G},
-              Y = {G},
-              f = {i},
-              x = {a}
-            )}
-          ),
-          e
+            f = {i},
+            x = {a}
+          )}
         ),
-        %equals(
-          $../../Essentials/Functions/Operations/value(
+        $../../Essentials/Functions/Operations/value(
+          X = {G},
+          Y = {G},
+          Z = {G},
+          ∗ = {∗},
+          x = {$../../Essentials/Functions/value(
             X = {G},
             Y = {G},
-            Z = {G},
-            ∗ = {∗},
-            x = {$../../Essentials/Functions/value(
-              X = {G},
-              Y = {G},
-              f = {i},
-              x = {a}
-            )},
-            y = {a}
-          ),
-          e
-        )
+            f = {i},
+            x = {a}
+          )},
+          y = {a}
+        ),
+        e
       )
     ))
   ): %Constructor {
@@ -96,29 +86,24 @@ $Groups: %Construction {
         e: %Element(G),
         _2: %Constraint(%forall(
           #(a: %Element(G)),
-          %and(
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {G},
-                Y = {G},
-                Z = {G},
-                ∗ = {∗},
-                x = {a},
-                y = {e}
-              ),
-              a
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {a},
+              y = {e}
             ),
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {G},
-                Y = {G},
-                Z = {G},
-                ∗ = {∗},
-                x = {e},
-                y = {a}
-              ),
-              a
-            )
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {e},
+              y = {a}
+            ),
+            a
           )
         )),
         i: %Element($../../Essentials/Functions/Functions(
@@ -127,39 +112,34 @@ $Groups: %Construction {
         )),
         _3: %Constraint(%forall(
           #(a: %Element(G)),
-          %and(
-            %equals(
-              $../../Essentials/Functions/Operations/value(
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {a},
+              y = {$../../Essentials/Functions/value(
                 X = {G},
                 Y = {G},
-                Z = {G},
-                ∗ = {∗},
-                x = {a},
-                y = {$../../Essentials/Functions/value(
-                  X = {G},
-                  Y = {G},
-                  f = {i},
-                  x = {a}
-                )}
-              ),
-              e
+                f = {i},
+                x = {a}
+              )}
             ),
-            %equals(
-              $../../Essentials/Functions/Operations/value(
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {$../../Essentials/Functions/value(
                 X = {G},
                 Y = {G},
-                Z = {G},
-                ∗ = {∗},
-                x = {$../../Essentials/Functions/value(
-                  X = {G},
-                  Y = {G},
-                  f = {i},
-                  x = {a}
-                )},
-                y = {a}
-              ),
-              e
-            )
+                f = {i},
+                x = {a}
+              )},
+              y = {a}
+            ),
+            e
           )
         ))
       ),
@@ -173,29 +153,24 @@ $Groups: %Construction {
         f: %Element(H),
         _5: %Constraint(%forall(
           #(b: %Element(H)),
-          %and(
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {H},
-                Y = {H},
-                Z = {H},
-                ∗ = {⋆},
-                x = {b},
-                y = {f}
-              ),
-              b
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {H},
+              Y = {H},
+              Z = {H},
+              ∗ = {⋆},
+              x = {b},
+              y = {f}
             ),
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {H},
-                Y = {H},
-                Z = {H},
-                ∗ = {⋆},
-                x = {f},
-                y = {b}
-              ),
-              b
-            )
+            $../../Essentials/Functions/Operations/value(
+              X = {H},
+              Y = {H},
+              Z = {H},
+              ∗ = {⋆},
+              x = {f},
+              y = {b}
+            ),
+            b
           )
         )),
         j: %Element($../../Essentials/Functions/Functions(
@@ -204,39 +179,34 @@ $Groups: %Construction {
         )),
         _3: %Constraint(%forall(
           #(c: %Element(H)),
-          %and(
-            %equals(
-              $../../Essentials/Functions/Operations/value(
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {H},
+              Y = {H},
+              Z = {H},
+              ∗ = {⋆},
+              x = {c},
+              y = {$../../Essentials/Functions/value(
                 X = {H},
                 Y = {H},
-                Z = {H},
-                ∗ = {⋆},
-                x = {c},
-                y = {$../../Essentials/Functions/value(
-                  X = {H},
-                  Y = {H},
-                  f = {j},
-                  x = {c}
-                )}
-              ),
-              f
+                f = {j},
+                x = {c}
+              )}
             ),
-            %equals(
-              $../../Essentials/Functions/Operations/value(
+            $../../Essentials/Functions/Operations/value(
+              X = {H},
+              Y = {H},
+              Z = {H},
+              ∗ = {⋆},
+              x = {$../../Essentials/Functions/value(
                 X = {H},
                 Y = {H},
-                Z = {H},
-                ∗ = {⋆},
-                x = {$../../Essentials/Functions/value(
-                  X = {H},
-                  Y = {H},
-                  f = {j},
-                  x = {c}
-                )},
-                y = {c}
-              ),
-              f
-            )
+                f = {j},
+                x = {c}
+              )},
+              y = {c}
+            ),
+            f
           )
         ))
       ),

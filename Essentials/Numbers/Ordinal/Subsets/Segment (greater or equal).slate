@@ -6,13 +6,11 @@ $"Segment (greater or equal)"(α: %Element($../"Ordinal numbers")): %SetOperator
     symbol = '≥',
     limit = α
   )],
-  definition = [
-    %subset(
-      #(β: %Element($../"Ordinal numbers")),
-      $../"less or equal"(
-        β = {β},
-        α = {α}
-      )
+  definition = [%subset(
+    #(β: %Element($../"Ordinal numbers")),
+    $../"less or equal"(
+      β = {β},
+      α = {α}
     )
-  ]
+  )]
 }

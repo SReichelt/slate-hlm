@@ -11,9 +11,14 @@ $"Right modules": %Section {
     %item($difference),
     %item($"additive group"),
     %item($product),
+    %item($"generalized sum"),
     %subsection(
       $Homomorphisms,
       'Homomorphisms'
+    ),
+    %subsection(
+      $Coordinates,
+      'Coordinates'
     )
   ]
 }

@@ -6,13 +6,11 @@ $"Segment (greater)"(κ: %Element($../"Cardinal numbers")): %SetOperator {
     symbol = '>',
     limit = κ
   )],
-  definition = [
-    %subset(
-      #(μ: %Element($../"Cardinal numbers")),
-      $../less(
-        μ = {μ},
-        κ = {κ}
-      )
+  definition = [%subset(
+    #(μ: %Element($../"Cardinal numbers")),
+    $../less(
+      μ = {μ},
+      κ = {κ}
     )
-  ]
+  )]
 }

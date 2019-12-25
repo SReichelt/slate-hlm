@@ -1,0 +1,40 @@
+%../../../../../../../logics/hlm%
+
+$basis(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element(
+    $../"Right modules"(𝐑 = {𝐑}),
+    auto = %true
+  ),
+  𝐱: %Element($"Element sequences"(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  ))
+): %Predicate {
+  display = [$NounProperty(
+    operand = 𝐱,
+    singular = 'basis',
+    plural = 'bases'
+  )],
+  definition = [%and(
+    %not($"linearly dependent"(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌},
+      𝐱 = {𝐱}
+    )),
+    %setEquals(
+      $Span(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌},
+        𝐱 = {𝐱}
+      ),
+      $../Carrier(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌}
+      )
+    )
+  )]
+}

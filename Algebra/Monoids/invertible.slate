@@ -13,23 +13,18 @@ $invertible(
   )],
   definition = [%exists(
     #(b: %Element($Carrier(𝐌 = {𝐌}))),
-    formula = %and(
-      %equals(
-        $operation(
-          𝐌 = {𝐌},
-          a = {a},
-          b = {b}
-        ),
-        $identity(𝐌 = {𝐌})
+    formula = %equals(
+      $operation(
+        𝐌 = {𝐌},
+        a = {a},
+        b = {b}
       ),
-      %equals(
-        $operation(
-          𝐌 = {𝐌},
-          a = {b},
-          b = {a}
-        ),
-        $identity(𝐌 = {𝐌})
-      )
+      $operation(
+        𝐌 = {𝐌},
+        a = {b},
+        b = {a}
+      ),
+      $identity(𝐌 = {𝐌})
     )
   )]
 }

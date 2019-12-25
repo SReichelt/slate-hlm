@@ -3,7 +3,14 @@
 $"starts with"(
   S: %Set(auto = %true),
   𝐚: %Element($"Infinite sequences"(S = {S})),
-  𝐛: %Element($"Finite sequences"(S = {S}))
+  n: %Element(
+    $../Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
+  𝐛: %Element($"Fixed-length sequences"(
+    S = {S},
+    α = {n}
+  ))
 ): %Predicate {
   display = [$TextualRelation(
     symbol = 'starts with',
@@ -11,16 +18,16 @@ $"starts with"(
   )],
   definition = [%structural(
     𝐛,
-    $"Finite sequences"(S = {S}),
+    $"Fixed-length sequences"(
+      S = {S},
+      α = {n}
+    ),
     [{
-      constructor = $"Finite sequences".sequence,
-      parameters = #(
-        n: %Element($../Numbers/Natural/"Natural numbers"),
-        k: %Binding(
-          $../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-          #(b: %Element(S))
-        )
-      ),
+      constructor = $"Fixed-length sequences".sequence,
+      parameters = #(j: %Binding(
+        $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}),
+        #(b: %Element(S))
+      )),
       value = %structural(
         𝐚,
         $"Infinite sequences"(S = {S}),

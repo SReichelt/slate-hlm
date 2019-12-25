@@ -1,0 +1,17 @@
+%../../../../../../logics/library%
+
+$"Generalized operators": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"generalized sum"),
+    %item($"Generalized sum grows"),
+    %item($"Generalized sum is greater or equal to each element"),
+    %item($"Generalized sum over constant"),
+    %item($"Generalized sum over variable"),
+    %item($"generalized product"),
+    %item($"Generalized product multiplies"),
+    %item($"Generalized product of positive numbers grows"),
+    %item($"Generalized product is a multiple of each element"),
+    %item($"Generalized product of positive numbers is greater or equal to each element")
+  ]
+}

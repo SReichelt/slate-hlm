@@ -1,0 +1,6 @@
+%../../../../../../logics/library%
+
+$Examples: %Section {
+  logic = 'hlm',
+  items = [%item($omega)]
+}

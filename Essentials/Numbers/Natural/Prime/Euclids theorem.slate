@@ -24,7 +24,9 @@ $"Euclids theorem": %StandardTheorem {
           Y = {$"Prime numbers"}
         ))
       )),
-      a: %Def($../"Generalized sums and products"/"inductive product (exclusive)"(
+      a: %Def($../../../Functions/Operations/"Generalized operations"/"indexed by natural number"(
+        X = {$../"Natural numbers"},
+        ⨂ = {$../"Generalized operators"/"generalized product"},
         n = {n},
         i = {
           #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
@@ -37,7 +39,7 @@ $"Euclids theorem": %StandardTheorem {
         }
       )),
       _: %UseTheorem(
-        $../"Generalized sums and products"/"Inductive product of positive numbers grows"(
+        $../"Generalized operators"/"Generalized product of positive numbers grows"(
           n = {n},
           i = {
             #(j: %Element($../Subsets/"Segment (less)"(n = {n}))),
@@ -96,7 +98,7 @@ $"Euclids theorem": %StandardTheorem {
         )}
       )),
       _: %UseTheorem(
-        $../"Generalized sums and products"/"Inductive product is a multiple of each element"(
+        $../"Generalized operators"/"Generalized product is a multiple of each element"(
           n = {n},
           i = {
             #(k: %Element($../Subsets/"Segment (less)"(n = {n}))),

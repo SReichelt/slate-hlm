@@ -18,6 +18,10 @@ $Complex: %Section {
       $Subsets,
       'Subsets'
     ),
-    %item($quotient)
+    %item($quotient),
+    %subsection(
+      $"Generalized operators",
+      'Generalized operators'
+    )
   ]
 }

@@ -28,6 +28,10 @@ $Integer: %Section {
     %item($"Multiplication of a nonzero number is injective"),
     %item($"Power base product law"),
     %subsection(
+      $"Generalized operators",
+      'Generalized operators'
+    ),
+    %subsection(
       $Prime,
       'Prime Numbers'
     ),

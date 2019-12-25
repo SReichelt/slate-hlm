@@ -1,0 +1,27 @@
+%../../../../../../logics/hlm%
+
+$Interval(
+  a: %Element($../Integers),
+  b: %Element(%previous)
+): %SetOperator {
+  display = [$SubSup(
+    body = 'ℤ',
+    sub = $Tuple(
+      items = [a, b],
+      style = '[]'
+    )
+  )],
+  definition = [%subset(
+    #(c: %Element($../Integers)),
+    %and(
+      $../"less or equal"(
+        a = {a},
+        b = {c}
+      ),
+      $../"less or equal"(
+        a = {c},
+        b = {b}
+      )
+    )
+  )]
+}

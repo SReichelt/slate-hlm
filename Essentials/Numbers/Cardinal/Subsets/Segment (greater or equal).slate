@@ -6,13 +6,11 @@ $"Segment (greater or equal)"(κ: %Element($../"Cardinal numbers")): %SetOperato
     symbol = '≥',
     limit = κ
   )],
-  definition = [
-    %subset(
-      #(μ: %Element($../"Cardinal numbers")),
-      $../"less or equal"(
-        μ = {μ},
-        κ = {κ}
-      )
+  definition = [%subset(
+    #(μ: %Element($../"Cardinal numbers")),
+    $../"less or equal"(
+      μ = {μ},
+      κ = {κ}
     )
-  ]
+  )]
 }

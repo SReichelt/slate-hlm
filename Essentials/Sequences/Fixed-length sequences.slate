@@ -1,0 +1,47 @@
+%../../../../logics/hlm%
+
+$"Fixed-length sequences"(
+  S: %Set(auto = %true),
+  α: %Element($../Numbers/Ordinal/"Ordinal numbers")
+): %Construction {
+  $sequence(k: %Binding(
+    $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+    #(a: %Element(S))
+  )): %Constructor {
+    display = [$SubSup(
+      body = $Parens(
+        body = a,
+        style = '()'
+      ),
+      sub = $Relation(
+        symbol = '<',
+        operands = [k, α]
+      )
+    )],
+    equalityDefinition = {
+      leftParameters = #(k: %Binding(
+        $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+        #(a: %Element(S))
+      )),
+      rightParameters = #(k: %Binding(
+        $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+        #(b: %Element(S))
+      )),
+      definition = [%forall(
+        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+        %equals(a[k], b[k])
+      )],
+      isomorphic = %true
+    }
+  }
+
+  display = [$SubSup(
+    body = S,
+    sup = α
+  )],
+  definitionDisplay = {
+    parameter = #(𝐚: %Expr),
+    singularName = ['sequence', ' on ', S, ' with length ', α],
+    pluralName = ['sequences', ' on ', S, ' with length ', α]
+  }
+}

@@ -29,6 +29,7 @@ $Groups: %Section {
     %subsection(
       $Order,
       'Order'
-    )
+    ),
+    %item($"generalized operation")
   ]
 }

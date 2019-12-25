@@ -1,0 +1,34 @@
+%../../../../../../../logics/hlm%
+
+$Span(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element(
+    $../"Right modules"(𝐑 = {𝐑}),
+    auto = %true
+  ),
+  𝐱: %Element($"Element sequences"(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  ))
+): %SetOperator {
+  display = [$Parens(
+    body = 𝐱,
+    style = '<>'
+  )],
+  definition = [%extendedSubset(
+    #(𝐚: %Element($Coordinates(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌},
+      𝐱 = {𝐱}
+    ))),
+    $"linear combination"(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌},
+      𝐱 = {𝐱},
+      𝐚 = {𝐚}
+    )
+  )]
+}

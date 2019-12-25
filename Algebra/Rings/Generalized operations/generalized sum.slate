@@ -1,0 +1,9 @@
+%../../../../../logics/hlm%
+
+$"generalized sum"(𝐑: %Element($../Rings)): %ExplicitOperator {
+  display = [$SubSup(
+    body = '∑',
+    sub = 𝐑
+  )],
+  definition = [$../../Groups/"generalized operation"(𝐆 = {$../"additive group"(𝐑 = {𝐑})})]
+}

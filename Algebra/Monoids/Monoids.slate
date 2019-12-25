@@ -14,29 +14,24 @@ $Monoids: %Construction {
     e: %Element(M),
     _2: %Constraint(%forall(
       #(a: %Element(M)),
-      %and(
-        %equals(
-          $../../Essentials/Functions/Operations/value(
-            X = {M},
-            Y = {M},
-            Z = {M},
-            ∗ = {∗},
-            x = {a},
-            y = {e}
-          ),
-          a
+      %equals(
+        $../../Essentials/Functions/Operations/value(
+          X = {M},
+          Y = {M},
+          Z = {M},
+          ∗ = {∗},
+          x = {a},
+          y = {e}
         ),
-        %equals(
-          $../../Essentials/Functions/Operations/value(
-            X = {M},
-            Y = {M},
-            Z = {M},
-            ∗ = {∗},
-            x = {e},
-            y = {a}
-          ),
-          a
-        )
+        $../../Essentials/Functions/Operations/value(
+          X = {M},
+          Y = {M},
+          Z = {M},
+          ∗ = {∗},
+          x = {e},
+          y = {a}
+        ),
+        a
       )
     ))
   ): %Constructor {
@@ -55,29 +50,24 @@ $Monoids: %Construction {
         e: %Element(M),
         _2: %Constraint(%forall(
           #(a: %Element(M)),
-          %and(
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {M},
-                Y = {M},
-                Z = {M},
-                ∗ = {∗},
-                x = {a},
-                y = {e}
-              ),
-              a
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {M},
+              Z = {M},
+              ∗ = {∗},
+              x = {a},
+              y = {e}
             ),
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {M},
-                Y = {M},
-                Z = {M},
-                ∗ = {∗},
-                x = {e},
-                y = {a}
-              ),
-              a
-            )
+            $../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {M},
+              Z = {M},
+              ∗ = {∗},
+              x = {e},
+              y = {a}
+            ),
+            a
           )
         ))
       ),
@@ -91,29 +81,24 @@ $Monoids: %Construction {
         f: %Element(N),
         _4: %Constraint(%forall(
           #(b: %Element(N)),
-          %and(
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {N},
-                Y = {N},
-                Z = {N},
-                ∗ = {⋆},
-                x = {b},
-                y = {f}
-              ),
-              b
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {N},
+              Y = {N},
+              Z = {N},
+              ∗ = {⋆},
+              x = {b},
+              y = {f}
             ),
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {N},
-                Y = {N},
-                Z = {N},
-                ∗ = {⋆},
-                x = {f},
-                y = {b}
-              ),
-              b
-            )
+            $../../Essentials/Functions/Operations/value(
+              X = {N},
+              Y = {N},
+              Z = {N},
+              ∗ = {⋆},
+              x = {f},
+              y = {b}
+            ),
+            b
           )
         ))
       ),

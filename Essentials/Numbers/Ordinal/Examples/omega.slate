@@ -1,0 +1,20 @@
+%../../../../../../logics/hlm%
+
+$omega: %ExplicitOperator {
+  display = ['ω'],
+  definition = [$../"Ordinal numbers"."order type"(
+    S = {$../../Natural/"Natural numbers"},
+    ⪯ = {$../../../Relations/predicate(
+      S = {$../../Natural/"Natural numbers"},
+      T = {$../../Natural/"Natural numbers"},
+      parameters = #(
+        m: %Element($../../Natural/"Natural numbers"),
+        n: %Element(%previous)
+      ),
+      predicate = $../../Natural/"less or equal"(
+        m = {m},
+        n = {n}
+      )
+    )}
+  )]
+}

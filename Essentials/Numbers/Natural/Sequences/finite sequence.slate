@@ -11,14 +11,14 @@ $"finite sequence"(
     function = 'seq',
     arguments = [M]
   )],
-  definition = [$../../../Sequences/"Finite sequences"(S = {$../"Natural numbers"}).sequence(
-      n = {$../../Cardinal/"Cardinal numbers".cardinality(S = {M})},
-      k = {
-        #(n: %Element($../Subsets/"Segment (less)"(n = {$../../Cardinal/"Cardinal numbers".cardinality(S = {M})}))),
-        {a = {$../"Technical definitions"/"indexed element"(
-          M = {M},
-          n = {n}
-        )}}
-      }
-  )]
+  definition = [$../../../Sequences/"Fixed-length sequences"(
+      S = {$../"Natural numbers"},
+      α = {$../../Cardinal/"Cardinal numbers".cardinality(S = {M})}
+    ).sequence(k = {
+      #(n: %Element($../../Ordinal/Subsets/"Segment (less)"(α = {$../../Cardinal/"Cardinal numbers".cardinality(S = {M})}))),
+      {a = {$../"Technical definitions"/"indexed element"(
+        M = {M},
+        n = {n}
+      )}}
+  })]
 }

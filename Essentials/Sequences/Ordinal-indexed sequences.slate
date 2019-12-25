@@ -6,41 +6,38 @@
 $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
     α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-    k: %Binding(
-      $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
-      #(a: %Element(S))
-    )
+    𝐚: %Element($"Fixed-length sequences"(
+      S = {S},
+      α = {α}
+    ))
   ): %Constructor {
-    display = [$SubSup(
-      body = $Parens(
-        body = a,
-        style = '()'
-      ),
-      sub = $Relation(
-        symbol = '<',
-        operands = [k, α]
-      )
-    )],
+    display = [$Tuple(items = [α, 𝐚])],
     equalityDefinition = {
       leftParameters = #(
         α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-        k: %Binding(
-          $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
-          #(a: %Element(S))
-        )
+        𝐚: %Element($"Fixed-length sequences"(
+          S = {S},
+          α = {α}
+        ))
       ),
       rightParameters = #(
-        "α'": %Element($../Numbers/Ordinal/"Ordinal numbers"),
-        k: %Binding(
-          $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {"α'"}),
-          #("a'": %Element(S))
-        )
+        β: %Element($../Numbers/Ordinal/"Ordinal numbers"),
+        𝐛: %Element($"Fixed-length sequences"(
+          S = {S},
+          α = {β}
+        ))
       ),
       definition = [%and(
-        %equals(α, "α'"),
-        %forall(
-          #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
-          %equals(a[k], "a'"[k])
+        %equals(α, β),
+        %equals(
+          𝐚,
+          %asElementOf(
+            𝐛,
+            $"Fixed-length sequences"(
+              S = {S},
+              α = {α}
+            )
+          )
         )
       )],
       isomorphic = %true
@@ -52,38 +49,41 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
     sup = '⋆'
   )],
   definitionDisplay = {
-    parameter = #(𝐚: %Expr),
+    parameter = #(𝒂: %Expr),
     singularName = ['ordinal-indexed sequence', ' on ', S],
     pluralName = ['ordinal-indexed sequences', ' on ', S]
   },
   embedding = {
-    parameter = #(𝐚: %Element($"Finite sequences"(S = {S}))),
+    parameter = #(𝒂: %Element($"Finite sequences"(S = {S}))),
     target = $"Ordinal-indexed sequences".sequence(
       α = {$"finite sequence length"(
         S = {S},
-        𝐚 = {𝐚}
+        𝒂 = {𝒂}
       )},
-      k = {
-        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {$"finite sequence length"(
-          S = {S},
-          𝐚 = {𝐚}
-        )}))),
-        {a = {%structuralCases(
-          𝐚,
-          $"Finite sequences"(S = {S}),
-          [{
-            constructor = $"Finite sequences".sequence,
-            parameters = #(
-              n: %Element($../Numbers/Natural/"Natural numbers"),
-              j: %Binding(
-                $../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-                #(a: %Element(S))
-              )
-            ),
-            value = a[k]
-          }]
-        )}}
-      }
+      𝐚 = {%structuralCases(
+        𝒂,
+        $"Finite sequences"(S = {S}),
+        [{
+          constructor = $"Finite sequences".sequence,
+          parameters = #(
+            n: %Element($../Numbers/Natural/"Natural numbers"),
+            𝐚: %Element($"Fixed-length sequences"(
+              S = {S},
+              α = {n}
+            ))
+          ),
+          value = %asElementOf(
+            𝐚,
+            $"Fixed-length sequences"(
+              S = {S},
+              α = {$"finite sequence length"(
+                S = {S},
+                𝒂 = {𝒂}
+              )}
+            )
+          )
+        }]
+      )}
     )
   }
 }

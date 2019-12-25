@@ -1,0 +1,17 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Vector_space
+ */
+$"Vector spaces"(𝐅: %Element($../../Algebra/Fields/Fields)): %SetOperator {
+  display = [$Function(
+    function = '𝓥𝓮𝓬',
+    arguments = [𝐅]
+  )],
+  definitionDisplay = {
+    parameter = #(𝐕: %Expr),
+    singularName = [[𝐅, '-vector space']],
+    pluralName = [[𝐅, '-vector spaces']]
+  },
+  definition = [$../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐅})]
+}

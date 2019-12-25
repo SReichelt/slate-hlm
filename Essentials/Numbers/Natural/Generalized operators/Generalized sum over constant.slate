@@ -1,0 +1,22 @@
+%../../../../../../logics/hlm%
+
+$"Generalized sum over constant"(
+  n: %Element($../"Natural numbers"),
+  a: %Element(%previous)
+): %StandardTheorem {
+  claim = %equals(
+    $../../../Functions/Operations/"Generalized operations"/"indexed by natural number"(
+      X = {$../"Natural numbers"},
+      ⨂ = {$"generalized sum"},
+      i = {
+        #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
+        {a = {a}}
+      },
+      n = {n}
+    ),
+    $../product(
+      m = {n},
+      n = {a}
+    )
+  )
+}

@@ -1,0 +1,13 @@
+%../../../../../../../logics/library%
+
+$Coordinates: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"Element sequences"),
+    %item($Coordinates),
+    %item($"linear combination"),
+    %item($"linearly dependent"),
+    %item($Span),
+    %item($basis)
+  ]
+}

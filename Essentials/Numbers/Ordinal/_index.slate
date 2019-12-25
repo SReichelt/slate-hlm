@@ -22,6 +22,10 @@ $Ordinal: %Section {
     ),
     %item($"Less or equal is a well-order"),
     %item($sum),
-    %item($product)
+    %item($product),
+    %subsection(
+      $Examples,
+      'Examples'
+    )
   ]
 }

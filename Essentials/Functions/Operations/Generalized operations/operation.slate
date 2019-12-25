@@ -1,0 +1,54 @@
+%../../../../../../logics/hlm%
+
+$operation(
+  X: %Set(auto = %true),
+  ⨂: %Element($"Generalized operations"(X = {X}))
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = '∗',
+    sub = ⨂
+  )],
+  definition = [%structuralCases(
+    ⨂,
+    $"Generalized operations"(X = {X}),
+    [{
+      constructor = $"Generalized operations".operation,
+      parameters = #(
+        ∗: %Element($../"Inner operations"(X = {X})),
+        _1: %Constraint($../associative(
+          X = {X},
+          ∗ = {∗}
+        )),
+        _2: %Constraint($../commutative(
+          X = {X},
+          Z = {X},
+          ∗ = {∗}
+        )),
+        e: %Element(X),
+        _3: %Constraint(%forall(
+          #(x: %Element(X)),
+          %equals(
+            $../value(
+              X = {X},
+              Y = {X},
+              Z = {X},
+              ∗ = {∗},
+              x = {x},
+              y = {e}
+            ),
+            $../value(
+              X = {X},
+              Y = {X},
+              Z = {X},
+              ∗ = {∗},
+              x = {e},
+              y = {x}
+            ),
+            x
+          )
+        ))
+      ),
+      value = ∗
+    }]
+  )]
+}

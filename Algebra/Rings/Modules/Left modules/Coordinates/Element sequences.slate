@@ -1,0 +1,21 @@
+%../../../../../../../logics/hlm%
+
+/**
+ * @remarks The main point of defining sequences of module elements is to define when such a sequence is a basis. We want all bases to be ordered, so that coordinates and matrices make sense. To cover as many cases as possible, we use ordinal-indexed sequences.
+ */
+$"Element sequences"(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element($../"Left modules"(𝐑 = {𝐑}))
+): %SetOperator {
+  display = [$SubSup(
+    body = 𝐌,
+    sup = '⋆'
+  )],
+  definition = [$../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = {$../Carrier(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  )})]
+}

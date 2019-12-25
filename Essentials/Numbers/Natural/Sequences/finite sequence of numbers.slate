@@ -5,9 +5,12 @@ $"finite sequence of numbers"(items: %Nat[]): %MacroOperator {
     items = items,
     style = '()'
   )],
+  variables = #(length: %Nat),
   references = {
-    "Finite sequences" = $../../../Sequences/"Finite sequences"(S = {$../"Natural numbers"}),
-    "finite sequence" = $../../../Sequences/"finite sequence",
-    number = $../number
+    "Fixed-length sequences" = $../../../Sequences/"Fixed-length sequences"(
+      S = {$../"Natural numbers"},
+      α = {$../number(value = length)}
+    ),
+    "finite sequence" = $../../../Sequences/"finite sequence"
   }
 }

@@ -1,0 +1,23 @@
+%../../../../../../logics/hlm%
+
+$"Generalized sum is greater or equal to each element"(
+  n: %Element($../"Natural numbers"),
+  i: %Binding(
+    $../Subsets/"Segment (less)"(n = {n}),
+    #(a: %Element($../"Natural numbers"))
+  ),
+  j: %Element($../Subsets/"Segment (less)"(n = {n}))
+): %StandardTheorem {
+  claim = $../"less or equal"(
+    m = {a[j]},
+    n = {$../../../Functions/Operations/"Generalized operations"/"indexed by natural number"(
+      X = {$../"Natural numbers"},
+      ⨂ = {$"generalized product"},
+      n = {n},
+      i = {
+        #(k: %Element($../Subsets/"Segment (less)"(n = {n}))),
+        {a = {a[k]}}
+      }
+    )}
+  )
+}

@@ -12,41 +12,38 @@
 $"Finite sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
     n: %Element($../Numbers/Natural/"Natural numbers"),
-    k: %Binding(
-      $../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-      #(a: %Element(S))
-    )
+    𝐚: %Element($"Fixed-length sequences"(
+      S = {S},
+      α = {n}
+    ))
   ): %Constructor {
-    display = [$SubSup(
-      body = $Parens(
-        body = a,
-        style = '()'
-      ),
-      sub = $Relation(
-        symbol = '<',
-        operands = [k, n]
-      )
-    )],
+    display = [$Tuple(items = [n, 𝐚])],
     equalityDefinition = {
       leftParameters = #(
-        n: %Element($../Numbers/Natural/"Natural numbers"),
-        k: %Binding(
-          $../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-          #(a: %Element(S))
-        )
+        m: %Element($../Numbers/Natural/"Natural numbers"),
+        𝐚: %Element($"Fixed-length sequences"(
+          S = {S},
+          α = {m}
+        ))
       ),
       rightParameters = #(
-        "n'": %Element($../Numbers/Natural/"Natural numbers"),
-        k: %Binding(
-          $../Numbers/Natural/Subsets/"Segment (less)"(n = {"n'"}),
-          #("a'": %Element(S))
-        )
+        n: %Element($../Numbers/Natural/"Natural numbers"),
+        𝐛: %Element($"Fixed-length sequences"(
+          S = {S},
+          α = {n}
+        ))
       ),
       definition = [%and(
-        %equals(n, "n'"),
-        %forall(
-          #(k: %Element($../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-          %equals(a[k], "a'"[k])
+        %equals(m, n),
+        %equals(
+          𝐚,
+          %asElementOf(
+            𝐛,
+            $"Fixed-length sequences"(
+              S = {S},
+              α = {m}
+            )
+          )
         )
       )],
       isomorphic = %true
@@ -58,7 +55,7 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
     sup = '∗'
   )],
   definitionDisplay = {
-    parameter = #(𝐚: %Expr),
+    parameter = #(𝒂: %Expr),
     singularName = ['finite sequence', ' on ', S],
     pluralName = ['finite sequences', ' on ', S]
   }

@@ -18,6 +18,10 @@ $Operations: %Section {
     %item($"left-distributive"),
     %item($"right-distributive"),
     %item($distributive),
-    %item($"inner operation restriction")
+    %item($"inner operation restriction"),
+    %subsection(
+      $"Generalized operations",
+      'Generalized operations'
+    )
   ]
 }

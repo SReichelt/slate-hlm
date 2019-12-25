@@ -7,12 +7,12 @@ $"right modules"(
   u: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
   𝐑: %Element($../../Algebra/Rings/Rings)
 ): %ExplicitOperator {
-  display = [$SubSup(
-    body = $Function(
-      function = '𝐑𝐌𝐨𝐝',
-      arguments = [𝐑]
+  display = [$Function(
+    function = $SubSup(
+      body = '𝐑𝐌𝐨𝐝',
+      sub = u
     ),
-    sub = u
+    arguments = [𝐑]
   )],
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Rings/Modules/"Right modules"/"Right modules"(𝐑 = {𝐑})},

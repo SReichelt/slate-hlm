@@ -34,11 +34,11 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
       )),
       rightParameters = #(n: %Binding(
         $../Numbers/Natural/"Natural numbers",
-        #("a'": %Element(S))
+        #(b: %Element(S))
       )),
       definition = [%forall(
         #(n: %Element($../Numbers/Natural/"Natural numbers")),
-        %equals(a[n], "a'"[n])
+        %equals(a[n], b[n])
       )],
       isomorphic = %true
     }
@@ -52,5 +52,29 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     parameter = #(𝐚: %Expr),
     singularName = ['sequence', ' on ', S],
     pluralName = ['sequences', ' on ', S]
+  },
+  embedding = {
+    parameter = #(𝐚: %Element($"Fixed-length sequences"(
+      S = {S},
+      α = {$../Numbers/Ordinal/Examples/omega}
+    ))),
+    target = $"Infinite sequences".sequence(n = {
+      #(k: %Element($../Numbers/Natural/"Natural numbers")),
+      {a = {%structuralCases(
+        𝐚,
+        $"Fixed-length sequences"(
+          S = {S},
+          α = {$../Numbers/Ordinal/Examples/omega}
+        ),
+        [{
+          constructor = $"Fixed-length sequences".sequence,
+          parameters = #(j: %Binding(
+            $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../Numbers/Ordinal/Examples/omega}),
+            #(a: %Element(S))
+          )),
+          value = a[k]
+        }]
+      )}}
+    })
   }
 }

@@ -1,0 +1,89 @@
+%../../../../logics/hlm%
+
+$"generalized operation"(
+  𝐆: %Element($Groups),
+  _1: %Constraint($abelian(𝐆 = {𝐆}))
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = '∏',
+    sub = 𝐆
+  )],
+  definition = [%structuralCases(
+    𝐆,
+    $Groups,
+    [{
+      constructor = $Groups.group,
+      parameters = #(
+        G: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+        _1: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {G},
+          ∗ = {∗}
+        )),
+        e: %Element(G),
+        _2: %Constraint(%forall(
+          #(a: %Element(G)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {a},
+              y = {e}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {e},
+              y = {a}
+            ),
+            a
+          )
+        )),
+        i: %Element($../../Essentials/Functions/Functions(
+          X = {G},
+          Y = {G}
+        )),
+        _3: %Constraint(%forall(
+          #(a: %Element(G)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {a},
+              y = {$../../Essentials/Functions/value(
+                X = {G},
+                Y = {G},
+                f = {i},
+                x = {a}
+              )}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {$../../Essentials/Functions/value(
+                X = {G},
+                Y = {G},
+                f = {i},
+                x = {a}
+              )},
+              y = {a}
+            ),
+            e
+          )
+        ))
+      ),
+      value = $../../Essentials/Functions/Operations/"Generalized operations"/"Generalized operations"(X = {G}).operation(
+          ∗ = {∗},
+          e = {e}
+      )
+    }]
+  )]
+}

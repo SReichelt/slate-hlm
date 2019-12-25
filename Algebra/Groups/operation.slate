@@ -30,29 +30,24 @@ $operation(
         e: %Element(G),
         _2: %Constraint(%forall(
           #(a: %Element(G)),
-          %and(
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {G},
-                Y = {G},
-                Z = {G},
-                ∗ = {∗},
-                x = {a},
-                y = {e}
-              ),
-              a
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {a},
+              y = {e}
             ),
-            %equals(
-              $../../Essentials/Functions/Operations/value(
-                X = {G},
-                Y = {G},
-                Z = {G},
-                ∗ = {∗},
-                x = {e},
-                y = {a}
-              ),
-              a
-            )
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {e},
+              y = {a}
+            ),
+            a
           )
         )),
         i: %Element($../../Essentials/Functions/Functions(
@@ -61,39 +56,34 @@ $operation(
         )),
         _3: %Constraint(%forall(
           #(a: %Element(G)),
-          %and(
-            %equals(
-              $../../Essentials/Functions/Operations/value(
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {a},
+              y = {$../../Essentials/Functions/value(
                 X = {G},
                 Y = {G},
-                Z = {G},
-                ∗ = {∗},
-                x = {a},
-                y = {$../../Essentials/Functions/value(
-                  X = {G},
-                  Y = {G},
-                  f = {i},
-                  x = {a}
-                )}
-              ),
-              e
+                f = {i},
+                x = {a}
+              )}
             ),
-            %equals(
-              $../../Essentials/Functions/Operations/value(
+            $../../Essentials/Functions/Operations/value(
+              X = {G},
+              Y = {G},
+              Z = {G},
+              ∗ = {∗},
+              x = {$../../Essentials/Functions/value(
                 X = {G},
                 Y = {G},
-                Z = {G},
-                ∗ = {∗},
-                x = {$../../Essentials/Functions/value(
-                  X = {G},
-                  Y = {G},
-                  f = {i},
-                  x = {a}
-                )},
-                y = {a}
-              ),
-              e
-            )
+                f = {i},
+                x = {a}
+              )},
+              y = {a}
+            ),
+            e
           )
         ))
       ),

@@ -1,0 +1,9 @@
+%../../../../../logics/hlm%
+
+$"generalized product"(𝐑: %Element($../Rings)): %ExplicitOperator {
+  display = [$SubSup(
+    body = '∏',
+    sub = 𝐑
+  )],
+  definition = [$../../Monoids/"generalized operation"(𝐌 = {$../"multiplicative monoid"(𝐑 = {𝐑})})]
+}

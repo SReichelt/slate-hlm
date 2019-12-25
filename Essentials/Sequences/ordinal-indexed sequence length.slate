@@ -2,23 +2,23 @@
 
 $"ordinal-indexed sequence length"(
   S: %Set(auto = %true),
-  𝐚: %Element($"Ordinal-indexed sequences"(S = {S}))
+  𝒂: %Element($"Ordinal-indexed sequences"(S = {S}))
 ): %ExplicitOperator {
   display = [$Parens(
-    body = 𝐚,
+    body = 𝒂,
     style = '||'
   )],
   definition = [%structuralCases(
-    𝐚,
+    𝒂,
     $"Ordinal-indexed sequences"(S = {S}),
     [{
       constructor = $"Ordinal-indexed sequences".sequence,
       parameters = #(
         α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-        k: %Binding(
-          $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
-          #(a: %Element(S))
-        )
+        𝐚: %Element($"Fixed-length sequences"(
+          S = {S},
+          α = {α}
+        ))
       ),
       value = α
     }]

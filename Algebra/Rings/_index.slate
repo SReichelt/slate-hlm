@@ -12,6 +12,7 @@ $Rings: %Section {
     %item($"additive group"),
     %item($product),
     %item($one),
+    %item($"multiplicative monoid"),
     %subsection(
       $Homomorphisms,
       'Homomorphisms'
@@ -34,8 +35,8 @@ $Rings: %Section {
     ),
     %item($"kronecker delta"),
     %subsection(
-      $"Generalized sums and products",
-      'Generalized sums and products'
+      $"Generalized operations",
+      'Generalized operations'
     ),
     %subsection(
       $Polynomials,

@@ -22,6 +22,7 @@ $Monoids: %Section {
       'Examples'
     ),
     %item($invertible),
-    %item($inverse)
+    %item($inverse),
+    %item($"generalized operation")
   ]
 }

@@ -105,29 +105,24 @@ $identity(
             𝐘: %Element(%previous),
             f: %Element(M[𝐗,𝐘])
           ),
-          %and(
-            %equals(
-              $../Essentials/Functions/Operations/value(
-                X = {M[𝐘,𝐘]},
-                Y = {M[𝐗,𝐘]},
-                Z = {M[𝐗,𝐘]},
-                ∗ = {∘[𝐗,𝐘,𝐘]},
-                x = {i[𝐘]},
-                y = {f}
-              ),
-              f
+          %equals(
+            $../Essentials/Functions/Operations/value(
+              X = {M[𝐘,𝐘]},
+              Y = {M[𝐗,𝐘]},
+              Z = {M[𝐗,𝐘]},
+              ∗ = {∘[𝐗,𝐘,𝐘]},
+              x = {i[𝐘]},
+              y = {f}
             ),
-            %equals(
-              $../Essentials/Functions/Operations/value(
-                X = {M[𝐗,𝐘]},
-                Y = {M[𝐗,𝐗]},
-                Z = {M[𝐗,𝐘]},
-                ∗ = {∘[𝐗,𝐗,𝐘]},
-                x = {f},
-                y = {i[𝐗]}
-              ),
-              f
-            )
+            $../Essentials/Functions/Operations/value(
+              X = {M[𝐗,𝐘]},
+              Y = {M[𝐗,𝐗]},
+              Z = {M[𝐗,𝐘]},
+              ∗ = {∘[𝐗,𝐗,𝐘]},
+              x = {f},
+              y = {i[𝐗]}
+            ),
+            f
           )
         )),
         _3: %Constraint(%forall(

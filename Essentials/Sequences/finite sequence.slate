@@ -11,8 +11,9 @@ $"finite sequence"(
     ),
     sub = S
   )],
-  references = {
-    "Finite sequences" = $"Finite sequences"(S = {S}),
-    number = $../Numbers/Natural/number
-  }
+  variables = #(length: %Nat),
+  references = {"Fixed-length sequences" = $"Fixed-length sequences"(
+    S = {S},
+    α = {$../Numbers/Natural/number(value = length)}
+  )}
 }

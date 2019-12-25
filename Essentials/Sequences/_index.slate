@@ -3,6 +3,7 @@
 $Sequences: %Section {
   logic = 'hlm',
   items = [
+    %item($"Fixed-length sequences"),
     %item($"Finite sequences"),
     %item(
       $"finite sequence",

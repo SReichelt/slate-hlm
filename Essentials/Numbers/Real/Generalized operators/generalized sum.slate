@@ -1,0 +1,26 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Summation
+ *             * http://mathworld.wolfram.com/Sum.html
+ *             * https://proofwiki.org/wiki/Definition:Summation
+ */
+$"generalized sum": %ExplicitOperator {
+  display = ['∑'],
+  definition = [$../../../Functions/Operations/"Generalized operations"/"Generalized operations"(X = {$../"Real numbers"}).operation(
+      ∗ = {$../../../Functions/Operations/operator(
+        X = {$../"Real numbers"},
+        Y = {$../"Real numbers"},
+        Z = {$../"Real numbers"},
+        parameters = #(
+          a: %Element($../"Real numbers"),
+          b: %Element(%previous)
+        ),
+        operator = $../sum(
+          a = {a},
+          b = {b}
+        )
+      )},
+      e = {$../../Natural/number(value = 0)}
+  )]
+}

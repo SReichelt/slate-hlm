@@ -2,23 +2,23 @@
 
 $"finite sequence length"(
   S: %Set(auto = %true),
-  𝐚: %Element($"Finite sequences"(S = {S}))
+  𝒂: %Element($"Finite sequences"(S = {S}))
 ): %ExplicitOperator {
   display = [$Parens(
-    body = 𝐚,
+    body = 𝒂,
     style = '||'
   )],
   definition = [%structuralCases(
-    𝐚,
+    𝒂,
     $"Finite sequences"(S = {S}),
     [{
       constructor = $"Finite sequences".sequence,
       parameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
-        k: %Binding(
-          $../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-          #(a: %Element(S))
-        )
+        𝐚: %Element($"Fixed-length sequences"(
+          S = {S},
+          α = {n}
+        ))
       ),
       value = n
     }]

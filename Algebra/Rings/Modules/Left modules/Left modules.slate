@@ -811,7 +811,7 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
   )],
   definitionDisplay = {
     parameter = #(𝐌: %Expr),
-    singularName = ['left ', 𝐑, '-module'],
-    pluralName = ['left ', 𝐑, '-modules']
+    singularName = [['left ', 𝐑, '-module']],
+    pluralName = [['left ', 𝐑, '-modules']]
   }
 }

@@ -1,0 +1,6 @@
+%../../../../logics/library%
+
+$"Vector spaces": %Section {
+  logic = 'hlm',
+  items = [%item($"Vector spaces")]
+}
