@@ -1,0 +1,28 @@
+%../../../../../logics/hlm%
+
+$"subfield set"(
+  𝐅: %Element($../Fields),
+  S: %Subset($../../Rings/Carrier(𝐑 = {𝐅}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [S, 𝐅],
+    singular = 'subfield',
+    plural = 'subfields'
+  )],
+  definition = [%and(
+    $../../Rings/Subrings/"subring set"(
+      𝐑 = {𝐅},
+      S = {S}
+    ),
+    %forall(
+      #(a: %Element(S)),
+      %in(
+        $../../Rings/"multiplicative inverse"(
+          𝐑 = {𝐅},
+          a = {a}
+        ),
+        S
+      )
+    )
+  )]
+}

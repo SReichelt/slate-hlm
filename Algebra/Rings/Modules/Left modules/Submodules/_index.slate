@@ -1,0 +1,10 @@
+%../../../../../../../logics/library%
+
+$Submodules: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"submodule set"),
+    %item($"subset module"),
+    %item($submodule)
+  ]
+}

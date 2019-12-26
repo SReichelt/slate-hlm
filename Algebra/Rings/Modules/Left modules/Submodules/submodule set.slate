@@ -1,0 +1,69 @@
+%../../../../../../../logics/hlm%
+
+$"submodule set"(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element($../"Left modules"(𝐑 = {𝐑})),
+  S: %Subset($../Carrier(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  ))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [S, 𝐌],
+    singular = 'submodule',
+    plural = 'submodules'
+  )],
+  definition = [%and(
+    %forall(
+      #(
+        a: %Element(S),
+        b: %Element(%previous)
+      ),
+      %in(
+        $../sum(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌},
+          x = {a},
+          y = {b}
+        ),
+        S
+      )
+    ),
+    %in(
+      $../zero(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌}
+      ),
+      S
+    ),
+    %forall(
+      #(c: %Element(S)),
+      %in(
+        $../"additive inverse"(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌},
+          x = {c}
+        ),
+        S
+      )
+    ),
+    %forall(
+      #(
+        d: %Element($../../../Carrier(𝐑 = {𝐑})),
+        e: %Element(S)
+      ),
+      %in(
+        $../product(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌},
+          a = {d},
+          x = {e}
+        ),
+        S
+      )
+    )
+  )]
+}

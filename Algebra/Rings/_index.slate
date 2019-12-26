@@ -17,6 +17,10 @@ $Rings: %Section {
       $Homomorphisms,
       'Homomorphisms'
     ),
+    %subsection(
+      $Subrings,
+      'Subrings'
+    ),
     %item($unit),
     %item($Units),
     %item($"multiplicative inverse"),

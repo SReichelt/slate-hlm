@@ -1,32 +1,32 @@
 %../../../../logics/hlm%
 
 $"semigroup with identity"(
-  𝐌: %Element($../Semigroups/Semigroups),
+  𝐒: %Element($../Semigroups/Semigroups),
   _1: %Constraint(%exists(
-    #(e: %Element($../Magmas/Carrier(𝐌 = {𝐌}))),
+    #(e: %Element($../Magmas/Carrier(𝐌 = {𝐒}))),
     formula = $../Magmas/"identity element"(
-      𝐌 = {𝐌},
+      𝐌 = {𝐒},
       e = {e}
     )
   ))
 ): %ExplicitOperator {
   display = [$SubSup(
-    body = 𝐌,
+    body = 𝐒,
     sub = '𝓜𝓸𝓷'
   )],
   definition = [%structuralCases(
-    𝐌,
+    𝐒,
     $../Magmas/Magmas,
     [{
       constructor = $../Magmas/Magmas.magma,
       parameters = #(
-        M: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+        S: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S}))
       ),
       value = $Monoids.monoid(
-        M = {M},
+        M = {S},
         ∗ = {∗},
-        e = {$../Magmas/identity(𝐌 = {𝐌})}
+        e = {$../Magmas/identity(𝐌 = {𝐒})}
       )
     }]
   )]

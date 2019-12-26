@@ -6,6 +6,10 @@ $Fields: %Section {
     %item($Fields),
     %item($quotient),
     %subsection(
+      $Subfields,
+      'Subfields'
+    ),
+    %subsection(
       $Examples,
       'Examples'
     )

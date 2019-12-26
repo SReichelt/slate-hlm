@@ -18,6 +18,8 @@ $Operations: %Section {
     %item($"left-distributive"),
     %item($"right-distributive"),
     %item($distributive),
+    %item($"left operation restriction"),
+    %item($"right operation restriction"),
     %item($"inner operation restriction"),
     %subsection(
       $"Generalized operations",

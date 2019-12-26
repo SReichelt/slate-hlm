@@ -1,0 +1,42 @@
+%../../../../logics/hlm%
+
+$"power to integer"(
+  𝐆: %Element(
+    $Groups,
+    auto = %true
+  ),
+  a: %Element($Carrier(𝐆 = {𝐆})),
+  z: %Element($../../Essentials/Numbers/Integer/Integers)
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = a,
+    sup = z
+  )],
+  definition = [%cases([
+    {
+      formula = $../../Essentials/Numbers/Integer/"less or equal"(
+        b = {z},
+        a = {$../../Essentials/Numbers/Natural/number(value = 0)}
+      ),
+      value = $"power to natural number"(
+        𝐆 = {𝐆},
+        a = {a},
+        n = {z}
+      )
+    },
+    {
+      formula = $../../Essentials/Numbers/Integer/less(
+        a = {z},
+        b = {$../../Essentials/Numbers/Natural/number(value = 0)}
+      ),
+      value = $"power to natural number"(
+        𝐆 = {𝐆},
+        a = {$inverse(
+          𝐆 = {𝐆},
+          a = {a}
+        )},
+        n = {$../../Essentials/Numbers/Integer/inverse(a = {z})}
+      )
+    }
+  ])]
+}

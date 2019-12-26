@@ -15,12 +15,12 @@ $inverse(
     body = a,
     sup = '-1'
   )],
-  parameter = #(m: %Element($Carrier(𝐌 = {𝐌}))),
+  parameter = #(b: %Element($Carrier(𝐌 = {𝐌}))),
   definition = [%equals(
     $operation(
       𝐌 = {𝐌},
       a = {a},
-      b = {m}
+      b = {b}
     ),
     $identity(𝐌 = {𝐌})
   )]

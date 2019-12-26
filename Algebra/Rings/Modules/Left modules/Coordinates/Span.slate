@@ -18,17 +18,96 @@ $Span(
     body = 𝐱,
     style = '<>'
   )],
-  definition = [%extendedSubset(
-    #(𝐚: %Element($Coordinates(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌},
-      𝐱 = {𝐱}
-    ))),
-    $"linear combination"(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌},
-      𝐱 = {𝐱},
-      𝐚 = {𝐚}
+  definition = [
+    %setStructuralCases(
+      𝐱,
+      $../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = {$../Carrier(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌}
+      )}),
+      [{
+        constructor = $../../../../../Essentials/Sequences/"Ordinal-indexed sequences".sequence,
+        parameters = #(
+          α: %Element($../../../../../Essentials/Numbers/Ordinal/"Ordinal numbers"),
+          _m: %Element($../../../../../Essentials/Sequences/"Fixed-length sequences"(
+            S = {$../Carrier(
+              𝐑 = {𝐑},
+              𝐌 = {𝐌}
+            )},
+            α = {α}
+          ))
+        ),
+        value = %setStructuralCases(
+          _m,
+          $../../../../../Essentials/Sequences/"Fixed-length sequences"(
+            S = {$../Carrier(
+              𝐑 = {𝐑},
+              𝐌 = {𝐌}
+            )},
+            α = {α}
+          ),
+          [{
+            constructor = $../../../../../Essentials/Sequences/"Fixed-length sequences".sequence,
+            parameters = #(k: %Binding(
+              $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+              #(x: %Element($../Carrier(
+                𝐑 = {𝐑},
+                𝐌 = {𝐌}
+              )))
+            )),
+            value = $../../../../../Essentials/Sets/"Generalized intersection using power set"(
+              U = {$../Carrier(
+                𝐑 = {𝐑},
+                𝐌 = {𝐌}
+              )},
+              S = {%subset(
+                #(_m: %Element($../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐌}
+                )}))),
+                %structural(
+                  _m,
+                  $../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
+                    𝐑 = {𝐑},
+                    𝐌 = {𝐌}
+                  )}),
+                  [{
+                    constructor = $../../../../../Essentials/Sets/"Power set".subset,
+                    parameters = #(S: %Subset($../Carrier(
+                      𝐑 = {𝐑},
+                      𝐌 = {𝐌}
+                    ))),
+                    value = %and(
+                      $../Submodules/"submodule set"(
+                        𝐑 = {𝐑},
+                        𝐌 = {𝐌},
+                        S = {S}
+                      ),
+                      %forall(
+                        #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+                        %in(x[k], S)
+                      )
+                    )
+                  }]
+                )
+              )}
+            )
+          }]
+        )
+      }]
+    ),
+    %extendedSubset(
+      #(𝐚: %Element($Coordinates(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌},
+        𝐱 = {𝐱}
+      ))),
+      $"linear combination"(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌},
+        𝐱 = {𝐱},
+        𝐚 = {𝐚}
+      )
     )
-  )]
+  ]
 }

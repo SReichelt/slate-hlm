@@ -17,6 +17,10 @@ $"Right modules": %Section {
       'Homomorphisms'
     ),
     %subsection(
+      $Submodules,
+      'Submodules'
+    ),
+    %subsection(
       $Coordinates,
       'Coordinates'
     )

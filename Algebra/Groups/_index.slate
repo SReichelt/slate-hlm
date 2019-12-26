@@ -26,6 +26,8 @@ $Groups: %Section {
       $Examples,
       'Examples'
     ),
+    %item($"power to natural number"),
+    %item($"power to integer"),
     %subsection(
       $Order,
       'Order'

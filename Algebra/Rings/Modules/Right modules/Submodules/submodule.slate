@@ -1,0 +1,62 @@
+%../../../../../../../logics/hlm%
+
+$submodule(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element($../"Right modules"(𝐑 = {𝐑})),
+  𝐍: %Element(%previous)
+): %Predicate {
+  display = [
+    $Relation(
+      symbol = %neg('≤', '≰'),
+      operands = [𝐌, 𝐍]
+    ),
+    $Relation(
+      symbol = %neg('≥', '≱'),
+      operands = [𝐍, 𝐌]
+    )
+  ],
+  definition = [
+    %exists(
+      #(φ: %Element($../Homomorphisms/Homomorphisms(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌},
+        𝐍 = {𝐍}
+      ))),
+      formula = $../../../../../Essentials/Functions/injective(
+        X = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌}
+        )},
+        Y = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐍}
+        )},
+        f = {φ}
+      )
+    ),
+    %exists(
+      #(S: %Subset($../Carrier(
+        𝐑 = {𝐑},
+        𝐌 = {𝐍}
+      ))),
+      formula = %and(
+        $"submodule set"(
+          𝐑 = {𝐑},
+          𝐌 = {𝐍},
+          S = {S}
+        ),
+        %equals(
+          𝐌,
+          $"subset module"(
+            𝐑 = {𝐑},
+            𝐌 = {𝐍},
+            S = {S}
+          )
+        )
+      )
+    )
+  ]
+}

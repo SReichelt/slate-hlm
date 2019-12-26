@@ -11,20 +11,38 @@ $invertible(
     operand = a,
     property = 'invertible'
   )],
-  definition = [%exists(
-    #(b: %Element($Carrier(𝐌 = {𝐌}))),
-    formula = %equals(
-      $operation(
-        𝐌 = {𝐌},
-        a = {a},
-        b = {b}
-      ),
-      $operation(
-        𝐌 = {𝐌},
-        a = {b},
-        b = {a}
-      ),
-      $identity(𝐌 = {𝐌})
+  definition = [
+    %exists(
+      #(b: %Element($Carrier(𝐌 = {𝐌}))),
+      formula = %equals(
+        $operation(
+          𝐌 = {𝐌},
+          a = {a},
+          b = {b}
+        ),
+        $operation(
+          𝐌 = {𝐌},
+          a = {b},
+          b = {a}
+        ),
+        $identity(𝐌 = {𝐌})
+      )
+    ),
+    %existsUnique(
+      #(b: %Element($Carrier(𝐌 = {𝐌}))),
+      formula = %equals(
+        $operation(
+          𝐌 = {𝐌},
+          a = {a},
+          b = {b}
+        ),
+        $operation(
+          𝐌 = {𝐌},
+          a = {b},
+          b = {a}
+        ),
+        $identity(𝐌 = {𝐌})
+      )
     )
-  )]
+  ]
 }

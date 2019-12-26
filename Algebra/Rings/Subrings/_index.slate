@@ -1,0 +1,10 @@
+%../../../../../logics/library%
+
+$Subrings: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"subring set"),
+    %item($"subset ring"),
+    %item($subring)
+  ]
+}

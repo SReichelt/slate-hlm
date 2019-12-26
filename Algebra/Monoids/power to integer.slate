@@ -1,0 +1,46 @@
+%../../../../logics/hlm%
+
+$"power to integer"(
+  𝐌: %Element(
+    $Monoids,
+    auto = %true
+  ),
+  a: %Element($Carrier(𝐌 = {𝐌})),
+  _1: %Constraint($invertible(
+    𝐌 = {𝐌},
+    a = {a}
+  )),
+  z: %Element($../../Essentials/Numbers/Integer/Integers)
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = a,
+    sup = z
+  )],
+  definition = [%cases([
+    {
+      formula = $../../Essentials/Numbers/Integer/"less or equal"(
+        b = {z},
+        a = {$../../Essentials/Numbers/Natural/number(value = 0)}
+      ),
+      value = $"power to natural number"(
+        𝐌 = {𝐌},
+        a = {a},
+        n = {z}
+      )
+    },
+    {
+      formula = $../../Essentials/Numbers/Integer/less(
+        a = {z},
+        b = {$../../Essentials/Numbers/Natural/number(value = 0)}
+      ),
+      value = $"power to natural number"(
+        𝐌 = {𝐌},
+        a = {$inverse(
+          𝐌 = {𝐌},
+          a = {a}
+        )},
+        n = {$../../Essentials/Numbers/Integer/inverse(a = {z})}
+      )
+    }
+  ])]
+}

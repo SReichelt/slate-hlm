@@ -12,18 +12,31 @@ $unit(
     singular = 'unit',
     plural = 'units'
   )],
-  definition = [%exists(
-    #(b: %Element($Carrier(𝐑 = {𝐑}))),
-    formula = %and(
-      %equals(
+  definition = [
+    %exists(
+      #(b: %Element($Carrier(𝐑 = {𝐑}))),
+      formula = %equals(
         $product(
           𝐑 = {𝐑},
           a = {a},
           b = {b}
         ),
+        $product(
+          𝐑 = {𝐑},
+          a = {b},
+          b = {a}
+        ),
         $one(𝐑 = {𝐑})
-      ),
-      %equals(
+      )
+    ),
+    %existsUnique(
+      #(b: %Element($Carrier(𝐑 = {𝐑}))),
+      formula = %equals(
+        $product(
+          𝐑 = {𝐑},
+          a = {a},
+          b = {b}
+        ),
         $product(
           𝐑 = {𝐑},
           a = {b},
@@ -32,5 +45,5 @@ $unit(
         $one(𝐑 = {𝐑})
       )
     )
-  )]
+  ]
 }

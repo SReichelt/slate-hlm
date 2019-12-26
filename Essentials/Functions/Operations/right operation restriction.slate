@@ -1,0 +1,54 @@
+%../../../../../logics/hlm%
+
+$"right operation restriction"(
+  X: %Set(auto = %true),
+  Y: %Set(auto = %true),
+  A: %Subset(X),
+  ∗: %Element($Operations(
+    X = {X},
+    Y = {Y},
+    Z = {X}
+  )),
+  _1: %Constraint(%forall(
+    #(
+      x: %Element(A),
+      y: %Element(Y)
+    ),
+    %in(
+      $value(
+        X = {X},
+        Y = {Y},
+        Z = {X},
+        ∗ = {∗},
+        x = {x},
+        y = {y}
+      ),
+      A
+    )
+  ))
+): %ExplicitOperator {
+  display = [$UnaryOperator(
+    symbol = $SubSup(
+      body = '∣',
+      sub = $Operator(
+        symbol = '×',
+        operands = [A, Y],
+        minParenLevel = 1
+      )
+    ),
+    operand = ∗
+  )],
+  definition = [$../"codomain restriction"(
+    X = {$../../Sets/"Cartesian product"(
+      S = {X},
+      T = {Y}
+    )},
+    A = {$../../Sets/"Cartesian product"(
+      S = {A},
+      T = {Y}
+    )},
+    Y = {X},
+    B = {A},
+    f = {∗}
+  )]
+}

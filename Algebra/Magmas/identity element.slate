@@ -12,23 +12,18 @@ $"identity element"(
   )],
   definition = [%forall(
     #(a: %Element($Carrier(𝐌 = {𝐌}))),
-    %and(
-      %equals(
-        $operation(
-          𝐌 = {𝐌},
-          a = {e},
-          b = {a}
-        ),
-        e
+    %equals(
+      $operation(
+        𝐌 = {𝐌},
+        a = {e},
+        b = {a}
       ),
-      %equals(
-        $operation(
-          𝐌 = {𝐌},
-          a = {a},
-          b = {e}
-        ),
-        e
-      )
+      $operation(
+        𝐌 = {𝐌},
+        a = {a},
+        b = {e}
+      ),
+      a
     )
   )]
 }

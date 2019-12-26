@@ -1,0 +1,60 @@
+%../../../../../logics/hlm%
+
+$"subring set"(
+  𝐑: %Element($../Rings),
+  S: %Subset($../Carrier(𝐑 = {𝐑}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [S, 𝐑],
+    singular = 'subring',
+    plural = 'subrings'
+  )],
+  definition = [%and(
+    %forall(
+      #(
+        a: %Element(S),
+        b: %Element(%previous)
+      ),
+      %in(
+        $../sum(
+          𝐑 = {𝐑},
+          a = {a},
+          b = {b}
+        ),
+        S
+      )
+    ),
+    %in(
+      $../zero(𝐑 = {𝐑}),
+      S
+    ),
+    %forall(
+      #(c: %Element(S)),
+      %in(
+        $../"additive inverse"(
+          𝐑 = {𝐑},
+          a = {c}
+        ),
+        S
+      )
+    ),
+    %forall(
+      #(
+        d: %Element(S),
+        e: %Element(%previous)
+      ),
+      %in(
+        $../product(
+          𝐑 = {𝐑},
+          a = {d},
+          b = {e}
+        ),
+        S
+      )
+    ),
+    %in(
+      $../one(𝐑 = {𝐑}),
+      S
+    )
+  )]
+}
