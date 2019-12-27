@@ -1,0 +1,10 @@
+%../../../../../logics/library%
+
+$Formulas: %Section {
+  logic = 'hlm',
+  items = [%item(
+    $"Binomial theorem",
+    type = 'theorem',
+    title = 'Binomial theorem'
+  )]
+}

@@ -19,7 +19,7 @@ $equivalence(
   definition = [%and(
     $preorder(
       S = {S},
-      ≺ = {≺}
+      ⪯ = {≺}
     ),
     $symmetric(
       S = {S},

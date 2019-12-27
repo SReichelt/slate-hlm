@@ -1,0 +1,55 @@
+%../../../../../../../logics/hlm%
+
+$Span(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element(
+    $../"Right modules"(𝐑 = {𝐑}),
+    auto = %true
+  ),
+  X: %Subset($../Carrier(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  ))
+): %SetOperator {
+  display = [$Parens(
+    body = X,
+    style = '<>'
+  )],
+  definition = [$../../../../../Essentials/Sets/"Generalized intersection using power set"(
+    U = {$../Carrier(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌}
+    )},
+    S = {%subset(
+      #(_s: %Element($../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌}
+      )}))),
+      %structural(
+        _s,
+        $../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌}
+        )}),
+        [{
+          constructor = $../../../../../Essentials/Sets/"Power set".subset,
+          parameters = #(S: %Subset($../Carrier(
+            𝐑 = {𝐑},
+            𝐌 = {𝐌}
+          ))),
+          value = %and(
+            $"submodule set"(
+              𝐑 = {𝐑},
+              𝐌 = {𝐌},
+              S = {S}
+            ),
+            %sub(X, S)
+          )
+        }]
+      )
+    )}
+  )]
+}

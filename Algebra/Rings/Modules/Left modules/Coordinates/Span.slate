@@ -55,41 +55,12 @@ $Span(
                 𝐌 = {𝐌}
               )))
             )),
-            value = $../../../../../Essentials/Sets/"Generalized intersection using power set"(
-              U = {$../Carrier(
-                𝐑 = {𝐑},
-                𝐌 = {𝐌}
-              )},
-              S = {%subset(
-                #(_m: %Element($../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐌}
-                )}))),
-                %structural(
-                  _m,
-                  $../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
-                    𝐑 = {𝐑},
-                    𝐌 = {𝐌}
-                  )}),
-                  [{
-                    constructor = $../../../../../Essentials/Sets/"Power set".subset,
-                    parameters = #(S: %Subset($../Carrier(
-                      𝐑 = {𝐑},
-                      𝐌 = {𝐌}
-                    ))),
-                    value = %and(
-                      $../Submodules/"submodule set"(
-                        𝐑 = {𝐑},
-                        𝐌 = {𝐌},
-                        S = {S}
-                      ),
-                      %forall(
-                        #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
-                        %in(x[k], S)
-                      )
-                    )
-                  }]
-                )
+            value = $../Submodules/Span(
+              𝐑 = {𝐑},
+              𝐌 = {𝐌},
+              X = {%extendedSubset(
+                #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+                x[k]
               )}
             )
           }]

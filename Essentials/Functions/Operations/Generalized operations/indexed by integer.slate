@@ -20,7 +20,8 @@ $"indexed by integer"(
     under = $EqualityRelation(
       left = i,
       right = j
-    )
+    ),
+    maxParenLevel = 1
   )],
   definition = [$"indexed by natural number"(
     X = {X},

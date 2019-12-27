@@ -9,7 +9,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         #(m: %Element(M)),
         formula = $../../Relations/"greatest element"(
           S = {$"Natural numbers"},
-          ≺ = {$../../Relations/predicate(
+          ⪯ = {$../../Relations/predicate(
             S = {$"Natural numbers"},
             T = {$"Natural numbers"},
             parameters = #(
@@ -52,7 +52,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
           #(m: %Element(M)),
           formula = $../../Relations/"greatest element"(
             S = {$"Natural numbers"},
-            ≺ = {$../../Relations/predicate(
+            ⪯ = {$../../Relations/predicate(
               S = {$"Natural numbers"},
               T = {$"Natural numbers"},
               parameters = #(

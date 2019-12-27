@@ -1,19 +1,19 @@
 %../../../../../logics/hlm%
 
 $"subset magma"(
-  𝐌: %Element(
-    $../Magmas,
-    auto = %true
-  ),
+  𝐌: %Element($../Magmas),
   S: %Subset($../Carrier(𝐌 = {𝐌})),
   _1: %Constraint($"submagma set"(
     𝐌 = {𝐌},
     S = {S}
   ))
 ): %ExplicitOperator {
-  display = [$Parens(
-    body = S,
-    style = '[]'
+  display = [$SubSup(
+    body = $Parens(
+      body = S,
+      style = '[]'
+    ),
+    sub = 𝐌
   )],
   definition = [%structuralCases(
     𝐌,

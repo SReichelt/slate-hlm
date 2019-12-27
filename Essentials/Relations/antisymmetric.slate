@@ -7,10 +7,10 @@
  */
 $antisymmetric(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
   display = [$Property(
-    operand = ≺,
+    operand = ⪯,
     property = 'antisymmetric'
   )],
   definition = [%forall(
@@ -21,14 +21,14 @@ $antisymmetric(
         S = {S},
         T = {S},
         s = {s},
-        ≺ = {≺},
+        ≺ = {⪯},
         t = {t}
       )),
       _2: %Constraint($related(
         S = {S},
         T = {S},
         s = {t},
-        ≺ = {≺},
+        ≺ = {⪯},
         t = {s}
       ))
     ),

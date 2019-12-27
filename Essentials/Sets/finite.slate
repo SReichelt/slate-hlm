@@ -420,7 +420,7 @@ $finite(S: %Set): %Predicate {
           f = {u},
           S = {S}
         )),
-        o: %Def($../Numbers/Natural/"Technical definitions"/"bounded cardinality"(
+        o: %Def($../Numbers/Natural/Sequences/"bounded cardinality"(
           M = {T},
           n = {y}
         )),
@@ -428,11 +428,11 @@ $finite(S: %Set): %Predicate {
             X = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {o})},
             Y = {T}
           ).function(x = {
-            #(z: %Element($../Numbers/Natural/Subsets/"Segment (less)"(n = {$../Numbers/Natural/"Technical definitions"/"bounded cardinality"(
+            #(z: %Element($../Numbers/Natural/Subsets/"Segment (less)"(n = {$../Numbers/Natural/Sequences/"bounded cardinality"(
               M = {T},
               n = {y}
             )}))),
-            {y = {$../Numbers/Natural/"Technical definitions"/"indexed element"(
+            {y = {$../Numbers/Natural/Sequences/"indexed element"(
               M = {T},
               n = {z}
             )}}

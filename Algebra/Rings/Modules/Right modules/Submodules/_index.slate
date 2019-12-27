@@ -5,6 +5,8 @@ $Submodules: %Section {
   items = [
     %item($"submodule set"),
     %item($"subset module"),
-    %item($submodule)
+    %item($submodule),
+    %item($Span),
+    %item($"Span of element")
   ]
 }

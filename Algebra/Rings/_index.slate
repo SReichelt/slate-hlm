@@ -25,6 +25,9 @@ $Rings: %Section {
     %item($Units),
     %item($"multiplicative inverse"),
     %item($"unit group"),
+    %item($"product with natural number"),
+    %item($"product with integer"),
+    %item($"power to natural number"),
     %subsection(
       $Ideals,
       'Ideals'

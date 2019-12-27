@@ -5,29 +5,29 @@
  */
 $"greatest element"(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S})),
+  ⪯: %Element($Endorelations(S = {S})),
   T: %Subset(S),
   t: %Element(T)
 ): %Predicate {
   display = [$NounRelation(
-    singular = [≺, '-greatest element'],
-    plural = [≺, '-greatest elements'],
+    singular = [⪯, '-greatest element'],
+    plural = [⪯, '-greatest elements'],
     operands = [t, T]
   )],
   definition = [
     $"upper bound"(
       S = {S},
-      ≺ = {≺},
+      ≺ = {⪯},
       T = {T},
       s = {t}
     ),
     $"least element"(
       S = {S},
       T = {T},
-      ≺ = {$converse(
+      ⪯ = {$converse(
         S = {S},
         T = {S},
-        ≺ = {≺}
+        ≺ = {⪯}
       )},
       t = {t}
     )

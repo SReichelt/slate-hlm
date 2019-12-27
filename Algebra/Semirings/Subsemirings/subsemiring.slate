@@ -1,0 +1,46 @@
+%../../../../../logics/hlm%
+
+$subsemiring(
+  𝐑: %Element($../Semirings),
+  𝐒: %Element(%previous)
+): %Predicate {
+  display = [
+    $Relation(
+      symbol = %neg('≤', '≰'),
+      operands = [𝐑, 𝐒]
+    ),
+    $Relation(
+      symbol = %neg('≥', '≱'),
+      operands = [𝐒, 𝐑]
+    )
+  ],
+  definition = [
+    %exists(
+      #(φ: %Element($../Homomorphisms/Homomorphisms(
+        𝐑 = {𝐑},
+        𝐒 = {𝐒}
+      ))),
+      formula = $../../../Essentials/Functions/injective(
+        X = {$../Carrier(𝐑 = {𝐑})},
+        Y = {$../Carrier(𝐑 = {𝐒})},
+        f = {φ}
+      )
+    ),
+    %exists(
+      #(S: %Subset($../Carrier(𝐑 = {𝐒}))),
+      formula = %and(
+        $"subsemiring set"(
+          𝐑 = {𝐒},
+          S = {S}
+        ),
+        %equals(
+          𝐑,
+          $"subset semiring"(
+            𝐑 = {𝐒},
+            S = {S}
+          )
+        )
+      )
+    )
+  ]
+}

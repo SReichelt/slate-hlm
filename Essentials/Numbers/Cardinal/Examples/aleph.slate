@@ -1,0 +1,16 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @remarks This definition is currently a stub that should be extended to arbitrary aleph numbers.
+ */
+$aleph(α: %Element(%enumeration($../../Natural/number(value = 0)))): %ExplicitOperator {
+  display = [$SubSup(
+    body = 'ℵ',
+    sub = α
+  )],
+  definition = [
+    $../"Cardinal numbers".cardinality(S = {$../../Natural/"Natural numbers"}),
+    $../"Cardinal numbers".cardinality(S = {$../../Integer/Integers}),
+    $../"Cardinal numbers".cardinality(S = {$../../Rational/"Rational numbers"})
+  ]
+}

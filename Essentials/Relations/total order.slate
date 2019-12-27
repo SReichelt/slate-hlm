@@ -5,10 +5,10 @@
  */
 $"total order"(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
   display = [$NounProperty(
-    operand = ≺,
+    operand = ⪯,
     singular = 'total order',
     plural = 'total orders'
   )],
@@ -16,25 +16,25 @@ $"total order"(
     %and(
       $connex(
         S = {S},
-        ≺ = {≺}
+        ≺ = {⪯}
       ),
       $antisymmetric(
         S = {S},
-        ≺ = {≺}
+        ⪯ = {⪯}
       ),
       $transitive(
         S = {S},
-        ≺ = {≺}
+        ≺ = {⪯}
       )
     ),
     %and(
       $"partial order"(
         S = {S},
-        ≺ = {≺}
+        ⪯ = {⪯}
       ),
       $connex(
         S = {S},
-        ≺ = {≺}
+        ≺ = {⪯}
       )
     )
   ]

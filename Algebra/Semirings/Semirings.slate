@@ -1,0 +1,339 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Semiring
+ */
+$Semirings: %Construction {
+  $semiring(
+    R: %Set,
+    ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+    _1: %Constraint($../../Essentials/Functions/Operations/associative(
+      X = {R},
+      ∗ = {⊕}
+    )),
+    _2: %Constraint($../../Essentials/Functions/Operations/commutative(
+      X = {R},
+      Z = {R},
+      ∗ = {⊕}
+    )),
+    "0": %Element(R),
+    _3: %Constraint(%forall(
+      #(a: %Element(R)),
+      %equals(
+        $../../Essentials/Functions/Operations/value(
+          X = {R},
+          Y = {R},
+          Z = {R},
+          ∗ = {⊕},
+          x = {a},
+          y = {"0"}
+        ),
+        $../../Essentials/Functions/Operations/value(
+          X = {R},
+          Y = {R},
+          Z = {R},
+          ∗ = {⊕},
+          x = {"0"},
+          y = {a}
+        ),
+        a
+      )
+    )),
+    ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+    _4: %Constraint($../../Essentials/Functions/Operations/associative(
+      X = {R},
+      ∗ = {⊙}
+    )),
+    _5: %Constraint(%forall(
+      #(a: %Element(R)),
+      %equals(
+        $../../Essentials/Functions/Operations/value(
+          X = {R},
+          Y = {R},
+          Z = {R},
+          ∗ = {⊙},
+          x = {a},
+          y = {"0"}
+        ),
+        $../../Essentials/Functions/Operations/value(
+          X = {R},
+          Y = {R},
+          Z = {R},
+          ∗ = {⊙},
+          x = {"0"},
+          y = {a}
+        ),
+        "0"
+      )
+    )),
+    "1": %Element(R),
+    _6: %Constraint(%forall(
+      #(a: %Element(R)),
+      %equals(
+        $../../Essentials/Functions/Operations/value(
+          X = {R},
+          Y = {R},
+          Z = {R},
+          ∗ = {⊙},
+          x = {a},
+          y = {"1"}
+        ),
+        $../../Essentials/Functions/Operations/value(
+          X = {R},
+          Y = {R},
+          Z = {R},
+          ∗ = {⊙},
+          x = {"1"},
+          y = {a}
+        ),
+        a
+      )
+    )),
+    _7: %Constraint($../../Essentials/Functions/Operations/distributive(
+      X = {R},
+      ∗ = {⊙},
+      ⋆ = {⊕}
+    ))
+  ): %Constructor {
+    display = [$Tuple(
+      items = [R, ⊕, "0", ⊙, "1"],
+      style = '[]'
+    )],
+    equalityDefinition = {
+      leftParameters = #(
+        R: %Set,
+        ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        _1: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {R},
+          ∗ = {⊕}
+        )),
+        _2: %Constraint($../../Essentials/Functions/Operations/commutative(
+          X = {R},
+          Z = {R},
+          ∗ = {⊕}
+        )),
+        "0": %Element(R),
+        _3: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {a},
+              y = {"0"}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {"0"},
+              y = {a}
+            ),
+            a
+          )
+        )),
+        ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        _4: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {R},
+          ∗ = {⊙}
+        )),
+        _5: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {a},
+              y = {"0"}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {"0"},
+              y = {a}
+            ),
+            "0"
+          )
+        )),
+        "1": %Element(R),
+        _6: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {a},
+              y = {"1"}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {"1"},
+              y = {a}
+            ),
+            a
+          )
+        )),
+        _7: %Constraint($../../Essentials/Functions/Operations/distributive(
+          X = {R},
+          ∗ = {⊙},
+          ⋆ = {⊕}
+        ))
+      ),
+      rightParameters = #(
+        S: %Set,
+        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+        _8: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {S},
+          ∗ = {⋆}
+        )),
+        _9: %Constraint($../../Essentials/Functions/Operations/commutative(
+          X = {S},
+          Z = {S},
+          ∗ = {⋆}
+        )),
+        𝟢: %Element(S),
+        _10: %Constraint(%forall(
+          #(a: %Element(S)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {S},
+              Y = {S},
+              Z = {S},
+              ∗ = {⋆},
+              x = {a},
+              y = {𝟢}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {S},
+              Y = {S},
+              Z = {S},
+              ∗ = {⋆},
+              x = {𝟢},
+              y = {a}
+            ),
+            a
+          )
+        )),
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+        _11: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {S},
+          ∗ = {∗}
+        )),
+        _12: %Constraint(%forall(
+          #(a: %Element(S)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {S},
+              Y = {S},
+              Z = {S},
+              ∗ = {∗},
+              x = {a},
+              y = {𝟢}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {S},
+              Y = {S},
+              Z = {S},
+              ∗ = {∗},
+              x = {𝟢},
+              y = {a}
+            ),
+            𝟢
+          )
+        )),
+        𝟣: %Element(S),
+        _13: %Constraint(%forall(
+          #(a: %Element(S)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {S},
+              Y = {S},
+              Z = {S},
+              ∗ = {∗},
+              x = {a},
+              y = {𝟣}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {S},
+              Y = {S},
+              Z = {S},
+              ∗ = {∗},
+              x = {𝟣},
+              y = {a}
+            ),
+            a
+          )
+        )),
+        _14: %Constraint($../../Essentials/Functions/Operations/distributive(
+          X = {S},
+          ∗ = {∗},
+          ⋆ = {⋆}
+        ))
+      ),
+      definition = [%exists(
+        #(φ: %Element($../../Essentials/Functions/Bijections(
+          X = {R},
+          Y = {S}
+        ))),
+        formula = %and(
+          %equals(
+            $../Isomorphisms/"inner operation transform"(
+              X = {R},
+              Y = {S},
+              φ = {φ},
+              ∗ = {⊕}
+            ),
+            ⋆
+          ),
+          %equals(
+            $../Isomorphisms/"element transform"(
+              X = {R},
+              Y = {S},
+              φ = {φ},
+              x = {"0"}
+            ),
+            𝟢
+          ),
+          %equals(
+            $../Isomorphisms/"inner operation transform"(
+              X = {R},
+              Y = {S},
+              φ = {φ},
+              ∗ = {⊙}
+            ),
+            ∗
+          ),
+          %equals(
+            $../Isomorphisms/"element transform"(
+              X = {R},
+              Y = {S},
+              φ = {φ},
+              x = {"1"}
+            ),
+            𝟣
+          )
+        )
+      )],
+      isomorphic = %true
+    }
+  }
+
+  display = ['𝓢𝓮𝓶𝓲𝓡𝓲𝓷𝓰'],
+  definitionDisplay = {
+    parameter = #(𝐑: %Expr),
+    singularName = 'semiring',
+    pluralName = 'semirings'
+  }
+}

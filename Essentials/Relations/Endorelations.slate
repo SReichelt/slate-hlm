@@ -7,10 +7,7 @@
  *             * http://mathworld.wolfram.com/Relation.html
  *             * https://proofwiki.org/wiki/Definition:Endorelation
  */
-$Endorelations(S: %Set(
-  auto = %true,
-  embedSubsets = %true
-)): %Construction {
+$Endorelations(S: %Set(auto = %true)): %Construction {
   $relation(s: %Binding(
     S,
     #(t: %Binding(

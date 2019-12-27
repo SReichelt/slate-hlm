@@ -16,9 +16,12 @@ $"subset module"(
     S = {S}
   ))
 ): %ExplicitOperator {
-  display = [$Parens(
-    body = S,
-    style = '[]'
+  display = [$SubSup(
+    body = $Parens(
+      body = S,
+      style = '[]'
+    ),
+    sub = 𝐌
   )],
   definition = [%structuralCases(
     𝐌,

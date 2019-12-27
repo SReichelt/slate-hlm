@@ -1,0 +1,28 @@
+%../../../../../logics/hlm%
+
+$"Span of element"(
+  𝐆: %Element(
+    $../Groups,
+    auto = %true
+  ),
+  g: %Element($../Carrier(𝐆 = {𝐆}))
+): %SetOperator {
+  display = [$Parens(
+    body = g,
+    style = '<>'
+  )],
+  definition = [
+    $Span(
+      𝐆 = {𝐆},
+      X = {%enumeration(g)}
+    ),
+    %extendedSubset(
+      #(z: %Element($../../../Essentials/Numbers/Integer/Integers)),
+      $../"power to integer"(
+        𝐆 = {𝐆},
+        a = {g},
+        z = {z}
+      )
+    )
+  ]
+}

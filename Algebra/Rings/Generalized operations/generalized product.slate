@@ -1,6 +1,9 @@
 %../../../../../logics/hlm%
 
-$"generalized product"(𝐑: %Element($../Rings)): %ExplicitOperator {
+$"generalized product"(
+  𝐑: %Element($../Rings),
+  _1: %Constraint($../commutative(𝐑 = {𝐑}))
+): %ExplicitOperator {
   display = [$SubSup(
     body = '∏',
     sub = 𝐑

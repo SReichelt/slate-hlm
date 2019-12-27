@@ -1,0 +1,35 @@
+%../../../../../logics/hlm%
+
+$Span(
+  𝐆: %Element(
+    $../Groups,
+    auto = %true
+  ),
+  X: %Subset($../Carrier(𝐆 = {𝐆}))
+): %SetOperator {
+  display = [$Parens(
+    body = X,
+    style = '<>'
+  )],
+  definition = [$../../../Essentials/Sets/"Generalized intersection using power set"(
+    U = {$../Carrier(𝐆 = {𝐆})},
+    S = {%subset(
+      #(_s: %Element($../../../Essentials/Sets/"Power set"(S = {$../Carrier(𝐆 = {𝐆})}))),
+      %structural(
+        _s,
+        $../../../Essentials/Sets/"Power set"(S = {$../Carrier(𝐆 = {𝐆})}),
+        [{
+          constructor = $../../../Essentials/Sets/"Power set".subset,
+          parameters = #(S: %Subset($../Carrier(𝐆 = {𝐆}))),
+          value = %and(
+            $"subgroup set"(
+              𝐆 = {𝐆},
+              S = {S}
+            ),
+            %sub(X, S)
+          )
+        }]
+      )
+    )}
+  )]
+}

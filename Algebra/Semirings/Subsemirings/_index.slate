@@ -1,0 +1,10 @@
+%../../../../../logics/library%
+
+$Subsemirings: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"subsemiring set"),
+    %item($"subset semiring"),
+    %item($subsemiring)
+  ]
+}

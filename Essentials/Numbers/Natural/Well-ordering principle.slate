@@ -8,7 +8,7 @@
 $"Well-ordering principle": %StandardTheorem {
   claim = $../../Relations/"well-order"(
     S = {$"Natural numbers"},
-    ≺ = {$../../Relations/predicate(
+    ⪯ = {$../../Relations/predicate(
       S = {$"Natural numbers"},
       T = {$"Natural numbers"},
       parameters = #(

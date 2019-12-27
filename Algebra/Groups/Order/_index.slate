@@ -6,6 +6,16 @@ $Order: %Section {
     %item($"group order"),
     %item($"Groups with order"),
     %item($"number of groups with order"),
-    %item($"Number of small groups")
+    %item($"Number of small groups"),
+    %item($"element order"),
+    %item(
+      $"Lagranges theorem",
+      type = 'theorem',
+      title = 'Lagrange\'s theorem'
+    ),
+    %item(
+      $"Lagranges corollary",
+      type = 'corollary'
+    )
   ]
 }

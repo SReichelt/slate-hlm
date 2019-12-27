@@ -16,7 +16,8 @@ $"indexed by finite set"(
     under = $ElementRelation(
       element = i,
       set = I
-    )
+    ),
+    maxParenLevel = 1
   )],
   parameter = #(x: %Element(X)),
   definition = [

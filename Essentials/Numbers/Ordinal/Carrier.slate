@@ -25,7 +25,7 @@ $Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
         ⪯: %Element($../../Relations/Endorelations(S = {A})),
         _1: %Constraint($../../Relations/"well-order"(
           S = {A},
-          ≺ = {⪯}
+          ⪯ = {⪯}
         ))
       ),
       value = A

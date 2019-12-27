@@ -3,7 +3,7 @@
 $"Less or equal is a partial order": %StandardTheorem {
   claim = $../../Relations/"partial order"(
     S = {$"Cardinal numbers"},
-    ≺ = {$../../Relations/predicate(
+    ⪯ = {$../../Relations/predicate(
       S = {$"Cardinal numbers"},
       T = {$"Cardinal numbers"},
       parameters = #(

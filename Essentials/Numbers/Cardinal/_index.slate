@@ -25,6 +25,10 @@ $Cardinal: %Section {
     %item($product),
     %item($power),
     %item($finite),
-    %item($"Cardinality of power set")
+    %item($"Cardinality of power set"),
+    %subsection(
+      $Examples,
+      'Examples'
+    )
   ]
 }

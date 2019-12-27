@@ -1,0 +1,40 @@
+%../../../../logics/hlm%
+
+$"power to natural number"(
+  𝐑: %Element(
+    $Semirings,
+    auto = %true
+  ),
+  a: %Element($Carrier(𝐑 = {𝐑})),
+  n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = a,
+    sup = n
+  )],
+  definition = [%structuralCases(
+    n,
+    $../../Essentials/Numbers/Natural/"Natural numbers",
+    [
+      {
+        constructor = $../../Essentials/Numbers/Natural/"Natural numbers".zero,
+        value = $one(𝐑 = {𝐑}),
+        rewrite = %true
+      },
+      {
+        constructor = $../../Essentials/Numbers/Natural/"Natural numbers".successor,
+        parameters = #(x: %Element($../../Essentials/Numbers/Natural/"Natural numbers")),
+        value = $product(
+          𝐑 = {𝐑},
+          a = {$"power to natural number"(
+            𝐑 = {𝐑},
+            a = {a},
+            n = {x}
+          )},
+          b = {a}
+        ),
+        rewrite = %true
+      }
+    ]
+  )]
+}

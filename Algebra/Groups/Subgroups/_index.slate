@@ -7,6 +7,8 @@ $Subgroups: %Section {
     %item($"subset group"),
     %item($subgroup),
     %item($"normal subgroup set"),
-    %item($"normal subgroup")
+    %item($"normal subgroup"),
+    %item($Span),
+    %item($"Span of element")
   ]
 }

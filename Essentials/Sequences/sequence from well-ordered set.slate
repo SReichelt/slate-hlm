@@ -1,0 +1,39 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition produces an ordinal-indexed sequence from a well-ordered set.
+ */
+$"sequence from well-ordered set"(
+  S: %Set,
+  ⪯: %Element($../Relations/Endorelations(S = {S})),
+  _1: %Constraint($../Relations/"well-order"(
+    S = {S},
+    ⪯ = {⪯}
+  )),
+  α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(
+    S = {S},
+    ⪯ = {⪯}
+  ))
+): %ExplicitOperator {
+  display = [$Function(
+    function = $SubSup(
+      body = 'seq',
+      sub = ⪯
+    ),
+    arguments = [S]
+  )],
+  definition = [$"Ordinal-indexed sequences"(S = {S}).sequence(
+      α = {α},
+      𝐚 = {$"Fixed-length sequences"(
+          S = {S},
+          α = {α}
+        ).sequence(k = {
+          #(β: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+          {a = {$"indexed element in well-ordered set"(
+            S = {S},
+            ⪯ = {⪯},
+            β = {β}
+          )}}
+      })}
+  )]
+}

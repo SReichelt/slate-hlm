@@ -28,17 +28,11 @@ $"less or equal"(
     ),
     %exists(
       #(S: %Subset($Carrier(α = {β}))),
-      formula = %and(
-        $"Ordered subsets"/"ordered subset"(
+      formula = %equals(
+        α,
+        $"Ordered subsets"/"subset ordinal"(
           α = {β},
           S = {S}
-        ),
-        %equals(
-          α,
-          $"Ordered subsets"/"subset ordinal"(
-            α = {β},
-            S = {S}
-          )
         )
       )
     )

@@ -5,18 +5,18 @@
  */
 $"least element"(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S})),
+  ⪯: %Element($Endorelations(S = {S})),
   T: %Subset(S),
   t: %Element(T)
 ): %Predicate {
   display = [$NounRelation(
-    singular = [≺, '-least element'],
-    plural = [≺, '-least elements'],
+    singular = [⪯, '-least element'],
+    plural = [⪯, '-least elements'],
     operands = [t, T]
   )],
   definition = [$"lower bound"(
     S = {S},
-    ≺ = {≺},
+    ≺ = {⪯},
     T = {T},
     s = {t}
   )]

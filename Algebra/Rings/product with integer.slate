@@ -1,0 +1,45 @@
+%../../../../logics/hlm%
+
+$"product with integer"(
+  𝐑: %Element(
+    $Rings,
+    auto = %true
+  ),
+  z: %Element($../../Essentials/Numbers/Integer/Integers),
+  a: %Element($Carrier(𝐑 = {𝐑}))
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '⋅',
+    operands = [z, a],
+    space = ' ',
+    minParenLevel = 2,
+    maxParenLevel = 2
+  )],
+  definition = [%cases([
+    {
+      formula = $../../Essentials/Numbers/Integer/"less or equal"(
+        b = {z},
+        a = {$../../Essentials/Numbers/Natural/number(value = 0)}
+      ),
+      value = $"product with natural number"(
+        𝐑 = {𝐑},
+        n = {z},
+        a = {a}
+      )
+    },
+    {
+      formula = $../../Essentials/Numbers/Integer/less(
+        a = {z},
+        b = {$../../Essentials/Numbers/Natural/number(value = 0)}
+      ),
+      value = $"product with natural number"(
+        𝐑 = {𝐑},
+        n = {$../../Essentials/Numbers/Integer/inverse(a = {z})},
+        a = {$"additive inverse"(
+          𝐑 = {𝐑},
+          a = {a}
+        )}
+      )
+    }
+  ])]
+}

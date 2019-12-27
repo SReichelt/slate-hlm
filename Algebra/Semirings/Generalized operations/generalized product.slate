@@ -1,0 +1,12 @@
+%../../../../../logics/hlm%
+
+$"generalized product"(
+  𝐑: %Element($../Semirings),
+  _1: %Constraint($../commutative(𝐑 = {𝐑}))
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = '∏',
+    sub = 𝐑
+  )],
+  definition = [$../../Monoids/"generalized operation"(𝐌 = {$../"multiplicative monoid"(𝐑 = {𝐑})})]
+}

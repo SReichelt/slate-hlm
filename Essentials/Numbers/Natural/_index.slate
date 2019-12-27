@@ -74,10 +74,6 @@ $Natural: %Section {
     ),
     %item($minimum),
     %subsection(
-      $"Technical definitions",
-      'Technical definitions'
-    ),
-    %subsection(
       $Sequences,
       'Sequences'
     ),

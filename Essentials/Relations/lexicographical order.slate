@@ -9,12 +9,12 @@ $"lexicographical order"(
   ⪯: %Element($Endorelations(S = {S})),
   _1: %Constraint($"partial order"(
     S = {S},
-    ≺ = {⪯}
+    ⪯ = {⪯}
   )),
   ⊑: %Element($Endorelations(S = {T})),
   _2: %Constraint($"partial order"(
     S = {T},
-    ≺ = {⊑}
+    ⪯ = {⊑}
   ))
 ): %ExplicitOperator {
   display = [$Operator(

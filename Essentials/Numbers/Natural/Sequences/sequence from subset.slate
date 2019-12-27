@@ -1,0 +1,51 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @remarks This definition produces a sorted finite sequence from a finite subset of natural numbers.
+ */
+$"sequence from subset"(
+  M: %Subset($../"Natural numbers"),
+  α: %Def($../../Ordinal/"Ordered subsets"/"subset ordinal"(
+    α = {$../../Ordinal/Examples/omega},
+    S = {M}
+  ))
+): %ExplicitOperator {
+  display = [$Function(
+    function = 'seq',
+    arguments = [M]
+  )],
+  definition = [
+    $../../../Sequences/"sequence from well-ordered set"(
+      S = {M},
+      ⪯ = {$../../../Relations/restriction(
+        S = {$../"Natural numbers"},
+        ≺ = {$../../../Relations/predicate(
+          S = {$../"Natural numbers"},
+          T = {$../"Natural numbers"},
+          parameters = #(
+            m: %Element($../"Natural numbers"),
+            n: %Element(%previous)
+          ),
+          predicate = $../"less or equal"(
+            m = {m},
+            n = {n}
+          )
+        )},
+        T = {M}
+      )}
+    ),
+    $../../../Sequences/"Ordinal-indexed sequences"(S = {M}).sequence(
+        α = {α},
+        𝐚 = {$../../../Sequences/"Fixed-length sequences"(
+            S = {M},
+            α = {α}
+          ).sequence(k = {
+            #(n: %Element($../../Ordinal/Subsets/"Segment (less)"(α = {α}))),
+            {a = {$"indexed element"(
+              M = {M},
+              n = {n}
+            )}}
+        })}
+    )
+  ]
+}

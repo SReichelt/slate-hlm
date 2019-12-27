@@ -1,0 +1,33 @@
+%../../../../../logics/hlm%
+
+$Kernel(
+  𝐑: %Element(
+    $../Semirings,
+    auto = %true
+  ),
+  𝐒: %Element(
+    %previous,
+    auto = %true
+  ),
+  φ: %Element($Homomorphisms(
+    𝐑 = {𝐑},
+    𝐒 = {𝐒}
+  ))
+): %SetOperator {
+  display = [$Function(
+    function = 'Ker',
+    arguments = [φ]
+  )],
+  definition = [%subset(
+    #(g: %Element($../Carrier(𝐑 = {𝐑}))),
+    %equals(
+      $../../../Essentials/Functions/value(
+        X = {$../Carrier(𝐑 = {𝐑})},
+        Y = {$../Carrier(𝐑 = {𝐒})},
+        f = {φ},
+        x = {g}
+      ),
+      $../zero(𝐑 = {𝐒})
+    )
+  )]
+}

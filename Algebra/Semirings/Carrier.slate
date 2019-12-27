@@ -1,0 +1,117 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition retrieves a representative carrier set from a semiring (which is actually an equivalence class of semirings), and enables typical abuse of notation.
+ */
+$Carrier(𝐑: %Element($Semirings)): %SetOperator {
+  display = [$Function(
+    function = 'Carrier',
+    arguments = [𝐑]
+  )],
+  definitionDisplay = {
+    parameter = #(a: %Expr),
+    display = [$ElementParameter(
+      element = a,
+      set = 𝐑
+    )]
+  },
+  definition = [%setStructuralCases(
+    𝐑,
+    $Semirings,
+    [{
+      constructor = $Semirings.semiring,
+      parameters = #(
+        R: %Set,
+        ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        _1: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {R},
+          ∗ = {⊕}
+        )),
+        _2: %Constraint($../../Essentials/Functions/Operations/commutative(
+          X = {R},
+          Z = {R},
+          ∗ = {⊕}
+        )),
+        "0": %Element(R),
+        _3: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {a},
+              y = {"0"}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {"0"},
+              y = {a}
+            ),
+            a
+          )
+        )),
+        ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        _4: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {R},
+          ∗ = {⊙}
+        )),
+        _5: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {a},
+              y = {"0"}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {"0"},
+              y = {a}
+            ),
+            "0"
+          )
+        )),
+        "1": %Element(R),
+        _6: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {a},
+              y = {"1"}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {"1"},
+              y = {a}
+            ),
+            a
+          )
+        )),
+        _7: %Constraint($../../Essentials/Functions/Operations/distributive(
+          X = {R},
+          ∗ = {⊙},
+          ⋆ = {⊕}
+        ))
+      ),
+      value = R
+    }]
+  )]
+}

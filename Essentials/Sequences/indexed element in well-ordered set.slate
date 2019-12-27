@@ -1,0 +1,33 @@
+%../../../../logics/hlm%
+
+$"indexed element in well-ordered set"(
+  S: %Set,
+  ⪯: %Element($../Relations/Endorelations(S = {S})),
+  _1: %Constraint($../Relations/"well-order"(
+    S = {S},
+    ⪯ = {⪯}
+  )),
+  α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(
+    S = {S},
+    ⪯ = {⪯}
+  )),
+  β: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))
+): %ImplicitOperator {
+  display = [$Function(
+    function = $SubSup(
+      body = S,
+      sub = ⪯
+    ),
+    arguments = [β],
+    style = '[]'
+  )],
+  parameter = #(s: %Element(S)),
+  definition = [%equals(
+    $"index in well-ordered set"(
+      S = {S},
+      ⪯ = {⪯},
+      s = {s}
+    ),
+    β
+  )]
+}

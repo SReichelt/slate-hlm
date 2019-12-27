@@ -1,19 +1,19 @@
 %../../../../../logics/hlm%
 
 $"subset group"(
-  𝐆: %Element(
-    $../Groups,
-    auto = %true
-  ),
+  𝐆: %Element($../Groups),
   S: %Subset($../Carrier(𝐆 = {𝐆})),
   _1: %Constraint($"subgroup set"(
     𝐆 = {𝐆},
     S = {S}
   ))
 ): %ExplicitOperator {
-  display = [$Parens(
-    body = S,
-    style = '[]'
+  display = [$SubSup(
+    body = $Parens(
+      body = S,
+      style = '[]'
+    ),
+    sub = 𝐆
   )],
   definition = [%structuralCases(
     𝐆,

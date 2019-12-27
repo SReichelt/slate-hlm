@@ -3,17 +3,20 @@
 /**
  * @remarks This definition produces a sorted infinite sequence from an infinite subset of natural numbers.
  */
-$"infinite sequence"(
+$"infinite sequence from subset"(
   M: %Subset($../"Natural numbers"),
   _1: %Constraint(%not($../../../Sets/finite(S = {M})))
 ): %ExplicitOperator {
   display = [$Function(
-    function = 'seq',
+    function = $SubSup(
+      body = 'seq',
+      sub = 'ω'
+    ),
     arguments = [M]
   )],
   definition = [$../../../Sequences/"Infinite sequences"(S = {$../"Natural numbers"}).sequence(n = {
       #(n: %Element($../"Natural numbers")),
-      {a = {$../"Technical definitions"/"indexed element"(
+      {a = {$"indexed element"(
         M = {M},
         n = {n}
       )}}

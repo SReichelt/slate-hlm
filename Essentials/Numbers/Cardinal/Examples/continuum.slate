@@ -1,0 +1,14 @@
+%../../../../../../logics/hlm%
+
+$continuum: %ExplicitOperator {
+  display = ['𝔠'],
+  definition = [
+    $../"Cardinal numbers".cardinality(S = {$../../Real/"Real numbers"}),
+    $../"Cardinal numbers".cardinality(S = {$../../Complex/"Complex numbers"}),
+    $../"Cardinal numbers".cardinality(S = {$../../../Sets/"Power set"(S = {$../../Natural/"Natural numbers"})}),
+    $../power(
+      κ = {$../../Natural/number(value = 2)},
+      μ = {$aleph(α = {$../../Natural/number(value = 0)})}
+    )
+  ]
+}

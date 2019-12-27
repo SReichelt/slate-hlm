@@ -1,0 +1,9 @@
+%../../../../logics/hlm%
+
+$finite(𝐆: %Element($Groups)): %Predicate {
+  display = [$Property(
+    operand = 𝐆,
+    property = %neg('finite', 'infinite')
+  )],
+  definition = [$../../Essentials/Sets/finite(S = {$Carrier(𝐆 = {𝐆})})]
+}

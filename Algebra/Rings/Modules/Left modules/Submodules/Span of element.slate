@@ -1,0 +1,37 @@
+%../../../../../../../logics/hlm%
+
+$"Span of element"(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element(
+    $../"Left modules"(𝐑 = {𝐑}),
+    auto = %true
+  ),
+  x: %Element($../Carrier(
+    𝐑 = {𝐑},
+    𝐌 = {𝐌}
+  ))
+): %SetOperator {
+  display = [$Parens(
+    body = x,
+    style = '<>'
+  )],
+  definition = [
+    $Span(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌},
+      X = {%enumeration(x)}
+    ),
+    %extendedSubset(
+      #(a: %Element($../../../Carrier(𝐑 = {𝐑}))),
+      $../product(
+        𝐑 = {𝐑},
+        𝐌 = {𝐌},
+        a = {a},
+        x = {x}
+      )
+    )
+  ]
+}

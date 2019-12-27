@@ -15,7 +15,8 @@ $"indexed by natural number"(
     under = $Relation(
       symbol = '<',
       operands = [i, n]
-    )
+    ),
+    maxParenLevel = 1
   )],
   definition = [%structuralCases(
     n,

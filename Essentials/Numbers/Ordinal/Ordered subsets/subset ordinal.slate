@@ -1,19 +1,15 @@
 %../../../../../../logics/hlm%
 
 $"subset ordinal"(
-  α: %Element(
-    $../"Ordinal numbers",
-    auto = %true
-  ),
-  S: %Subset($../Carrier(α = {α})),
-  _1: %Constraint($"ordered subset"(
-    α = {α},
-    S = {S}
-  ))
+  α: %Element($../"Ordinal numbers"),
+  S: %Subset($../Carrier(α = {α}))
 ): %ExplicitOperator {
-  display = [$Parens(
-    body = S,
-    style = '[]'
+  display = [$SubSup(
+    body = $Parens(
+      body = S,
+      style = '[]'
+    ),
+    sub = α
   )],
   definition = [%structuralCases(
     α,
@@ -25,7 +21,7 @@ $"subset ordinal"(
         ⪯: %Element($../../../Relations/Endorelations(S = {A})),
         _1: %Constraint($../../../Relations/"well-order"(
           S = {A},
-          ≺ = {⪯}
+          ⪯ = {⪯}
         ))
       ),
       value = $../"Ordinal numbers"."order type"(

@@ -22,7 +22,7 @@ $"reflexive closure"(
         parameter = #(_1: %Element($../Endorelations(S = {S}))),
         predicate = $../reflexive(
           S = {S},
-          ≺ = {_1}
+          ⪯ = {_1}
         )
       )}
     ),

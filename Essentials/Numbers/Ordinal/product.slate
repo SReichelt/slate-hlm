@@ -21,7 +21,7 @@ $product(
         ⊑: %Element($../../Relations/Endorelations(S = {B})),
         _1: %Constraint($../../Relations/"well-order"(
           S = {B},
-          ≺ = {⊑}
+          ⪯ = {⊑}
         ))
       ),
       value = %structuralCases(
@@ -34,7 +34,7 @@ $product(
             ⪯: %Element($../../Relations/Endorelations(S = {A})),
             _1: %Constraint($../../Relations/"well-order"(
               S = {A},
-              ≺ = {⪯}
+              ⪯ = {⪯}
             ))
           ),
           value = $"Ordinal numbers"."order type"(

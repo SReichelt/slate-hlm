@@ -17,7 +17,7 @@ $"reflexive symmetric closure"(
           {p = {%and(
             $../reflexive(
               S = {S},
-              ≺ = {⊂}
+              ⪯ = {⊂}
             ),
             $../symmetric(
               S = {S},

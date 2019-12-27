@@ -5,17 +5,17 @@
  */
 $"well-order"(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
   display = [$NounProperty(
-    operand = ≺,
+    operand = ⪯,
     singular = 'well-order',
     plural = 'well-orders'
   )],
   definition = [%and(
     $"total order"(
       S = {S},
-      ≺ = {≺}
+      ⪯ = {⪯}
     ),
     %forall(
       #(
@@ -26,7 +26,7 @@ $"well-order"(
         #(t: %Element(T)),
         formula = $"least element"(
           S = {S},
-          ≺ = {≺},
+          ⪯ = {⪯},
           T = {T},
           t = {t}
         )

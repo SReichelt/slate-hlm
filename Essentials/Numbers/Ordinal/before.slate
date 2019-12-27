@@ -28,7 +28,7 @@ $before(
         ⪯: %Element($../../Relations/Endorelations(S = {A})),
         _1: %Constraint($../../Relations/"well-order"(
           S = {A},
-          ≺ = {⪯}
+          ⪯ = {⪯}
         ))
       ),
       value = $../../Relations/related(

@@ -8,10 +8,10 @@
  */
 $reflexive(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
   display = [$Property(
-    operand = ≺,
+    operand = ⪯,
     property = 'reflexive'
   )],
   definition = [%forall(
@@ -20,7 +20,7 @@ $reflexive(
       S = {S},
       T = {S},
       s = {s},
-      ≺ = {≺},
+      ≺ = {⪯},
       t = {s}
     )
   )]

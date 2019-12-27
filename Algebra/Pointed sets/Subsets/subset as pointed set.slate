@@ -1,19 +1,19 @@
 %../../../../../logics/hlm%
 
 $"subset as pointed set"(
-  𝐒: %Element(
-    $../"Pointed sets",
-    auto = %true
-  ),
+  𝐒: %Element($../"Pointed sets"),
   S: %Subset($../Carrier(𝐒 = {𝐒})),
   _1: %Constraint($"subset of pointed set"(
     𝐒 = {𝐒},
     S = {S}
   ))
 ): %ExplicitOperator {
-  display = [$Parens(
-    body = S,
-    style = '[]'
+  display = [$SubSup(
+    body = $Parens(
+      body = S,
+      style = '[]'
+    ),
+    sub = 𝐒
   )],
   definition = [$../"Pointed sets"."pointed set"(
     S = {S},

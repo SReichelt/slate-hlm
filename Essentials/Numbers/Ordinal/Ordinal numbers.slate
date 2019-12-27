@@ -6,7 +6,7 @@ $"Ordinal numbers": %Construction {
     ⪯: %Element($../../Relations/Endorelations(S = {S})),
     _1: %Constraint($../../Relations/"well-order"(
       S = {S},
-      ≺ = {⪯}
+      ⪯ = {⪯}
     ))
   ): %Constructor {
     display = [$Tuple(
@@ -19,7 +19,7 @@ $"Ordinal numbers": %Construction {
         ⪯: %Element($../../Relations/Endorelations(S = {S})),
         _1: %Constraint($../../Relations/"well-order"(
           S = {S},
-          ≺ = {⪯}
+          ⪯ = {⪯}
         ))
       ),
       rightParameters = #(
@@ -27,7 +27,7 @@ $"Ordinal numbers": %Construction {
         ⊑: %Element($../../Relations/Endorelations(S = {T})),
         _1: %Constraint($../../Relations/"well-order"(
           S = {T},
-          ≺ = {⊑}
+          ⪯ = {⊑}
         ))
       ),
       definition = [%exists(

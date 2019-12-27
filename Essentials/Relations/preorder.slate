@@ -8,21 +8,21 @@
  */
 $preorder(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
   display = [$NounProperty(
-    operand = ≺,
+    operand = ⪯,
     singular = 'preorder',
     plural = 'preorders'
   )],
   definition = [%and(
     $reflexive(
       S = {S},
-      ≺ = {≺}
+      ⪯ = {⪯}
     ),
     $transitive(
       S = {S},
-      ≺ = {≺}
+      ≺ = {⪯}
     )
   )]
 }

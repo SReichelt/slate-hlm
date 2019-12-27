@@ -6,10 +6,7 @@
  * @references * https://en.wikipedia.org/wiki/Property_(mathematics)
  *             * https://proofwiki.org/wiki/Definition:Propositional_Function
  */
-$Properties(S: %Set(
-  auto = %true,
-  embedSubsets = %true
-)): %Construction {
+$Properties(S: %Set(auto = %true)): %Construction {
   $property(s: %Binding(
     S,
     #(p: %Prop)

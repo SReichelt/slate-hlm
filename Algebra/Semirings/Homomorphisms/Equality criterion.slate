@@ -1,0 +1,17 @@
+%../../../../../logics/hlm%
+
+/**
+ * @remarks This follows immediately from the HLM-specific definition of equality of semirings.
+ */
+$"Equality criterion"(
+  𝐑: %Element($../Semirings),
+  𝐒: %Element(%previous)
+): %EquivalenceTheorem {
+  conditions = [
+    %not($../../../Essentials/Sets/empty(S = {$Isomorphisms(
+      𝐑 = {𝐑},
+      𝐒 = {𝐒}
+    )})),
+    %equals(𝐑, 𝐒)
+  ]
+}

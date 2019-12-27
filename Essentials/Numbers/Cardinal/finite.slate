@@ -6,18 +6,10 @@ $finite(κ: %Element($"Cardinal numbers")): %Predicate {
     property = %neg('finite', 'infinite')
   )],
   definition = [
+    $../../Sets/finite(S = {$Carrier(κ = {κ})}),
     %in(
       κ,
       $../Natural/"Natural numbers"
-    ),
-    %structural(
-      κ,
-      $"Cardinal numbers",
-      [{
-        constructor = $"Cardinal numbers".cardinality,
-        parameters = #(K: %Set),
-        value = $../../Sets/finite(S = {K})
-      }]
     )
   ]
 }

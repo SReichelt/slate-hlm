@@ -21,7 +21,7 @@ $"reflexive transitive closure"(
         parameter = #(_1: %Element($../Endorelations(S = {S}))),
         predicate = $../preorder(
           S = {S},
-          ≺ = {_1}
+          ⪯ = {_1}
         )
       )}
     ),

@@ -3,11 +3,13 @@
 $Sequences: %Section {
   logic = 'hlm',
   items = [
+    %item($"indexed element"),
+    %item($"bounded cardinality"),
     %item(
       $"finite sequence of numbers",
       title = 'Tuple'
     ),
-    %item($"finite sequence"),
-    %item($"infinite sequence")
+    %item($"sequence from subset"),
+    %item($"infinite sequence from subset")
   ]
 }

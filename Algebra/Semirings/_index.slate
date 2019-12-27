@@ -1,0 +1,37 @@
+%../../../../logics/library%
+
+$Semirings: %Section {
+  logic = 'hlm',
+  items = [
+    %item($Semirings),
+    %item($Carrier),
+    %item($sum),
+    %item($zero),
+    %item($"additive monoid"),
+    %item($product),
+    %item($one),
+    %item($"multiplicative monoid"),
+    %subsection(
+      $Homomorphisms,
+      'Homomorphisms'
+    ),
+    %subsection(
+      $Subsemirings,
+      'Subsemirings'
+    ),
+    %item($"product with natural number"),
+    %item($"power to natural number"),
+    %subsection(
+      $Examples,
+      'Examples'
+    ),
+    %subsection(
+      $"Generalized operations",
+      'Generalized operations'
+    ),
+    %subsection(
+      $Formulas,
+      'Formulas'
+    )
+  ]
+}

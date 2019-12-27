@@ -8,7 +8,7 @@ $"AC is equivalent to total order": %EquivalenceTheorem {
     $../../Sets/Choice/"axiom of choice",
     $../../Relations/"total order"(
       S = {$"Cardinal numbers"},
-      ≺ = {$../../Relations/predicate(
+      ⪯ = {$../../Relations/predicate(
         S = {$"Cardinal numbers"},
         T = {$"Cardinal numbers"},
         parameters = #(

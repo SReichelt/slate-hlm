@@ -1,8 +1,0 @@
-%../../../../../logics/hlm%
-
-$"Multiples are a normal subgroup of integers"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %StandardTheorem {
-  claim = $../Subgroups/"normal subgroup set"(
-    𝐆 = {$integers},
-    S = {$../../../Essentials/Numbers/Integer/Subsets/Multiples(n = {n})}
-  )
-}

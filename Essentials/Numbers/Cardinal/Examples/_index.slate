@@ -1,0 +1,9 @@
+%../../../../../../logics/library%
+
+$Examples: %Section {
+  logic = 'hlm',
+  items = [
+    %item($aleph),
+    %item($continuum)
+  ]
+}

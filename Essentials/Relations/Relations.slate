@@ -9,14 +9,8 @@
  *             * https://ncatlab.org/nlab/show/relation#binary_relations
  */
 $Relations(
-  S: %Set(
-    auto = %true,
-    embedSubsets = %true
-  ),
-  T: %Set(
-    auto = %true,
-    embedSubsets = %true
-  )
+  S: %Set(auto = %true),
+  T: %Set(auto = %true)
 ): %Construction {
   $relation(s: %Binding(
     S,
