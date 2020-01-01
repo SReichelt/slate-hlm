@@ -3,13 +3,10 @@
 /**
  * @references * http://oeis.org/A000001
  */
-$"number of groups with order": %ExplicitOperator {
-  display = [$SubSup(
-    body = 'num',
-    sub = '𝓖𝓻𝓹'
+$"number of groups with order"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+  display = [$Function(
+    function = 'gnu',
+    arguments = [n]
   )],
-  definition = [$../../../Essentials/Sequences/"Infinite sequences"(S = {$../../../Essentials/Numbers/Natural/"Natural numbers"}).sequence(n = {
-      #(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-      {a = {$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$"Groups with order"(κ = {n})})}}
-  })]
+  definition = [$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$"Groups with order"(κ = {n})})]
 }

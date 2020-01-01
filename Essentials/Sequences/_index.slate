@@ -11,6 +11,7 @@ $Sequences: %Section {
     ),
     %item($"finite sequence length"),
     %item($"Infinite sequences"),
+    %item($"sequence from function"),
     %item($"Ordinal-indexed sequences"),
     %item($"ordinal-indexed sequence length"),
     %item($finite),
