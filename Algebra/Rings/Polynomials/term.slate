@@ -24,59 +24,31 @@ $term(
     space = '',
     minParenLevel = 3
   )],
-  definition = [%cases([
-    {
-      formula = %not(%equals(
-        a,
-        $../zero(𝐑 = {𝐑})
-      )),
-      value = %structuralCases(
-        n,
-        $../../../Essentials/Numbers/Natural/"Natural numbers",
-        [
-          {
-            constructor = $../../../Essentials/Numbers/Natural/"Natural numbers".zero,
-            value = $Polynomials(
-                𝐑 = {𝐑},
-                X = {X}
-              ).term(
-                p = {$Polynomials(
-                    𝐑 = {𝐑},
-                    X = {X}
-                  ).zero},
-                a = {a}
-            ),
-            rewrite = %true
-          },
-          {
-            constructor = $../../../Essentials/Numbers/Natural/"Natural numbers".successor,
-            parameters = #(m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-            value = $Polynomials(
-                𝐑 = {𝐑},
-                X = {X}
-              ).term(
-                p = {$term(
-                  𝐑 = {𝐑},
-                  X = {X},
-                  a = {a},
-                  n = {m}
-                )},
-                a = {$../zero(𝐑 = {𝐑})}
-            ),
-            rewrite = %true
-          }
-        ]
-      )
-    },
-    {
-      formula = %equals(
-        a,
-        $../zero(𝐑 = {𝐑})
-      ),
-      value = $Polynomials(
+  definition = [%structuralCases(
+    n,
+    $../../../Essentials/Numbers/Natural/"Natural numbers",
+    [
+      {
+        constructor = $../../../Essentials/Numbers/Natural/"Natural numbers".zero,
+        value = a,
+        rewrite = %true
+      },
+      {
+        constructor = $../../../Essentials/Numbers/Natural/"Natural numbers".successor,
+        parameters = #(m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
+        value = $normalized(
           𝐑 = {𝐑},
-          X = {X}
-        ).zero
-    }
-  ])]
+          X = {X},
+          p = {$term(
+            𝐑 = {𝐑},
+            X = {X},
+            a = {a},
+            n = {m}
+          )},
+          a = {$../zero(𝐑 = {𝐑})}
+        ),
+        rewrite = %true
+      }
+    ]
+  )]
 }

@@ -52,6 +52,6 @@ $"Binary trees"(S: %Set(
   )],
   embedding = {
     parameter = #(x: %Element(S)),
-    target = $"Binary trees".leaf(s = {x})
+    target = $"Binary trees"(S = {S}).leaf(s = {x})
   }
 }

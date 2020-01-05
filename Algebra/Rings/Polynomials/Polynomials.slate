@@ -110,5 +110,36 @@ $Polynomials(
     function = 𝐑,
     arguments = [X],
     style = '[]'
-  )]
+  )],
+  embedding = {
+    parameter = #(a: %Element($../Carrier(𝐑 = {𝐑}))),
+    target = %cases([
+      {
+        formula = %equals(
+          a,
+          $../zero(𝐑 = {𝐑})
+        ),
+        value = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).zero
+      },
+      {
+        formula = %not(%equals(
+          a,
+          $../zero(𝐑 = {𝐑})
+        )),
+        value = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).term(
+            p = {$Polynomials(
+                𝐑 = {𝐑},
+                X = {X}
+              ).zero},
+            a = {a}
+        )
+      }
+    ])
+  }
 }

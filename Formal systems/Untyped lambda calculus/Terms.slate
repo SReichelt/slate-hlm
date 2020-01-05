@@ -163,6 +163,6 @@ $Terms(
   )],
   embedding = {
     parameter = #(x: %Element(V)),
-    target = $Terms.variable(x = {x})
+    target = $Terms(V = {V}).variable(x = {x})
   }
 }

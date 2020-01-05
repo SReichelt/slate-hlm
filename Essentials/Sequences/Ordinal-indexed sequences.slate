@@ -54,36 +54,24 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
     pluralName = ['ordinal-indexed sequences', ' on ', S]
   },
   embedding = {
-    parameter = #(𝒂: %Element($"Finite sequences"(S = {S}))),
-    target = $"Ordinal-indexed sequences".sequence(
-      α = {$"finite sequence length"(
-        S = {S},
-        𝒂 = {𝒂}
-      )},
-      𝐚 = {%structuralCases(
-        𝒂,
-        $"Finite sequences"(S = {S}),
-        [{
-          constructor = $"Finite sequences".sequence,
-          parameters = #(
-            n: %Element($../Numbers/Natural/"Natural numbers"),
-            𝐚: %Element($"Fixed-length sequences"(
-              S = {S},
-              α = {n}
-            ))
-          ),
-          value = %asElementOf(
-            𝐚,
-            $"Fixed-length sequences"(
-              S = {S},
-              α = {$"finite sequence length"(
-                S = {S},
-                𝒂 = {𝒂}
-              )}
-            )
-          )
-        }]
-      )}
+    parameter = #(_𝒂: %Element($"Finite sequences"(S = {S}))),
+    target = %structuralCases(
+      _𝒂,
+      $"Finite sequences"(S = {S}),
+      [{
+        constructor = $"Finite sequences".sequence,
+        parameters = #(
+          n: %Element($../Numbers/Natural/"Natural numbers"),
+          𝐚: %Element($"Fixed-length sequences"(
+            S = {S},
+            α = {n}
+          ))
+        ),
+        value = $"Ordinal-indexed sequences"(S = {S}).sequence(
+          α = {n},
+          𝐚 = {𝐚}
+        )
+      }]
     )
   }
 }

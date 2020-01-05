@@ -54,27 +54,27 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     pluralName = ['sequences', ' on ', S]
   },
   embedding = {
-    parameter = #(𝐚: %Element($"Fixed-length sequences"(
+    parameter = #(_𝐚: %Element($"Fixed-length sequences"(
       S = {S},
       α = {$../Numbers/Ordinal/Examples/omega}
     ))),
-    target = $"Infinite sequences".sequence(n = {
-      #(k: %Element($../Numbers/Natural/"Natural numbers")),
-      {a = {%structuralCases(
-        𝐚,
-        $"Fixed-length sequences"(
-          S = {S},
-          α = {$../Numbers/Ordinal/Examples/omega}
-        ),
-        [{
-          constructor = $"Fixed-length sequences".sequence,
-          parameters = #(j: %Binding(
-            $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../Numbers/Ordinal/Examples/omega}),
-            #(a: %Element(S))
-          )),
-          value = a[k]
-        }]
-      )}}
-    })
+    target = %structuralCases(
+      _𝐚,
+      $"Fixed-length sequences"(
+        S = {S},
+        α = {$../Numbers/Ordinal/Examples/omega}
+      ),
+      [{
+        constructor = $"Fixed-length sequences".sequence,
+        parameters = #(j: %Binding(
+          $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../Numbers/Ordinal/Examples/omega}),
+          #(a: %Element(S))
+        )),
+        value = $"Infinite sequences"(S = {S}).sequence(n = {
+          #(k: %Element($../Numbers/Natural/"Natural numbers")),
+          {a = {a[k]}}
+        })
+      }]
+    )
   }
 }

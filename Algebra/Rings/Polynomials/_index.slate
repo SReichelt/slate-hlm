@@ -6,7 +6,6 @@ $Polynomials: %Section {
     %item($Polynomials),
     %item($normalized),
     %item($term),
-    %item($constant),
     %item($sum),
     %item($"additive inverse"),
     %item($"product with scalar"),
