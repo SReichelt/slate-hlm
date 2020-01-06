@@ -1,9 +1,0 @@
-%../../../../../logics/library%
-
-$Test6: %Section {
-  logic = 'hlm',
-  items = [%subsection(
-    $Test7,
-    'Test7'
-  )]
-}

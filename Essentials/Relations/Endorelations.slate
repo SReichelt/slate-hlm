@@ -66,17 +66,17 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       T = {S}
     ))),
     target = $Endorelations(S = {S}).relation(s = {
-      #(s: %Element(S)),
-      {t = {
-        #(t: %Element(S)),
-        {p = {$related(
-          S = {S},
-          T = {S},
-          ≺ = {≺},
-          s = {s},
-          t = {t}
-        )}}
-      }}
+        #(s: %Element(S)),
+        {t = {
+          #(t: %Element(S)),
+          {p = {$related(
+            S = {S},
+            T = {S},
+            ≺ = {≺},
+            s = {s},
+            t = {t}
+          )}}
+        }}
     })
   }
 }

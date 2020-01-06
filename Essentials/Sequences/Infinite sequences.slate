@@ -71,8 +71,8 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
           #(a: %Element(S))
         )),
         value = $"Infinite sequences"(S = {S}).sequence(n = {
-          #(k: %Element($../Numbers/Natural/"Natural numbers")),
-          {a = {a[k]}}
+            #(k: %Element($../Numbers/Natural/"Natural numbers")),
+            {a = {a[k]}}
         })
       }]
     )

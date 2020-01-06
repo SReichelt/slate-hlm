@@ -68,8 +68,8 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
           ))
         ),
         value = $"Ordinal-indexed sequences"(S = {S}).sequence(
-          α = {n},
-          𝐚 = {𝐚}
+            α = {n},
+            𝐚 = {𝐚}
         )
       }]
     )

@@ -22,18 +22,6 @@ $Library: %Library {
     %subsection(
       $"Formal systems",
       'Formal systems'
-    ),
-    %subsection(
-      $Test,
-      'Test'
-    ),
-    %subsection(
-      $Test2,
-      'Test2'
-    ),
-    %subsection(
-      $Test3,
-      'Test3'
     )
   ]
 }
