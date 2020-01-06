@@ -2,5 +2,11 @@
 
 $Test4: %Section {
   logic = 'hlm',
-  items = [%item($Test5)]
+  items = [
+    %item($Test5),
+    %subsection(
+      $Test6,
+      'Test6'
+    )
+  ]
 }
