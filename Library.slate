@@ -30,6 +30,10 @@ $Library: %Library {
     %subsection(
       $Test2,
       'Test2'
+    ),
+    %subsection(
+      $Test3,
+      'Test3'
     )
   ]
 }
