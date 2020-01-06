@@ -1,0 +1,6 @@
+%../../../logics/library%
+
+$Test1: %Section {
+  logic = 'hlm',
+  items = [%item($Test2)]
+}
