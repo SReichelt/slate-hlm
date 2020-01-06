@@ -1,0 +1,5 @@
+%../../../logics/hlm%
+
+$Test2: %SetOperator {
+  definition = [%enumeration]
+}
