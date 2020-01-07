@@ -2,11 +2,16 @@
 
 $operation(
   X: %Set(auto = %true),
-  ⨂: %Element($"Generalized operations"(X = {X}))
+  ⨂: %Element(
+    $"Generalized operations"(X = {X}),
+    auto = %true
+  ),
+  x: %Element(X),
+  y: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$SubSup(
-    body = '∗',
-    sub = ⨂
+  display = [$Operator(
+    symbol = ⨂,
+    operands = [x, y]
   )],
   definition = [%structuralCases(
     ⨂,
@@ -48,7 +53,14 @@ $operation(
           )
         ))
       ),
-      value = ∗
+      value = $../value(
+        X = {X},
+        Y = {X},
+        Z = {X},
+        ∗ = {∗},
+        x = {x},
+        y = {y}
+      )
     }]
   )]
 }

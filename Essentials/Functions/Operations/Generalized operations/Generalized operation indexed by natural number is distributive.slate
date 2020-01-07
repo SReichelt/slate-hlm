@@ -19,27 +19,17 @@ $"Generalized operation indexed by natural number is distributive"(
       n = {n},
       i = {
         #(i: %Element($../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-        {a = {$../value(
+        {a = {$operation(
           X = {X},
-          Y = {X},
-          Z = {X},
-          ∗ = {$operation(
-            X = {X},
-            ⨂ = {⨂}
-          )},
+          ⨂ = {⨂},
           x = {a[i]},
           y = {b[i]}
         )}}
       }
     ),
-    $../value(
+    $operation(
       X = {X},
-      Y = {X},
-      Z = {X},
-      ∗ = {$operation(
-        X = {X},
-        ⨂ = {⨂}
-      )},
+      ⨂ = {⨂},
       x = {$"indexed by natural number"(
         X = {X},
         ⨂ = {⨂},
