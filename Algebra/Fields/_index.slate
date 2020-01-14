@@ -12,6 +12,10 @@ $Fields: %Section {
     %subsection(
       $Examples,
       'Examples'
+    ),
+    %subsection(
+      $"Prime fields",
+      'Prime fields'
     )
   ]
 }

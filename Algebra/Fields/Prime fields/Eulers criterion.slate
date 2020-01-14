@@ -1,0 +1,38 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Euler's_criterion
+ */
+$"Eulers criterion"(
+  p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers"),
+  _1: %Constraint(%not($../../../Essentials/Numbers/Natural/even(n = {p}))),
+  a: %Element($../../Rings/Carrier(𝐑 = {$../Examples/"prime field"(p = {p})}))
+): %EquivalenceTheorem {
+  conditions = [
+    %exists(
+      #(y: %Element($../../Rings/Carrier(𝐑 = {$../Examples/"prime field"(p = {p})}))),
+      formula = %equals(
+        $../../Rings/"power to natural number"(
+          𝐑 = {$../Examples/"prime field"(p = {p})},
+          a = {y},
+          n = {$../../../Essentials/Numbers/Natural/number(value = 2)}
+        ),
+        a
+      )
+    ),
+    %equals(
+      $../../Rings/"power to natural number"(
+        𝐑 = {$../Examples/"prime field"(p = {p})},
+        a = {a},
+        n = {$../../../Essentials/Numbers/Natural/quotient(
+          n = {$../../../Essentials/Numbers/Natural/difference(
+            n = {p},
+            m = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+          )},
+          m = {$../../../Essentials/Numbers/Natural/number(value = 2)}
+        )}
+      ),
+      $../../Rings/one(𝐑 = {$../Examples/"prime field"(p = {p})})
+    )
+  ]
+}

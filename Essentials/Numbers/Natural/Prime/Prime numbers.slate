@@ -8,6 +8,11 @@
  */
 $"Prime numbers": %SetOperator {
   display = ['ℙ'],
+  definitionDisplay = {
+    parameter = #(p: %Expr),
+    singularName = 'prime',
+    pluralName = 'primes'
+  },
   definition = [%subset(
     #(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))),
     $prime(n = {n})

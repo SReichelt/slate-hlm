@@ -1,0 +1,9 @@
+%../../../../../logics/library%
+
+$"Prime fields": %Section {
+  logic = 'hlm',
+  items = [%item(
+    $"Eulers criterion",
+    title = 'Euler\'s criterion'
+  )]
+}
