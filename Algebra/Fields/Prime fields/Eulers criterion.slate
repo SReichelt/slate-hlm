@@ -6,7 +6,7 @@
 $"Eulers criterion"(
   p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers"),
   _1: %Constraint(%not($../../../Essentials/Numbers/Natural/even(n = {p}))),
-  a: %Element($../../Rings/Carrier(𝐑 = {$../Examples/"prime field"(p = {p})}))
+  a: %Element($../../Rings/Units(𝐑 = {$../Examples/"prime field"(p = {p})}))
 ): %EquivalenceTheorem {
   conditions = [
     %exists(
