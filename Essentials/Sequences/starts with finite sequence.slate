@@ -1,0 +1,32 @@
+%../../../../logics/hlm%
+
+$"starts with finite sequence"(
+  S: %Set(auto = %true),
+  𝐚: %Element($"Infinite sequences"(S = {S})),
+  𝒃: %Element($"Finite sequences"(S = {S}))
+): %Predicate {
+  display = [$TextualRelation(
+    symbol = 'starts with',
+    operands = [𝐚, 𝒃]
+  )],
+  definition = [%structural(
+    𝒃,
+    $"Finite sequences"(S = {S}),
+    [{
+      constructor = $"Finite sequences".sequence,
+      parameters = #(
+        n: %Element($../Numbers/Natural/"Natural numbers"),
+        𝐛: %Element($"Fixed-length sequences"(
+          S = {S},
+          α = {n}
+        ))
+      ),
+      value = $"starts with"(
+        S = {S},
+        𝐚 = {𝐚},
+        n = {n},
+        𝐛 = {𝐛}
+      )
+    }]
+  )]
+}

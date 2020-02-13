@@ -16,6 +16,7 @@ $Sequences: %Section {
     %item($"ordinal-indexed sequence length"),
     %item($finite),
     %item($"starts with"),
+    %item($"starts with finite sequence"),
     %item($"index in well-ordered set"),
     %item($"indexed element in well-ordered set"),
     %item($"sequence from well-ordered set")

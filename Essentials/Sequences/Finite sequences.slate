@@ -17,7 +17,16 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
       α = {n}
     ))
   ): %Constructor {
-    display = [$Tuple(items = [n, 𝐚])],
+    display = [$SubSup(
+      body = $Parens(
+        body = 𝐚,
+        style = '()'
+      ),
+      sub = $SubSup(
+        body = S,
+        sup = n
+      )
+    )],
     equalityDefinition = {
       leftParameters = #(
         m: %Element($../Numbers/Natural/"Natural numbers"),

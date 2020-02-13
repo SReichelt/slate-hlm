@@ -11,7 +11,16 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
       α = {α}
     ))
   ): %Constructor {
-    display = [$Tuple(items = [α, 𝐚])],
+    display = [$SubSup(
+      body = $Parens(
+        body = 𝐚,
+        style = '()'
+      ),
+      sub = $SubSup(
+        body = S,
+        sup = α
+      )
+    )],
     equalityDefinition = {
       leftParameters = #(
         α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
