@@ -1,0 +1,17 @@
+%../../../../../../logics/library%
+
+$"Iterated operators": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"iterated sum"),
+    %item($"Iterated sum grows"),
+    %item($"Iterated sum is greater or equal to each element"),
+    %item($"Iterated sum over constant"),
+    %item($"Iterated sum over variable"),
+    %item($"iterated product"),
+    %item($"Iterated product multiplies"),
+    %item($"Iterated product of positive numbers grows"),
+    %item($"Iterated product is a multiple of each element"),
+    %item($"Iterated product of positive numbers is greater or equal to each element")
+  ]
+}

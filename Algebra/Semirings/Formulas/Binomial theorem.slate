@@ -16,9 +16,9 @@ $"Binomial theorem"(
       )},
       n = {n}
     ),
-    $../../../Essentials/Functions/Operations/"Generalized operations"/"indexed by integer"(
+    $../../../Essentials/Functions/Operations/"Iterated operations"/"indexed by integer"(
       X = {$../Carrier(𝐑 = {𝐑})},
-      ⨂ = {$../"Generalized operations"/"generalized sum"(𝐑 = {𝐑})},
+      ⨂ = {$../"Iterated operations"/"iterated sum"(𝐑 = {𝐑})},
       j = {$../../../Essentials/Numbers/Natural/number(value = 0)},
       k = {n},
       i = {

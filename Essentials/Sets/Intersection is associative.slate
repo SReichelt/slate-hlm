@@ -2,6 +2,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Intersection_is_Associative
+ *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.inter_assoc
  */
 $"Intersection is associative"(
   U: %Set,

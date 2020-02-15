@@ -1,0 +1,9 @@
+%../../../../../logics/hlm%
+
+$"iterated sum"(𝐑: %Element($../Semirings)): %ExplicitOperator {
+  display = [$SubSup(
+    body = '∑',
+    sub = 𝐑
+  )],
+  definition = [$../../Monoids/"iterated operation"(𝐌 = {$../"additive monoid"(𝐑 = {𝐑})})]
+}

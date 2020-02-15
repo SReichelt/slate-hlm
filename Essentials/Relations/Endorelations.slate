@@ -6,6 +6,7 @@
  * @references * https://en.wikipedia.org/wiki/Binary_relation#Relations_over_a_set
  *             * http://mathworld.wolfram.com/Relation.html
  *             * https://proofwiki.org/wiki/Definition:Endorelation
+ *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Relation
  */
 $Endorelations(S: %Set(auto = %true)): %Construction {
   $relation(s: %Binding(

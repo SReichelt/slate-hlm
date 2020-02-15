@@ -3,6 +3,7 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Image_(mathematics)
  *             * https://proofwiki.org/wiki/Definition:Image_(Set_Theory)/Mapping/Subset
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.image
  */
 $Image(
   X: %Set(auto = %true),

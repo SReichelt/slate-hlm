@@ -11,6 +11,7 @@
  *             * http://mathworld.wolfram.com/EquivalenceClass.html
  *             * https://proofwiki.org/wiki/Definition:Equivalence_Class
  *             * https://ncatlab.org/nlab/show/equivalence+class
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/quot.html#quotient
  */
 $"Equivalence classes"(
   S: %Set(auto = %true),

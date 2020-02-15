@@ -2,6 +2,9 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Well-order
+ *             * http://mathworld.wolfram.com/WellOrderedSet.html
+ *             * https://proofwiki.org/wiki/Definition:Well-Ordering
+ *             * https://ncatlab.org/nlab/show/well-order
  */
 $"well-order"(
   S: %Set(auto = %true),

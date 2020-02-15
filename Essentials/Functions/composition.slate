@@ -4,6 +4,9 @@
  * @references * https://en.wikipedia.org/wiki/Function_composition
  *             * http://mathworld.wolfram.com/Composition.html
  *             * https://proofwiki.org/wiki/Definition:Composition_of_Mappings
+ *             * https://ncatlab.org/nlab/show/composition
+ *             * https://coq.inria.fr/library/Coq.Program.Basics.html#compose
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.comp
  */
 $composition(
   X: %Set(auto = %true),

@@ -82,8 +82,8 @@ $Natural: %Section {
     %item($"binomial coefficient"),
     %item($"Binomial coefficient equality"),
     %subsection(
-      $"Generalized operators",
-      'Generalized operators'
+      $"Iterated operators",
+      'Iterated operators'
     ),
     %subsection(
       $Prime,

@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.empty_subset
+ */
 $"Empty set is subset of any set"(S: %Set): %StandardTheorem {
   claim = %sub(
     $"Empty set",

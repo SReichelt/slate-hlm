@@ -2,8 +2,11 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Transitive_relation
+ *             * http://mathworld.wolfram.com/Transitive.html
  *             * https://proofwiki.org/wiki/Definition:Transitive_Relation
  *             * https://ncatlab.org/nlab/show/transitive+relation
+ *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Transitive
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#transitive
  */
 $transitive(
   S: %Set(auto = %true),

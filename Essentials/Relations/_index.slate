@@ -37,10 +37,7 @@ $Relations: %Section {
     %item($"greatest element"),
     %item($"well-order"),
     %item($equivalence),
-    %item(
-      $"Equivalence classes",
-      title = 'Equivalence classes'
-    ),
+    %item($"Equivalence classes"),
     %item(
       $succession,
       title = 'Succession'

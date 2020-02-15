@@ -1,0 +1,15 @@
+%../../../../../../logics/library%
+
+$"Iterated operations": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"Iterated operations"),
+    %item($"neutral element"),
+    %item($operation),
+    %item($"indexed by natural number"),
+    %item($"Iterated operation indexed by natural number is distributive"),
+    %item($"indexed by integer"),
+    %item($"indexed by finite set"),
+    %item($"indexed by set with finite support")
+  ]
+}

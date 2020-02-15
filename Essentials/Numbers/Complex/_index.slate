@@ -20,8 +20,8 @@ $Complex: %Section {
     ),
     %item($quotient),
     %subsection(
-      $"Generalized operators",
-      'Generalized operators'
+      $"Iterated operators",
+      'Iterated operators'
     )
   ]
 }

@@ -75,9 +75,9 @@ $product(
               #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {l}))),
               {j = {
                 #(k: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-                {a = {$../../../Essentials/Functions/Operations/"Generalized operations"/"indexed by natural number"(
+                {a = {$../../../Essentials/Functions/Operations/"Iterated operations"/"indexed by natural number"(
                   X = {$../Carrier(𝐑 = {𝐑})},
-                  ⨂ = {$../"Generalized operations"/"generalized sum"(𝐑 = {𝐑})},
+                  ⨂ = {$../"Iterated operations"/"iterated sum"(𝐑 = {𝐑})},
                   n = {m},
                   i = {
                     #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),

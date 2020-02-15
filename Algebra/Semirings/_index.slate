@@ -26,8 +26,8 @@ $Semirings: %Section {
       'Examples'
     ),
     %subsection(
-      $"Generalized operations",
-      'Generalized operations'
+      $"Iterated operations",
+      'Iterated operations'
     ),
     %subsection(
       $Formulas,

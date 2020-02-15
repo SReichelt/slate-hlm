@@ -4,6 +4,8 @@
  * @references * https://en.wikipedia.org/wiki/Injective_function
  *             * http://mathworld.wolfram.com/Injection.html
  *             * https://proofwiki.org/wiki/Definition:Injection
+ *             * https://ncatlab.org/nlab/show/injection
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.injective
  */
 $injective(
   X: %Set(auto = %true),

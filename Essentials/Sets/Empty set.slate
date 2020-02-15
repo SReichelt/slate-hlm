@@ -7,6 +7,7 @@
  *             * http://mathworld.wolfram.com/EmptySet.html
  *             * https://proofwiki.org/wiki/Definition:Empty_Set
  *             * https://ncatlab.org/nlab/show/empty+set
+ *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.empty_def
  */
 $"Empty set": %SetOperator {
   display = ['∅'],

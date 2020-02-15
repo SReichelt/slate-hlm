@@ -21,6 +21,7 @@
  * @references * https://en.wikipedia.org/wiki/Axiom_of_choice
  *             * http://mathworld.wolfram.com/AxiomofChoice.html
  *             * https://proofwiki.org/wiki/Axiom:Axiom_of_Choice
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/classical.html#classical.choice (actually a choice operator, which is stronger)
  */
 $"axiom of choice": %Predicate {
   display = ['AC'],

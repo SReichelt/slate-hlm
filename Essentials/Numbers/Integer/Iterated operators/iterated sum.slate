@@ -1,0 +1,26 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Summation
+ *             * http://mathworld.wolfram.com/Sum.html
+ *             * https://proofwiki.org/wiki/Definition:Summation
+ */
+$"iterated sum": %ExplicitOperator {
+  display = ['∑'],
+  definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../Integers}).operation(
+      ∗ = {$../../../Functions/Operations/operator(
+        X = {$../Integers},
+        Y = {$../Integers},
+        Z = {$../Integers},
+        parameters = #(
+          a: %Element($../Integers),
+          b: %Element(%previous)
+        ),
+        operator = $../sum(
+          a = {a},
+          b = {b}
+        )
+      )},
+      e = {$../../Natural/number(value = 0)}
+  )]
+}

@@ -6,6 +6,8 @@
  * @references * https://en.wikipedia.org/wiki/Union_(set_theory)
  *             * http://mathworld.wolfram.com/Union.html
  *             * https://proofwiki.org/wiki/Definition:Set_Union
+ *             * https://ncatlab.org/nlab/show/union
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.union
  */
 $Union(
   U: %Set(auto = %true),

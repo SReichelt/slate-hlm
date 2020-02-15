@@ -1,0 +1,23 @@
+%../../../../../../logics/hlm%
+
+$"Iterated product of positive numbers is greater or equal to each element"(
+  n: %Element($../"Natural numbers"),
+  i: %Binding(
+    $../Subsets/"Segment (less)"(n = {n}),
+    #(a: %Element($../Subsets/"Positive numbers"))
+  ),
+  j: %Element($../Subsets/"Segment (less)"(n = {n}))
+): %StandardTheorem {
+  claim = $../"less or equal"(
+    m = {a[j]},
+    n = {$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(
+      X = {$../"Natural numbers"},
+      ⨂ = {$"iterated product"},
+      n = {n},
+      i = {
+        #(k: %Element($../Subsets/"Segment (less)"(n = {n}))),
+        {a = {a[k]}}
+      }
+    )}
+  )
+}

@@ -4,6 +4,8 @@
  * @references * https://en.wikipedia.org/wiki/Function_composition#Properties
  *             * http://mathworld.wolfram.com/Composition.html
  *             * https://proofwiki.org/wiki/Composition_of_Mappings_is_Associative
+ *             * https://coq.inria.fr/library/Coq.Program.Combinators.html#compose_assoc
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.comp.assoc
  */
 $"Composition is associative"(
   W: %Set(auto = %true),

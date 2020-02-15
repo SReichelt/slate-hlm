@@ -4,6 +4,8 @@
  * @references * https://en.wikipedia.org/wiki/Inverse_function
  *             * http://mathworld.wolfram.com/InverseFunction.html
  *             * https://proofwiki.org/wiki/Definition:Inverse_Mapping
+ *             * https://ncatlab.org/nlab/show/inverse
+ *             * https://leanprover-community.github.io/mathlib_docs/logic/function.html#function.inv_fun
  */
 $inverse(
   X: %Set(auto = %true),

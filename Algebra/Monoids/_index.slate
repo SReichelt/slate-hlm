@@ -25,6 +25,6 @@ $Monoids: %Section {
     %item($inverse),
     %item($"power to natural number"),
     %item($"power to integer"),
-    %item($"generalized operation")
+    %item($"iterated operation")
   ]
 }

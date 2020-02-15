@@ -1,9 +1,12 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition works due to the special way that functions are defined. The [corresponding definition](../Relations/mapping%20value) for mappings is an implicit definition.
+ * @remarks This explicit definition works due to the special way that functions are defined. Within proofs, it enables unfolding of function application if the function has an explicit definition.
+ *          The [corresponding definition](../Relations/mapping%20value) for mappings is an implicit definition instead.
  *
  * @references * https://en.wikipedia.org/wiki/Function_(mathematics)#Functional_notation
+ *             * https://coq.inria.fr/library/Coq.Program.Basics.html#apply
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.app
  */
 $value(
   X: %Set(auto = %true),

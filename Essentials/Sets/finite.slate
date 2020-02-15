@@ -11,6 +11,7 @@
  *             * http://mathworld.wolfram.com/FiniteSet.html
  *             * https://proofwiki.org/wiki/Definition:Finite_Set
  *             * https://ncatlab.org/nlab/show/finite+set
+ *             * https://leanprover-community.github.io/mathlib_docs/data/set/finite.html#set.finite
  */
 $finite(S: %Set): %Predicate {
   display = [$Property(

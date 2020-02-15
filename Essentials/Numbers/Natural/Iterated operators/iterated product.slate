@@ -1,0 +1,26 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation
+ *             * http://mathworld.wolfram.com/Product.html
+ *             * https://proofwiki.org/wiki/Definition:Product_Notation_(Algebra)
+ */
+$"iterated product": %ExplicitOperator {
+  display = ['∏'],
+  definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../"Natural numbers"}).operation(
+      ∗ = {$../../../Functions/Operations/operator(
+        X = {$../"Natural numbers"},
+        Y = {$../"Natural numbers"},
+        Z = {$../"Natural numbers"},
+        parameters = #(
+          m: %Element($../"Natural numbers"),
+          n: %Element(%previous)
+        ),
+        operator = $../product(
+          m = {m},
+          n = {n}
+        )
+      )},
+      e = {$../number(value = 1)}
+  )]
+}

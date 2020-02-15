@@ -1,0 +1,9 @@
+%../../../../../../logics/library%
+
+$"Iterated operators": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"iterated sum"),
+    %item($"iterated product")
+  ]
+}

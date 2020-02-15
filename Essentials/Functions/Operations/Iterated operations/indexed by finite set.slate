@@ -1,0 +1,77 @@
+%../../../../../../logics/hlm%
+
+$"indexed by finite set"(
+  X: %Set(auto = %true),
+  ⨂: %Element($"Iterated operations"(X = {X})),
+  I: %Set,
+  _1: %Constraint($../../../Sets/finite(S = {I})),
+  i: %Binding(
+    I,
+    #(a: %Element(X))
+  )
+): %ImplicitOperator {
+  display = [$LargeOperator(
+    symbol = ⨂,
+    operand = a,
+    under = $ElementRelation(
+      element = i,
+      set = I
+    ),
+    maxParenLevel = 1
+  )],
+  parameter = #(x: %Element(X)),
+  definition = [
+    %forall(
+      #(
+        n: %Element($../../../Numbers/Natural/"Natural numbers"),
+        f: %Element($../../Bijections(
+          X = {$../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
+          Y = {I}
+        ))
+      ),
+      %equals(
+        $"indexed by natural number"(
+          X = {X},
+          ⨂ = {⨂},
+          n = {n},
+          i = {
+            #(j: %Element($../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+            {a = {a[$../../value(
+              X = {$../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
+              Y = {I},
+              f = {f},
+              x = {j}
+            )]}}
+          }
+        ),
+        x
+      )
+    ),
+    %exists(
+      #(
+        n: %Element($../../../Numbers/Natural/"Natural numbers"),
+        f: %Element($../../Bijections(
+          X = {$../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
+          Y = {I}
+        ))
+      ),
+      formula = %equals(
+        $"indexed by natural number"(
+          X = {X},
+          ⨂ = {⨂},
+          n = {n},
+          i = {
+            #(j: %Element($../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+            {a = {a[$../../value(
+              X = {$../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
+              Y = {I},
+              f = {f},
+              x = {j}
+            )]}}
+          }
+        ),
+        x
+      )
+    )
+  ]
+}

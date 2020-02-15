@@ -33,6 +33,6 @@ $Groups: %Section {
       $Order,
       'Order'
     ),
-    %item($"generalized operation")
+    %item($"iterated operation")
   ]
 }

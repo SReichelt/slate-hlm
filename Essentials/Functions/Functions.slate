@@ -11,6 +11,7 @@
  *             * http://mathworld.wolfram.com/Function.html
  *             * https://proofwiki.org/wiki/Definition:Mapping
  *             * https://ncatlab.org/nlab/show/function
+ *             * https://coq.inria.fr/library/Coq.Program.Basics.html#arrow
  */
 $Functions(
   X: %Set,

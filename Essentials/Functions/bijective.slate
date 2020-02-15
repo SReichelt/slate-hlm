@@ -5,6 +5,9 @@
  *             * http://mathworld.wolfram.com/Bijection.html
  *             * https://proofwiki.org/wiki/Definition:Bijection
  *             * https://proofwiki.org/wiki/Bijection_iff_Left_and_Right_Inverse
+ *             * https://ncatlab.org/nlab/show/bijection
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.bijective
+ *             * https://leanprover-community.github.io/mathlib_docs/logic/function.html#function.bijective_iff_has_inverse
  */
 $bijective(
   X: %Set(auto = %true),
@@ -75,7 +78,7 @@ $bijective(
       )
     ),
     %existsUnique(
-      #(h: %Element($Functions(
+      #(g: %Element($Functions(
         X = {Y},
         Y = {X}
       ))),
@@ -86,7 +89,7 @@ $bijective(
             Y = {Y},
             Z = {X},
             f = {f},
-            g = {h}
+            g = {g}
           ),
           $identity(X = {X})
         ),
@@ -95,7 +98,7 @@ $bijective(
             X = {Y},
             Y = {X},
             Z = {Y},
-            f = {h},
+            f = {g},
             g = {f}
           ),
           $identity(X = {Y})

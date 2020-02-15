@@ -5,6 +5,7 @@
  *
  * @references * https://en.wikipedia.org/wiki/Cartesian_product#Infinite_Cartesian_products
  *             * https://proofwiki.org/wiki/Definition:Cartesian_Product/Family_of_Sets
+ *             * https://ncatlab.org/nlab/show/cartesian+product#in_sets
  */
 $"Generalized cartesian product"(
   I: %Set,

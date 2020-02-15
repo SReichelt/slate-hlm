@@ -1,0 +1,53 @@
+%../../../../logics/hlm%
+
+$"iterated operation"(
+  𝐌: %Element($Monoids),
+  _1: %Constraint($commutative(𝐌 = {𝐌}))
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = '∏',
+    sub = 𝐌
+  )],
+  definition = [%structuralCases(
+    𝐌,
+    $Monoids,
+    [{
+      constructor = $Monoids.monoid,
+      parameters = #(
+        M: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        _1: %Constraint($../../Essentials/Functions/Operations/associative(
+          X = {M},
+          ∗ = {∗}
+        )),
+        e: %Element(M),
+        _2: %Constraint(%forall(
+          #(a: %Element(M)),
+          %equals(
+            $../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {M},
+              Z = {M},
+              ∗ = {∗},
+              x = {a},
+              y = {e}
+            ),
+            $../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {M},
+              Z = {M},
+              ∗ = {∗},
+              x = {e},
+              y = {a}
+            ),
+            a
+          )
+        ))
+      ),
+      value = $../../Essentials/Functions/Operations/"Iterated operations"/"Iterated operations"(X = {M}).operation(
+          ∗ = {∗},
+          e = {e}
+      )
+    }]
+  )]
+}

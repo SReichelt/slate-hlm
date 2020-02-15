@@ -11,7 +11,7 @@ $"Right modules": %Section {
     %item($difference),
     %item($"additive group"),
     %item($product),
-    %item($"generalized sum"),
+    %item($"iterated sum"),
     %subsection(
       $Homomorphisms,
       'Homomorphisms'

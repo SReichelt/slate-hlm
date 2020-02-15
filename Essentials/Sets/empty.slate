@@ -2,6 +2,8 @@
 
 /**
  * @remarks In HLM, multiple alternative definitions can be given for an operator or predicate, if they can be shown to be equal/equivalent. In proofs, the most convenient alternative can be selected at will, which reduces the number of necessary steps. Sometimes, it also makes sense to prove a property according to one alternative and then use it according to another.
+ *
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.nonempty
  */
 $empty(S: %Set): %Predicate {
   display = [$Property(

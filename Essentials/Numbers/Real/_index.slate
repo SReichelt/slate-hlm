@@ -23,8 +23,8 @@ $Real: %Section {
     %item($"square root"),
     %item($rational),
     %subsection(
-      $"Generalized operators",
-      'Generalized operators'
+      $"Iterated operators",
+      'Iterated operators'
     ),
     %item(
       $"Roots of primes are irrational",

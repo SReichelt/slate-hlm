@@ -1,0 +1,31 @@
+%../../../../../../logics/hlm%
+
+$"Iterated sum grows"(
+  n: %Element($../"Natural numbers"),
+  i: %Binding(
+    $../Subsets/"Segment (less)"(n = {n}),
+    #(a: %Element($../"Natural numbers"))
+  ),
+  m: %Element($../Subsets/"Segment (less or equal)"(n = {n}))
+): %StandardTheorem {
+  claim = $../"less or equal"(
+    m = {$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(
+      X = {$../"Natural numbers"},
+      ⨂ = {$"iterated sum"},
+      n = {m},
+      i = {
+        #(j: %Element($../Subsets/"Segment (less)"(n = {m}))),
+        {a = {a[j]}}
+      }
+    )},
+    n = {$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(
+      X = {$../"Natural numbers"},
+      ⨂ = {$"iterated sum"},
+      n = {n},
+      i = {
+        #(k: %Element($../Subsets/"Segment (less)"(n = {n}))),
+        {a = {a[k]}}
+      }
+    )}
+  )
+}

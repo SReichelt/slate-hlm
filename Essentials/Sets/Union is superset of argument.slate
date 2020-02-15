@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.subset_union_left
+ */
 $"Union is superset of argument"(
   U: %Set,
   S: %Subset(U),

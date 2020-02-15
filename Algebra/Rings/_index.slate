@@ -42,8 +42,8 @@ $Rings: %Section {
     ),
     %item($"kronecker delta"),
     %subsection(
-      $"Generalized operations",
-      'Generalized operations'
+      $"Iterated operations",
+      'Iterated operations'
     ),
     %subsection(
       $Polynomials,

@@ -2,6 +2,9 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Associative_property
+ *             * http://mathworld.wolfram.com/Associative.html
+ *             * https://proofwiki.org/wiki/Definition:Associative_Operation
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#associative
  */
 $associative(
   X: %Set(auto = %true),

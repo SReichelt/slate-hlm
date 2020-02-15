@@ -1,0 +1,54 @@
+%../../../../../../logics/hlm%
+
+$"indexed by natural number"(
+  X: %Set(auto = %true),
+  ⨂: %Element($"Iterated operations"(X = {X})),
+  n: %Element($../../../Numbers/Natural/"Natural numbers"),
+  i: %Binding(
+    $../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+    #(a: %Element(X))
+  )
+): %ExplicitOperator {
+  display = [$LargeOperator(
+    symbol = ⨂,
+    operand = a,
+    under = $Relation(
+      symbol = '<',
+      operands = [i, n]
+    ),
+    maxParenLevel = 1
+  )],
+  definition = [%structuralCases(
+    n,
+    $../../../Numbers/Natural/"Natural numbers",
+    [
+      {
+        constructor = $../../../Numbers/Natural/"Natural numbers".zero,
+        value = $"neutral element"(
+          X = {X},
+          ⨂ = {⨂}
+        ),
+        rewrite = %true
+      },
+      {
+        constructor = $../../../Numbers/Natural/"Natural numbers".successor,
+        parameters = #(m: %Element($../../../Numbers/Natural/"Natural numbers")),
+        value = $operation(
+          X = {X},
+          ⨂ = {⨂},
+          x = {$"indexed by natural number"(
+            X = {X},
+            ⨂ = {⨂},
+            n = {m},
+            i = {
+              #(j: %Element($../../../Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
+              {a = {a[j]}}
+            }
+          )},
+          y = {a[m]}
+        ),
+        rewrite = %true
+      }
+    ]
+  )]
+}

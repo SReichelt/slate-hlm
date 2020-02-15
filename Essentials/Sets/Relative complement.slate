@@ -4,6 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Complement_(set_theory)#Relative_complement
  *             * http://mathworld.wolfram.com/SetDifference.html
  *             * https://proofwiki.org/wiki/Definition:Set_Difference
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.diff
  */
 $"Relative complement"(
   U: %Set(auto = %true),

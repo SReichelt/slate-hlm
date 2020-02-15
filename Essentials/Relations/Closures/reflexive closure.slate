@@ -4,6 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Reflexive_closure
  *             * http://mathworld.wolfram.com/ReflexiveClosure.html
  *             * https://proofwiki.org/wiki/Definition:Reflexive_Closure
+ *             * https://leanprover-community.github.io/mathlib_docs/logic/relation.html#relation.refl_gen
  */
 $"reflexive closure"(
   S: %Set(auto = %true),

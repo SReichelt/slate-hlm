@@ -3,6 +3,7 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Converse_relation
  *             * https://proofwiki.org/wiki/Definition:Inverse_Relation
+ *             * https://leanprover-community.github.io/mathlib_docs/data/rel.html#rel.inv
  */
 $converse(
   S: %Set(auto = %true),

@@ -2,6 +2,9 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Total_order
+ *             * http://mathworld.wolfram.com/TotallyOrderedSet.html
+ *             * https://proofwiki.org/wiki/Definition:Total_Ordering
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/order.html#linear_order
  */
 $"total order"(
   S: %Set(auto = %true),

@@ -1,9 +1,0 @@
-%../../../../../../logics/library%
-
-$"Generalized operators": %Section {
-  logic = 'hlm',
-  items = [
-    %item($"generalized sum"),
-    %item($"generalized product")
-  ]
-}

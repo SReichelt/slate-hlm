@@ -22,8 +22,8 @@ $Operations: %Section {
     %item($"right operation restriction"),
     %item($"inner operation restriction"),
     %subsection(
-      $"Generalized operations",
-      'Generalized operations'
+      $"Iterated operations",
+      'Iterated operations'
     )
   ]
 }

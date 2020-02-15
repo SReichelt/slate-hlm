@@ -1,0 +1,53 @@
+%../../../../../../logics/hlm%
+
+$"Iterated operation indexed by natural number is distributive"(
+  X: %Set(auto = %true),
+  ⨂: %Element($"Iterated operations"(X = {X})),
+  n: %Element($../../../Numbers/Natural/"Natural numbers"),
+  i: %Binding(
+    $../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+    #(
+      a: %Element(X),
+      b: %Element(%previous)
+    )
+  )
+): %StandardTheorem {
+  claim = %equals(
+    $"indexed by natural number"(
+      X = {X},
+      ⨂ = {⨂},
+      n = {n},
+      i = {
+        #(i: %Element($../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+        {a = {$operation(
+          X = {X},
+          ⨂ = {⨂},
+          x = {a[i]},
+          y = {b[i]}
+        )}}
+      }
+    ),
+    $operation(
+      X = {X},
+      ⨂ = {⨂},
+      x = {$"indexed by natural number"(
+        X = {X},
+        ⨂ = {⨂},
+        n = {n},
+        i = {
+          #(i: %Element($../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+          {a = {a[i]}}
+        }
+      )},
+      y = {$"indexed by natural number"(
+        X = {X},
+        ⨂ = {⨂},
+        n = {n},
+        i = {
+          #(i: %Element($../../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+          {a = {b[i]}}
+        }
+      )}
+    )
+  )
+}

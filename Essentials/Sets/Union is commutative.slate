@@ -2,6 +2,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Union_is_Commutative
+ *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.union_comm
  */
 $"Union is commutative"(
   U: %Set,

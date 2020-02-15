@@ -2,6 +2,9 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Distributive_property
+ *             * http://mathworld.wolfram.com/Distributive.html
+ *             * https://proofwiki.org/wiki/Definition:Distributive_Operation
+ *             * https://ncatlab.org/nlab/show/distributive+law
  */
 $distributive(
   X: %Set(auto = %true),

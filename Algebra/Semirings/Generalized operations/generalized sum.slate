@@ -1,9 +1,0 @@
-%../../../../../logics/hlm%
-
-$"generalized sum"(𝐑: %Element($../Semirings)): %ExplicitOperator {
-  display = [$SubSup(
-    body = '∑',
-    sub = 𝐑
-  )],
-  definition = [$../../Monoids/"generalized operation"(𝐌 = {$../"additive monoid"(𝐑 = {𝐑})})]
-}

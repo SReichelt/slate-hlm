@@ -2,6 +2,9 @@
 
 /**
  * @remarks This definition is equivalent to the first relation being a subset of the second if relations are encoded as subsets.
+ *
+ * @references * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#contains (for endorelations only)
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#subrelation (ditto)
  */
 $implies(
   S: %Set(auto = %true),

@@ -2,6 +2,10 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Partially_ordered_set#Formal_definition
+ *             * http://mathworld.wolfram.com/PartialOrder.html
+ *             * https://proofwiki.org/wiki/Definition:Ordering
+ *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Order
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/order.html#partial_order
  */
 $"partial order"(
   S: %Set(auto = %true),

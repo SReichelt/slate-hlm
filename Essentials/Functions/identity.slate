@@ -3,6 +3,8 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Identity_function
  *             * https://proofwiki.org/wiki/Definition:Identity_Mapping
+ *             * https://coq.inria.fr/library/Coq.Init.Datatypes.html#id
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#id
  */
 $identity(X: %Set(auto = %true)): %ExplicitOperator {
   display = [$SubSup(

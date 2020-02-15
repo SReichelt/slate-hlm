@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Distributive_property
+ *             * http://mathworld.wolfram.com/Distributive.html
+ *             * https://proofwiki.org/wiki/Definition:Distributive_Operation/Left
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#left_distributive
+ */
 $"left-distributive"(
   X: %Set(auto = %true),
   Y: %Set(auto = %true),
