@@ -1,0 +1,43 @@
+%../../../../logics/hlm%
+
+$"power to integer"(
+  X: %Set(auto = %true),
+  f: %Element($Bijections(
+    X = {X},
+    Y = {X}
+  )),
+  a: %Element($../Numbers/Integer/Integers)
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = f,
+    sup = a
+  )],
+  definition = [%cases([
+    {
+      formula = $../Numbers/Integer/"less or equal"(
+        b = {a},
+        a = {$../Numbers/Natural/number(value = 0)}
+      ),
+      value = $"power to natural number"(
+        X = {X},
+        f = {f},
+        n = {a}
+      )
+    },
+    {
+      formula = $../Numbers/Integer/less(
+        a = {a},
+        b = {$../Numbers/Natural/number(value = 0)}
+      ),
+      value = $"power to natural number"(
+        X = {X},
+        f = {$inverse(
+          X = {X},
+          Y = {X},
+          f = {f}
+        )},
+        n = {$../Numbers/Integer/inverse(a = {a})}
+      )
+    }
+  ])]
+}

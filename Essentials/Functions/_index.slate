@@ -44,6 +44,8 @@ $Functions: %Section {
       $"Application of function after inverse is neutral",
       type = 'corollary'
     ),
+    %item($"power to natural number"),
+    %item($"power to integer"),
     %subsection(
       $Operations,
       'Operations'

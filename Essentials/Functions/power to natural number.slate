@@ -1,0 +1,46 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Iterated_function
+ *             * http://mathworld.wolfram.com/IteratedMap.html
+ */
+$"power to natural number"(
+  X: %Set(auto = %true),
+  f: %Element($Functions(
+    X = {X},
+    Y = {X}
+  )),
+  n: %Element($../Numbers/Natural/"Natural numbers")
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = f,
+    sup = n
+  )],
+  definition = [%structuralCases(
+    n,
+    $../Numbers/Natural/"Natural numbers",
+    [
+      {
+        constructor = $../Numbers/Natural/"Natural numbers".zero,
+        value = $identity(X = {X}),
+        rewrite = %true
+      },
+      {
+        constructor = $../Numbers/Natural/"Natural numbers".successor,
+        parameters = #(x: %Element($../Numbers/Natural/"Natural numbers")),
+        value = $composition(
+          X = {X},
+          Y = {X},
+          Z = {X},
+          f = {$"power to natural number"(
+            X = {X},
+            f = {f},
+            n = {x}
+          )},
+          g = {f}
+        ),
+        rewrite = %true
+      }
+    ]
+  )]
+}
