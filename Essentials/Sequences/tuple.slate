@@ -1,6 +1,6 @@
 %../../../../logics/hlm%
 
-$"finite sequence"(
+$tuple(
   S: %Set,
   items: %Element(S)[]
 ): %MacroOperator {
@@ -12,7 +12,7 @@ $"finite sequence"(
     sub = S
   )],
   variables = #(length: %Nat),
-  references = {"Fixed-length sequences" = $"Fixed-length sequences"(
+  references = {Tuples = $Tuples(
     S = {S},
     α = {$../Numbers/Natural/number(value = length)}
   )}

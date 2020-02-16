@@ -17,7 +17,7 @@ $"Number of small groups": %StandardTheorem {
       )}
     )},
     n = {$../../../Essentials/Numbers/Natural/number(value = 2048)},
-    𝐛 = {$../../../Essentials/Numbers/Natural/Sequences/"finite sequence of numbers"(items = [
+    𝐛 = {$../../../Essentials/Numbers/Natural/Sequences/"tuple of numbers"(items = [
       0, 1, 1, 1, 2, 1, 2, 1, 5, 2,
       2, 1, 5, 1, 2, 1, 14, 1, 5, 1,
       5, 2, 2, 1, 15, 2, 2, 5, 4, 1,

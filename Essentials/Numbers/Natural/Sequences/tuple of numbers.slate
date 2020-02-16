@@ -1,16 +1,16 @@
 %../../../../../../logics/hlm%
 
-$"finite sequence of numbers"(items: %Nat[]): %MacroOperator {
+$"tuple of numbers"(items: %Nat[]): %MacroOperator {
   display = [$Tuple(
     items = items,
     style = '()'
   )],
   variables = #(length: %Nat),
   references = {
-    "Fixed-length sequences" = $../../../Sequences/"Fixed-length sequences"(
+    Tuples = $../../../Sequences/Tuples(
       S = {$../"Natural numbers"},
       α = {$../number(value = length)}
     ),
-    "finite sequence" = $../../../Sequences/"finite sequence"
+    tuple = $../../../Sequences/tuple
   }
 }

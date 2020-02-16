@@ -614,7 +614,19 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
   )],
   definitionDisplay = {
     parameter = #(𝓒: %Expr),
-    singularName = [[u, '-small category']],
-    pluralName = [[u, '-small categories']]
+    singularName = [[
+      $DependentWord(
+        word = 'small',
+        argument = u
+      ),
+      ' category'
+    ]],
+    pluralName = [[
+      $DependentWord(
+        word = 'small',
+        argument = u
+      ),
+      ' categories'
+    ]]
   }
 }

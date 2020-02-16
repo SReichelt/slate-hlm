@@ -6,7 +6,7 @@
 $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
     α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-    𝐚: %Element($"Fixed-length sequences"(
+    𝐚: %Element($Tuples(
       S = {S},
       α = {α}
     ))
@@ -24,14 +24,14 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
     equalityDefinition = {
       leftParameters = #(
         α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-        𝐚: %Element($"Fixed-length sequences"(
+        𝐚: %Element($Tuples(
           S = {S},
           α = {α}
         ))
       ),
       rightParameters = #(
         β: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-        𝐛: %Element($"Fixed-length sequences"(
+        𝐛: %Element($Tuples(
           S = {S},
           α = {β}
         ))
@@ -42,7 +42,7 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
           𝐚,
           %asElementOf(
             𝐛,
-            $"Fixed-length sequences"(
+            $Tuples(
               S = {S},
               α = {α}
             )
@@ -71,7 +71,7 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
         constructor = $"Finite sequences".sequence,
         parameters = #(
           n: %Element($../Numbers/Natural/"Natural numbers"),
-          𝐚: %Element($"Fixed-length sequences"(
+          𝐚: %Element($Tuples(
             S = {S},
             α = {n}
           ))

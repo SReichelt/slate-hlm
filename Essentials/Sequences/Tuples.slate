@@ -1,6 +1,6 @@
 %../../../../logics/hlm%
 
-$"Fixed-length sequences"(
+$Tuples(
   S: %Set(auto = %true),
   α: %Element($../Numbers/Ordinal/"Ordinal numbers")
 ): %Construction {
@@ -41,7 +41,21 @@ $"Fixed-length sequences"(
   )],
   definitionDisplay = {
     parameter = #(𝐚: %Expr),
-    singularName = ['sequence', ' on ', S, ' with length ', α],
-    pluralName = ['sequences', ' on ', S, ' with length ', α]
+    singularName = [
+      $DependentWord(
+        word = 'tuple',
+        argument = α
+      ),
+      ' on ',
+      S
+    ],
+    pluralName = [
+      $DependentWord(
+        word = 'tuples',
+        argument = α
+      ),
+      ' on ',
+      S
+    ]
   }
 }

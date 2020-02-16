@@ -15,7 +15,7 @@ $"ordinal-indexed sequence length"(
       constructor = $"Ordinal-indexed sequences".sequence,
       parameters = #(
         α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-        𝐚: %Element($"Fixed-length sequences"(
+        𝐚: %Element($Tuples(
           S = {S},
           α = {α}
         ))

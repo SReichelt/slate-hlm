@@ -16,7 +16,7 @@ $"starts with finite sequence"(
       constructor = $"Finite sequences".sequence,
       parameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
-        𝐛: %Element($"Fixed-length sequences"(
+        𝐛: %Element($Tuples(
           S = {S},
           α = {n}
         ))

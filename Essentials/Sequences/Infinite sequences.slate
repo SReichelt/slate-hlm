@@ -54,18 +54,18 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     pluralName = ['sequences', ' on ', S]
   },
   embedding = {
-    parameter = #(_𝐚: %Element($"Fixed-length sequences"(
+    parameter = #(_𝐚: %Element($Tuples(
       S = {S},
       α = {$../Numbers/Ordinal/Examples/omega}
     ))),
     target = %structuralCases(
       _𝐚,
-      $"Fixed-length sequences"(
+      $Tuples(
         S = {S},
         α = {$../Numbers/Ordinal/Examples/omega}
       ),
       [{
-        constructor = $"Fixed-length sequences".sequence,
+        constructor = $Tuples.sequence,
         parameters = #(j: %Binding(
           $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../Numbers/Ordinal/Examples/omega}),
           #(a: %Element(S))

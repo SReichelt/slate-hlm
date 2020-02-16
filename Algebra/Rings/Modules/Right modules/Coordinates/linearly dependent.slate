@@ -30,7 +30,7 @@ $"linearly dependent"(
         𝐌 = {𝐌},
         𝐱 = {𝐱}
       )},
-      T = {%enumeration($../../../../../Essentials/Sequences/"Fixed-length sequences"(
+      T = {%enumeration($../../../../../Essentials/Sequences/Tuples(
           S = {$../../../Carrier(𝐑 = {𝐑})},
           α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
             S = {$../Carrier(

@@ -10,8 +10,20 @@ $"greatest element"(
   t: %Element(T)
 ): %Predicate {
   display = [$NounRelation(
-    singular = [⪯, '-greatest element'],
-    plural = [⪯, '-greatest elements'],
+    singular = [
+      $DependentWord(
+        word = 'greatest',
+        argument = ⪯
+      ),
+      ' element'
+    ],
+    plural = [
+      $DependentWord(
+        word = 'greatest',
+        argument = ⪯
+      ),
+      ' elements'
+    ],
     operands = [t, T]
   )],
   definition = [

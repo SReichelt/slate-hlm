@@ -10,8 +10,20 @@ $"least element"(
   t: %Element(T)
 ): %Predicate {
   display = [$NounRelation(
-    singular = [⪯, '-least element'],
-    plural = [⪯, '-least elements'],
+    singular = [
+      $DependentWord(
+        word = 'least',
+        argument = ⪯
+      ),
+      ' element'
+    ],
+    plural = [
+      $DependentWord(
+        word = 'least',
+        argument = ⪯
+      ),
+      ' elements'
+    ],
     operands = [t, T]
   )],
   definition = [$"lower bound"(

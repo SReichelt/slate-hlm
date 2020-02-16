@@ -24,7 +24,7 @@ $"sequence from well-ordered set"(
   )],
   definition = [$"Ordinal-indexed sequences"(S = {S}).sequence(
       α = {α},
-      𝐚 = {$"Fixed-length sequences"(
+      𝐚 = {$Tuples(
           S = {S},
           α = {α}
         ).sequence(k = {

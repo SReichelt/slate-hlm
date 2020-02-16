@@ -29,7 +29,7 @@ $Span(
         constructor = $../../../../../Essentials/Sequences/"Ordinal-indexed sequences".sequence,
         parameters = #(
           α: %Element($../../../../../Essentials/Numbers/Ordinal/"Ordinal numbers"),
-          _m: %Element($../../../../../Essentials/Sequences/"Fixed-length sequences"(
+          _m: %Element($../../../../../Essentials/Sequences/Tuples(
             S = {$../Carrier(
               𝐑 = {𝐑},
               𝐌 = {𝐌}
@@ -39,7 +39,7 @@ $Span(
         ),
         value = %setStructuralCases(
           _m,
-          $../../../../../Essentials/Sequences/"Fixed-length sequences"(
+          $../../../../../Essentials/Sequences/Tuples(
             S = {$../Carrier(
               𝐑 = {𝐑},
               𝐌 = {𝐌}
@@ -47,7 +47,7 @@ $Span(
             α = {α}
           ),
           [{
-            constructor = $../../../../../Essentials/Sequences/"Fixed-length sequences".sequence,
+            constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
             parameters = #(k: %Binding(
               $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
               #(x: %Element($../Carrier(

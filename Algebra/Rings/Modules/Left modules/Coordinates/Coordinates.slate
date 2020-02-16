@@ -29,18 +29,18 @@ $Coordinates(
     arguments = [𝐱]
   )],
   definition = [%subset(
-    #(_a: %Element($../../../../../Essentials/Sequences/"Fixed-length sequences"(
+    #(_a: %Element($../../../../../Essentials/Sequences/Tuples(
       S = {$../../../Carrier(𝐑 = {𝐑})},
       α = {α}
     ))),
     %structural(
       _a,
-      $../../../../../Essentials/Sequences/"Fixed-length sequences"(
+      $../../../../../Essentials/Sequences/Tuples(
         S = {$../../../Carrier(𝐑 = {𝐑})},
         α = {α}
       ),
       [{
-        constructor = $../../../../../Essentials/Sequences/"Fixed-length sequences".sequence,
+        constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
         parameters = #(k: %Binding(
           $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
           #(a: %Element($../../../Carrier(𝐑 = {𝐑})))

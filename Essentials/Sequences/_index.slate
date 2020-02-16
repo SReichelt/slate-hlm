@@ -3,12 +3,12 @@
 $Sequences: %Section {
   logic = 'hlm',
   items = [
-    %item($"Fixed-length sequences"),
-    %item($"Finite sequences"),
+    %item($Tuples),
     %item(
-      $"finite sequence",
+      $tuple,
       title = 'Tuple'
     ),
+    %item($"Finite sequences"),
     %item($"finite sequence length"),
     %item($"Infinite sequences"),
     %item($"sequence from function"),

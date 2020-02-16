@@ -7,8 +7,20 @@ $"lower bound"(
   s: %Element(S)
 ): %Predicate {
   display = [$NounRelation(
-    singular = [≺, '-lower bound'],
-    plural = [≺, '-lower bounds'],
+    singular = [
+      $DependentWord(
+        word = 'lower',
+        argument = ≺
+      ),
+      ' bound'
+    ],
+    plural = [
+      $DependentWord(
+        word = 'lower',
+        argument = ≺
+      ),
+      ' bounds'
+    ],
     operands = [s, T]
   )],
   definition = [%forall(

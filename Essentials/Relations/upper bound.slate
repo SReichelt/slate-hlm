@@ -7,8 +7,20 @@ $"upper bound"(
   s: %Element(S)
 ): %Predicate {
   display = [$NounRelation(
-    singular = [≺, '-upper bound'],
-    plural = [≺, '-upper bounds'],
+    singular = [
+      $DependentWord(
+        word = 'upper',
+        argument = ≺
+      ),
+      ' bound'
+    ],
+    plural = [
+      $DependentWord(
+        word = 'upper',
+        argument = ≺
+      ),
+      ' bounds'
+    ],
     operands = [s, T]
   )],
   definition = [

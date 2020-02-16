@@ -12,7 +12,7 @@
 $"Finite sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
     n: %Element($../Numbers/Natural/"Natural numbers"),
-    𝐚: %Element($"Fixed-length sequences"(
+    𝐚: %Element($Tuples(
       S = {S},
       α = {n}
     ))
@@ -30,14 +30,14 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
     equalityDefinition = {
       leftParameters = #(
         m: %Element($../Numbers/Natural/"Natural numbers"),
-        𝐚: %Element($"Fixed-length sequences"(
+        𝐚: %Element($Tuples(
           S = {S},
           α = {m}
         ))
       ),
       rightParameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
-        𝐛: %Element($"Fixed-length sequences"(
+        𝐛: %Element($Tuples(
           S = {S},
           α = {n}
         ))
@@ -48,7 +48,7 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
           𝐚,
           %asElementOf(
             𝐛,
-            $"Fixed-length sequences"(
+            $Tuples(
               S = {S},
               α = {m}
             )

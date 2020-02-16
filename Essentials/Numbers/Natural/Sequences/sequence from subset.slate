@@ -36,7 +36,7 @@ $"sequence from subset"(
     ),
     $../../../Sequences/"Ordinal-indexed sequences"(S = {M}).sequence(
         α = {α},
-        𝐚 = {$../../../Sequences/"Fixed-length sequences"(
+        𝐚 = {$../../../Sequences/Tuples(
             S = {M},
             α = {α}
           ).sequence(k = {

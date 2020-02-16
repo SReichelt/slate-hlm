@@ -7,7 +7,7 @@ $"starts with"(
     $../Numbers/Natural/"Natural numbers",
     auto = %true
   ),
-  𝐛: %Element($"Fixed-length sequences"(
+  𝐛: %Element($Tuples(
     S = {S},
     α = {n}
   ))
@@ -18,12 +18,12 @@ $"starts with"(
   )],
   definition = [%structural(
     𝐛,
-    $"Fixed-length sequences"(
+    $Tuples(
       S = {S},
       α = {n}
     ),
     [{
-      constructor = $"Fixed-length sequences".sequence,
+      constructor = $Tuples.sequence,
       parameters = #(j: %Binding(
         $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}),
         #(b: %Element(S))

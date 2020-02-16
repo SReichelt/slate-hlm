@@ -811,7 +811,19 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
   )],
   definitionDisplay = {
     parameter = #(𝐌: %Expr),
-    singularName = [['left ', 𝐑, '-module']],
-    pluralName = [['left ', 𝐑, '-modules']]
+    singularName = [[
+      'left ',
+      $DependentWord(
+        word = 'module',
+        argument = 𝐑
+      )
+    ]],
+    pluralName = [[
+      'left ',
+      $DependentWord(
+        word = 'modules',
+        argument = 𝐑
+      )
+    ]]
   }
 }

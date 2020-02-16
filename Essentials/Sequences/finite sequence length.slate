@@ -15,7 +15,7 @@ $"finite sequence length"(
       constructor = $"Finite sequences".sequence,
       parameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
-        𝐚: %Element($"Fixed-length sequences"(
+        𝐚: %Element($Tuples(
           S = {S},
           α = {n}
         ))
