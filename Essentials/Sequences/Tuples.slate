@@ -1,5 +1,19 @@
 %../../../../logics/hlm%
 
+/**
+ * @remarks This is a slightly generalized notion of “tuple” where the length _α_ can be an arbitrary ordinal number. If _α_ is a natural number, it matches the common definition.
+ *
+ *          We could define tuples simply as functions, but a custom construction has several advantages, including the ability to easily destruct a tuple into its elements, and the ability to omit _S_ from the constructor.
+ *
+ *          In this definition, the codomain is a fixed set _S_. If each item is an element of a different set, a [generalized Cartesian product](../Sets/Generalized%20cartesian%20product) can be used instead.
+ *
+ * @references * https://en.wikipedia.org/wiki/Tuple
+ *             * http://mathworld.wolfram.com/n-Tuple.html
+ *             * https://proofwiki.org/wiki/Definition:Ordered_Tuple/On_Set
+ *             * https://ncatlab.org/nlab/show/tuple
+ *             * https://coq.inria.fr/library/Coq.Vectors.VectorDef.html
+ *             * https://leanprover-community.github.io/mathlib_docs/core/data/vector.html#vector (finite) or https://leanprover-community.github.io/mathlib_docs/data/seq/seq.html#seq (infinite)
+ */
 $Tuples(
   S: %Set(auto = %true),
   α: %Element($../Numbers/Ordinal/"Ordinal numbers")

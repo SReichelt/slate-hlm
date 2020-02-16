@@ -1,0 +1,33 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition produces a tuple from a function.
+ */
+$"tuple from function"(
+  S: %Set(auto = %true),
+  α: %Element(
+    $../Numbers/Ordinal/"Ordinal numbers",
+    auto = %true
+  ),
+  f: %Element($../Functions/Functions(
+    X = {$../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
+    Y = {S}
+  ))
+): %ExplicitOperator {
+  display = [$Function(
+    function = 'tpl',
+    arguments = [f]
+  )],
+  definition = [$Tuples(
+      S = {S},
+      α = {α}
+    ).sequence(k = {
+      #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+      {a = {$../Functions/value(
+        X = {$../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
+        Y = {S},
+        f = {f},
+        x = {k}
+      )}}
+  })]
+}

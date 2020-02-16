@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @remarks This is just the inverse of the previous definition.
+ */
 $"indexed element in well-ordered set"(
   S: %Set,
   ⪯: %Element($../Relations/Endorelations(S = {S})),

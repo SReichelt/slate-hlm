@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @remarks This is a helper definition which yields the index of _s_ within the sequence defined by the given well-order. This index is an ordinal number which is defined using the set of all elements less than _s_.
+ */
 $"index in well-ordered set"(
   S: %Set,
   ⪯: %Element($../Relations/Endorelations(S = {S})),

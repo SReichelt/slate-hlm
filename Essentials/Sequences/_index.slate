@@ -8,6 +8,7 @@ $Sequences: %Section {
       $tuple,
       title = 'Tuple'
     ),
+    %item($"tuple from function"),
     %item($"Finite sequences"),
     %item($"finite sequence length"),
     %item($"Infinite sequences"),
