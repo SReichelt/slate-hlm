@@ -1,29 +1,35 @@
-%../../../../../logics/hlm%
+%../../../../../../../logics/hlm%
 
 /**
  * @references * https://en.wikipedia.org/wiki/Automorphism
  *             * http://mathworld.wolfram.com/Automorphism.html
  *             * https://proofwiki.org/wiki/Definition:Automorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/automorphism
- *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/algebra.html#ring_aut
  */
-$Automorphisms(𝐑: %Element($../Semirings)): %SetOperator {
+$Automorphisms(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element($../"Right modules"(𝐑 = {𝐑}))
+): %SetOperator {
   display = [$Function(
     function = 'Aut',
-    arguments = [𝐑]
+    arguments = [𝐌]
   )],
   definitionDisplay = {
     parameter = #(φ: %Expr),
     display = [$FunctionDefinition(
       function = φ,
       symbol = '↔',
-      operands = [𝐑, 𝐑]
+      operands = [𝐌, 𝐌]
     )],
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },
   definition = [$Isomorphisms(
     𝐑 = {𝐑},
-    𝐒 = {𝐑}
+    𝐌 = {𝐌},
+    𝐍 = {𝐌}
   )]
 }

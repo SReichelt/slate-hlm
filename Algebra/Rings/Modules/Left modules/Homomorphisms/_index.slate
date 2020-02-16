@@ -5,6 +5,8 @@ $Homomorphisms: %Section {
   items = [
     %item($Homomorphisms),
     %item($Isomorphisms),
+    %item($Automorphisms),
+    %item($"automorphism group"),
     %item($Kernel),
     %item($identity),
     %item($"Equality criterion"),

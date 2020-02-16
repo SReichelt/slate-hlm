@@ -12,6 +12,16 @@ $Automorphisms(𝐑: %Element($../Rings)): %SetOperator {
     function = 'Aut',
     arguments = [𝐑]
   )],
+  definitionDisplay = {
+    parameter = #(φ: %Expr),
+    display = [$FunctionDefinition(
+      function = φ,
+      symbol = '↔',
+      operands = [𝐑, 𝐑]
+    )],
+    singularName = 'automorphism',
+    pluralName = 'automorphisms'
+  },
   definition = [$Isomorphisms(
     𝐑 = {𝐑},
     𝐒 = {𝐑}

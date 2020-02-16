@@ -12,6 +12,16 @@ $Automorphisms(𝐌: %Element($../Magmas)): %SetOperator {
     function = 'Aut',
     arguments = [𝐌]
   )],
+  definitionDisplay = {
+    parameter = #(φ: %Expr),
+    display = [$FunctionDefinition(
+      function = φ,
+      symbol = '↔',
+      operands = [𝐌, 𝐌]
+    )],
+    singularName = 'automorphism',
+    pluralName = 'automorphisms'
+  },
   definition = [$Isomorphisms(
     𝐌 = {𝐌},
     𝐍 = {𝐌}

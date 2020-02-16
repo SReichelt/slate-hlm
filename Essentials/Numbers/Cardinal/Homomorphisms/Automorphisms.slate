@@ -11,6 +11,16 @@ $Automorphisms(κ: %Element($../"Cardinal numbers")): %SetOperator {
     function = 'Aut',
     arguments = [κ]
   )],
+  definitionDisplay = {
+    parameter = #(φ: %Expr),
+    display = [$FunctionDefinition(
+      function = φ,
+      symbol = '↔',
+      operands = [κ, κ]
+    )],
+    singularName = 'automorphism',
+    pluralName = 'automorphisms'
+  },
   definition = [$Isomorphisms(
     κ = {κ},
     μ = {κ}
