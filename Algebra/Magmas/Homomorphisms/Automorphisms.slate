@@ -1,0 +1,19 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Automorphism
+ *             * http://mathworld.wolfram.com/Automorphism.html
+ *             * https://proofwiki.org/wiki/Definition:Automorphism_(Abstract_Algebra)
+ *             * https://ncatlab.org/nlab/show/automorphism
+ *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/algebra.html#mul_aut
+ */
+$Automorphisms(𝐌: %Element($../Magmas)): %SetOperator {
+  display = [$Function(
+    function = 'Aut',
+    arguments = [𝐌]
+  )],
+  definition = [$Isomorphisms(
+    𝐌 = {𝐌},
+    𝐍 = {𝐌}
+  )]
+}

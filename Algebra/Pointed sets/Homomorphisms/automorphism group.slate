@@ -1,0 +1,19 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Automorphism_group
+ *             * http://mathworld.wolfram.com/AutomorphismGroup.html
+ *             * https://proofwiki.org/wiki/Definition:Automorphism_Group
+ *             * https://ncatlab.org/nlab/show/automorphism#automorphism_group
+ *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/algebra.html#mul_aut.group
+ */
+$"automorphism group"(𝐒: %Element($../"Pointed sets")): %ExplicitOperator {
+  display = [$Function(
+    function = 'Aut',
+    arguments = [𝐒]
+  )],
+  definition = [$../../Groups/Subgroups/"subset group"(
+    𝐆 = {$../../Groups/Examples/"symmetric group"(X = {$../Carrier(𝐒 = {𝐒})})},
+    S = {$Automorphisms(𝐒 = {𝐒})}
+  )]
+}

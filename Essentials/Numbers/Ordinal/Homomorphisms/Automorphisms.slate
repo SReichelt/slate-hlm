@@ -1,0 +1,18 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Automorphism
+ *             * http://mathworld.wolfram.com/Automorphism.html
+ *             * https://proofwiki.org/wiki/Definition:Automorphism_(Abstract_Algebra)
+ *             * https://ncatlab.org/nlab/show/automorphism
+ */
+$Automorphisms(α: %Element($../"Ordinal numbers")): %SetOperator {
+  display = [$Function(
+    function = 'Aut',
+    arguments = [α]
+  )],
+  definition = [$Isomorphisms(
+    α = {α},
+    β = {α}
+  )]
+}

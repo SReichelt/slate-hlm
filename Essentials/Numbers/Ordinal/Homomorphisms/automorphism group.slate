@@ -1,0 +1,18 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Automorphism_group
+ *             * http://mathworld.wolfram.com/AutomorphismGroup.html
+ *             * https://proofwiki.org/wiki/Definition:Automorphism_Group
+ *             * https://ncatlab.org/nlab/show/automorphism#automorphism_group
+ */
+$"automorphism group"(α: %Element($../"Ordinal numbers")): %ExplicitOperator {
+  display = [$Function(
+    function = 'Aut',
+    arguments = [α]
+  )],
+  definition = [$../../../../Algebra/Groups/Subgroups/"subset group"(
+    𝐆 = {$../../../../Algebra/Groups/Examples/"symmetric group"(X = {$../Carrier(α = {α})})},
+    S = {$Automorphisms(α = {α})}
+  )]
+}
