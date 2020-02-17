@@ -43,7 +43,10 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
     display = [$Parens(
       body = $Operator(
         symbol = ∗,
-        operands = [e, '⋅⋅⋅']
+        operands = [
+          e,
+          $MiddleEllipsis
+        ]
       ),
       style = '()'
     )],

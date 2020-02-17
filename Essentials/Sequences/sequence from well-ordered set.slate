@@ -3,7 +3,7 @@
 /**
  * @remarks This definition produces an ordinal-indexed sequence from a well-ordered set.
  *
- * @references * https://en.wikipedia.org/wiki/Ordinal_number#Indexing_classes_of_ordinals
+ * @references * https://en.wikipedia.org/wiki/Well-order#Ordinal_numbers
  */
 $"sequence from well-ordered set"(
   S: %Set,
