@@ -5,6 +5,7 @@
  *             * http://mathworld.wolfram.com/BinomialCoefficient.html
  *             * https://proofwiki.org/wiki/Definition:Binomial_Coefficient
  *             * https://coq.inria.fr/library/Coq.Reals.Binomial.html#C
+ *             * https://leanprover-community.github.io/mathlib_docs/data/nat/basic.html#nat.choose_eq_fact_div_fact
  */
 $"Binomial coefficient equality"(
   n: %Element($"Natural numbers"),

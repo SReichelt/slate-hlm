@@ -7,6 +7,7 @@
  *             * http://mathworld.wolfram.com/RelativelyPrime.html
  *             * https://proofwiki.org/wiki/Definition:Coprime/Integers
  *             * https://coq.inria.fr/library/Coq.ZArith.Znumtheory.html#rel_prime (for integers)
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/gcd.html#nat.coprime
  */
 $coprime(
   m: %Element($"Natural numbers"),

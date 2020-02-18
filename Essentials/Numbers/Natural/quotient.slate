@@ -4,6 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Quotient
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html#div (truncated division, thus incompatible with division of rational numbers)
  *             * https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.div (ditto)
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/div.html#nat.div (ditto)
  */
 $quotient(
   n: %Element($"Natural numbers"),

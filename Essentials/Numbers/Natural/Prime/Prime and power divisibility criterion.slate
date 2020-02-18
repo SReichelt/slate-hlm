@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.prime.dvd_of_dvd_pow
+ *             * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.dvd_prime_pow
+ */
 $"Prime and power divisibility criterion"(
   p: %Element($"Prime numbers"),
   m: %Element($../"Natural numbers"),

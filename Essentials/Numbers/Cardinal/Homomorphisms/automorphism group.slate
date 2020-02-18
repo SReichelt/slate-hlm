@@ -1,6 +1,12 @@
 %../../../../../../logics/hlm%
 
 /**
+ * @remarks The automorphism group, as a subgroup of the symmetric group of the carrier.
+ *
+ *          This definition makes a forward reference to concepts related to groups.
+ *
+ *          Alternatively, automorphism groups could be defined more generally via category theory, but using them would require specifying the specific category to use.
+ *
  * @references * https://en.wikipedia.org/wiki/Automorphism_group
  *             * http://mathworld.wolfram.com/AutomorphismGroup.html
  *             * https://proofwiki.org/wiki/Definition:Automorphism_Group

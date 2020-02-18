@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.le_of_dvd
+ */
 $"Divisors are less or equal"(
   m: %Element($Subsets/"Positive numbers"),
   n: %Element(%previous),

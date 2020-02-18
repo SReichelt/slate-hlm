@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.distrib
+ */
 $"Product is distributive over sum": %StandardTheorem {
   claim = $../../Functions/Operations/distributive(
     X = {$"Natural numbers"},

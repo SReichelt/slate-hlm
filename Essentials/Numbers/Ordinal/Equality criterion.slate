@@ -1,0 +1,27 @@
+%../../../../../logics/hlm%
+
+/**
+ * @remarks This is the ordinal-number analogue of the Schröder-Bernstein theorem, together with the HLM-specific equality criterion on structures.
+ */
+$"Equality criterion"(
+  α: %Element($"Ordinal numbers"),
+  β: %Element(%previous)
+): %EquivalenceTheorem {
+  conditions = [
+    %and(
+      $"less or equal"(
+        α = {α},
+        β = {β}
+      ),
+      $"less or equal"(
+        α = {β},
+        β = {α}
+      )
+    ),
+    %not($../../Sets/empty(S = {$Homomorphisms/Isomorphisms(
+      α = {α},
+      β = {β}
+    )})),
+    %equals(α, β)
+  ]
+}

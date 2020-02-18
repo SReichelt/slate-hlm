@@ -19,6 +19,11 @@ $Cardinal: %Section {
       $Subsets,
       'Subsets'
     ),
+    %item(
+      $"Equality criterion",
+      type = 'theorem',
+      title = 'Schröder-Bernstein'
+    ),
     %item($"Less or equal is a partial order"),
     %item($"AC is equivalent to total order"),
     %item($sum),

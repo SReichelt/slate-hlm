@@ -1,5 +1,13 @@
 %../../../../../../logics/hlm%
 
+/**
+ * @remarks An isomorphism between cardinal numbers is simply a bijection between their representative sets. Thus, the existence of an isomorphism implies that the two cardinal numbers are in fact equal, as is shown [below](Equality%20criterion).
+ *
+ * @references * https://en.wikipedia.org/wiki/Isomorphism
+ *             * http://mathworld.wolfram.com/Isomorphism.html
+ *             * https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)
+ *             * https://ncatlab.org/nlab/show/isomorphism
+ */
 $Isomorphisms(
   κ: %Element($../"Cardinal numbers"),
   μ: %Element(%previous)

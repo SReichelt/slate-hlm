@@ -2,6 +2,12 @@
 
 /**
  * @remarks This definition constructs a partial order on the Cartesian product of two sets _S_ and _T_ from partial orders on _S_ and _T_, combining the two partial orders lexicographically. It is used to define [multiplication of ordinal numbers](../Numbers/Ordinal/product).
+ *
+ * @references * https://en.wikipedia.org/wiki/Lexicographical_order#Cartesian_products
+ *             * http://mathworld.wolfram.com/LexicographicOrder.html
+ *             * https://proofwiki.org/wiki/Definition:Lexicographic_Order
+ *             * https://ncatlab.org/nlab/show/lexicographic+order
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/wf.html#prod.lex
  */
 $"lexicographical order"(
   S: %Set(auto = %true),

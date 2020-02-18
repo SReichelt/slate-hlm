@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://proofwiki.org/wiki/Ordinals_are_Well-Ordered
+ *             * https://ncatlab.org/nlab/show/well-order#examples
+ *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal.is_well_order
+ */
 $"Less or equal is a well-order": %StandardTheorem {
   claim = $../../Relations/"well-order"(
     S = {$"Ordinal numbers"},

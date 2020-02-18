@@ -7,6 +7,7 @@
  *             * https://proofwiki.org/wiki/Definition:Addition/Natural_Numbers
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html#add
  *             * https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.add
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#nat.add
  */
 $sum(
   m: %Element($"Natural numbers"),

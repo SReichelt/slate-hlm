@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.mul_one
+ */
 $"Multiplication by one is neutral"(n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $product(

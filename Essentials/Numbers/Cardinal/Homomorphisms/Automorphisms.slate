@@ -1,6 +1,8 @@
 %../../../../../../logics/hlm%
 
 /**
+ * @remarks Automorphisms of cardinal numbers, i.e. self-bijections of a set, might not be a particular useful concept. They are included for completeness.
+ *
  * @references * https://en.wikipedia.org/wiki/Automorphism
  *             * http://mathworld.wolfram.com/Automorphism.html
  *             * https://proofwiki.org/wiki/Definition:Automorphism_(Abstract_Algebra)

@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This definition retrieves a representative set from an ordinal number, and enables typical abuse of notation.
+ * @remarks This definition retrieves a representative set from an ordinal number.
  */
 $Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
   display = [$Function(

@@ -2,6 +2,9 @@
 
 /**
  * @remarks This definition constructs a partial order on the disjoint union of two sets _S_ and _T_ from partial orders on _S_ and _T_. Elements of _S_ are always considered smaller than elements of _T_. This is used to define [addition of ordinal numbers](../Numbers/Ordinal/sum).
+ *
+ * @references * https://en.wikipedia.org/wiki/Ordinal_arithmetic#Addition
+ *             * https://leanprover-community.github.io/mathlib_docs/data/sum.html#sum.lex
  */
 $succession(
   S: %Set(auto = %true),

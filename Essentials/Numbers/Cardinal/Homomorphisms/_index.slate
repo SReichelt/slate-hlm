@@ -7,7 +7,6 @@ $Homomorphisms: %Section {
     %item($Isomorphisms),
     %item($Automorphisms),
     %item($"automorphism group"),
-    %item($identity),
-    %item($"Equality criterion")
+    %item($identity)
   ]
 }

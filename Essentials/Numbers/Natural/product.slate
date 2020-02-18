@@ -5,6 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Multiplication/Natural_Numbers
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html#mul
  *             * https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.mul
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.mul
  */
 $product(
   m: %Element($"Natural numbers"),

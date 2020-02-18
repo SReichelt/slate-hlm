@@ -20,6 +20,7 @@ $Ordinal: %Section {
       $Subsets,
       'Subsets'
     ),
+    %item($"Equality criterion"),
     %item($"Less or equal is a well-order"),
     %item($sum),
     %item($product),

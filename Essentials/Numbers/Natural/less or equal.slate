@@ -5,6 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Ordering_on_Natural_Numbers
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html#leb
  *             * https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.leb
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.le
  */
 $"less or equal"(
   m: %Element($"Natural numbers"),

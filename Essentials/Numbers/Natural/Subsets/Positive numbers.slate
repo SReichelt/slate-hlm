@@ -2,6 +2,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Axiom:Axiomatization_of_1-Based_Natural_Numbers
+ *             * https://leanprover-community.github.io/mathlib_docs/data/pnat/basic.html#pnat
  *             * http://oeis.org/A000027
  */
 $"Positive numbers": %SetOperator {

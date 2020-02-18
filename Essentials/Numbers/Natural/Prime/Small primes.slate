@@ -1,7 +1,8 @@
 %../../../../../../logics/hlm%
 
 /**
- * @references * http://oeis.org/A000040
+ * @references * https://en.wikipedia.org/wiki/List_of_prime_numbers
+ *             * http://oeis.org/A000040
  */
 $"Small primes": %StandardTheorem {
   claim = $../../../Sequences/"starts with"(

@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This definition retrieves a representative set from a cardinal number, and enables typical abuse of notation.
+ * @remarks This definition retrieves a representative set from a cardinal number.
  */
 $Carrier(κ: %Element($"Cardinal numbers")): %SetOperator {
   display = [$Function(

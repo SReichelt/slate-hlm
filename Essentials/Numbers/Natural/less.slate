@@ -3,6 +3,8 @@
 /**
  * @references * https://coq.inria.fr/library/Coq.Init.Nat.html#ltb
  *             * https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.ltb
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.lt
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.lt_of_le_and_ne
  */
 $less(
   m: %Element($"Natural numbers"),

@@ -1,26 +1,29 @@
-%../../../../../../logics/hlm%
+%../../../../../logics/hlm%
 
 /**
+ * @remarks This is essentially the Schröder-Bernstein theorem together with the HLM-specific equality criterion on structures.
+ *
  * @references * [https://en.wikipedia.org/wiki/Schröder-Bernstein_theorem](https://en.wikipedia.org/wiki/Schr%C3%B6der-Bernstein_theorem)
  *             * http://mathworld.wolfram.com/Schroeder-BernsteinTheorem.html
  *             * [https://proofwiki.org/wiki/Cantor-Bernstein-Schröder_Theorem](https://proofwiki.org/wiki/Cantor-Bernstein-Schr%C3%B6der_Theorem)
+ *             * https://leanprover-community.github.io/mathlib_docs/set_theory/schroeder_bernstein.html#function.embedding.antisymm
  */
 $"Equality criterion"(
-  κ: %Element($../"Cardinal numbers"),
+  κ: %Element($"Cardinal numbers"),
   μ: %Element(%previous)
 ): %EquivalenceTheorem {
   conditions = [
     %and(
-      $../"less or equal"(
+      $"less or equal"(
         κ = {κ},
         μ = {μ}
       ),
-      $../"less or equal"(
+      $"less or equal"(
         κ = {μ},
         μ = {κ}
       )
     ),
-    %not($../../../Sets/empty(S = {$Isomorphisms(
+    %not($../../Sets/empty(S = {$Homomorphisms/Isomorphisms(
       κ = {κ},
       μ = {μ}
     )})),

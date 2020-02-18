@@ -2,6 +2,8 @@
 
 /**
  * @remarks The non-circularity requirements of HLM have a subtle effect on this proposition: Even though the axiom of choice, by itself, does not exclude the set of cardinal numbers, this proposition cannot be used to conclude that the cardinal numbers have a choice function if the order on cardinal numbers is total.
+ *
+ * @references * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.linear_order
  */
 $"AC is equivalent to total order": %EquivalenceTheorem {
   conditions = [

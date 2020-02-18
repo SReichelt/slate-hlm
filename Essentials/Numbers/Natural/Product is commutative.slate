@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.mul_comm
+ */
 $"Product is commutative": %StandardTheorem {
   claim = $../../Functions/Operations/commutative(
     X = {$"Natural numbers"},

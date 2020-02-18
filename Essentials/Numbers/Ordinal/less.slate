@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal.lt
+ */
 $less(
   α: %Element($"Ordinal numbers"),
   β: %Element(%previous)

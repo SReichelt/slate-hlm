@@ -15,6 +15,7 @@
  *             * http://mathworld.wolfram.com/CardinalNumber.html
  *             * https://proofwiki.org/wiki/Definition:Cardinal
  *             * https://ncatlab.org/nlab/show/cardinal+number
+ *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal
  */
 $"Cardinal numbers": %Construction {
   $cardinality(S: %Set): %Constructor {

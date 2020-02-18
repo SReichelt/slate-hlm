@@ -4,6 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Cardinal_number#Cardinal_addition
  *             * http://mathworld.wolfram.com/CardinalAddition.html
  *             * https://proofwiki.org/wiki/Definition:Sum_of_Cardinals
+ *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.add_def
  */
 $sum(
   κ: %Element($"Cardinal numbers"),

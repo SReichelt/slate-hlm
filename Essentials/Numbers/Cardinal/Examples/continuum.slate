@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Continuum_(set_theory)
+ *             * http://mathworld.wolfram.com/Continuum.html
+ *             * https://ncatlab.org/nlab/show/continuum
+ */
 $continuum: %ExplicitOperator {
   display = ['𝔠'],
   definition = [

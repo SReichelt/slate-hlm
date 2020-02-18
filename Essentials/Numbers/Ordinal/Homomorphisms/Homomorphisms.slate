@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Order_embedding
+ *             * https://proofwiki.org/wiki/Definition:Order_Embedding
+ *             * https://leanprover-community.github.io/mathlib_docs/order/order_iso.html#order_embedding
+ */
 $Homomorphisms(
   α: %Element($../"Ordinal numbers"),
   β: %Element(%previous)
@@ -26,27 +31,29 @@ $Homomorphisms(
     %forall(
       #(
         a: %Element($../Carrier(α = {α})),
-        b: %Element(%previous),
-        _1: %Constraint($../before(
+        b: %Element(%previous)
+      ),
+      %equiv(
+        $../before(
           α = {α},
           a = {a},
           b = {b}
-        ))
-      ),
-      $../before(
-        α = {β},
-        a = {$../../../Functions/value(
-          X = {$../Carrier(α = {α})},
-          Y = {$../Carrier(α = {β})},
-          f = {f},
-          x = {a}
-        )},
-        b = {$../../../Functions/value(
-          X = {$../Carrier(α = {α})},
-          Y = {$../Carrier(α = {β})},
-          f = {f},
-          x = {b}
-        )}
+        ),
+        $../before(
+          α = {β},
+          a = {$../../../Functions/value(
+            X = {$../Carrier(α = {α})},
+            Y = {$../Carrier(α = {β})},
+            f = {f},
+            x = {a}
+          )},
+          b = {$../../../Functions/value(
+            X = {$../Carrier(α = {α})},
+            Y = {$../Carrier(α = {β})},
+            f = {f},
+            x = {b}
+          )}
+        )
       )
     )
   )]

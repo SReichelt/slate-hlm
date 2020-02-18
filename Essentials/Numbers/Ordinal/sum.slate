@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Ordinal_arithmetic#Addition
+ *             * http://mathworld.wolfram.com/OrdinalAddition.html
+ *             * https://proofwiki.org/wiki/Definition:Ordinal_Addition
+ *             * https://ncatlab.org/nlab/show/ordinal+sum
+ *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal.has_add
+ */
 $sum(
   α: %Element($"Ordinal numbers"),
   β: %Element(%previous)

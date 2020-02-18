@@ -2,6 +2,8 @@
 
 /**
  * @remarks This proposition justifies the notation for the successor constructor.
+ *
+ * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.add_one
  */
 $"Addition of one yields successor"(n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(

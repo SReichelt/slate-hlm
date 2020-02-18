@@ -11,6 +11,8 @@
  *             * https://proofwiki.org/wiki/Definition:Prime_Number
  *             * https://ncatlab.org/nlab/show/prime+number
  *             * https://coq.inria.fr/library/Coq.ZArith.Znumtheory.html#prime
+ *             * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.prime
+ *             * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.dvd_prime
  */
 $prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))): %Predicate {
   display = [$Property(
