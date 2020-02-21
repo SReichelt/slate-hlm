@@ -1,9 +1,10 @@
 %../../../../../../logics/hlm%
 
 /**
- * @references * https://en.wikipedia.org/wiki/Continuum_(set_theory)
+ * @references * https://en.wikipedia.org/wiki/Cardinality_of_the_continuum
  *             * http://mathworld.wolfram.com/Continuum.html
  *             * https://ncatlab.org/nlab/show/continuum
+ *             * https://leanprover-community.github.io/mathlib_docs/data/real/cardinality.html#cardinal.mk_real
  */
 $continuum: %ExplicitOperator {
   display = ['𝔠'],

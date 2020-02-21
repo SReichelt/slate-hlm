@@ -1,0 +1,14 @@
+%../../../../../logics/hlm%
+
+$"Cantors theorem generalized"(
+  κ: %Element($Subsets/"Segment (greater)"(κ = {$../Natural/number(value = 1)})),
+  μ: %Element($"Cardinal numbers")
+): %StandardTheorem {
+  claim = $less(
+    μ = {$power(
+      κ = {κ},
+      μ = {μ}
+    )},
+    κ = {μ}
+  )
+}

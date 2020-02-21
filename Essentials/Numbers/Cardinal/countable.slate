@@ -1,0 +1,21 @@
+%../../../../../logics/hlm%
+
+$countable(κ: %Element($"Cardinal numbers")): %Predicate {
+  display = [$Property(
+    operand = κ,
+    property = %neg('countable', 'uncountable')
+  )],
+  definition = [
+    $"less or equal"(
+      κ = {κ},
+      μ = {$Examples/aleph(α = {$../Natural/number(value = 0)})}
+    ),
+    %exists(
+      #(M: %Subset($../Natural/"Natural numbers")),
+      formula = %equals(
+        κ,
+        $"Cardinal numbers".cardinality(S = {M})
+      )
+    )
+  ]
+}

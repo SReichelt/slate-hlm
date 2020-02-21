@@ -1,0 +1,29 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Countable_set
+ *             * http://mathworld.wolfram.com/CountableSet.html
+ *             * https://proofwiki.org/wiki/Definition:Countable_Set
+ *             * https://ncatlab.org/nlab/show/countable+set
+ *             * https://leanprover-community.github.io/mathlib_docs/data/set/countable.html#set.countable
+ */
+$countable(S: %Set): %Predicate {
+  display = [$Property(
+    operand = S,
+    property = %neg('countable', 'uncountable')
+  )],
+  definition = [
+    $../Numbers/Cardinal/countable(κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})}),
+    %exists(
+      #(f: %Element($../Functions/Functions(
+        X = {S},
+        Y = {$../Numbers/Natural/"Natural numbers"}
+      ))),
+      formula = $../Functions/injective(
+        X = {S},
+        Y = {$../Numbers/Natural/"Natural numbers"},
+        f = {f}
+      )
+    )
+  ]
+}

@@ -1,5 +1,13 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Real_number
+ *             * http://mathworld.wolfram.com/RealNumber.html
+ *             * https://proofwiki.org/wiki/Definition:Real_Number
+ *             * https://ncatlab.org/nlab/show/real+number
+ *             * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal
+ *             * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real
+ */
 $"Real numbers": %Construction {
   $class(
     r: %Element($../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"})),

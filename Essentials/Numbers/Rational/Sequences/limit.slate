@@ -1,5 +1,11 @@
 %../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Limit_of_a_sequence
+ *             * http://mathworld.wolfram.com/Limit.html
+ *             * https://proofwiki.org/wiki/Definition:Limit_of_Sequence/Normed_Division_Ring
+ *             * https://ncatlab.org/nlab/show/convergence
+ */
 $limit(
   n: %Binding(
     $../../Natural/"Natural numbers",

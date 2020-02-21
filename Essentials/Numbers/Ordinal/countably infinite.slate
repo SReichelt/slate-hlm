@@ -1,0 +1,16 @@
+%../../../../../logics/hlm%
+
+$"countably infinite"(α: %Element($"Ordinal numbers")): %Predicate {
+  display = [$Property(
+    operand = α,
+    property = 'countably infinite'
+  )],
+  definition = [
+    %and(
+      $countable(α = {α}),
+      %not($finite(α = {α}))
+    ),
+    $../Cardinal/"countably infinite"(κ = {$cardinality(α = {α})}),
+    $../../Sets/"countably infinite"(S = {$Carrier(α = {α})})
+  ]
+}

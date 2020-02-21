@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex.has_mul
+ */
 $product(
   a: %Element($"Complex numbers"),
   b: %Element(%previous)

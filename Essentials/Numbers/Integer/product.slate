@@ -3,7 +3,8 @@
 /**
  * @remarks Note that the sums and products on the right are operations on natural numbers.
  *
- * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.mul (but uses a different encoding)
+ * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.mul
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.mul
  */
 $product(
   a: %Element($Integers),

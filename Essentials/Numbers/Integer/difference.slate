@@ -1,7 +1,8 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.sub (but uses a different encoding)
+ * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.sub
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.has_sub
  */
 $difference(
   b: %Element($Integers),

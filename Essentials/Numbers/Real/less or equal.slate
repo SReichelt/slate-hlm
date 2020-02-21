@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CRealLe
+ *             * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.le
+ */
 $"less or equal"(
   a: %Element($"Real numbers"),
   b: %Element(%previous)

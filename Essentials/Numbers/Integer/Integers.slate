@@ -12,6 +12,7 @@
  *             * https://proofwiki.org/wiki/Definition:Integer
  *             * https://ncatlab.org/nlab/show/integer
  *             * https://coq.inria.fr/library/Coq.ZArith.BinInt.html (but uses a different encoding as an inductive data type with three constructors)
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int (but uses a different encoding as an inductive data type with two constructors)
  */
 $Integers: %Construction {
   $difference(

@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/real/irrational.html#irrational
+ */
 $rational(a: %Element($"Real numbers")): %Predicate {
   display = [$Property(
     operand = a,

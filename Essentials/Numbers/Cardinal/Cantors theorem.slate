@@ -1,0 +1,15 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Cantor%27s_theorem
+ *             * http://mathworld.wolfram.com/CantorsTheorem.html
+ *             * https://proofwiki.org/wiki/Cantor%27s_Theorem
+ *             * https://ncatlab.org/nlab/show/Cantor%27s+theorem
+ *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.cantor
+ */
+$"Cantors theorem"(S: %Set): %StandardTheorem {
+  claim = $less(
+    μ = {$"Cardinal numbers".cardinality(S = {$../../Sets/"Power set"(S = {S})})},
+    κ = {$"Cardinal numbers".cardinality(S = {S})}
+  )
+}

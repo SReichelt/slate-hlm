@@ -29,11 +29,26 @@ $Cardinal: %Section {
     %item($sum),
     %item($product),
     %item($power),
-    %item($finite),
     %item($"Cardinality of power set"),
     %subsection(
       $Examples,
       'Examples'
+    ),
+    %item($finite),
+    %item($countable),
+    %item($"countably infinite"),
+    %item(
+      $"Cantors theorem",
+      type = 'theorem',
+      title = 'Cantor\'s theorem'
+    ),
+    %item(
+      $"Cantors theorem generalized",
+      type = 'corollary'
+    ),
+    %item(
+      $"Continuum is uncountable",
+      type = 'corollary'
     )
   ]
 }

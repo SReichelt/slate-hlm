@@ -4,6 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Rational_number#Multiplication
  *             * https://proofwiki.org/wiki/Definition:Multiplication/Rational_Numbers
  *             * https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Qmult
+ *             * https://leanprover-community.github.io/mathlib_docs/data/rat/basic.html#rat.mul
  */
 $product(
   a: %Element($"Rational numbers"),

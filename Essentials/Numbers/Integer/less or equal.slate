@@ -3,7 +3,7 @@
 /**
  * @remarks Note that the comparison on the right is comparison on natural numbers.
  *
- * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.leb (but uses a different encoding)
+ * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.leb
  */
 $"less or equal"(
   a: %Element($Integers),

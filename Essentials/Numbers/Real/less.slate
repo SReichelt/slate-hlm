@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CRealLt
+ *             * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.has_lt
+ */
 $less(
   a: %Element($"Real numbers"),
   b: %Element(%previous)

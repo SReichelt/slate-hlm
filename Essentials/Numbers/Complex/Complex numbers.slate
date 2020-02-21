@@ -2,6 +2,12 @@
 
 /**
  * @remarks The constructor notation is later justified by a [proposition](Actual%20linear%20combination%20equals%20formal%20linear%20combination).
+ *
+ * @references * https://en.wikipedia.org/wiki/Complex_numbers
+ *             * http://mathworld.wolfram.com/ComplexNumber.html
+ *             * https://proofwiki.org/wiki/Definition:Complex_Number
+ *             * https://ncatlab.org/nlab/show/complex+number
+ *             * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex
  */
 $"Complex numbers": %Construction {
   $complex(

@@ -1,0 +1,25 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Countable_set
+ *             * http://mathworld.wolfram.com/CountablyInfinite.html
+ *             * https://proofwiki.org/wiki/Definition:Countably_Infinite_Set
+ *             * https://ncatlab.org/nlab/show/countable+set (called “denumerable” here)
+ */
+$"countably infinite"(S: %Set): %Predicate {
+  display = [$Property(
+    operand = S,
+    property = 'countably infinite'
+  )],
+  definition = [
+    $../Numbers/Cardinal/"countably infinite"(κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})}),
+    %and(
+      $countable(S = {S}),
+      %not($finite(S = {S}))
+    ),
+    %exists(#(f: %Element($../Functions/Bijections(
+      X = {S},
+      Y = {$../Numbers/Natural/"Natural numbers"}
+    ))))
+  ]
+}

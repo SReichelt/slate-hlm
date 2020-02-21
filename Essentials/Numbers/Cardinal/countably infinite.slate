@@ -1,0 +1,18 @@
+%../../../../../logics/hlm%
+
+$"countably infinite"(κ: %Element($"Cardinal numbers")): %Predicate {
+  display = [$Property(
+    operand = κ,
+    property = 'countably infinite'
+  )],
+  definition = [
+    %and(
+      $countable(κ = {κ}),
+      %not($finite(κ = {κ}))
+    ),
+    %equals(
+      κ,
+      $Examples/aleph(α = {$../Natural/number(value = 0)})
+    )
+  ]
+}

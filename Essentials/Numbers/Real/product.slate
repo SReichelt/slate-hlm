@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyRealsMult.html#CReal_mult
+ */
 $product(
   a: %Element($"Real numbers"),
   b: %Element(%previous)

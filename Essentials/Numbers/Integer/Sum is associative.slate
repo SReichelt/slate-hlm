@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.add_assoc
+ */
 $"Sum is associative": %StandardTheorem {
   claim = $../../Functions/Operations/associative(
     X = {$Integers},

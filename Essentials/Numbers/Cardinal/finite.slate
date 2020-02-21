@@ -6,10 +6,27 @@ $finite(κ: %Element($"Cardinal numbers")): %Predicate {
     property = %neg('finite', 'infinite')
   )],
   definition = [
-    $../../Sets/finite(S = {$Carrier(κ = {κ})}),
     %in(
       κ,
       $../Natural/"Natural numbers"
+    ),
+    %exists(
+      #(x: %Element($../Natural/"Natural numbers")),
+      formula = %equals(κ, x)
+    ),
+    %exists(
+      #(y: %Element($../Natural/"Natural numbers")),
+      formula = $"less or equal"(
+        κ = {κ},
+        μ = {y}
+      )
+    ),
+    %exists(
+      #(z: %Element($../Natural/"Natural numbers")),
+      formula = $less(
+        κ = {κ},
+        μ = {z}
+      )
     )
   ]
 }

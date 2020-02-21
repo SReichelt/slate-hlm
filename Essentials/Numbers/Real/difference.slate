@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal_minus
+ */
 $difference(
   b: %Element($"Real numbers"),
   a: %Element(%previous)

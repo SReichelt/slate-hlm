@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal_plus
+ */
 $sum(
   a: %Element($"Real numbers"),
   b: %Element(%previous)

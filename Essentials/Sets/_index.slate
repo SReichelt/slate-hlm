@@ -8,6 +8,8 @@ $Sets: %Section {
     %item($empty),
     %item($finite),
     %item($"Subsets of finite sets are finite"),
+    %item($countable),
+    %item($"countably infinite"),
     %item($Intersection),
     %item($"Intersection is associative"),
     %item($"Intersection is commutative"),

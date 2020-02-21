@@ -2,6 +2,8 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Rational_number#Ordering
+ *             * https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Qle
+ *             * https://leanprover-community.github.io/mathlib_docs/data/rat/order.html#rat.le
  */
 $"less or equal"(
   a: %Element($"Rational numbers"),
