@@ -2,7 +2,7 @@
 
 $"Lagranges theorem"(
   𝐆: %Element($../Groups),
-  _1: %Constraint($../finite(𝐆 = {𝐆})),
+  _1: %Constraint($finite(𝐆 = {𝐆})),
   S: %Subset($../Carrier(𝐆 = {𝐆})),
   _2: %Constraint($../Subgroups/"subgroup set"(
     𝐆 = {𝐆},

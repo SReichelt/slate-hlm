@@ -2,7 +2,7 @@
 
 $"Lagranges corollary"(
   𝐆: %Element($../Groups),
-  _1: %Constraint($../finite(𝐆 = {𝐆})),
+  _1: %Constraint($finite(𝐆 = {𝐆})),
   g: %Element($../Carrier(𝐆 = {𝐆}))
 ): %StandardTheorem {
   claim = $../../../Essentials/Numbers/Natural/divisible(

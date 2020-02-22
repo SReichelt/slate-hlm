@@ -9,7 +9,6 @@ $Groups: %Section {
     %item($operation),
     %item($identity),
     %item($inverse),
-    %item($finite),
     %item($abelian),
     %item($"power to natural number"),
     %item($"power to integer"),

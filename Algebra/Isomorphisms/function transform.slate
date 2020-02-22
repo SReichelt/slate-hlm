@@ -58,7 +58,7 @@ $"function transform"(
       Y = {X},
       Z = {Y},
       g = {φ},
-      f = {$../../Essentials/Functions/composition(
+      f = {%associative($../../Essentials/Functions/composition(
         X = {Y},
         Y = {X},
         Z = {X},
@@ -68,7 +68,7 @@ $"function transform"(
           Y = {Y},
           f = {φ}
         )}
-      )}
+      ))}
     )
   ]
 }

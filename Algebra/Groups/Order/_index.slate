@@ -4,6 +4,7 @@ $Order: %Section {
   logic = 'hlm',
   items = [
     %item($"group order"),
+    %item($finite),
     %item($"Groups with order"),
     %item($"number of groups with order"),
     %item($"Number of small groups"),
