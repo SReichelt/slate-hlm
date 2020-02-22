@@ -109,7 +109,7 @@ $Monoids: %Construction {
         ))),
         formula = %and(
           %equals(
-            $../Isomorphisms/"inner operation transform"(
+            $../Isomorphisms/"inner operation transport"(
               X = {M},
               Y = {N},
               φ = {φ},
@@ -118,7 +118,7 @@ $Monoids: %Construction {
             ⋆
           ),
           %equals(
-            $../Isomorphisms/"element transform"(
+            $../Isomorphisms/"element transport"(
               X = {M},
               Y = {N},
               φ = {φ},

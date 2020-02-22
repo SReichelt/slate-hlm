@@ -29,7 +29,7 @@ $"Pointed sets": %Construction {
           Y = {T}
         ))),
         formula = %equals(
-          $../Isomorphisms/"element transform"(
+          $../Isomorphisms/"element transport"(
             X = {S},
             Y = {T},
             φ = {φ},

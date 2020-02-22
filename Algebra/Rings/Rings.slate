@@ -538,7 +538,7 @@ $Rings: %Construction {
         ))),
         formula = %and(
           %equals(
-            $../Isomorphisms/"inner operation transform"(
+            $../Isomorphisms/"inner operation transport"(
               X = {R},
               Y = {S},
               φ = {φ},
@@ -547,7 +547,7 @@ $Rings: %Construction {
             ⋆
           ),
           %equals(
-            $../Isomorphisms/"element transform"(
+            $../Isomorphisms/"element transport"(
               X = {R},
               Y = {S},
               φ = {φ},
@@ -556,7 +556,7 @@ $Rings: %Construction {
             𝟢
           ),
           %equals(
-            $../Isomorphisms/"function transform"(
+            $../Isomorphisms/"function transport"(
               X = {R},
               Y = {S},
               φ = {φ},
@@ -565,7 +565,7 @@ $Rings: %Construction {
             ∼
           ),
           %equals(
-            $../Isomorphisms/"inner operation transform"(
+            $../Isomorphisms/"inner operation transport"(
               X = {R},
               Y = {S},
               φ = {φ},
@@ -574,7 +574,7 @@ $Rings: %Construction {
             ∗
           ),
           %equals(
-            $../Isomorphisms/"element transform"(
+            $../Isomorphisms/"element transport"(
               X = {R},
               Y = {S},
               φ = {φ},

@@ -1,6 +1,6 @@
 %../../../../logics/hlm%
 
-$"inner operation transform"(
+$"inner operation transport"(
   X: %Set(auto = %true),
   Y: %Set(auto = %true),
   φ: %Element($../../Essentials/Functions/Bijections(

@@ -29,7 +29,7 @@ $Magmas: %Construction {
           Y = {N}
         ))),
         formula = %equals(
-          $../Isomorphisms/"inner operation transform"(
+          $../Isomorphisms/"inner operation transport"(
             X = {M},
             Y = {N},
             φ = {φ},

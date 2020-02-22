@@ -3,12 +3,12 @@
 $Isomorphisms: %Section {
   logic = 'hlm',
   items = [
-    %item($"element transform"),
-    %item($"function transform"),
-    %item($"inner operation transform"),
-    %item($"left operation transform"),
-    %item($"right operation transform"),
-    %item($"relation transform"),
-    %item($"morphism transform")
+    %item($"element transport"),
+    %item($"function transport"),
+    %item($"inner operation transport"),
+    %item($"left operation transport"),
+    %item($"right operation transport"),
+    %item($"relation transport"),
+    %item($"morphism transport")
   ]
 }

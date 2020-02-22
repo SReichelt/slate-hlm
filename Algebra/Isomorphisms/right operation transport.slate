@@ -1,6 +1,6 @@
 %../../../../logics/hlm%
 
-$"left operation transform"(
+$"right operation transport"(
   S: %Set(auto = %true),
   X: %Set(auto = %true),
   Y: %Set(auto = %true),
@@ -9,8 +9,8 @@ $"left operation transform"(
     Y = {Y}
   )),
   ∗: %Element($../../Essentials/Functions/Operations/Operations(
-    X = {S},
-    Y = {X},
+    X = {X},
+    Y = {S},
     Z = {X}
   ))
 ): %ExplicitOperator {
@@ -24,8 +24,8 @@ $"left operation transform"(
       ∗,
       $../../Essentials/Functions/Functions(
         X = {$../../Essentials/Sets/"Cartesian product"(
-          S = {S},
-          T = {X}
+          S = {X},
+          T = {S}
         )},
         Y = {X}
       ),
@@ -33,44 +33,43 @@ $"left operation transform"(
         constructor = $../../Essentials/Functions/Functions.function,
         parameters = #(x: %Binding(
           $../../Essentials/Sets/"Cartesian product"(
-            S = {S},
-            T = {X}
+            S = {X},
+            T = {S}
           ),
           #(z: %Element(X))
         )),
         value = $../../Essentials/Functions/Functions(
             X = {$../../Essentials/Sets/"Cartesian product"(
-              S = {S},
-              T = {Y}
+              S = {Y},
+              T = {S}
             )},
             Y = {Y}
           ).function(x = {
             parameter = #(_y: %Element($../../Essentials/Sets/"Cartesian product"(
-              S = {S},
-              T = {Y}
+              S = {Y},
+              T = {S}
             ))),
             arguments = {y = {%structuralCases(
               _y,
               $../../Essentials/Sets/"Cartesian product"(
-                S = {S},
-                T = {Y}
+                S = {Y},
+                T = {S}
               ),
               [{
                 constructor = $../../Essentials/Sets/"Cartesian product".pair,
                 parameters = #(
-                  s: %Element(S),
-                  y: %Element(Y)
+                  y: %Element(Y),
+                  s: %Element(S)
                 ),
                 value = $../../Essentials/Functions/value(
                   X = {X},
                   Y = {Y},
                   f = {φ},
                   x = {z[$../../Essentials/Sets/"Cartesian product"(
-                      S = {S},
-                      T = {X}
+                      S = {X},
+                      T = {S}
                     ).pair(
-                      s = {s},
-                      t = {$../../Essentials/Functions/value(
+                      s = {$../../Essentials/Functions/value(
                         X = {Y},
                         Y = {X},
                         f = {$../../Essentials/Functions/inverse(
@@ -79,7 +78,8 @@ $"left operation transform"(
                           f = {φ}
                         )},
                         x = {y}
-                      )}
+                      )},
+                      t = {s}
                   )]}
                 )
               }]
@@ -89,39 +89,39 @@ $"left operation transform"(
     ),
     $../../Essentials/Functions/composition(
       X = {$../../Essentials/Sets/"Cartesian product"(
-        S = {S},
-        T = {Y}
+        S = {Y},
+        T = {S}
       )},
       Y = {X},
       Z = {Y},
       g = {φ},
       f = {%associative($../../Essentials/Functions/composition(
         X = {$../../Essentials/Sets/"Cartesian product"(
-          S = {S},
-          T = {Y}
+          S = {Y},
+          T = {S}
         )},
         Y = {$../../Essentials/Sets/"Cartesian product"(
-          S = {S},
-          T = {X}
+          S = {X},
+          T = {S}
         )},
         Z = {X},
         g = {∗},
         f = {$../../Essentials/Functions/inverse(
           X = {$../../Essentials/Sets/"Cartesian product"(
-            S = {S},
-            T = {X}
+            S = {X},
+            T = {S}
           )},
           Y = {$../../Essentials/Sets/"Cartesian product"(
-            S = {S},
-            T = {Y}
+            S = {Y},
+            T = {S}
           )},
           f = {$../../Essentials/Functions/"cartesian product"(
-            V = {S},
-            W = {S},
-            X = {X},
-            Y = {Y},
-            f = {$../../Essentials/Functions/identity(X = {S})},
-            g = {φ}
+            V = {X},
+            W = {Y},
+            X = {S},
+            Y = {S},
+            f = {φ},
+            g = {$../../Essentials/Functions/identity(X = {S})}
           )}
         )}
       ))}

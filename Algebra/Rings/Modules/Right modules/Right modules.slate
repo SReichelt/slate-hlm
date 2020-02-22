@@ -763,7 +763,7 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
         ))),
         formula = %and(
           %equals(
-            $../../../Isomorphisms/"inner operation transform"(
+            $../../../Isomorphisms/"inner operation transport"(
               X = {M},
               Y = {N},
               φ = {φ},
@@ -772,7 +772,7 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
             ⋆
           ),
           %equals(
-            $../../../Isomorphisms/"element transform"(
+            $../../../Isomorphisms/"element transport"(
               X = {M},
               Y = {N},
               φ = {φ},
@@ -781,7 +781,7 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
             𝟢
           ),
           %equals(
-            $../../../Isomorphisms/"function transform"(
+            $../../../Isomorphisms/"function transport"(
               X = {M},
               Y = {N},
               φ = {φ},
@@ -790,7 +790,7 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
             ∼
           ),
           %equals(
-            $../../../Isomorphisms/"right operation transform"(
+            $../../../Isomorphisms/"right operation transport"(
               S = {$../../Carrier(𝐑 = {𝐑})},
               X = {M},
               Y = {N},

@@ -1,6 +1,6 @@
 %../../../../logics/hlm%
 
-$"relation transform"(
+$"relation transport"(
   X: %Set(auto = %true),
   Y: %Set(auto = %true),
   φ: %Element($../../Essentials/Functions/Bijections(
