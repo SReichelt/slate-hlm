@@ -1,0 +1,15 @@
+%../../../../logics/hlm%
+
+$"Power of identity is identity"(
+  X: %Set,
+  a: %Element($../Numbers/Integer/Integers)
+): %StandardTheorem {
+  claim = %equals(
+    $"power to integer"(
+      X = {X},
+      f = {$identity(X = {X})},
+      a = {a}
+    ),
+    $identity(X = {X})
+  )
+}

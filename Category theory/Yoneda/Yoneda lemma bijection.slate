@@ -1,0 +1,176 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Yoneda_lemma#Formal_statement
+ *             * https://proofwiki.org/wiki/Bijection_in_Yoneda_Lemma_for_Covariant_Functors
+ *             * https://ncatlab.org/nlab/show/Yoneda+lemma
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/yoneda.html
+ */
+$"Yoneda lemma bijection"(
+  u: %Element(
+    $../../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
+  𝓒: %Element(
+    $../Categories(u = {u}),
+    auto = %true
+  ),
+  F: %Element($../Functors/Functors(
+    u = {u},
+    𝓒 = {𝓒},
+    𝓓 = {$../"Individual categories"/cardinals(u = {u})}
+  )),
+  𝐀: %Element($../Objects(
+    u = {u},
+    𝓒 = {𝓒}
+  ))
+): %StandardTheorem {
+  claim = %and(
+    $../../Essentials/Functions/bijective(
+      X = {$../"Natural transformations"/"Natural transformations"(
+        u = {u},
+        𝓒 = {𝓒},
+        𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+        F = {$"hom-functor"(
+          u = {u},
+          𝓒 = {𝓒},
+          𝐀 = {𝐀}
+        )},
+        G = {F}
+      )},
+      Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
+        u = {u},
+        𝓒 = {𝓒},
+        𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+        F = {F},
+        𝐗 = {𝐀}
+      )})},
+      f = {$"yoneda equivalence"(
+        u = {u},
+        𝓒 = {𝓒},
+        F = {F},
+        𝐀 = {𝐀}
+      )}
+    ),
+    %equals(
+      $../../Essentials/Functions/inverse(
+        X = {$../"Natural transformations"/"Natural transformations"(
+          u = {u},
+          𝓒 = {𝓒},
+          𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+          F = {$"hom-functor"(
+            u = {u},
+            𝓒 = {𝓒},
+            𝐀 = {𝐀}
+          )},
+          G = {F}
+        )},
+        Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
+          u = {u},
+          𝓒 = {𝓒},
+          𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+          F = {F},
+          𝐗 = {𝐀}
+        )})},
+        f = {$"yoneda equivalence"(
+          u = {u},
+          𝓒 = {𝓒},
+          F = {F},
+          𝐀 = {𝐀}
+        )}
+      ),
+      $../../Essentials/Functions/Functions(
+          X = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
+            u = {u},
+            𝓒 = {𝓒},
+            𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+            F = {F},
+            𝐗 = {𝐀}
+          )})},
+          Y = {$../"Natural transformations"/"Natural transformations"(
+            u = {u},
+            𝓒 = {𝓒},
+            𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+            F = {$"hom-functor"(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐀 = {𝐀}
+            )},
+            G = {F}
+          )}
+        ).function(x = {
+          #(x: %Element($../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
+            u = {u},
+            𝓒 = {𝓒},
+            𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+            F = {F},
+            𝐗 = {𝐀}
+          )}))),
+          {y = {$../"Natural transformations"/"Infranatural transformations"(
+              u = {u},
+              𝓒 = {𝓒},
+              𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+              F = {$"hom-functor"(
+                u = {u},
+                𝓒 = {𝓒},
+                𝐀 = {𝐀}
+              )},
+              G = {F}
+            ).transformation(𝐗 = {
+              #(𝐗: %Element($../Objects(
+                u = {u},
+                𝓒 = {𝓒}
+              ))),
+              {n = {$../../Essentials/Functions/Functions(
+                  X = {$../Morphisms(
+                    u = {u},
+                    𝓒 = {𝓒},
+                    𝐗 = {𝐀},
+                    𝐘 = {𝐗}
+                  )},
+                  Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
+                    u = {u},
+                    𝓒 = {𝓒},
+                    𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+                    F = {F},
+                    𝐗 = {𝐗}
+                  )})}
+                ).function(x = {
+                  #(f: %Element($../Morphisms(
+                    u = {u},
+                    𝓒 = {𝓒},
+                    𝐗 = {𝐀},
+                    𝐘 = {𝐗}
+                  ))),
+                  {y = {$../../Essentials/Functions/value(
+                    X = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
+                      u = {u},
+                      𝓒 = {𝓒},
+                      𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+                      F = {F},
+                      𝐗 = {𝐀}
+                    )})},
+                    Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
+                      u = {u},
+                      𝓒 = {𝓒},
+                      𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+                      F = {F},
+                      𝐗 = {𝐗}
+                    )})},
+                    f = {$../Functors/"morphism value"(
+                      u = {u},
+                      𝓒 = {𝓒},
+                      𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+                      F = {F},
+                      𝐘 = {𝐀},
+                      𝐙 = {𝐗},
+                      f = {f}
+                    )},
+                    x = {x}
+                  )}}
+              })}}
+          })}}
+      })
+    )
+  )
+}

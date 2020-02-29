@@ -1,0 +1,96 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Yoneda_lemma#Formal_statement
+ *             * https://proofwiki.org/wiki/Bijection_in_Yoneda_Lemma_for_Covariant_Functors
+ *             * https://ncatlab.org/nlab/show/Yoneda+lemma
+ */
+$"yoneda equivalence"(
+  u: %Element(
+    $../../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
+  𝓒: %Element(
+    $../Categories(u = {u}),
+    auto = %true
+  ),
+  F: %Element($../Functors/Functors(
+    u = {u},
+    𝓒 = {𝓒},
+    𝓓 = {$../"Individual categories"/cardinals(u = {u})}
+  )),
+  𝐀: %Element($../Objects(
+    u = {u},
+    𝓒 = {𝓒}
+  ))
+): %ExplicitOperator {
+  display = [$Function(
+    function = 'yoneda',
+    arguments = [F, 𝐀]
+  )],
+  definition = [$../../Essentials/Functions/Functions(
+      X = {$../"Natural transformations"/"Natural transformations"(
+        u = {u},
+        𝓒 = {𝓒},
+        𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+        F = {$"hom-functor"(
+          u = {u},
+          𝓒 = {𝓒},
+          𝐀 = {𝐀}
+        )},
+        G = {F}
+      )},
+      Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
+        u = {u},
+        𝓒 = {𝓒},
+        𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+        F = {F},
+        𝐗 = {𝐀}
+      )})}
+    ).function(x = {
+      #(η: %Element($../"Natural transformations"/"Natural transformations"(
+        u = {u},
+        𝓒 = {𝓒},
+        𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+        F = {$"hom-functor"(
+          u = {u},
+          𝓒 = {𝓒},
+          𝐀 = {𝐀}
+        )},
+        G = {F}
+      ))),
+      {y = {$../../Essentials/Functions/value(
+        X = {$../Morphisms(
+          u = {u},
+          𝓒 = {𝓒},
+          𝐗 = {𝐀},
+          𝐘 = {𝐀}
+        )},
+        Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
+          u = {u},
+          𝓒 = {𝓒},
+          𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+          F = {F},
+          𝐗 = {𝐀}
+        )})},
+        f = {$../"Natural transformations"/component(
+          u = {u},
+          𝓒 = {𝓒},
+          𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+          F = {$"hom-functor"(
+            u = {u},
+            𝓒 = {𝓒},
+            𝐀 = {𝐀}
+          )},
+          G = {F},
+          η = {η},
+          𝐗 = {𝐀}
+        )},
+        x = {$../identity(
+          u = {u},
+          𝓒 = {𝓒},
+          𝐗 = {𝐀}
+        )}
+      )}}
+  })]
+}

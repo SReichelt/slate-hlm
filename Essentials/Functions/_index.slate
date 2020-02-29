@@ -46,6 +46,7 @@ $Functions: %Section {
     ),
     %item($"power to natural number"),
     %item($"power to integer"),
+    %item($"Power of identity is identity"),
     %subsection(
       $Operations,
       'Operations'

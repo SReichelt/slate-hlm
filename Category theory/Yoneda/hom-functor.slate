@@ -1,0 +1,94 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Hom_functor
+ *             * https://proofwiki.org/wiki/Definition:Covariant_Hom_Functor
+ *             * https://ncatlab.org/nlab/show/hom-functor
+ */
+$"hom-functor"(
+  u: %Element(
+    $../../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
+  𝓒: %Element(
+    $../Categories(u = {u}),
+    auto = %true
+  ),
+  𝐀: %Element($../Objects(
+    u = {u},
+    𝓒 = {𝓒}
+  ))
+): %ExplicitOperator {
+  display = [$Function(
+    function = 'Hom',
+    arguments = [𝐀, '−']
+  )],
+  definition = [$../Functors/Functors(
+      u = {u},
+      𝓒 = {𝓒},
+      𝓓 = {$../"Individual categories"/cardinals(u = {u})}
+    ).functor(
+      𝐗 = {
+        #(𝐗: %Element($../Objects(
+          u = {u},
+          𝓒 = {𝓒}
+        ))),
+        {𝐃 = {$../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Morphisms(
+          u = {u},
+          𝓒 = {𝓒},
+          𝐗 = {𝐀},
+          𝐘 = {𝐗}
+        )})}}
+      },
+      𝐘 = {
+        #(𝐘: %Element($../Objects(
+          u = {u},
+          𝓒 = {𝓒}
+        ))),
+        {𝐙 = {
+          #(𝐙: %Element($../Objects(
+            u = {u},
+            𝓒 = {𝓒}
+          ))),
+          {f = {
+            #(f: %Element($../Morphisms(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐘},
+              𝐘 = {𝐙}
+            ))),
+            {d = {$../../Essentials/Functions/Functions(
+                X = {$../Morphisms(
+                  u = {u},
+                  𝓒 = {𝓒},
+                  𝐗 = {𝐀},
+                  𝐘 = {𝐘}
+                )},
+                Y = {$../Morphisms(
+                  u = {u},
+                  𝓒 = {𝓒},
+                  𝐗 = {𝐀},
+                  𝐘 = {𝐙}
+                )}
+              ).function(x = {
+                #(g: %Element($../Morphisms(
+                  u = {u},
+                  𝓒 = {𝓒},
+                  𝐗 = {𝐀},
+                  𝐘 = {𝐘}
+                ))),
+                {y = {$../composition(
+                  u = {u},
+                  𝓒 = {𝓒},
+                  𝐗 = {𝐀},
+                  𝐘 = {𝐘},
+                  𝐙 = {𝐙},
+                  f = {g},
+                  g = {f}
+                )}}
+            })}}
+          }}
+        }}
+      }
+  )]
+}

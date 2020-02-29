@@ -117,10 +117,9 @@ $"Infranatural transformations"(
     }
   }
 
-  display = [$FunctionOperator(
-    symbol = '⇀',
-    operands = [F, G],
-    minParenLevel = -1
+  display = [$Function(
+    function = 'Infranat',
+    arguments = [F, G]
   )],
   definitionDisplay = {
     parameter = #(η: %Expr),

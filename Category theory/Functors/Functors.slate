@@ -436,10 +436,9 @@ $Functors(
     }
   }
 
-  display = [$FunctionOperator(
-    symbol = '→',
-    operands = [𝓒, 𝓓],
-    minParenLevel = -1
+  display = [$Function(
+    function = 'Fun',
+    arguments = [𝓒, 𝓓]
   )],
   definitionDisplay = {
     parameter = #(F: %Expr),

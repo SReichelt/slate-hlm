@@ -26,10 +26,9 @@ $"Natural transformations"(
   )),
   G: %Element(%previous)
 ): %SetOperator {
-  display = [$FunctionOperator(
-    symbol = '⇒',
-    operands = [F, G],
-    minParenLevel = -1
+  display = [$Function(
+    function = 'Nat',
+    arguments = [F, G]
   )],
   definitionDisplay = {
     parameter = #(η: %Expr),

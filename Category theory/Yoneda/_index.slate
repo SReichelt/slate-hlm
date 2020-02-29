@@ -1,0 +1,13 @@
+%../../../../logics/library%
+
+$Yoneda: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"hom-functor"),
+    %item($"yoneda equivalence"),
+    %item(
+      $"Yoneda lemma bijection",
+      type = 'theorem'
+    )
+  ]
+}

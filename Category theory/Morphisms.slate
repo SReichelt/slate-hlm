@@ -21,10 +21,9 @@ $Morphisms(
   )),
   𝐘: %Element(%previous)
 ): %SetOperator {
-  display = [$FunctionOperator(
-    symbol = '→',
-    operands = [𝐗, 𝐘],
-    minParenLevel = -1
+  display = [$Function(
+    function = 'Hom',
+    arguments = [𝐗, 𝐘]
   )],
   definitionDisplay = {
     parameter = #(F: %Expr),
