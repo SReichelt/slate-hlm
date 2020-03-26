@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition is equivalent to the [intersection](../Sets/Intersection) of two relations if relations are encoded as subsets.
+ * @remarks This definition is the equivalent of `$../Sets/Intersection(U = {$../Sets/"Cartesian product"(S = {S}, T = {T})}, S = {≺}, T = {⊂})` (if relations were encoded as subsets).
  */
 $conjunction(
   S: %Set(auto = %true),

@@ -10,6 +10,7 @@ $"hom-functor"(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
+  v: %Element(%previous),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true
@@ -20,13 +21,17 @@ $"hom-functor"(
   ))
 ): %ExplicitOperator {
   display = [$Function(
-    function = 'Hom',
+    function = $SubSup(
+      body = 'Hom',
+      sub = v
+    ),
     arguments = [𝐀, '−']
   )],
   definition = [$../Functors/Functors(
       u = {u},
+      v = {v},
       𝓒 = {𝓒},
-      𝓓 = {$../"Individual categories"/cardinals(u = {u})}
+      𝓓 = {$../"Individual categories"/cardinals(u = {v})}
     ).functor(
       𝐗 = {
         #(𝐗: %Element($../Objects(

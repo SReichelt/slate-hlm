@@ -5,7 +5,7 @@
  *             * http://mathworld.wolfram.com/Automorphism.html
  *             * https://proofwiki.org/wiki/Definition:Automorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/automorphism
- *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/algebra.html#ring_aut
+ *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/ring.html#ring_aut
  */
 $Automorphisms(𝐑: %Element($../Rings)): %SetOperator {
   display = [$Function(

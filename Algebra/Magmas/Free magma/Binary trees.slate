@@ -1,7 +1,11 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This is an inductive definition of binary trees with leafs labeled by elements of _S_. It does not really belong in this section but is required for the definition of a free magma.
+ * @remarks This is an inductive definition of binary trees with leaves labeled by elements of `S`. It does not really belong in this section but is required for the definition of a free magma (see `$"free magma"`).
+ *
+ * @references * https://en.wikipedia.org/wiki/Binary_tree
+ *             * https://mathworld.wolfram.com/BinaryTree.html
+ *             * https://proofwiki.org/wiki/Definition:Binary_Tree
  */
 $"Binary trees"(S: %Set(
   auto = %true,

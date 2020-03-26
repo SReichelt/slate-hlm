@@ -11,16 +11,21 @@ $"Natural transformations"(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
+  v: %Element(
+    %previous,
+    auto = %true
+  ),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
-    %previous,
+    $../Categories(u = {v}),
     auto = %true
   ),
   F: %Element($../Functors/Functors(
     u = {u},
+    v = {v},
     𝓒 = {𝓒},
     𝓓 = {𝓓}
   )),
@@ -44,6 +49,7 @@ $"Natural transformations"(
   definition = [%subset(
     #(η: %Element($"Infranatural transformations"(
       u = {u},
+      v = {v},
       𝓒 = {𝓒},
       𝓓 = {𝓓},
       F = {F},
@@ -65,10 +71,11 @@ $"Natural transformations"(
       ),
       %equals(
         $../composition(
-          u = {u},
+          u = {v},
           𝓒 = {𝓓},
           𝐗 = {$../Functors/"object value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -76,6 +83,7 @@ $"Natural transformations"(
           )},
           𝐘 = {$../Functors/"object value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -83,6 +91,7 @@ $"Natural transformations"(
           )},
           𝐙 = {$../Functors/"object value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},
@@ -90,6 +99,7 @@ $"Natural transformations"(
           )},
           f = {$../Functors/"morphism value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -99,6 +109,7 @@ $"Natural transformations"(
           )},
           g = {$component(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -108,10 +119,11 @@ $"Natural transformations"(
           )}
         ),
         $../composition(
-          u = {u},
+          u = {v},
           𝓒 = {𝓓},
           𝐗 = {$../Functors/"object value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -119,6 +131,7 @@ $"Natural transformations"(
           )},
           𝐘 = {$../Functors/"object value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},
@@ -126,6 +139,7 @@ $"Natural transformations"(
           )},
           𝐙 = {$../Functors/"object value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},
@@ -133,6 +147,7 @@ $"Natural transformations"(
           )},
           f = {$component(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -142,6 +157,7 @@ $"Natural transformations"(
           )},
           g = {$../Functors/"morphism value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},

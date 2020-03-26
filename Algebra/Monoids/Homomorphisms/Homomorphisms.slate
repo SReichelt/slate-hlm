@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Monoid#Monoid_homomorphisms
+ *             * https://proofwiki.org/wiki/Definition:Monoid_Homomorphism
+ *             * https://ncatlab.org/nlab/show/homomorphism
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/hom.html#monoid_hom
+ */
 $Homomorphisms(
   𝐌: %Element($../Monoids),
   𝐍: %Element(%previous)

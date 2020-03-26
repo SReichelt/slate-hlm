@@ -1,7 +1,9 @@
 %../../../../../../logics/hlm%
 
 /**
- * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation
+ * @remarks Usage example: `$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Natural numbers"}, ⨂ = {$"iterated product"}, n = {n}, i = {#(i: %Element($../Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`.
+ *
+ * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_pi_notation
  *             * http://mathworld.wolfram.com/Product.html
  *             * https://proofwiki.org/wiki/Definition:Product_Notation_(Algebra)
  */

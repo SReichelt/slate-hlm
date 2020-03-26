@@ -6,8 +6,14 @@ $"Untyped lambda calculus": %Section {
     %item($Terms),
     %item($substitution),
     %item($rewritable),
-    %item($"beta reduction"),
-    %item($"eta conversion"),
+    %item(
+      $"beta reduction",
+      title = 'β reduction'
+    ),
+    %item(
+      $"eta conversion",
+      title = 'η conversion'
+    ),
     %subsection(
       $Combinators,
       'Combinators'

@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Monoid#Examples
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.monoid
+ */
 $"natural numbers with multiplication": %ExplicitOperator {
   display = [$Tuple(items = ['ℕ', '⋅'])],
   definition = [$../Monoids.monoid(

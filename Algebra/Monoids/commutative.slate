@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#comm_monoid
+ */
 $commutative(𝐌: %Element($Monoids)): %Predicate {
   display = [$Property(
     operand = 𝐌,

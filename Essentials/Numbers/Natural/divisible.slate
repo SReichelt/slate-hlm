@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks The constraint that _m_ is nonzero is not really necessary but added for consistency with the definition of the [set of divisors](Divisors).
+ * @remarks The constraint that `m` is nonzero is not really necessary but added for consistency with the definition of the set of divisors `$Divisors`.
  *
  * @references * https://en.wikipedia.org/wiki/Divisor
  *             * http://mathworld.wolfram.com/Divisor.html

@@ -5,16 +5,21 @@ $"object value"(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
+  v: %Element(
+    %previous,
+    auto = %true
+  ),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
-    %previous,
+    $../Categories(u = {v}),
     auto = %true
   ),
   F: %Element($Functors(
     u = {u},
+    v = {v},
     𝓒 = {𝓒},
     𝓓 = {𝓓}
   )),
@@ -32,6 +37,7 @@ $"object value"(
       F,
       $Functors(
         u = {u},
+        v = {v},
         𝓒 = {𝓒},
         𝓓 = {𝓓}
       ),
@@ -44,7 +50,7 @@ $"object value"(
               𝓒 = {𝓒}
             ),
             #(𝐃: %Element($../Objects(
-              u = {u},
+              u = {v},
               𝓒 = {𝓓}
             )))
           ),
@@ -63,7 +69,7 @@ $"object value"(
                   𝐘 = {𝐂}
                 ),
                 #(d: %Element($../Morphisms(
-                  u = {u},
+                  u = {v},
                   𝓒 = {𝓓},
                   𝐗 = {𝐃[𝐁]},
                   𝐘 = {𝐃[𝐂]}
@@ -87,7 +93,7 @@ $"object value"(
                 )
               ],
               $../identity(
-                u = {u},
+                u = {v},
                 𝓒 = {𝓓},
                 𝐗 = {𝐃[𝐀]}
               )
@@ -129,7 +135,7 @@ $"object value"(
                 )
               ],
               $../composition(
-                u = {u},
+                u = {v},
                 𝓒 = {𝓓},
                 𝐗 = {𝐃[𝐀]},
                 𝐘 = {𝐃[𝐁]},
@@ -144,7 +150,7 @@ $"object value"(
       }]
     ),
     $../Objects(
-      u = {u},
+      u = {v},
       𝓒 = {𝓓}
     )
   )]

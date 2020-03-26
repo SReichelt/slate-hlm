@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition captures propositions up to equivalence. Since HLM uses classical logic, it can be proved to contain only two values, true and false. It can therefore be used interchangeably with the set of [binary digits](../Numbers/Natural/Subsets/Binary%20digits).
+ * @remarks This definition captures propositions up to equivalence. Since HLM uses classical logic, it can be proved to contain only two values, true and false. It can therefore be used interchangeably with the set `$../Numbers/Natural/Subsets/"Binary digits"` of binary digits.
  *
  * @references * https://en.wikipedia.org/wiki/Truth_value
  *             * https://proofwiki.org/wiki/Definition:Truth_Value

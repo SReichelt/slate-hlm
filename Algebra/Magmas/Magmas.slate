@@ -4,6 +4,9 @@
  * @remarks Strictly speaking, the elements of this set are not magmas but isomorphism classes of magmas. Due to the rules of HLM, it is not even possible to define magmas (or other structures) in a way that would distinguish two isomorphic structures. In particular, the requirement to specify an equality definition, together with the way two arbitrary sets are treated as separate types, make sure that in the most general case, equality is in fact the same as isomorphism. (It is possible to identify more structures, but not fewer.)
  *
  * @references * https://en.wikipedia.org/wiki/Magma_(algebra)
+ *             * https://mathworld.wolfram.com/Magma.html
+ *             * https://proofwiki.org/wiki/Definition:Magma
+ *             * https://ncatlab.org/nlab/show/magma
  */
 $Magmas: %Construction {
   $magma(

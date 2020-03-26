@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition slightly extends the notion of [function restriction](restriction) in that it simultaneously restricts the codomain to a subset _B_ of _Y_, under the condition that the range is contained in this subset. It is compatible with the previous definition.
+ * @remarks This definition is a slight extension of `$restriction` that simultaneously restricts the codomain to a subset `B` of `Y`, under the condition that the range is contained in this subset. It is compatible with the previous definition.
  *
  * @references * https://proofwiki.org/wiki/Definition:Restriction/Mapping
  */

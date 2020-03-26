@@ -1,9 +1,9 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition slightly extends the notion of [function restriction](restriction) in that it simultaneously extends the codomain to a superset _B_ of _Y_.
+ * @remarks This definition is a slight extension of `$restriction` that simultaneously extends the codomain to a superset `B` of `Y`.
  *
- *          It might seem tempting to remove the need for this definition by implicitly treating a function to _Y_ as a function to a superset _B_ of _Y_, without explicitly specifying _B_. However, this might lead to confusion as the resulting function may not be surjective even though the original function is.
+ *          It might seem tempting to remove the need for this definition by implicitly treating a function to `Y` as a function to a superset `B` of `Y`, without explicitly specifying `B`. However, this could lead to confusion as the resulting function may not be surjective even though the original function is.
  */
 $"generalized restriction"(
   X: %Set(auto = %true),

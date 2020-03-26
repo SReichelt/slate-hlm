@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @remarks Due to the embedding of natural numbers into integers, this is just an alias for the set of positive natural numbers.
+ * @remarks Due to the embedding of `$../../Natural/"Natural numbers"` into `$../Integers`, this is just an alias for `$../../Natural/Subsets/"Positive numbers"`.
  */
 $"Positive numbers": %SetOperator {
   display = [$SubSup(

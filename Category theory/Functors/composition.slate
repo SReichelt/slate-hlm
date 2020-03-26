@@ -5,25 +5,35 @@ $composition(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
+  v: %Element(
+    %previous,
+    auto = %true
+  ),
+  w: %Element(
+    %previous,
+    auto = %true
+  ),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
-    %previous,
+    $../Categories(u = {v}),
     auto = %true
   ),
   𝓔: %Element(
-    %previous,
+    $../Categories(u = {w}),
     auto = %true
   ),
   F: %Element($Functors(
     u = {u},
+    v = {v},
     𝓒 = {𝓒},
     𝓓 = {𝓓}
   )),
   G: %Element($Functors(
-    u = {u},
+    u = {v},
+    v = {w},
     𝓒 = {𝓓},
     𝓓 = {𝓔}
   ))
@@ -36,6 +46,7 @@ $composition(
   )],
   definition = [$Functors(
       u = {u},
+      v = {w},
       𝓒 = {𝓒},
       𝓓 = {𝓔}
     ).functor(
@@ -45,12 +56,14 @@ $composition(
           𝓒 = {𝓒}
         ))),
         {𝐃 = {$"object value"(
-          u = {u},
+          u = {v},
+          v = {w},
           𝓒 = {𝓓},
           𝓓 = {𝓔},
           F = {G},
           𝐗 = {$"object value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -76,12 +89,14 @@ $composition(
               𝐘 = {𝐙}
             ))),
             {d = {$"morphism value"(
-              u = {u},
+              u = {v},
+              v = {w},
               𝓒 = {𝓓},
               𝓓 = {𝓔},
               F = {G},
               𝐘 = {$"object value"(
                 u = {u},
+                v = {v},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {F},
@@ -89,6 +104,7 @@ $composition(
               )},
               𝐙 = {$"object value"(
                 u = {u},
+                v = {v},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {F},
@@ -96,6 +112,7 @@ $composition(
               )},
               f = {$"morphism value"(
                 u = {u},
+                v = {v},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {F},

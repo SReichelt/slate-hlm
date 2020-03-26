@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks Note that we do not allow _x_ to appear free in _R_. This ensures that _x_ does not appear free in the result either, which is important for e.g. the definition of [beta reduction](beta%20reduction).
+ * @remarks Note that we do not allow `x` to appear free in `R`. This ensures that `x` does not appear free in the result either, which is important for e.g. the definition `$"beta reduction"` of beta reduction.
  *
  * @references * https://en.wikipedia.org/wiki/Lambda_calculus#Substitution
  *             * https://ncatlab.org/nlab/show/substitution#avoiding+variable+capture

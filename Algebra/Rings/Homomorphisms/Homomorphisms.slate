@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://mathworld.wolfram.com/RingHomomorphism.html
+ */
 $Homomorphisms(
   𝐑: %Element($../Rings),
   𝐒: %Element(%previous)

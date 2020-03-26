@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This lemma is necessary to prove the following theorem. _k_ and _f_ do not appear in the result, but they enable a proof via structural induction on _k_.
+ * @remarks This lemma is necessary to prove the following theorem. `k` and `f` do not appear in the result, but they enable a proof via structural induction on `k`.
  */
 $"Finiteness criterion lemma"(
   M: %Subset($"Natural numbers"),

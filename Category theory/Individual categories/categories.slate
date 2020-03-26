@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This defines the category of small categories, or, more generally, a category in _V_ of all categories in _U_.
+ * @remarks This defines the category of small categories, or, more generally, a category in `$../../Essentials/Numbers/Natural/sum(m = {u}, n = {$../../Essentials/Numbers/Natural/number(value = 1)})` of all categories in `u`.
  *
  * @references * https://en.wikipedia.org/wiki/Category_of_small_categories
  *             * https://ncatlab.org/nlab/show/Cat
@@ -22,6 +22,7 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
           #(𝓑: %Element($../Categories(u = {u}))),
           {M = {$../Functors/Functors(
             u = {u},
+            v = {u},
             𝓒 = {𝓐},
             𝓓 = {𝓑}
           )}}
@@ -43,33 +44,40 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
             {∘ = {$../../Essentials/Functions/Operations/operator(
               X = {$../Functors/Functors(
                 u = {u},
+                v = {u},
                 𝓒 = {𝓔},
                 𝓓 = {𝓕}
               )},
               Y = {$../Functors/Functors(
                 u = {u},
+                v = {u},
                 𝓒 = {𝓓},
                 𝓓 = {𝓔}
               )},
               Z = {$../Functors/Functors(
                 u = {u},
+                v = {u},
                 𝓒 = {𝓓},
                 𝓓 = {𝓕}
               )},
               parameters = #(
                 G: %Element($../Functors/Functors(
                   u = {u},
+                  v = {u},
                   𝓒 = {𝓔},
                   𝓓 = {𝓕}
                 )),
                 F: %Element($../Functors/Functors(
                   u = {u},
+                  v = {u},
                   𝓒 = {𝓓},
                   𝓓 = {𝓔}
                 ))
               ),
               operator = $../Functors/composition(
                 u = {u},
+                v = {u},
+                w = {u},
                 𝓒 = {𝓓},
                 𝓓 = {𝓔},
                 𝓔 = {𝓕},

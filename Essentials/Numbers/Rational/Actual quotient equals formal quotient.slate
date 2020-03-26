@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This proposition justifies the notation used for the constructor. Note that the division on the right is division on rational numbers, i.e. on the embedding of the integers _b_ and _a_ into the rational numbers.
+ * @remarks This proposition justifies the notation used for the constructor. Note that the division on the right is division in `$"Rational numbers"`, using the embedding of the integers `n` and `d` into the rational numbers.
  */
 $"Actual quotient equals formal quotient"(
   n: %Element($../Integer/Integers),

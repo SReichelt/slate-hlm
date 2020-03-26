@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Magma_(algebra)#Morphism_of_magmas
+ *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
+ *             * https://ncatlab.org/nlab/show/homomorphism
+ */
 $Homomorphisms(
   𝐌: %Element($../Magmas),
   𝐍: %Element(%previous)

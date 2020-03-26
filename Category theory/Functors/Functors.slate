@@ -1,8 +1,6 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition requires both categories to live in a common universe, which is not strictly required.
- *
  * @references * https://en.wikipedia.org/wiki/Functor
  *             * http://mathworld.wolfram.com/Functor.html
  *             * https://proofwiki.org/wiki/Definition:Functor
@@ -13,8 +11,12 @@ $Functors(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
+  v: %Element(
+    %previous,
+    auto = %true
+  ),
   𝓒: %Element($../Categories(u = {u})),
-  𝓓: %Element(%previous)
+  𝓓: %Element($../Categories(u = {v}))
 ): %Construction {
   $functor(
     𝐗: %Binding(
@@ -23,7 +25,7 @@ $Functors(
         𝓒 = {𝓒}
       ),
       #(𝐃: %Element($../Objects(
-        u = {u},
+        u = {v},
         𝓒 = {𝓓}
       )))
     ),
@@ -42,7 +44,7 @@ $Functors(
             𝐘 = {𝐙}
           ),
           #(d: %Element($../Morphisms(
-            u = {u},
+            u = {v},
             𝓒 = {𝓓},
             𝐗 = {𝐃[𝐘]},
             𝐘 = {𝐃[𝐙]}
@@ -66,7 +68,7 @@ $Functors(
           )
         ],
         $../identity(
-          u = {u},
+          u = {v},
           𝓒 = {𝓓},
           𝐗 = {𝐃[𝐗]}
         )
@@ -108,7 +110,7 @@ $Functors(
           )
         ],
         $../composition(
-          u = {u},
+          u = {v},
           𝓒 = {𝓓},
           𝐗 = {𝐃[𝐗]},
           𝐘 = {𝐃[𝐘]},
@@ -197,7 +199,7 @@ $Functors(
             𝓒 = {𝓒}
           ),
           #(𝐃: %Element($../Objects(
-            u = {u},
+            u = {v},
             𝓒 = {𝓓}
           )))
         ),
@@ -216,7 +218,7 @@ $Functors(
                 𝐘 = {𝐙}
               ),
               #(d: %Element($../Morphisms(
-                u = {u},
+                u = {v},
                 𝓒 = {𝓓},
                 𝐗 = {𝐃[𝐘]},
                 𝐘 = {𝐃[𝐙]}
@@ -240,7 +242,7 @@ $Functors(
               )
             ],
             $../identity(
-              u = {u},
+              u = {v},
               𝓒 = {𝓓},
               𝐗 = {𝐃[𝐗]}
             )
@@ -282,7 +284,7 @@ $Functors(
               )
             ],
             $../composition(
-              u = {u},
+              u = {v},
               𝓒 = {𝓓},
               𝐗 = {𝐃[𝐗]},
               𝐘 = {𝐃[𝐘]},
@@ -300,7 +302,7 @@ $Functors(
             𝓒 = {𝓒}
           ),
           #("𝐃'": %Element($../Objects(
-            u = {u},
+            u = {v},
             𝓒 = {𝓓}
           )))
         ),
@@ -319,7 +321,7 @@ $Functors(
                 𝐘 = {𝐙}
               ),
               #("d'": %Element($../Morphisms(
-                u = {u},
+                u = {v},
                 𝓒 = {𝓓},
                 𝐗 = {"𝐃'"[𝐘]},
                 𝐘 = {"𝐃'"[𝐙]}
@@ -343,7 +345,7 @@ $Functors(
               )
             ],
             $../identity(
-              u = {u},
+              u = {v},
               𝓒 = {𝓓},
               𝐗 = {"𝐃'"[𝐗]}
             )
@@ -385,7 +387,7 @@ $Functors(
               )
             ],
             $../composition(
-              u = {u},
+              u = {v},
               𝓒 = {𝓓},
               𝐗 = {"𝐃'"[𝐗]},
               𝐘 = {"𝐃'"[𝐘]},
@@ -423,7 +425,7 @@ $Functors(
             %asElementOf(
               "d'"[𝐘,𝐙,f],
               $../Morphisms(
-                u = {u},
+                u = {v},
                 𝓒 = {𝓓},
                 𝐗 = {𝐃[𝐘]},
                 𝐘 = {𝐃[𝐙]}

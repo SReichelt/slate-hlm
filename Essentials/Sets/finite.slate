@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition uses [functions](../Functions/Functions) as well as the [natural](../Numbers/Natural/Natural%20numbers) and [cardinal](../Numbers/Cardinal/Cardinal%20numbers) numbers, all of which are defined in later sections. That is not a problem as long as no circularities exist. In other words, definitions and theorems are ordered by topic instead of by dependency.
+ * @remarks This definition uses functions as well as the natural and cardinal numbers, all of which are defined in later sections (see `$../Functions/Functions`, `$../Numbers/Natural/"Natural numbers"`, `$../Numbers/Cardinal/"Cardinal numbers"`). That is not a problem as long as no circularities exist. In other words, definitions and theorems are ordered by topic instead of by dependency.
  *
  *          These are just some example proofs, which will be completed later.
  *

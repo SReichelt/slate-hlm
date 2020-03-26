@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://ncatlab.org/nlab/show/associative+magma
+ */
 $associative(𝐌: %Element($Magmas)): %Predicate {
   display = [$Property(
     operand = 𝐌,

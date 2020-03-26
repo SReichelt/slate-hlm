@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Magma_(algebra)#Free_magma
+ */
 $"free magma"(
   S: %Set,
   T: %SetDef($"Binary trees"(S = {S}))

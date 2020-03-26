@@ -1,9 +1,9 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This definition is rather similar to the definition of [integers](../Integer/Integers). Again, the constructor notation is later justified by a [proposition](Actual%20quotient%20equals%20formal%20quotient).
+ * @remarks This definition is rather similar to `$../Integer/Integers`. The constructor notation is later justified by `$"Actual quotient equals formal quotient"`.
  *
- *          Note that in the constructor, we force the denominator to be positive. This is not required at this point, since the given equality definition would also work for negative numbers. However, if the denominator was allowed to be negative, the definition of [comparison](less%20or%20equal) would probably need to be split into several cases.
+ *          Note that in the constructor, we force the denominator to be positive. This is not required at this point, since the given equality definition would also work for negative numbers. However, if the denominator was allowed to be negative, the definition of `$"less or equal"` would probably need to be split into several cases.
  *
  * @references * https://en.wikipedia.org/wiki/Rational_number
  *             * http://mathworld.wolfram.com/RationalNumber.html

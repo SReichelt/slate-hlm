@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks We specifically exclude 0 from the list of its own divisors in order to simplify the definition of [division](quotient).
+ * @remarks We specifically exclude 0 from the set of divisors in order to simplify the definition of `$quotient`.
  *
  * @references * http://oeis.org/A027750
  */

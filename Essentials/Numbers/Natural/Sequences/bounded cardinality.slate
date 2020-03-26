@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @remarks This definition is used to prove the equivalence of alternative definitions of [finiteness](../../../Sets/finite). It yields a natural number that is a lower bound for the cardinality of a subset of natural numbers.
+ * @remarks This definition is used to prove the equivalence of alternative definitions of finiteness (see `$../../../Sets/finite`). It yields a natural number that is a lower bound for the cardinality of a subset of natural numbers.
  */
 $"bounded cardinality"(
   M: %Subset($../"Natural numbers"),

@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Restriction/Operation
+ */
 $"inner operation restriction"(
   X: %Set(auto = %true),
   A: %Subset(X),

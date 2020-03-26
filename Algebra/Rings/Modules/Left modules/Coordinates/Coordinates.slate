@@ -1,7 +1,7 @@
 %../../../../../../../logics/hlm%
 
 /**
- * @remarks This defines the set of valid coordinate sequences corresponding to a given element sequence. This set only depends on the length of the element sequence. A coordinate sequence is a sequence of ring elements with the same length and finite support.
+ * @remarks This defines the set of valid coordinate sequences corresponding to a given element sequence `𝐱`. This set only depends on the length of `𝐱`. A coordinate sequence is a sequence of ring elements that has the same length and finite support.
  */
 $Coordinates(
   𝐑: %Element(

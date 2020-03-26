@@ -5,7 +5,7 @@
  *
  *          For skeletal categories, the two concepts coincide. Since in HLM, all of the usual examples of categories happen to be skeletal anyway, and we care about equivalence much more than isomorphism, it makes sense to include this requirement directly in the definition of a category.
  *
- *          The natural number _u_ is required to be able to define a category of (smaller) categories or functors, which would otherwise be prevented by non-circularity rules. Informally, _u_ can be regarded as a “universe size” that is relevant only in the context of category theory. (The “universes” that are implicit in other contexts are already large enough.)
+ *          The natural number `u` is required to be able to define a category of (smaller) categories or functors, which would otherwise be prevented by non-circularity rules. Informally, `u` can be regarded as a “universe size” that is relevant only in the context of category theory. (The “universes” that are implicit in other contexts are already large enough.)
  *
  * @references * https://en.wikipedia.org/wiki/Category_(mathematics)
  *             * http://mathworld.wolfram.com/Category.html

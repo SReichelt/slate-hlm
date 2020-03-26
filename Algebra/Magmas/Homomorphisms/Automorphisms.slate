@@ -5,7 +5,7 @@
  *             * http://mathworld.wolfram.com/Automorphism.html
  *             * https://proofwiki.org/wiki/Definition:Automorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/automorphism
- *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/algebra.html#mul_aut
+ *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/mul_add.html#mul_aut
  */
 $Automorphisms(𝐌: %Element($../Magmas)): %SetOperator {
   display = [$Function(

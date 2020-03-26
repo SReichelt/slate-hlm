@@ -5,17 +5,22 @@ $component(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
+  v: %Element(
+    %previous,
+    auto = %true
+  ),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
-    %previous,
+    $../Categories(u = {v}),
     auto = %true
   ),
   F: %Element(
     $../Functors/Functors(
       u = {u},
+      v = {v},
       𝓒 = {𝓒},
       𝓓 = {𝓓}
     ),
@@ -27,6 +32,7 @@ $component(
   ),
   η: %Element($"Infranatural transformations"(
     u = {u},
+    v = {v},
     𝓒 = {𝓒},
     𝓓 = {𝓓},
     F = {F},
@@ -45,6 +51,7 @@ $component(
     η,
     $"Infranatural transformations"(
       u = {u},
+      v = {v},
       𝓒 = {𝓒},
       𝓓 = {𝓓},
       F = {F},
@@ -58,10 +65,11 @@ $component(
           𝓒 = {𝓒}
         ),
         #(n: %Element($../Morphisms(
-          u = {u},
+          u = {v},
           𝓒 = {𝓓},
           𝐗 = {$../Functors/"object value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {F},
@@ -69,6 +77,7 @@ $component(
           )},
           𝐘 = {$../Functors/"object value"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {G},

@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This formalization of the untyped lambda calculus is fairly standard except for one thing: The right side of a lambda abstraction depends on the value of the bound variable used to define it (which is kind of the point of bound variables). To prevent wild pseudo-terms that actually differ in nontrivial ways depending on the variable, there needs to be an additional substitutability constraint. Although substitution is defined later, we can use it in this case because we are applying it to subterms only (i.e. we are employing mutual induction).
+ * @remarks This formalization of the untyped lambda calculus is fairly standard except for one aspect: The right side of a lambda abstraction depends on the value of the bound variable used to define it (which is kind of the point of bound variables). To prevent wild pseudo-terms that actually differ in nontrivial ways depending on the variable, there needs to be an additional substitutability constraint. Although substitution is defined later, we can use it in this case because we are applying it to subterms only (i.e. we are employing mutual induction).
  *
  * @references * https://en.wikipedia.org/wiki/Lambda_calculus
  *             * https://ncatlab.org/nlab/show/lambda-calculus#https://ncatlab.org/nlab/show/lambda-calculus#pure_lambda_calculus

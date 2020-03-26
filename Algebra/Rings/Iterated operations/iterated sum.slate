@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @remarks Usage example: `$../../../Essentials/Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../Carrier(𝐑 = {𝐑})}, ⨂ = {$"iterated sum"(𝐑 = {𝐑})}, n = {n}, i = {#(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`.
+ */
 $"iterated sum"(𝐑: %Element($../Rings)): %ExplicitOperator {
   display = [$SubSup(
     body = '∑',

@@ -2,7 +2,7 @@
 
 /**
  * @remarks This explicit definition works due to the special way that functions are defined. Within proofs, it enables unfolding of function application if the function has an explicit definition.
- *          The [corresponding definition](../Relations/mapping%20value) for mappings is an implicit definition instead.
+ *          The corresponding definition for mappings (see `$../Relations/"mapping value"`) is an implicit definition instead.
  *
  * @references * https://en.wikipedia.org/wiki/Function_(mathematics)#Functional_notation
  *             * https://coq.inria.fr/library/Coq.Program.Basics.html#apply

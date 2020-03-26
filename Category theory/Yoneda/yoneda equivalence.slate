@@ -10,14 +10,19 @@ $"yoneda equivalence"(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
+  v: %Element(
+    %previous,
+    auto = %true
+  ),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true
   ),
   F: %Element($../Functors/Functors(
     u = {u},
+    v = {v},
     𝓒 = {𝓒},
-    𝓓 = {$../"Individual categories"/cardinals(u = {u})}
+    𝓓 = {$../"Individual categories"/cardinals(u = {v})}
   )),
   𝐀: %Element($../Objects(
     u = {u},
@@ -31,10 +36,12 @@ $"yoneda equivalence"(
   definition = [$../../Essentials/Functions/Functions(
       X = {$../"Natural transformations"/"Natural transformations"(
         u = {u},
+        v = {v},
         𝓒 = {𝓒},
-        𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+        𝓓 = {$../"Individual categories"/cardinals(u = {v})},
         F = {$"hom-functor"(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝐀 = {𝐀}
         )},
@@ -42,18 +49,21 @@ $"yoneda equivalence"(
       )},
       Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
         u = {u},
+        v = {v},
         𝓒 = {𝓒},
-        𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+        𝓓 = {$../"Individual categories"/cardinals(u = {v})},
         F = {F},
         𝐗 = {𝐀}
       )})}
     ).function(x = {
       #(η: %Element($../"Natural transformations"/"Natural transformations"(
         u = {u},
+        v = {v},
         𝓒 = {𝓒},
-        𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+        𝓓 = {$../"Individual categories"/cardinals(u = {v})},
         F = {$"hom-functor"(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝐀 = {𝐀}
         )},
@@ -68,17 +78,20 @@ $"yoneda equivalence"(
         )},
         Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
-          𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+          𝓓 = {$../"Individual categories"/cardinals(u = {v})},
           F = {F},
           𝐗 = {𝐀}
         )})},
         f = {$../"Natural transformations"/component(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
-          𝓓 = {$../"Individual categories"/cardinals(u = {u})},
+          𝓓 = {$../"Individual categories"/cardinals(u = {v})},
           F = {$"hom-functor"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝐀 = {𝐀}
           )},

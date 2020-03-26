@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition is equivalent to the [union](../Sets/Union) of two relations if relations are encoded as subsets.
+ * @remarks This definition is the equivalent of `$../Sets/Union(U = {$../Sets/"Cartesian product"(S = {S}, T = {T})}, S = {≺}, T = {⊂})` (if relations were encoded as subsets).
  */
 $disjunction(
   S: %Set(auto = %true),

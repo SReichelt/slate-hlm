@@ -8,17 +8,22 @@ $"vertical composition"(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
+  v: %Element(
+    %previous,
+    auto = %true
+  ),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true
   ),
   𝓓: %Element(
-    %previous,
+    $../Categories(u = {v}),
     auto = %true
   ),
   F: %Element(
     $../Functors/Functors(
       u = {u},
+      v = {v},
       𝓒 = {𝓒},
       𝓓 = {𝓓}
     ),
@@ -34,6 +39,7 @@ $"vertical composition"(
   ),
   η: %Element($"Infranatural transformations"(
     u = {u},
+    v = {v},
     𝓒 = {𝓒},
     𝓓 = {𝓓},
     F = {F},
@@ -41,6 +47,7 @@ $"vertical composition"(
   )),
   ε: %Element($"Infranatural transformations"(
     u = {u},
+    v = {v},
     𝓒 = {𝓒},
     𝓓 = {𝓓},
     F = {G},
@@ -55,6 +62,7 @@ $"vertical composition"(
   )],
   definition = [$"Infranatural transformations"(
       u = {u},
+      v = {v},
       𝓒 = {𝓒},
       𝓓 = {𝓓},
       F = {F},
@@ -65,10 +73,11 @@ $"vertical composition"(
         𝓒 = {𝓒}
       ))),
       arguments = {n = {$../composition(
-        u = {u},
+        u = {v},
         𝓒 = {𝓓},
         𝐗 = {$../Functors/"object value"(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {F},
@@ -76,6 +85,7 @@ $"vertical composition"(
         )},
         𝐘 = {$../Functors/"object value"(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {G},
@@ -83,6 +93,7 @@ $"vertical composition"(
         )},
         𝐙 = {$../Functors/"object value"(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {H},
@@ -90,6 +101,7 @@ $"vertical composition"(
         )},
         f = {$component(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {F},
@@ -99,6 +111,7 @@ $"vertical composition"(
         )},
         g = {$component(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {G},

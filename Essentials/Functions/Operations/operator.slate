@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This is a macro to convert an operator taking elements of _X_ and _Y_ and returning an element of _Z_ to an operation from _X_ and _Y_ to _Z_.
+ * @remarks This is a macro to convert an operator taking elements of `X` and `Y` and returning an element of `Z` to an operation from `X` and `Y` to `Z`.
  */
 $operator(
   X: %Set(auto = %true),

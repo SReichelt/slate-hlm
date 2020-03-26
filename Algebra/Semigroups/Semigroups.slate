@@ -2,6 +2,10 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Semigroup
+ *             * https://mathworld.wolfram.com/Semigroup.html
+ *             * https://proofwiki.org/wiki/Definition:Semigroup
+ *             * https://ncatlab.org/nlab/show/semigroup
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#semigroup
  */
 $Semigroups: %SetOperator {
   display = ['𝓢𝓮𝓶𝓲𝓖𝓻𝓹'],

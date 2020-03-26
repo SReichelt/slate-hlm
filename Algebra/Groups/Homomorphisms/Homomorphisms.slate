@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Group_homomorphism
+ *             * https://mathworld.wolfram.com/GroupHomomorphism.html
+ *             * https://proofwiki.org/wiki/Definition:Group_Homomorphism
+ *             * https://ncatlab.org/nlab/show/homomorphism
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/hom.html#monoid_hom
+ */
 $Homomorphisms(
   𝐆: %Element($../Groups),
   𝐇: %Element(%previous)

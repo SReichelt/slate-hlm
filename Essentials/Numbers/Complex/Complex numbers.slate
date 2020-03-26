@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks The constructor notation is later justified by a [proposition](Actual%20linear%20combination%20equals%20formal%20linear%20combination).
+ * @remarks The constructor notation is later justified by `$"Actual linear combination equals formal linear combination"`.
  *
  * @references * https://en.wikipedia.org/wiki/Complex_numbers
  *             * http://mathworld.wolfram.com/ComplexNumber.html

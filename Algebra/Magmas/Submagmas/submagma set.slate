@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Submagma
+ */
 $"submagma set"(
   𝐌: %Element($../Magmas),
   S: %Subset($../Carrier(𝐌 = {𝐌}))

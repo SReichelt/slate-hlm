@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This is a macro to convert a predicate taking elements of _S_ and _T_ to a relation from _S_ to _T_.
+ * @remarks This is a macro to convert a predicate taking elements of `S` and `T` to a relation from `S` to `T`.
  */
 $predicate(
   S: %Set(auto = %true),

@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This definition should be considered part of the [induction principle](Induction%20principle).
+ * @remarks This definition should be considered part of `$"Induction principle"`.
  *
  * @references * https://en.wikipedia.org/wiki/Inductive_set (but uses a 1-based definition)
  *             * http://mathworld.wolfram.com/InductiveSet.html

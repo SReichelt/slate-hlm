@@ -9,36 +9,47 @@ $functors(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
+  v: %Element(
+    %previous,
+    auto = %true
+  ),
   𝓒: %Element($../Categories(u = {u})),
-  𝓓: %Element(%previous)
+  𝓓: %Element($../Categories(u = {v}))
 ): %ExplicitOperator {
   display = [$Function(
     function = '𝐅𝐮𝐧',
     arguments = [𝓒, 𝓓]
   )],
   definition = [$../Categories(u = {$../../Essentials/Numbers/Natural/sum(
-      m = {u},
+      m = {%associative($../../Essentials/Numbers/Natural/sum(
+        m = {u},
+        n = {v}
+      ))},
       n = {$../../Essentials/Numbers/Natural/number(value = 1)}
     )}).category(
       O = {$../Functors/Functors(
         u = {u},
+        v = {v},
         𝓒 = {𝓒},
         𝓓 = {𝓓}
       )},
       𝐀 = {
         #(A: %Element($../Functors/Functors(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝓓 = {𝓓}
         ))),
         {𝐁 = {
           #(B: %Element($../Functors/Functors(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓}
           ))),
           {M = {$../"Natural transformations"/"Natural transformations"(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓},
             F = {A},
@@ -49,11 +60,13 @@ $functors(
       𝐂 = {
         #(C: %Element($../Functors/Functors(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝓓 = {𝓓}
         ))),
         {i = {$../"Natural transformations"/identity(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝓓 = {𝓓},
           F = {C}
@@ -62,24 +75,28 @@ $functors(
       𝐃 = {
         #(D: %Element($../Functors/Functors(
           u = {u},
+          v = {v},
           𝓒 = {𝓒},
           𝓓 = {𝓓}
         ))),
         {𝐄 = {
           #(E: %Element($../Functors/Functors(
             u = {u},
+            v = {v},
             𝓒 = {𝓒},
             𝓓 = {𝓓}
           ))),
           {𝐅 = {
             #(F: %Element($../Functors/Functors(
               u = {u},
+              v = {v},
               𝓒 = {𝓒},
               𝓓 = {𝓓}
             ))),
             {∘ = {$../../Essentials/Functions/Operations/operator(
               X = {$../"Natural transformations"/"Natural transformations"(
                 u = {u},
+                v = {v},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {E},
@@ -87,6 +104,7 @@ $functors(
               )},
               Y = {$../"Natural transformations"/"Natural transformations"(
                 u = {u},
+                v = {v},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {D},
@@ -94,6 +112,7 @@ $functors(
               )},
               Z = {$../"Natural transformations"/"Natural transformations"(
                 u = {u},
+                v = {v},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {D},
@@ -102,6 +121,7 @@ $functors(
               parameters = #(
                 ε: %Element($../"Natural transformations"/"Natural transformations"(
                   u = {u},
+                  v = {v},
                   𝓒 = {𝓒},
                   𝓓 = {𝓓},
                   F = {E},
@@ -109,6 +129,7 @@ $functors(
                 )),
                 η: %Element($../"Natural transformations"/"Natural transformations"(
                   u = {u},
+                  v = {v},
                   𝓒 = {𝓒},
                   𝓓 = {𝓓},
                   F = {D},
@@ -117,6 +138,7 @@ $functors(
               ),
               operator = $../"Natural transformations"/"vertical composition"(
                 u = {u},
+                v = {v},
                 𝓒 = {𝓒},
                 𝓓 = {𝓓},
                 F = {D},

@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition encodes a relation from _S_ to _T_ as a proposition depending on an element of _S_ and an element of _T_ (up to equivalence). It would be equally possible to encode relations as subsets of the Cartesian product; the given definition is just more convenient.
+ * @remarks This definition encodes a relation from `S` to `T` as a proposition depending on an element of `S` and an element of `T` (up to equivalence). It would be equally possible to encode relations as subsets of the Cartesian product; the given definition is just more convenient.
  *
  * @references * https://en.wikipedia.org/wiki/Binary_relation
  *             * http://mathworld.wolfram.com/Relation.html

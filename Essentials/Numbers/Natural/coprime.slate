@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks Note that in addition to this definition for natural numbers, there is a compatible [definition for integers](../Integer/coprime).
+ * @remarks Note that in addition to this definition for natural numbers, there is a compatible definition for integers: `$../Integer/coprime`.
  *
  * @references * https://en.wikipedia.org/wiki/Coprime_integers
  *             * http://mathworld.wolfram.com/RelativelyPrime.html

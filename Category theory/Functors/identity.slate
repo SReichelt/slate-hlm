@@ -16,6 +16,7 @@ $identity(
   )],
   definition = [$Functors(
       u = {u},
+      v = {u},
       𝓒 = {𝓒},
       𝓓 = {𝓒}
     ).functor(

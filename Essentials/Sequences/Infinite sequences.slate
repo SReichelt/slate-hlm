@@ -3,9 +3,9 @@
 /**
  * @remarks We omit the word “infinite” because infinite sequences are used much more frequently than finite ones.
  *
- *          We could define infinite sequences simply as functions, but a custom construction has several advantages, including the ability to easily destruct a sequence into its elements, and the ability to omit _S_ from the constructor.
+ *          We could define infinite sequences simply as functions, but a custom construction has several advantages, including the ability to easily destruct a sequence into its elements, and the ability to omit `S` from the constructor.
  *
- *          Even though our generalized definition of “[tuple](Tuples)” covers infinite sequences as a special case, we use this additional definition (with an appropriate embedding) to make the constructor look nicer.
+ *          Even though the more general definition `$Tuples` covers infinite sequences as a special case, we use this additional definition (with an appropriate embedding) to make the constructor look nicer.
  *
  * @references * https://en.wikipedia.org/wiki/Sequence
  *             * http://mathworld.wolfram.com/Sequence.html

@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This is just a slight reformulation based on the definition of a [property](../../Properties/Properties).
+ * @remarks This is just a slight reformulation based on the definition of a property (see `$../../Properties/Properties`).
  *
  * @references * https://en.wikipedia.org/wiki/Mathematical_induction
  *             * http://mathworld.wolfram.com/PrincipleofMathematicalInduction.html

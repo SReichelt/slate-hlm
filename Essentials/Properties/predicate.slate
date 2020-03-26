@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This is a macro to convert a predicate taking an element of _S_ to a property on _S_.
+ * @remarks This is a macro to convert a predicate taking an element of `S` to a property on `S`.
  */
 $predicate(
   S: %Set(auto = %true),

@@ -96,6 +96,10 @@ $coprime(
           b = {b}
         )
       )
-    ))
+    )),
+    $../Natural/coprime(
+      m = {$absolute(a = {a})},
+      n = {$absolute(a = {b})}
+    )
   ]
 }
