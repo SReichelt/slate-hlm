@@ -1,5 +1,12 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Abelian_group
+ *             * https://mathworld.wolfram.com/Abelian.html
+ *             * https://proofwiki.org/wiki/Definition:Abelian_Group
+ *             * https://ncatlab.org/nlab/show/abelian+group
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#comm_group
+ */
 $abelian(𝐆: %Element($Groups)): %Predicate {
   display = [$Property(
     operand = 𝐆,

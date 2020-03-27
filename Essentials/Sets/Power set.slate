@@ -4,7 +4,7 @@
  * @remarks The power set is another example of a construction. It is slightly nonstandard in that its elements are not actual subsets but terms that are built using the constructor of this construction. To highlight this difference, parentheses are used. There is no significant practical difference, however.
  *
  * @references * https://en.wikipedia.org/wiki/Power_set
- *             * http://mathworld.wolfram.com/PowerSet.html
+ *             * https://mathworld.wolfram.com/PowerSet.html
  *             * https://proofwiki.org/wiki/Definition:Power_Set
  *             * https://ncatlab.org/nlab/show/power+set
  *             * https://coq.inria.fr/library/Coq.Sets.Powerset.html

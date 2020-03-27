@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)#Applications
+ *             * https://proofwiki.org/wiki/Order_of_Element_Divides_Order_of_Finite_Group
+ *             * https://leanprover-community.github.io/mathlib_docs/group_theory/order_of_element.html#order_of_dvd_card_univ
+ */
 $"Lagranges corollary"(
   𝐆: %Element($../Groups),
   _1: %Constraint($finite(𝐆 = {𝐆})),

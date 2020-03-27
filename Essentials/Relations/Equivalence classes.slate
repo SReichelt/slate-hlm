@@ -8,7 +8,7 @@
  *          In the end, there may need to be two different but interchangeable definitions of equivalence classes.
  *
  * @references * https://en.wikipedia.org/wiki/Equivalence_class
- *             * http://mathworld.wolfram.com/EquivalenceClass.html
+ *             * https://mathworld.wolfram.com/EquivalenceClass.html
  *             * https://proofwiki.org/wiki/Definition:Equivalence_Class
  *             * https://ncatlab.org/nlab/show/equivalence+class
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/quot.html#quotient

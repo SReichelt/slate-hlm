@@ -7,7 +7,7 @@
  *
  * @references * https://en.wikipedia.org/wiki/Prime_number
  *             * https://en.wikipedia.org/wiki/Euclid%27s_lemma
- *             * http://mathworld.wolfram.com/PrimeNumber.html
+ *             * https://mathworld.wolfram.com/PrimeNumber.html
  *             * https://proofwiki.org/wiki/Definition:Prime_Number
  *             * https://ncatlab.org/nlab/show/prime+number
  *             * https://coq.inria.fr/library/Coq.ZArith.Znumtheory.html#prime

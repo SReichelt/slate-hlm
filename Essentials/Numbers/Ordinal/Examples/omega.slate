@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Ordinal_number#Ordinals_extend_the_natural_numbers
- *             * http://mathworld.wolfram.com/OrdinalNumber.html
+ *             * https://mathworld.wolfram.com/OrdinalNumber.html
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal.omega
  */
 $omega: %ExplicitOperator {

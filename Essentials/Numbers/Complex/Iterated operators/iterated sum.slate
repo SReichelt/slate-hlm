@@ -4,7 +4,7 @@
  * @remarks Usage example: `$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Complex numbers"}, ⨂ = {$"iterated sum"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`.
  *
  * @references * https://en.wikipedia.org/wiki/Summation
- *             * http://mathworld.wolfram.com/Sum.html
+ *             * https://mathworld.wolfram.com/Sum.html
  *             * https://proofwiki.org/wiki/Definition:Summation
  */
 $"iterated sum": %ExplicitOperator {

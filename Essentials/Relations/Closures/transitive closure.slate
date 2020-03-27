@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Transitive_closure
- *             * http://mathworld.wolfram.com/TransitiveClosure.html
+ *             * https://mathworld.wolfram.com/TransitiveClosure.html
  *             * https://proofwiki.org/wiki/Definition:Transitive_Closure_(Relation_Theory)
  *             * https://ncatlab.org/nlab/show/transitive+closure
  *             * https://leanprover-community.github.io/mathlib_docs/logic/relation.html#relation.trans_gen

@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Distributive_property
- *             * http://mathworld.wolfram.com/Distributive.html
+ *             * https://mathworld.wolfram.com/Distributive.html
  *             * https://proofwiki.org/wiki/Definition:Distributive_Operation/Right
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#right_distributive
  */

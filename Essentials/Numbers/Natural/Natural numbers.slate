@@ -6,7 +6,7 @@
  *          In this library, the natural numbers start at 0, which is known to be far more convenient than starting at 1.
  *
  * @references * https://en.wikipedia.org/wiki/Natural_number
- *             * http://mathworld.wolfram.com/NonnegativeInteger.html
+ *             * https://mathworld.wolfram.com/NonnegativeInteger.html
  *             * https://proofwiki.org/wiki/Definition:Natural_Numbers
  *             * https://ncatlab.org/nlab/show/natural+number
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html

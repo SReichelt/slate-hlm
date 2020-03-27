@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://proofwiki.org/wiki/Identity_is_Unique
+ */
 $identity(
   𝐌: %Element($Magmas),
   _1: %Constraint(%exists(

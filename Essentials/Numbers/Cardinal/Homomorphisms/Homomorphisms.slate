@@ -6,7 +6,7 @@
  *          Although these sets are not unique, the type system prevents the ambiguities that could arise, as long as the equality definition of the structure does not define any non-isomorphic elements as equal.
  *
  * @references * https://en.wikipedia.org/wiki/Homomorphism
- *             * http://mathworld.wolfram.com/Homomorphism.html
+ *             * https://mathworld.wolfram.com/Homomorphism.html
  *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/homomorphism
  */

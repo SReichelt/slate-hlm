@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Subgroup
+ *             * https://mathworld.wolfram.com/Subgroup.html
+ *             * https://proofwiki.org/wiki/Definition:Subgroup
+ *             * https://ncatlab.org/nlab/show/subgroup
+ *             * https://leanprover-community.github.io/mathlib_docs/group_theory/subgroup.html#is_subgroup
+ */
 $"subgroup set"(
   𝐆: %Element($../Groups),
   S: %Subset($../Carrier(𝐆 = {𝐆}))

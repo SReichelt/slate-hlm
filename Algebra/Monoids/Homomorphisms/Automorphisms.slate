@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Automorphism
- *             * http://mathworld.wolfram.com/Automorphism.html
+ *             * https://mathworld.wolfram.com/Automorphism.html
  *             * https://proofwiki.org/wiki/Definition:Automorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/automorphism
  *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/mul_add.html#mul_aut

@@ -8,7 +8,7 @@
  *          Even though the more general definition `$Tuples` covers infinite sequences as a special case, we use this additional definition (with an appropriate embedding) to make the constructor look nicer.
  *
  * @references * https://en.wikipedia.org/wiki/Sequence
- *             * http://mathworld.wolfram.com/Sequence.html
+ *             * https://mathworld.wolfram.com/Sequence.html
  *             * https://proofwiki.org/wiki/Definition:Sequence/Infinite_Sequence
  *             * https://ncatlab.org/nlab/show/sequence
  *             * https://coq.inria.fr/library/Coq.Lists.Streams.html#Stream

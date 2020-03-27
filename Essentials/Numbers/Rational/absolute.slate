@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Absolute_value
- *             * http://mathworld.wolfram.com/AbsoluteValue.html
+ *             * https://mathworld.wolfram.com/AbsoluteValue.html
  *             * https://proofwiki.org/wiki/Definition:Absolute_Value
  *             * https://coq.inria.fr/library/Coq.QArith.Qabs.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/rat/order.html#rat.abs_def

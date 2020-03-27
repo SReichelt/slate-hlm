@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/group_theory/submonoid.html#subtype.monoid
+ */
 $"subset monoid"(
   𝐌: %Element($../Monoids),
   S: %Subset($../Carrier(𝐌 = {𝐌})),

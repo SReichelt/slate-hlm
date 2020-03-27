@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Well-ordering_principle
- *             * http://mathworld.wolfram.com/WellOrderingPrinciple.html
+ *             * https://mathworld.wolfram.com/WellOrderingPrinciple.html
  *             * https://proofwiki.org/wiki/Well-Ordering_Principle
  */
 $"Well-ordering principle": %StandardTheorem {

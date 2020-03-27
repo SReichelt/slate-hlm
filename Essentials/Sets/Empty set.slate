@@ -4,7 +4,7 @@
  * @remarks This defines the empty set as an enumeration with no elements. Note that sets are a built-in concept in the HLM logic.
  *
  * @references * https://en.wikipedia.org/wiki/Empty_set
- *             * http://mathworld.wolfram.com/EmptySet.html
+ *             * https://mathworld.wolfram.com/EmptySet.html
  *             * https://proofwiki.org/wiki/Definition:Empty_Set
  *             * https://ncatlab.org/nlab/show/empty+set
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.empty_def

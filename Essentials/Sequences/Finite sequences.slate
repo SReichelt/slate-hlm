@@ -4,7 +4,7 @@
  * @remarks Finite sequences could alternatively be defined inductively (i.e. as lists). However, since we also need a definition for tuples of a given length, we base our definition on that.
  *
  * @references * https://en.wikipedia.org/wiki/Sequence
- *             * http://mathworld.wolfram.com/Sequence.html
+ *             * https://mathworld.wolfram.com/Sequence.html
  *             * https://proofwiki.org/wiki/Definition:Finite_Sequence
  *             * https://ncatlab.org/nlab/show/free+monoid
  *             * https://coq.inria.fr/library/Coq.Init.Datatypes.html#list

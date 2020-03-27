@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Kernel_(algebra)#Group_homomorphisms
+ *             * https://mathworld.wolfram.com/GroupKernel.html
+ *             * https://proofwiki.org/wiki/Definition:Kernel_of_Group_Homomorphism
+ *             * https://ncatlab.org/nlab/show/kernel
+ *             * https://leanprover-community.github.io/mathlib_docs/group_theory/subgroup.html#is_group_hom.ker
+ */
 $Kernel(
   𝐆: %Element(
     $../Groups,

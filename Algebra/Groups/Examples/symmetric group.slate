@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Symmetric_group
+ *             * https://proofwiki.org/wiki/Definition:Symmetric_Group
+ *             * https://ncatlab.org/nlab/show/symmetric+group
+ */
 $"symmetric group"(X: %Set): %ExplicitOperator {
   display = [$SubSup(
     body = '𝑆',

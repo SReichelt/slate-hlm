@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Countable_set
- *             * http://mathworld.wolfram.com/CountableSet.html
+ *             * https://mathworld.wolfram.com/CountableSet.html
  *             * https://proofwiki.org/wiki/Definition:Countable_Set
  *             * https://ncatlab.org/nlab/show/countable+set
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/countable.html#set.countable

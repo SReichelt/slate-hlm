@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Cardinality_of_the_continuum
- *             * http://mathworld.wolfram.com/Continuum.html
+ *             * https://mathworld.wolfram.com/Continuum.html
  *             * https://ncatlab.org/nlab/show/continuum
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/cardinality.html#cardinal.mk_real
  */

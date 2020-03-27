@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Group_(mathematics)#First_example:_the_integers
+ *             * https://proofwiki.org/wiki/Definition:Additive_Group_of_Integers
+ */
 $integers: %ExplicitOperator {
   display = ['ℤ'],
   definition = [$../Groups.group(

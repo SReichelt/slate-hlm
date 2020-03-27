@@ -6,7 +6,7 @@
  *          In some cases, the set `$../../../Sets/"Truth values"` of truth values may be more convenient to use.
  *
  * @references * https://en.wikipedia.org/wiki/Bit
- *             * http://mathworld.wolfram.com/Bit.html
+ *             * https://mathworld.wolfram.com/Bit.html
  */
 $"Binary digits": %SetOperator {
   display = ['Bit'],

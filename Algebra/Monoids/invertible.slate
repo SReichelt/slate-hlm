@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://mathworld.wolfram.com/Invertible.html
+ *             * https://proofwiki.org/wiki/Definition:Invertible_Element
+ */
 $invertible(
   𝐌: %Element(
     $Monoids,

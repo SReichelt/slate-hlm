@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/group_theory/subgroup.html#subtype.group
+ */
 $"subset group"(
   𝐆: %Element($../Groups),
   S: %Subset($../Carrier(𝐆 = {𝐆})),

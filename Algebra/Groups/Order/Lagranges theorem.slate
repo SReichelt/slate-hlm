@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)
+ *             * https://mathworld.wolfram.com/LagrangesGroupTheorem.html
+ *             * https://proofwiki.org/wiki/Lagrange%27s_Theorem_(Group_Theory)
+ *             * https://ncatlab.org/nlab/show/index+of+a+subgroup#properties
+ *             * https://leanprover-community.github.io/mathlib_docs/group_theory/order_of_element.html#card_subgroup_dvd_card
+ */
 $"Lagranges theorem"(
   𝐆: %Element($../Groups),
   _1: %Constraint($finite(𝐆 = {𝐆})),

@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Ordinal_number
- *             * http://mathworld.wolfram.com/OrdinalNumber.html
+ *             * https://mathworld.wolfram.com/OrdinalNumber.html
  *             * https://proofwiki.org/wiki/Definition:Ordinal
  *             * https://ncatlab.org/nlab/show/ordinal+number
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal

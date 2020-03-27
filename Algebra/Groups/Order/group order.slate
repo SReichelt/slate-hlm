@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Order_(group_theory)
+ *             * https://mathworld.wolfram.com/GroupOrder.html
+ *             * https://proofwiki.org/wiki/Definition:Order_of_Structure
+ *             * https://ncatlab.org/nlab/show/order+of+a+group
+ */
 $"group order"(𝐆: %Element($../Groups)): %ExplicitOperator {
   display = [$Parens(
     body = 𝐆,

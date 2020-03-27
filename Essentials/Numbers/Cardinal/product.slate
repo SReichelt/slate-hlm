@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Cardinal_number#Cardinal_multiplication
- *             * http://mathworld.wolfram.com/CardinalMultiplication.html
+ *             * https://mathworld.wolfram.com/CardinalMultiplication.html
  *             * https://proofwiki.org/wiki/Definition:Product_of_Cardinals
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.mul_def
  */

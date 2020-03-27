@@ -8,7 +8,7 @@
  *          The natural number `u` is required to be able to define a category of (smaller) categories or functors, which would otherwise be prevented by non-circularity rules. Informally, `u` can be regarded as a “universe size” that is relevant only in the context of category theory. (The “universes” that are implicit in other contexts are already large enough.)
  *
  * @references * https://en.wikipedia.org/wiki/Category_(mathematics)
- *             * http://mathworld.wolfram.com/Category.html
+ *             * https://mathworld.wolfram.com/Category.html
  *             * https://proofwiki.org/wiki/Definition:Category
  *             * https://ncatlab.org/nlab/show/category
  */

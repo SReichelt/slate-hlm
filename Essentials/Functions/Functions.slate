@@ -8,7 +8,7 @@
  *          Function [extensionality](https://en.wikipedia.org/wiki/Extensionality) is a consequence of the requirement to specify an equality definition for the constructor.
  *
  * @references * https://en.wikipedia.org/wiki/Function_(mathematics)
- *             * http://mathworld.wolfram.com/Function.html
+ *             * https://mathworld.wolfram.com/Function.html
  *             * https://proofwiki.org/wiki/Definition:Mapping
  *             * https://ncatlab.org/nlab/show/function
  *             * https://coq.inria.fr/library/Coq.Program.Basics.html#arrow

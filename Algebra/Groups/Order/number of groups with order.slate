@@ -1,7 +1,8 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * http://oeis.org/A000001
+ * @references * https://en.wikipedia.org/wiki/Finite_group#Number_of_groups_of_a_given_order
+ *             * http://oeis.org/A000001
  */
 $"number of groups with order"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$Function(

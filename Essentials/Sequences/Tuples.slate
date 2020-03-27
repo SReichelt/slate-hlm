@@ -8,7 +8,7 @@
  *          In this definition, the codomain is a fixed set `S`. If each item is an element of a different set, a generalized Cartesian product `$../Sets/"Generalized cartesian product"` can be used instead.
  *
  * @references * https://en.wikipedia.org/wiki/Tuple
- *             * http://mathworld.wolfram.com/n-Tuple.html
+ *             * https://mathworld.wolfram.com/n-Tuple.html
  *             * https://proofwiki.org/wiki/Definition:Ordered_Tuple/On_Set
  *             * https://ncatlab.org/nlab/show/tuple
  *             * https://coq.inria.fr/library/Coq.Vectors.VectorDef.html

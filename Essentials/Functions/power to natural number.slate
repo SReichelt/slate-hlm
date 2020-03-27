@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Iterated_function
- *             * http://mathworld.wolfram.com/IteratedMap.html
+ *             * https://mathworld.wolfram.com/IteratedMap.html
  */
 $"power to natural number"(
   X: %Set(auto = %true),

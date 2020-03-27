@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Finite_group
+ *             * https://proofwiki.org/wiki/Definition:Order_of_Structure/Finite_Structure
+ */
 $finite(𝐆: %Element($../Groups)): %Predicate {
   display = [$Property(
     operand = 𝐆,

@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Cauchy_sequence
- *             * http://mathworld.wolfram.com/CauchySequence.html
+ *             * https://mathworld.wolfram.com/CauchySequence.html
  *             * https://proofwiki.org/wiki/Definition:Cauchy_Sequence
  *             * https://ncatlab.org/nlab/show/Cauchy+sequence
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/cau_seq.html#is_cau_seq

@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Euclid%27s_theorem
- *             * http://mathworld.wolfram.com/EuclidsTheorems.html
+ *             * https://mathworld.wolfram.com/EuclidsTheorems.html
  *             * https://proofwiki.org/wiki/Euclid%27s_Theorem
  *             * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.exists_infinite_primes
  */

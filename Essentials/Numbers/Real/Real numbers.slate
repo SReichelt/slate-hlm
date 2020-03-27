@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Real_number
- *             * http://mathworld.wolfram.com/RealNumber.html
+ *             * https://mathworld.wolfram.com/RealNumber.html
  *             * https://proofwiki.org/wiki/Definition:Real_Number
  *             * https://ncatlab.org/nlab/show/real+number
  *             * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal

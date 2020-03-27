@@ -4,7 +4,7 @@
  * @remarks The constraint that `m` is nonzero is not really necessary but added for consistency with the definition of the set of divisors `$Divisors`.
  *
  * @references * https://en.wikipedia.org/wiki/Divisor
- *             * http://mathworld.wolfram.com/Divisor.html
+ *             * https://mathworld.wolfram.com/Divisor.html
  *             * https://proofwiki.org/wiki/Definition:Divisor_(Algebra)/Natural_Numbers
  *             * (https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.comm_semiring)
  */

@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Binary_operation
- *             * http://mathworld.wolfram.com/BinaryOperation.html
+ *             * https://mathworld.wolfram.com/BinaryOperation.html
  *             * https://proofwiki.org/wiki/Definition:Operation/Binary_Operation
  */
 $"Inner operations"(X: %Set(auto = %true)): %SetOperator {

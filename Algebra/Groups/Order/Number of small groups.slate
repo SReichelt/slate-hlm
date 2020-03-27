@@ -1,7 +1,8 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * http://oeis.org/A000001
+ * @references * https://en.wikipedia.org/wiki/Finite_group#Number_of_groups_of_a_given_order
+ *             * http://oeis.org/A000001
  *             * https://www.math.auckland.ac.nz/~obrien/research/gnu.pdf
  */
 $"Number of small groups": %StandardTheorem {

@@ -4,7 +4,7 @@
  * @remarks This is just a slight reformulation based on the definition of a property (see `$../../Properties/Properties`).
  *
  * @references * https://en.wikipedia.org/wiki/Mathematical_induction
- *             * http://mathworld.wolfram.com/PrincipleofMathematicalInduction.html
+ *             * https://mathworld.wolfram.com/PrincipleofMathematicalInduction.html
  *             * https://proofwiki.org/wiki/Principle_of_Mathematical_Induction/Predicate
  */
 $"Induction principle of property"(

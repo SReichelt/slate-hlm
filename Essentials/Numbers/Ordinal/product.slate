@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Ordinal_arithmetic#Multiplication
- *             * http://mathworld.wolfram.com/OrdinalMultiplication.html
+ *             * https://mathworld.wolfram.com/OrdinalMultiplication.html
  *             * https://proofwiki.org/wiki/Definition:Ordinal_Multiplication
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal.type_mul
  */

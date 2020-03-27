@@ -4,7 +4,7 @@
  * @remarks In this library, “mapping” and “function” are not synonymous but interchangeable, via a definition that transforms a mapping to a function (see `$../Functions/"mapping as function"`). The difference is not fundamental but a matter of convenience.
  *
  * @references * https://en.wikipedia.org/wiki/Function_(mathematics)
- *             * http://mathworld.wolfram.com/Function.html
+ *             * https://mathworld.wolfram.com/Function.html
  *             * https://proofwiki.org/wiki/Definition:Mapping
  */
 $mapping(

@@ -1,5 +1,11 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Identity_element
+ *             * https://mathworld.wolfram.com/IdentityElement.html
+ *             * https://proofwiki.org/wiki/Definition:Identity_Element
+ *             * https://ncatlab.org/nlab/show/identity+element
+ */
 $"identity element"(
   𝐌: %Element($Magmas),
   e: %Element($Carrier(𝐌 = {𝐌}))

@@ -8,7 +8,7 @@
  *          When defining a construction, another set can be embedded in the newly defined set, so in this case, we embed the natural numbers. Note that they are also embedded in the cardinal numbers.
  *
  * @references * https://en.wikipedia.org/wiki/Integer
- *             * http://mathworld.wolfram.com/Integer.html
+ *             * https://mathworld.wolfram.com/Integer.html
  *             * https://proofwiki.org/wiki/Definition:Integer
  *             * https://ncatlab.org/nlab/show/integer
  *             * https://coq.inria.fr/library/Coq.ZArith.BinInt.html (but uses a different encoding as an inductive data type with three constructors)

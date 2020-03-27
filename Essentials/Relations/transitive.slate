@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Transitive_relation
- *             * http://mathworld.wolfram.com/Transitive.html
+ *             * https://mathworld.wolfram.com/Transitive.html
  *             * https://proofwiki.org/wiki/Definition:Transitive_Relation
  *             * https://ncatlab.org/nlab/show/transitive+relation
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Transitive

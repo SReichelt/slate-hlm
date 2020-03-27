@@ -4,7 +4,7 @@
  * @remarks The Cartesian product is, again, a “construction.” Note that HLM does not have any built-in notion of “tuple” – it is actually defined here as a constructor, with the usual notation.
  *
  * @references * https://en.wikipedia.org/wiki/Cartesian_product
- *             * http://mathworld.wolfram.com/CartesianProduct.html
+ *             * https://mathworld.wolfram.com/CartesianProduct.html
  *             * https://proofwiki.org/wiki/Definition:Cartesian_Product
  *             * https://ncatlab.org/nlab/show/cartesian+product
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#prod

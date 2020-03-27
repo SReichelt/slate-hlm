@@ -3,7 +3,7 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Monoid#Submonoids
  *             * (https://mathworld.wolfram.com/Submonoid.html seems incorrect)
- *             * (https://proofwiki.org/wiki/Definition:Submonoid: ditto)
+ *             * (https://proofwiki.org/wiki/Definition:Submonoid ditto)
  *             * https://ncatlab.org/nlab/show/submonoid
  *             * https://leanprover-community.github.io/mathlib_docs/group_theory/submonoid.html#is_submonoid
  */

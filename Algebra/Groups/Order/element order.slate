@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Order_(group_theory)
+ *             * https://mathworld.wolfram.com/GroupOrder.html
+ *             * https://proofwiki.org/wiki/Definition:Order_of_Group_Element
+ *             * https://ncatlab.org/nlab/show/order+of+a+group#OrderOfAnElementOfAGroup
+ *             * https://leanprover-community.github.io/mathlib_docs/group_theory/order_of_element.html#order_of
+ */
 $"element order"(
   𝐆: %Element(
     $../Groups,

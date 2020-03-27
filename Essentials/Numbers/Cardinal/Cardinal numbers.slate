@@ -12,7 +12,7 @@
  *          In a way, the definition of cardinal numbers in HLM is very similar to the definition of algebraic structures (see e.g. `$../../../Algebra/"Pointed sets"/"Pointed sets"`, `$../../../Algebra/Magmas/Magmas`, `$../../../Algebra/Groups/Groups`). This is especially visible in the use of this definition in the category of sets `$../../../"Category theory"/"Individual categories"/cardinals`.
  *
  * @references * https://en.wikipedia.org/wiki/Cardinal_number
- *             * http://mathworld.wolfram.com/CardinalNumber.html
+ *             * https://mathworld.wolfram.com/CardinalNumber.html
  *             * https://proofwiki.org/wiki/Definition:Cardinal
  *             * https://ncatlab.org/nlab/show/cardinal+number
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal

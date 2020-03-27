@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * http://mathworld.wolfram.com/CardinalExponentiation.html
+ * @references * https://mathworld.wolfram.com/CardinalExponentiation.html
  *             * https://en.wikipedia.org/wiki/Cardinal_number#Cardinal_exponentiation
  *             * https://proofwiki.org/wiki/Definition:Exponentiation_of_Cardinals
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.power_def

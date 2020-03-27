@@ -4,7 +4,7 @@
  * @remarks The constructor notation is later justified by `$"Actual linear combination equals formal linear combination"`.
  *
  * @references * https://en.wikipedia.org/wiki/Complex_numbers
- *             * http://mathworld.wolfram.com/ComplexNumber.html
+ *             * https://mathworld.wolfram.com/ComplexNumber.html
  *             * https://proofwiki.org/wiki/Definition:Complex_Number
  *             * https://ncatlab.org/nlab/show/complex+number
  *             * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex

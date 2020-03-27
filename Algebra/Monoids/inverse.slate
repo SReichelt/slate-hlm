@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Multiplicative_inverse
+ *             * https://mathworld.wolfram.com/MultiplicativeInverse.html
+ */
 $inverse(
   𝐌: %Element(
     $Monoids,

@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Symmetric_relation
- *             * http://mathworld.wolfram.com/SymmetricRelation.html
+ *             * https://mathworld.wolfram.com/SymmetricRelation.html
  *             * https://proofwiki.org/wiki/Definition:Symmetric_Relation
  *             * https://ncatlab.org/nlab/show/symmetric+relation
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Symmetric

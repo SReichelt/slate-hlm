@@ -4,7 +4,7 @@
  * @remarks This definition is currently a stub that should be extended to arbitrary aleph numbers.
  *
  * @references * https://en.wikipedia.org/wiki/Aleph_number
- *             * http://mathworld.wolfram.com/Aleph-0.html
+ *             * https://mathworld.wolfram.com/Aleph-0.html
  *             * https://ncatlab.org/nlab/show/aleph
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#cardinal.aleph_zero
  */

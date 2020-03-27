@@ -4,7 +4,7 @@
  * @remarks This definition encodes a relation from `S` to `T` as a proposition depending on an element of `S` and an element of `T` (up to equivalence). It would be equally possible to encode relations as subsets of the Cartesian product; the given definition is just more convenient.
  *
  * @references * https://en.wikipedia.org/wiki/Binary_relation
- *             * http://mathworld.wolfram.com/Relation.html
+ *             * https://mathworld.wolfram.com/Relation.html
  *             * https://proofwiki.org/wiki/Definition:Relation
  *             * https://ncatlab.org/nlab/show/relation#binary_relations
  *             * https://leanprover-community.github.io/mathlib_docs/data/rel.html#rel

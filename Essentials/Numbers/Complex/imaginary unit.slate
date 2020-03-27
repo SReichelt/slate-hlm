@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Imaginary_unit
- *             * http://mathworld.wolfram.com/ImaginaryUnit.html
+ *             * https://mathworld.wolfram.com/ImaginaryUnit.html
  *             * https://proofwiki.org/wiki/Definition:Imaginary_Unit
  *             * https://ncatlab.org/nlab/show/imaginary+unit
  *             * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex.I

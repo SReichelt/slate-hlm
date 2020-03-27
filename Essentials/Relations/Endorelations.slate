@@ -4,7 +4,7 @@
  * @remarks Since endorelations are used often, we encode them as a separate construction with an appropriate embedding, mainly to improve rendering.
  *
  * @references * https://en.wikipedia.org/wiki/Binary_relation#Relations_over_a_set
- *             * http://mathworld.wolfram.com/Relation.html
+ *             * https://mathworld.wolfram.com/Relation.html
  *             * https://proofwiki.org/wiki/Definition:Endorelation
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Relation
  */

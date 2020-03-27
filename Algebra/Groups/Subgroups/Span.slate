@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Closure_(mathematics) (see also https://en.wikipedia.org/wiki/Generating_set_of_a_group)
+ *             * https://proofwiki.org/wiki/Definition:Generated_Subgroup
+ *             * https://ncatlab.org/nlab/show/Moore+closure
+ *             * https://leanprover-community.github.io/mathlib_docs/group_theory/subgroup.html#group.closure
+ */
 $Span(
   𝐆: %Element(
     $../Groups,

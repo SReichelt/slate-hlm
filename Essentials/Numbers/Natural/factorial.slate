@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Factorial
- *             * http://mathworld.wolfram.com/Factorial.html
+ *             * https://mathworld.wolfram.com/Factorial.html
  *             * https://proofwiki.org/wiki/Definition:Factorial
  *             * https://coq.inria.fr/library/Coq.Arith.Factorial.html#fact
  *             * https://leanprover-community.github.io/mathlib_docs/data/nat/basic.html#nat.fact

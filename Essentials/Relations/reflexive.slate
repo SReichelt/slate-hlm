@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Reflexive_relation
- *             * http://mathworld.wolfram.com/Reflexive.html
+ *             * https://mathworld.wolfram.com/Reflexive.html
  *             * https://proofwiki.org/wiki/Definition:Reflexive_Relation
  *             * https://ncatlab.org/nlab/show/reflexive+relation
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Reflexive

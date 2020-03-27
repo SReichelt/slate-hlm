@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Cantor%27s_theorem
- *             * http://mathworld.wolfram.com/CantorsTheorem.html
+ *             * https://mathworld.wolfram.com/CantorsTheorem.html
  *             * https://proofwiki.org/wiki/Cantor%27s_Theorem
  *             * https://ncatlab.org/nlab/show/Cantor%27s+theorem
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.cantor

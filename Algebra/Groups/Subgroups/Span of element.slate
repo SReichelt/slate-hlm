@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Cyclic_group
+ *             * https://proofwiki.org/wiki/Definition:Cyclic_Group
+ *             * https://ncatlab.org/nlab/show/cyclic+group
+ *             * https://leanprover-community.github.io/mathlib_docs/group_theory/subgroup.html#gpowers
+ */
 $"Span of element"(
   𝐆: %Element(
     $../Groups,

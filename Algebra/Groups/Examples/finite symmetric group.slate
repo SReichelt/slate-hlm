@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Symmetric_group
+ *             * https://mathworld.wolfram.com/SymmetricGroup.html
+ *             * https://proofwiki.org/wiki/Definition:Symmetric_Group/n_Letters
+ *             * https://ncatlab.org/nlab/show/symmetric+group
+ */
 $"finite symmetric group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$SubSup(
     body = '𝑆',

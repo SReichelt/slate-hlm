@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Power_of_Element/Group
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#gpow
+ */
 $"power to integer"(
   𝐆: %Element(
     $Groups,

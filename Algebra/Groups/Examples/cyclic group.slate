@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Cyclic_group
+ *             * https://mathworld.wolfram.com/CyclicGroup.html
+ *             * https://proofwiki.org/wiki/Definition:Cyclic_Group/Notation
+ *             * https://ncatlab.org/nlab/show/cyclic+group#examples
+ */
 $"cyclic group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$SubSup(
     body = '𝐶',

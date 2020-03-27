@@ -6,7 +6,7 @@
  *          Note that in the constructor, we force the denominator to be positive. This is not required at this point, since the given equality definition would also work for negative numbers. However, if the denominator was allowed to be negative, the definition of `$"less or equal"` would probably need to be split into several cases.
  *
  * @references * https://en.wikipedia.org/wiki/Rational_number
- *             * http://mathworld.wolfram.com/RationalNumber.html
+ *             * https://mathworld.wolfram.com/RationalNumber.html
  *             * https://proofwiki.org/wiki/Definition:Rational_Number
  *             * https://ncatlab.org/nlab/show/rational+number
  *             * https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Q (together with https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Qeq)

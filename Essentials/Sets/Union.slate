@@ -4,7 +4,7 @@
  * @remarks Due to the type system of HLM, it is impossible to define the union of two arbitrary sets. Instead, both sets must be declared as subsets of a common superset `U`, although the intersection is, of course, independent of `U`. Since a suitable value for `U` can always be inferred automatically, `U` can be omitted from the notation.
  *
  * @references * https://en.wikipedia.org/wiki/Union_(set_theory)
- *             * http://mathworld.wolfram.com/Union.html
+ *             * https://mathworld.wolfram.com/Union.html
  *             * https://proofwiki.org/wiki/Definition:Set_Union
  *             * https://ncatlab.org/nlab/show/union
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.union
