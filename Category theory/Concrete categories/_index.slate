@@ -1,6 +1,6 @@
 %../../../../logics/library%
 
-$"Individual categories": %Section {
+$"Concrete categories": %Section {
   logic = 'hlm',
   items = [
     %item($elements),

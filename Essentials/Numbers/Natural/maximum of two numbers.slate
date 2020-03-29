@@ -1,0 +1,74 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Max_Operation
+ *             * https://coq.inria.fr/library/Coq.Init.Nat.html#max
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/functions.html#max
+ */
+$"maximum of two numbers"(
+  m: %Element($"Natural numbers"),
+  n: %Element(%previous)
+): %ExplicitOperator {
+  display = [$Function(
+    function = 'max',
+    arguments = [m, n]
+  )],
+  definition = [
+    $maximum(M = {%enumeration(m, n)}),
+    %cases([
+      {
+        formula = $"less or equal"(
+          n = {m},
+          m = {n}
+        ),
+        value = m
+      },
+      {
+        formula = $less(
+          m = {m},
+          n = {n}
+        ),
+        value = n
+      }
+    ]),
+    %structuralCases(
+      n,
+      $"Natural numbers",
+      [
+        {
+          constructor = $"Natural numbers".zero,
+          value = m,
+          rewrite = %true
+        },
+        {
+          constructor = $"Natural numbers".successor,
+          parameters = #(y: %Element($"Natural numbers")),
+          value = %structuralCases(
+            m,
+            $"Natural numbers",
+            [
+              {
+                constructor = $"Natural numbers".zero,
+                value = n,
+                rewrite = %true
+              },
+              {
+                constructor = $"Natural numbers".successor,
+                parameters = #(x: %Element($"Natural numbers")),
+                value = $sum(
+                  m = {$"maximum of two numbers"(
+                    m = {x},
+                    n = {y}
+                  )},
+                  n = {$number(value = 1)}
+                ),
+                rewrite = %true
+              }
+            ]
+          ),
+          rewrite = %true
+        }
+      ]
+    )
+  ]
+}

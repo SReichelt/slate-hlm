@@ -2,15 +2,16 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Maxima_and_minima#In_relation_to_sets
- *             * https://mathworld.wolfram.com/Minimum.html
- *             * https://proofwiki.org/wiki/Definition:Minimal/Ordered_Set
+ *             * https://mathworld.wolfram.com/Maximum.html
+ *             * https://proofwiki.org/wiki/Definition:Maximal/Ordered_Set
  */
-$minimum(
+$maximum(
   M: %Subset($"Natural numbers"),
-  _1: %Constraint(%not($../../Sets/empty(S = {M})))
+  _1: %Constraint(%not($../../Sets/empty(S = {M}))),
+  _2: %Constraint($bounded(M = {M}))
 ): %ImplicitOperator {
   display = [$Function(
-    function = 'min',
+    function = 'max',
     arguments = [M]
   )],
   parameter = #(m: %Element(M)),
@@ -18,16 +19,16 @@ $minimum(
     %forall(
       #(n: %Element(M)),
       $"less or equal"(
-        m = {m},
-        n = {n}
+        n = {m},
+        m = {n}
       )
     ),
     %forall(
       #(
         l: %Element(M),
         _2: %Constraint($"less or equal"(
-          m = {l},
-          n = {m}
+          n = {l},
+          m = {m}
         ))
       ),
       %equals(l, m)
@@ -35,8 +36,8 @@ $minimum(
     %not(%exists(
       #(k: %Element(M)),
       formula = $less(
-        m = {k},
-        n = {m}
+        n = {k},
+        m = {m}
       )
     ))
   ]

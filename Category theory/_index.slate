@@ -17,8 +17,8 @@ $"Category theory": %Section {
       'Natural transformations'
     ),
     %subsection(
-      $"Individual categories",
-      'Individual categories'
+      $"Concrete categories",
+      'Concrete categories'
     ),
     %subsection(
       $Yoneda,

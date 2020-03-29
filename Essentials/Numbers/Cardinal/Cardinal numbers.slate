@@ -9,7 +9,7 @@
  *
  *          When defining a construction, an embedding from another set into the newly defined set can be specified, subject to a suitable well-definedness condition. Embedding the natural numbers in the cardinal numbers simplifies a lot of definitions and theorems (see `$finite`, `$"Cardinality of power set"`).
  *
- *          In a way, the definition of cardinal numbers in HLM is very similar to the definition of algebraic structures (see e.g. `$../../../Algebra/"Pointed sets"/"Pointed sets"`, `$../../../Algebra/Magmas/Magmas`, `$../../../Algebra/Groups/Groups`). This is especially visible in the use of this definition in the category of sets `$../../../"Category theory"/"Individual categories"/cardinals`.
+ *          In a way, the definition of cardinal numbers in HLM is very similar to the definition of algebraic structures (see e.g. `$../../../Algebra/"Pointed sets"/"Pointed sets"`, `$../../../Algebra/Magmas/Magmas`, `$../../../Algebra/Groups/Groups`). This is especially visible in the use of this definition in the category of sets `$../../../"Category theory"/"Concrete categories"/cardinals`.
  *
  * @references * https://en.wikipedia.org/wiki/Cardinal_number
  *             * https://mathworld.wolfram.com/CardinalNumber.html

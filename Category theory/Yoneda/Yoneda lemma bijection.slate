@@ -23,7 +23,7 @@ $"Yoneda lemma bijection"(
     u = {u},
     v = {v},
     𝓒 = {𝓒},
-    𝓓 = {$../"Individual categories"/cardinals(u = {v})}
+    𝓓 = {$../"Concrete categories"/cardinals(u = {v})}
   )),
   𝐀: %Element($../Objects(
     u = {u},
@@ -36,7 +36,7 @@ $"Yoneda lemma bijection"(
         u = {u},
         v = {v},
         𝓒 = {𝓒},
-        𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+        𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
         F = {$"hom-functor"(
           u = {u},
           v = {v},
@@ -49,7 +49,7 @@ $"Yoneda lemma bijection"(
         u = {u},
         v = {v},
         𝓒 = {𝓒},
-        𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+        𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
         F = {F},
         𝐗 = {𝐀}
       )})},
@@ -67,7 +67,7 @@ $"Yoneda lemma bijection"(
           u = {u},
           v = {v},
           𝓒 = {𝓒},
-          𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+          𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
           F = {$"hom-functor"(
             u = {u},
             v = {v},
@@ -80,7 +80,7 @@ $"Yoneda lemma bijection"(
           u = {u},
           v = {v},
           𝓒 = {𝓒},
-          𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+          𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
           F = {F},
           𝐗 = {𝐀}
         )})},
@@ -97,7 +97,7 @@ $"Yoneda lemma bijection"(
             u = {u},
             v = {v},
             𝓒 = {𝓒},
-            𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+            𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
             F = {F},
             𝐗 = {𝐀}
           )})},
@@ -105,7 +105,7 @@ $"Yoneda lemma bijection"(
             u = {u},
             v = {v},
             𝓒 = {𝓒},
-            𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+            𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
             F = {$"hom-functor"(
               u = {u},
               v = {v},
@@ -119,7 +119,7 @@ $"Yoneda lemma bijection"(
             u = {u},
             v = {v},
             𝓒 = {𝓒},
-            𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+            𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
             F = {F},
             𝐗 = {𝐀}
           )}))),
@@ -127,7 +127,7 @@ $"Yoneda lemma bijection"(
               u = {u},
               v = {v},
               𝓒 = {𝓒},
-              𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+              𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
               F = {$"hom-functor"(
                 u = {u},
                 v = {v},
@@ -151,7 +151,7 @@ $"Yoneda lemma bijection"(
                     u = {u},
                     v = {v},
                     𝓒 = {𝓒},
-                    𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+                    𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
                     F = {F},
                     𝐗 = {𝐗}
                   )})}
@@ -167,7 +167,7 @@ $"Yoneda lemma bijection"(
                       u = {u},
                       v = {v},
                       𝓒 = {𝓒},
-                      𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+                      𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
                       F = {F},
                       𝐗 = {𝐀}
                     )})},
@@ -175,7 +175,7 @@ $"Yoneda lemma bijection"(
                       u = {u},
                       v = {v},
                       𝓒 = {𝓒},
-                      𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+                      𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
                       F = {F},
                       𝐗 = {𝐗}
                     )})},
@@ -183,7 +183,7 @@ $"Yoneda lemma bijection"(
                       u = {u},
                       v = {v},
                       𝓒 = {𝓒},
-                      𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+                      𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
                       F = {F},
                       𝐘 = {𝐀},
                       𝐙 = {𝐗},

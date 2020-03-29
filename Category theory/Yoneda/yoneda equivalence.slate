@@ -22,7 +22,7 @@ $"yoneda equivalence"(
     u = {u},
     v = {v},
     𝓒 = {𝓒},
-    𝓓 = {$../"Individual categories"/cardinals(u = {v})}
+    𝓓 = {$../"Concrete categories"/cardinals(u = {v})}
   )),
   𝐀: %Element($../Objects(
     u = {u},
@@ -38,7 +38,7 @@ $"yoneda equivalence"(
         u = {u},
         v = {v},
         𝓒 = {𝓒},
-        𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+        𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
         F = {$"hom-functor"(
           u = {u},
           v = {v},
@@ -51,7 +51,7 @@ $"yoneda equivalence"(
         u = {u},
         v = {v},
         𝓒 = {𝓒},
-        𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+        𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
         F = {F},
         𝐗 = {𝐀}
       )})}
@@ -60,7 +60,7 @@ $"yoneda equivalence"(
         u = {u},
         v = {v},
         𝓒 = {𝓒},
-        𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+        𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
         F = {$"hom-functor"(
           u = {u},
           v = {v},
@@ -80,7 +80,7 @@ $"yoneda equivalence"(
           u = {u},
           v = {v},
           𝓒 = {𝓒},
-          𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+          𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
           F = {F},
           𝐗 = {𝐀}
         )})},
@@ -88,7 +88,7 @@ $"yoneda equivalence"(
           u = {u},
           v = {v},
           𝓒 = {𝓒},
-          𝓓 = {$../"Individual categories"/cardinals(u = {v})},
+          𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
           F = {$"hom-functor"(
             u = {u},
             v = {v},

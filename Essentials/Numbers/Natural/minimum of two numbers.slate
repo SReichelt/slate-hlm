@@ -1,0 +1,74 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Min_Operation
+ *             * https://coq.inria.fr/library/Coq.Init.Nat.html#min
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/functions.html#min
+ */
+$"minimum of two numbers"(
+  m: %Element($"Natural numbers"),
+  n: %Element(%previous)
+): %ExplicitOperator {
+  display = [$Function(
+    function = 'min',
+    arguments = [m, n]
+  )],
+  definition = [
+    $minimum(M = {%enumeration(m, n)}),
+    %cases([
+      {
+        formula = $"less or equal"(
+          m = {m},
+          n = {n}
+        ),
+        value = m
+      },
+      {
+        formula = $less(
+          n = {m},
+          m = {n}
+        ),
+        value = n
+      }
+    ]),
+    %structuralCases(
+      n,
+      $"Natural numbers",
+      [
+        {
+          constructor = $"Natural numbers".zero,
+          value = $number(value = 0),
+          rewrite = %true
+        },
+        {
+          constructor = $"Natural numbers".successor,
+          parameters = #(y: %Element($"Natural numbers")),
+          value = %structuralCases(
+            m,
+            $"Natural numbers",
+            [
+              {
+                constructor = $"Natural numbers".zero,
+                value = $number(value = 0),
+                rewrite = %true
+              },
+              {
+                constructor = $"Natural numbers".successor,
+                parameters = #(x: %Element($"Natural numbers")),
+                value = $sum(
+                  m = {$"minimum of two numbers"(
+                    m = {x},
+                    n = {y}
+                  )},
+                  n = {$number(value = 1)}
+                ),
+                rewrite = %true
+              }
+            ]
+          ),
+          rewrite = %true
+        }
+      ]
+    )
+  ]
+}

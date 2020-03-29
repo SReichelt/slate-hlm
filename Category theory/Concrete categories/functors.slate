@@ -21,10 +21,10 @@ $functors(
     arguments = [𝓒, 𝓓]
   )],
   definition = [$../Categories(u = {$../../Essentials/Numbers/Natural/sum(
-      m = {%associative($../../Essentials/Numbers/Natural/sum(
+      m = {$../../Essentials/Numbers/Natural/"maximum of two numbers"(
         m = {u},
         n = {v}
-      ))},
+      )},
       n = {$../../Essentials/Numbers/Natural/number(value = 1)}
     )}).category(
       O = {$../Functors/Functors(
