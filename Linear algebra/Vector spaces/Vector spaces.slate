@@ -4,6 +4,10 @@
  * @remarks For vector spaces, we reuse the definitions related to modules over a ring where applicable.
  *
  * @references * https://en.wikipedia.org/wiki/Vector_space
+ *             * https://mathworld.wolfram.com/VectorSpace.html
+ *             * https://proofwiki.org/wiki/Definition:Vector_Space
+ *             * https://ncatlab.org/nlab/show/vector+space
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#vector_space
  */
 $"Vector spaces"(𝐅: %Element($../../Algebra/Fields/Fields)): %SetOperator {
   display = [$Function(

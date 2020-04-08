@@ -1,5 +1,11 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Dimension_(vector_space)
+ *             * https://proofwiki.org/wiki/Definition:Dimension_of_Vector_Space/Finite
+ *             * https://ncatlab.org/nlab/show/finite-dimensional+vector+space
+ *             * https://leanprover-community.github.io/mathlib_docs/linear_algebra/finite_dimensional.html#finite_dimensional
+ */
 $"finite-dimensional"(
   𝐅: %Element(
     $../../Algebra/Fields/Fields,
@@ -11,17 +17,23 @@ $"finite-dimensional"(
     operand = 𝐕,
     property = %neg('finite-dimensional', 'infinite-dimensional')
   )],
-  definition = [%exists(
-    #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
-      𝐑 = {𝐅},
-      𝐌 = {𝐕}
-    ))),
-    formula = $../../Essentials/Sequences/finite(
-      S = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+  definition = [
+    %exists(
+      #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
         𝐑 = {𝐅},
         𝐌 = {𝐕}
-      )},
-      𝒂 = {𝒙}
+      ))),
+      formula = $../../Essentials/Sequences/finite(
+        S = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+          𝐑 = {𝐅},
+          𝐌 = {𝐕}
+        )},
+        𝒂 = {𝒙}
+      )
+    ),
+    $../../Algebra/Rings/Modules/"Left modules"/Coordinates/"finitely generated"(
+      𝐑 = {𝐅},
+      𝐌 = {𝐕}
     )
-  )]
+  ]
 }

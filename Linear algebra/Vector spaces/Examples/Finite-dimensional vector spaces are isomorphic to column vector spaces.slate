@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Dimension_(vector_space)#Facts
+ *             * https://proofwiki.org/wiki/Same_Dimensional_Vector_Spaces_are_Isomorphic
+ */
 $"Finite-dimensional vector spaces are isomorphic to column vector spaces"(
   𝐅: %Element(
     $../../../Algebra/Fields/Fields,

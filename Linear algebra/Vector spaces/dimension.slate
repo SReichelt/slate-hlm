@@ -1,5 +1,12 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Dimension_(vector_space)
+ *             * https://mathworld.wolfram.com/Dimension.html
+ *             * https://proofwiki.org/wiki/Definition:Dimension_of_Vector_Space
+ *             * https://ncatlab.org/nlab/show/dimension#of_spaces
+ *             * https://leanprover-community.github.io/mathlib_docs/linear_algebra/finite_dimensional.html#finite_dimensional.findim
+ */
 $dimension(
   𝐅: %Element(
     $../../Algebra/Fields/Fields,
@@ -47,6 +54,35 @@ $dimension(
           𝒂 = {𝒙}
         ),
         n
+      )
+    ),
+    %forall(
+      #(
+        𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/"Element sequences"(
+          𝐑 = {𝐅},
+          𝐌 = {𝐕}
+        )),
+        _1: %Constraint(%setEquals(
+          $../../Algebra/Rings/Modules/"Left modules"/Coordinates/Span(
+            𝐑 = {𝐅},
+            𝐌 = {𝐕},
+            𝒙 = {𝒙}
+          ),
+          $../../Algebra/Rings/Modules/"Left modules"/Carrier(
+            𝐑 = {𝐅},
+            𝐌 = {𝐕}
+          )
+        ))
+      ),
+      $../../Essentials/Numbers/Ordinal/"less or equal"(
+        β = {$../../Essentials/Sequences/"ordinal-indexed sequence length"(
+          S = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+            𝐑 = {𝐅},
+            𝐌 = {𝐕}
+          )},
+          𝒂 = {𝒙}
+        )},
+        α = {n}
       )
     )
   ]

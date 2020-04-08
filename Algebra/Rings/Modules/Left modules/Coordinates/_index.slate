@@ -8,6 +8,7 @@ $Coordinates: %Section {
     %item($"linear combination"),
     %item($"linearly dependent"),
     %item($Span),
+    %item($"finitely generated"),
     %item($basis),
     %item($Bases),
     %item($"basis coordinates")

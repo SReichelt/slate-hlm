@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Vector_space#Coordinate_spaces
+ */
 $"column vector space"(
   𝐅: %Element(
     $../../../Algebra/Fields/Fields,

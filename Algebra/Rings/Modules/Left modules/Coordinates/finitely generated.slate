@@ -1,0 +1,45 @@
+%../../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Finitely_generated_module
+ *             * https://proofwiki.org/wiki/Definition:Finitely_Generated_Module
+ *             * https://ncatlab.org/nlab/show/finitely+generated+module
+ */
+$"finitely generated"(
+  𝐑: %Element(
+    $../../../Rings,
+    auto = %true
+  ),
+  𝐌: %Element($../"Left modules"(𝐑 = {𝐑}))
+): %Predicate {
+  display = [$Property(
+    operand = 𝐌,
+    property = 'finitely generated'
+  )],
+  definition = [%exists(
+    #(𝒙: %Element($"Element sequences"(
+      𝐑 = {𝐑},
+      𝐌 = {𝐌}
+    ))),
+    formula = %and(
+      $../../../../../Essentials/Sequences/finite(
+        S = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌}
+        )},
+        𝒂 = {𝒙}
+      ),
+      %setEquals(
+        $Span(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌},
+          𝒙 = {𝒙}
+        ),
+        $../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌}
+        )
+      )
+    )
+  )]
+}
