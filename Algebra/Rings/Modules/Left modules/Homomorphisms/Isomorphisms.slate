@@ -1,5 +1,10 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Module_homomorphism#Terminology
+ *             * https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)/R-Algebraic_Structure_Isomorphism/Module_Isomorphism
+ *             * https://ncatlab.org/nlab/show/isomorphism
+ */
 $Isomorphisms(
   𝐑: %Element(
     $../../../Rings,

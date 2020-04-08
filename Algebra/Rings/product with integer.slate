@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#gsmul
+ */
 $"product with integer"(
   𝐑: %Element(
     $Rings,

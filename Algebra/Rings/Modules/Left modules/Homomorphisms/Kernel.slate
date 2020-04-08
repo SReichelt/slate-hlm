@@ -1,5 +1,12 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Module_homomorphism
+ *             * https://mathworld.wolfram.com/ModuleKernel.html
+ *             * https://proofwiki.org/wiki/Definition:Kernel_of_Linear_Transformation
+ *             * https://ncatlab.org/nlab/show/kernel
+ *             * https://leanprover-community.github.io/mathlib_docs/linear_algebra/basic.html#linear_map.ker
+ */
 $Kernel(
   𝐑: %Element(
     $../../../Rings,
@@ -23,28 +30,19 @@ $Kernel(
     function = 'Ker',
     arguments = [φ]
   )],
-  definition = [%subset(
-    #(g: %Element($../Carrier(
+  definition = [$../../../../../Essentials/Functions/Preimage(
+    X = {$../Carrier(
       𝐑 = {𝐑},
       𝐌 = {𝐌}
-    ))),
-    %equals(
-      $../../../../../Essentials/Functions/value(
-        X = {$../Carrier(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌}
-        )},
-        Y = {$../Carrier(
-          𝐑 = {𝐑},
-          𝐌 = {𝐍}
-        )},
-        f = {φ},
-        x = {g}
-      ),
-      $../zero(
-        𝐑 = {𝐑},
-        𝐌 = {𝐍}
-      )
-    )
+    )},
+    Y = {$../Carrier(
+      𝐑 = {𝐑},
+      𝐌 = {𝐍}
+    )},
+    f = {φ},
+    S = {%enumeration($../zero(
+      𝐑 = {𝐑},
+      𝐌 = {𝐍}
+    ))}
   )]
 }

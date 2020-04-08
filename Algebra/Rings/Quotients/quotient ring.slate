@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Quotient_ring
+ *             * https://mathworld.wolfram.com/QuotientRing.html
+ *             * https://proofwiki.org/wiki/Definition:Quotient_Ring
+ *             * https://ncatlab.org/nlab/show/quotient+ring
+ *             * https://leanprover-community.github.io/mathlib_docs/ring_theory/ideals.html#ideal.quotient.comm_ring
+ */
 $"quotient ring"(
   𝐑: %Element($../Rings),
   I: %Subset($../Carrier(𝐑 = {𝐑})),

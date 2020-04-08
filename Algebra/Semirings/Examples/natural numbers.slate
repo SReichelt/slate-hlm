@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Semiring#Examples
+ *             * https://ncatlab.org/nlab/show/rig#examples
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.semiring
+ */
 $"natural numbers": %ExplicitOperator {
   display = ['ℕ'],
   definition = [$../Semirings.semiring(

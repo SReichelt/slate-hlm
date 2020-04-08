@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/ring_theory/subring.html#subtype.ring
+ */
 $"subset ring"(
   𝐑: %Element($../Rings),
   S: %Subset($../Carrier(𝐑 = {𝐑})),

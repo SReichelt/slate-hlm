@@ -1,0 +1,34 @@
+%../../../../../logics/hlm%
+
+$difference(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element(
+    $../../../"Formal systems"/Variables,
+    auto = %true
+  ),
+  p: %Element($Polynomials(
+    𝐑 = {𝐑},
+    X = {X}
+  )),
+  q: %Element(%previous)
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '−',
+    operands = [p, q],
+    minParenLevel = 1,
+    maxParenLevel = 1
+  )],
+  definition = [$sum(
+    𝐑 = {𝐑},
+    X = {X},
+    p = {p},
+    q = {$"additive inverse"(
+      𝐑 = {𝐑},
+      X = {X},
+      p = {q}
+    )}
+  )]
+}

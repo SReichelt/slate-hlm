@@ -12,7 +12,7 @@ $"finite-dimensional"(
     property = %neg('finite-dimensional', 'infinite-dimensional')
   )],
   definition = [%exists(
-    #(𝐱: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
+    #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
       𝐑 = {𝐅},
       𝐌 = {𝐕}
     ))),
@@ -21,7 +21,7 @@ $"finite-dimensional"(
         𝐑 = {𝐅},
         𝐌 = {𝐕}
       )},
-      𝒂 = {𝐱}
+      𝒂 = {𝒙}
     )
   )]
 }

@@ -2,6 +2,11 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Ring_(mathematics)
+ *             * https://mathworld.wolfram.com/UnitRing.html
+ *             * https://proofwiki.org/wiki/Definition:Ring_with_Unity
+ *             * https://ncatlab.org/nlab/show/ring
+ *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#ring_theory
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/ring.html#ring
  */
 $Rings: %Construction {
   $ring(

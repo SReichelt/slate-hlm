@@ -18,7 +18,7 @@ $dimension(
   parameter = #(n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")),
   definition = [
     %forall(
-      #(𝐱: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
+      #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
         𝐑 = {𝐅},
         𝐌 = {𝐕}
       ))),
@@ -28,13 +28,13 @@ $dimension(
             𝐑 = {𝐅},
             𝐌 = {𝐕}
           )},
-          𝒂 = {𝐱}
+          𝒂 = {𝒙}
         ),
         n
       )
     ),
     %exists(
-      #(𝐱: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
+      #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
         𝐑 = {𝐅},
         𝐌 = {𝐕}
       ))),
@@ -44,7 +44,7 @@ $dimension(
             𝐑 = {𝐅},
             𝐌 = {𝐕}
           )},
-          𝒂 = {𝐱}
+          𝒂 = {𝒙}
         ),
         n
       )

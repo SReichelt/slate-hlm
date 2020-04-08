@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/rat/basic.html#rat.field
+ */
 $"rational numbers": %ExplicitOperator {
   display = ['ℚ'],
   definition = [$../../Rings/Rings.ring(

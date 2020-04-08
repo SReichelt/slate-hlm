@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Matrix_ring
+ *             * https://proofwiki.org/wiki/Definition:Ring_of_Square_Matrices
+ *             * https://ncatlab.org/nlab/show/matrix+algebra
+ *             * https://leanprover-community.github.io/mathlib_docs/data/matrix/basic.html#matrix.ring
+ */
 $"matrix ring"(
   𝐑: %Element($../Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")

@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Degree_of_a_polynomial
+ *             * https://mathworld.wolfram.com/PolynomialDegree.html
+ *             * https://proofwiki.org/wiki/Definition:Degree_of_Polynomial#One_variable
+ *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial.html#polynomial.degree
+ */
 $degree(
   𝐑: %Element(
     $../Rings,

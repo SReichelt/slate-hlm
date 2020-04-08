@@ -1,5 +1,11 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @remarks The span of an element sequence is defined as (equivalently) either the span of the set of elements or the set of all linear combinations.
+ *
+ * @references * https://en.wikipedia.org/wiki/Linear_span#Generalizations
+ *             * https://proofwiki.org/wiki/Definition:Generated_Submodule
+ */
 $Span(
   𝐑: %Element(
     $../../../Rings,
@@ -9,18 +15,18 @@ $Span(
     $../"Left modules"(𝐑 = {𝐑}),
     auto = %true
   ),
-  𝐱: %Element($"Element sequences"(
+  𝒙: %Element($"Element sequences"(
     𝐑 = {𝐑},
     𝐌 = {𝐌}
   ))
 ): %SetOperator {
   display = [$Parens(
-    body = 𝐱,
+    body = 𝒙,
     style = '<>'
   )],
   definition = [
     %setStructuralCases(
-      𝐱,
+      𝒙,
       $../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = {$../Carrier(
         𝐑 = {𝐑},
         𝐌 = {𝐌}
@@ -71,12 +77,12 @@ $Span(
       #(𝐚: %Element($Coordinates(
         𝐑 = {𝐑},
         𝐌 = {𝐌},
-        𝐱 = {𝐱}
+        𝒙 = {𝒙}
       ))),
       $"linear combination"(
         𝐑 = {𝐑},
         𝐌 = {𝐌},
-        𝐱 = {𝐱},
+        𝒙 = {𝒙},
         𝐚 = {𝐚}
       )
     )

@@ -1,5 +1,11 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Kronecker_delta
+ *             * https://mathworld.wolfram.com/KroneckerDelta.html
+ *             * https://proofwiki.org/wiki/Definition:Kronecker_Delta
+ *             * https://ncatlab.org/nlab/show/Kronecker+delta
+ */
 $"kronecker delta"(
   𝐑: %Element($Rings),
   S: %Set(auto = %true),

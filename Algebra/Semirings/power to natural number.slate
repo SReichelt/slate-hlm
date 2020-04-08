@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#pow_N
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#monoid.pow
+ */
 $"power to natural number"(
   𝐑: %Element(
     $Semirings,

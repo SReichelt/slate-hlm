@@ -25,16 +25,10 @@ $Kernel(
     function = 'Ker',
     arguments = [φ]
   )],
-  definition = [%subset(
-    #(g: %Element($../Carrier(𝐆 = {𝐆}))),
-    %equals(
-      $../../../Essentials/Functions/value(
-        X = {$../Carrier(𝐆 = {𝐆})},
-        Y = {$../Carrier(𝐆 = {𝐇})},
-        f = {φ},
-        x = {g}
-      ),
-      $../identity(𝐆 = {𝐇})
-    )
+  definition = [$../../../Essentials/Functions/Preimage(
+    X = {$../Carrier(𝐆 = {𝐆})},
+    Y = {$../Carrier(𝐆 = {𝐇})},
+    f = {φ},
+    S = {%enumeration($../identity(𝐆 = {𝐇}))}
   )]
 }

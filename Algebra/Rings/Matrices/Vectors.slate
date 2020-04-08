@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Row_and_column_vectors
+ *             * https://mathworld.wolfram.com/ColumnVector.html
+ *             * https://proofwiki.org/wiki/Definition:Column_Matrix
+ */
 $Vectors(
   𝐑: %Element($../Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")

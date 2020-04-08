@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @remarks This macro implements the usual bracketed notation for matrices with a fixed number of rows and columns.
+ */
 $matrix(
   𝐑: %Element(
     $../Rings,
@@ -14,7 +17,7 @@ $matrix(
       items = items,
       style = 'matrix'
     ),
-    style = '()'
+    style = '[]'
   )],
   references = {Matrices = $Matrices(
     𝐑 = {𝐑},

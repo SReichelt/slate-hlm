@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Matrix_(mathematics)
+ *             * https://mathworld.wolfram.com/Matrix.html
+ *             * https://proofwiki.org/wiki/Definition:Matrix
+ *             * https://ncatlab.org/nlab/show/matrix
+ *             * https://leanprover-community.github.io/mathlib_docs/data/matrix/basic.html#matrix
+ */
 $Matrices(
   𝐑: %Element(
     $../Rings,

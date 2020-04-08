@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#add_monoid.smul
+ */
 $"product with natural number"(
   𝐑: %Element(
     $Semirings,

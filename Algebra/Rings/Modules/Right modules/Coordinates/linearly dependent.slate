@@ -1,5 +1,11 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Linear_independence
+ *             * https://mathworld.wolfram.com/LinearlyDependentVectors.html
+ *             * https://proofwiki.org/wiki/Definition:Linearly_Dependent
+ *             * https://ncatlab.org/nlab/show/linearly+independent+subset
+ */
 $"linearly dependent"(
   𝐑: %Element(
     $../../../Rings,
@@ -9,13 +15,13 @@ $"linearly dependent"(
     $../"Right modules"(𝐑 = {𝐑}),
     auto = %true
   ),
-  𝐱: %Element($"Element sequences"(
+  𝒙: %Element($"Element sequences"(
     𝐑 = {𝐑},
     𝐌 = {𝐌}
   ))
 ): %Predicate {
   display = [$Property(
-    operand = 𝐱,
+    operand = 𝒙,
     property = %neg('linearly dependent', 'linearly independent')
   )],
   definition = [%exists(
@@ -23,12 +29,12 @@ $"linearly dependent"(
       U = {$Coordinates(
         𝐑 = {𝐑},
         𝐌 = {𝐌},
-        𝐱 = {𝐱}
+        𝒙 = {𝒙}
       )},
       S = {$Coordinates(
         𝐑 = {𝐑},
         𝐌 = {𝐌},
-        𝐱 = {𝐱}
+        𝒙 = {𝒙}
       )},
       T = {%enumeration($../../../../../Essentials/Sequences/Tuples(
           S = {$../../../Carrier(𝐑 = {𝐑})},
@@ -37,7 +43,7 @@ $"linearly dependent"(
               𝐑 = {𝐑},
               𝐌 = {𝐌}
             )},
-            𝒂 = {𝐱}
+            𝒂 = {𝒙}
           )}
         ).sequence(k = {
           #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
@@ -45,7 +51,7 @@ $"linearly dependent"(
               𝐑 = {𝐑},
               𝐌 = {𝐌}
             )},
-            𝒂 = {𝐱}
+            𝒂 = {𝒙}
           )}))),
           {a = {$../../../zero(𝐑 = {𝐑})}}
       }))}
@@ -54,7 +60,7 @@ $"linearly dependent"(
       $"linear combination"(
         𝐑 = {𝐑},
         𝐌 = {𝐌},
-        𝐱 = {𝐱},
+        𝒙 = {𝒙},
         𝐚 = {𝐚}
       ),
       $../zero(

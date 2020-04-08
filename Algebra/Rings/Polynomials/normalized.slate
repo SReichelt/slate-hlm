@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @remarks This definition can be understood as follows:
+ *          * Usually, it just yields the constructor term with the given arguments.
+ *          * However, if `p` is the zero polynomial and `a` is zero, that term would be invalid, and the zero polynomial must be returned instead.
+ */
 $normalized(
   𝐑: %Element(
     $../Rings,

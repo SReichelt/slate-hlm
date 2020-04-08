@@ -2,6 +2,10 @@
 
 /**
  * @remarks Usage example: `$../../../Essentials/Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../Carrier(𝐑 = {𝐑})}, ⨂ = {$"iterated product"(𝐑 = {𝐑})}, n = {n}, i = {#(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`.
+ *
+ * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_pi_notation
+ *             * https://mathworld.wolfram.com/Product.html
+ *             * https://proofwiki.org/wiki/Definition:Product_Notation_(Algebra)
  */
 $"iterated product"(
   𝐑: %Element($../Semirings),

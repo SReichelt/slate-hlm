@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Matrix_multiplication
+ *             * https://mathworld.wolfram.com/MatrixMultiplication.html
+ *             * https://proofwiki.org/wiki/Definition:Matrix_Product_(Conventional)
+ *             * https://ncatlab.org/nlab/show/matrix+calculus
+ *             * https://leanprover-community.github.io/mathlib_docs/data/matrix/basic.html#matrix.mul
+ */
 $product(
   𝐑: %Element(
     $../Rings,

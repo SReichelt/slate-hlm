@@ -2,6 +2,11 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Field_(mathematics)
+ *             * https://mathworld.wolfram.com/Field.html
+ *             * https://proofwiki.org/wiki/Definition:Field_(Abstract_Algebra)
+ *             * https://ncatlab.org/nlab/show/field
+ *             * https://coq.inria.fr/library/Coq.setoid_ring.Field_theory.html#field_theory
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/field.html#field
  */
 $Fields: %SetOperator {
   display = ['𝓕𝓵𝓭'],

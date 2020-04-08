@@ -1,5 +1,11 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Module_(mathematics)#Submodules_and_homomorphisms
+ *             * https://mathworld.wolfram.com/Submodule.html
+ *             * https://proofwiki.org/wiki/Definition:Submodule
+ *             * https://ncatlab.org/nlab/show/submodule
+ */
 $"submodule set"(
   𝐑: %Element(
     $../../../Rings,

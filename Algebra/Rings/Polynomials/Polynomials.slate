@@ -1,5 +1,15 @@
 %../../../../../logics/hlm%
 
+/**
+ * @remarks The variable `X` does not serve any mathematical purpose but helps improve readability. However, it is important that polynomials are defined as a construction so that two polynomials using different variables cannot be mixed.
+ *
+ *          There are, of course, various different ways to formalize abstract polynomials. We chose to define polynomials inductively in such a way that each inductive step adds one coefficient. The highest coefficient is not allowed to be 0; otherwise equality of polynomials would not behave as expected.
+ *
+ * @references * https://en.wikipedia.org/wiki/Polynomial#Abstract_algebra
+ *             * https://proofwiki.org/wiki/Definition:Polynomial_over_Ring/One_Variable
+ *             * https://ncatlab.org/nlab/show/polynomial
+ *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial.html#polynomial
+ */
 $Polynomials(
   𝐑: %Element(
     $../Rings,

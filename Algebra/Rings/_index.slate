@@ -12,6 +12,7 @@ $Rings: %Section {
     %item($"additive group"),
     %item($product),
     %item($one),
+    %item($commutative),
     %item($"multiplicative monoid"),
     %subsection(
       $Homomorphisms,
@@ -40,7 +41,6 @@ $Rings: %Section {
       $Examples,
       'Examples'
     ),
-    %item($"kronecker delta"),
     %subsection(
       $"Iterated operations",
       'Iterated operations'
@@ -48,6 +48,10 @@ $Rings: %Section {
     %subsection(
       $Polynomials,
       'Polynomials'
+    ),
+    %item(
+      $"kronecker delta",
+      title = 'Kronecker delta'
     ),
     %subsection(
       $Matrices,

@@ -12,19 +12,19 @@ $Bases(
     arguments = [𝐌]
   )],
   definitionDisplay = {
-    parameter = #(𝐱: %Expr),
+    parameter = #(𝒙: %Expr),
     singularName = ['basis', ' of ', 𝐌],
     pluralName = ['bases', ' of ', 𝐌]
   },
   definition = [%subset(
-    #(𝐱: %Element($"Element sequences"(
+    #(𝒙: %Element($"Element sequences"(
       𝐑 = {𝐑},
       𝐌 = {𝐌}
     ))),
     $basis(
       𝐑 = {𝐑},
       𝐌 = {𝐌},
-      𝐱 = {𝐱}
+      𝒙 = {𝒙}
     )
   )]
 }

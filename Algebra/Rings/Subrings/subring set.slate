@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Subring
+ *             * https://proofwiki.org/wiki/Definition:Subring#Also_defined_as
+ *             * https://leanprover-community.github.io/mathlib_docs/ring_theory/subring.html#is_subring
+ */
 $"subring set"(
   𝐑: %Element($../Rings),
   S: %Subset($../Carrier(𝐑 = {𝐑}))

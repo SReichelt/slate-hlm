@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Binomial_theorem
+ *             * https://mathworld.wolfram.com/BinomialTheorem.html
+ *             * https://proofwiki.org/wiki/Binomial_Theorem
+ *             * https://ncatlab.org/nlab/show/binomial+theorem#combinatorial_interpretation
+ *             * https://leanprover-community.github.io/mathlib_docs/data/nat/choose.html#add_pow
+ */
 $"Binomial theorem"(
   𝐑: %Element($../Semirings),
   a: %Element($../Carrier(𝐑 = {𝐑})),
@@ -37,15 +44,15 @@ $"Binomial theorem"(
             a = {$../"power to natural number"(
               𝐑 = {𝐑},
               a = {a},
-              n = {k}
-            )},
-            b = {$../"power to natural number"(
-              𝐑 = {𝐑},
-              a = {b},
               n = {$../../../Essentials/Numbers/Natural/difference(
                 n = {n},
                 m = {k}
               )}
+            )},
+            b = {$../"power to natural number"(
+              𝐑 = {𝐑},
+              a = {b},
+              n = {k}
             )}
           ))}
         )}}

@@ -1,5 +1,11 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @remarks According to https://proofwiki.org/wiki/Equivalence_of_Definitions_of_Generated_Submodule, the linear span of a set as defined here is equal to the set of all linear combinations (see `$../Coordinates/Span`). However, this probably requires the set to be well-orderable, and should be a separate theorem in that case.
+ *
+ * @references * https://en.wikipedia.org/wiki/Linear_span#Generalizations
+ *             * https://proofwiki.org/wiki/Definition:Generated_Submodule
+ */
 $Span(
   𝐑: %Element(
     $../../../Rings,

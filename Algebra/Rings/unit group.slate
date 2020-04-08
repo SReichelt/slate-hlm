@@ -1,5 +1,10 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Unit_(ring_theory)#Group_of_units
+ *             * https://proofwiki.org/wiki/Definition:Group_of_Units/Ring
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/units.html#units.comm_group
+ */
 $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
   display = [$Parens(
     body = $SubSup(

@@ -1,5 +1,11 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Module_homomorphism
+ *             * https://proofwiki.org/wiki/Definition:Linear_Transformation
+ *             * https://ncatlab.org/nlab/show/homomorphism
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#linear_map
+ */
 $Homomorphisms(
   𝐑: %Element(
     $../../../Rings,

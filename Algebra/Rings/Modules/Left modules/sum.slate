@@ -1,8 +1,5 @@
 %../../../../../../logics/hlm%
 
-/**
- * @remarks This definition lets us add elements without decomposing the ring.
- */
 $sum(
   𝐑: %Element(
     $../../Rings,

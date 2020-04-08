@@ -2,6 +2,9 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Module_(mathematics)
+ *             * https://mathworld.wolfram.com/Module.html
+ *             * https://proofwiki.org/wiki/Definition:Unitary_Module
+ *             * https://ncatlab.org/nlab/show/module#ModulesOverARingInTermsOfStabilizedSlices
  */
 $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
   $module(

@@ -1,5 +1,12 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Module_(mathematics)#Submodules_and_homomorphisms
+ *             * https://mathworld.wolfram.com/Submodule.html
+ *             * https://proofwiki.org/wiki/Definition:Submodule
+ *             * https://ncatlab.org/nlab/show/submodule
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#submodule
+ */
 $"submodule set"(
   𝐑: %Element(
     $../../../Rings,
@@ -16,38 +23,55 @@ $"submodule set"(
     singular = 'submodule',
     plural = 'submodules'
   )],
-  definition = [%and(
-    %forall(
-      #(
-        a: %Element(S),
-        b: %Element(%previous)
+  definition = [
+    %and(
+      %forall(
+        #(
+          a: %Element(S),
+          b: %Element(%previous)
+        ),
+        %in(
+          $../sum(
+            𝐑 = {𝐑},
+            𝐌 = {𝐌},
+            x = {a},
+            y = {b}
+          ),
+          S
+        )
       ),
       %in(
-        $../sum(
+        $../zero(
           𝐑 = {𝐑},
-          𝐌 = {𝐌},
-          x = {a},
-          y = {b}
+          𝐌 = {𝐌}
         ),
         S
-      )
-    ),
-    %in(
-      $../zero(
-        𝐑 = {𝐑},
-        𝐌 = {𝐌}
       ),
-      S
-    ),
-    %forall(
-      #(c: %Element(S)),
-      %in(
-        $../"additive inverse"(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌},
-          x = {c}
+      %forall(
+        #(c: %Element(S)),
+        %in(
+          $../"additive inverse"(
+            𝐑 = {𝐑},
+            𝐌 = {𝐌},
+            x = {c}
+          ),
+          S
+        )
+      ),
+      %forall(
+        #(
+          d: %Element($../../../Carrier(𝐑 = {𝐑})),
+          e: %Element(S)
         ),
-        S
+        %in(
+          $../product(
+            𝐑 = {𝐑},
+            𝐌 = {𝐌},
+            a = {d},
+            x = {e}
+          ),
+          S
+        )
       )
     ),
     %forall(
@@ -65,5 +89,5 @@ $"submodule set"(
         S
       )
     )
-  )]
+  ]
 }

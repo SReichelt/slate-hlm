@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Ideal_(ring_theory)
+ *             * https://mathworld.wolfram.com/LeftIdeal.html
+ *             * https://proofwiki.org/wiki/Definition:Ideal_of_Ring/Left_Ideal
+ *             * https://ncatlab.org/nlab/show/ideal#in_rings_and_other_rigs
+ */
 $"left ideal"(
   𝐑: %Element($../Rings),
   I: %Subset($../Carrier(𝐑 = {𝐑}))

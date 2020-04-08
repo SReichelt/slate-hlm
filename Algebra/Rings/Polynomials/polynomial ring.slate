@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Polynomial_ring
+ *             * https://proofwiki.org/wiki/Definition:Polynomial_Ring#One_Indeterminate
+ *             * https://ncatlab.org/nlab/show/polynomial
+ *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial.html#polynomial.comm_semiring
+ */
 $"polynomial ring"(
   𝐑: %Element(
     $../Rings,

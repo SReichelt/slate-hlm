@@ -1,5 +1,8 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#submodule.module
+ */
 $"subset module"(
   𝐑: %Element(
     $../../../Rings,

@@ -1,7 +1,11 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://mathworld.wolfram.com/RingHomomorphism.html
+ * @references * https://en.wikipedia.org/wiki/Ring_homomorphism
+ *             * https://mathworld.wolfram.com/RingHomomorphism.html
+ *             * https://proofwiki.org/wiki/Definition:Unital_Ring_Homomorphism
+ *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#ring_morph
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring.html#ring_hom
  */
 $Homomorphisms(
   𝐑: %Element($../Rings),

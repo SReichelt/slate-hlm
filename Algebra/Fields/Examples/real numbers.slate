@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.field
+ */
 $"real numbers": %ExplicitOperator {
   display = ['ℝ'],
   definition = [$../../Rings/Rings.ring(

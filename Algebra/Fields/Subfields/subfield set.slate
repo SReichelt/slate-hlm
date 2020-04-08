@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Field_extension
+ *             * https://mathworld.wolfram.com/Subfield.html
+ *             * https://proofwiki.org/wiki/Definition:Subfield
+ *             * https://ncatlab.org/nlab/show/subfield
+ *             * https://leanprover-community.github.io/mathlib_docs/field_theory/subfield.html#is_subfield
+ */
 $"subfield set"(
   𝐅: %Element($../Fields),
   S: %Subset($../../Rings/Carrier(𝐑 = {𝐅}))
@@ -15,7 +22,11 @@ $"subfield set"(
       S = {S}
     ),
     %forall(
-      #(a: %Element(S)),
+      #(a: %Element($../../../Essentials/Sets/"Relative complement"(
+        U = {S},
+        S = {S},
+        T = {%enumeration($../../Rings/zero(𝐑 = {𝐅}))}
+      ))),
       %in(
         $../../Rings/"multiplicative inverse"(
           𝐑 = {𝐅},

@@ -48,7 +48,7 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
           $MiddleEllipsis
         ]
       ),
-      style = '()'
+      style = '[]'
     )],
     equalityDefinition = {
       leftParameters = #(

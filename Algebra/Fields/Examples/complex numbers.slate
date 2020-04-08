@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex.field
+ */
 $"complex numbers": %ExplicitOperator {
   display = ['ℂ'],
   definition = [$../../Rings/Rings.ring(

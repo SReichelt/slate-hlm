@@ -1,5 +1,8 @@
 %../../../../../../logics/hlm%
 
+/**
+ * @remarks Addition of module elements as a group.
+ */
 $"additive group"(
   𝐑: %Element(
     $../../Rings,

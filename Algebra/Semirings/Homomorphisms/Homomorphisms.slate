@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Homomorphism
+ *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
+ *             * https://ncatlab.org/nlab/show/homomorphism
+ *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#semi_morph
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring.html#ring_hom
+ */
 $Homomorphisms(
   𝐑: %Element($../Semirings),
   𝐒: %Element(%previous)

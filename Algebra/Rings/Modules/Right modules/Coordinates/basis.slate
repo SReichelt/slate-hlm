@@ -1,5 +1,10 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Basis_(linear_algebra)
+ *             * https://proofwiki.org/wiki/Definition:Ordered_Basis
+ *             * https://ncatlab.org/nlab/show/basis+of+a+free+module
+ */
 $basis(
   𝐑: %Element(
     $../../../Rings,
@@ -9,13 +14,13 @@ $basis(
     $../"Right modules"(𝐑 = {𝐑}),
     auto = %true
   ),
-  𝐱: %Element($"Element sequences"(
+  𝒙: %Element($"Element sequences"(
     𝐑 = {𝐑},
     𝐌 = {𝐌}
   ))
 ): %Predicate {
   display = [$NounProperty(
-    operand = 𝐱,
+    operand = 𝒙,
     singular = 'basis',
     plural = 'bases'
   )],
@@ -24,13 +29,13 @@ $basis(
       %not($"linearly dependent"(
         𝐑 = {𝐑},
         𝐌 = {𝐌},
-        𝐱 = {𝐱}
+        𝒙 = {𝒙}
       )),
       %setEquals(
         $Span(
           𝐑 = {𝐑},
           𝐌 = {𝐌},
-          𝐱 = {𝐱}
+          𝒙 = {𝒙}
         ),
         $../Carrier(
           𝐑 = {𝐑},
@@ -47,13 +52,13 @@ $basis(
         #(𝐚: %Element($Coordinates(
           𝐑 = {𝐑},
           𝐌 = {𝐌},
-          𝐱 = {𝐱}
+          𝒙 = {𝒙}
         ))),
         formula = %equals(
           $"linear combination"(
             𝐑 = {𝐑},
             𝐌 = {𝐌},
-            𝐱 = {𝐱},
+            𝒙 = {𝒙},
             𝐚 = {𝐚}
           ),
           m

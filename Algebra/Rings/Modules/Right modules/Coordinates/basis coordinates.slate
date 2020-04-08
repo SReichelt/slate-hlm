@@ -1,5 +1,9 @@
 %../../../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Basis_(linear_algebra)#Coordinates
+ *             * https://proofwiki.org/wiki/Definition:Coordinate_System/Coordinate
+ */
 $"basis coordinates"(
   𝐑: %Element(
     $../../../Rings,
@@ -9,7 +13,7 @@ $"basis coordinates"(
     $../"Right modules"(𝐑 = {𝐑}),
     auto = %true
   ),
-  𝐱: %Element($Bases(
+  𝒙: %Element($Bases(
     𝐑 = {𝐑},
     𝐌 = {𝐌}
   )),
@@ -21,20 +25,20 @@ $"basis coordinates"(
   display = [$Function(
     function = $SubSup(
       body = 'coord',
-      sub = 𝐱
+      sub = 𝒙
     ),
     arguments = [m]
   )],
   parameter = #(𝐚: %Element($Coordinates(
     𝐑 = {𝐑},
     𝐌 = {𝐌},
-    𝐱 = {𝐱}
+    𝒙 = {𝒙}
   ))),
   definition = [%equals(
     $"linear combination"(
       𝐑 = {𝐑},
       𝐌 = {𝐌},
-      𝐱 = {𝐱},
+      𝒙 = {𝒙},
       𝐚 = {𝐚}
     ),
     m

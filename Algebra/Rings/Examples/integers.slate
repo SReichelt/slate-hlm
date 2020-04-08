@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Ring_(mathematics)#Basic_examples
+ *             * https://ncatlab.org/nlab/show/ring#Examples
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.comm_ring
+ */
 $integers: %ExplicitOperator {
   display = ['ℤ'],
   definition = [$../Rings.ring(

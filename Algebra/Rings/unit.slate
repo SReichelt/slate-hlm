@@ -1,5 +1,12 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Unit_(ring_theory)
+ *             * https://mathworld.wolfram.com/Unit.html
+ *             * https://proofwiki.org/wiki/Definition:Unit_of_Ring
+ *             * https://ncatlab.org/nlab/show/unit#units_in_rings
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/is_unit.html#is_unit
+ */
 $unit(
   𝐑: %Element(
     $Rings,

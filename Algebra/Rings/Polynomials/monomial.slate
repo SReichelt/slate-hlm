@@ -1,6 +1,9 @@
 %../../../../../logics/hlm%
 
-$term(
+/**
+ * @remarks This definition is useful to build polynomials in their familiar style.
+ */
+$monomial(
   𝐑: %Element(
     $../Rings,
     auto = %true
@@ -39,7 +42,7 @@ $term(
         value = $normalized(
           𝐑 = {𝐑},
           X = {X},
-          p = {$term(
+          p = {$monomial(
             𝐑 = {𝐑},
             X = {X},
             a = {a},

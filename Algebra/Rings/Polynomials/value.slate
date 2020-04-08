@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Polynomial_ring#Polynomial_evaluation
+ *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial.html#polynomial.eval
+ */
 $value(
   𝐑: %Element(
     $../Rings,
@@ -13,7 +17,22 @@ $value(
     𝐑 = {𝐑},
     X = {X}
   )),
-  a: %Element($../Carrier(𝐑 = {𝐑}))
+  a: %Element($../Carrier(𝐑 = {𝐑})),
+  _1: %Constraint(%forall(
+    #(r: %Element($../Carrier(𝐑 = {𝐑}))),
+    %equals(
+      $../product(
+        𝐑 = {𝐑},
+        a = {a},
+        b = {r}
+      ),
+      $../product(
+        𝐑 = {𝐑},
+        a = {r},
+        b = {a}
+      )
+    )
+  ))
 ): %ExplicitOperator {
   display = [$Function(
     function = p,

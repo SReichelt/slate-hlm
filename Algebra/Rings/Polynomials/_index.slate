@@ -5,9 +5,11 @@ $Polynomials: %Section {
   items = [
     %item($Polynomials),
     %item($normalized),
-    %item($term),
+    %item($monomial),
+    %item($"monomial with exponent one"),
     %item($sum),
     %item($"additive inverse"),
+    %item($difference),
     %item($"product with scalar"),
     %item($product),
     %item($"polynomial ring"),

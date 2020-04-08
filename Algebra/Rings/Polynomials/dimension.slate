@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @remarks This is mostly a helper definition to define the degree (see `$degree`). However, in many cases this definition may actually be more useful than the degree itself.
+ *
+ *          It is called “dimension” because for a field `𝐅`, the set of polynomials over `𝐅` with “dimension” `d` form a `d`-dimensional vector space over `𝐅`.
+ */
 $dimension(
   𝐑: %Element(
     $../Rings,

@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Ideal_(ring_theory)#Examples_and_properties
+ */
 $"Multiples are an ideal of integers"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %StandardTheorem {
   claim = $../Ideals/ideal(
     𝐑 = {$integers},

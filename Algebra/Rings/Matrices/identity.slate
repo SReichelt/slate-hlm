@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Identity_matrix
+ *             * https://mathworld.wolfram.com/IdentityMatrix.html
+ *             * https://proofwiki.org/wiki/Definition:Unit_Matrix
+ *             * https://ncatlab.org/nlab/show/identity+matrix
+ *             * https://leanprover-community.github.io/mathlib_docs/data/matrix/basic.html#matrix.has_one
+ */
 $identity(
   𝐑: %Element($../Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")

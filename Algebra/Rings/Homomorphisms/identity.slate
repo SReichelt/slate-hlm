@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#IDphi
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring.html#ring_hom.id
+ */
 $identity(𝐑: %Element(
   $../Rings,
   auto = %true

@@ -1,0 +1,62 @@
+%../../../../../logics/hlm%
+
+$"monomial with exponent one"(
+  𝐑: %Element(
+    $../Rings,
+    auto = %true
+  ),
+  X: %Element(
+    $../../../"Formal systems"/Variables,
+    auto = %true
+  ),
+  a: %Element($../Carrier(𝐑 = {𝐑}))
+): %ExplicitOperator {
+  display = [$Operator(
+    symbol = '',
+    operands = [a, X],
+    space = '',
+    minParenLevel = 3
+  )],
+  definition = [
+    $monomial(
+      𝐑 = {𝐑},
+      X = {X},
+      a = {a},
+      n = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+    ),
+    $normalized(
+      𝐑 = {𝐑},
+      X = {X},
+      p = {a},
+      a = {$Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ).zero}
+    ),
+    %cases([
+      {
+        formula = %equals(
+          a,
+          $../zero(𝐑 = {𝐑})
+        ),
+        value = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).zero
+      },
+      {
+        formula = %not(%equals(
+          a,
+          $../zero(𝐑 = {𝐑})
+        )),
+        value = $Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ).term(
+            p = {a},
+            a = {$../zero(𝐑 = {𝐑})}
+        )
+      }
+    ])
+  ]
+}

@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+/**
+ * @references * https://en.wikipedia.org/wiki/Ideal_(ring_theory)
+ *             * https://mathworld.wolfram.com/Ideal.html
+ *             * https://proofwiki.org/wiki/Definition:Ideal_of_Ring
+ *             * https://ncatlab.org/nlab/show/ideal#in_rings_and_other_rigs
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#ideal
+ */
 $ideal(
   𝐑: %Element($../Rings),
   I: %Subset($../Carrier(𝐑 = {𝐑}))

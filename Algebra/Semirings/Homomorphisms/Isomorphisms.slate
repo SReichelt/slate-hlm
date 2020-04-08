@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+/**
+ * @remarks * https://en.wikipedia.org/wiki/Isomorphism
+ *          * https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)
+ *          * https://ncatlab.org/nlab/show/isomorphism
+ */
 $Isomorphisms(
   𝐑: %Element($../Semirings),
   𝐒: %Element(%previous)
@@ -69,10 +74,19 @@ $Isomorphisms(
             )
           )
         ),
+        %equals(
+          $../../../Essentials/Functions/value(
+            X = {$../Carrier(𝐑 = {𝐑})},
+            Y = {$../Carrier(𝐑 = {𝐒})},
+            f = {f},
+            x = {$../zero(𝐑 = {𝐑})}
+          ),
+          $../zero(𝐑 = {𝐒})
+        ),
         %forall(
           #(
-            d: %Element($../Carrier(𝐑 = {𝐑})),
-            e: %Element(%previous)
+            c: %Element($../Carrier(𝐑 = {𝐑})),
+            d: %Element(%previous)
           ),
           %equals(
             $../../../Essentials/Functions/value(
@@ -81,8 +95,8 @@ $Isomorphisms(
               f = {f},
               x = {$../product(
                 𝐑 = {𝐑},
-                a = {d},
-                b = {e}
+                a = {c},
+                b = {d}
               )}
             ),
             $../product(
@@ -91,13 +105,13 @@ $Isomorphisms(
                 X = {$../Carrier(𝐑 = {𝐑})},
                 Y = {$../Carrier(𝐑 = {𝐒})},
                 f = {f},
-                x = {d}
+                x = {c}
               )},
               b = {$../../../Essentials/Functions/value(
                 X = {$../Carrier(𝐑 = {𝐑})},
                 Y = {$../Carrier(𝐑 = {𝐒})},
                 f = {f},
-                x = {e}
+                x = {d}
               )}
             )
           )

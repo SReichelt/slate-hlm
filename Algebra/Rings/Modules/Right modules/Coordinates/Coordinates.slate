@@ -1,7 +1,9 @@
 %../../../../../../../logics/hlm%
 
 /**
- * @remarks This defines the set of valid coordinate sequences corresponding to a given element sequence `𝐱`. This set only depends on the length of `𝐱`. A coordinate sequence is a sequence of ring elements that has the same length and finite support.
+ * @remarks This defines the set of valid coordinate sequences corresponding to a given element sequence `𝒙`. This set only depends on the length of `𝒙`. A coordinate sequence is a sequence of ring elements that has the same length and finite support.
+ *
+ *          For an element sequence `𝒙` and a corresponding coordinate sequence  `𝐚`, we can define a linear combination `$"linear combination"(𝐑 = {𝐑}, 𝐌 = {𝐌}, 𝒙 = {𝒙}, 𝐚 = {𝐚})`.
  */
 $Coordinates(
   𝐑: %Element(
@@ -12,7 +14,7 @@ $Coordinates(
     $../"Right modules"(𝐑 = {𝐑}),
     auto = %true
   ),
-  𝐱: %Element($"Element sequences"(
+  𝒙: %Element($"Element sequences"(
     𝐑 = {𝐑},
     𝐌 = {𝐌}
   )),
@@ -21,13 +23,18 @@ $Coordinates(
       𝐑 = {𝐑},
       𝐌 = {𝐌}
     )},
-    𝒂 = {𝐱}
+    𝒂 = {𝒙}
   ))
 ): %SetOperator {
-  display = [$Function(
-    function = 'Coord',
-    arguments = [𝐱]
+  display = [$SubSup(
+    body = 'Coord',
+    sub = 𝒙
   )],
+  definitionDisplay = {
+    parameter = #(𝐚: %Expr),
+    singularName = ['coordinate sequence', ' for ', 𝒙],
+    pluralName = ['coordinate sequences', ' for ', 𝒙]
+  },
   definition = [%subset(
     #(_a: %Element($../../../../../Essentials/Sequences/Tuples(
       S = {$../../../Carrier(𝐑 = {𝐑})},

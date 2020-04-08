@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/ring.html#semiring.to_monoid
+ */
 $"multiplicative monoid"(𝐑: %Element($Semirings)): %ExplicitOperator {
   display = [$Tuple(
     items = [𝐑, '⋅'],
