@@ -1,5 +1,8 @@
 %../../../../logics/hlm%
 
+/**
+ * @references https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans.app
+ */
 $component(
   u: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",

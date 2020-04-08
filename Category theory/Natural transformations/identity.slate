@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://ncatlab.org/nlab/show/identity+natural+transformation
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans.id
+ */
 $identity(
   u: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",

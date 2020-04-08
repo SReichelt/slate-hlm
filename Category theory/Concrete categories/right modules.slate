@@ -2,6 +2,10 @@
 
 /**
  * @remarks The objects of this category are actually isomorphism classes of modules.
+ *
+ * @references * https://en.wikipedia.org/wiki/Category_of_modules
+ *             * https://proofwiki.org/wiki/Definition:Category_of_Right_Modules
+ *             * https://ncatlab.org/nlab/show/Mod
  */
 $"right modules"(
   u: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),

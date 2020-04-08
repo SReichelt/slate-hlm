@@ -1,10 +1,14 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This is one possible formalization of the discrete category obtained from elements of `S`. Note that the existence of an `x` in the definition of morphism composition implies that `%equals(d, e, f)`.
+ * @remarks This is one possible formalization of the discrete category obtained from elements of `S`. We simply define morphisms to be elements of `S` as well, such that `%setEquals($../Morphisms(u = {u}, 𝓒 = {$elements(u = {u}, S = {S})}, 𝐗 = {a}, 𝐘 = {a}), %enumeration($../identity(u = {u}, 𝓒 = {$elements(u = {u}, S = {S})}, 𝐗 = {a})), %enumeration(a))`, and `%setEquals($../Morphisms(u = {u}, 𝓒 = {$elements(u = {u}, S = {S})}, 𝐗 = {a}, 𝐘 = {b}), $../../Essentials/Sets/"Empty set")` if `%not(%equals(a, b))`.
+ *
+ *          (Note that the existence of `x` in the definition of morphism composition implies that `%equals(d, e, f)`.)
  *
  * @references * https://en.wikipedia.org/wiki/Discrete_category
  *             * https://ncatlab.org/nlab/show/discrete+category#CategoricalMeaning
+ *             * https://proofwiki.org/wiki/Definition:Discrete_Category_on_Set
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/discrete_category.html#category_theory.discrete_category
  */
 $elements(
   u: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
@@ -12,7 +16,7 @@ $elements(
 ): %ExplicitOperator {
   display = [$Function(
     function = $SubSup(
-      body = '𝐄𝐥𝐞𝐦',
+      body = '𝐃𝐢𝐬',
       sub = u
     ),
     arguments = [S]

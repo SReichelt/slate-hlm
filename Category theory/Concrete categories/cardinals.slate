@@ -1,10 +1,12 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks The objects of this category are actually isomorphism classes of sets, i.e. cardinal numbers. In HLM, arbitrary sets cannot be used as objects because it is impossible to ask whether two arbitrary sets are equal. However, cardinal numbers work fine as a replacement. The situation with other categories is similar.
+ * @remarks The objects of this category are actually isomorphism classes of sets, i.e. cardinal numbers. In HLM, arbitrary sets cannot be used as objects because it is impossible to ask whether two arbitrary sets are equal. However, cardinal numbers work fine as a replacement, due to the ability to obtain a representative set from a cardinal number. The situation with other categories is similar.
  *
  * @references * https://en.wikipedia.org/wiki/Category_of_sets
+ *             * https://proofwiki.org/wiki/Definition:Category_of_Sets
  *             * https://ncatlab.org/nlab/show/Set
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/types.html#category_theory.types
  */
 $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$SubSup(

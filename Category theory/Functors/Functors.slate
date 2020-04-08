@@ -5,6 +5,7 @@
  *             * https://mathworld.wolfram.com/Functor.html
  *             * https://proofwiki.org/wiki/Definition:Functor
  *             * https://ncatlab.org/nlab/show/functor
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor.html#category_theory.functor
  */
 $Functors(
   u: %Element(

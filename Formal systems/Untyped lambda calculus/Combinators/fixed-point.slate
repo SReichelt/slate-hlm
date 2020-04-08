@@ -2,6 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Lambda_calculus#Standard_terms
+ *             * https://ncatlab.org/nlab/show/fixed-point+combinator
  */
 $"fixed-point": %ExplicitOperator {
   display = ['𝗬'],

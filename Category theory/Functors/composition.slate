@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Composition_of_Functors
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor.html#category_theory.functor.comp
+ */
 $composition(
   u: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",

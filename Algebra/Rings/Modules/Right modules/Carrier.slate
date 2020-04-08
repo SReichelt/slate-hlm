@@ -10,9 +10,9 @@ $Carrier(
   ),
   𝐌: %Element($"Right modules"(𝐑 = {𝐑}))
 ): %SetOperator {
-  display = [$Function(
-    function = 'Carrier',
-    arguments = [𝐌]
+  display = [$Parens(
+    body = 𝐌,
+    style = '()'
   )],
   definitionDisplay = {
     parameter = #(x: %Expr),

@@ -4,9 +4,9 @@
  * @remarks This definition retrieves a representative set from a cardinal number.
  */
 $Carrier(κ: %Element($"Cardinal numbers")): %SetOperator {
-  display = [$Function(
-    function = 'Carrier',
-    arguments = [κ]
+  display = [$Parens(
+    body = κ,
+    style = '()'
   )],
   definitionDisplay = {
     parameter = #(a: %Expr),

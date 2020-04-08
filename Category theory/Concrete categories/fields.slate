@@ -2,6 +2,9 @@
 
 /**
  * @remarks The objects of this category are actually isomorphism classes of fields.
+ *
+ * @references * https://en.wikipedia.org/wiki/Category_of_rings#Category_of_fields
+ *             * https://ncatlab.org/nlab/show/field#category
  */
 $fields(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$SubSup(

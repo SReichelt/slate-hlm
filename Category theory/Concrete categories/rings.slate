@@ -2,6 +2,9 @@
 
 /**
  * @remarks The objects of this category are actually isomorphism classes of rings.
+ *
+ * @references * https://en.wikipedia.org/wiki/Category_of_rings
+ *             * https://proofwiki.org/wiki/Definition:Category_of_Rings_with_Unity
  */
 $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$SubSup(

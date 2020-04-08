@@ -4,7 +4,9 @@
  * @remarks This defines the category of small categories, or, more generally, a category in `$../../Essentials/Numbers/Natural/sum(m = {u}, n = {$../../Essentials/Numbers/Natural/number(value = 1)})` of all categories in `u`.
  *
  * @references * https://en.wikipedia.org/wiki/Category_of_small_categories
+ *             * https://proofwiki.org/wiki/Definition:Category_of_Categories
  *             * https://ncatlab.org/nlab/show/Cat
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/category/Cat.html#category_theory.Cat
  */
 $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$Function(

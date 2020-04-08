@@ -5,6 +5,7 @@
  *             * https://mathworld.wolfram.com/NaturalTransformation.html
  *             * https://proofwiki.org/wiki/Definition:Natural_Transformation
  *             * https://ncatlab.org/nlab/show/natural+transformation
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans
  */
 $"Natural transformations"(
   u: %Element(

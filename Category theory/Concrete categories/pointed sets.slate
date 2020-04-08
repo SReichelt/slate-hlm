@@ -2,6 +2,10 @@
 
 /**
  * @remarks The objects of this category are actually isomorphism classes of pointed sets.
+ *
+ * @references * https://en.wikipedia.org/wiki/Pointed_set
+ *             * https://ncatlab.org/nlab/show/pointed+set
+ *             * https://proofwiki.org/wiki/Category:Category_of_Pointed_Sets
  */
 $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$SubSup(

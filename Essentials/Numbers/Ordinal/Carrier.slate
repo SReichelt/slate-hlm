@@ -4,9 +4,9 @@
  * @remarks This definition retrieves a representative set from an ordinal number.
  */
 $Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
-  display = [$Function(
-    function = 'Carrier',
-    arguments = [α]
+  display = [$Parens(
+    body = α,
+    style = '()'
   )],
   definitionDisplay = {
     parameter = #(a: %Expr),

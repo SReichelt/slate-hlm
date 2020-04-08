@@ -2,6 +2,9 @@
 
 /**
  * @remarks The objects of this category are actually isomorphism classes of monoids.
+ *
+ * @references * https://proofwiki.org/wiki/Definition:Category_of_Monoids
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/category/Mon/basic.html#Mon
  */
 $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   display = [$SubSup(

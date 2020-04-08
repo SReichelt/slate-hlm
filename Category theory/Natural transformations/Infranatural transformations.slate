@@ -1,7 +1,9 @@
 %../../../../logics/hlm%
 
 /**
- * @references * https://en.wikipedia.org/wiki/Natural_transformation
+ * @remarks Here, we first define infranatural transformations, as a prerequisite for defining natural transformations (see `$"Natural transformations"`). This is necessary if we want to be able to ask whether a given transformation is natural or not.
+ *
+ * @references * https://en.wikipedia.org/wiki/Natural_transformation#Definition: infranatural transformation
  */
 $"Infranatural transformations"(
   u: %Element(

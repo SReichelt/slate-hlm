@@ -1,5 +1,10 @@
 %../../../../logics/hlm%
 
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Identity_Functor
+ *             * https://ncatlab.org/nlab/show/identity+functor
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor.html#category_theory.functor.id
+ */
 $identity(
   u: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",

@@ -2,6 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Natural_transformation#Operations_with_natural_transformations
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans.vcomp
  */
 $"vertical composition"(
   u: %Element(

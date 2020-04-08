@@ -2,7 +2,9 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Functor_category
+ *             * https://proofwiki.org/wiki/Definition:Functor_Category
  *             * https://ncatlab.org/nlab/show/functor+category
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor_category.html#category_theory.functor.category
  */
 $functors(
   u: %Element(

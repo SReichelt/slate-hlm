@@ -11,6 +11,7 @@
  *             * https://mathworld.wolfram.com/Category.html
  *             * https://proofwiki.org/wiki/Definition:Category
  *             * https://ncatlab.org/nlab/show/category
+ *             * https://leanprover-community.github.io/mathlib_docs/category_theory/category/default.html#category_theory.category
  */
 $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Construction {
   $category(
