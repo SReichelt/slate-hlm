@@ -1,0 +1,9 @@
+%../../../../logics/library%
+
+$Generic: %Section {
+  logic = 'hlm',
+  items = [%subsection(
+    $Isomorphisms,
+    'Isomorphisms'
+  )]
+}

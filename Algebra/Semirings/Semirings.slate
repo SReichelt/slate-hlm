@@ -293,7 +293,7 @@ $Semirings: %Construction {
         ))),
         formula = %and(
           %equals(
-            $../Isomorphisms/"inner operation transport"(
+            $../Generic/Isomorphisms/"inner operation transport"(
               X = {R},
               Y = {S},
               φ = {φ},
@@ -302,7 +302,7 @@ $Semirings: %Construction {
             ⋆
           ),
           %equals(
-            $../Isomorphisms/"element transport"(
+            $../Generic/Isomorphisms/"element transport"(
               X = {R},
               Y = {S},
               φ = {φ},
@@ -311,7 +311,7 @@ $Semirings: %Construction {
             𝟢
           ),
           %equals(
-            $../Isomorphisms/"inner operation transport"(
+            $../Generic/Isomorphisms/"inner operation transport"(
               X = {R},
               Y = {S},
               φ = {φ},
@@ -320,7 +320,7 @@ $Semirings: %Construction {
             ∗
           ),
           %equals(
-            $../Isomorphisms/"element transport"(
+            $../Generic/Isomorphisms/"element transport"(
               X = {R},
               Y = {S},
               φ = {φ},

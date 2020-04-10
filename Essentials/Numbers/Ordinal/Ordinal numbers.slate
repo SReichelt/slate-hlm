@@ -43,7 +43,7 @@ $"Ordinal numbers": %Construction {
           Y = {T}
         ))),
         formula = %equals(
-          $../../../Algebra/Isomorphisms/"relation transport"(
+          $../../../Algebra/Generic/Isomorphisms/"relation transport"(
             X = {S},
             Y = {T},
             φ = {φ},

@@ -4,8 +4,8 @@ $Algebra: %Section {
   logic = 'hlm',
   items = [
     %subsection(
-      $Isomorphisms,
-      'Isomorphisms'
+      $Generic,
+      'Generic definitions'
     ),
     %subsection(
       $"Pointed sets",

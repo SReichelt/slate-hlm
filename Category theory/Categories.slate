@@ -475,13 +475,13 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               #(ψ: %Element($../Essentials/Functions/Bijections(
                 X = {M[𝐀,𝐁]},
                 Y = {N[
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
                     x = {𝐀}
                   ),
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
@@ -496,16 +496,16 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           %forall(
             #(𝐂: %Element(O)),
             %equals(
-              $../Algebra/Isomorphisms/"element transport"(
+              $../Algebra/Generic/Isomorphisms/"element transport"(
                 X = {M[𝐂,𝐂]},
                 Y = {N[
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
                     x = {𝐂}
                   ),
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
@@ -515,7 +515,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
                 φ = {ψ[𝐂,𝐂]},
                 x = {i[𝐂]}
               ),
-              j[$../Algebra/Isomorphisms/"element transport"(
+              j[$../Algebra/Generic/Isomorphisms/"element transport"(
                 X = {O},
                 Y = {P},
                 φ = {φ},
@@ -530,18 +530,18 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               𝐅: %Element(%previous)
             ),
             %equals(
-              $../Algebra/Isomorphisms/"morphism transport"(
+              $../Algebra/Generic/Isomorphisms/"morphism transport"(
                 X_1 = {M[𝐄,𝐅]},
                 X_2 = {M[𝐃,𝐄]},
                 X_3 = {M[𝐃,𝐅]},
                 Y_1 = {N[
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
                     x = {𝐄}
                   ),
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
@@ -549,13 +549,13 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
                   )
                 ]},
                 Y_2 = {N[
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
                     x = {𝐃}
                   ),
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
@@ -563,13 +563,13 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
                   )
                 ]},
                 Y_3 = {N[
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
                     x = {𝐃}
                   ),
-                  $../Algebra/Isomorphisms/"element transport"(
+                  $../Algebra/Generic/Isomorphisms/"element transport"(
                     X = {O},
                     Y = {P},
                     φ = {φ},
@@ -582,19 +582,19 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
                 ∙ = {∘[𝐃,𝐄,𝐅]}
               ),
               ∙[
-                $../Algebra/Isomorphisms/"element transport"(
+                $../Algebra/Generic/Isomorphisms/"element transport"(
                   X = {O},
                   Y = {P},
                   φ = {φ},
                   x = {𝐃}
                 ),
-                $../Algebra/Isomorphisms/"element transport"(
+                $../Algebra/Generic/Isomorphisms/"element transport"(
                   X = {O},
                   Y = {P},
                   φ = {φ},
                   x = {𝐄}
                 ),
-                $../Algebra/Isomorphisms/"element transport"(
+                $../Algebra/Generic/Isomorphisms/"element transport"(
                   X = {O},
                   Y = {P},
                   φ = {φ},

@@ -1,4 +1,4 @@
-%../../../../logics/library%
+%../../../../../logics/library%
 
 $Isomorphisms: %Section {
   logic = 'hlm',

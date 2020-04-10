@@ -221,7 +221,7 @@ $Groups: %Construction {
         ))),
         formula = %and(
           %equals(
-            $../Isomorphisms/"inner operation transport"(
+            $../Generic/Isomorphisms/"inner operation transport"(
               X = {G},
               Y = {H},
               φ = {φ},
@@ -230,7 +230,7 @@ $Groups: %Construction {
             ⋆
           ),
           %equals(
-            $../Isomorphisms/"element transport"(
+            $../Generic/Isomorphisms/"element transport"(
               X = {G},
               Y = {H},
               φ = {φ},
@@ -239,7 +239,7 @@ $Groups: %Construction {
             f
           ),
           %equals(
-            $../Isomorphisms/"function transport"(
+            $../Generic/Isomorphisms/"function transport"(
               X = {G},
               Y = {H},
               φ = {φ},
