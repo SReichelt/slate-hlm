@@ -23,6 +23,10 @@ $"Right modules": %Section {
     %subsection(
       $Coordinates,
       'Coordinates'
+    ),
+    %subsection(
+      $Examples,
+      'Examples'
     )
   ]
 }

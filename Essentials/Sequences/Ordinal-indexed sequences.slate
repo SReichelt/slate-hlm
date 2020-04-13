@@ -40,12 +40,26 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
         %equals(α, β),
         %equals(
           𝐚,
-          %asElementOf(
+          %structuralCases(
             𝐛,
             $Tuples(
               S = {S},
-              α = {α}
-            )
+              α = {β}
+            ),
+            [{
+              constructor = $Tuples.sequence,
+              parameters = #(k: %Binding(
+                $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {β}),
+                #(b: %Element(S))
+              )),
+              value = $Tuples(
+                  S = {S},
+                  α = {α}
+                ).sequence(k = {
+                  #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+                  {a = {b[j]}}
+              })
+            }]
           )
         )
       )],

@@ -257,9 +257,12 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
       )
     ))
   ): %Constructor {
-    display = [$Tuple(
-      items = [M, ⊕, "0", ⊖, ⊙],
-      style = '[]'
+    display = [$SubSup(
+      body = $Tuple(
+        items = [M, ⊕, "0", ⊖, ⊙],
+        style = '[]'
+      ),
+      sub = 𝐑
     )],
     equalityDefinition = {
       leftParameters = #(

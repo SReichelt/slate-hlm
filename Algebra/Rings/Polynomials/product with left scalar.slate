@@ -1,6 +1,6 @@
 %../../../../../logics/hlm%
 
-$"product with scalar"(
+$"product with left scalar"(
   𝐑: %Element(
     $../Rings,
     auto = %true
@@ -61,7 +61,7 @@ $"product with scalar"(
         value = $normalized(
           𝐑 = {𝐑},
           X = {X},
-          p = {$"product with scalar"(
+          p = {$"product with left scalar"(
             𝐑 = {𝐑},
             X = {X},
             a = {a},

@@ -1,0 +1,226 @@
+%../../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Module_(mathematics)#Examples
+ *             * https://proofwiki.org/wiki/Left_Ideal_is_Left_Module_over_Ring
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#ideal (defined as submodule)
+ */
+$"ideal module"(
+  𝐑: %Element($../../../Rings),
+  I: %Subset($../../../Carrier(𝐑 = {𝐑})),
+  _1: %Constraint($../../../Ideals/"left ideal"(
+    𝐑 = {𝐑},
+    I = {I}
+  ))
+): %ExplicitOperator {
+  display = [$SubSup(
+    body = $Parens(
+      body = I,
+      style = '[]'
+    ),
+    sub = 𝐑
+  )],
+  definition = [%structuralCases(
+    𝐑,
+    $../../../Rings,
+    [{
+      constructor = $../../../Rings.ring,
+      parameters = #(
+        R: %Set,
+        ⊕: %Element($../../../../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        _2: %Constraint($../../../../../Essentials/Functions/Operations/associative(
+          X = {R},
+          ∗ = {⊕}
+        )),
+        _3: %Constraint($../../../../../Essentials/Functions/Operations/commutative(
+          X = {R},
+          Z = {R},
+          ∗ = {⊕}
+        )),
+        "0": %Element(R),
+        _4: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {a},
+              y = {"0"}
+            ),
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {"0"},
+              y = {a}
+            ),
+            a
+          )
+        )),
+        ⊖: %Element($../../../../../Essentials/Functions/Functions(
+          X = {R},
+          Y = {R}
+        )),
+        _5: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {a},
+              y = {$../../../../../Essentials/Functions/value(
+                X = {R},
+                Y = {R},
+                f = {⊖},
+                x = {a}
+              )}
+            ),
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊕},
+              x = {$../../../../../Essentials/Functions/value(
+                X = {R},
+                Y = {R},
+                f = {⊖},
+                x = {a}
+              )},
+              y = {a}
+            ),
+            "0"
+          )
+        )),
+        ⊙: %Element($../../../../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        _6: %Constraint($../../../../../Essentials/Functions/Operations/associative(
+          X = {R},
+          ∗ = {⊙}
+        )),
+        _7: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {a},
+              y = {"0"}
+            ),
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {"0"},
+              y = {a}
+            ),
+            "0"
+          )
+        )),
+        _8: %Constraint(%forall(
+          #(
+            a: %Element(R),
+            b: %Element(%previous)
+          ),
+          %equals(
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {a},
+              y = {$../../../../../Essentials/Functions/value(
+                X = {R},
+                Y = {R},
+                f = {⊖},
+                x = {b}
+              )}
+            ),
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {$../../../../../Essentials/Functions/value(
+                X = {R},
+                Y = {R},
+                f = {⊖},
+                x = {a}
+              )},
+              y = {b}
+            ),
+            $../../../../../Essentials/Functions/value(
+              X = {R},
+              Y = {R},
+              f = {⊖},
+              x = {$../../../../../Essentials/Functions/Operations/value(
+                X = {R},
+                Y = {R},
+                Z = {R},
+                ∗ = {⊙},
+                x = {a},
+                y = {b}
+              )}
+            )
+          )
+        )),
+        "1": %Element(R),
+        _9: %Constraint(%forall(
+          #(a: %Element(R)),
+          %equals(
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {a},
+              y = {"1"}
+            ),
+            $../../../../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {"1"},
+              y = {a}
+            ),
+            a
+          )
+        )),
+        _10: %Constraint($../../../../../Essentials/Functions/Operations/distributive(
+          X = {R},
+          ∗ = {⊙},
+          ⋆ = {⊕}
+        ))
+      ),
+      value = $../"Left modules"(𝐑 = {𝐑}).module(
+          M = {I},
+          ⊕ = {$../../../../../Essentials/Functions/Operations/"inner operation restriction"(
+            X = {R},
+            A = {I},
+            ∗ = {⊕}
+          )},
+          "0" = {"0"},
+          ⊖ = {$../../../../../Essentials/Functions/"codomain restriction"(
+            X = {R},
+            A = {I},
+            Y = {R},
+            B = {I},
+            f = {⊖}
+          )},
+          ⊙ = {$../../../../../Essentials/Functions/Operations/"left operation restriction"(
+            X = {R},
+            Y = {R},
+            A = {I},
+            ∗ = {⊙}
+          )}
+      )
+    }]
+  )]
+}

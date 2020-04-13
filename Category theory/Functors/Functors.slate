@@ -399,15 +399,20 @@ $Functors(
           )
         ))
       ),
-      definition = [%and(
-        %forall(
-          #(𝐗: %Element($../Objects(
+      definition = [%exists(
+        #(𝐗: %Binding(
+          $../Objects(
             u = {u},
             𝓒 = {𝓒}
-          ))),
-          %equals(𝐃[𝐗], "𝐃'"[𝐗])
-        ),
-        %forall(
+          ),
+          #(i: %Element($../Isomorphisms(
+            u = {v},
+            𝓒 = {𝓓},
+            𝐗 = {𝐃[𝐗]},
+            𝐘 = {"𝐃'"[𝐗]}
+          )))
+        )),
+        formula = %forall(
           #(
             𝐘: %Element($../Objects(
               u = {u},
@@ -422,15 +427,23 @@ $Functors(
             ))
           ),
           %equals(
-            d[𝐘,𝐙,f],
-            %asElementOf(
-              "d'"[𝐘,𝐙,f],
-              $../Morphisms(
-                u = {v},
-                𝓒 = {𝓓},
-                𝐗 = {𝐃[𝐘]},
-                𝐘 = {𝐃[𝐙]}
-              )
+            $../composition(
+              u = {v},
+              𝓒 = {𝓓},
+              𝐗 = {𝐃[𝐘]},
+              𝐘 = {𝐃[𝐙]},
+              𝐙 = {"𝐃'"[𝐙]},
+              f = {d[𝐘,𝐙,f]},
+              g = {i[𝐙]}
+            ),
+            $../composition(
+              u = {v},
+              𝓒 = {𝓓},
+              𝐗 = {𝐃[𝐘]},
+              𝐘 = {"𝐃'"[𝐘]},
+              𝐙 = {"𝐃'"[𝐙]},
+              f = {i[𝐘]},
+              g = {"d'"[𝐘,𝐙,f]}
             )
           )
         )

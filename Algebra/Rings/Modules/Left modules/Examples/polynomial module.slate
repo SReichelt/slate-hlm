@@ -1,0 +1,97 @@
+%../../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Module_(mathematics)#Examples
+ *             * https://proofwiki.org/wiki/Definition:Module_Structure_of_Polynomial_Ring
+ *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial.html#polynomial.module
+ */
+$"polynomial module"(
+  𝐑: %Element($../../../Rings),
+  X: %Element($../../../../../"Formal systems"/Variables)
+): %ExplicitOperator {
+  display = [$Function(
+    function = 𝐑,
+    arguments = [X],
+    style = '[]'
+  )],
+  definition = [$../"Left modules"(𝐑 = {𝐑}).module(
+      M = {$../../../Polynomials/Polynomials(
+        𝐑 = {𝐑},
+        X = {X}
+      )},
+      ⊕ = {$../../../../../Essentials/Functions/Operations/operator(
+        X = {$../../../Polynomials/Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        Y = {$../../../Polynomials/Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        Z = {$../../../Polynomials/Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        parameters = #(
+          p: %Element($../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )),
+          q: %Element(%previous)
+        ),
+        operator = $../../../Polynomials/sum(
+          𝐑 = {𝐑},
+          X = {X},
+          p = {p},
+          q = {q}
+        )
+      )},
+      "0" = {$../../../Polynomials/Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ).zero},
+      ⊖ = {$../../../../../Essentials/Functions/operator(
+        X = {$../../../Polynomials/Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        Y = {$../../../Polynomials/Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        parameter = #(p: %Element($../../../Polynomials/Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ))),
+        operator = $../../../Polynomials/"additive inverse"(
+          𝐑 = {𝐑},
+          X = {X},
+          p = {p}
+        )
+      )},
+      ⊙ = {$../../../../../Essentials/Functions/Operations/operator(
+        X = {$../../../Carrier(𝐑 = {𝐑})},
+        Y = {$../../../Polynomials/Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        Z = {$../../../Polynomials/Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        parameters = #(
+          a: %Element($../../../Carrier(𝐑 = {𝐑})),
+          p: %Element($../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ))
+        ),
+        operator = $../../../Polynomials/"product with left scalar"(
+          𝐑 = {𝐑},
+          X = {X},
+          a = {a},
+          p = {p}
+        )
+      )}
+  )]
+}

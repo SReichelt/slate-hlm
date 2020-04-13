@@ -1,0 +1,10 @@
+%../../../../../../../logics/library%
+
+$Examples: %Section {
+  logic = 'hlm',
+  items = [
+    %item($"ideal module"),
+    %item($"polynomial module"),
+    %item($"matrix module")
+  ]
+}

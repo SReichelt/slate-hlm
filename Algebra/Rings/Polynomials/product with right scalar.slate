@@ -1,6 +1,6 @@
 %../../../../../logics/hlm%
 
-$product(
+$"product with right scalar"(
   𝐑: %Element(
     $../Rings,
     auto = %true
@@ -13,11 +13,11 @@ $product(
     𝐑 = {𝐑},
     X = {X}
   )),
-  q: %Element(%previous)
+  a: %Element($../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
   display = [$Operator(
     symbol = '⋅',
-    operands = [p, q],
+    operands = [p, a],
     space = ' ',
     minParenLevel = 2,
     maxParenLevel = 2
@@ -39,44 +39,38 @@ $product(
       {
         constructor = $Polynomials.term,
         parameters = #(
-          r: %Element($Polynomials(
+          q: %Element($Polynomials(
             𝐑 = {𝐑},
             X = {X}
           )),
-          a: %Element($../Carrier(𝐑 = {𝐑})),
+          b: %Element($../Carrier(𝐑 = {𝐑})),
           _1: %Constraint(%or(
             %not(%equals(
-              r,
+              q,
               $Polynomials(
                   𝐑 = {𝐑},
                   X = {X}
                 ).zero
             )),
             %not(%equals(
-              a,
+              b,
               $../zero(𝐑 = {𝐑})
             ))
           ))
         ),
-        value = $sum(
+        value = $normalized(
           𝐑 = {𝐑},
           X = {X},
-          p = {$normalized(
+          p = {$"product with right scalar"(
             𝐑 = {𝐑},
             X = {X},
-            p = {$product(
-              𝐑 = {𝐑},
-              X = {X},
-              p = {r},
-              q = {q}
-            )},
-            a = {$../zero(𝐑 = {𝐑})}
+            p = {q},
+            a = {a}
           )},
-          q = {$"product with left scalar"(
+          a = {$../product(
             𝐑 = {𝐑},
-            X = {X},
-            a = {a},
-            p = {q}
+            a = {b},
+            b = {a}
           )}
         )
       }

@@ -1,0 +1,141 @@
+%../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Isomorphism#Category_theoretic_view
+ *             * https://mathworld.wolfram.com/Isomorphism.html
+ *             * https://proofwiki.org/wiki/Definition:Isomorphism_(Category_Theory)
+ *             * https://ncatlab.org/nlab/show/isomorphism
+ */
+$Isomorphisms(
+  u: %Element(
+    $../Essentials/Numbers/Natural/"Natural numbers",
+    auto = %true
+  ),
+  𝓒: %Element(
+    $Categories(u = {u}),
+    auto = %true
+  ),
+  𝐗: %Element($Objects(
+    u = {u},
+    𝓒 = {𝓒}
+  )),
+  𝐘: %Element(%previous)
+): %SetOperator {
+  display = [$Function(
+    function = 'Iso',
+    arguments = [𝐗, 𝐘]
+  )],
+  definitionDisplay = {
+    parameter = #(F: %Expr),
+    display = [$FunctionDefinition(
+      function = F,
+      symbol = '↔',
+      operands = [𝐗, 𝐘]
+    )],
+    singularName = 'isomorphism',
+    pluralName = 'isomorphisms',
+    nameOptional = %true
+  },
+  definition = [
+    %subset(
+      #(f: %Element($Morphisms(
+        u = {u},
+        𝓒 = {𝓒},
+        𝐗 = {𝐗},
+        𝐘 = {𝐘}
+      ))),
+      %exists(
+        #(g: %Element($Morphisms(
+          u = {u},
+          𝓒 = {𝓒},
+          𝐗 = {𝐘},
+          𝐘 = {𝐗}
+        ))),
+        formula = %and(
+          %equals(
+            $composition(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐗},
+              𝐘 = {𝐘},
+              𝐙 = {𝐗},
+              f = {f},
+              g = {g}
+            ),
+            $identity(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐗}
+            )
+          ),
+          %equals(
+            $composition(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐘},
+              𝐘 = {𝐗},
+              𝐙 = {𝐘},
+              f = {g},
+              g = {f}
+            ),
+            $identity(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐘}
+            )
+          )
+        )
+      )
+    ),
+    %subset(
+      #(f: %Element($Morphisms(
+        u = {u},
+        𝓒 = {𝓒},
+        𝐗 = {𝐗},
+        𝐘 = {𝐘}
+      ))),
+      %existsUnique(
+        #(g: %Element($Morphisms(
+          u = {u},
+          𝓒 = {𝓒},
+          𝐗 = {𝐘},
+          𝐘 = {𝐗}
+        ))),
+        formula = %and(
+          %equals(
+            $composition(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐗},
+              𝐘 = {𝐘},
+              𝐙 = {𝐗},
+              f = {f},
+              g = {g}
+            ),
+            $identity(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐗}
+            )
+          ),
+          %equals(
+            $composition(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐘},
+              𝐘 = {𝐗},
+              𝐙 = {𝐘},
+              f = {g},
+              g = {f}
+            ),
+            $identity(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐘}
+            )
+          )
+        )
+      )
+    )
+  ]
+}

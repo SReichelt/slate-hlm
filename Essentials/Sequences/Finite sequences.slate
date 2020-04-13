@@ -47,12 +47,26 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
         %equals(m, n),
         %equals(
           𝐚,
-          %asElementOf(
+          %structuralCases(
             𝐛,
             $Tuples(
               S = {S},
-              α = {m}
-            )
+              α = {n}
+            ),
+            [{
+              constructor = $Tuples.sequence,
+              parameters = #(k: %Binding(
+                $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}),
+                #(b: %Element(S))
+              )),
+              value = $Tuples(
+                  S = {S},
+                  α = {m}
+                ).sequence(k = {
+                  #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {m}))),
+                  {a = {b[j]}}
+              })
+            }]
           )
         )
       )],

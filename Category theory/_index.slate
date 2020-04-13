@@ -8,6 +8,7 @@ $"Category theory": %Section {
     %item($Morphisms),
     %item($identity),
     %item($composition),
+    %item($Isomorphisms),
     %subsection(
       $Functors,
       'Functors'
