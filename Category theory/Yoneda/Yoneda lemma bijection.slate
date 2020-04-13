@@ -185,8 +185,8 @@ $"Yoneda lemma bijection"(
                       𝓒 = {𝓒},
                       𝓓 = {$../"Concrete categories"/cardinals(u = {v})},
                       F = {F},
-                      𝐘 = {𝐀},
-                      𝐙 = {𝐗},
+                      𝐗 = {𝐀},
+                      𝐘 = {𝐗},
                       f = {f}
                     )},
                     x = {x}

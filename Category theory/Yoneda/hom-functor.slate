@@ -38,19 +38,19 @@ $"hom-functor"(
           u = {u},
           𝓒 = {𝓒}
         ))),
-        {𝐃 = {$../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Morphisms(
+        {𝐘 = {$../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Morphisms(
           u = {u},
           𝓒 = {𝓒},
           𝐗 = {𝐀},
           𝐘 = {𝐗}
         )})}}
       },
-      𝐘 = {
+      𝐀 = {
         #(𝐘: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
         ))),
-        {𝐙 = {
+        {𝐁 = {
           #(𝐙: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
@@ -62,7 +62,7 @@ $"hom-functor"(
               𝐗 = {𝐘},
               𝐘 = {𝐙}
             ))),
-            {d = {$../../Essentials/Functions/Functions(
+            {g = {$../../Essentials/Functions/Functions(
                 X = {$../Morphisms(
                   u = {u},
                   𝓒 = {𝓒},

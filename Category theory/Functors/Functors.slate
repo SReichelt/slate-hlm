@@ -25,99 +25,99 @@ $Functors(
         u = {u},
         𝓒 = {𝓒}
       ),
-      #(𝐃: %Element($../Objects(
+      #(𝐘: %Element($../Objects(
         u = {v},
         𝓒 = {𝓓}
       )))
     ),
-    𝐘: %Binding(
+    𝐀: %Binding(
       $../Objects(
         u = {u},
         𝓒 = {𝓒}
       ),
-      #(𝐙: %Binding(
+      #(𝐁: %Binding(
         %previous,
         #(f: %Binding(
           $../Morphisms(
             u = {u},
             𝓒 = {𝓒},
-            𝐗 = {𝐘},
-            𝐘 = {𝐙}
+            𝐗 = {𝐀},
+            𝐘 = {𝐁}
           ),
-          #(d: %Element($../Morphisms(
+          #(g: %Element($../Morphisms(
             u = {v},
             𝓒 = {𝓓},
-            𝐗 = {𝐃[𝐘]},
-            𝐘 = {𝐃[𝐙]}
+            𝐗 = {𝐘[𝐀]},
+            𝐘 = {𝐘[𝐁]}
           )))
         ))
       ))
     ),
     _1: %Constraint(%forall(
-      #(𝐗: %Element($../Objects(
+      #(𝐀: %Element($../Objects(
         u = {u},
         𝓒 = {𝓒}
       ))),
       %equals(
-        d[
-          𝐗,
-          𝐗,
+        g[
+          𝐀,
+          𝐀,
           $../identity(
             u = {u},
             𝓒 = {𝓒},
-            𝐗 = {𝐗}
+            𝐗 = {𝐀}
           )
         ],
         $../identity(
           u = {v},
           𝓒 = {𝓓},
-          𝐗 = {𝐃[𝐗]}
+          𝐗 = {𝐘[𝐀]}
         )
       )
     )),
     _2: %Constraint(%forall(
       #(
-        𝐗: %Element($../Objects(
+        𝐀: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
         )),
-        𝐘: %Element(%previous),
-        𝐙: %Element(%previous),
-        f: %Element($../Morphisms(
+        𝐁: %Element(%previous),
+        𝐂: %Element(%previous),
+        d: %Element($../Morphisms(
           u = {u},
           𝓒 = {𝓒},
-          𝐗 = {𝐗},
-          𝐘 = {𝐘}
+          𝐗 = {𝐀},
+          𝐘 = {𝐁}
         )),
-        g: %Element($../Morphisms(
+        e: %Element($../Morphisms(
           u = {u},
           𝓒 = {𝓒},
-          𝐗 = {𝐘},
-          𝐘 = {𝐙}
+          𝐗 = {𝐁},
+          𝐘 = {𝐂}
         ))
       ),
       %equals(
-        d[
-          𝐗,
-          𝐙,
+        g[
+          𝐀,
+          𝐂,
           $../composition(
             u = {u},
             𝓒 = {𝓒},
-            𝐗 = {𝐗},
-            𝐘 = {𝐘},
-            𝐙 = {𝐙},
-            g = {g},
-            f = {f}
+            𝐗 = {𝐀},
+            𝐘 = {𝐁},
+            𝐙 = {𝐂},
+            g = {e},
+            f = {d}
           )
         ],
         $../composition(
           u = {v},
           𝓒 = {𝓓},
-          𝐗 = {𝐃[𝐗]},
-          𝐘 = {𝐃[𝐘]},
-          𝐙 = {𝐃[𝐙]},
-          g = {d[𝐘,𝐙,g]},
-          f = {d[𝐗,𝐘,f]}
+          𝐗 = {𝐘[𝐀]},
+          𝐘 = {𝐘[𝐁]},
+          𝐙 = {𝐘[𝐂]},
+          g = {g[𝐁,𝐂,e]},
+          f = {g[𝐀,𝐁,d]}
         )
       )
     ))
@@ -136,18 +136,18 @@ $Functors(
               maxLevel = 0
             )
           ],
-          [𝐗, ' ↦ ', 𝐃],
+          [𝐗, ' ↦ ', 𝐘],
           [
             $Parens(
               body = $FunctionDefinition(
                 function = f,
                 symbol = '→',
-                operands = [𝐘, 𝐙]
+                operands = [𝐀, 𝐁]
               ),
               style = '()'
             ),
             ' ↦ ',
-            d
+            g
           ]
         ],
         style = 'aligned'
@@ -173,18 +173,18 @@ $Functors(
                   maxLevel = 0
                 )
               ],
-              [𝐗, ' ↦ ', 𝐃],
+              [𝐗, ' ↦ ', 𝐘],
               [
                 $Parens(
                   body = $FunctionDefinition(
                     function = f,
                     symbol = '→',
-                    operands = [𝐘, 𝐙]
+                    operands = [𝐀, 𝐁]
                   ),
                   style = '()'
                 ),
                 ' ↦ ',
-                d
+                g
               ]
             ],
             style = 'aligned'
@@ -199,99 +199,99 @@ $Functors(
             u = {u},
             𝓒 = {𝓒}
           ),
-          #(𝐃: %Element($../Objects(
+          #(𝐘: %Element($../Objects(
             u = {v},
             𝓒 = {𝓓}
           )))
         ),
-        𝐘: %Binding(
+        𝐀: %Binding(
           $../Objects(
             u = {u},
             𝓒 = {𝓒}
           ),
-          #(𝐙: %Binding(
+          #(𝐁: %Binding(
             %previous,
             #(f: %Binding(
               $../Morphisms(
                 u = {u},
                 𝓒 = {𝓒},
-                𝐗 = {𝐘},
-                𝐘 = {𝐙}
+                𝐗 = {𝐀},
+                𝐘 = {𝐁}
               ),
-              #(d: %Element($../Morphisms(
+              #(g: %Element($../Morphisms(
                 u = {v},
                 𝓒 = {𝓓},
-                𝐗 = {𝐃[𝐘]},
-                𝐘 = {𝐃[𝐙]}
+                𝐗 = {𝐘[𝐀]},
+                𝐘 = {𝐘[𝐁]}
               )))
             ))
           ))
         ),
         _1: %Constraint(%forall(
-          #(𝐗: %Element($../Objects(
+          #(𝐀: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
           ))),
           %equals(
-            d[
-              𝐗,
-              𝐗,
+            g[
+              𝐀,
+              𝐀,
               $../identity(
                 u = {u},
                 𝓒 = {𝓒},
-                𝐗 = {𝐗}
+                𝐗 = {𝐀}
               )
             ],
             $../identity(
               u = {v},
               𝓒 = {𝓓},
-              𝐗 = {𝐃[𝐗]}
+              𝐗 = {𝐘[𝐀]}
             )
           )
         )),
         _2: %Constraint(%forall(
           #(
-            𝐗: %Element($../Objects(
+            𝐀: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
             )),
-            𝐘: %Element(%previous),
-            𝐙: %Element(%previous),
-            f: %Element($../Morphisms(
+            𝐁: %Element(%previous),
+            𝐂: %Element(%previous),
+            d: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},
-              𝐗 = {𝐗},
-              𝐘 = {𝐘}
+              𝐗 = {𝐀},
+              𝐘 = {𝐁}
             )),
-            g: %Element($../Morphisms(
+            e: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},
-              𝐗 = {𝐘},
-              𝐘 = {𝐙}
+              𝐗 = {𝐁},
+              𝐘 = {𝐂}
             ))
           ),
           %equals(
-            d[
-              𝐗,
-              𝐙,
+            g[
+              𝐀,
+              𝐂,
               $../composition(
                 u = {u},
                 𝓒 = {𝓒},
-                𝐗 = {𝐗},
-                𝐘 = {𝐘},
-                𝐙 = {𝐙},
-                g = {g},
-                f = {f}
+                𝐗 = {𝐀},
+                𝐘 = {𝐁},
+                𝐙 = {𝐂},
+                g = {e},
+                f = {d}
               )
             ],
             $../composition(
               u = {v},
               𝓒 = {𝓓},
-              𝐗 = {𝐃[𝐗]},
-              𝐘 = {𝐃[𝐘]},
-              𝐙 = {𝐃[𝐙]},
-              g = {d[𝐘,𝐙,g]},
-              f = {d[𝐗,𝐘,f]}
+              𝐗 = {𝐘[𝐀]},
+              𝐘 = {𝐘[𝐁]},
+              𝐙 = {𝐘[𝐂]},
+              g = {g[𝐁,𝐂,e]},
+              f = {g[𝐀,𝐁,d]}
             )
           )
         ))
@@ -302,99 +302,99 @@ $Functors(
             u = {u},
             𝓒 = {𝓒}
           ),
-          #("𝐃'": %Element($../Objects(
+          #("𝐘'": %Element($../Objects(
             u = {v},
             𝓒 = {𝓓}
           )))
         ),
-        𝐘: %Binding(
+        𝐀: %Binding(
           $../Objects(
             u = {u},
             𝓒 = {𝓒}
           ),
-          #(𝐙: %Binding(
+          #(𝐁: %Binding(
             %previous,
             #(f: %Binding(
               $../Morphisms(
                 u = {u},
                 𝓒 = {𝓒},
-                𝐗 = {𝐘},
-                𝐘 = {𝐙}
+                𝐗 = {𝐀},
+                𝐘 = {𝐁}
               ),
-              #("d'": %Element($../Morphisms(
+              #("g'": %Element($../Morphisms(
                 u = {v},
                 𝓒 = {𝓓},
-                𝐗 = {"𝐃'"[𝐘]},
-                𝐘 = {"𝐃'"[𝐙]}
+                𝐗 = {"𝐘'"[𝐀]},
+                𝐘 = {"𝐘'"[𝐁]}
               )))
             ))
           ))
         ),
         _1: %Constraint(%forall(
-          #(𝐗: %Element($../Objects(
+          #(𝐀: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
           ))),
           %equals(
-            "d'"[
-              𝐗,
-              𝐗,
+            "g'"[
+              𝐀,
+              𝐀,
               $../identity(
                 u = {u},
                 𝓒 = {𝓒},
-                𝐗 = {𝐗}
+                𝐗 = {𝐀}
               )
             ],
             $../identity(
               u = {v},
               𝓒 = {𝓓},
-              𝐗 = {"𝐃'"[𝐗]}
+              𝐗 = {"𝐘'"[𝐀]}
             )
           )
         )),
         _2: %Constraint(%forall(
           #(
-            𝐗: %Element($../Objects(
+            𝐀: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
             )),
-            𝐘: %Element(%previous),
-            𝐙: %Element(%previous),
-            f: %Element($../Morphisms(
+            𝐁: %Element(%previous),
+            𝐂: %Element(%previous),
+            d: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},
-              𝐗 = {𝐗},
-              𝐘 = {𝐘}
+              𝐗 = {𝐀},
+              𝐘 = {𝐁}
             )),
-            g: %Element($../Morphisms(
+            e: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},
-              𝐗 = {𝐘},
-              𝐘 = {𝐙}
+              𝐗 = {𝐁},
+              𝐘 = {𝐂}
             ))
           ),
           %equals(
-            "d'"[
-              𝐗,
-              𝐙,
+            "g'"[
+              𝐀,
+              𝐂,
               $../composition(
                 u = {u},
                 𝓒 = {𝓒},
-                𝐗 = {𝐗},
-                𝐘 = {𝐘},
-                𝐙 = {𝐙},
-                g = {g},
-                f = {f}
+                𝐗 = {𝐀},
+                𝐘 = {𝐁},
+                𝐙 = {𝐂},
+                g = {e},
+                f = {d}
               )
             ],
             $../composition(
               u = {v},
               𝓒 = {𝓓},
-              𝐗 = {"𝐃'"[𝐗]},
-              𝐘 = {"𝐃'"[𝐘]},
-              𝐙 = {"𝐃'"[𝐙]},
-              g = {"d'"[𝐘,𝐙,g]},
-              f = {"d'"[𝐗,𝐘,f]}
+              𝐗 = {"𝐘'"[𝐀]},
+              𝐘 = {"𝐘'"[𝐁]},
+              𝐙 = {"𝐘'"[𝐂]},
+              g = {"g'"[𝐁,𝐂,e]},
+              f = {"g'"[𝐀,𝐁,d]}
             )
           )
         ))
@@ -408,42 +408,42 @@ $Functors(
           #(i: %Element($../Isomorphisms(
             u = {v},
             𝓒 = {𝓓},
-            𝐗 = {𝐃[𝐗]},
-            𝐘 = {"𝐃'"[𝐗]}
+            𝐗 = {𝐘[𝐗]},
+            𝐘 = {"𝐘'"[𝐗]}
           )))
         )),
         formula = %forall(
           #(
-            𝐘: %Element($../Objects(
+            𝐀: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
             )),
-            𝐙: %Element(%previous),
+            𝐁: %Element(%previous),
             f: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},
-              𝐗 = {𝐘},
-              𝐘 = {𝐙}
+              𝐗 = {𝐀},
+              𝐘 = {𝐁}
             ))
           ),
           %equals(
             $../composition(
               u = {v},
               𝓒 = {𝓓},
-              𝐗 = {𝐃[𝐘]},
-              𝐘 = {𝐃[𝐙]},
-              𝐙 = {"𝐃'"[𝐙]},
-              f = {d[𝐘,𝐙,f]},
-              g = {i[𝐙]}
+              𝐗 = {𝐘[𝐀]},
+              𝐘 = {𝐘[𝐁]},
+              𝐙 = {"𝐘'"[𝐁]},
+              f = {g[𝐀,𝐁,f]},
+              g = {i[𝐁]}
             ),
             $../composition(
               u = {v},
               𝓒 = {𝓓},
-              𝐗 = {𝐃[𝐘]},
-              𝐘 = {"𝐃'"[𝐘]},
-              𝐙 = {"𝐃'"[𝐙]},
-              f = {i[𝐘]},
-              g = {"d'"[𝐘,𝐙,f]}
+              𝐗 = {𝐘[𝐀]},
+              𝐘 = {"𝐘'"[𝐀]},
+              𝐙 = {"𝐘'"[𝐁]},
+              f = {i[𝐀]},
+              g = {"g'"[𝐀,𝐁,f]}
             )
           )
         )

@@ -23,16 +23,16 @@ $"morphism value"(
     𝓒 = {𝓒},
     𝓓 = {𝓓}
   )),
-  𝐘: %Element($../Objects(
+  𝐗: %Element($../Objects(
     u = {u},
     𝓒 = {𝓒}
   )),
-  𝐙: %Element(%previous),
+  𝐘: %Element(%previous),
   f: %Element($../Morphisms(
     u = {u},
     𝓒 = {𝓒},
-    𝐗 = {𝐘},
-    𝐘 = {𝐙}
+    𝐗 = {𝐗},
+    𝐘 = {𝐘}
   ))
 ): %ExplicitOperator {
   display = [$Function(
@@ -75,7 +75,7 @@ $"morphism value"(
                   𝐗 = {𝐁},
                   𝐘 = {𝐂}
                 ),
-                #(d: %Element($../Morphisms(
+                #(h: %Element($../Morphisms(
                   u = {v},
                   𝓒 = {𝓓},
                   𝐗 = {𝐃[𝐁]},
@@ -90,7 +90,7 @@ $"morphism value"(
               𝓒 = {𝓒}
             ))),
             %equals(
-              d[
+              h[
                 𝐀,
                 𝐀,
                 $../identity(
@@ -114,13 +114,13 @@ $"morphism value"(
               )),
               𝐁: %Element(%previous),
               𝐂: %Element(%previous),
-              f: %Element($../Morphisms(
+              d: %Element($../Morphisms(
                 u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐀},
                 𝐘 = {𝐁}
               )),
-              g: %Element($../Morphisms(
+              e: %Element($../Morphisms(
                 u = {u},
                 𝓒 = {𝓒},
                 𝐗 = {𝐁},
@@ -128,7 +128,7 @@ $"morphism value"(
               ))
             ),
             %equals(
-              d[
+              h[
                 𝐀,
                 𝐂,
                 $../composition(
@@ -137,8 +137,8 @@ $"morphism value"(
                   𝐗 = {𝐀},
                   𝐘 = {𝐁},
                   𝐙 = {𝐂},
-                  g = {g},
-                  f = {f}
+                  g = {e},
+                  f = {d}
                 )
               ],
               $../composition(
@@ -147,13 +147,13 @@ $"morphism value"(
                 𝐗 = {𝐃[𝐀]},
                 𝐘 = {𝐃[𝐁]},
                 𝐙 = {𝐃[𝐂]},
-                g = {d[𝐁,𝐂,g]},
-                f = {d[𝐀,𝐁,f]}
+                g = {h[𝐁,𝐂,e]},
+                f = {h[𝐀,𝐁,d]}
               )
             )
           ))
         ),
-        value = d[𝐘,𝐙,f]
+        value = h[𝐗,𝐘,f]
       }]
     ),
     $../Morphisms(
@@ -165,7 +165,7 @@ $"morphism value"(
         𝓒 = {𝓒},
         𝓓 = {𝓓},
         F = {F},
-        𝐗 = {𝐘}
+        𝐗 = {𝐗}
       )},
       𝐘 = {$"object value"(
         u = {u},
@@ -173,7 +173,7 @@ $"morphism value"(
         𝓒 = {𝓒},
         𝓓 = {𝓓},
         F = {F},
-        𝐗 = {𝐙}
+        𝐗 = {𝐘}
       )}
     )
   )]
