@@ -1,0 +1,44 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Semiring
+ *             * https://proofwiki.org/wiki/Definition:Rig#Also_defined_as
+ *             * https://ncatlab.org/nlab/show/rig
+ *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#semi_ring_theory
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/ring.html#semiring
+ */
+$semiring(
+  R: %Set,
+  ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+  "0": %Element(R),
+  ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+  "1": %Element(R)
+): %Predicate {
+  display = [$Structure(
+    operands = [R, ⊕, "0", ⊙, "1"],
+    singular = 'semiring',
+    plural = 'semirings'
+  )],
+  definition = [%and(
+    $../Monoids/"commutative monoid"(
+      M = {R},
+      ∗ = {⊕},
+      e = {"0"}
+    ),
+    $../Monoids/monoid(
+      M = {R},
+      ∗ = {⊙},
+      e = {"1"}
+    ),
+    $../../Essentials/Functions/Operations/distributive(
+      X = {R},
+      ∗ = {⊙},
+      ⋆ = {⊕}
+    ),
+    $../../Essentials/Functions/Operations/"absorbing element"(
+      X = {R},
+      ∗ = {⊙},
+      z = {"0"}
+    )
+  )]
+}

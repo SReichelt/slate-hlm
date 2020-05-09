@@ -3,6 +3,7 @@
 $Groups: %Section {
   logic = 'hlm',
   items = [
+    %item($group),
     %item($Groups),
     %item($"monoid with inverses"),
     %item($Carrier),
@@ -10,6 +11,7 @@ $Groups: %Section {
     %item($identity),
     %item($inverse),
     %item($abelian),
+    %item($"abelian group"),
     %item($"power to natural number"),
     %item($"power to integer"),
     %subsection(

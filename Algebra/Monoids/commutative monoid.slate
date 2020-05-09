@@ -1,0 +1,43 @@
+%../../../../logics/hlm%
+
+$"commutative monoid"(
+  M: %Set,
+  ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+  e: %Element(M)
+): %Predicate {
+  display = [$Structure(
+    operands = [M, ∗, e],
+    singular = 'commutative monoid',
+    plural = 'commutative monoids'
+  )],
+  definition = [
+    %and(
+      $monoid(
+        M = {M},
+        ∗ = {∗},
+        e = {e}
+      ),
+      $commutative(𝐌 = {$Monoids.monoid(
+        M = {M},
+        ∗ = {∗},
+        e = {e}
+      )})
+    ),
+    %and(
+      $../../Essentials/Functions/Operations/associative(
+        X = {M},
+        ∗ = {∗}
+      ),
+      $../../Essentials/Functions/Operations/commutative(
+        X = {M},
+        Z = {M},
+        ∗ = {∗}
+      ),
+      $../../Essentials/Functions/Operations/"identity element"(
+        X = {M},
+        ∗ = {∗},
+        e = {e}
+      )
+    )
+  ]
+}

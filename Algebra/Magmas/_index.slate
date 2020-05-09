@@ -21,6 +21,8 @@ $Magmas: %Section {
       'Free magma'
     ),
     %item($"identity element"),
-    %item($identity)
+    %item($identity),
+    %item($"absorbing element"),
+    %item($zero)
   ]
 }

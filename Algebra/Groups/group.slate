@@ -1,0 +1,63 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Group_(mathematics)
+ *             * https://mathworld.wolfram.com/Group.html
+ *             * https://proofwiki.org/wiki/Definition:Group
+ *             * https://ncatlab.org/nlab/show/group
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#group
+ */
+$group(
+  G: %Set,
+  ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+  e: %Element(G),
+  i: %Element($../../Essentials/Functions/Functions(
+    X = {G},
+    Y = {G}
+  ))
+): %Predicate {
+  display = [$Structure(
+    operands = [G, ∗, e, i],
+    singular = 'group',
+    plural = 'groups'
+  )],
+  definition = [%and(
+    $../Monoids/monoid(
+      M = {G},
+      ∗ = {∗},
+      e = {e}
+    ),
+    %forall(
+      #(a: %Element(G)),
+      %equals(
+        $../../Essentials/Functions/Operations/value(
+          X = {G},
+          Y = {G},
+          Z = {G},
+          ∗ = {∗},
+          x = {a},
+          y = {$../../Essentials/Functions/value(
+            X = {G},
+            Y = {G},
+            f = {i},
+            x = {a}
+          )}
+        ),
+        $../../Essentials/Functions/Operations/value(
+          X = {G},
+          Y = {G},
+          Z = {G},
+          ∗ = {∗},
+          x = {$../../Essentials/Functions/value(
+            X = {G},
+            Y = {G},
+            f = {i},
+            x = {a}
+          )},
+          y = {a}
+        ),
+        e
+      )
+    )
+  )]
+}

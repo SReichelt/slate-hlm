@@ -13,175 +13,20 @@ $commutative(𝐑: %Element($Rings)): %Predicate {
       parameters = #(
         R: %Set,
         ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
-        _1: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {R},
-          ∗ = {⊕}
-        )),
-        _2: %Constraint($../../Essentials/Functions/Operations/commutative(
-          X = {R},
-          Z = {R},
-          ∗ = {⊕}
-        )),
         "0": %Element(R),
-        _3: %Constraint(%forall(
-          #(a: %Element(R)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊕},
-              x = {a},
-              y = {"0"}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊕},
-              x = {"0"},
-              y = {a}
-            ),
-            a
-          )
-        )),
         ⊖: %Element($../../Essentials/Functions/Functions(
           X = {R},
           Y = {R}
         )),
-        _4: %Constraint(%forall(
-          #(a: %Element(R)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊕},
-              x = {a},
-              y = {$../../Essentials/Functions/value(
-                X = {R},
-                Y = {R},
-                f = {⊖},
-                x = {a}
-              )}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊕},
-              x = {$../../Essentials/Functions/value(
-                X = {R},
-                Y = {R},
-                f = {⊖},
-                x = {a}
-              )},
-              y = {a}
-            ),
-            "0"
-          )
-        )),
         ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
-        _5: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {R},
-          ∗ = {⊙}
-        )),
-        _6: %Constraint(%forall(
-          #(a: %Element(R)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {a},
-              y = {"0"}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {"0"},
-              y = {a}
-            ),
-            "0"
-          )
-        )),
-        _7: %Constraint(%forall(
-          #(
-            a: %Element(R),
-            b: %Element(%previous)
-          ),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {a},
-              y = {$../../Essentials/Functions/value(
-                X = {R},
-                Y = {R},
-                f = {⊖},
-                x = {b}
-              )}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {$../../Essentials/Functions/value(
-                X = {R},
-                Y = {R},
-                f = {⊖},
-                x = {a}
-              )},
-              y = {b}
-            ),
-            $../../Essentials/Functions/value(
-              X = {R},
-              Y = {R},
-              f = {⊖},
-              x = {$../../Essentials/Functions/Operations/value(
-                X = {R},
-                Y = {R},
-                Z = {R},
-                ∗ = {⊙},
-                x = {a},
-                y = {b}
-              )}
-            )
-          )
-        )),
         "1": %Element(R),
-        _8: %Constraint(%forall(
-          #(a: %Element(R)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {a},
-              y = {"1"}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {"1"},
-              y = {a}
-            ),
-            a
-          )
-        )),
-        _9: %Constraint($../../Essentials/Functions/Operations/distributive(
-          X = {R},
-          ∗ = {⊙},
-          ⋆ = {⊕}
+        _1: %Constraint($ring(
+          R = {R},
+          ⊕ = {⊕},
+          "0" = {"0"},
+          ⊖ = {⊖},
+          ⊙ = {⊙},
+          "1" = {"1"}
         ))
       ),
       value = $../../Essentials/Functions/Operations/commutative(

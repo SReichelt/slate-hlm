@@ -16,92 +16,15 @@ $"multiplicative monoid"(𝐑: %Element($Semirings)): %ExplicitOperator {
       parameters = #(
         R: %Set,
         ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
-        _1: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {R},
-          ∗ = {⊕}
-        )),
-        _2: %Constraint($../../Essentials/Functions/Operations/commutative(
-          X = {R},
-          Z = {R},
-          ∗ = {⊕}
-        )),
         "0": %Element(R),
-        _3: %Constraint(%forall(
-          #(a: %Element(R)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊕},
-              x = {a},
-              y = {"0"}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊕},
-              x = {"0"},
-              y = {a}
-            ),
-            a
-          )
-        )),
         ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
-        _4: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {R},
-          ∗ = {⊙}
-        )),
-        _5: %Constraint(%forall(
-          #(a: %Element(R)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {a},
-              y = {"0"}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {"0"},
-              y = {a}
-            ),
-            "0"
-          )
-        )),
         "1": %Element(R),
-        _6: %Constraint(%forall(
-          #(a: %Element(R)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {a},
-              y = {"1"}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {R},
-              Y = {R},
-              Z = {R},
-              ∗ = {⊙},
-              x = {"1"},
-              y = {a}
-            ),
-            a
-          )
-        )),
-        _7: %Constraint($../../Essentials/Functions/Operations/distributive(
-          X = {R},
-          ∗ = {⊙},
-          ⋆ = {⊕}
+        _1: %Constraint($semiring(
+          R = {R},
+          ⊕ = {⊕},
+          "0" = {"0"},
+          ⊙ = {⊙},
+          "1" = {"1"}
         ))
       ),
       value = $../Monoids/Monoids.monoid(

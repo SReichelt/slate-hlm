@@ -3,6 +3,7 @@
 $Rings: %Section {
   logic = 'hlm',
   items = [
+    %item($ring),
     %item($Rings),
     %item($Carrier),
     %item($sum),

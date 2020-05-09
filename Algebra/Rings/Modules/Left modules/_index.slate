@@ -3,6 +3,7 @@
 $"Left modules": %Section {
   logic = 'hlm',
   items = [
+    %item($"left module"),
     %item($"Left modules"),
     %item($Carrier),
     %item($sum),

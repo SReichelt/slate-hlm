@@ -1,0 +1,306 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Module_(mathematics)
+ *             * https://mathworld.wolfram.com/Module.html
+ *             * https://proofwiki.org/wiki/Definition:Unitary_Module
+ *             * https://ncatlab.org/nlab/show/module#ModulesOverARingInTermsOfStabilizedSlices
+ */
+$"right module"(
+  𝐑: %Element($../../Rings),
+  M: %Set,
+  ⊕: %Element($../../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+  "0": %Element(M),
+  ⊖: %Element($../../../../Essentials/Functions/Functions(
+    X = {M},
+    Y = {M}
+  )),
+  ⊙: %Element($../../../../Essentials/Functions/Operations/Operations(
+    X = {M},
+    Y = {$../../Carrier(𝐑 = {𝐑})},
+    Z = {M}
+  ))
+): %Predicate {
+  display = [$Structure(
+    operands = [M, ⊕, "0", ⊖, ⊙],
+    singular = [
+      'right ',
+      $DependentWord(
+        word = 'module',
+        argument = 𝐑
+      )
+    ],
+    plural = [
+      'right ',
+      $DependentWord(
+        word = 'modules',
+        argument = 𝐑
+      )
+    ]
+  )],
+  definition = [
+    %and(
+      $../../../Groups/"abelian group"(
+        G = {M},
+        ∗ = {⊕},
+        e = {"0"},
+        i = {⊖}
+      ),
+      $../../../../Essentials/Functions/Operations/"right-distributive"(
+        X = {$../../Carrier(𝐑 = {𝐑})},
+        Y = {M},
+        ∗ = {⊙},
+        ⋆ = {⊕}
+      ),
+      %forall(
+        #(
+          x: %Element(M),
+          a: %Element($../../Carrier(𝐑 = {𝐑})),
+          b: %Element(%previous)
+        ),
+        %equals(
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {$../../Carrier(𝐑 = {𝐑})},
+            Z = {M},
+            ∗ = {⊙},
+            x = {x},
+            y = {$../../sum(
+              𝐑 = {𝐑},
+              a = {a},
+              b = {b}
+            )}
+          ),
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {M},
+            Z = {M},
+            ∗ = {⊕},
+            x = {$../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {$../../Carrier(𝐑 = {𝐑})},
+              Z = {M},
+              ∗ = {⊙},
+              x = {x},
+              y = {a}
+            )},
+            y = {$../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {$../../Carrier(𝐑 = {𝐑})},
+              Z = {M},
+              ∗ = {⊙},
+              x = {x},
+              y = {b}
+            )}
+          )
+        )
+      ),
+      %forall(
+        #(x: %Element(M)),
+        %equals(
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {$../../Carrier(𝐑 = {𝐑})},
+            Z = {M},
+            ∗ = {⊙},
+            x = {x},
+            y = {$../../zero(𝐑 = {𝐑})}
+          ),
+          "0"
+        )
+      ),
+      $../../../../Essentials/Functions/Operations/"left absorbing element"(
+        X = {M},
+        Y = {$../../Carrier(𝐑 = {𝐑})},
+        ∗ = {⊙},
+        z = {"0"}
+      ),
+      %forall(
+        #(
+          a: %Element($../../Carrier(𝐑 = {𝐑})),
+          x: %Element(M)
+        ),
+        %equals(
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {$../../Carrier(𝐑 = {𝐑})},
+            Z = {M},
+            ∗ = {⊙},
+            x = {x},
+            y = {$../../"additive inverse"(
+              𝐑 = {𝐑},
+              a = {a}
+            )}
+          ),
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {$../../Carrier(𝐑 = {𝐑})},
+            Z = {M},
+            ∗ = {⊙},
+            x = {$../../../../Essentials/Functions/value(
+              X = {M},
+              Y = {M},
+              f = {⊖},
+              x = {x}
+            )},
+            y = {a}
+          ),
+          $../../../../Essentials/Functions/value(
+            X = {M},
+            Y = {M},
+            f = {⊖},
+            x = {$../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {$../../Carrier(𝐑 = {𝐑})},
+              Z = {M},
+              ∗ = {⊙},
+              x = {x},
+              y = {a}
+            )}
+          )
+        )
+      ),
+      %forall(
+        #(
+          x: %Element(M),
+          a: %Element($../../Carrier(𝐑 = {𝐑})),
+          b: %Element(%previous)
+        ),
+        %equals(
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {$../../Carrier(𝐑 = {𝐑})},
+            Z = {M},
+            ∗ = {⊙},
+            x = {x},
+            y = {$../../product(
+              𝐑 = {𝐑},
+              a = {a},
+              b = {b}
+            )}
+          ),
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {$../../Carrier(𝐑 = {𝐑})},
+            Z = {M},
+            ∗ = {⊙},
+            x = {$../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {$../../Carrier(𝐑 = {𝐑})},
+              Z = {M},
+              ∗ = {⊙},
+              x = {x},
+              y = {a}
+            )},
+            y = {b}
+          )
+        )
+      ),
+      $../../../../Essentials/Functions/Operations/"right identity element"(
+        X = {M},
+        Y = {$../../Carrier(𝐑 = {𝐑})},
+        ∗ = {⊙},
+        e = {$../../one(𝐑 = {𝐑})}
+      )
+    ),
+    %and(
+      $../../../Groups/"abelian group"(
+        G = {M},
+        ∗ = {⊕},
+        e = {"0"},
+        i = {⊖}
+      ),
+      $../../../../Essentials/Functions/Operations/"right-distributive"(
+        X = {$../../Carrier(𝐑 = {𝐑})},
+        Y = {M},
+        ∗ = {⊙},
+        ⋆ = {⊕}
+      ),
+      %forall(
+        #(
+          x: %Element(M),
+          a: %Element($../../Carrier(𝐑 = {𝐑})),
+          b: %Element(%previous)
+        ),
+        %equals(
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {$../../Carrier(𝐑 = {𝐑})},
+            Z = {M},
+            ∗ = {⊙},
+            x = {x},
+            y = {$../../sum(
+              𝐑 = {𝐑},
+              a = {a},
+              b = {b}
+            )}
+          ),
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {M},
+            Z = {M},
+            ∗ = {⊕},
+            x = {$../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {$../../Carrier(𝐑 = {𝐑})},
+              Z = {M},
+              ∗ = {⊙},
+              x = {x},
+              y = {a}
+            )},
+            y = {$../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {$../../Carrier(𝐑 = {𝐑})},
+              Z = {M},
+              ∗ = {⊙},
+              x = {x},
+              y = {b}
+            )}
+          )
+        )
+      ),
+      %forall(
+        #(
+          x: %Element(M),
+          a: %Element($../../Carrier(𝐑 = {𝐑})),
+          b: %Element(%previous)
+        ),
+        %equals(
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {$../../Carrier(𝐑 = {𝐑})},
+            Z = {M},
+            ∗ = {⊙},
+            x = {x},
+            y = {$../../product(
+              𝐑 = {𝐑},
+              a = {a},
+              b = {b}
+            )}
+          ),
+          $../../../../Essentials/Functions/Operations/value(
+            X = {M},
+            Y = {$../../Carrier(𝐑 = {𝐑})},
+            Z = {M},
+            ∗ = {⊙},
+            x = {$../../../../Essentials/Functions/Operations/value(
+              X = {M},
+              Y = {$../../Carrier(𝐑 = {𝐑})},
+              Z = {M},
+              ∗ = {⊙},
+              x = {x},
+              y = {a}
+            )},
+            y = {b}
+          )
+        )
+      ),
+      $../../../../Essentials/Functions/Operations/"right identity element"(
+        X = {M},
+        Y = {$../../Carrier(𝐑 = {𝐑})},
+        ∗ = {⊙},
+        e = {$../../one(𝐑 = {𝐑})}
+      )
+    )
+  ]
+}

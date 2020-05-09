@@ -1,0 +1,46 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Monoid
+ *             * https://mathworld.wolfram.com/Monoid.html
+ *             * https://proofwiki.org/wiki/Definition:Monoid
+ *             * https://ncatlab.org/nlab/show/monoid
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#monoid
+ */
+$monoid(
+  M: %Set,
+  ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+  e: %Element(M)
+): %Predicate {
+  display = [$Structure(
+    operands = [M, ∗, e],
+    singular = 'monoid',
+    plural = 'monoids'
+  )],
+  definition = [
+    %and(
+      $../Semigroups/semigroup(
+        M = {M},
+        ∗ = {∗}
+      ),
+      $../Magmas/"identity element"(
+        𝐌 = {$../Magmas/Magmas.magma(
+          M = {M},
+          ∗ = {∗}
+        )},
+        e = {e}
+      )
+    ),
+    %and(
+      $../../Essentials/Functions/Operations/associative(
+        X = {M},
+        ∗ = {∗}
+      ),
+      $../../Essentials/Functions/Operations/"identity element"(
+        X = {M},
+        ∗ = {∗},
+        e = {e}
+      )
+    )
+  ]
+}

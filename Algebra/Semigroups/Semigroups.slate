@@ -14,8 +14,28 @@ $Semigroups: %SetOperator {
     singularName = 'semigroup',
     pluralName = 'semigroups'
   },
-  definition = [%subset(
-    #(𝐒: %Element($../Magmas/Magmas)),
-    $../Magmas/associative(𝐌 = {𝐒})
-  )]
+  definition = [
+    %subset(
+      #(_𝐒: %Element($../Magmas/Magmas)),
+      %structural(
+        _𝐒,
+        $../Magmas/Magmas,
+        [{
+          constructor = $../Magmas/Magmas.magma,
+          parameters = #(
+            M: %Set,
+            ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+          ),
+          value = $semigroup(
+            M = {M},
+            ∗ = {∗}
+          )
+        }]
+      )
+    ),
+    %subset(
+      #(𝐒: %Element($../Magmas/Magmas)),
+      $../Magmas/associative(𝐌 = {𝐒})
+    )
+  ]
 }

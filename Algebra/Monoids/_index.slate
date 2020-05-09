@@ -3,12 +3,14 @@
 $Monoids: %Section {
   logic = 'hlm',
   items = [
+    %item($monoid),
     %item($Monoids),
     %item($"semigroup with identity"),
     %item($Carrier),
     %item($operation),
     %item($identity),
     %item($commutative),
+    %item($"commutative monoid"),
     %subsection(
       $Homomorphisms,
       'Homomorphisms'

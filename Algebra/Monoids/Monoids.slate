@@ -11,32 +11,11 @@ $Monoids: %Construction {
   $monoid(
     M: %Set,
     ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
-    _1: %Constraint($../../Essentials/Functions/Operations/associative(
-      X = {M},
-      ∗ = {∗}
-    )),
     e: %Element(M),
-    _2: %Constraint(%forall(
-      #(a: %Element(M)),
-      %equals(
-        $../../Essentials/Functions/Operations/value(
-          X = {M},
-          Y = {M},
-          Z = {M},
-          ∗ = {∗},
-          x = {a},
-          y = {e}
-        ),
-        $../../Essentials/Functions/Operations/value(
-          X = {M},
-          Y = {M},
-          Z = {M},
-          ∗ = {∗},
-          x = {e},
-          y = {a}
-        ),
-        a
-      )
+    _1: %Constraint($monoid(
+      M = {M},
+      ∗ = {∗},
+      e = {e}
     ))
   ): %Constructor {
     display = [$Tuple(
@@ -47,63 +26,21 @@ $Monoids: %Construction {
       leftParameters = #(
         M: %Set,
         ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
-        _1: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {M},
-          ∗ = {∗}
-        )),
         e: %Element(M),
-        _2: %Constraint(%forall(
-          #(a: %Element(M)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {M},
-              Y = {M},
-              Z = {M},
-              ∗ = {∗},
-              x = {a},
-              y = {e}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {M},
-              Y = {M},
-              Z = {M},
-              ∗ = {∗},
-              x = {e},
-              y = {a}
-            ),
-            a
-          )
+        _1: %Constraint($monoid(
+          M = {M},
+          ∗ = {∗},
+          e = {e}
         ))
       ),
       rightParameters = #(
         N: %Set,
         ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {N})),
-        _3: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {N},
-          ∗ = {⋆}
-        )),
         f: %Element(N),
-        _4: %Constraint(%forall(
-          #(b: %Element(N)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {N},
-              Y = {N},
-              Z = {N},
-              ∗ = {⋆},
-              x = {b},
-              y = {f}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {N},
-              Y = {N},
-              Z = {N},
-              ∗ = {⋆},
-              x = {f},
-              y = {b}
-            ),
-            b
-          )
+        _2: %Constraint($monoid(
+          M = {N},
+          ∗ = {⋆},
+          e = {f}
         ))
       ),
       definition = [%exists(

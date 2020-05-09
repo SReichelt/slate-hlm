@@ -1,0 +1,38 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Identity_element
+ *             * https://proofwiki.org/wiki/Definition:Identity_(Abstract_Algebra)/Right_Identity
+ *             * https://ncatlab.org/nlab/show/identity+element
+ */
+$"right identity element"(
+  X: %Set(auto = %true),
+  Y: %Set(auto = %true),
+  ∗: %Element($Operations(
+    X = {X},
+    Y = {Y},
+    Z = {X}
+  )),
+  e: %Element(Y)
+): %Predicate {
+  display = [$NounRelation(
+    operands = [e, ∗],
+    singular = 'right identity',
+    plural = 'right identities',
+    preposition = 'for'
+  )],
+  definition = [%forall(
+    #(a: %Element(X)),
+    %equals(
+      $value(
+        X = {X},
+        Y = {Y},
+        Z = {X},
+        ∗ = {∗},
+        x = {a},
+        y = {e}
+      ),
+      a
+    )
+  )]
+}

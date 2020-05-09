@@ -1,0 +1,23 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Semigroup
+ *             * https://mathworld.wolfram.com/Semigroup.html
+ *             * https://proofwiki.org/wiki/Definition:Semigroup
+ *             * https://ncatlab.org/nlab/show/semigroup
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#semigroup
+ */
+$semigroup(
+  M: %Set,
+  ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+): %Predicate {
+  display = [$Structure(
+    operands = [M, ∗],
+    singular = 'semigroup',
+    plural = 'semigroups'
+  )],
+  definition = [$../../Essentials/Functions/Operations/associative(
+    X = {M},
+    ∗ = {∗}
+  )]
+}

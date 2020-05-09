@@ -24,7 +24,7 @@ $"indexed by natural number"(
     [
       {
         constructor = $../../../Numbers/Natural/"Natural numbers".zero,
-        value = $"neutral element"(
+        value = $"identity element"(
           X = {X},
           ⨂ = {⨂}
         ),

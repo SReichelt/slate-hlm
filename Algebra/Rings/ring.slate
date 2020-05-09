@@ -1,0 +1,158 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Ring_(mathematics)
+ *             * https://mathworld.wolfram.com/UnitRing.html
+ *             * https://proofwiki.org/wiki/Definition:Ring_with_Unity
+ *             * https://ncatlab.org/nlab/show/ring
+ *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#ring_theory
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/ring.html#ring
+ */
+$ring(
+  R: %Set,
+  ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+  "0": %Element(R),
+  ⊖: %Element($../../Essentials/Functions/Functions(
+    X = {R},
+    Y = {R}
+  )),
+  ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+  "1": %Element(R)
+): %Predicate {
+  display = [$Structure(
+    operands = [R, ⊕, "0", ⊖, ⊙, "1"],
+    singular = 'ring',
+    plural = 'rings'
+  )],
+  definition = [
+    %and(
+      $../Groups/"abelian group"(
+        G = {R},
+        ∗ = {⊕},
+        e = {"0"},
+        i = {⊖}
+      ),
+      $../Monoids/monoid(
+        M = {R},
+        ∗ = {⊙},
+        e = {"1"}
+      ),
+      $../../Essentials/Functions/Operations/distributive(
+        X = {R},
+        ∗ = {⊙},
+        ⋆ = {⊕}
+      ),
+      $../../Essentials/Functions/Operations/"absorbing element"(
+        X = {R},
+        ∗ = {⊙},
+        z = {"0"}
+      ),
+      %forall(
+        #(
+          a: %Element(R),
+          b: %Element(%previous)
+        ),
+        %equals(
+          $../../Essentials/Functions/Operations/value(
+            X = {R},
+            Y = {R},
+            Z = {R},
+            ∗ = {⊙},
+            x = {a},
+            y = {$../../Essentials/Functions/value(
+              X = {R},
+              Y = {R},
+              f = {⊖},
+              x = {b}
+            )}
+          ),
+          $../../Essentials/Functions/Operations/value(
+            X = {R},
+            Y = {R},
+            Z = {R},
+            ∗ = {⊙},
+            x = {$../../Essentials/Functions/value(
+              X = {R},
+              Y = {R},
+              f = {⊖},
+              x = {a}
+            )},
+            y = {b}
+          ),
+          $../../Essentials/Functions/value(
+            X = {R},
+            Y = {R},
+            f = {⊖},
+            x = {$../../Essentials/Functions/Operations/value(
+              X = {R},
+              Y = {R},
+              Z = {R},
+              ∗ = {⊙},
+              x = {a},
+              y = {b}
+            )}
+          )
+        )
+      )
+    ),
+    %and(
+      $../Groups/"abelian group"(
+        G = {R},
+        ∗ = {⊕},
+        e = {"0"},
+        i = {⊖}
+      ),
+      $../Monoids/monoid(
+        M = {R},
+        ∗ = {⊙},
+        e = {"1"}
+      ),
+      $../../Essentials/Functions/Operations/distributive(
+        X = {R},
+        ∗ = {⊙},
+        ⋆ = {⊕}
+      )
+    ),
+    %and(
+      $../Semirings/semiring(
+        R = {R},
+        ⊕ = {⊕},
+        "0" = {"0"},
+        ⊙ = {⊙},
+        "1" = {"1"}
+      ),
+      %forall(
+        #(a: %Element(R)),
+        %equals(
+          $../../Essentials/Functions/Operations/value(
+            X = {R},
+            Y = {R},
+            Z = {R},
+            ∗ = {⊕},
+            x = {a},
+            y = {$../../Essentials/Functions/value(
+              X = {R},
+              Y = {R},
+              f = {⊖},
+              x = {a}
+            )}
+          ),
+          $../../Essentials/Functions/Operations/value(
+            X = {R},
+            Y = {R},
+            Z = {R},
+            ∗ = {⊕},
+            x = {$../../Essentials/Functions/value(
+              X = {R},
+              Y = {R},
+              f = {⊖},
+              x = {a}
+            )},
+            y = {a}
+          ),
+          "0"
+        )
+      )
+    )
+  ]
+}

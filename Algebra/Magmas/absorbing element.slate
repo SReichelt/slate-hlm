@@ -1,0 +1,33 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Absorbing_element
+ *             * https://proofwiki.org/wiki/Definition:Zero_Element#Zero
+ */
+$"absorbing element"(
+  𝐌: %Element($Magmas),
+  z: %Element($Carrier(𝐌 = {𝐌}))
+): %Predicate {
+  display = [$NounRelation(
+    operands = [z, 𝐌],
+    singular = 'absorbing element',
+    plural = 'absorbing elements',
+    article = 'an'
+  )],
+  definition = [%structural(
+    𝐌,
+    $Magmas,
+    [{
+      constructor = $Magmas.magma,
+      parameters = #(
+        M: %Set,
+        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+      ),
+      value = $../../Essentials/Functions/Operations/"absorbing element"(
+        X = {M},
+        ∗ = {∗},
+        z = {z}
+      )
+    }]
+  )]
+}

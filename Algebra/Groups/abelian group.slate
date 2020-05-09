@@ -1,0 +1,54 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Abelian_group
+ *             * https://mathworld.wolfram.com/Abelian.html
+ *             * https://proofwiki.org/wiki/Definition:Abelian_Group
+ *             * https://ncatlab.org/nlab/show/abelian+group
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#comm_group
+ */
+$"abelian group"(
+  G: %Set,
+  ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+  e: %Element(G),
+  i: %Element($../../Essentials/Functions/Functions(
+    X = {G},
+    Y = {G}
+  ))
+): %Predicate {
+  display = [$Structure(
+    operands = [G, ∗, e, i],
+    singular = 'abelian group',
+    plural = 'abelian groups',
+    article = 'an'
+  )],
+  definition = [
+    %and(
+      $group(
+        G = {G},
+        ∗ = {∗},
+        e = {e},
+        i = {i}
+      ),
+      $abelian(𝐆 = {$Groups.group(
+        G = {G},
+        ∗ = {∗},
+        e = {e},
+        i = {i}
+      )})
+    ),
+    %and(
+      $group(
+        G = {G},
+        ∗ = {∗},
+        e = {e},
+        i = {i}
+      ),
+      $../../Essentials/Functions/Operations/commutative(
+        X = {G},
+        Z = {G},
+        ∗ = {∗}
+      )
+    )
+  ]
+}

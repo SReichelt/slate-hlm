@@ -7,37 +7,11 @@
 $"Iterated operations"(X: %Set(auto = %true)): %Construction {
   $operation(
     ∗: %Element($../"Inner operations"(X = {X})),
-    _1: %Constraint($../associative(
-      X = {X},
-      ∗ = {∗}
-    )),
-    _2: %Constraint($../commutative(
-      X = {X},
-      Z = {X},
-      ∗ = {∗}
-    )),
     e: %Element(X),
-    _3: %Constraint(%forall(
-      #(x: %Element(X)),
-      %equals(
-        $../value(
-          X = {X},
-          Y = {X},
-          Z = {X},
-          ∗ = {∗},
-          x = {x},
-          y = {e}
-        ),
-        $../value(
-          X = {X},
-          Y = {X},
-          Z = {X},
-          ∗ = {∗},
-          x = {e},
-          y = {x}
-        ),
-        x
-      )
+    _1: %Constraint($../../../../Algebra/Monoids/"commutative monoid"(
+      M = {X},
+      ∗ = {∗},
+      e = {e}
     ))
   ): %Constructor {
     display = [$Parens(
@@ -53,72 +27,20 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
     equalityDefinition = {
       leftParameters = #(
         ∗: %Element($../"Inner operations"(X = {X})),
-        _1: %Constraint($../associative(
-          X = {X},
-          ∗ = {∗}
-        )),
-        _2: %Constraint($../commutative(
-          X = {X},
-          Z = {X},
-          ∗ = {∗}
-        )),
         e: %Element(X),
-        _3: %Constraint(%forall(
-          #(x: %Element(X)),
-          %equals(
-            $../value(
-              X = {X},
-              Y = {X},
-              Z = {X},
-              ∗ = {∗},
-              x = {x},
-              y = {e}
-            ),
-            $../value(
-              X = {X},
-              Y = {X},
-              Z = {X},
-              ∗ = {∗},
-              x = {e},
-              y = {x}
-            ),
-            x
-          )
+        _1: %Constraint($../../../../Algebra/Monoids/"commutative monoid"(
+          M = {X},
+          ∗ = {∗},
+          e = {e}
         ))
       ),
       rightParameters = #(
         ⋆: %Element($../"Inner operations"(X = {X})),
-        _4: %Constraint($../associative(
-          X = {X},
-          ∗ = {⋆}
-        )),
-        _5: %Constraint($../commutative(
-          X = {X},
-          Z = {X},
-          ∗ = {⋆}
-        )),
         f: %Element(X),
-        _6: %Constraint(%forall(
-          #(x: %Element(X)),
-          %equals(
-            $../value(
-              X = {X},
-              Y = {X},
-              Z = {X},
-              ∗ = {⋆},
-              x = {x},
-              y = {f}
-            ),
-            $../value(
-              X = {X},
-              Y = {X},
-              Z = {X},
-              ∗ = {⋆},
-              x = {f},
-              y = {x}
-            ),
-            x
-          )
+        _2: %Constraint($../../../../Algebra/Monoids/"commutative monoid"(
+          M = {X},
+          ∗ = {⋆},
+          e = {f}
         ))
       ),
       definition = [%and(

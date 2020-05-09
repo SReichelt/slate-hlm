@@ -20,7 +20,7 @@ $"indexed by set with finite support"(
         ))),
         %equals(
           a[k],
-          $"neutral element"(
+          $"identity element"(
             X = {X},
             ⨂ = {⨂}
           )
@@ -52,7 +52,7 @@ $"indexed by set with finite support"(
           ))),
           %equals(
             a[k],
-            $"neutral element"(
+            $"identity element"(
               X = {X},
               ⨂ = {⨂}
             )
@@ -84,7 +84,7 @@ $"indexed by set with finite support"(
           ))),
           %equals(
             a[k],
-            $"neutral element"(
+            $"identity element"(
               X = {X},
               ⨂ = {⨂}
             )

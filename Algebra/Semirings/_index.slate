@@ -3,6 +3,7 @@
 $Semirings: %Section {
   logic = 'hlm',
   items = [
+    %item($semiring),
     %item($Semirings),
     %item($Carrier),
     %item($sum),

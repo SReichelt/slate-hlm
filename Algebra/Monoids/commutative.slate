@@ -16,32 +16,11 @@ $commutative(𝐌: %Element($Monoids)): %Predicate {
       parameters = #(
         M: %Set,
         ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
-        _1: %Constraint($../../Essentials/Functions/Operations/associative(
-          X = {M},
-          ∗ = {∗}
-        )),
         e: %Element(M),
-        _2: %Constraint(%forall(
-          #(a: %Element(M)),
-          %equals(
-            $../../Essentials/Functions/Operations/value(
-              X = {M},
-              Y = {M},
-              Z = {M},
-              ∗ = {∗},
-              x = {a},
-              y = {e}
-            ),
-            $../../Essentials/Functions/Operations/value(
-              X = {M},
-              Y = {M},
-              Z = {M},
-              ∗ = {∗},
-              x = {e},
-              y = {a}
-            ),
-            a
-          )
+        _1: %Constraint($monoid(
+          M = {M},
+          ∗ = {∗},
+          e = {e}
         ))
       ),
       value = $../../Essentials/Functions/Operations/commutative(

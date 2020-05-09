@@ -2,5 +2,8 @@
 
 $Semigroups: %Section {
   logic = 'hlm',
-  items = [%item($Semigroups)]
+  items = [
+    %item($semigroup),
+    %item($Semigroups)
+  ]
 }

@@ -4,7 +4,7 @@ $"Iterated operations": %Section {
   logic = 'hlm',
   items = [
     %item($"Iterated operations"),
-    %item($"neutral element"),
+    %item($"identity element"),
     %item($operation),
     %item($"indexed by natural number"),
     %item($"Iterated operation indexed by natural number is distributive"),
