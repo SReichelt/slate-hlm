@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks “`s` is `p`” is shorthand for “`s` has property `p`.”
+ * @remarks "`s` is `p`" is shorthand for "`s` has property `p`."
  */
 $"has property"(
   S: %Set(auto = %true),

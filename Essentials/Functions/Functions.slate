@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition uses a feature of the HLM logic called “bindings.” It is equivalent to the usual set-theoretic definition, which is called “mapping” in this library to distinguish the two definitions (see `$../Relations/mapping`, `$"mapping as function"`).
+ * @remarks This definition uses a feature of the HLM logic called "bindings." It is equivalent to the usual set-theoretic definition, which is called "mapping" in this library to distinguish the two definitions (see `$../Relations/mapping`, `$"mapping as function"`).
  *
  *          The major advantage of the definition using bindings is that given an explicitly defined function, determining the value at a specific input is simply a matter of resolving definitions.
  *

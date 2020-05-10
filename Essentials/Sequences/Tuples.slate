@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This is a slightly generalized notion of “tuple” where the length `α` can be an arbitrary ordinal number. If `α` is a natural number, it matches the common definition.
+ * @remarks This is a slightly generalized notion of "tuple" where the length `α` can be an arbitrary ordinal number. If `α` is a natural number, it matches the common definition.
  *
  *          We could define tuples simply as functions, but a custom construction has several advantages, including the ability to easily destruct a tuple into its elements, and the ability to omit `S` from the constructor.
  *

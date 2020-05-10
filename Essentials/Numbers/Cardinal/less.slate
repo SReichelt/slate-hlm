@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks Note that without the axiom of choice, this is not equivalent to the negation of “greater or equal”.
+ * @remarks Note that without the axiom of choice, this is not equivalent to the negation of "greater or equal".
  */
 $less(
   κ: %Element($"Cardinal numbers"),

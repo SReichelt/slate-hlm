@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks We omit the word “infinite” because infinite sequences are used much more frequently than finite ones.
+ * @remarks We omit the word "infinite" because infinite sequences are used much more frequently than finite ones.
  *
  *          We could define infinite sequences simply as functions, but a custom construction has several advantages, including the ability to easily destruct a sequence into its elements, and the ability to omit `S` from the constructor.
  *
