@@ -9,9 +9,10 @@
  *             * http://oeis.org/A000142
  */
 $factorial(n: %Element($"Natural numbers")): %ExplicitOperator {
-  notation = [$UnaryOperator(
+  notation = [$PostfixUnaryOperator(
     symbol = '!',
-    operand = n
+    operand = n,
+    minParenLevel = 3
   )],
   definition = [%structuralCases(
     n,

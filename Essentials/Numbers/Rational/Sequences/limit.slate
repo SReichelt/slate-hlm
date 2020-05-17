@@ -24,6 +24,7 @@ $limit(
       symbol = '→',
       operands = [n, '∞']
     ),
+    maxParenLevel = 1,
     style = 'shallow'
   )],
   parameter = #(l: %Element($../"Rational numbers")),

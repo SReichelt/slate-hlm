@@ -8,12 +8,13 @@ $restriction(
   ≺: %Element($Endorelations(S = {S})),
   T: %Subset(S)
 ): %ExplicitOperator {
-  notation = [$UnaryOperator(
+  notation = [$PostfixUnaryOperator(
     symbol = $SubSup(
       body = '∣',
       sub = T
     ),
-    operand = ≺
+    operand = ≺,
+    minParenLevel = 3
   )],
   definition = [$Endorelations(S = {T}).relation(s = {
       #(t: %Element(T)),
