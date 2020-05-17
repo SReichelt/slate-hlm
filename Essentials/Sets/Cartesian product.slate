@@ -44,6 +44,6 @@ $"Cartesian product"(
   display = [$Operator(
     symbol = '×',
     operands = [S, T],
-    minParenLevel = 1
+    minParenLevel = 2
   )]
 }

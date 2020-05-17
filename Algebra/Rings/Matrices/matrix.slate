@@ -12,13 +12,7 @@ $matrix(
   n: %Nat,
   items: %Element($../Carrier(𝐑 = {𝐑}))[,]
 ): %MacroOperator {
-  display = [$Parens(
-    body = $Table(
-      items = items,
-      style = 'matrix'
-    ),
-    style = '[]'
-  )],
+  display = [$Matrix(items = items)],
   references = {Matrices = $Matrices(
     𝐑 = {𝐑},
     m = {$../../../Essentials/Numbers/Natural/number(value = m)},
