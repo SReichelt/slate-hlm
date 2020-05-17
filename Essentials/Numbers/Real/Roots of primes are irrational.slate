@@ -191,7 +191,7 @@ $"Roots of primes are irrational"(
       )),
       _: %UseExists(#(l: %Element($../Natural/"Natural numbers"))),
       _: %Consider(_2),
-      _: %ResolveDef(%equals(
+      _: %UnfoldDef(%equals(
         $../Integer/product(
           a = {$../Integer/power(
             a = {b},
@@ -207,7 +207,7 @@ $"Roots of primes are irrational"(
           b = {p}
         )
       )),
-      _: %ResolveDef(%equals(
+      _: %UnfoldDef(%equals(
         $../Integer/product(
           a = {%associative($../Integer/product(
             a = {$../Integer/power(

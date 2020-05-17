@@ -342,7 +342,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
       steps = #(
         _: %Consider(@),
         _: %UseExists(#(a: %Element($"Natural numbers"))),
-        _: %ResolveDef(%sub(
+        _: %UnfoldDef(%sub(
           M,
           $Subsets/"Segment (less)"(n = {$"Natural numbers".successor(n = {a})})
         )),

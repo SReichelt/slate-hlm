@@ -91,7 +91,7 @@ $"Euclids theorem": %StandardTheorem {
         )
       ),
       _: %UseExists(#(p: %Element($"Prime numbers"))),
-      _: %ResolveDef($../divisible(
+      _: %UnfoldDef($../divisible(
         m = {p},
         n = {$../sum(
           m = {a},
