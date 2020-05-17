@@ -11,7 +11,7 @@ $"right modules"(
   u: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
   𝐑: %Element($../../Algebra/Rings/Rings)
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = '𝐑𝐌𝐨𝐝',
       sub = u

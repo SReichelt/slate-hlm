@@ -20,7 +20,7 @@ $sum(
   )),
   B: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '+',
     operands = [A, B],
     minParenLevel = 1,

@@ -18,7 +18,7 @@ $Monoids: %Construction {
       e = {e}
     ))
   ): %Constructor {
-    display = [$Tuple(
+    notation = [$Tuple(
       items = [M, ∗, e],
       style = '[]'
     )],
@@ -73,8 +73,8 @@ $Monoids: %Construction {
     }
   }
 
-  display = ['𝓜𝓸𝓷'],
-  definitionDisplay = {
+  notation = ['𝓜𝓸𝓷'],
+  definitionNotation = {
     parameter = #(𝐌: %Expr),
     singularName = 'monoid',
     pluralName = 'monoids'

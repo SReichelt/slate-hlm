@@ -55,7 +55,7 @@ $"vertical composition"(
     G = {H}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '∘',
     operands = [ε, η],
     minParenLevel = 2,

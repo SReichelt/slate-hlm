@@ -11,7 +11,7 @@ $power(
   m: %Element($"Natural numbers"),
   n: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = m,
     sup = n
   )],

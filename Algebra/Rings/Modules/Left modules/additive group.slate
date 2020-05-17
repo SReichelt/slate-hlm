@@ -10,7 +10,7 @@ $"additive group"(
   ),
   𝐌: %Element($"Left modules"(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$Tuple(
+  notation = [$Tuple(
     items = [𝐌, '+'],
     style = '[]'
   )],

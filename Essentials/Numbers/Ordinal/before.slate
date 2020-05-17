@@ -11,7 +11,7 @@ $before(
   a: %Element($Carrier(α = {α})),
   b: %Element(%previous)
 ): %Predicate {
-  display = [
+  notation = [
     $Relation(
       symbol = %neg('≤', '≰'),
       operands = [a, b]

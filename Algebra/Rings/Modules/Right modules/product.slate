@@ -15,7 +15,7 @@ $product(
   )),
   a: %Element($../../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⋅',
     operands = [x, a],
     space = ' ',

@@ -12,7 +12,7 @@ $"power to integer"(
   a: %Element($Carrier(𝐆 = {𝐆})),
   z: %Element($../../Essentials/Numbers/Integer/Integers)
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = a,
     sup = z
   )],

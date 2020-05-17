@@ -15,7 +15,7 @@ $"left identity element"(
   )),
   e: %Element(X)
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [e, ∗],
     singular = 'left identity',
     plural = 'left identities',

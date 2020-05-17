@@ -11,7 +11,7 @@ $Properties(S: %Set(auto = %true)): %Construction {
     S,
     #(p: %Prop)
   )): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = p,
         style = '[]'
@@ -38,11 +38,11 @@ $Properties(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  display = [$Function(
+  notation = [$Function(
     function = '𝓟𝓻𝓹',
     arguments = [S]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(p: %Expr),
     singularName = ['property', ' on ', S],
     pluralName = ['properties', ' on ', S]

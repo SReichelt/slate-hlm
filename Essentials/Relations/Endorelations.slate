@@ -16,7 +16,7 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       #(p: %Prop)
     ))
   )): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = p,
         style = '[]'
@@ -52,11 +52,11 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  display = [$Function(
+  notation = [$Function(
     function = '𝓡𝓮𝓵',
     arguments = [S]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(≺: %Expr),
     singularName = ['relation', ' on ', S],
     pluralName = ['relations', ' on ', S]

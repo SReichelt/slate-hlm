@@ -10,7 +10,7 @@ $coprime(
   a: %Element($Integers),
   b: %Element(%previous)
 ): %Predicate {
-  display = [$MultiProperty(
+  notation = [$MultiProperty(
     operands = [a, b],
     property = 'coprime'
   )],

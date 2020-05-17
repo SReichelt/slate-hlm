@@ -4,7 +4,7 @@ $finite(
   S: %Set(auto = %true),
   𝒂: %Element($"Ordinal-indexed sequences"(S = {S}))
 ): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = 𝒂,
     property = 'finite'
   )],

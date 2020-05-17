@@ -9,7 +9,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/category/Group/basic.html#Group
  */
 $groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '𝐆𝐫𝐩',
     sub = u
   )],

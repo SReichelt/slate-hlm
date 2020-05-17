@@ -21,7 +21,7 @@ $composition(
     Y = {Z}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '∘',
     operands = [g, f],
     minParenLevel = 2,

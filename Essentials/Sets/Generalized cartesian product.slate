@@ -18,7 +18,7 @@ $"Generalized cartesian product"(
     I,
     #(s: %Element(S[j]))
   )): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = s,
         style = '()'
@@ -45,7 +45,7 @@ $"Generalized cartesian product"(
     }
   }
 
-  display = [$LargeOperator(
+  notation = [$LargeOperator(
     symbol = '∏',
     operand = S,
     under = $ElementRelation(

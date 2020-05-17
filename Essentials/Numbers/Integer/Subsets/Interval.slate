@@ -4,7 +4,7 @@ $Interval(
   a: %Element($../Integers),
   b: %Element(%previous)
 ): %SetOperator {
-  display = [$Enumeration(items = [
+  notation = [$Enumeration(items = [
     a,
     $BottomEllipsis,
     b

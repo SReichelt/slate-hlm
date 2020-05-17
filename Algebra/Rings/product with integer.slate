@@ -11,7 +11,7 @@ $"product with integer"(
   z: %Element($../../Essentials/Numbers/Integer/Integers),
   a: %Element($Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⋅',
     operands = [z, a],
     space = ' ',

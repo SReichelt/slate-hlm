@@ -11,7 +11,7 @@ $"monomial with exponent one"(
   ),
   a: %Element($../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '',
     operands = [a, X],
     space = '',

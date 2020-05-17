@@ -5,7 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Additive_Group_of_Integers
  */
 $integers: %ExplicitOperator {
-  display = ['ℤ'],
+  notation = ['ℤ'],
   definition = [$../Groups.group(
     G = {$../../../Essentials/Numbers/Integer/Integers},
     ∗ = {$../../../Essentials/Functions/Operations/operator(

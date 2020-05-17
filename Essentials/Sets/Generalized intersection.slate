@@ -14,7 +14,7 @@ $"Generalized intersection"(
     #(S: %Subset(U))
   )
 ): %SetOperator {
-  display = [$LargeOperator(
+  notation = [$LargeOperator(
     symbol = '⋂',
     operand = S,
     under = $ElementRelation(

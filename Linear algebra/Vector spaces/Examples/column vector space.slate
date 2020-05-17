@@ -10,7 +10,7 @@ $"column vector space"(
   ),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 𝐅,
     sup = n
   )],

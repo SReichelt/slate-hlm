@@ -14,7 +14,7 @@ $Intersection(
   S: %Subset(U),
   T: %Subset(%previous)
 ): %SetOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '∩',
     operands = [S, T],
     space = ' '

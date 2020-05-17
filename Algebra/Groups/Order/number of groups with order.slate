@@ -5,7 +5,7 @@
  *             * http://oeis.org/A000001
  */
 $"number of groups with order"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'gnu',
     arguments = [n]
   )],

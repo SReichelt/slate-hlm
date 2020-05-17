@@ -16,7 +16,7 @@ $"mapping as function"(
     ≺ = {≺}
   ))
 ): %ExplicitOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = ≺,
     style = '()'
   )],

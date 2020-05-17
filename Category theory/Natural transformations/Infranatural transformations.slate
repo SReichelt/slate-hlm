@@ -56,7 +56,7 @@ $"Infranatural transformations"(
       )}
     )))
   )): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = n,
         style = '()'
@@ -130,13 +130,13 @@ $"Infranatural transformations"(
     }
   }
 
-  display = [$Function(
+  notation = [$Function(
     function = 'Infranat',
     arguments = [F, G]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(η: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = η,
       symbol = '⇀',
       operands = [F, G]

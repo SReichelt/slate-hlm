@@ -7,7 +7,7 @@
  *             * https://proofwiki.org/wiki/Definition:Category_of_Rings_with_Unity
  */
 $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '𝐑𝐢𝐧𝐠',
     sub = u
   )],

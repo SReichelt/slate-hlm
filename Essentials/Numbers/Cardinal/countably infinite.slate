@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 $"countably infinite"(κ: %Element($"Cardinal numbers")): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = κ,
     property = 'countably infinite'
   )],

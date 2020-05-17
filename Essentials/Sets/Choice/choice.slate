@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 $choice(S: %Set): %Predicate {
-  display = [$Feature(
+  notation = [$Feature(
     operand = S,
     singular = 'choice function',
     plural = 'choice functions'

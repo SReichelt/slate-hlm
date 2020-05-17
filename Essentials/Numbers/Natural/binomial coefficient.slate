@@ -10,7 +10,7 @@ $"binomial coefficient"(
   n: %Element($"Natural numbers"),
   k: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$BinomialCoefficient(
+  notation = [$BinomialCoefficient(
     top = n,
     bottom = k
   )],

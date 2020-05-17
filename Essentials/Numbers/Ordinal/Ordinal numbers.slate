@@ -16,7 +16,7 @@ $"Ordinal numbers": %Construction {
       ⪯ = {⪯}
     ))
   ): %Constructor {
-    display = [$Tuple(
+    notation = [$Tuple(
       items = [S, ⪯],
       style = '[]'
     )],
@@ -56,7 +56,7 @@ $"Ordinal numbers": %Construction {
     }
   }
 
-  display = ['𝓞𝓻𝓭'],
+  notation = ['𝓞𝓻𝓭'],
   embedding = {
     parameter = #(n: %Element($../Natural/"Natural numbers")),
     target = $"Ordinal numbers"."order type"(

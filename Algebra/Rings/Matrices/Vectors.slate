@@ -9,7 +9,7 @@ $Vectors(
   𝐑: %Element($../Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %SetOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 𝐑,
     sup = n
   )],

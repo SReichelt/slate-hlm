@@ -10,7 +10,7 @@ $product(
   α: %Element($"Ordinal numbers"),
   β: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⋅',
     operands = [α, β],
     space = ' ',

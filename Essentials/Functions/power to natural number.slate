@@ -12,7 +12,7 @@ $"power to natural number"(
   )),
   n: %Element($../Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = f,
     sup = n
   )],

@@ -15,7 +15,7 @@ $monomial(
   a: %Element($../Carrier(𝐑 = {𝐑})),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '',
     operands = [
       a,

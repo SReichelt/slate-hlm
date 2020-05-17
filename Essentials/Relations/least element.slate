@@ -9,7 +9,7 @@ $"least element"(
   T: %Subset(S),
   t: %Element(T)
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     singular = [
       $DependentWord(
         word = 'least',

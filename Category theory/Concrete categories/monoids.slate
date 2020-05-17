@@ -7,7 +7,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/category/Mon/basic.html#Mon
  */
 $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '𝐌𝐨𝐧',
     sub = u
   )],

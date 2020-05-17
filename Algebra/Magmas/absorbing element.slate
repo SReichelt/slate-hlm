@@ -8,7 +8,7 @@ $"absorbing element"(
   𝐌: %Element($Magmas),
   z: %Element($Carrier(𝐌 = {𝐌}))
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [z, 𝐌],
     singular = 'absorbing element',
     plural = 'absorbing elements',

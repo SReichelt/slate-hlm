@@ -14,7 +14,7 @@ $"right absorbing element"(
   )),
   z: %Element(Y)
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [z, ∗],
     singular = 'right absorbing element',
     plural = 'right absorbing elements',

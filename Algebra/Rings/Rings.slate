@@ -28,7 +28,7 @@ $Rings: %Construction {
       "1" = {"1"}
     ))
   ): %Constructor {
-    display = [$Tuple(
+    notation = [$Tuple(
       items = [R, ⊕, "0", ⊖, ⊙, "1"],
       style = '[]'
     )],
@@ -128,8 +128,8 @@ $Rings: %Construction {
     }
   }
 
-  display = ['𝓡𝓲𝓷𝓰'],
-  definitionDisplay = {
+  notation = ['𝓡𝓲𝓷𝓰'],
+  definitionNotation = {
     parameter = #(𝐑: %Expr),
     singularName = 'ring',
     pluralName = 'rings'

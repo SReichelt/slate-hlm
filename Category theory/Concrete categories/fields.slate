@@ -7,7 +7,7 @@
  *             * https://ncatlab.org/nlab/show/field#category
  */
 $fields(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '𝐅𝐥𝐝',
     sub = u
   )],

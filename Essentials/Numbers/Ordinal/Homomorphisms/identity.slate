@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 $identity(α: %Element($../"Ordinal numbers")): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'id',
     sub = α
   )],

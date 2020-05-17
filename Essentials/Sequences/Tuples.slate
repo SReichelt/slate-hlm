@@ -22,7 +22,7 @@ $Tuples(
     $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
     #(a: %Element(S))
   )): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = a,
         style = '()'
@@ -49,11 +49,11 @@ $Tuples(
     }
   }
 
-  display = [$SubSup(
+  notation = [$SubSup(
     body = S,
     sup = α
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(𝐚: %Expr),
     singularName = [
       $DependentWord(

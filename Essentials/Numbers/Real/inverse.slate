@@ -4,7 +4,7 @@
  * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal_opp
  */
 $inverse(a: %Element($"Real numbers")): %ExplicitOperator {
-  display = [$PrefixUnaryOperator(
+  notation = [$PrefixUnaryOperator(
     symbol = '−',
     operand = a,
     minParenLevel = 1,

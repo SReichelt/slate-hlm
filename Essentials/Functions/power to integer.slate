@@ -8,7 +8,7 @@ $"power to integer"(
   )),
   a: %Element($../Numbers/Integer/Integers)
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = f,
     sup = a
   )],

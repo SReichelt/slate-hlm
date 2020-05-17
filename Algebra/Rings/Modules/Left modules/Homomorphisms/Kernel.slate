@@ -26,7 +26,7 @@ $Kernel(
     𝐍 = {𝐍}
   ))
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Ker',
     arguments = [φ]
   )],

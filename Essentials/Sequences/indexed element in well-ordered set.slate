@@ -16,7 +16,7 @@ $"indexed element in well-ordered set"(
   )),
   β: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))
 ): %ImplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = S,
       sub = ⪯

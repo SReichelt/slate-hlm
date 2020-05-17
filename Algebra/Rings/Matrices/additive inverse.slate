@@ -19,7 +19,7 @@ $"additive inverse"(
     n = {n}
   ))
 ): %ExplicitOperator {
-  display = [$PrefixUnaryOperator(
+  notation = [$PrefixUnaryOperator(
     symbol = '−',
     operand = A,
     minParenLevel = 1,

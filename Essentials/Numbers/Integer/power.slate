@@ -8,7 +8,7 @@ $power(
   a: %Element($Integers),
   n: %Element($../Natural/"Natural numbers")
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = a,
     sup = n
   )],

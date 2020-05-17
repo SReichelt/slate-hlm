@@ -24,7 +24,7 @@ $"codomain restriction"(
     B
   ))
 ): %ExplicitOperator {
-  display = [$UnaryOperator(
+  notation = [$UnaryOperator(
     symbol = $SubSup(
       body = '∣',
       sub = A,

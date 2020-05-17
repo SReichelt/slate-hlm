@@ -6,7 +6,7 @@
  * @references * http://oeis.org/A027750
  */
 $Divisors(n: %Element($"Natural numbers")): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = 'Div',
       sub = 'ℕ'

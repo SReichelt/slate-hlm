@@ -30,7 +30,7 @@ $"index in well-ordered set"(
     )
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = 'idx',
       sub = ⪯

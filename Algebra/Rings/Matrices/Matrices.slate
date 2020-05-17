@@ -22,7 +22,7 @@ $Matrices(
       #(a: %Element($../Carrier(𝐑 = {𝐑})))
     ))
   )): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = a,
         style = '()'
@@ -64,7 +64,7 @@ $Matrices(
     }
   }
 
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 𝐑,
     sup = $Operator(
       symbol = '×',

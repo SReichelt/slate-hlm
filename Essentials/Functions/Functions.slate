@@ -21,7 +21,7 @@ $Functions(
     X,
     #(y: %Element(Y))
   )): %Constructor {
-    display = [$Parens(
+    notation = [$Parens(
       body = $Table(
         items = [
           [
@@ -41,9 +41,9 @@ $Functions(
       ),
       style = '()'
     )],
-    definitionDisplay = {
+    definitionNotation = {
       parameter = #(f: %Expr),
-      display = [$FunctionPrefix(
+      notation = [$FunctionPrefix(
         function = f,
         body = [
           ' ',
@@ -84,14 +84,14 @@ $Functions(
     }
   }
 
-  display = [$FunctionOperator(
+  notation = [$FunctionOperator(
     symbol = '→',
     operands = [X, Y],
     minParenLevel = -1
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(f: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = f,
       symbol = '→',
       operands = [X, Y]

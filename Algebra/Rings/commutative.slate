@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 $commutative(𝐑: %Element($Rings)): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = 𝐑,
     property = 'commutative'
   )],

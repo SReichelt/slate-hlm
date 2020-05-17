@@ -9,7 +9,7 @@ $operator(
   parameter: %ParameterList,
   operator[parameter]: %DefinitionRef
 ): %MacroOperator {
-  display = [operator],
+  notation = [operator],
   references = {Functions = $Functions(
     X = {X},
     Y = {Y}

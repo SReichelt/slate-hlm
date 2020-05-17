@@ -10,7 +10,7 @@ $power(
   κ: %Element($"Cardinal numbers"),
   μ: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = κ,
     sup = μ
   )],

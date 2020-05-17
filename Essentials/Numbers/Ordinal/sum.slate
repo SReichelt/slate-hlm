@@ -11,7 +11,7 @@ $sum(
   α: %Element($"Ordinal numbers"),
   β: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '+',
     operands = [α, β],
     minParenLevel = 1,

@@ -9,7 +9,7 @@
  */
 $Variables: %Construction {
   $variable(n: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Constructor {
-    display = [$Parens(
+    notation = [$Parens(
       body = n,
       style = '()'
     )],
@@ -21,8 +21,8 @@ $Variables: %Construction {
     }
   }
 
-  display = ['𝓥𝓪𝓻'],
-  definitionDisplay = {
+  notation = ['𝓥𝓪𝓻'],
+  definitionNotation = {
     parameter = #(v: %Expr),
     singularName = 'variable',
     pluralName = 'variables'

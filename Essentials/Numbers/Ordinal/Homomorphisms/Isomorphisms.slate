@@ -9,13 +9,13 @@ $Isomorphisms(
   α: %Element($../"Ordinal numbers"),
   β: %Element(%previous)
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Iso',
     arguments = [α, β]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(φ: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = φ,
       symbol = '↔',
       operands = [α, β]

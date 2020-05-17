@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 $one(𝐑: %Element($Semirings)): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '1',
     sub = 𝐑
   )],

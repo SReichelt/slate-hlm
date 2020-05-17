@@ -10,13 +10,13 @@ $Homomorphisms(
   𝐌: %Element($../Monoids),
   𝐍: %Element(%previous)
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Hom',
     arguments = [𝐌, 𝐍]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(φ: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = φ,
       symbol = '→',
       operands = [𝐌, 𝐍]

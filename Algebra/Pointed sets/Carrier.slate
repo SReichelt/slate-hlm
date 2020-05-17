@@ -4,13 +4,13 @@
  * @remarks This definition retrieves a representative carrier set from a pointed set (which is actually an equivalence class of pointed sets), and enables typical abuse of notation.
  */
 $Carrier(𝐒: %Element($"Pointed sets")): %SetOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = 𝐒,
     style = '()'
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(x: %Expr),
-    display = [$ElementParameter(
+    notation = [$ElementParameter(
       element = x,
       set = 𝐒
     )]

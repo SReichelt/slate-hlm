@@ -10,6 +10,6 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.empty_def
  */
 $"Empty set": %SetOperator {
-  display = ['∅'],
+  notation = ['∅'],
   definition = [%enumeration]
 }

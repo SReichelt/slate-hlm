@@ -10,7 +10,7 @@ $"identity element"(
   ∗: %Element($"Inner operations"(X = {X})),
   e: %Element(X)
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [e, ∗],
     singular = 'identity',
     plural = 'identities',

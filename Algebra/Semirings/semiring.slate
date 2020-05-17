@@ -14,7 +14,7 @@ $semiring(
   ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
   "1": %Element(R)
 ): %Predicate {
-  display = [$Structure(
+  notation = [$Structure(
     operands = [R, ⊕, "0", ⊙, "1"],
     singular = 'semiring',
     plural = 'semirings'

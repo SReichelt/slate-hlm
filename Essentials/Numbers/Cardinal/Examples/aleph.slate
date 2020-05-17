@@ -9,7 +9,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#cardinal.aleph_zero
  */
 $aleph(α: %Element(%enumeration($../../Natural/number(value = 0)))): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'ℵ',
     sub = α
   )],

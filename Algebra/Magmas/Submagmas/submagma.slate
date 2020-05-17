@@ -4,7 +4,7 @@ $submagma(
   𝐌: %Element($../Magmas),
   𝐍: %Element(%previous)
 ): %Predicate {
-  display = [
+  notation = [
     $Relation(
       symbol = %neg('≤', '≰'),
       operands = [𝐌, 𝐍]

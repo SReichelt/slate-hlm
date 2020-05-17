@@ -4,7 +4,7 @@ $identity(𝐒: %Element(
   $../"Pointed sets",
   auto = %true
 )): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'id',
     sub = 𝐒
   )],

@@ -13,7 +13,7 @@ $"Span of element"(
   ),
   g: %Element($../Carrier(𝐆 = {𝐆}))
 ): %SetOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = g,
     style = '<>'
   )],

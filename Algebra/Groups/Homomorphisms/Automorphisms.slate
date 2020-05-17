@@ -8,13 +8,13 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/mul_add.html#mul_aut
  */
 $Automorphisms(𝐆: %Element($../Groups)): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Aut',
     arguments = [𝐆]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(φ: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = φ,
       symbol = '↔',
       operands = [𝐆, 𝐆]

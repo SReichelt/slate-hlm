@@ -11,7 +11,7 @@ $identity(
   𝐑: %Element($../Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'I',
     sub = $SubSup(
       body = 𝐑,

@@ -21,13 +21,13 @@ $Isomorphisms(
   )),
   𝐘: %Element(%previous)
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Iso',
     arguments = [𝐗, 𝐘]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(F: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = F,
       symbol = '↔',
       operands = [𝐗, 𝐘]

@@ -17,7 +17,7 @@ $limit(
   })),
   _1: %Constraint($convergent(𝐚 = {𝐚}))
 ): %ImplicitOperator {
-  display = [$OverUnderOperator(
+  notation = [$OverUnderOperator(
     symbol = 'lim',
     operand = a,
     under = $Relation(

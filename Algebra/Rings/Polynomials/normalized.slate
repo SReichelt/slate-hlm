@@ -20,7 +20,7 @@ $normalized(
   )),
   a: %Element($../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = $Operator(
       symbol = $ConstructorName(name = '+'),
       operands = [

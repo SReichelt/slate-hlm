@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 $countable(κ: %Element($"Cardinal numbers")): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = κ,
     property = %neg('countable', 'uncountable')
   )],

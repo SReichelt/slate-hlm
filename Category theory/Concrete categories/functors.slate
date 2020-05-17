@@ -18,7 +18,7 @@ $functors(
   𝓒: %Element($../Categories(u = {u})),
   𝓓: %Element($../Categories(u = {v}))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = '𝐅𝐮𝐧',
     arguments = [𝓒, 𝓓]
   )],

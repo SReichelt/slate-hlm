@@ -7,7 +7,7 @@ $identity(𝐆: %Element(
   $../Groups,
   auto = %true
 )): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'id',
     sub = 𝐆
   )],

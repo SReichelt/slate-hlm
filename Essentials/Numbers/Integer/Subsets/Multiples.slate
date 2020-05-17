@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 $Multiples(n: %Element($../../Natural/"Natural numbers")): %SetOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '',
     operands = [n, 'ℤ'],
     space = '',

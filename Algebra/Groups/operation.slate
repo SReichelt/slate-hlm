@@ -11,7 +11,7 @@ $operation(
   a: %Element($Carrier(𝐆 = {𝐆})),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '•',
     operands = [a, b]
   )],

@@ -20,7 +20,7 @@ $"product with right scalar"(
   )),
   r: %Element($../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⋅',
     operands = [A, r],
     space = ' ',

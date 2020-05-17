@@ -23,7 +23,7 @@ $Groups: %Construction {
       i = {i}
     ))
   ): %Constructor {
-    display = [$Tuple(
+    notation = [$Tuple(
       items = [G, ∗, e, i],
       style = '[]'
     )],
@@ -97,8 +97,8 @@ $Groups: %Construction {
     }
   }
 
-  display = ['𝓖𝓻𝓹'],
-  definitionDisplay = {
+  notation = ['𝓖𝓻𝓹'],
+  definitionNotation = {
     parameter = #(𝐆: %Expr),
     singularName = 'group',
     pluralName = 'groups'

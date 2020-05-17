@@ -10,7 +10,7 @@ $"semigroup with identity"(
     )
   ))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 𝐒,
     sub = '𝓜𝓸𝓷'
   )],

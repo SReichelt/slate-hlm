@@ -25,7 +25,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/classical.html#classical.choice (actually a choice operator, which is stronger)
  */
 $"axiom of choice": %Predicate {
-  display = ['AC'],
+  notation = ['AC'],
   definition = [%forall(
     #(S: %Set),
     $choice(S = {S})

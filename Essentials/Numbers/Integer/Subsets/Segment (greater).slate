@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 $"Segment (greater)"(a: %Element($../Integers)): %SetOperator {
-  display = [$Segment(
+  notation = [$Segment(
     set = 'ℤ',
     symbol = '>',
     limit = a

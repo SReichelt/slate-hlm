@@ -13,7 +13,7 @@ $Span(
   ),
   X: %Subset($../Carrier(𝐆 = {𝐆}))
 ): %SetOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = X,
     style = '<>'
   )],

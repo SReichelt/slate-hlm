@@ -10,11 +10,11 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#vector_space
  */
 $"Vector spaces"(𝐅: %Element($../../Algebra/Fields/Fields)): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = '𝓥𝓮𝓬',
     arguments = [𝐅]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(𝐕: %Expr),
     singularName = ['vector space', ' over ', 𝐅],
     pluralName = ['vector spaces', ' over ', 𝐅]

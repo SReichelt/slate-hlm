@@ -4,7 +4,7 @@ $"identity element"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = {X}))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'e',
     sub = ⨂
   )],

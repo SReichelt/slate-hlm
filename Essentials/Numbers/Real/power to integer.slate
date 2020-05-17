@@ -14,7 +14,7 @@ $"power to integer"(
     )
   ))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = a,
     sup = b
   )],

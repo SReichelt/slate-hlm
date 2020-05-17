@@ -46,7 +46,7 @@ $component(
     𝓒 = {𝓒}
   ))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = η,
     sub = 𝐗
   )],

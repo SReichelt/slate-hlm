@@ -9,7 +9,7 @@
  *             * http://oeis.org/A000142
  */
 $factorial(n: %Element($"Natural numbers")): %ExplicitOperator {
-  display = [$UnaryOperator(
+  notation = [$UnaryOperator(
     symbol = '!',
     operand = n
   )],

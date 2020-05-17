@@ -8,7 +8,7 @@ $"subset magma"(
     S = {S}
   ))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = $Parens(
       body = S,
       style = '[]'

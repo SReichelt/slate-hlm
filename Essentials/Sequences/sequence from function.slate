@@ -10,7 +10,7 @@ $"sequence from function"(
     Y = {S}
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'seq',
     arguments = [f]
   )],

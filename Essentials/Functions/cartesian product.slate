@@ -17,7 +17,7 @@ $"cartesian product"(
     Y = {Y}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '×',
     operands = [f, g]
   )],

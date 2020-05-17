@@ -20,7 +20,7 @@ $substitution(
     T = {%enumeration(x)}
   )}))
 ): %ExplicitOperator {
-  display = [$LambdaSubstitution(
+  notation = [$LambdaSubstitution(
     term = T,
     variable = x,
     replacement = R

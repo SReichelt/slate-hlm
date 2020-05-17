@@ -23,7 +23,7 @@ $"basis coordinates"(
     𝐌 = {𝐌}
   ))
 ): %ImplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = 'coord',
       sub = 𝒙

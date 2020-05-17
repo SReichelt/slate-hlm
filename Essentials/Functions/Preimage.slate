@@ -12,7 +12,7 @@ $Preimage(
   )),
   S: %Subset(Y)
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = f,
       sup = '-1'

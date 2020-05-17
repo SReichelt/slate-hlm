@@ -8,7 +8,7 @@
  *             * https://proofwiki.org/wiki/Definition:Summation
  */
 $"iterated sum": %ExplicitOperator {
-  display = ['∑'],
+  notation = ['∑'],
   definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../Integers}).operation(
       ∗ = {$../../../Functions/Operations/operator(
         X = {$../Integers},

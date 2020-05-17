@@ -12,7 +12,7 @@ $"starts with"(
     α = {n}
   ))
 ): %Predicate {
-  display = [$TextualRelation(
+  notation = [$TextualRelation(
     symbol = 'starts with',
     operands = [𝐚, 𝐛]
   )],

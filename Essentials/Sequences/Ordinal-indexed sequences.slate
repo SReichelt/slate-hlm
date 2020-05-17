@@ -11,7 +11,7 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
       α = {α}
     ))
   ): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = 𝐚,
         style = '()'
@@ -67,11 +67,11 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  display = [$SubSup(
+  notation = [$SubSup(
     body = S,
     sup = '⋆'
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(𝒂: %Expr),
     singularName = ['ordinal-indexed sequence', ' on ', S],
     pluralName = ['ordinal-indexed sequences', ' on ', S]

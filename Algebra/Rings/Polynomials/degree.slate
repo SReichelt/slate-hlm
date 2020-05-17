@@ -30,7 +30,7 @@ $degree(
       ).zero)}
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'deg',
     arguments = [p]
   )],

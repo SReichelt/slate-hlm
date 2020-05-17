@@ -14,7 +14,7 @@ $"left absorbing element"(
   )),
   z: %Element(X)
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [z, ∗],
     singular = 'left absorbing element',
     plural = 'left absorbing elements',

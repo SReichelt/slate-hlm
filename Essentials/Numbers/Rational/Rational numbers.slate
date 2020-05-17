@@ -17,7 +17,7 @@ $"Rational numbers": %Construction {
     n: %Element($../Integer/Integers),
     d: %Element($../Natural/Subsets/"Positive numbers")
   ): %Constructor {
-    display = [$Parens(
+    notation = [$Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '/'),
         operands = [n, d],
@@ -56,7 +56,7 @@ $"Rational numbers": %Construction {
     }
   }
 
-  display = ['ℚ'],
+  notation = ['ℚ'],
   embedding = {
     parameter = #(x: %Element($../Integer/Integers)),
     target = $"Rational numbers".quotient(

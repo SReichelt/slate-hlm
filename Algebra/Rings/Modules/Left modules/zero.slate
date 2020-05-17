@@ -7,7 +7,7 @@ $zero(
   ),
   𝐌: %Element($"Left modules"(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '0',
     sub = 𝐌
   )],

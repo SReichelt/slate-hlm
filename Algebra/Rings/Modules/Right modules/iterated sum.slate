@@ -14,7 +14,7 @@ $"iterated sum"(
   ),
   𝐌: %Element($"Right modules"(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '∑',
     sub = 𝐌
   )],

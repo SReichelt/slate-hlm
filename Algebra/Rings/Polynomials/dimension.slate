@@ -19,7 +19,7 @@ $dimension(
     X = {X}
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'dim',
     arguments = [p]
   )],

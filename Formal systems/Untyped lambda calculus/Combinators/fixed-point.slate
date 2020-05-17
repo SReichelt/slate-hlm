@@ -5,7 +5,7 @@
  *             * https://ncatlab.org/nlab/show/fixed-point+combinator
  */
 $"fixed-point": %ExplicitOperator {
-  display = ['𝗬'],
+  notation = ['𝗬'],
   definition = [$../Terms(V = {$../../../Essentials/Sets/"Empty set"}).abstraction(x = {
       #(f: %Element($../../"Fresh variables"(V = {$../../../Essentials/Sets/"Empty set"}))),
       {M = {$../Terms(V = {%enumeration(f)}).application(

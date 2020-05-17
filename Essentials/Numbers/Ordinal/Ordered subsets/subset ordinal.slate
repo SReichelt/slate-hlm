@@ -4,7 +4,7 @@ $"subset ordinal"(
   α: %Element($../"Ordinal numbers"),
   S: %Subset($../Carrier(α = {α}))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = $Parens(
       body = S,
       style = '[]'

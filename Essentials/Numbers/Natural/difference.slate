@@ -11,7 +11,7 @@ $difference(
   n: %Element($"Natural numbers"),
   m: %Element($Subsets/"Segment (less or equal)"(n = {n}))
 ): %ImplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '−',
     operands = [n, m],
     minParenLevel = 1,

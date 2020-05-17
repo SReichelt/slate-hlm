@@ -16,7 +16,7 @@ $"left-distributive"(
   )),
   ⋆: %Element($"Inner operations"(X = {Y}))
 ): %Predicate {
-  display = [$RelationalProperty(
+  notation = [$RelationalProperty(
     operands = [∗, ⋆],
     property = 'left-distributive',
     preposition = 'over'

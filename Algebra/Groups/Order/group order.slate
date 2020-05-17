@@ -7,7 +7,7 @@
  *             * https://ncatlab.org/nlab/show/order+of+a+group
  */
 $"group order"(𝐆: %Element($../Groups)): %ExplicitOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = 𝐆,
     style = '||'
   )],

@@ -36,7 +36,7 @@ $"quotient group"(
     ∼ = {∼}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '∕',
     operands = [𝐆, S],
     space = ''

@@ -13,7 +13,7 @@ $rewritable(
   L: %Element($Terms(V = {V})),
   R: %Element(%previous)
 ): %Predicate {
-  display = [$Relation(
+  notation = [$Relation(
     symbol = $SubSup(
       body = %neg('→', '↛'),
       sub = ℜ

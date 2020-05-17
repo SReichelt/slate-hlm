@@ -11,7 +11,7 @@ $"partial order"(
   S: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
-  display = [$NounProperty(
+  notation = [$NounProperty(
     operand = ⪯,
     singular = 'partial order',
     plural = 'partial orders'

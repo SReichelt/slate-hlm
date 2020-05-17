@@ -28,7 +28,7 @@ $"object value"(
     𝓒 = {𝓒}
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = F,
     arguments = [𝐗]
   )],

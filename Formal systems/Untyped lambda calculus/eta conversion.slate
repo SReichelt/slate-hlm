@@ -8,7 +8,7 @@ $"eta conversion"(
   V: %Subset($../Variables),
   _1: %Constraint($../../Essentials/Sets/finite(S = {V}))
 ): %SetOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'η',
     sub = V
   )],

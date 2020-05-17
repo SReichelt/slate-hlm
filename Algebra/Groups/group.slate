@@ -16,7 +16,7 @@ $group(
     Y = {G}
   ))
 ): %Predicate {
-  display = [$Structure(
+  notation = [$Structure(
     operands = [G, ∗, e, i],
     singular = 'group',
     plural = 'groups'

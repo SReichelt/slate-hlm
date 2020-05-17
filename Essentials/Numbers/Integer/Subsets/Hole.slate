@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 $Hole(a: %Element($../Integers)): %SetOperator {
-  display = [$Segment(
+  notation = [$Segment(
     set = 'ℤ',
     symbol = '≠',
     limit = a

@@ -34,7 +34,7 @@ $value(
     )
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = p,
     arguments = [a]
   )],

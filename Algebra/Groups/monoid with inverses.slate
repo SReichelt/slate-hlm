@@ -10,7 +10,7 @@ $"monoid with inverses"(
     )
   ))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 𝐌,
     sub = '𝓖𝓻𝓹'
   )],

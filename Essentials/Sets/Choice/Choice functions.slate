@@ -4,11 +4,11 @@
  * @references * https://en.wikipedia.org/wiki/Axiom_of_choice#Variants
  */
 $"Choice functions"(S: %Set): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = '𝓒𝓱𝓸𝓲𝓬𝓮',
     arguments = [S]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(f: %Expr),
     singularName = ['choice function', ' on ', S],
     pluralName = ['choice functions', ' on ', S]

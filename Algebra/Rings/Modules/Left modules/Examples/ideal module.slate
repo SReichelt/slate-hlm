@@ -13,7 +13,7 @@ $"ideal module"(
     I = {I}
   ))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = $Parens(
       body = I,
       style = '[]'

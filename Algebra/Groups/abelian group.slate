@@ -16,7 +16,7 @@ $"abelian group"(
     Y = {G}
   ))
 ): %Predicate {
-  display = [$Structure(
+  notation = [$Structure(
     operands = [G, ∗, e, i],
     singular = 'abelian group',
     plural = 'abelian groups',

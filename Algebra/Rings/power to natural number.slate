@@ -11,7 +11,7 @@ $"power to natural number"(
   a: %Element($Carrier(𝐑 = {𝐑})),
   n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = a,
     sup = n
   )],

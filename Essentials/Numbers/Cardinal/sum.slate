@@ -10,7 +10,7 @@ $sum(
   κ: %Element($"Cardinal numbers"),
   μ: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '+',
     operands = [κ, μ],
     minParenLevel = 1,

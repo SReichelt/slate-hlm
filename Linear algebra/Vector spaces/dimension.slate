@@ -18,7 +18,7 @@ $dimension(
     𝐕 = {𝐕}
   ))
 ): %ImplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'dim',
     arguments = [𝐕]
   )],

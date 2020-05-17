@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 $inverse(a: %Element($"Complex numbers")): %ExplicitOperator {
-  display = [$PrefixUnaryOperator(
+  notation = [$PrefixUnaryOperator(
     symbol = '−',
     operand = a,
     minParenLevel = 1,

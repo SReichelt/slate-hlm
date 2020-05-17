@@ -21,7 +21,7 @@ $"linearly dependent"(
     𝐌 = {𝐌}
   ))
 ): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = 𝒙,
     property = %neg('linearly dependent', 'linearly independent')
   )],

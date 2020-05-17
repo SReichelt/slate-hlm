@@ -10,13 +10,13 @@ $Objects(
   ),
   𝓒: %Element($Categories(u = {u}))
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Ob',
     arguments = [𝓒]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(𝐗: %Expr),
-    display = [$ElementParameter(
+    notation = [$ElementParameter(
       element = 𝐗,
       set = 𝓒
     )]

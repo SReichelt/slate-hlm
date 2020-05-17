@@ -8,7 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/cau_seq.html#is_cau_seq
  */
 $cauchy(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}))): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = 𝐚,
     property = 'Cauchy'
   )],

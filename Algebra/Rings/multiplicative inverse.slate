@@ -7,7 +7,7 @@ $"multiplicative inverse"(
   ),
   a: %Element($Units(𝐑 = {𝐑}))
 ): %ImplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = a,
     sup = '-1'
   )],

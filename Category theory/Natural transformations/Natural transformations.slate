@@ -32,13 +32,13 @@ $"Natural transformations"(
   )),
   G: %Element(%previous)
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Nat',
     arguments = [F, G]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(η: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = η,
       symbol = '⇒',
       operands = [F, G]

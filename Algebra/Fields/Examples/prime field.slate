@@ -8,7 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/zmod/basic.html#zmodp.field
  */
 $"prime field"(p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers")): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '𝔽',
     sub = p
   )],

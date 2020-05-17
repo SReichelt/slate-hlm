@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 $"base point"(𝐒: %Element($"Pointed sets")): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'base',
     arguments = [𝐒]
   )],

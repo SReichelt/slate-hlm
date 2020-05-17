@@ -8,7 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/ring.html#ring_aut.group
  */
 $"automorphism group"(𝐑: %Element($../Semirings)): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Aut',
     arguments = [𝐑]
   )],

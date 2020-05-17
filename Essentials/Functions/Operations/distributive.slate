@@ -11,7 +11,7 @@ $distributive(
   ∗: %Element($"Inner operations"(X = {X})),
   ⋆: %Element(%previous)
 ): %Predicate {
-  display = [$RelationalProperty(
+  notation = [$RelationalProperty(
     operands = [∗, ⋆],
     property = 'distributive',
     preposition = 'over'

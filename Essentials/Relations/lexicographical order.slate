@@ -23,7 +23,7 @@ $"lexicographical order"(
     ⪯ = {⊑}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '∠',
     operands = [⪯, ⊑]
   )],

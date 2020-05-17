@@ -4,7 +4,7 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/data/rat/basic.html#rat.field
  */
 $"rational numbers": %ExplicitOperator {
-  display = ['ℚ'],
+  notation = ['ℚ'],
   definition = [$../../Rings/Rings.ring(
     R = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
     ⊕ = {$../../../Essentials/Functions/Operations/operator(

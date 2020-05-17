@@ -10,7 +10,7 @@ $related(
   s: %Element(S),
   t: %Element(T)
 ): %Predicate {
-  display = [$Relation(
+  notation = [$Relation(
     symbol = ≺,
     operands = [s, t]
   )],

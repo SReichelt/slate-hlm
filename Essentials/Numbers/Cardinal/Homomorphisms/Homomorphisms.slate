@@ -14,13 +14,13 @@ $Homomorphisms(
   κ: %Element($../"Cardinal numbers"),
   μ: %Element(%previous)
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Hom',
     arguments = [κ, μ]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(φ: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = φ,
       symbol = '→',
       operands = [κ, μ]

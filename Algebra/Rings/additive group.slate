@@ -4,7 +4,7 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/ring.html#ring.to_add_comm_group
  */
 $"additive group"(𝐑: %Element($Rings)): %ExplicitOperator {
-  display = [$Tuple(
+  notation = [$Tuple(
     items = [𝐑, '+'],
     style = '[]'
   )],

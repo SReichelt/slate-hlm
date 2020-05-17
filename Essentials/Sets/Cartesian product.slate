@@ -23,7 +23,7 @@ $"Cartesian product"(
     s: %Element(S),
     t: %Element(T)
   ): %Constructor {
-    display = [$Tuple(items = [s, t])],
+    notation = [$Tuple(items = [s, t])],
     equalityDefinition = {
       leftParameters = #(
         s: %Element(S),
@@ -41,7 +41,7 @@ $"Cartesian product"(
     }
   }
 
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '×',
     operands = [S, T],
     minParenLevel = 2

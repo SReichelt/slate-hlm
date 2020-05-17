@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 $cardinality(α: %Element($"Ordinal numbers")): %ExplicitOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = α,
     style = '||'
   )],

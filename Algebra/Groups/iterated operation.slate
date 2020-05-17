@@ -11,7 +11,7 @@ $"iterated operation"(
   𝐆: %Element($Groups),
   _1: %Constraint($abelian(𝐆 = {𝐆}))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '∏',
     sub = 𝐆
   )],

@@ -10,13 +10,13 @@ $Carrier(
   ),
   𝐌: %Element($"Left modules"(𝐑 = {𝐑}))
 ): %SetOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = 𝐌,
     style = '()'
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(x: %Expr),
-    display = [$ElementParameter(
+    notation = [$ElementParameter(
       element = x,
       set = 𝐌
     )]

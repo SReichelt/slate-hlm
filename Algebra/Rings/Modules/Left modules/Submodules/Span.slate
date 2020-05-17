@@ -20,7 +20,7 @@ $Span(
     𝐌 = {𝐌}
   ))
 ): %SetOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = X,
     style = '<>'
   )],

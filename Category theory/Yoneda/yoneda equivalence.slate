@@ -29,7 +29,7 @@ $"yoneda equivalence"(
     𝓒 = {𝓒}
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'yoneda',
     arguments = [F, 𝐀]
   )],

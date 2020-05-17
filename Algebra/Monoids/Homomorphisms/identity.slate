@@ -7,7 +7,7 @@ $identity(𝐌: %Element(
   $../Monoids,
   auto = %true
 )): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'id',
     sub = 𝐌
   )],

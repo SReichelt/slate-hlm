@@ -7,7 +7,7 @@ $"Fresh variables"(
   V: %Subset($Variables),
   _1: %Constraint($../Essentials/Sets/finite(S = {V}))
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Fresh',
     arguments = [V]
   )],

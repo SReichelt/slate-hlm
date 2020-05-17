@@ -8,8 +8,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#semigroup
  */
 $Semigroups: %SetOperator {
-  display = ['𝓢𝓮𝓶𝓲𝓖𝓻𝓹'],
-  definitionDisplay = {
+  notation = ['𝓢𝓮𝓶𝓲𝓖𝓻𝓹'],
+  definitionNotation = {
     parameter = #(𝐒: %Expr),
     singularName = 'semigroup',
     pluralName = 'semigroups'

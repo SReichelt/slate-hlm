@@ -8,7 +8,7 @@ $quotient(
   b: %Element($Integers),
   a: %Element($Divisors(b = {b}))
 ): %ImplicitOperator {
-  display = [$Fraction(
+  notation = [$Fraction(
     numerator = b,
     denominator = a
   )],

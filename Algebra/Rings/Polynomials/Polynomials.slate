@@ -18,7 +18,7 @@ $Polynomials(
   X: %Element($../../../"Formal systems"/Variables)
 ): %Construction {
   $zero: %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = $ConstructorName(name = '0'),
         style = '()'
@@ -51,7 +51,7 @@ $Polynomials(
       ))
     ))
   ): %Constructor {
-    display = [$Parens(
+    notation = [$Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '+'),
         operands = [
@@ -116,7 +116,7 @@ $Polynomials(
     }
   }
 
-  display = [$Function(
+  notation = [$Function(
     function = 𝐑,
     arguments = [X],
     style = '[]'

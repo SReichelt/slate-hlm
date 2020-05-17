@@ -5,7 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Order_of_Structure/Finite_Structure
  */
 $finite(𝐆: %Element($../Groups)): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = 𝐆,
     property = %neg('finite', 'infinite')
   )],

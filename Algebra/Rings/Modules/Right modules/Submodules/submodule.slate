@@ -8,7 +8,7 @@ $submodule(
   𝐌: %Element($../"Right modules"(𝐑 = {𝐑})),
   𝐍: %Element(%previous)
 ): %Predicate {
-  display = [
+  notation = [
     $Relation(
       symbol = %neg('≤', '≰'),
       operands = [𝐌, 𝐍]

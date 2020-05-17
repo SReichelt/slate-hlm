@@ -36,7 +36,7 @@ $"quotient ring"(
     ∼ = {∼}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '∕',
     operands = [𝐑, I],
     space = ''

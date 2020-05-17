@@ -20,7 +20,7 @@ $"product with left scalar"(
     n = {n}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⋅',
     operands = [r, A],
     space = ' ',

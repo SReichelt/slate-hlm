@@ -35,7 +35,7 @@ $product(
     n = {n}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⋅',
     operands = [A, B],
     space = ' ',

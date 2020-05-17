@@ -7,7 +7,7 @@
  *             * https://ncatlab.org/nlab/show/countable+set (called "denumerable" here)
  */
 $"countably infinite"(S: %Set): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = S,
     property = 'countably infinite'
   )],

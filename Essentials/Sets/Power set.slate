@@ -15,7 +15,7 @@ $"Power set"(S: %Set(
   embedSubsets = %true
 )): %Construction {
   $subset(T: %Subset(S)): %Constructor {
-    display = [$Parens(
+    notation = [$Parens(
       body = T,
       style = '()'
     )],
@@ -27,7 +27,7 @@ $"Power set"(S: %Set(
     }
   }
 
-  display = [$Function(
+  notation = [$Function(
     function = '𝒫',
     arguments = [S]
   )]

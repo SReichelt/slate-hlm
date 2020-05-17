@@ -5,7 +5,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.neg
  */
 $inverse(a: %Element($Integers)): %ExplicitOperator {
-  display = [$PrefixUnaryOperator(
+  notation = [$PrefixUnaryOperator(
     symbol = '−',
     operand = a,
     minParenLevel = 1,

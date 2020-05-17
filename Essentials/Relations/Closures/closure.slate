@@ -10,7 +10,7 @@ $closure(
   ≺: %Element($../Endorelations(S = {S})),
   p: %Element($../../Properties/Properties(S = {$../Endorelations(S = {S})}))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = 'cl',
       sub = p

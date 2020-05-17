@@ -4,7 +4,7 @@ $divisible(
   a: %Element($Subsets/"Nonzero numbers"),
   b: %Element($Integers)
 ): %Predicate {
-  display = [$Relation(
+  notation = [$Relation(
     symbol = %neg('∣', '∤'),
     operands = [a, b],
     parenLevel = 1

@@ -29,7 +29,7 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
       ⊙ = {⊙}
     ))
   ): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Tuple(
         items = [M, ⊕, "0", ⊖, ⊙],
         style = '[]'
@@ -130,11 +130,11 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
     }
   }
 
-  display = [$Function(
+  notation = [$Function(
     function = '𝓡𝓜𝓸𝓭',
     arguments = [𝐑]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(𝐌: %Expr),
     singularName = [[
       'right ',

@@ -12,7 +12,7 @@ $"power to integer"(
   )),
   z: %Element($../../Essentials/Numbers/Integer/Integers)
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = a,
     sup = z
   )],

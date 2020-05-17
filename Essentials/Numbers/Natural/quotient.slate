@@ -10,7 +10,7 @@ $quotient(
   n: %Element($"Natural numbers"),
   m: %Element($Divisors(n = {n}))
 ): %ImplicitOperator {
-  display = [$Fraction(
+  notation = [$Fraction(
     numerator = n,
     denominator = m
   )],

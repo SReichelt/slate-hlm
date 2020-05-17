@@ -4,7 +4,7 @@ $identity(𝐌: %Element(
   $../Magmas,
   auto = %true
 )): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'id',
     sub = 𝐌
   )],

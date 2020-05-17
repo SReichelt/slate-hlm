@@ -14,7 +14,7 @@ $"tuple from function"(
     Y = {S}
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'tpl',
     arguments = [f]
   )],

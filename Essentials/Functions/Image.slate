@@ -14,7 +14,7 @@ $Image(
   )),
   S: %Subset(X)
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = f,
     arguments = [S]
   )],

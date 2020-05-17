@@ -9,7 +9,7 @@ $"inner operation transport"(
   )),
   ∗: %Element($../../../Essentials/Functions/Operations/"Inner operations"(X = {X}))
 ): %ExplicitOperator {
-  display = [$../../Isomorphisms/Function(
+  notation = [$../../Isomorphisms/Function(
     function = φ,
     arguments = [∗],
     style = '[]'

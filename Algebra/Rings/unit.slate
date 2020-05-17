@@ -14,7 +14,7 @@ $unit(
   ),
   a: %Element($Carrier(𝐑 = {𝐑}))
 ): %Predicate {
-  display = [$NounProperty(
+  notation = [$NounProperty(
     operand = a,
     singular = 'unit',
     plural = 'units'

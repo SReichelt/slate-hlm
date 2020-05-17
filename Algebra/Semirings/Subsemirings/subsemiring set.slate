@@ -4,7 +4,7 @@ $"subsemiring set"(
   𝐑: %Element($../Semirings),
   S: %Subset($../Carrier(𝐑 = {𝐑}))
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [S, 𝐑],
     singular = 'subsemiring',
     plural = 'subsemirings'

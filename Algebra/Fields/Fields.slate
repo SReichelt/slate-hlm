@@ -9,8 +9,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/field.html#field
  */
 $Fields: %SetOperator {
-  display = ['𝓕𝓵𝓭'],
-  definitionDisplay = {
+  notation = ['𝓕𝓵𝓭'],
+  definitionNotation = {
     parameter = #(𝐅: %Expr),
     singularName = 'field',
     pluralName = 'fields'

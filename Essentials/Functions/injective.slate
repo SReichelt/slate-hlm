@@ -15,7 +15,7 @@ $injective(
     Y = {Y}
   ))
 ): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = f,
     property = 'injective'
   )],

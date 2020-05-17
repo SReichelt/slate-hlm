@@ -13,7 +13,7 @@ $"less or equal"(
     b = {a},
     a = {b}
   )},
-  display = [
+  notation = [
     $Relation(
       symbol = %neg('≤', '≰'),
       operands = [a, b]

@@ -15,7 +15,7 @@ $surjective(
     Y = {Y}
   ))
 ): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = f,
     property = 'surjective'
   )],

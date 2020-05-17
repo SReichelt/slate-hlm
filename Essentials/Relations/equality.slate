@@ -6,7 +6,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#eq
  */
 $equality(S: %Set): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '=',
     sub = S
   )],

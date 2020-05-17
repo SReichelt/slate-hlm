@@ -6,7 +6,7 @@
  *             * https://ncatlab.org/nlab/show/symmetric+group
  */
 $"symmetric group"(X: %Set): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '𝑆',
     sub = X
   )],

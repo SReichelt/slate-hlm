@@ -8,7 +8,7 @@
  *             * https://proofwiki.org/wiki/Definition:Summation
  */
 $"iterated sum"(𝐑: %Element($../Semirings)): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '∑',
     sub = 𝐑
   )],

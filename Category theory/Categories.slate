@@ -148,7 +148,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
       %equals(𝐗, 𝐘)
     ))
   ): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $VerticalTuple(
         items = [
           O,
@@ -609,11 +609,11 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
     }
   }
 
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '𝓒𝓪𝓽',
     sub = u
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(𝓒: %Expr),
     singularName = [[
       $DependentWord(

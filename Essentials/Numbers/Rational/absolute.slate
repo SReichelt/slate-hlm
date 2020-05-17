@@ -8,7 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/rat/order.html#rat.abs_def
  */
 $absolute(a: %Element($"Rational numbers")): %ExplicitOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = a,
     style = '||'
   )],

@@ -13,7 +13,7 @@ $invertible(
   ),
   a: %Element($Carrier(𝐌 = {𝐌}))
 ): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = a,
     property = 'invertible'
   )],

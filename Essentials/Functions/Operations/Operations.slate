@@ -8,13 +8,13 @@ $Operations(
   Y: %Set(auto = %true),
   Z: %Set(auto = %true)
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = '𝓞𝓹',
     arguments = [X, Y, Z]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(∗: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = ∗,
       symbol = '→',
       operands = [

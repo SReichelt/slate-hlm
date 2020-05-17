@@ -7,7 +7,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/cardinality.html#cardinal.mk_real
  */
 $continuum: %ExplicitOperator {
-  display = ['𝔠'],
+  notation = ['𝔠'],
   definition = [
     $../"Cardinal numbers".cardinality(S = {$../../Real/"Real numbers"}),
     $../"Cardinal numbers".cardinality(S = {$../../Complex/"Complex numbers"}),

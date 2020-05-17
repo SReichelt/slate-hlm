@@ -22,7 +22,7 @@ $"left module"(
     Z = {M}
   ))
 ): %Predicate {
-  display = [$Structure(
+  notation = [$Structure(
     operands = [M, ⊕, "0", ⊖, ⊙],
     singular = [
       'left ',

@@ -8,7 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.nat_abs
  */
 $absolute(a: %Element($Integers)): %ExplicitOperator {
-  display = [$Parens(
+  notation = [$Parens(
     style = '||',
     body = a
   )],

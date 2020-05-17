@@ -17,7 +17,7 @@ $"submodule set"(
     𝐌 = {𝐌}
   ))
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [S, 𝐌],
     singular = 'submodule',
     plural = 'submodules'

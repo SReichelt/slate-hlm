@@ -15,7 +15,7 @@ $commutative(
     Z = {Z}
   ))
 ): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = ∗,
     property = 'commutative'
   )],

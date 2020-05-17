@@ -12,7 +12,7 @@ $antisymmetric(
   S: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = ⪯,
     property = 'antisymmetric'
   )],

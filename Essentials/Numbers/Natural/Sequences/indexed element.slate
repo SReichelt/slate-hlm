@@ -12,7 +12,7 @@ $"indexed element"(
   )),
   m: %Def($../minimum(M = {M}))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = M,
     arguments = [n],
     style = '[]'

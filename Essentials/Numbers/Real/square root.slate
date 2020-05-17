@@ -4,7 +4,7 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.sqrt
  */
 $"square root"(a: %Element($Subsets/"Nonnegative numbers")): %ExplicitOperator {
-  display = [$Radical(radicand = a)],
+  notation = [$Radical(radicand = a)],
   definition = [$root(
     a = {a},
     n = {$../Natural/number(value = 2)}

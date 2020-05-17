@@ -9,7 +9,7 @@ $operation(
   x: %Element(X),
   y: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = ⨂,
     operands = [x, y]
   )],

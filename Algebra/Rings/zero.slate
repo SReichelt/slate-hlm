@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 $zero(𝐑: %Element($Rings)): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '0',
     sub = 𝐑
   )],

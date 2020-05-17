@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 $"Segment (greater)"(κ: %Element($../"Cardinal numbers")): %SetOperator {
-  display = [$Segment(
+  notation = [$Segment(
     set = '𝓒𝓻𝓭',
     symbol = '>',
     limit = κ

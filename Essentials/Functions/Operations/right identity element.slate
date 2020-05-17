@@ -15,7 +15,7 @@ $"right identity element"(
   )),
   e: %Element(Y)
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [e, ∗],
     singular = 'right identity',
     plural = 'right identities',

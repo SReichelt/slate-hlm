@@ -9,7 +9,7 @@ $predicate(
   parameters: %ParameterList,
   predicate[parameters]: %DefinitionRef
 ): %MacroOperator {
-  display = [predicate],
+  notation = [predicate],
   references = {Relations = $Relations(
     S = {S},
     T = {T}

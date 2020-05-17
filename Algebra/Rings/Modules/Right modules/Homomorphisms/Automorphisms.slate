@@ -13,13 +13,13 @@ $Automorphisms(
   ),
   𝐌: %Element($../"Right modules"(𝐑 = {𝐑}))
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Aut',
     arguments = [𝐌]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(φ: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = φ,
       symbol = '↔',
       operands = [𝐌, 𝐌]

@@ -4,7 +4,7 @@ $difference(
   b: %Element($"Complex numbers"),
   a: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '−',
     operands = [b, a],
     minParenLevel = 1,

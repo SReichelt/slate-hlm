@@ -7,7 +7,7 @@ $"additive inverse"(
   ),
   a: %Element($Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$PrefixUnaryOperator(
+  notation = [$PrefixUnaryOperator(
     symbol = '−',
     operand = a,
     minParenLevel = 1,

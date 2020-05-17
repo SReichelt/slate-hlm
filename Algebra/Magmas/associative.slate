@@ -4,7 +4,7 @@
  * @references * https://ncatlab.org/nlab/show/associative+magma
  */
 $associative(𝐌: %Element($Magmas)): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = 𝐌,
     property = 'associative'
   )],

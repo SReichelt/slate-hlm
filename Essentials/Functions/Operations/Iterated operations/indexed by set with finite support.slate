@@ -29,7 +29,7 @@ $"indexed by set with finite support"(
     )
   ))
 ): %ImplicitOperator {
-  display = [$LargeOperator(
+  notation = [$LargeOperator(
     symbol = ⨂,
     operand = a,
     under = $ElementRelation(

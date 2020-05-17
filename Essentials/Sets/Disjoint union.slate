@@ -24,7 +24,7 @@ $"Disjoint union"(
   )
 ): %Construction {
   $left(s: %Element(S)): %Constructor {
-    display = [$Constructor(
+    notation = [$Constructor(
       name = 'l',
       arguments = [s]
     )],
@@ -37,7 +37,7 @@ $"Disjoint union"(
   }
 
   $right(t: %Element(T)): %Constructor {
-    display = [$Constructor(
+    notation = [$Constructor(
       name = 'r',
       arguments = [t]
     )],
@@ -49,7 +49,7 @@ $"Disjoint union"(
     }
   }
 
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⊎',
     operands = [S, T],
     space = ' '

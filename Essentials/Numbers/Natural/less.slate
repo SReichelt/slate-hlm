@@ -14,7 +14,7 @@ $less(
     n = {m},
     m = {n}
   )},
-  display = [
+  notation = [
     $Relation(
       symbol = %neg('<', '≮'),
       operands = [m, n]

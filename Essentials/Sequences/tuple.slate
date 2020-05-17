@@ -4,7 +4,7 @@ $tuple(
   S: %Set,
   items: %Element(S)[]
 ): %MacroOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = $Tuple(
       items = items,
       style = '()'

@@ -15,7 +15,7 @@ $inverse(
     a = {a}
   ))
 ): %ImplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = a,
     sup = '-1'
   )],

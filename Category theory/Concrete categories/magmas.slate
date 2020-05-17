@@ -6,7 +6,7 @@
  * @references * https://en.wikipedia.org/wiki/Category_of_magmas
  */
 $magmas(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '𝐌𝐚𝐠',
     sub = u
   )],

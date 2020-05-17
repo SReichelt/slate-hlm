@@ -4,7 +4,7 @@ $"reflexive symmetric closure"(
   S: %Set(auto = %true),
   ≺: %Element($../Endorelations(S = {S}))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = ≺,
     sup = '⇔'
   )],

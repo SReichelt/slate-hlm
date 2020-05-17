@@ -12,7 +12,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/finite.html#set.finite
  */
 $finite(S: %Set): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = S,
     property = %neg('finite', 'infinite')
   )],

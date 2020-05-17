@@ -22,7 +22,7 @@ $"Equivalence classes"(
   ))
 ): %Construction {
   $class(s: %Element(S)): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = s,
         style = '[]'
@@ -42,7 +42,7 @@ $"Equivalence classes"(
     }
   }
 
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '∕',
     operands = [S, ∼],
     space = ''

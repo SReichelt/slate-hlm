@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 $finite(α: %Element($"Ordinal numbers")): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = α,
     property = %neg('finite', 'infinite')
   )],

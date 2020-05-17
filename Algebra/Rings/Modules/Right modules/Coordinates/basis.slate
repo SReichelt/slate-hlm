@@ -19,7 +19,7 @@ $basis(
     𝐌 = {𝐌}
   ))
 ): %Predicate {
-  display = [$NounProperty(
+  notation = [$NounProperty(
     operand = 𝒙,
     singular = 'basis',
     plural = 'bases'

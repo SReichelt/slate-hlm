@@ -7,11 +7,11 @@ $Bases(
   ),
   𝐌: %Element($../"Right modules"(𝐑 = {𝐑}))
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Ba',
     arguments = [𝐌]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(𝒙: %Expr),
     singularName = ['basis', ' of ', 𝐌],
     pluralName = ['bases', ' of ', 𝐌]

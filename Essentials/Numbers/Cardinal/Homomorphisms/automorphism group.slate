@@ -13,7 +13,7 @@
  *             * https://ncatlab.org/nlab/show/automorphism#automorphism_group
  */
 $"automorphism group"(κ: %Element($../"Cardinal numbers")): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Aut',
     arguments = [κ]
   )],

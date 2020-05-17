@@ -7,7 +7,7 @@ $inverse(
   ),
   a: %Element($Carrier(𝐆 = {𝐆}))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = a,
     sup = '-1'
   )],

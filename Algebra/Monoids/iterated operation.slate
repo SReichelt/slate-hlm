@@ -11,7 +11,7 @@ $"iterated operation"(
   𝐌: %Element($Monoids),
   _1: %Constraint($commutative(𝐌 = {𝐌}))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '∏',
     sub = 𝐌
   )],

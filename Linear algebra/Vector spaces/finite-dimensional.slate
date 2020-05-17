@@ -13,7 +13,7 @@ $"finite-dimensional"(
   ),
   𝐕: %Element($"Vector spaces"(𝐅 = {𝐅}))
 ): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = 𝐕,
     property = %neg('finite-dimensional', 'infinite-dimensional')
   )],

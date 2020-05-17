@@ -10,7 +10,7 @@ $maximum(
   _1: %Constraint(%not($../../Sets/empty(S = {M}))),
   _2: %Constraint($bounded(M = {M}))
 ): %ImplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'max',
     arguments = [M]
   )],

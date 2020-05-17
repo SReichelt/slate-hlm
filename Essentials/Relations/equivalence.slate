@@ -12,7 +12,7 @@ $equivalence(
   S: %Set(auto = %true),
   ≺: %Element($Endorelations(S = {S}))
 ): %Predicate {
-  display = [$NounProperty(
+  notation = [$NounProperty(
     singular = 'equivalence relation',
     plural = 'equivalence relations',
     operand = ≺,

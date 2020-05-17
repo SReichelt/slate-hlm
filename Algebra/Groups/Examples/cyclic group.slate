@@ -7,7 +7,7 @@
  *             * https://ncatlab.org/nlab/show/cyclic+group#examples
  */
 $"cyclic group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '𝐶',
     sub = n
   )],

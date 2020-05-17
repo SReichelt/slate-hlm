@@ -4,7 +4,7 @@
  * @references * https://proofwiki.org/wiki/Definition:Negative/Rational_Number
  */
 $"Nonpositive numbers": %SetOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'ℚ',
     sub = '0',
     sup = '−'

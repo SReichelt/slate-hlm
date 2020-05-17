@@ -6,7 +6,7 @@ $"upper bound"(
   T: %Subset(S),
   s: %Element(S)
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     singular = [
       $DependentWord(
         word = 'upper',

@@ -42,7 +42,7 @@ $composition(
     𝓓 = {𝓔}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '∘',
     operands = [G, F],
     minParenLevel = 2,

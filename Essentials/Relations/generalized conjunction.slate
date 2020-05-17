@@ -11,7 +11,7 @@ $"generalized conjunction"(
     T = {T}
   ))
 ): %ExplicitOperator {
-  display = [$PrefixUnaryOperator(
+  notation = [$PrefixUnaryOperator(
     symbol = '⋀',
     operand = R
   )],

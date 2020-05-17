@@ -8,7 +8,7 @@ $"finite sequence length"(
   S: %Set(auto = %true),
   𝒂: %Element($"Finite sequences"(S = {S}))
 ): %ExplicitOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = 𝒂,
     style = '||'
   )],

@@ -8,7 +8,7 @@ $"less or equal"(
   κ: %Element($"Cardinal numbers"),
   μ: %Element(%previous)
 ): %Predicate {
-  display = [
+  notation = [
     $Relation(
       symbol = %neg('≤', '≰'),
       operands = [κ, μ]

@@ -20,7 +20,7 @@ $"hom-functor"(
     𝓒 = {𝓒}
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = 'Hom',
       sub = v

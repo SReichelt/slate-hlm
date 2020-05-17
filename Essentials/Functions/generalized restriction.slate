@@ -18,7 +18,7 @@ $"generalized restriction"(
     Y = {Y}
   ))
 ): %ExplicitOperator {
-  display = [$UnaryOperator(
+  notation = [$UnaryOperator(
     symbol = $SubSup(
       body = '∣',
       sub = A,

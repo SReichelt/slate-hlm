@@ -11,7 +11,7 @@ $"product with natural number"(
   n: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
   a: %Element($Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⋅',
     operands = [n, a],
     space = ' ',

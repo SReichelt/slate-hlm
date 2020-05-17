@@ -4,7 +4,7 @@
  * @remarks Due to the embedding of `$../../Natural/"Natural numbers"` into `$../Integers`, this is just an alias for `$../../Natural/"Natural numbers"`.
  */
 $"Nonnegative numbers": %SetOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'ℤ',
     sub = '0',
     sup = '+'

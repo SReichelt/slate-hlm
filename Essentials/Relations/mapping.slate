@@ -15,7 +15,7 @@ $mapping(
     T = {T}
   ))
 ): %Predicate {
-  display = [$NounProperty(
+  notation = [$NounProperty(
     operand = ≺,
     singular = 'mapping',
     plural = 'mappings'

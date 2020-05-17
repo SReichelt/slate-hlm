@@ -122,7 +122,7 @@ $Functors(
       )
     ))
   ): %Constructor {
-    display = [$Parens(
+    notation = [$Parens(
       body = $Table(
         items = [
           [
@@ -154,9 +154,9 @@ $Functors(
       ),
       style = '()'
     )],
-    definitionDisplay = {
+    definitionNotation = {
       parameter = #(F: %Expr),
-      display = [$FunctionPrefix(
+      notation = [$FunctionPrefix(
         function = F,
         body = [
           ' ',
@@ -452,13 +452,13 @@ $Functors(
     }
   }
 
-  display = [$Function(
+  notation = [$Function(
     function = 'Fun',
     arguments = [𝓒, 𝓓]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(F: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = F,
       symbol = '→',
       operands = [𝓒, 𝓓]

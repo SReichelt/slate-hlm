@@ -8,7 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/mul_add.html#mul_aut.group
  */
 $"automorphism group"(𝐌: %Element($../Monoids)): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Aut',
     arguments = [𝐌]
   )],

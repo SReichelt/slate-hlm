@@ -25,7 +25,7 @@ $"linear combination"(
     𝒙 = {𝒙}
   ))
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⋅',
     operands = [𝒙, 𝐚],
     space = ' ',

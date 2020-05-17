@@ -4,7 +4,7 @@ $submonoid(
   𝐌: %Element($../Monoids),
   𝐍: %Element(%previous)
 ): %Predicate {
-  display = [
+  notation = [
     $Relation(
       symbol = %neg('≤', '≰'),
       operands = [𝐌, 𝐍]

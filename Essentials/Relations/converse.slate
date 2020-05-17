@@ -13,7 +13,7 @@ $converse(
     T = {T}
   ))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = ≺,
     sup = $Style(
       body = 'T',

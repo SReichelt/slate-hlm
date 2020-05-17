@@ -13,7 +13,7 @@ $identity(
     auto = %true
   )
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'id',
     sub = 𝐌
   )],

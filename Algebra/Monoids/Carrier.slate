@@ -4,13 +4,13 @@
  * @remarks This definition retrieves a representative carrier set from a monoid (which is actually an equivalence class of monoids), and enables typical abuse of notation.
  */
 $Carrier(𝐌: %Element($Monoids)): %SetOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = 𝐌,
     style = '()'
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(a: %Expr),
-    display = [$ElementParameter(
+    notation = [$ElementParameter(
       element = a,
       set = 𝐌
     )]

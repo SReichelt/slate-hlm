@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 $"Segment (less)"(a: %Element($../"Real numbers")): %SetOperator {
-  display = [$Segment(
+  notation = [$Segment(
     set = 'ℝ',
     symbol = '<',
     limit = a

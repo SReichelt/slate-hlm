@@ -13,7 +13,7 @@ $"automorphism group"(
   ),
   𝐌: %Element($../"Left modules"(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Aut',
     arguments = [𝐌]
   )],

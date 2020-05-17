@@ -4,13 +4,13 @@
  * @remarks This definition retrieves a representative set from an ordinal number.
  */
 $Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
-  display = [$Parens(
+  notation = [$Parens(
     body = α,
     style = '()'
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(a: %Expr),
-    display = [$ElementParameter(
+    notation = [$ElementParameter(
       element = a,
       set = α
     )]

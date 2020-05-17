@@ -17,7 +17,7 @@ $"sequence from well-ordered set"(
     ⪯ = {⪯}
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = 'seq',
       sub = ⪯

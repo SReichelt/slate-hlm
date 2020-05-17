@@ -13,7 +13,7 @@ $"indexed by integer"(
     #(a: %Element(X))
   )
 ): %ExplicitOperator {
-  display = [$LargeOperator(
+  notation = [$LargeOperator(
     symbol = ⨂,
     operand = a,
     over = k,

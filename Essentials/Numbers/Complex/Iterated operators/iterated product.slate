@@ -8,7 +8,7 @@
  *             * https://proofwiki.org/wiki/Definition:Product_Notation_(Algebra)
  */
 $"iterated product": %ExplicitOperator {
-  display = ['∏'],
+  notation = ['∏'],
   definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../"Complex numbers"}).operation(
       ∗ = {$../../../Functions/Operations/operator(
         X = {$../"Complex numbers"},

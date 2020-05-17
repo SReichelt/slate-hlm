@@ -4,7 +4,7 @@ $subring(
   𝐑: %Element($../Rings),
   𝐒: %Element(%previous)
 ): %Predicate {
-  display = [
+  notation = [
     $Relation(
       symbol = %neg('≤', '≰'),
       operands = [𝐑, 𝐒]

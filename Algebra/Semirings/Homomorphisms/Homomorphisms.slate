@@ -11,13 +11,13 @@ $Homomorphisms(
   𝐑: %Element($../Semirings),
   𝐒: %Element(%previous)
 ): %SetOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 'Hom',
     arguments = [𝐑, 𝐒]
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(φ: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = φ,
       symbol = '→',
       operands = [𝐑, 𝐒]

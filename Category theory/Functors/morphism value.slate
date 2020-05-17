@@ -35,7 +35,7 @@ $"morphism value"(
     𝐘 = {𝐘}
   ))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = F,
     arguments = [f]
   )],

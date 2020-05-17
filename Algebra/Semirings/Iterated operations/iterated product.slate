@@ -11,7 +11,7 @@ $"iterated product"(
   𝐑: %Element($../Semirings),
   _1: %Constraint($../commutative(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '∏',
     sub = 𝐑
   )],

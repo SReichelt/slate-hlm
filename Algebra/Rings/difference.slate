@@ -8,7 +8,7 @@ $difference(
   a: %Element($Carrier(𝐑 = {𝐑})),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '−',
     operands = [a, b],
     minParenLevel = 1,

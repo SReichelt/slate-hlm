@@ -25,7 +25,7 @@ $"inner operation restriction"(
     )
   ))
 ): %ExplicitOperator {
-  display = [$UnaryOperator(
+  notation = [$UnaryOperator(
     symbol = $SubSup(
       body = '∣',
       sub = A

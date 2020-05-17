@@ -12,7 +12,7 @@ $monoid(
   ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
   e: %Element(M)
 ): %Predicate {
-  display = [$Structure(
+  notation = [$Structure(
     operands = [M, ∗, e],
     singular = 'monoid',
     plural = 'monoids'

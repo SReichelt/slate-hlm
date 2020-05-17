@@ -4,7 +4,7 @@ $quotient(
   b: %Element($"Complex numbers"),
   a: %Element($Subsets/"Nonzero numbers")
 ): %ImplicitOperator {
-  display = [$Fraction(
+  notation = [$Fraction(
     numerator = b,
     denominator = a
   )],

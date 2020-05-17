@@ -10,11 +10,11 @@ $"Element sequences"(
   ),
   𝐌: %Element($../"Left modules"(𝐑 = {𝐑}))
 ): %SetOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 𝐌,
     sup = '⋆'
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(𝒙: %Expr),
     singularName = ['element sequence', ' on ', 𝐌],
     pluralName = ['element sequences', ' on ', 𝐌]

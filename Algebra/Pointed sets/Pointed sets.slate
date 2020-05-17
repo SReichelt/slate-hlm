@@ -12,7 +12,7 @@ $"Pointed sets": %Construction {
     S: %Set,
     s: %Element(S)
   ): %Constructor {
-    display = [$Tuple(
+    notation = [$Tuple(
       items = [S, s],
       style = '[]'
     )],
@@ -44,8 +44,8 @@ $"Pointed sets": %Construction {
     }
   }
 
-  display = ['𝓟𝓽𝓢𝓮𝓽'],
-  definitionDisplay = {
+  notation = ['𝓟𝓽𝓢𝓮𝓽'],
+  definitionNotation = {
     parameter = #(𝐒: %Expr),
     singularName = 'pointed set',
     pluralName = 'pointed sets'

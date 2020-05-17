@@ -11,7 +11,7 @@ $"subfield set"(
   𝐅: %Element($../Fields),
   S: %Subset($../../Rings/Carrier(𝐑 = {𝐅}))
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [S, 𝐅],
     singular = 'subfield',
     plural = 'subfields'

@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 $"Segment (greater)"(a: %Element($../"Rational numbers")): %SetOperator {
-  display = [$Segment(
+  notation = [$Segment(
     set = 'ℚ',
     symbol = '>',
     limit = a

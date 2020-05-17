@@ -12,14 +12,14 @@ $Bijections(
   X: %Set,
   Y: %Set
 ): %SetOperator {
-  display = [$FunctionOperator(
+  notation = [$FunctionOperator(
     symbol = '↔',
     operands = [X, Y],
     minParenLevel = -1
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(f: %Expr),
-    display = [$FunctionDefinition(
+    notation = [$FunctionDefinition(
       function = f,
       symbol = '↔',
       operands = [X, Y]

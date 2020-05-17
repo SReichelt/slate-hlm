@@ -4,7 +4,7 @@ $subgroup(
   𝐆: %Element($../Groups),
   𝐇: %Element(%previous)
 ): %Predicate {
-  display = [
+  notation = [
     $Relation(
       symbol = %neg('≤', '≰'),
       operands = [𝐆, 𝐇]

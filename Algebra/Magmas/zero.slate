@@ -13,7 +13,7 @@ $zero(
     )
   ))
 ): %ImplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '0',
     sub = 𝐌
   )],

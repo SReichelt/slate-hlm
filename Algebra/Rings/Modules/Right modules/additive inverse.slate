@@ -11,7 +11,7 @@ $"additive inverse"(
     𝐌 = {𝐌}
   ))
 ): %ExplicitOperator {
-  display = [$PrefixUnaryOperator(
+  notation = [$PrefixUnaryOperator(
     symbol = '−',
     operand = x,
     minParenLevel = 1,

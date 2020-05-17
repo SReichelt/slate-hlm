@@ -7,7 +7,7 @@ $"infinite sequence from subset"(
   M: %Subset($../"Natural numbers"),
   _1: %Constraint(%not($../../../Sets/finite(S = {M})))
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = $SubSup(
       body = 'seq',
       sub = 'ω'

@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 $"Negative numbers": %SetOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = 'ℝ',
     sub = '−'
   )],

@@ -8,7 +8,7 @@ $"polynomial module"(
   𝐑: %Element($../../../Rings),
   X: %Element($../../../../../"Formal systems"/Variables)
 ): %ExplicitOperator {
-  display = [$Function(
+  notation = [$Function(
     function = 𝐑,
     arguments = [X],
     style = '[]'

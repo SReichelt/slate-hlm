@@ -5,7 +5,7 @@ $zero(
   m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
   n: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$SubSup(
+  notation = [$SubSup(
     body = '0',
     sub = $SubSup(
       body = 𝐑,

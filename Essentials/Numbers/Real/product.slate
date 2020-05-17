@@ -7,7 +7,7 @@ $product(
   a: %Element($"Real numbers"),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  display = [$Operator(
+  notation = [$Operator(
     symbol = '⋅',
     operands = [a, b],
     space = ' ',

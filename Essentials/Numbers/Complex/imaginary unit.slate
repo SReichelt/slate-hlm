@@ -8,7 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex.I
  */
 $"imaginary unit": %ExplicitOperator {
-  display = ['𝒊'],
+  notation = ['𝒊'],
   definition = [$"Complex numbers".complex(
     r = {$../Natural/number(value = 0)},
     i = {$../Natural/number(value = 1)}

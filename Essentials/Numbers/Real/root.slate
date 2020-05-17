@@ -4,7 +4,7 @@ $root(
   a: %Element($Subsets/"Nonnegative numbers"),
   n: %Element($../Natural/"Natural numbers")
 ): %ImplicitOperator {
-  display = [$Radical(
+  notation = [$Radical(
     radicand = a,
     degree = n
   )],

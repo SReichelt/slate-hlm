@@ -10,7 +10,7 @@ $"indexed by finite set"(
     #(a: %Element(X))
   )
 ): %ImplicitOperator {
-  display = [$LargeOperator(
+  notation = [$LargeOperator(
     symbol = ⨂,
     operand = a,
     under = $ElementRelation(

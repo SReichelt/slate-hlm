@@ -19,7 +19,7 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     $../Numbers/Natural/"Natural numbers",
     #(a: %Element(S))
   )): %Constructor {
-    display = [$SubSup(
+    notation = [$SubSup(
       body = $Parens(
         body = a,
         style = '()'
@@ -46,11 +46,11 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  display = [$SubSup(
+  notation = [$SubSup(
     body = S,
     sup = 'ω'
   )],
-  definitionDisplay = {
+  definitionNotation = {
     parameter = #(𝐚: %Expr),
     singularName = ['sequence', ' on ', S],
     pluralName = ['sequences', ' on ', S]

@@ -7,7 +7,7 @@ $"Generalized intersection using power set"(
   U: %Set(auto = %true),
   S: %Subset($"Power set"(S = {U}))
 ): %SetOperator {
-  display = [$PrefixUnaryOperator(
+  notation = [$PrefixUnaryOperator(
     symbol = '⋂',
     operand = S
   )],

@@ -5,7 +5,7 @@ $quotient(
   b: %Element($../Rings/Carrier(𝐑 = {𝐅})),
   a: %Element($../Rings/Units(𝐑 = {𝐅}))
 ): %ImplicitOperator {
-  display = [$Fraction(
+  notation = [$Fraction(
     numerator = b,
     denominator = a
   )],

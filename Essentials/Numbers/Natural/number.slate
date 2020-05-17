@@ -7,6 +7,6 @@
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html#of_uint_acc
  */
 $number(value: %Nat): %MacroOperator {
-  display = [value],
+  notation = [value],
   references = {"Natural numbers" = $"Natural numbers"}
 }

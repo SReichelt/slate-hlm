@@ -12,7 +12,7 @@ $"finitely generated"(
   ),
   𝐌: %Element($../"Left modules"(𝐑 = {𝐑}))
 ): %Predicate {
-  display = [$Property(
+  notation = [$Property(
     operand = 𝐌,
     property = 'finitely generated'
   )],

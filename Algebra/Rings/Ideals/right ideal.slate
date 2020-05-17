@@ -10,7 +10,7 @@ $"right ideal"(
   𝐑: %Element($../Rings),
   I: %Subset($../Carrier(𝐑 = {𝐑}))
 ): %Predicate {
-  display = [$NounRelation(
+  notation = [$NounRelation(
     operands = [I, 𝐑],
     singular = 'right ideal',
     plural = 'right ideals'
