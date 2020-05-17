@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @remarks Usage example: `$../../../../Essentials/Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$Carrier(𝐑 = {𝐑}, 𝐌 = {𝐌})}, ⨂ = {$"iterated sum"(𝐑 = {𝐑}, 𝐌 = {𝐌})}, n = {n}, i = {#(i: %Element($../../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`.
+ * @example `$../../../../Essentials/Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$Carrier(𝐑 = {𝐑}, 𝐌 = {𝐌})}, ⨂ = {$"iterated sum"(𝐑 = {𝐑}, 𝐌 = {𝐌})}, n = {n}, i = {#(i: %Element($../../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Summation
  *             * https://mathworld.wolfram.com/Sum.html
