@@ -13,7 +13,7 @@ $monoid(
   e: %Element(M)
 ): %Predicate {
   notation = [$Structure(
-    operands = [M, ∗, e],
+    items = [M, ∗, e],
     singular = 'monoid',
     plural = 'monoids'
   )],

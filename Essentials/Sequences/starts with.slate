@@ -13,7 +13,7 @@ $"starts with"(
   ))
 ): %Predicate {
   notation = [$TextualRelation(
-    symbol = 'starts with',
+    verb = 'starts with',
     operands = [𝐚, 𝐛]
   )],
   definition = [%structural(

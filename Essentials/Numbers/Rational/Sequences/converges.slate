@@ -11,7 +11,7 @@ $converges(
   l: %Element($../"Rational numbers")
 ): %Predicate {
   notation = [$TextualRelation(
-    symbol = %neg('converges to', 'does not converge to'),
+    verb = %neg('converges to', 'does not converge to'),
     operands = [𝐚, l]
   )],
   definition = [%structural(

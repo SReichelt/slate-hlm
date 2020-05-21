@@ -6,7 +6,7 @@ $"commutative monoid"(
   e: %Element(M)
 ): %Predicate {
   notation = [$Structure(
-    operands = [M, ∗, e],
+    items = [M, ∗, e],
     singular = 'commutative monoid',
     plural = 'commutative monoids'
   )],

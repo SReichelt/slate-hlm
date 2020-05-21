@@ -23,7 +23,7 @@ $"left module"(
   ))
 ): %Predicate {
   notation = [$Structure(
-    operands = [M, ⊕, "0", ⊖, ⊙],
+    items = [M, ⊕, "0", ⊖, ⊙],
     singular = [
       'left ',
       $DependentWord(

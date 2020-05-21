@@ -17,7 +17,7 @@ $group(
   ))
 ): %Predicate {
   notation = [$Structure(
-    operands = [G, ∗, e, i],
+    items = [G, ∗, e, i],
     singular = 'group',
     plural = 'groups'
   )],

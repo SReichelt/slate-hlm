@@ -9,7 +9,7 @@ $"has property"(
   s: %Element(S)
 ): %Predicate {
   notation = [$TextualRelation(
-    symbol = %neg('is', 'is not'),
+    verb = %neg('is', 'is not'),
     operands = [s, p]
   )],
   definition = [%structural(

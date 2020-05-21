@@ -6,7 +6,7 @@ $"starts with finite sequence"(
   𝒃: %Element($"Finite sequences"(S = {S}))
 ): %Predicate {
   notation = [$TextualRelation(
-    symbol = 'starts with',
+    verb = 'starts with',
     operands = [𝐚, 𝒃]
   )],
   definition = [%structural(

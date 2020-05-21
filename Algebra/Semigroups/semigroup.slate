@@ -12,7 +12,7 @@ $semigroup(
   ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
 ): %Predicate {
   notation = [$Structure(
-    operands = [M, ∗],
+    items = [M, ∗],
     singular = 'semigroup',
     plural = 'semigroups'
   )],

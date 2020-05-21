@@ -20,7 +20,7 @@ $ring(
   "1": %Element(R)
 ): %Predicate {
   notation = [$Structure(
-    operands = [R, ⊕, "0", ⊖, ⊙, "1"],
+    items = [R, ⊕, "0", ⊖, ⊙, "1"],
     singular = 'ring',
     plural = 'rings'
   )],

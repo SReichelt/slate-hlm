@@ -19,7 +19,11 @@ $empty(S: %Set): %Predicate {
       S,
       $"Empty set"
     ),
-    %not(%exists(#(x: %Element(S))))
+    %not(%exists(#(x: %Element(S)))),
+    %equals(
+      $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S}),
+      $../Numbers/Natural/number(value = 0)
+    )
   ],
   equivalenceProofs = [
     {
