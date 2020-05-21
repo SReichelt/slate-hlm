@@ -5,42 +5,42 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.has_sub
  */
 $difference(
-  b: %Element($Integers),
-  a: %Element(%previous)
+  a: %Element($Integers),
+  b: %Element(%previous)
 ): %ExplicitOperator {
   notation = [$Operator(
     symbol = '−',
-    operands = [b, a],
+    operands = [a, b],
     minParenLevel = 1,
     maxParenLevel = 1
   )],
   definition = [
     %structuralCases(
-      a,
+      b,
       $Integers,
       [{
         constructor = $Integers.difference,
         parameters = #(
-          n_a: %Element($../Natural/"Natural numbers"),
-          m_a: %Element(%previous)
+          n_b: %Element($../Natural/"Natural numbers"),
+          m_b: %Element(%previous)
         ),
         value = %structuralCases(
-          b,
+          a,
           $Integers,
           [{
             constructor = $Integers.difference,
             parameters = #(
-              n_b: %Element($../Natural/"Natural numbers"),
-              m_b: %Element(%previous)
+              n_a: %Element($../Natural/"Natural numbers"),
+              m_a: %Element(%previous)
             ),
             value = $Integers.difference(
               n = {$../Natural/sum(
-                m = {n_b},
-                n = {m_a}
+                m = {n_a},
+                n = {m_b}
               )},
               m = {$../Natural/sum(
-                m = {m_b},
-                n = {n_a}
+                m = {m_a},
+                n = {n_b}
               )}
             )
           }]
@@ -48,8 +48,8 @@ $difference(
       }]
     ),
     $sum(
-      a = {b},
-      b = {$inverse(a = {a})}
+      a = {a},
+      b = {$inverse(a = {b})}
     )
   ]
 }

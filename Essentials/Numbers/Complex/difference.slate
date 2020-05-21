@@ -1,42 +1,42 @@
 %../../../../../logics/hlm%
 
 $difference(
-  b: %Element($"Complex numbers"),
-  a: %Element(%previous)
+  a: %Element($"Complex numbers"),
+  b: %Element(%previous)
 ): %ExplicitOperator {
   notation = [$Operator(
     symbol = '−',
-    operands = [b, a],
+    operands = [a, b],
     minParenLevel = 1,
     maxParenLevel = 1
   )],
   definition = [
     %structuralCases(
-      a,
+      b,
       $"Complex numbers",
       [{
         constructor = $"Complex numbers".complex,
         parameters = #(
-          r_a: %Element($../Real/"Real numbers"),
-          i_a: %Element(%previous)
+          r_b: %Element($../Real/"Real numbers"),
+          i_b: %Element(%previous)
         ),
         value = %structuralCases(
-          b,
+          a,
           $"Complex numbers",
           [{
             constructor = $"Complex numbers".complex,
             parameters = #(
-              r_b: %Element($../Real/"Real numbers"),
-              i_b: %Element(%previous)
+              r_a: %Element($../Real/"Real numbers"),
+              i_a: %Element(%previous)
             ),
             value = $"Complex numbers".complex(
               r = {$../Real/difference(
-                b = {r_b},
-                a = {r_a}
+                a = {r_a},
+                b = {r_b}
               )},
               i = {$../Real/difference(
-                b = {i_b},
-                a = {i_a}
+                a = {i_a},
+                b = {i_b}
               )}
             )
           }]
@@ -44,8 +44,8 @@ $difference(
       }]
     ),
     $sum(
-      a = {b},
-      b = {$inverse(a = {a})}
+      a = {a},
+      b = {$inverse(a = {b})}
     )
   ]
 }

@@ -7,48 +7,48 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/rat/basic.html#rat.sub_def
  */
 $difference(
-  b: %Element($"Rational numbers"),
-  a: %Element(%previous)
+  a: %Element($"Rational numbers"),
+  b: %Element(%previous)
 ): %ExplicitOperator {
   notation = [$Operator(
     symbol = '−',
-    operands = [b, a],
+    operands = [a, b],
     minParenLevel = 1,
     maxParenLevel = 1
   )],
   definition = [
     %structuralCases(
-      a,
+      b,
       $"Rational numbers",
       [{
         constructor = $"Rational numbers".quotient,
         parameters = #(
-          n_a: %Element($../Integer/Integers),
-          d_a: %Element($../Natural/Subsets/"Positive numbers")
+          n_b: %Element($../Integer/Integers),
+          d_b: %Element($../Natural/Subsets/"Positive numbers")
         ),
         value = %structuralCases(
-          b,
+          a,
           $"Rational numbers",
           [{
             constructor = $"Rational numbers".quotient,
             parameters = #(
-              n_b: %Element($../Integer/Integers),
-              d_b: %Element($../Natural/Subsets/"Positive numbers")
+              n_a: %Element($../Integer/Integers),
+              d_a: %Element($../Natural/Subsets/"Positive numbers")
             ),
             value = $"Rational numbers".quotient(
               n = {$../Integer/difference(
-                b = {$../Integer/product(
-                  a = {n_b},
-                  b = {d_a}
-                )},
                 a = {$../Integer/product(
                   a = {n_a},
                   b = {d_b}
+                )},
+                b = {$../Integer/product(
+                  a = {n_b},
+                  b = {d_a}
                 )}
               )},
               d = {$../Natural/product(
-                m = {d_b},
-                n = {d_a}
+                m = {d_a},
+                n = {d_b}
               )}
             )
           }]
@@ -56,8 +56,8 @@ $difference(
       }]
     ),
     $sum(
-      a = {b},
-      b = {$inverse(a = {a})}
+      a = {a},
+      b = {$inverse(a = {b})}
     )
   ]
 }

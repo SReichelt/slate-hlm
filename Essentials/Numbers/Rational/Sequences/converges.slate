@@ -31,8 +31,8 @@ $converges(
             #(m: %Element($../../Natural/Subsets/"Segment (greater or equal)"(n = {n}))),
             $../less(
               a = {$../absolute(a = {$../difference(
-                b = {a[m]},
-                a = {l}
+                a = {a[m]},
+                b = {l}
               )})},
               b = {ε}
             )

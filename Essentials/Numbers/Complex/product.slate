@@ -34,11 +34,11 @@ $product(
           ),
           value = $"Complex numbers".complex(
             r = {$../Real/difference(
-              b = {$../Real/product(
+              a = {$../Real/product(
                 a = {r_a},
                 b = {r_b}
               )},
-              a = {$../Real/product(
+              b = {$../Real/product(
                 a = {i_a},
                 b = {i_b}
               )}

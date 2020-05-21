@@ -28,16 +28,16 @@ $"indexed by integer"(
     ⨂ = {⨂},
     n = {$../../../Numbers/Integer/sum(
       a = {%associative($../../../Numbers/Integer/difference(
-        b = {k},
-        a = {j}
+        a = {k},
+        b = {j}
       ))},
       b = {$../../../Numbers/Natural/number(value = 1)}
     )},
     i = {
       #(i: %Element($../../../Numbers/Natural/Subsets/"Segment (less)"(n = {$../../../Numbers/Integer/sum(
         a = {%associative($../../../Numbers/Integer/difference(
-          b = {k},
-          a = {j}
+          a = {k},
+          b = {j}
         ))},
         b = {$../../../Numbers/Natural/number(value = 1)}
       )}))),

@@ -32,8 +32,8 @@ $cauchy(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Ration
             ),
             $../less(
               a = {$../absolute(a = {$../difference(
-                b = {a[l]},
-                a = {a[m]}
+                a = {a[l]},
+                b = {a[m]}
               )})},
               b = {ε}
             )

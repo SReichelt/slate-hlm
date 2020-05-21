@@ -28,8 +28,8 @@ $"Real numbers": %Construction {
       ),
       definition = [$../Rational/Sequences/converges(
         𝐚 = {$../Rational/Sequences/"sequence difference"(
-          𝐛 = {r},
-          𝐚 = {"r'"}
+          𝐚 = {r},
+          𝐛 = {"r'"}
         )},
         l = {$../Natural/number(value = 0)}
       )]
