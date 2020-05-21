@@ -8,19 +8,19 @@
  *             * https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Qdiv
  */
 $quotient(
-  b: %Element($"Rational numbers"),
-  a: %Element($Subsets/"Nonzero numbers")
+  a: %Element($"Rational numbers"),
+  b: %Element($Subsets/"Nonzero numbers")
 ): %ImplicitOperator {
   notation = [$Fraction(
-    numerator = b,
-    denominator = a
+    numerator = a,
+    denominator = b
   )],
   parameter = #(x: %Element($"Rational numbers")),
   definition = [%equals(
-    b,
+    a,
     $product(
       a = {x},
-      b = {a}
+      b = {b}
     )
   )]
 }

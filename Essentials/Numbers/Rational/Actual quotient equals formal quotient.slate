@@ -13,8 +13,8 @@ $"Actual quotient equals formal quotient"(
       d = {d}
     ),
     $quotient(
-      b = {n},
-      a = {d}
+      a = {n},
+      b = {d}
     )
   )
 }

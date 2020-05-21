@@ -5,19 +5,19 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.div (ditto)
  */
 $quotient(
-  b: %Element($Integers),
-  a: %Element($Divisors(b = {b}))
+  a: %Element($Integers),
+  b: %Element($Divisors(b = {a}))
 ): %ImplicitOperator {
   notation = [$Fraction(
-    numerator = b,
-    denominator = a
+    numerator = a,
+    denominator = b
   )],
   parameter = #(x: %Element($Integers)),
   definition = [%equals(
-    b,
+    a,
     $product(
       a = {x},
-      b = {a}
+      b = {b}
     )
   )]
 }

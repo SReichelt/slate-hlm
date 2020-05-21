@@ -21,8 +21,8 @@ $rational(a: %Element($"Real numbers")): %Predicate {
       formula = %equals(
         a,
         $quotient(
-          b = {c},
-          a = {b}
+          a = {c},
+          b = {b}
         )
       )
     ),
@@ -38,8 +38,8 @@ $rational(a: %Element($"Real numbers")): %Predicate {
       formula = %equals(
         a,
         $quotient(
-          b = {e},
-          a = {d}
+          a = {e},
+          b = {d}
         )
       )
     )

@@ -34,8 +34,8 @@ $"Roots of primes are irrational"(
             n = {n}
           ),
           $quotient(
-            b = {b},
-            a = {a}
+            a = {b},
+            b = {a}
           )
         )
       )),
@@ -51,8 +51,8 @@ $"Roots of primes are irrational"(
         p,
         $power(
           a = {$quotient(
-            b = {b},
-            a = {a}
+            a = {b},
+            b = {a}
           )},
           n = {n}
         )
@@ -67,17 +67,17 @@ $"Roots of primes are irrational"(
           %equals(
             $power(
               a = {$quotient(
-                b = {b},
-                a = {a}
+                a = {b},
+                b = {a}
               )},
               n = {n}
             ),
             $quotient(
-              b = {$power(
+              a = {$power(
                 a = {b},
                 n = {n}
               )},
-              a = {$power(
+              b = {$power(
                 a = {a},
                 n = {n}
               )}
@@ -88,11 +88,11 @@ $"Roots of primes are irrational"(
         %equals(
           p,
           $quotient(
-            b = {$power(
+            a = {$power(
               a = {b},
               n = {n}
             )},
-            a = {$power(
+            b = {$power(
               a = {a},
               n = {n}
             )}

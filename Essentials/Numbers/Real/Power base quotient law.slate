@@ -11,17 +11,17 @@ $"Power base quotient law"(
   claim = %equals(
     $power(
       a = {$quotient(
-        b = {b},
-        a = {a}
+        a = {b},
+        b = {a}
       )},
       n = {n}
     ),
     $quotient(
-      b = {$power(
+      a = {$power(
         a = {b},
         n = {n}
       )},
-      a = {$power(
+      b = {$power(
         a = {a},
         n = {n}
       )}

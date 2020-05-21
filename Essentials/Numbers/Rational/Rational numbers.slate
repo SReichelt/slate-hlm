@@ -49,8 +49,8 @@ $"Rational numbers": %Construction {
     },
     rewrite = {
       value = $quotient(
-        b = {n},
-        a = {d}
+        a = {n},
+        b = {d}
       ),
       theorem = $"Actual quotient equals formal quotient"
     }

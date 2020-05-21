@@ -1,19 +1,19 @@
 %../../../../../logics/hlm%
 
 $quotient(
-  b: %Element($"Complex numbers"),
-  a: %Element($Subsets/"Nonzero numbers")
+  a: %Element($"Complex numbers"),
+  b: %Element($Subsets/"Nonzero numbers")
 ): %ImplicitOperator {
   notation = [$Fraction(
-    numerator = b,
-    denominator = a
+    numerator = a,
+    denominator = b
   )],
   parameter = #(x: %Element($"Complex numbers")),
   definition = [%equals(
-    b,
+    a,
     $product(
       a = {x},
-      b = {a}
+      b = {b}
     )
   )]
 }
