@@ -20,13 +20,7 @@ $"product with left scalar"(
     n = {n}
   ))
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [r, A],
-    space = ' ',
-    minParenLevel = 2,
-    maxParenLevel = 2
-  )],
+  notation = [$MultiplicationOperator(operands = [r, A])],
   definition = [%structuralCases(
     A,
     $Matrices(

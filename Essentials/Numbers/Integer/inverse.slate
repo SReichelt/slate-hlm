@@ -5,12 +5,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.neg
  */
 $inverse(a: %Element($Integers)): %ExplicitOperator {
-  notation = [$PrefixUnaryOperator(
-    symbol = '−',
-    operand = a,
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$NegationOperator(operand = a)],
   definition = [%structuralCases(
     a,
     $Integers,

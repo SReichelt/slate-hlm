@@ -38,7 +38,7 @@ $"Natural transformations"(
   )],
   definitionNotation = {
     parameter = #(η: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = η,
       symbol = '⇒',
       operands = [F, G]

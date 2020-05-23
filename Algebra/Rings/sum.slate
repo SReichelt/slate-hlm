@@ -11,12 +11,7 @@ $sum(
   a: %Element($Carrier(𝐑 = {𝐑})),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '+',
-    operands = [a, b],
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$AdditionOperator(operands = [a, b])],
   definition = [%structuralCases(
     𝐑,
     $Rings,

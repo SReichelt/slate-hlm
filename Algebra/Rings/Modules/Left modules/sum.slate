@@ -15,12 +15,7 @@ $sum(
   )),
   y: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '+',
-    operands = [x, y],
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$AdditionOperator(operands = [x, y])],
   definition = [%structuralCases(
     𝐌,
     $"Left modules"(𝐑 = {𝐑}),

@@ -12,11 +12,7 @@ $divisible(
   m: %Element($Subsets/"Positive numbers"),
   n: %Element($"Natural numbers")
 ): %Predicate {
-  notation = [$Relation(
-    symbol = %neg('∣', '∤'),
-    operands = [m, n],
-    parenLevel = 1
-  )],
+  notation = [$DivisibilityRelation(operands = [m, n])],
   definition = [
     %exists(
       #(x: %Element($"Natural numbers")),

@@ -11,7 +11,7 @@ $Carrier(κ: %Element($"Cardinal numbers")): %SetOperator {
   definitionNotation = {
     parameter = #(a: %Expr),
     notation = [$ElementParameter(
-      element = a,
+      variable = a,
       set = κ
     )]
   },

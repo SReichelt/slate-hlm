@@ -17,7 +17,7 @@ $Objects(
   definitionNotation = {
     parameter = #(𝐗: %Expr),
     notation = [$ElementParameter(
-      element = 𝐗,
+      variable = 𝐗,
       set = 𝓒
     )]
   },

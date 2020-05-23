@@ -12,10 +12,7 @@ $"indexed by natural number"(
   notation = [$LargeOperator(
     symbol = ⨂,
     operand = a,
-    under = $Relation(
-      symbol = '<',
-      operands = [i, n]
-    ),
+    under = $LessThanRelation(operands = [i, n]),
     maxParenLevel = 1
   )],
   definition = [%structuralCases(

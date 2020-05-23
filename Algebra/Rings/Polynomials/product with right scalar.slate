@@ -15,13 +15,7 @@ $"product with right scalar"(
   )),
   a: %Element($../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [p, a],
-    space = ' ',
-    minParenLevel = 2,
-    maxParenLevel = 2
-  )],
+  notation = [$MultiplicationOperator(operands = [p, a])],
   definition = [%structuralCases(
     p,
     $Polynomials(

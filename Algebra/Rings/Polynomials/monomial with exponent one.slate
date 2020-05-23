@@ -14,8 +14,7 @@ $"monomial with exponent one"(
   notation = [$Operator(
     symbol = '',
     operands = [a, X],
-    space = '',
-    minParenLevel = 3
+    space = ''
   )],
   definition = [
     $monomial(

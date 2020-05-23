@@ -27,10 +27,7 @@ $Tuples(
         body = a,
         style = '()'
       ),
-      sub = $Relation(
-        symbol = '<',
-        operands = [k, α]
-      )
+      sub = $LessThanRelation(operands = [k, α])
     )],
     equalityDefinition = {
       leftParameters = #(k: %Binding(

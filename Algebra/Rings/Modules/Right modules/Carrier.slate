@@ -17,7 +17,7 @@ $Carrier(
   definitionNotation = {
     parameter = #(x: %Expr),
     notation = [$ElementParameter(
-      element = x,
+      variable = x,
       set = 𝐌
     )]
   },

@@ -13,10 +13,7 @@ $"indexed by finite set"(
   notation = [$LargeOperator(
     symbol = ⨂,
     operand = a,
-    under = $ElementRelation(
-      element = i,
-      set = I
-    ),
+    under = $ElementRelation(operands = [i, I]),
     maxParenLevel = 1
   )],
   parameter = #(x: %Element(X)),

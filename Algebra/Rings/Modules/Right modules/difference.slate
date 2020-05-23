@@ -15,12 +15,7 @@ $difference(
   )),
   y: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '−',
-    operands = [x, y],
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$SubtractionOperator(operands = [x, y])],
   definition = [$sum(
     𝐑 = {𝐑},
     𝐌 = {𝐌},

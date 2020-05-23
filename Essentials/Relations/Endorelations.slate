@@ -21,10 +21,10 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
         body = p,
         style = '[]'
       ),
-      sub = $ElementRelation(
-        element = $Group(items = [s, t]),
-        set = S
-      )
+      sub = $ElementRelation(operands = [
+        $Group(items = [s, t]),
+        S
+      ])
     )],
     equalityDefinition = {
       leftParameters = #(s: %Binding(

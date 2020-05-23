@@ -15,10 +15,7 @@ $inverse(
     a = {a}
   ))
 ): %ImplicitOperator {
-  notation = [$SubSup(
-    body = a,
-    sup = '-1'
-  )],
+  notation = [$Inverse(term = a)],
   parameter = #(b: %Element($Carrier(𝐌 = {𝐌}))),
   definition = [%equals(
     $operation(

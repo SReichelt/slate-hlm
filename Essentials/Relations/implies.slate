@@ -15,11 +15,9 @@ $implies(
   )),
   ⊂: %Element(%previous)
 ): %Predicate {
-  notation = [$Relation(
-    symbol = %neg('⇒', '⇏'),
+  notation = [$ImplicationRelation(
     operands = [≺, ⊂],
-    space = ' ',
-    parenLevel = -3
+    space = ' '
   )],
   definition = [%forall(
     #(

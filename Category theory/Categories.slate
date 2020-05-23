@@ -157,36 +157,33 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               body = M,
               style = '()'
             ),
-            sub = $ElementRelation(
-              element = $Group(
+            sub = $ElementRelation(operands = [
+              $Group(
                 items = [𝐀, 𝐁],
                 separator = ','
               ),
-              set = O
-            )
+              O
+            ])
           ),
           $SubSup(
             body = $Parens(
               body = i,
               style = '()'
             ),
-            sub = $ElementRelation(
-              element = 𝐂,
-              set = O
-            )
+            sub = $ElementRelation(operands = [𝐂, O])
           ),
           $SubSup(
             body = $Parens(
               body = ∘,
               style = '()'
             ),
-            sub = $ElementRelation(
-              element = $Group(
+            sub = $ElementRelation(operands = [
+              $Group(
                 items = [𝐃, 𝐄, 𝐅],
                 separator = ','
               ),
-              set = O
-            )
+              O
+            ])
           )
         ],
         style = '[]'

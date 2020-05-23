@@ -42,9 +42,5 @@ $"Equivalence classes"(
     }
   }
 
-  notation = [$Operator(
-    symbol = '∕',
-    operands = [S, ∼],
-    space = ''
-  )]
+  notation = [$DivisionOperator(operands = [S, ∼])]
 }

@@ -61,10 +61,7 @@ $"Infranatural transformations"(
         body = n,
         style = '()'
       ),
-      sub = $ElementRelation(
-        element = 𝐗,
-        set = 𝓒
-      )
+      sub = $ElementRelation(operands = [𝐗, 𝓒])
     )],
     equalityDefinition = {
       leftParameters = #(𝐗: %Binding(
@@ -136,7 +133,7 @@ $"Infranatural transformations"(
   )],
   definitionNotation = {
     parameter = #(η: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = η,
       symbol = '⇀',
       operands = [F, G]

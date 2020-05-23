@@ -26,14 +26,8 @@ $Relations(
         style = '[]'
       ),
       sub = $Group(items = [
-        $ElementRelation(
-          element = s,
-          set = S
-        ),
-        $ElementRelation(
-          element = t,
-          set = T
-        )
+        $ElementRelation(operands = [s, S]),
+        $ElementRelation(operands = [t, T])
       ])
     )],
     equalityDefinition = {

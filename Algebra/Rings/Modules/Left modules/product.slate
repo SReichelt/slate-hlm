@@ -15,13 +15,7 @@ $product(
     𝐌 = {𝐌}
   ))
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [a, x],
-    space = ' ',
-    minParenLevel = 2,
-    maxParenLevel = 2
-  )],
+  notation = [$MultiplicationOperator(operands = [a, x])],
   definition = [%structuralCases(
     𝐌,
     $"Left modules"(𝐑 = {𝐑}),

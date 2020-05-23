@@ -11,7 +11,7 @@ $Carrier(𝐒: %Element($"Pointed sets")): %SetOperator {
   definitionNotation = {
     parameter = #(x: %Expr),
     notation = [$ElementParameter(
-      element = x,
+      variable = x,
       set = 𝐒
     )]
   },

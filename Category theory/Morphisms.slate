@@ -27,7 +27,7 @@ $Morphisms(
   )],
   definitionNotation = {
     parameter = #(F: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = F,
       symbol = '→',
       operands = [𝐗, 𝐘]

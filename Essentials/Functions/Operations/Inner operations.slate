@@ -12,14 +12,12 @@ $"Inner operations"(X: %Set(auto = %true)): %SetOperator {
   )],
   definitionNotation = {
     parameter = #(∗: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = ∗,
-      symbol = '→',
       operands = [
-        $Operator(
+        $MultiplicationLikeOperator(
           symbol = '×',
-          operands = [X, X],
-          minParenLevel = 1
+          operands = [X, X]
         ),
         X
       ]

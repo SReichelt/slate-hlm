@@ -7,16 +7,7 @@ $less(
   κ: %Element($"Cardinal numbers"),
   μ: %Element(%previous)
 ): %Predicate {
-  notation = [
-    $Relation(
-      symbol = %neg('<', '≮'),
-      operands = [κ, μ]
-    ),
-    $Relation(
-      symbol = %neg('>', '≯'),
-      operands = [μ, κ]
-    )
-  ],
+  notation = [$LessThanRelation(operands = [κ, μ])],
   definition = [%and(
     $"less or equal"(
       κ = {κ},

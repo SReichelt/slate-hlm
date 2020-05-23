@@ -15,13 +15,7 @@ $product(
   )),
   a: %Element($../../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [x, a],
-    space = ' ',
-    minParenLevel = 2,
-    maxParenLevel = 2
-  )],
+  notation = [$MultiplicationOperator(operands = [x, a])],
   definition = [%structuralCases(
     𝐌,
     $"Right modules"(𝐑 = {𝐑}),

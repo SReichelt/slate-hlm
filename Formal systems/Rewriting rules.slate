@@ -11,10 +11,7 @@ $"Rewriting rules"(T: %Set(
     l: %Element(T),
     r: %Element(%previous)
   ): %Constructor {
-    notation = [$FunctionOperator(
-      operands = [l, r],
-      minParenLevel = -1
-    )],
+    notation = [$FunctionOperator(operands = [l, r])],
     equalityDefinition = {
       leftParameters = #(
         l: %Element(T),

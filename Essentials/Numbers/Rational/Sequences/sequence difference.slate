@@ -4,12 +4,7 @@ $"sequence difference"(
   𝐚: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"})),
   𝐛: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '−',
-    operands = [𝐚, 𝐛],
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$SubtractionOperator(operands = [𝐚, 𝐛])],
   definition = [
     %structuralCases(
       𝐛,

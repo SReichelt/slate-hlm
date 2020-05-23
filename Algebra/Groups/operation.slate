@@ -11,10 +11,7 @@ $operation(
   a: %Element($Carrier(𝐆 = {𝐆})),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '•',
-    operands = [a, b]
-  )],
+  notation = [$MultiplicationLikeOperator(operands = [a, b])],
   definition = [%structuralCases(
     𝐆,
     $Groups,

@@ -22,49 +22,22 @@ $Functions(
     #(y: %Element(Y))
   )): %Constructor {
     notation = [$Parens(
-      body = $Table(
-        items = [
-          [
-            $InnerParens(
-              body = X,
-              maxLevel = 0
-            ),
-            ' → ',
-            $InnerParens(
-              body = Y,
-              maxLevel = 0
-            )
-          ],
-          [x, ' ↦ ', y]
-        ],
-        style = 'aligned'
+      body = $FunctionBody(
+        domain = X,
+        codomain = Y,
+        parameter = x,
+        value = y
       ),
       style = '()'
     )],
     definitionNotation = {
       parameter = #(f: %Expr),
-      notation = [$FunctionPrefix(
+      notation = [$FunctionDefinition(
         function = f,
-        body = [
-          ' ',
-          $Table(
-            items = [
-              [
-                $InnerParens(
-                  body = X,
-                  maxLevel = 0
-                ),
-                ' → ',
-                $InnerParens(
-                  body = Y,
-                  maxLevel = 0
-                )
-              ],
-              [x, ' ↦ ', y]
-            ],
-            style = 'aligned'
-          )
-        ]
+        domain = X,
+        codomain = Y,
+        parameter = x,
+        value = y
       )]
     },
     equalityDefinition = {
@@ -84,16 +57,11 @@ $Functions(
     }
   }
 
-  notation = [$FunctionOperator(
-    symbol = '→',
-    operands = [X, Y],
-    minParenLevel = -1
-  )],
+  notation = [$FunctionOperator(operands = [X, Y])],
   definitionNotation = {
     parameter = #(f: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = f,
-      symbol = '→',
       operands = [X, Y]
     )],
     singularName = 'function',

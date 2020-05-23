@@ -123,73 +123,38 @@ $Functors(
     ))
   ): %Constructor {
     notation = [$Parens(
-      body = $Table(
-        items = [
-          [
-            $InnerParens(
-              body = 𝓒,
-              maxLevel = 0
-            ),
-            ' → ',
-            $InnerParens(
-              body = 𝓓,
-              maxLevel = 0
-            )
-          ],
-          [𝐗, ' ↦ ', 𝐘],
-          [
-            $Parens(
-              body = $FunctionDefinition(
-                function = f,
-                symbol = '→',
-                operands = [𝐀, 𝐁]
-              ),
-              style = '()'
-            ),
-            ' ↦ ',
-            g
-          ]
-        ],
-        style = 'aligned'
+      body = $FunctorBody(
+        domain = 𝓒,
+        codomain = 𝓓,
+        objectParameter = 𝐗,
+        objectValue = 𝐘,
+        morphismParameter = $Parens(
+          body = $FunctionDeclaration(
+            function = f,
+            operands = [𝐀, 𝐁]
+          ),
+          style = '()'
+        ),
+        morphismValue = g
       ),
       style = '()'
     )],
     definitionNotation = {
       parameter = #(F: %Expr),
-      notation = [$FunctionPrefix(
-        function = F,
-        body = [
-          ' ',
-          $Table(
-            items = [
-              [
-                $InnerParens(
-                  body = 𝓒,
-                  maxLevel = 0
-                ),
-                ' → ',
-                $InnerParens(
-                  body = 𝓓,
-                  maxLevel = 0
-                )
-              ],
-              [𝐗, ' ↦ ', 𝐘],
-              [
-                $Parens(
-                  body = $FunctionDefinition(
-                    function = f,
-                    symbol = '→',
-                    operands = [𝐀, 𝐁]
-                  ),
-                  style = '()'
-                ),
-                ' ↦ ',
-                g
-              ]
-            ],
-            style = 'aligned'
-          )
-        ]
+      notation = [$FunctorDefinition(
+        functor = F,
+        domain = 𝓒,
+        codomain = 𝓓,
+        objectParameter = 𝐗,
+        objectValue = 𝐘,
+        morphismParameter = $Parens(
+          body = $FunctionDeclaration(
+            function = f,
+            operands = [𝐀, 𝐁]
+          ),
+          style = '()'
+        ),
+        morphismValue = g
       )]
     },
     equalityDefinition = {
@@ -458,9 +423,8 @@ $Functors(
   )],
   definitionNotation = {
     parameter = #(F: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = F,
-      symbol = '→',
       operands = [𝓒, 𝓓]
     )],
     singularName = 'functor',

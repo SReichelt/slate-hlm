@@ -16,10 +16,7 @@ $Properties(S: %Set(auto = %true)): %Construction {
         body = p,
         style = '[]'
       ),
-      sub = $ElementRelation(
-        element = s,
-        set = S
-      )
+      sub = $ElementRelation(operands = [s, S])
     )],
     equalityDefinition = {
       leftParameters = #(s: %Binding(

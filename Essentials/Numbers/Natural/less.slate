@@ -14,16 +14,7 @@ $less(
     n = {m},
     m = {n}
   )},
-  notation = [
-    $Relation(
-      symbol = %neg('<', '≮'),
-      operands = [m, n]
-    ),
-    $Relation(
-      symbol = %neg('>', '≯'),
-      operands = [n, m]
-    )
-  ],
+  notation = [$LessThanRelation(operands = [m, n])],
   definition = [
     %not($"less or equal"(
       n = {m},

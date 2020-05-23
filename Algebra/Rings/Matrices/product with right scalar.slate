@@ -20,13 +20,7 @@ $"product with right scalar"(
   )),
   r: %Element($../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [A, r],
-    space = ' ',
-    minParenLevel = 2,
-    maxParenLevel = 2
-  )],
+  notation = [$MultiplicationOperator(operands = [A, r])],
   definition = [%structuralCases(
     A,
     $Matrices(

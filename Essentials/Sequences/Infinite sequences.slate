@@ -24,10 +24,7 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
         body = a,
         style = '()'
       ),
-      sub = $ElementRelation(
-        element = n,
-        set = 'ℕ'
-      )
+      sub = $ElementRelation(operands = [n, 'ℕ'])
     )],
     equalityDefinition = {
       leftParameters = #(n: %Binding(

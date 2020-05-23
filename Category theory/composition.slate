@@ -40,7 +40,7 @@ $composition(
     𝐘 = {𝐙}
   ))
 ): %ExplicitOperator {
-  notation = [$Operator(
+  notation = [$MultiplicationLikeOperator(
     symbol = '∘',
     operands = [g, f]
   )],

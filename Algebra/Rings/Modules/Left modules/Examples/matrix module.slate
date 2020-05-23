@@ -10,9 +10,8 @@ $"matrix module"(
 ): %ExplicitOperator {
   notation = [$SubSup(
     body = 𝐑,
-    sup = $Operator(
+    sup = $MultiplicationOperator(
       symbol = '×',
-      space = ' ',
       operands = [m, n]
     )
   )],

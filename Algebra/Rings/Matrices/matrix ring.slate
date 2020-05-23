@@ -12,9 +12,8 @@ $"matrix ring"(
 ): %ExplicitOperator {
   notation = [$SubSup(
     body = 𝐑,
-    sup = $Operator(
+    sup = $MultiplicationOperator(
       symbol = '×',
-      space = ' ',
       operands = [n, n]
     )
   )],

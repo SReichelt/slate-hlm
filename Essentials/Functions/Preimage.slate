@@ -13,10 +13,7 @@ $Preimage(
   S: %Subset(Y)
 ): %SetOperator {
   notation = [$Function(
-    function = $SubSup(
-      body = f,
-      sup = '-1'
-    ),
+    function = $Inverse(term = f),
     arguments = [S]
   )],
   definition = [%subset(

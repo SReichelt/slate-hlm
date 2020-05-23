@@ -24,8 +24,7 @@ $monomial(
         sup = n
       )
     ],
-    space = '',
-    minParenLevel = 3
+    space = ''
   )],
   definition = [%structuralCases(
     n,

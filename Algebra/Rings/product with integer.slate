@@ -11,13 +11,7 @@ $"product with integer"(
   z: %Element($../../Essentials/Numbers/Integer/Integers),
   a: %Element($Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [z, a],
-    space = ' ',
-    minParenLevel = 2,
-    maxParenLevel = 2
-  )],
+  notation = [$MultiplicationOperator(operands = [z, a])],
   definition = [%cases([
     {
       formula = $../../Essentials/Numbers/Integer/"less or equal"(

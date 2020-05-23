@@ -12,12 +12,7 @@ $sum(
   a: %Element($Integers),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '+',
-    operands = [a, b],
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$AdditionOperator(operands = [a, b])],
   definition = [%structuralCases(
     b,
     $Integers,

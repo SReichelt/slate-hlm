@@ -15,7 +15,7 @@ $Isomorphisms(
   )],
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [𝐒, 𝐓]

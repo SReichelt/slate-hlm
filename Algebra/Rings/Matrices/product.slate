@@ -35,13 +35,7 @@ $product(
     n = {n}
   ))
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [A, B],
-    space = ' ',
-    minParenLevel = 2,
-    maxParenLevel = 2
-  )],
+  notation = [$MultiplicationOperator(operands = [A, B])],
   definition = [%structuralCases(
     B,
     $Matrices(

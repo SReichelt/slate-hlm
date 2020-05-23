@@ -36,11 +36,7 @@ $"quotient group"(
     ∼ = {∼}
   ))
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '∕',
-    operands = [𝐆, S],
-    space = ''
-  )],
+  notation = [$DivisionOperator(operands = [𝐆, S])],
   definition = [$../Groups.group(
     G = {Q},
     ∗ = {$../../../Essentials/Functions/Functions(

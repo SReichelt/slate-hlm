@@ -30,10 +30,9 @@ $"left operation restriction"(
   notation = [$PostfixUnaryOperator(
     symbol = $SubSup(
       body = '∣',
-      sub = $Operator(
+      sub = $MultiplicationLikeOperator(
         symbol = '×',
-        operands = [X, A],
-        minParenLevel = 1
+        operands = [X, A]
       )
     ),
     operand = ∗,

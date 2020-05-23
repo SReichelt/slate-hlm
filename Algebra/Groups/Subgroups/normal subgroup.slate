@@ -4,16 +4,7 @@ $"normal subgroup"(
   𝐆: %Element($../Groups),
   𝐇: %Element(%previous)
 ): %Predicate {
-  notation = [
-    $Relation(
-      symbol = %neg('⊴', '⋬'),
-      operands = [𝐆, 𝐇]
-    ),
-    $Relation(
-      symbol = %neg('⊵', '⋭'),
-      operands = [𝐇, 𝐆]
-    )
-  ],
+  notation = [$NormalSubgroupRelation(operands = [𝐆, 𝐇])],
   definition = [%exists(
     #(S: %Subset($../Carrier(𝐆 = {𝐇}))),
     formula = %and(

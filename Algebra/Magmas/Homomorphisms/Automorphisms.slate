@@ -14,7 +14,7 @@ $Automorphisms(𝐌: %Element($../Magmas)): %SetOperator {
   )],
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [𝐌, 𝐌]

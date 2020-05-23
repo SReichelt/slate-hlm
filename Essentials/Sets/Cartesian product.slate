@@ -41,9 +41,8 @@ $"Cartesian product"(
     }
   }
 
-  notation = [$Operator(
+  notation = [$MultiplicationLikeOperator(
     symbol = '×',
-    operands = [S, T],
-    minParenLevel = 2
+    operands = [S, T]
   )]
 }

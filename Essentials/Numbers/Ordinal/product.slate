@@ -10,13 +10,7 @@ $product(
   α: %Element($"Ordinal numbers"),
   β: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [α, β],
-    space = ' ',
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$MultiplicationOperator(operands = [α, β])],
   definition = [%structuralCases(
     β,
     $"Ordinal numbers",

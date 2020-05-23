@@ -25,13 +25,7 @@ $"linear combination"(
     𝒙 = {𝒙}
   ))
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [𝒙, 𝐚],
-    space = ' ',
-    minParenLevel = 2,
-    maxParenLevel = 2
-  )],
+  notation = [$MultiplicationOperator(operands = [𝒙, 𝐚])],
   definition = [%structuralCases(
     𝒙,
     $../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = {$../Carrier(

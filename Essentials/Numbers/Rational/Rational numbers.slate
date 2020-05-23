@@ -21,9 +21,7 @@ $"Rational numbers": %Construction {
       body = $Operator(
         symbol = $ConstructorName(name = '/'),
         operands = [n, d],
-        space = '',
-        minParenLevel = 2,
-        maxParenLevel = 2
+        space = ''
       ),
       style = '()'
     )],

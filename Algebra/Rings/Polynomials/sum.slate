@@ -15,12 +15,7 @@ $sum(
   )),
   q: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '+',
-    operands = [p, q],
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$AdditionOperator(operands = [p, q])],
   definition = [%structuralCases(
     q,
     $Polynomials(

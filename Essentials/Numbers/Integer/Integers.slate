@@ -23,9 +23,7 @@ $Integers: %Construction {
       body = $Operator(
         symbol = $ConstructorName(name = '-'),
         operands = [n, m],
-        space = '',
-        minParenLevel = 1,
-        maxParenLevel = 1
+        space = ''
       ),
       style = '()'
     )],

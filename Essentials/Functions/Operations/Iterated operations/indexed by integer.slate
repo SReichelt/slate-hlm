@@ -17,10 +17,7 @@ $"indexed by integer"(
     symbol = ⨂,
     operand = a,
     over = k,
-    under = $EqualityRelation(
-      left = i,
-      right = j
-    ),
+    under = $EqualityRelation(operands = [i, j]),
     maxParenLevel = 1
   )],
   definition = [$"indexed by natural number"(

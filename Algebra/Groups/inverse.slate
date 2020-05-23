@@ -7,10 +7,7 @@ $inverse(
   ),
   a: %Element($Carrier(𝐆 = {𝐆}))
 ): %ExplicitOperator {
-  notation = [$SubSup(
-    body = a,
-    sup = '-1'
-  )],
+  notation = [$Inverse(term = a)],
   definition = [%structuralCases(
     𝐆,
     $Groups,

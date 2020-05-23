@@ -9,9 +9,8 @@ $zero(
     body = '0',
     sub = $SubSup(
       body = 𝐑,
-      sup = $Operator(
+      sup = $MultiplicationOperator(
         symbol = '×',
-        space = ' ',
         operands = [m, n]
       )
     )

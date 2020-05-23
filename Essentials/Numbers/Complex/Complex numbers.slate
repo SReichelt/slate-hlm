@@ -19,17 +19,14 @@ $"Complex numbers": %Construction {
         symbol = $ConstructorName(name = '+'),
         operands = [
           r,
-          $PostfixUnaryOperator(
-            symbol = '𝒊',
-            operand = i,
+          $Operator(
+            symbol = '',
+            operands = [i, '𝒊'],
             space = '',
-            minParenLevel = 2,
-            maxParenLevel = 2
+            minParenLevel = 3
           )
         ],
-        space = '',
-        minParenLevel = 1,
-        maxParenLevel = 1
+        space = ''
       ),
       style = '()'
     )],

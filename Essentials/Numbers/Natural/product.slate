@@ -11,13 +11,7 @@ $product(
   m: %Element($"Natural numbers"),
   n: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '⋅',
-    operands = [m, n],
-    space = ' ',
-    minParenLevel = 2,
-    maxParenLevel = 2
-  )],
+  notation = [$MultiplicationOperator(operands = [m, n])],
   definition = [%structuralCases(
     n,
     $"Natural numbers",

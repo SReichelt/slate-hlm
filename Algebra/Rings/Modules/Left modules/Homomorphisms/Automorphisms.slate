@@ -19,7 +19,7 @@ $Automorphisms(
   )],
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [𝐌, 𝐌]

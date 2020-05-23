@@ -11,16 +11,7 @@ $before(
   a: %Element($Carrier(α = {α})),
   b: %Element(%previous)
 ): %Predicate {
-  notation = [
-    $Relation(
-      symbol = %neg('≤', '≰'),
-      operands = [a, b]
-    ),
-    $Relation(
-      symbol = %neg('≥', '≱'),
-      operands = [b, a]
-    )
-  ],
+  notation = [$LessOrEqualRelation(operands = [a, b])],
   definition = [%structural(
     α,
     $"Ordinal numbers",

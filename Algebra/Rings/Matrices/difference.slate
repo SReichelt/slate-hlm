@@ -20,12 +20,7 @@ $difference(
   )),
   B: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
-    symbol = '−',
-    operands = [A, B],
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$SubtractionOperator(operands = [A, B])],
   definition = [%structuralCases(
     B,
     $Matrices(

@@ -4,11 +4,7 @@ $divisible(
   a: %Element($Subsets/"Nonzero numbers"),
   b: %Element($Integers)
 ): %Predicate {
-  notation = [$Relation(
-    symbol = %neg('∣', '∤'),
-    operands = [a, b],
-    parenLevel = 1
-  )],
+  notation = [$DivisibilityRelation(operands = [a, b])],
   definition = [
     %exists(
       #(x: %Element($Integers)),

@@ -5,18 +5,16 @@ $"additive inverse"(
     $../../Rings,
     auto = %true
   ),
-  𝐌: %Element($"Left modules"(𝐑 = {𝐑})),
+  𝐌: %Element(
+    $"Left modules"(𝐑 = {𝐑}),
+    auto = %true
+  ),
   x: %Element($Carrier(
     𝐑 = {𝐑},
     𝐌 = {𝐌}
   ))
 ): %ExplicitOperator {
-  notation = [$PrefixUnaryOperator(
-    symbol = '−',
-    operand = x,
-    minParenLevel = 1,
-    maxParenLevel = 1
-  )],
+  notation = [$NegationOperator(operand = x)],
   definition = [%structuralCases(
     𝐌,
     $"Left modules"(𝐑 = {𝐑}),

@@ -27,16 +27,7 @@ $Matrices(
         body = a,
         style = '()'
       ),
-      sub = $Group(items = [
-        $Relation(
-          symbol = '<',
-          operands = [i, m]
-        ),
-        $Relation(
-          symbol = '<',
-          operands = [j, n]
-        )
-      ])
+      sub = $Group(items = [$LessThanRelation(operands = [i, m])])
     )],
     equalityDefinition = {
       leftParameters = #(i: %Binding(
@@ -66,9 +57,8 @@ $Matrices(
 
   notation = [$SubSup(
     body = 𝐑,
-    sup = $Operator(
+    sup = $MultiplicationOperator(
       symbol = '×',
-      space = ' ',
       operands = [m, n]
     )
   )]

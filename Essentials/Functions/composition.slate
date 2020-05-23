@@ -21,11 +21,9 @@ $composition(
     Y = {Z}
   ))
 ): %ExplicitOperator {
-  notation = [$Operator(
+  notation = [$MultiplicationLikeOperator(
     symbol = '∘',
-    operands = [g, f],
-    minParenLevel = 2,
-    maxParenLevel = 2
+    operands = [g, f]
   )],
   definition = [$Functions(
       X = {X},

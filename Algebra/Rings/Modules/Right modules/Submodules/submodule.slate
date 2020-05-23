@@ -8,16 +8,7 @@ $submodule(
   𝐌: %Element($../"Right modules"(𝐑 = {𝐑})),
   𝐍: %Element(%previous)
 ): %Predicate {
-  notation = [
-    $Relation(
-      symbol = %neg('≤', '≰'),
-      operands = [𝐌, 𝐍]
-    ),
-    $Relation(
-      symbol = %neg('≥', '≱'),
-      operands = [𝐍, 𝐌]
-    )
-  ],
+  notation = [$SubObjectRelation(operands = [𝐌, 𝐍])],
   definition = [
     %exists(
       #(φ: %Element($../Homomorphisms/Homomorphisms(

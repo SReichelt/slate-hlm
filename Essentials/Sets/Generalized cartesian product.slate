@@ -23,10 +23,7 @@ $"Generalized cartesian product"(
         body = s,
         style = '()'
       ),
-      sub = $ElementRelation(
-        element = j,
-        set = I
-      )
+      sub = $ElementRelation(operands = [j, I])
     )],
     equalityDefinition = {
       leftParameters = #(j: %Binding(
@@ -48,9 +45,6 @@ $"Generalized cartesian product"(
   notation = [$LargeOperator(
     symbol = '∏',
     operand = S,
-    under = $ElementRelation(
-      element = i,
-      set = I
-    )
+    under = $ElementRelation(operands = [i, I])
   )]
 }

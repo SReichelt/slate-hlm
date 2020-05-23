@@ -14,14 +14,12 @@ $Operations(
   )],
   definitionNotation = {
     parameter = #(∗: %Expr),
-    notation = [$FunctionDefinition(
+    notation = [$FunctionDeclaration(
       function = ∗,
-      symbol = '→',
       operands = [
-        $Operator(
+        $MultiplicationLikeOperator(
           symbol = '×',
-          operands = [X, Y],
-          minParenLevel = 1
+          operands = [X, Y]
         ),
         Z
       ]
