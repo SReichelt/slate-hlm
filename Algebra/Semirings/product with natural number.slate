@@ -11,7 +11,7 @@ $"product with natural number"(
   n: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
   a: %Element($Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$MultiplicationOperator(operands = [n, a])],
+  notation = $MultiplicationOperator(operands = [n, a]),
   definition = [%structuralCases(
     n,
     $../../Essentials/Numbers/Natural/"Natural numbers",

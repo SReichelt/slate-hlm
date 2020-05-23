@@ -9,11 +9,11 @@ $"subring set"(
   𝐑: %Element($../Rings),
   S: %Subset($../Carrier(𝐑 = {𝐑}))
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [S, 𝐑],
     singular = 'subring',
     plural = 'subrings'
-  )],
+  ),
   definition = [%and(
     %forall(
       #(

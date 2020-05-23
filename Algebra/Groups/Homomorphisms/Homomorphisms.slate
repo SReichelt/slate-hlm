@@ -11,17 +11,16 @@ $Homomorphisms(
   𝐆: %Element($../Groups),
   𝐇: %Element(%previous)
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Hom',
     arguments = [𝐆, 𝐇]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
-      symbol = '→',
       operands = [𝐆, 𝐇]
-    )],
+    ),
     singularName = 'homomorphism',
     pluralName = 'homomorphisms'
   },

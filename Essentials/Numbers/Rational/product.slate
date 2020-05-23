@@ -10,7 +10,7 @@ $product(
   a: %Element($"Rational numbers"),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$MultiplicationOperator(operands = [a, b])],
+  notation = $MultiplicationOperator(operands = [a, b]),
   definition = [%structuralCases(
     b,
     $"Rational numbers",

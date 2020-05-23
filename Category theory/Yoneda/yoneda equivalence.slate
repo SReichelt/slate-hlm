@@ -29,10 +29,10 @@ $"yoneda equivalence"(
     𝓒 = {𝓒}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'yoneda',
     arguments = [F, 𝐀]
-  )],
+  ),
   definition = [$../../Essentials/Functions/Functions(
       X = {$../"Natural transformations"/"Natural transformations"(
         u = {u},

@@ -14,11 +14,11 @@ $Intersection(
   S: %Subset(U),
   T: %Subset(%previous)
 ): %SetOperator {
-  notation = [$Operator(
+  notation = $Operator(
     symbol = '∩',
     operands = [S, T],
     space = ' '
-  )],
+  ),
   definition = [%subset(
     #(x: %Element(U)),
     %and(

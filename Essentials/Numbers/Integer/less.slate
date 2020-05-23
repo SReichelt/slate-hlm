@@ -11,7 +11,7 @@ $less(
     b = {a},
     a = {b}
   )},
-  notation = [$LessThanRelation(operands = [a, b])],
+  notation = $LessThanRelation(operands = [a, b]),
   definition = [
     %not($"less or equal"(
       b = {a},

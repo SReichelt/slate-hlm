@@ -6,13 +6,13 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/units.html#units.comm_group
  */
 $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = $SubSup(
       body = 𝐑,
       sup = '×'
     ),
     style = '[]'
-  )],
+  ),
   definition = [%structuralCases(
     𝐑,
     $Rings,

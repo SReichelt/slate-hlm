@@ -21,10 +21,10 @@ $composition(
     Y = {Z}
   ))
 ): %ExplicitOperator {
-  notation = [$MultiplicationLikeOperator(
+  notation = $MultiplicationLikeOperator(
     symbol = '∘',
     operands = [g, f]
-  )],
+  ),
   definition = [$Functions(
       X = {X},
       Y = {Z}

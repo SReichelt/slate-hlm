@@ -6,7 +6,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.semiring
  */
 $"natural numbers": %ExplicitOperator {
-  notation = ['ℕ'],
+  notation = 'ℕ',
   definition = [$../Semirings.semiring(
     R = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
     ⊕ = {$../../../Essentials/Functions/Operations/operator(

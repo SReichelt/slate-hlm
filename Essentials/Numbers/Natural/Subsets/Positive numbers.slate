@@ -6,10 +6,10 @@
  *             * http://oeis.org/A000027
  */
 $"Positive numbers": %SetOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'ℕ',
     sub = ['+']
-  )],
+  ),
   definition = [
     $"Segment (greater)"(n = {$../number(value = 0)}),
     %subset(

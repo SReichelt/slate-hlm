@@ -7,9 +7,9 @@ $identity(𝐆: %Element(
   $../Groups,
   auto = %true
 )): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'id',
     sub = 𝐆
-  )],
+  ),
   definition = [$../../../Essentials/Functions/identity(X = {$../Carrier(𝐆 = {𝐆})})]
 }

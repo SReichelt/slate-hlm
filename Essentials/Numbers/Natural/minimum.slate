@@ -9,10 +9,10 @@ $minimum(
   M: %Subset($"Natural numbers"),
   _1: %Constraint(%not($../../Sets/empty(S = {M})))
 ): %ImplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'min',
     arguments = [M]
-  )],
+  ),
   parameter = #(m: %Element(M)),
   definition = [
     %forall(

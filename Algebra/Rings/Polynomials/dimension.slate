@@ -19,10 +19,10 @@ $dimension(
     X = {X}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'dim',
     arguments = [p]
-  )],
+  ),
   definition = [%structuralCases(
     p,
     $Polynomials(

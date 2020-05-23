@@ -1,10 +1,10 @@
 %../../../../../logics/hlm%
 
 $free(𝐌: %Element($../Magmas)): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = 𝐌,
     property = 'free'
-  )],
+  ),
   definition = [%exists(
     #(S: %Subset($../Carrier(𝐌 = {𝐌}))),
     formula = $"free on set"(

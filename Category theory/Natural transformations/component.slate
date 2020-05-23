@@ -46,10 +46,10 @@ $component(
     𝓒 = {𝓒}
   ))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = η,
     sub = 𝐗
-  )],
+  ),
   definition = [%structuralCases(
     η,
     $"Infranatural transformations"(

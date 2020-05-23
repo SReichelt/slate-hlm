@@ -11,11 +11,11 @@ $"subgroup set"(
   𝐆: %Element($../Groups),
   S: %Subset($../Carrier(𝐆 = {𝐆}))
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [S, 𝐆],
     singular = 'subgroup',
     plural = 'subgroups'
-  )],
+  ),
   definition = [%and(
     %forall(
       #(

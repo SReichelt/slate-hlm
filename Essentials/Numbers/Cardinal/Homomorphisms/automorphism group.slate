@@ -13,10 +13,10 @@
  *             * https://ncatlab.org/nlab/show/automorphism#automorphism_group
  */
 $"automorphism group"(κ: %Element($../"Cardinal numbers")): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Aut',
     arguments = [κ]
-  )],
+  ),
   definition = [$../../../../Algebra/Groups/Subgroups/"subset group"(
     𝐆 = {$../../../../Algebra/Groups/Examples/"symmetric group"(X = {$../Carrier(κ = {κ})})},
     S = {$Automorphisms(κ = {κ})}

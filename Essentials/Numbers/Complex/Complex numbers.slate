@@ -14,7 +14,7 @@ $"Complex numbers": %Construction {
     r: %Element($../Real/"Real numbers"),
     i: %Element(%previous)
   ): %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '+'),
         operands = [
@@ -29,7 +29,7 @@ $"Complex numbers": %Construction {
         space = ''
       ),
       style = '()'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         r: %Element($../Real/"Real numbers"),
@@ -57,7 +57,7 @@ $"Complex numbers": %Construction {
     }
   }
 
-  notation = ['ℂ'],
+  notation = 'ℂ',
   embedding = {
     parameter = #(r: %Element($../Real/"Real numbers")),
     target = $"Complex numbers".complex(

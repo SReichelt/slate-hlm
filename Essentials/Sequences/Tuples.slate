@@ -22,13 +22,13 @@ $Tuples(
     $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
     #(a: %Element(S))
   )): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = a,
         style = '()'
       ),
       sub = $LessThanRelation(operands = [k, α])
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(k: %Binding(
         $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
@@ -46,10 +46,10 @@ $Tuples(
     }
   }
 
-  notation = [$SubSup(
+  notation = $SubSup(
     body = S,
     sup = α
-  )],
+  ),
   definitionNotation = {
     parameter = #(𝐚: %Expr),
     singularName = [

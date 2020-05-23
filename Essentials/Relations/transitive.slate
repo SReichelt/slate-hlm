@@ -12,10 +12,10 @@ $transitive(
   S: %Set(auto = %true),
   ≺: %Element($Endorelations(S = {S}))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = ≺,
     property = 'transitive'
-  )],
+  ),
   definition = [%forall(
     #(
       s: %Element(S),

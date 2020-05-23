@@ -22,10 +22,10 @@ $Semirings: %Construction {
       "1" = {"1"}
     ))
   ): %Constructor {
-    notation = [$Tuple(
+    notation = $Tuple(
       items = [R, ⊕, "0", ⊙, "1"],
       style = '[]'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         R: %Set,
@@ -103,7 +103,7 @@ $Semirings: %Construction {
     }
   }
 
-  notation = ['𝓢𝓮𝓶𝓲𝓡𝓲𝓷𝓰'],
+  notation = '𝓢𝓮𝓶𝓲𝓡𝓲𝓷𝓰',
   definitionNotation = {
     parameter = #(𝐑: %Expr),
     singularName = 'semiring',

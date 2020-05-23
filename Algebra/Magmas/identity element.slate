@@ -10,12 +10,12 @@ $"identity element"(
   𝐌: %Element($Magmas),
   e: %Element($Carrier(𝐌 = {𝐌}))
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [e, 𝐌],
     singular = 'identity',
     plural = 'identities',
     article = 'an'
-  )],
+  ),
   definition = [%structural(
     𝐌,
     $Magmas,

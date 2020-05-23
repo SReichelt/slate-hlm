@@ -14,11 +14,11 @@ $"Generalized intersection"(
     #(S: %Subset(U))
   )
 ): %SetOperator {
-  notation = [$LargeOperator(
+  notation = $LargeOperator(
     symbol = '⋂',
     operand = S,
     under = $ElementRelation(operands = [i, I])
-  )],
+  ),
   definition = [%subset(
     #(x: %Element(U)),
     %forall(

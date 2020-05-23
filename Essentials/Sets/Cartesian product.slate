@@ -23,7 +23,7 @@ $"Cartesian product"(
     s: %Element(S),
     t: %Element(T)
   ): %Constructor {
-    notation = [$Tuple(items = [s, t])],
+    notation = $Tuple(items = [s, t]),
     equalityDefinition = {
       leftParameters = #(
         s: %Element(S),
@@ -41,8 +41,8 @@ $"Cartesian product"(
     }
   }
 
-  notation = [$MultiplicationLikeOperator(
+  notation = $MultiplicationLikeOperator(
     symbol = '×',
     operands = [S, T]
-  )]
+  )
 }

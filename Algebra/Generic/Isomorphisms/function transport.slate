@@ -12,11 +12,11 @@ $"function transport"(
     Y = {X}
   ))
 ): %ExplicitOperator {
-  notation = [$../../Isomorphisms/Function(
+  notation = $../../Isomorphisms/Function(
     function = φ,
     arguments = [f],
     style = '[]'
-  )],
+  ),
   definition = [
     %structuralCases(
       f,

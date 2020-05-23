@@ -7,10 +7,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#id
  */
 $identity(X: %Set(auto = %true)): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'id',
     sub = X
-  )],
+  ),
   definition = [$Functions(
       X = {X},
       Y = {X}

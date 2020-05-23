@@ -9,12 +9,12 @@ $"indexed by natural number"(
     #(a: %Element(X))
   )
 ): %ExplicitOperator {
-  notation = [$LargeOperator(
+  notation = $LargeOperator(
     symbol = ⨂,
     operand = a,
     under = $LessThanRelation(operands = [i, n]),
     maxParenLevel = 1
-  )],
+  ),
   definition = [%structuralCases(
     n,
     $../../../Numbers/Natural/"Natural numbers",

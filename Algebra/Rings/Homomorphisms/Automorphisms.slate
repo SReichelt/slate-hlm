@@ -8,17 +8,17 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/ring.html#ring_aut
  */
 $Automorphisms(𝐑: %Element($../Rings)): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Aut',
     arguments = [𝐑]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [𝐑, 𝐑]
-    )],
+    ),
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },

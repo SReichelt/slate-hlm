@@ -8,17 +8,17 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/mul_add.html#mul_aut
  */
 $Automorphisms(𝐒: %Element($../"Pointed sets")): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Aut',
     arguments = [𝐒]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [𝐒, 𝐒]
-    )],
+    ),
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },

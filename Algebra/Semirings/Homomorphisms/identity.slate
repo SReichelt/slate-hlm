@@ -8,9 +8,9 @@ $identity(𝐑: %Element(
   $../Semirings,
   auto = %true
 )): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'id',
     sub = 𝐑
-  )],
+  ),
   definition = [$../../../Essentials/Functions/identity(X = {$../Carrier(𝐑 = {𝐑})})]
 }

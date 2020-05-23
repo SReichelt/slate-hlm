@@ -8,10 +8,10 @@ $"beta reduction"(
   V: %Subset($../Variables),
   _1: %Constraint($../../Essentials/Sets/finite(S = {V}))
 ): %SetOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'β',
     sub = V
-  )],
+  ),
   definition = [%extendedSubset(
     #(
       x: %Binding(

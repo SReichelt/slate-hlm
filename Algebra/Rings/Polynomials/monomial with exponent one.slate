@@ -11,11 +11,11 @@ $"monomial with exponent one"(
   ),
   a: %Element($../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$Operator(
+  notation = $Operator(
     symbol = '',
     operands = [a, X],
     space = ''
-  )],
+  ),
   definition = [
     $monomial(
       𝐑 = {𝐑},

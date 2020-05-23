@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 $inverse(a: %Element($"Complex numbers")): %ExplicitOperator {
-  notation = [$NegationOperator(operand = a)],
+  notation = $NegationOperator(operand = a),
   definition = [%structuralCases(
     a,
     $"Complex numbers",

@@ -17,10 +17,10 @@ $"mapping value"(
   )),
   s: %Element(S)
 ): %ImplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = ≺,
     arguments = [s]
-  )],
+  ),
   parameter = #(t: %Element(T)),
   definition = [$related(
     S = {S},

@@ -8,10 +8,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/zmod/basic.html#zmodp.field
  */
 $"prime field"(p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers")): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝔽',
     sub = p
-  )],
+  ),
   definition = [$../../Rings/Quotients/"quotient ring"(
     𝐑 = {$../../Rings/Examples/integers},
     I = {$../../../Essentials/Numbers/Integer/Subsets/Multiples(n = {p})}

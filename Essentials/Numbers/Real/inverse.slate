@@ -4,7 +4,7 @@
  * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal_opp
  */
 $inverse(a: %Element($"Real numbers")): %ExplicitOperator {
-  notation = [$NegationOperator(operand = a)],
+  notation = $NegationOperator(operand = a),
   definition = [%structuralCases(
     a,
     $"Real numbers",

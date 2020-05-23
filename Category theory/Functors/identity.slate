@@ -15,10 +15,10 @@ $identity(
     auto = %true
   )
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'id',
     sub = 𝓒
-  )],
+  ),
   definition = [$Functors(
       u = {u},
       v = {u},

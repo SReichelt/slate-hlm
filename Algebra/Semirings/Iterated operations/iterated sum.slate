@@ -8,9 +8,9 @@
  *             * https://proofwiki.org/wiki/Definition:Summation
  */
 $"iterated sum"(𝐑: %Element($../Semirings)): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '∑',
     sub = 𝐑
-  )],
+  ),
   definition = [$../../Monoids/"iterated operation"(𝐌 = {$../"additive monoid"(𝐑 = {𝐑})})]
 }

@@ -11,12 +11,12 @@ $ideal(
   𝐑: %Element($../Rings),
   I: %Subset($../Carrier(𝐑 = {𝐑}))
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [I, 𝐑],
     singular = 'ideal',
     plural = 'ideals',
     article = 'an'
-  )],
+  ),
   definition = [
     %and(
       $"left ideal"(

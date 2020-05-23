@@ -12,11 +12,11 @@ $"indexed element"(
   )),
   m: %Def($../minimum(M = {M}))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = M,
     arguments = [n],
     style = '[]'
-  )],
+  ),
   definition = [%structuralCases(
     n,
     $../"Natural numbers",

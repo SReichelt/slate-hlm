@@ -122,7 +122,7 @@ $Functors(
       )
     ))
   ): %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = $FunctorBody(
         domain = 𝓒,
         codomain = 𝓓,
@@ -138,10 +138,10 @@ $Functors(
         morphismValue = g
       ),
       style = '()'
-    )],
+    ),
     definitionNotation = {
       parameter = #(F: %Expr),
-      notation = [$FunctorDefinition(
+      notation = $FunctorDefinition(
         functor = F,
         domain = 𝓒,
         codomain = 𝓓,
@@ -155,7 +155,7 @@ $Functors(
           style = '()'
         ),
         morphismValue = g
-      )]
+      )
     },
     equalityDefinition = {
       leftParameters = #(
@@ -417,16 +417,16 @@ $Functors(
     }
   }
 
-  notation = [$Function(
+  notation = $Function(
     function = 'Fun',
     arguments = [𝓒, 𝓓]
-  )],
+  ),
   definitionNotation = {
     parameter = #(F: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = F,
       operands = [𝓒, 𝓓]
-    )],
+    ),
     singularName = 'functor',
     pluralName = 'functors',
     nameOptional = %true

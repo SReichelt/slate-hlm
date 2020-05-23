@@ -20,13 +20,13 @@ $"hom-functor"(
     𝓒 = {𝓒}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = 'Hom',
       sub = v
     ),
     arguments = [𝐀, '−']
-  )],
+  ),
   definition = [$../Functors/Functors(
       u = {u},
       v = {v},

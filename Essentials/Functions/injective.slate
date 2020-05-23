@@ -15,10 +15,10 @@ $injective(
     Y = {Y}
   ))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = f,
     property = 'injective'
-  )],
+  ),
   definition = [
     %forall(
       #(

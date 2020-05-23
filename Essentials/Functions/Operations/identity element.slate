@@ -10,13 +10,13 @@ $"identity element"(
   ∗: %Element($"Inner operations"(X = {X})),
   e: %Element(X)
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [e, ∗],
     singular = 'identity',
     plural = 'identities',
     article = 'an',
     preposition = 'for'
-  )],
+  ),
   definition = [
     %and(
       $"left identity element"(

@@ -4,10 +4,10 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group/units.html#units
  */
 $Units(𝐑: %Element($Rings)): %SetOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 𝐑,
     sup = '×'
-  )],
+  ),
   definition = [%subset(
     #(a: %Element($Carrier(𝐑 = {𝐑}))),
     $unit(

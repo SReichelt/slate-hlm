@@ -7,17 +7,17 @@
  *             * https://ncatlab.org/nlab/show/automorphism
  */
 $Automorphisms(α: %Element($../"Ordinal numbers")): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Aut',
     arguments = [α]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [α, α]
-    )],
+    ),
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },

@@ -9,10 +9,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/types.html#category_theory.types
  */
 $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝐒𝐞𝐭',
     sub = u
-  )],
+  ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Essentials/Numbers/Cardinal/"Cardinal numbers"},
       𝐀 = {

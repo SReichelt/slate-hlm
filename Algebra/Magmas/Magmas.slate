@@ -13,10 +13,10 @@ $Magmas: %Construction {
     M: %Set,
     ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
   ): %Constructor {
-    notation = [$Tuple(
+    notation = $Tuple(
       items = [M, ∗],
       style = '[]'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         M: %Set,
@@ -45,7 +45,7 @@ $Magmas: %Construction {
     }
   }
 
-  notation = ['𝓜𝓪𝓰'],
+  notation = '𝓜𝓪𝓰',
   definitionNotation = {
     parameter = #(𝐌: %Expr),
     singularName = 'magma',

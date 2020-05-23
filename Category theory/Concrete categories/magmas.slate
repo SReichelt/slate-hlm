@@ -6,10 +6,10 @@
  * @references * https://en.wikipedia.org/wiki/Category_of_magmas
  */
 $magmas(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝐌𝐚𝐠',
     sub = u
-  )],
+  ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Magmas/Magmas},
       𝐀 = {

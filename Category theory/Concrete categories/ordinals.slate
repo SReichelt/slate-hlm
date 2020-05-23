@@ -4,10 +4,10 @@
  * @remarks The objects of this category are actually isomorphism classes of well-ordered sets, i.e. ordinal numbers.
  */
 $ordinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝐖𝐨𝐬𝐞𝐭',
     sub = u
-  )],
+  ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Essentials/Numbers/Ordinal/"Ordinal numbers"},
       𝐀 = {

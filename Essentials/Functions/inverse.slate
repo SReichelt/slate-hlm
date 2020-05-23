@@ -15,7 +15,7 @@ $inverse(
     Y = {Y}
   ))
 ): %ImplicitOperator {
-  notation = [$Inverse(term = f)],
+  notation = $Inverse(term = f),
   parameter = #(g: %Element($Bijections(
     X = {Y},
     Y = {X}

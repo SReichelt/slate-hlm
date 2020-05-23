@@ -28,10 +28,10 @@ $Rings: %Construction {
       "1" = {"1"}
     ))
   ): %Constructor {
-    notation = [$Tuple(
+    notation = $Tuple(
       items = [R, ⊕, "0", ⊖, ⊙, "1"],
       style = '[]'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         R: %Set,
@@ -128,7 +128,7 @@ $Rings: %Construction {
     }
   }
 
-  notation = ['𝓡𝓲𝓷𝓰'],
+  notation = '𝓡𝓲𝓷𝓰',
   definitionNotation = {
     parameter = #(𝐑: %Expr),
     singularName = 'ring',

@@ -4,10 +4,10 @@ $"reflexive symmetric closure"(
   S: %Set(auto = %true),
   ≺: %Element($../Endorelations(S = {S}))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = ≺,
     sup = '⇔'
-  )],
+  ),
   definition = [
     $closure(
       S = {S},

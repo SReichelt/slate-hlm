@@ -9,10 +9,10 @@
  *             * http://oeis.org/A005843
  */
 $even(n: %Element($"Natural numbers")): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     property = %neg('even', 'odd'),
     operand = n
-  )],
+  ),
   definition = [
     %structural(
       n,

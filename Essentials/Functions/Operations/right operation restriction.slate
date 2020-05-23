@@ -27,7 +27,7 @@ $"right operation restriction"(
     )
   ))
 ): %ExplicitOperator {
-  notation = [$PostfixUnaryOperator(
+  notation = $PostfixUnaryOperator(
     symbol = $SubSup(
       body = '∣',
       sub = $MultiplicationLikeOperator(
@@ -37,7 +37,7 @@ $"right operation restriction"(
     ),
     operand = ∗,
     minParenLevel = 3
-  )],
+  ),
   definition = [$../"codomain restriction"(
     X = {$../../Sets/"Cartesian product"(
       S = {X},

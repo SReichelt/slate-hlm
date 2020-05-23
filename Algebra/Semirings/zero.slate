@@ -1,10 +1,10 @@
 %../../../../logics/hlm%
 
 $zero(𝐑: %Element($Semirings)): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '0',
     sub = 𝐑
-  )],
+  ),
   definition = [%structuralCases(
     𝐑,
     $Semirings,

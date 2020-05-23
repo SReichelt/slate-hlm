@@ -12,10 +12,10 @@ $Preimage(
   )),
   S: %Subset(Y)
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $Inverse(term = f),
     arguments = [S]
-  )],
+  ),
   definition = [%subset(
     #(x: %Element(X)),
     %in(

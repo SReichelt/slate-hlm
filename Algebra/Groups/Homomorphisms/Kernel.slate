@@ -21,10 +21,10 @@ $Kernel(
     𝐇 = {𝐇}
   ))
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Ker',
     arguments = [φ]
-  )],
+  ),
   definition = [$../../../Essentials/Functions/Preimage(
     X = {$../Carrier(𝐆 = {𝐆})},
     Y = {$../Carrier(𝐆 = {𝐇})},

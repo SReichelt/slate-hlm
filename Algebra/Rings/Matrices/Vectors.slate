@@ -9,10 +9,10 @@ $Vectors(
   𝐑: %Element($../Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %SetOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 𝐑,
     sup = n
-  )],
+  ),
   definition = [$Matrices(
     𝐑 = {𝐑},
     m = {$../../../Essentials/Numbers/Natural/number(value = 1)},

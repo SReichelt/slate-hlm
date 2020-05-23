@@ -13,13 +13,13 @@ $"indexed by integer"(
     #(a: %Element(X))
   )
 ): %ExplicitOperator {
-  notation = [$LargeOperator(
+  notation = $LargeOperator(
     symbol = ⨂,
     operand = a,
     over = k,
     under = $EqualityRelation(operands = [i, j]),
     maxParenLevel = 1
-  )],
+  ),
   definition = [$"indexed by natural number"(
     X = {X},
     ⨂ = {⨂},

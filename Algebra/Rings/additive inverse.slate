@@ -7,7 +7,7 @@ $"additive inverse"(
   ),
   a: %Element($Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$NegationOperator(operand = a)],
+  notation = $NegationOperator(operand = a),
   definition = [%structuralCases(
     𝐑,
     $Rings,

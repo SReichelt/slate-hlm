@@ -7,10 +7,10 @@ $zero(
   ),
   𝐌: %Element($"Right modules"(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '0',
     sub = 𝐌
-  )],
+  ),
   definition = [%structuralCases(
     𝐌,
     $"Right modules"(𝐑 = {𝐑}),

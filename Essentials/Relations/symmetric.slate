@@ -12,10 +12,10 @@ $symmetric(
   S: %Set(auto = %true),
   ≺: %Element($Endorelations(S = {S}))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = ≺,
     property = 'symmetric'
-  )],
+  ),
   definition = [
     %forall(
       #(

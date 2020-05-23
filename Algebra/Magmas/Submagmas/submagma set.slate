@@ -7,11 +7,11 @@ $"submagma set"(
   𝐌: %Element($../Magmas),
   S: %Subset($../Carrier(𝐌 = {𝐌}))
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [S, 𝐌],
     singular = 'submagma',
     plural = 'submagmas'
-  )],
+  ),
   definition = [%forall(
     #(
       a: %Element(S),

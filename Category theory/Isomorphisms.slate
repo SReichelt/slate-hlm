@@ -21,17 +21,17 @@ $Isomorphisms(
   )),
   𝐘: %Element(%previous)
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Iso',
     arguments = [𝐗, 𝐘]
-  )],
+  ),
   definitionNotation = {
     parameter = #(F: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = F,
       symbol = '↔',
       operands = [𝐗, 𝐘]
-    )],
+    ),
     singularName = 'isomorphism',
     pluralName = 'isomorphisms',
     nameOptional = %true

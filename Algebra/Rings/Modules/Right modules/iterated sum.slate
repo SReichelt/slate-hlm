@@ -14,10 +14,10 @@ $"iterated sum"(
   ),
   𝐌: %Element($"Right modules"(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '∑',
     sub = 𝐌
-  )],
+  ),
   definition = [$../../../Groups/"iterated operation"(𝐆 = {$"additive group"(
     𝐑 = {𝐑},
     𝐌 = {𝐌}

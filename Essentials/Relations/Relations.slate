@@ -20,7 +20,7 @@ $Relations(
       #(p: %Prop)
     ))
   )): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = p,
         style = '[]'
@@ -29,7 +29,7 @@ $Relations(
         $ElementRelation(operands = [s, S]),
         $ElementRelation(operands = [t, T])
       ])
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(s: %Binding(
         S,
@@ -56,10 +56,10 @@ $Relations(
     }
   }
 
-  notation = [$Function(
+  notation = $Function(
     function = '𝓡𝓮𝓵',
     arguments = [S, T]
-  )],
+  ),
   definitionNotation = {
     parameter = #(≺: %Expr),
     singularName = ['relation', ' from ', S, ' to ', T],

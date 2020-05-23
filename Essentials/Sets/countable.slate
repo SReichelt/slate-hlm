@@ -8,10 +8,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/countable.html#set.countable
  */
 $countable(S: %Set): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = S,
     property = %neg('countable', 'uncountable')
-  )],
+  ),
   definition = [
     $../Numbers/Cardinal/countable(κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})}),
     %exists(

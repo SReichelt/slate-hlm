@@ -7,13 +7,13 @@ $"bounded cardinality"(
   M: %Subset($../"Natural numbers"),
   n: %Element($../"Natural numbers")
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = $Parens(
       body = M,
       style = '||'
     ),
     sub = ['≤', n]
-  )],
+  ),
   definition = [%structuralCases(
     n,
     $../"Natural numbers",

@@ -6,7 +6,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal.omega
  */
 $omega: %ExplicitOperator {
-  notation = ['ω'],
+  notation = 'ω',
   definition = [$../"Ordinal numbers"."order type"(
     S = {$../../Natural/"Natural numbers"},
     ⪯ = {$../../../Relations/predicate(

@@ -23,10 +23,10 @@ $"lexicographical order"(
     ⪯ = {⊑}
   ))
 ): %ExplicitOperator {
-  notation = [$Operator(
+  notation = $Operator(
     symbol = '∠',
     operands = [⪯, ⊑]
-  )],
+  ),
   definition = [$Endorelations(S = {$../Sets/"Cartesian product"(
       S = {S},
       T = {T}

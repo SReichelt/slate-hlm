@@ -20,7 +20,7 @@ $normalized(
   )),
   a: %Element($../Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = $Operator(
       symbol = $ConstructorName(name = '+'),
       operands = [
@@ -35,7 +35,7 @@ $normalized(
       space = ''
     ),
     style = '[]'
-  )],
+  ),
   definition = [%cases([
     {
       formula = %or(

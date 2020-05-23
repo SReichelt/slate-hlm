@@ -11,11 +11,11 @@ $distributive(
   ∗: %Element($"Inner operations"(X = {X})),
   ⋆: %Element(%previous)
 ): %Predicate {
-  notation = [$RelationalProperty(
+  notation = $RelationalProperty(
     operands = [∗, ⋆],
     property = 'distributive',
     preposition = 'over'
-  )],
+  ),
   definition = [%and(
     $"left-distributive"(
       X = {X},

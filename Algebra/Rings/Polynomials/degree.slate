@@ -30,10 +30,10 @@ $degree(
       ).zero)}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'deg',
     arguments = [p]
-  )],
+  ),
   definition = [$../../../Essentials/Numbers/Natural/difference(
     n = {$dimension(
       𝐑 = {𝐑},

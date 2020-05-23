@@ -12,10 +12,10 @@ $"power to natural number"(
   )),
   n: %Element($../Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = f,
     sup = n
-  )],
+  ),
   definition = [%structuralCases(
     n,
     $../Numbers/Natural/"Natural numbers",

@@ -5,10 +5,10 @@
  *             * https://proofwiki.org/wiki/Definition:Order_of_Structure/Finite_Structure
  */
 $finite(𝐆: %Element($../Groups)): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = 𝐆,
     property = %neg('finite', 'infinite')
-  )],
+  ),
   definition = [
     $../../../Essentials/Numbers/Cardinal/finite(κ = {$"group order"(𝐆 = {𝐆})}),
     $../../../Essentials/Sets/finite(S = {$../Carrier(𝐆 = {𝐆})})

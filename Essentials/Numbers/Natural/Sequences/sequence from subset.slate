@@ -10,10 +10,10 @@ $"sequence from subset"(
     S = {M}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'seq',
     arguments = [M]
-  )],
+  ),
   definition = [
     $../../../Sequences/"sequence from well-ordered set"(
       S = {M},

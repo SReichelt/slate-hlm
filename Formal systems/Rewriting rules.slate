@@ -11,7 +11,7 @@ $"Rewriting rules"(T: %Set(
     l: %Element(T),
     r: %Element(%previous)
   ): %Constructor {
-    notation = [$FunctionOperator(operands = [l, r])],
+    notation = $FunctionOperator(operands = [l, r]),
     equalityDefinition = {
       leftParameters = #(
         l: %Element(T),
@@ -29,8 +29,8 @@ $"Rewriting rules"(T: %Set(
     }
   }
 
-  notation = [$Function(
+  notation = $Function(
     function = '𝓡𝓮𝔀𝓻',
     arguments = [T]
-  )]
+  )
 }

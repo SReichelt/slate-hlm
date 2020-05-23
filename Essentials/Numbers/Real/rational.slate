@@ -4,10 +4,10 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/data/real/irrational.html#irrational
  */
 $rational(a: %Element($"Real numbers")): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = a,
     property = %neg('rational', 'irrational')
-  )],
+  ),
   definition = [
     %in(
       a,

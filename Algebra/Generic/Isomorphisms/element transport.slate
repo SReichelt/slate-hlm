@@ -14,11 +14,11 @@ $"element transport"(
   )),
   x: %Element(X)
 ): %ExplicitOperator {
-  notation = [$../../Isomorphisms/Function(
+  notation = $../../Isomorphisms/Function(
     function = φ,
     arguments = [x],
     style = '[]'
-  )],
+  ),
   definition = [$../../../Essentials/Functions/value(
     X = {X},
     Y = {Y},

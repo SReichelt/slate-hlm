@@ -12,10 +12,10 @@ $"Pointed sets": %Construction {
     S: %Set,
     s: %Element(S)
   ): %Constructor {
-    notation = [$Tuple(
+    notation = $Tuple(
       items = [S, s],
       style = '[]'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         S: %Set,
@@ -44,7 +44,7 @@ $"Pointed sets": %Construction {
     }
   }
 
-  notation = ['𝓟𝓽𝓢𝓮𝓽'],
+  notation = '𝓟𝓽𝓢𝓮𝓽',
   definitionNotation = {
     parameter = #(𝐒: %Expr),
     singularName = 'pointed set',

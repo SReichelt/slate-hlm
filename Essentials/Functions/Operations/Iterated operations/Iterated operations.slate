@@ -14,7 +14,7 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
       e = {e}
     ))
   ): %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = $Operator(
         symbol = ∗,
         operands = [
@@ -23,7 +23,7 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
         ]
       ),
       style = '[]'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         ∗: %Element($../"Inner operations"(X = {X})),
@@ -51,10 +51,10 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
     }
   }
 
-  notation = [$Function(
+  notation = $Function(
     function = '𝓑𝓲𝓰𝓞𝓹',
     arguments = [X]
-  )],
+  ),
   definitionNotation = {
     parameter = #(⨂: %Expr),
     singularName = ['iterated operation', ' on ', X],

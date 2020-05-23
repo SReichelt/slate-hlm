@@ -9,10 +9,10 @@ $"maximum of two numbers"(
   m: %Element($"Natural numbers"),
   n: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'max',
     arguments = [m, n]
-  )],
+  ),
   definition = [
     $maximum(M = {%enumeration(m, n)}),
     %cases([

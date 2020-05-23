@@ -20,10 +20,10 @@ $Span(
     𝐌 = {𝐌}
   ))
 ): %SetOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = X,
     style = '<>'
-  )],
+  ),
   definition = [$../../../../../Essentials/Sets/"Generalized intersection using power set"(
     U = {$../Carrier(
       𝐑 = {𝐑},

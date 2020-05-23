@@ -16,14 +16,14 @@ $"indexed element in well-ordered set"(
   )),
   β: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))
 ): %ImplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = S,
       sub = ⪯
     ),
     arguments = [β],
     style = '[]'
-  )],
+  ),
   parameter = #(s: %Element(S)),
   definition = [%equals(
     $"index in well-ordered set"(

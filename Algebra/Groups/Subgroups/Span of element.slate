@@ -13,10 +13,10 @@ $"Span of element"(
   ),
   g: %Element($../Carrier(𝐆 = {𝐆}))
 ): %SetOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = g,
     style = '<>'
-  )],
+  ),
   definition = [
     $Span(
       𝐆 = {𝐆},

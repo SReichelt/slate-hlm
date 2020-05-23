@@ -10,13 +10,13 @@ $"matrix ring"(
   𝐑: %Element($../Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 𝐑,
     sup = $MultiplicationOperator(
       symbol = '×',
       operands = [n, n]
     )
-  )],
+  ),
   definition = [$../Rings.ring(
     R = {$Matrices(
       𝐑 = {𝐑},

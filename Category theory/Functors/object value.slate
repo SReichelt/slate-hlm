@@ -28,10 +28,10 @@ $"object value"(
     𝓒 = {𝓒}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = F,
     arguments = [𝐗]
-  )],
+  ),
   definition = [%asElementOf(
     %structuralCases(
       F,

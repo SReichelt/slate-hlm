@@ -25,14 +25,14 @@ $"inner operation restriction"(
     )
   ))
 ): %ExplicitOperator {
-  notation = [$PostfixUnaryOperator(
+  notation = $PostfixUnaryOperator(
     symbol = $SubSup(
       body = '∣',
       sub = A
     ),
     operand = ∗,
     minParenLevel = 3
-  )],
+  ),
   definition = [$../"codomain restriction"(
     X = {$../../Sets/"Cartesian product"(
       S = {X},

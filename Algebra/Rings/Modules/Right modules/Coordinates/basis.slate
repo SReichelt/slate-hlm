@@ -19,11 +19,11 @@ $basis(
     𝐌 = {𝐌}
   ))
 ): %Predicate {
-  notation = [$NounProperty(
+  notation = $NounProperty(
     operand = 𝒙,
     singular = 'basis',
     plural = 'bases'
-  )],
+  ),
   definition = [
     %and(
       %not($"linearly dependent"(

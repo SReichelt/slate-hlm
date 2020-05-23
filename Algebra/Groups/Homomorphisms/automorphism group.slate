@@ -8,10 +8,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/mul_add.html#mul_aut.group
  */
 $"automorphism group"(𝐆: %Element($../Groups)): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Aut',
     arguments = [𝐆]
-  )],
+  ),
   definition = [$../Subgroups/"subset group"(
     𝐆 = {$../Examples/"symmetric group"(X = {$../Carrier(𝐆 = {𝐆})})},
     S = {$Automorphisms(𝐆 = {𝐆})}

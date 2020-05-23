@@ -12,10 +12,10 @@ $"power to integer"(
   )),
   z: %Element($../../Essentials/Numbers/Integer/Integers)
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = a,
     sup = z
-  )],
+  ),
   definition = [%cases([
     {
       formula = $../../Essentials/Numbers/Integer/"less or equal"(

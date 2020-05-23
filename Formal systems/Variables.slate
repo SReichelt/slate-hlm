@@ -9,10 +9,10 @@
  */
 $Variables: %Construction {
   $variable(n: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = n,
       style = '()'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(m: %Element($../Essentials/Numbers/Natural/"Natural numbers")),
       rightParameters = #(n: %Element(%previous)),
@@ -21,7 +21,7 @@ $Variables: %Construction {
     }
   }
 
-  notation = ['𝓥𝓪𝓻'],
+  notation = '𝓥𝓪𝓻',
   definitionNotation = {
     parameter = #(v: %Expr),
     singularName = 'variable',

@@ -14,17 +14,16 @@ $Homomorphisms(
   𝐌: %Element($../"Right modules"(𝐑 = {𝐑})),
   𝐍: %Element(%previous)
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Hom',
     arguments = [𝐌, 𝐍]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
-      symbol = '→',
       operands = [𝐌, 𝐍]
-    )],
+    ),
     singularName = 'homomorphism',
     pluralName = 'homomorphisms'
   },

@@ -14,11 +14,11 @@ $unit(
   ),
   a: %Element($Carrier(𝐑 = {𝐑}))
 ): %Predicate {
-  notation = [$NounProperty(
+  notation = $NounProperty(
     operand = a,
     singular = 'unit',
     plural = 'units'
-  )],
+  ),
   definition = [
     %exists(
       #(b: %Element($Carrier(𝐑 = {𝐑}))),

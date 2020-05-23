@@ -8,9 +8,9 @@
  *             * https://proofwiki.org/wiki/Definition:Summation
  */
 $"iterated sum"(𝐑: %Element($../Rings)): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '∑',
     sub = 𝐑
-  )],
+  ),
   definition = [$../../Groups/"iterated operation"(𝐆 = {$../"additive group"(𝐑 = {𝐑})})]
 }

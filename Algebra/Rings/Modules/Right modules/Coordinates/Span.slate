@@ -14,10 +14,10 @@ $Span(
     𝐌 = {𝐌}
   ))
 ): %SetOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = 𝒙,
     style = '<>'
-  )],
+  ),
   definition = [
     %setStructuralCases(
       𝒙,

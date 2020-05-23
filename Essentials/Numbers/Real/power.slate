@@ -4,10 +4,10 @@ $power(
   a: %Element($"Real numbers"),
   n: %Element($../Natural/"Natural numbers")
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = a,
     sup = n
-  )],
+  ),
   definition = [%structuralCases(
     n,
     $../Natural/"Natural numbers",

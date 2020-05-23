@@ -8,10 +8,10 @@ $"has property"(
   p: %Element($Properties(S = {S})),
   s: %Element(S)
 ): %Predicate {
-  notation = [$TextualRelation(
+  notation = $TextualRelation(
     verb = %neg('is', 'is not'),
     operands = [s, p]
-  )],
+  ),
   definition = [%structural(
     p,
     $Properties(S = {S}),

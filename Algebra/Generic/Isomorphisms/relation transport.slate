@@ -9,11 +9,11 @@ $"relation transport"(
   )),
   ≺: %Element($../../../Essentials/Relations/Endorelations(S = {X}))
 ): %ExplicitOperator {
-  notation = [$../../Isomorphisms/Function(
+  notation = $../../Isomorphisms/Function(
     function = φ,
     arguments = [≺],
     style = '[]'
-  )],
+  ),
   definition = [%structuralCases(
     ≺,
     $../../../Essentials/Relations/Endorelations(S = {X}),

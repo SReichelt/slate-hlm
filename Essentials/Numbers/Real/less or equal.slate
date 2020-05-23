@@ -12,7 +12,7 @@ $"less or equal"(
     b = {a},
     a = {b}
   )},
-  notation = [$LessOrEqualRelation(operands = [a, b])],
+  notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [%structural(
     b,
     $"Real numbers",

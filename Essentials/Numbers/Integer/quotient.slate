@@ -8,10 +8,10 @@ $quotient(
   a: %Element($Integers),
   b: %Element($Divisors(b = {a}))
 ): %ImplicitOperator {
-  notation = [$Fraction(
+  notation = $Fraction(
     numerator = a,
     denominator = b
-  )],
+  ),
   parameter = #(x: %Element($Integers)),
   definition = [%equals(
     a,

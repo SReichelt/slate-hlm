@@ -11,7 +11,7 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
       α = {α}
     ))
   ): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = 𝐚,
         style = '()'
@@ -20,7 +20,7 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
         body = S,
         sup = α
       )
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
@@ -67,10 +67,10 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  notation = [$SubSup(
+  notation = $SubSup(
     body = S,
     sup = '⋆'
-  )],
+  ),
   definitionNotation = {
     parameter = #(𝒂: %Expr),
     singularName = ['ordinal-indexed sequence', ' on ', S],

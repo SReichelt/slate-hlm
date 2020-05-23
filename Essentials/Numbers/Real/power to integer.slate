@@ -14,10 +14,10 @@ $"power to integer"(
     )
   ))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = a,
     sup = b
-  )],
+  ),
   definition = [%cases([
     {
       formula = $../Integer/"less or equal"(

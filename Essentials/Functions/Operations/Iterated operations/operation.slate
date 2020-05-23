@@ -9,10 +9,10 @@ $operation(
   x: %Element(X),
   y: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
+  notation = $Operator(
     symbol = ⨂,
     operands = [x, y]
-  )],
+  ),
   definition = [%structuralCases(
     ⨂,
     $"Iterated operations"(X = {X}),

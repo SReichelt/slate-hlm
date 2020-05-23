@@ -7,7 +7,7 @@
  *             * http://oeis.org/A000040
  */
 $"Prime numbers": %SetOperator {
-  notation = ['ℙ'],
+  notation = 'ℙ',
   definitionNotation = {
     parameter = #(p: %Expr),
     singularName = 'prime',

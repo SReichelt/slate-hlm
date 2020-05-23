@@ -12,10 +12,10 @@ $"kronecker delta"(
   i: %Element(S),
   j: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'δ',
     sub = $Group(items = [𝐑, i, j])
-  )],
+  ),
   definition = [%cases([
     {
       formula = %equals(i, j),

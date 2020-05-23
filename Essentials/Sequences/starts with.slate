@@ -12,10 +12,10 @@ $"starts with"(
     α = {n}
   ))
 ): %Predicate {
-  notation = [$TextualRelation(
+  notation = $TextualRelation(
     verb = 'starts with',
     operands = [𝐚, 𝐛]
-  )],
+  ),
   definition = [%structural(
     𝐛,
     $Tuples(

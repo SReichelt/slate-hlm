@@ -1,10 +1,10 @@
 %../../../../../logics/hlm%
 
 $countable(α: %Element($"Ordinal numbers")): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = α,
     property = %neg('countable', 'uncountable')
-  )],
+  ),
   definition = [
     $../Cardinal/countable(κ = {$cardinality(α = {α})}),
     $../../Sets/countable(S = {$Carrier(α = {α})})

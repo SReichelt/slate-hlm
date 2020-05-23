@@ -15,14 +15,14 @@ $restriction(
     Y = {Y}
   ))
 ): %ExplicitOperator {
-  notation = [$PostfixUnaryOperator(
+  notation = $PostfixUnaryOperator(
     symbol = $SubSup(
       body = '∣',
       sub = A
     ),
     operand = f,
     minParenLevel = 3
-  )],
+  ),
   definition = [$"generalized restriction"(
     X = {X},
     Y = {Y},

@@ -1,10 +1,10 @@
 %../../../../../logics/hlm%
 
 $finite(κ: %Element($"Cardinal numbers")): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = κ,
     property = %neg('finite', 'infinite')
-  )],
+  ),
   definition = [
     %in(
       κ,

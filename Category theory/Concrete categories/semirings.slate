@@ -4,10 +4,10 @@
  * @remarks The objects of this category are actually isomorphism classes of semirings.
  */
 $semirings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝐒𝐞𝐦𝐢𝐑𝐢𝐧𝐠',
     sub = u
-  )],
+  ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Semirings/Semirings},
       𝐀 = {

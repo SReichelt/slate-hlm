@@ -14,10 +14,10 @@ $"Span of element"(
     𝐌 = {𝐌}
   ))
 ): %SetOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = x,
     style = '<>'
-  )],
+  ),
   definition = [
     $Span(
       𝐑 = {𝐑},

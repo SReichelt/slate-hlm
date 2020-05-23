@@ -13,10 +13,10 @@ $identity(
     )
   ))
 ): %ImplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '1',
     sub = 𝐌
-  )],
+  ),
   parameter = #(m: %Element($Carrier(𝐌 = {𝐌}))),
   definition = [$"identity element"(
     𝐌 = {𝐌},

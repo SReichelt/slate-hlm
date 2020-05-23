@@ -1,10 +1,10 @@
 %../../../../logics/hlm%
 
 $"base point"(𝐒: %Element($"Pointed sets")): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'base',
     arguments = [𝐒]
-  )],
+  ),
   definition = [%structuralCases(
     𝐒,
     $"Pointed sets",

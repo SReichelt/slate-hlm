@@ -6,7 +6,7 @@ $"lower bound"(
   T: %Subset(S),
   s: %Element(S)
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     singular = [
       $DependentWord(
         word = 'lower',
@@ -22,7 +22,7 @@ $"lower bound"(
       ' bounds'
     ],
     operands = [s, T]
-  )],
+  ),
   definition = [%forall(
     #(t: %Element(T)),
     $related(

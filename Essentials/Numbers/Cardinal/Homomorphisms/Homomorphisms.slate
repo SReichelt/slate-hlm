@@ -14,17 +14,16 @@ $Homomorphisms(
   κ: %Element($../"Cardinal numbers"),
   μ: %Element(%previous)
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Hom',
     arguments = [κ, μ]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
-      symbol = '→',
       operands = [κ, μ]
-    )],
+    ),
     singularName = 'homomorphism',
     pluralName = 'homomorphisms',
     nameOptional = %true

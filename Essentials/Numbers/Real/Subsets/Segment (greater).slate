@@ -1,11 +1,11 @@
 %../../../../../../logics/hlm%
 
 $"Segment (greater)"(a: %Element($../"Real numbers")): %SetOperator {
-  notation = [$Segment(
+  notation = $Segment(
     set = 'ℝ',
     symbol = '>',
     limit = a
-  )],
+  ),
   definition = [
     %subset(
       #(b: %Element($../"Real numbers")),

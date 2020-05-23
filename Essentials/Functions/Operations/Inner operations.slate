@@ -6,13 +6,13 @@
  *             * https://proofwiki.org/wiki/Definition:Operation/Binary_Operation
  */
 $"Inner operations"(X: %Set(auto = %true)): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = '𝓞𝓹',
     arguments = [X]
-  )],
+  ),
   definitionNotation = {
     parameter = #(∗: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = ∗,
       operands = [
         $MultiplicationLikeOperator(
@@ -21,7 +21,7 @@ $"Inner operations"(X: %Set(auto = %true)): %SetOperator {
         ),
         X
       ]
-    )],
+    ),
     singularName = ['operation', ' on ', X],
     pluralName = ['operations', ' on ', X],
     nameOptional = %true

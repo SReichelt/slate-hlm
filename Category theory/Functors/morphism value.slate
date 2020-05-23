@@ -35,10 +35,10 @@ $"morphism value"(
     𝐘 = {𝐘}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = F,
     arguments = [f]
-  )],
+  ),
   definition = [%asElementOf(
     %structuralCases(
       F,

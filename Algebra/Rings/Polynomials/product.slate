@@ -15,7 +15,7 @@ $product(
   )),
   q: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$MultiplicationOperator(operands = [p, q])],
+  notation = $MultiplicationOperator(operands = [p, q]),
   definition = [%structuralCases(
     p,
     $Polynomials(

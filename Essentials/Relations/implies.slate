@@ -15,10 +15,10 @@ $implies(
   )),
   ⊂: %Element(%previous)
 ): %Predicate {
-  notation = [$ImplicationRelation(
+  notation = $ImplicationRelation(
     operands = [≺, ⊂],
     space = ' '
-  )],
+  ),
   definition = [%forall(
     #(
       s: %Element(S),

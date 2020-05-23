@@ -10,10 +10,10 @@ $"binomial coefficient"(
   n: %Element($"Natural numbers"),
   k: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$BinomialCoefficient(
+  notation = $BinomialCoefficient(
     top = n,
     bottom = k
-  )],
+  ),
   definition = [%structuralCases(
     k,
     $"Natural numbers",

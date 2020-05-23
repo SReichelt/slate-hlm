@@ -7,10 +7,10 @@
  *             * https://ncatlab.org/nlab/show/field#category
  */
 $fields(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝐅𝐥𝐝',
     sub = u
-  )],
+  ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Fields/Fields},
       𝐀 = {

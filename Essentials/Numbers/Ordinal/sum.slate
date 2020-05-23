@@ -11,7 +11,7 @@ $sum(
   α: %Element($"Ordinal numbers"),
   β: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$AdditionOperator(operands = [α, β])],
+  notation = $AdditionOperator(operands = [α, β]),
   definition = [%structuralCases(
     β,
     $"Ordinal numbers",

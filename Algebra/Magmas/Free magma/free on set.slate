@@ -4,10 +4,10 @@ $"free on set"(
   𝐌: %Element($../Magmas),
   S: %Subset($../Carrier(𝐌 = {𝐌}))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = 𝐌,
     property = ['free on ', S]
-  )],
+  ),
   definition = [
     %equals(
       𝐌,

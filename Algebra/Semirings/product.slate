@@ -11,7 +11,7 @@ $product(
   a: %Element($Carrier(𝐑 = {𝐑})),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$MultiplicationOperator(operands = [a, b])],
+  notation = $MultiplicationOperator(operands = [a, b]),
   definition = [%structuralCases(
     𝐑,
     $Semirings,

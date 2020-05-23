@@ -13,13 +13,13 @@ $converse(
     T = {T}
   ))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = ≺,
     sup = $Style(
       body = 'T',
       styleClass = 'sans'
     )
-  )],
+  ),
   definition = [$Relations(
       S = {T},
       T = {S}

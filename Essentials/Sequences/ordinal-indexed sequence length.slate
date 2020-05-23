@@ -4,10 +4,10 @@ $"ordinal-indexed sequence length"(
   S: %Set(auto = %true),
   𝒂: %Element($"Ordinal-indexed sequences"(S = {S}))
 ): %ExplicitOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = 𝒂,
     style = '||'
-  )],
+  ),
   definition = [%structuralCases(
     𝒂,
     $"Ordinal-indexed sequences"(S = {S}),

@@ -16,10 +16,10 @@ $"Ordinal numbers": %Construction {
       ⪯ = {⪯}
     ))
   ): %Constructor {
-    notation = [$Tuple(
+    notation = $Tuple(
       items = [S, ⪯],
       style = '[]'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         S: %Set,
@@ -56,7 +56,7 @@ $"Ordinal numbers": %Construction {
     }
   }
 
-  notation = ['𝓞𝓻𝓭'],
+  notation = '𝓞𝓻𝓭',
   embedding = {
     parameter = #(n: %Element($../Natural/"Natural numbers")),
     target = $"Ordinal numbers"."order type"(

@@ -1,10 +1,10 @@
 %../../../../logics/hlm%
 
 $commutative(𝐑: %Element($Semirings)): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = 𝐑,
     property = 'commutative'
-  )],
+  ),
   definition = [%structural(
     𝐑,
     $Semirings,

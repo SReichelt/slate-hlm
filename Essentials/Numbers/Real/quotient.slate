@@ -4,10 +4,10 @@ $quotient(
   a: %Element($"Real numbers"),
   b: %Element($Subsets/"Nonzero numbers")
 ): %ImplicitOperator {
-  notation = [$Fraction(
+  notation = $Fraction(
     numerator = a,
     denominator = b
-  )],
+  ),
   parameter = #(x: %Element($"Real numbers")),
   definition = [%equals(
     a,

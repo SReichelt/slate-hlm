@@ -4,7 +4,7 @@ $submonoid(
   𝐌: %Element($../Monoids),
   𝐍: %Element(%previous)
 ): %Predicate {
-  notation = [$SubObjectRelation(operands = [𝐌, 𝐍])],
+  notation = $SubObjectRelation(operands = [𝐌, 𝐍]),
   definition = [
     %exists(
       #(φ: %Element($../Homomorphisms/Homomorphisms(

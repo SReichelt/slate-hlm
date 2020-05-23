@@ -34,10 +34,10 @@ $value(
     )
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = p,
     arguments = [a]
-  )],
+  ),
   definition = [%structuralCases(
     p,
     $Polynomials(

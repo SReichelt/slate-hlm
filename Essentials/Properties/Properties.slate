@@ -11,13 +11,13 @@ $Properties(S: %Set(auto = %true)): %Construction {
     S,
     #(p: %Prop)
   )): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = p,
         style = '[]'
       ),
       sub = $ElementRelation(operands = [s, S])
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(s: %Binding(
         S,
@@ -35,10 +35,10 @@ $Properties(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  notation = [$Function(
+  notation = $Function(
     function = '𝓟𝓻𝓹',
     arguments = [S]
-  )],
+  ),
   definitionNotation = {
     parameter = #(p: %Expr),
     singularName = ['property', ' on ', S],

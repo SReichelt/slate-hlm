@@ -13,10 +13,10 @@ $Span(
   ),
   X: %Subset($../Carrier(𝐆 = {𝐆}))
 ): %SetOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = X,
     style = '<>'
-  )],
+  ),
   definition = [$../../../Essentials/Sets/"Generalized intersection using power set"(
     U = {$../Carrier(𝐆 = {𝐆})},
     S = {%subset(

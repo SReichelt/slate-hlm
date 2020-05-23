@@ -31,10 +31,10 @@ $identity(
     auto = %true
   )
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'id',
     sub = F
-  )],
+  ),
   definition = [
     $"Infranatural transformations"(
         u = {u},

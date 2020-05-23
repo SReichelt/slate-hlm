@@ -16,11 +16,11 @@ $group(
     Y = {G}
   ))
 ): %Predicate {
-  notation = [$Structure(
+  notation = $Structure(
     items = [G, ∗, e, i],
     singular = 'group',
     plural = 'groups'
-  )],
+  ),
   definition = [%and(
     $../Monoids/monoid(
       M = {G},

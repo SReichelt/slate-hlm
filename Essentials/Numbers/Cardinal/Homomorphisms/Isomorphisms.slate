@@ -12,17 +12,17 @@ $Isomorphisms(
   κ: %Element($../"Cardinal numbers"),
   μ: %Element(%previous)
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Iso',
     arguments = [κ, μ]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [κ, μ]
-    )],
+    ),
     singularName = 'isomorphism',
     pluralName = 'isomorphisms',
     nameOptional = %true

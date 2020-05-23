@@ -42,10 +42,10 @@ $composition(
     𝓓 = {𝓔}
   ))
 ): %ExplicitOperator {
-  notation = [$MultiplicationLikeOperator(
+  notation = $MultiplicationLikeOperator(
     symbol = '∘',
     operands = [G, F]
-  )],
+  ),
   definition = [$Functors(
       u = {u},
       v = {w},

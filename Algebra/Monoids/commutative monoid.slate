@@ -5,11 +5,11 @@ $"commutative monoid"(
   ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
   e: %Element(M)
 ): %Predicate {
-  notation = [$Structure(
+  notation = $Structure(
     items = [M, ∗, e],
     singular = 'commutative monoid',
     plural = 'commutative monoids'
-  )],
+  ),
   definition = [
     %and(
       $monoid(

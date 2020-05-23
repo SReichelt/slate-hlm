@@ -20,10 +20,10 @@ $"linearly dependent"(
     𝐌 = {𝐌}
   ))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = 𝒙,
     property = %neg('linearly dependent', 'linearly independent')
-  )],
+  ),
   definition = [%exists(
     #(𝐚: %Element($../../../../../Essentials/Sets/"Relative complement"(
       U = {$Coordinates(

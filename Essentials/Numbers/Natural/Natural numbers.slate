@@ -16,15 +16,15 @@
  */
 $"Natural numbers": %Construction {
   $zero: %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = $ConstructorName(name = '0'),
       style = '()'
-    )],
+    ),
     rewrite = {value = $number(value = 0)}
   }
 
   $successor(n: %Element($"Natural numbers")): %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '+'),
         operands = [
@@ -34,7 +34,7 @@ $"Natural numbers": %Construction {
         space = ''
       ),
       style = '()'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(m: %Element($"Natural numbers")),
       rightParameters = #(n: %Element(%previous)),
@@ -50,5 +50,5 @@ $"Natural numbers": %Construction {
     }
   }
 
-  notation = ['ℕ']
+  notation = 'ℕ'
 }

@@ -4,10 +4,10 @@
  * @remarks Due to the embedding of `$../../Natural/"Natural numbers"` into `$../Integers`, this is just an alias for `$../../Natural/Subsets/"Positive numbers"`.
  */
 $"Positive numbers": %SetOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'ℤ',
     sub = '+'
-  )],
+  ),
   definition = [
     $"Segment (greater)"(a = {$../../Natural/number(value = 0)}),
     %subset(

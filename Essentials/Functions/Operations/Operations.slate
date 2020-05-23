@@ -8,13 +8,13 @@ $Operations(
   Y: %Set(auto = %true),
   Z: %Set(auto = %true)
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = '𝓞𝓹',
     arguments = [X, Y, Z]
-  )],
+  ),
   definitionNotation = {
     parameter = #(∗: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = ∗,
       operands = [
         $MultiplicationLikeOperator(
@@ -23,7 +23,7 @@ $Operations(
         ),
         Z
       ]
-    )],
+    ),
     singularName = 'operation',
     pluralName = 'operations',
     nameOptional = %true

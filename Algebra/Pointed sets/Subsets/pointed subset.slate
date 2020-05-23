@@ -4,7 +4,7 @@ $"pointed subset"(
   𝐒: %Element($../"Pointed sets"),
   𝐓: %Element(%previous)
 ): %Predicate {
-  notation = [$SubObjectRelation(operands = [𝐒, 𝐓])],
+  notation = $SubObjectRelation(operands = [𝐒, 𝐓]),
   definition = [
     %exists(
       #(φ: %Element($../Homomorphisms/Homomorphisms(

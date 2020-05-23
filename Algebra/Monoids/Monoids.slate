@@ -18,10 +18,10 @@ $Monoids: %Construction {
       e = {e}
     ))
   ): %Constructor {
-    notation = [$Tuple(
+    notation = $Tuple(
       items = [M, ∗, e],
       style = '[]'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         M: %Set,
@@ -73,7 +73,7 @@ $Monoids: %Construction {
     }
   }
 
-  notation = ['𝓜𝓸𝓷'],
+  notation = '𝓜𝓸𝓷',
   definitionNotation = {
     parameter = #(𝐌: %Expr),
     singularName = 'monoid',

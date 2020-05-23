@@ -55,10 +55,10 @@ $"vertical composition"(
     G = {H}
   ))
 ): %ExplicitOperator {
-  notation = [$MultiplicationLikeOperator(
+  notation = $MultiplicationLikeOperator(
     symbol = '∘',
     operands = [ε, η]
-  )],
+  ),
   definition = [$"Infranatural transformations"(
       u = {u},
       v = {v},

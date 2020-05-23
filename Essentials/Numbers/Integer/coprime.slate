@@ -10,10 +10,10 @@ $coprime(
   a: %Element($Integers),
   b: %Element(%previous)
 ): %Predicate {
-  notation = [$MultiProperty(
+  notation = $MultiProperty(
     operands = [a, b],
     property = 'coprime'
-  )],
+  ),
   definition = [
     %forall(
       #(

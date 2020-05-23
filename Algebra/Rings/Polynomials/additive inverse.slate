@@ -14,7 +14,7 @@ $"additive inverse"(
     X = {X}
   ))
 ): %ExplicitOperator {
-  notation = [$NegationOperator(operand = p)],
+  notation = $NegationOperator(operand = p),
   definition = [%structuralCases(
     p,
     $Polynomials(

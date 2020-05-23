@@ -15,10 +15,10 @@ $surjective(
     Y = {Y}
   ))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = f,
     property = 'surjective'
-  )],
+  ),
   definition = [
     %forall(
       #(y: %Element(Y)),

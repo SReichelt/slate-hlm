@@ -10,10 +10,10 @@ $"semigroup with identity"(
     )
   ))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 𝐒,
     sub = '𝓜𝓸𝓷'
-  )],
+  ),
   definition = [%structuralCases(
     𝐒,
     $../Magmas/Magmas,

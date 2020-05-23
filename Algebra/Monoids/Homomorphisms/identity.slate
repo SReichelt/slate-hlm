@@ -7,9 +7,9 @@ $identity(𝐌: %Element(
   $../Monoids,
   auto = %true
 )): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'id',
     sub = 𝐌
-  )],
+  ),
   definition = [$../../../Essentials/Functions/identity(X = {$../Carrier(𝐌 = {𝐌})})]
 }

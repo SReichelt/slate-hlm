@@ -10,10 +10,10 @@ $"sequence from function"(
     Y = {S}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'seq',
     arguments = [f]
-  )],
+  ),
   definition = [$"Infinite sequences"(S = {S}).sequence(n = {
       #(n: %Element($../Numbers/Natural/"Natural numbers")),
       {a = {$../Functions/value(

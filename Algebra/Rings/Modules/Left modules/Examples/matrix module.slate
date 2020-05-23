@@ -8,13 +8,13 @@ $"matrix module"(
   m: %Element($../../../../../Essentials/Numbers/Natural/"Natural numbers"),
   n: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 𝐑,
     sup = $MultiplicationOperator(
       symbol = '×',
       operands = [m, n]
     )
-  )],
+  ),
   definition = [$../"Left modules"(𝐑 = {𝐑}).module(
       M = {$../../../Matrices/Matrices(
         𝐑 = {𝐑},

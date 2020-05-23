@@ -4,7 +4,7 @@ $subring(
   𝐑: %Element($../Rings),
   𝐒: %Element(%previous)
 ): %Predicate {
-  notation = [$SubObjectRelation(operands = [𝐑, 𝐒])],
+  notation = $SubObjectRelation(operands = [𝐑, 𝐒]),
   definition = [
     %exists(
       #(φ: %Element($../Homomorphisms/Homomorphisms(

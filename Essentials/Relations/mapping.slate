@@ -15,11 +15,11 @@ $mapping(
     T = {T}
   ))
 ): %Predicate {
-  notation = [$NounProperty(
+  notation = $NounProperty(
     operand = ≺,
     singular = 'mapping',
     plural = 'mappings'
-  )],
+  ),
   definition = [%forall(
     #(s: %Element(S)),
     %existsUnique(

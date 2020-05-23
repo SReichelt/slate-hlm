@@ -13,11 +13,11 @@ $"polynomial ring"(
   ),
   X: %Element($../../../"Formal systems"/Variables)
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 𝐑,
     arguments = [X],
     style = '[]'
-  )],
+  ),
   definition = [$../Rings.ring(
     R = {$Polynomials(
       𝐑 = {𝐑},

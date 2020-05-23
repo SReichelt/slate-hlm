@@ -13,10 +13,10 @@ $zero(
     )
   ))
 ): %ImplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '0',
     sub = 𝐌
-  )],
+  ),
   parameter = #(m: %Element($Carrier(𝐌 = {𝐌}))),
   definition = [$"absorbing element"(
     𝐌 = {𝐌},

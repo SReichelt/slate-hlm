@@ -6,13 +6,13 @@
  * @references * http://oeis.org/A027750
  */
 $Divisors(n: %Element($"Natural numbers")): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = 'Div',
       sub = 'ℕ'
     ),
     arguments = [n]
-  )],
+  ),
   definition = [%subset(
     #(m: %Element($Subsets/"Positive numbers")),
     $divisible(

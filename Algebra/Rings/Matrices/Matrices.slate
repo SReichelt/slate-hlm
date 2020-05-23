@@ -22,13 +22,16 @@ $Matrices(
       #(a: %Element($../Carrier(𝐑 = {𝐑})))
     ))
   )): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = a,
         style = '()'
       ),
-      sub = $Group(items = [$LessThanRelation(operands = [i, m])])
-    )],
+      sub = $Group(items = [
+        $LessThanRelation(operands = [i, m]),
+        $LessThanRelation(operands = [j, n])
+      ])
+    ),
     equalityDefinition = {
       leftParameters = #(i: %Binding(
         $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
@@ -55,11 +58,11 @@ $Matrices(
     }
   }
 
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 𝐑,
     sup = $MultiplicationOperator(
       symbol = '×',
       operands = [m, n]
     )
-  )]
+  )
 }

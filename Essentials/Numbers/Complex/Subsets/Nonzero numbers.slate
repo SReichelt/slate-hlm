@@ -1,10 +1,10 @@
 %../../../../../../logics/hlm%
 
 $"Nonzero numbers": %SetOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'ℂ',
     sup = '×'
-  )],
+  ),
   definition = [
     $Hole(a = {$../../Natural/number(value = 0)}),
     %subset(

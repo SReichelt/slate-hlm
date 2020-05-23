@@ -19,14 +19,14 @@ $Integers: %Construction {
     n: %Element($../Natural/"Natural numbers"),
     m: %Element(%previous)
   ): %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '-'),
         operands = [n, m],
         space = ''
       ),
       style = '()'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         n: %Element($../Natural/"Natural numbers"),
@@ -56,7 +56,7 @@ $Integers: %Construction {
     }
   }
 
-  notation = ['ℤ'],
+  notation = 'ℤ',
   embedding = {
     parameter = #(x: %Element($../Natural/"Natural numbers")),
     target = $Integers.difference(

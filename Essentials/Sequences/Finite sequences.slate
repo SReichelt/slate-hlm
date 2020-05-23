@@ -18,7 +18,7 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
       α = {n}
     ))
   ): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = 𝐚,
         style = '()'
@@ -27,7 +27,7 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
         body = S,
         sup = n
       )
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         m: %Element($../Numbers/Natural/"Natural numbers"),
@@ -74,10 +74,10 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  notation = [$SubSup(
+  notation = $SubSup(
     body = S,
     sup = '∗'
-  )],
+  ),
   definitionNotation = {
     parameter = #(𝒂: %Expr),
     singularName = ['finite sequence', ' on ', S],

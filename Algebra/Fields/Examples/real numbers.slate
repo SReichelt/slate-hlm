@@ -4,7 +4,7 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.field
  */
 $"real numbers": %ExplicitOperator {
-  notation = ['ℝ'],
+  notation = 'ℝ',
   definition = [$../../Rings/Rings.ring(
     R = {$../../../Essentials/Numbers/Real/"Real numbers"},
     ⊕ = {$../../../Essentials/Functions/Operations/operator(

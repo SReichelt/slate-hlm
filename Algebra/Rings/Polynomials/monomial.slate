@@ -15,7 +15,7 @@ $monomial(
   a: %Element($../Carrier(𝐑 = {𝐑})),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  notation = [$Operator(
+  notation = $Operator(
     symbol = '',
     operands = [
       a,
@@ -25,7 +25,7 @@ $monomial(
       )
     ],
     space = ''
-  )],
+  ),
   definition = [%structuralCases(
     n,
     $../../../Essentials/Numbers/Natural/"Natural numbers",

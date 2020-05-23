@@ -13,10 +13,10 @@ $"finite-dimensional"(
   ),
   𝐕: %Element($"Vector spaces"(𝐅 = {𝐅}))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = 𝐕,
     property = %neg('finite-dimensional', 'infinite-dimensional')
-  )],
+  ),
   definition = [
     %exists(
       #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(

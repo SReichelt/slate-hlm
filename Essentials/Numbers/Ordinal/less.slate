@@ -7,7 +7,7 @@ $less(
   α: %Element($"Ordinal numbers"),
   β: %Element(%previous)
 ): %Predicate {
-  notation = [$LessThanRelation(operands = [α, β])],
+  notation = $LessThanRelation(operands = [α, β]),
   definition = [%and(
     $"less or equal"(
       α = {α},

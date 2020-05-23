@@ -15,10 +15,10 @@ $commutative(
     Z = {Z}
   ))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = ∗,
     property = 'commutative'
-  )],
+  ),
   definition = [%forall(
     #(
       x: %Element(X),

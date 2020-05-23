@@ -12,11 +12,11 @@ $monoid(
   ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
   e: %Element(M)
 ): %Predicate {
-  notation = [$Structure(
+  notation = $Structure(
     items = [M, ∗, e],
     singular = 'monoid',
     plural = 'monoids'
-  )],
+  ),
   definition = [
     %and(
       $../Semigroups/semigroup(

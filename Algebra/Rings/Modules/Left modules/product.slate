@@ -15,7 +15,7 @@ $product(
     𝐌 = {𝐌}
   ))
 ): %ExplicitOperator {
-  notation = [$MultiplicationOperator(operands = [a, x])],
+  notation = $MultiplicationOperator(operands = [a, x]),
   definition = [%structuralCases(
     𝐌,
     $"Left modules"(𝐑 = {𝐑}),

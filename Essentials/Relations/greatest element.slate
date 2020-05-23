@@ -9,7 +9,7 @@ $"greatest element"(
   T: %Subset(S),
   t: %Element(T)
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     singular = [
       $DependentWord(
         word = 'greatest',
@@ -25,7 +25,7 @@ $"greatest element"(
       ' elements'
     ],
     operands = [t, T]
-  )],
+  ),
   definition = [
     $"upper bound"(
       S = {S},

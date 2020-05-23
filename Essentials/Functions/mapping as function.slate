@@ -16,10 +16,10 @@ $"mapping as function"(
     ≺ = {≺}
   ))
 ): %ExplicitOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = ≺,
     style = '()'
-  )],
+  ),
   definition = [$Functions(
       X = {S},
       Y = {T}

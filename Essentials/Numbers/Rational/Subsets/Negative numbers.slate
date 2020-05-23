@@ -1,10 +1,10 @@
 %../../../../../../logics/hlm%
 
 $"Negative numbers": %SetOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'ℚ',
     sub = '−'
-  )],
+  ),
   definition = [
     $"Segment (less)"(a = {$../../Natural/number(value = 0)}),
     %subset(

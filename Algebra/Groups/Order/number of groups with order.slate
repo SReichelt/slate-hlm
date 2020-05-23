@@ -5,9 +5,9 @@
  *             * http://oeis.org/A000001
  */
 $"number of groups with order"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'gnu',
     arguments = [n]
-  )],
+  ),
   definition = [$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$"Groups with order"(κ = {n})})]
 }

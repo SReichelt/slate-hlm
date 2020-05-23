@@ -12,11 +12,11 @@ $preorder(
   S: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
-  notation = [$NounProperty(
+  notation = $NounProperty(
     operand = ⪯,
     singular = 'preorder',
     plural = 'preorders'
-  )],
+  ),
   definition = [%and(
     $reflexive(
       S = {S},

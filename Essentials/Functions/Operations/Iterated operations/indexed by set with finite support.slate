@@ -29,12 +29,12 @@ $"indexed by set with finite support"(
     )
   ))
 ): %ImplicitOperator {
-  notation = [$LargeOperator(
+  notation = $LargeOperator(
     symbol = ⨂,
     operand = a,
     under = $ElementRelation(operands = [i, I]),
     maxParenLevel = 1
-  )],
+  ),
   parameter = #(x: %Element(X)),
   definition = [
     %forall(

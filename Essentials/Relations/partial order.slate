@@ -11,11 +11,11 @@ $"partial order"(
   S: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
-  notation = [$NounProperty(
+  notation = $NounProperty(
     operand = ⪯,
     singular = 'partial order',
     plural = 'partial orders'
-  )],
+  ),
   definition = [
     %and(
       $reflexive(

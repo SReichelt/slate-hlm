@@ -12,10 +12,10 @@ $"finitely generated"(
   ),
   𝐌: %Element($../"Right modules"(𝐑 = {𝐑}))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = 𝐌,
     property = 'finitely generated'
-  )],
+  ),
   definition = [%exists(
     #(𝒙: %Element($"Element sequences"(
       𝐑 = {𝐑},

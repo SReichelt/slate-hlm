@@ -18,13 +18,13 @@ $"Generalized cartesian product"(
     I,
     #(s: %Element(S[j]))
   )): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = s,
         style = '()'
       ),
       sub = $ElementRelation(operands = [j, I])
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(j: %Binding(
         I,
@@ -42,9 +42,9 @@ $"Generalized cartesian product"(
     }
   }
 
-  notation = [$LargeOperator(
+  notation = $LargeOperator(
     symbol = '∏',
     operand = S,
     under = $ElementRelation(operands = [i, I])
-  )]
+  )
 }

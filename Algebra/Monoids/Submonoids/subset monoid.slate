@@ -11,13 +11,13 @@ $"subset monoid"(
     S = {S}
   ))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = $Parens(
       body = S,
       style = '[]'
     ),
     sub = 𝐌
-  )],
+  ),
   definition = [%structuralCases(
     𝐌,
     $../Monoids,

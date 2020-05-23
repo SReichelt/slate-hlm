@@ -10,16 +10,16 @@ $Objects(
   ),
   𝓒: %Element($Categories(u = {u}))
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Ob',
     arguments = [𝓒]
-  )],
+  ),
   definitionNotation = {
     parameter = #(𝐗: %Expr),
-    notation = [$ElementParameter(
+    notation = $ElementParameter(
       variable = 𝐗,
       set = 𝓒
-    )]
+    )
   },
   definition = [%setStructuralCases(
     𝓒,

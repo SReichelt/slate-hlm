@@ -8,11 +8,11 @@ $"polynomial module"(
   𝐑: %Element($../../../Rings),
   X: %Element($../../../../../"Formal systems"/Variables)
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 𝐑,
     arguments = [X],
     style = '[]'
-  )],
+  ),
   definition = [$../"Right modules"(𝐑 = {𝐑}).module(
       M = {$../../../Polynomials/Polynomials(
         𝐑 = {𝐑},

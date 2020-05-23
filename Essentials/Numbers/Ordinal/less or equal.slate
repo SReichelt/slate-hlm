@@ -7,7 +7,7 @@ $"less or equal"(
   α: %Element($"Ordinal numbers"),
   β: %Element(%previous)
 ): %Predicate {
-  notation = [$LessOrEqualRelation(operands = [α, β])],
+  notation = $LessOrEqualRelation(operands = [α, β]),
   definition = [
     %exists(
       #(φ: %Element($Homomorphisms/Homomorphisms(

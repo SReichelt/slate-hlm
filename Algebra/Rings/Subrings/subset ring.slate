@@ -11,13 +11,13 @@ $"subset ring"(
     S = {S}
   ))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = $Parens(
       body = S,
       style = '[]'
     ),
     sub = 𝐑
-  )],
+  ),
   definition = [%structuralCases(
     𝐑,
     $../Rings,

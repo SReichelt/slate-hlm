@@ -9,17 +9,17 @@ $Isomorphisms(
   𝐑: %Element($../Semirings),
   𝐒: %Element(%previous)
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Iso',
     arguments = [𝐑, 𝐒]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [𝐑, 𝐒]
-    )],
+    ),
     singularName = 'isomorphism',
     pluralName = 'isomorphisms'
   },

@@ -11,7 +11,7 @@ $identity(
   𝐑: %Element($../Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'I',
     sub = $SubSup(
       body = 𝐑,
@@ -20,7 +20,7 @@ $identity(
         operands = [n, n]
       )
     )
-  )],
+  ),
   definition = [$Matrices(
       𝐑 = {𝐑},
       m = {n},

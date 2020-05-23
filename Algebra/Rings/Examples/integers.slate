@@ -6,7 +6,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.comm_ring
  */
 $integers: %ExplicitOperator {
-  notation = ['ℤ'],
+  notation = 'ℤ',
   definition = [$../Rings.ring(
     R = {$../../../Essentials/Numbers/Integer/Integers},
     ⊕ = {$../../../Essentials/Functions/Operations/operator(

@@ -17,7 +17,7 @@ $limit(
   })),
   _1: %Constraint($convergent(𝐚 = {𝐚}))
 ): %ImplicitOperator {
-  notation = [$OverUnderOperator(
+  notation = $OverUnderOperator(
     symbol = 'lim',
     operand = a,
     under = $Relation(
@@ -26,7 +26,7 @@ $limit(
     ),
     maxParenLevel = 1,
     style = 'shallow'
-  )],
+  ),
   parameter = #(l: %Element($../"Rational numbers")),
   definition = [$converges(
     𝐚 = {𝐚},

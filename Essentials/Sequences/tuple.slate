@@ -4,13 +4,13 @@ $tuple(
   S: %Set,
   items: %Element(S)[]
 ): %MacroOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = $Tuple(
       items = items,
       style = '()'
     ),
     sub = S
-  )],
+  ),
   variables = #(length: %Nat),
   references = {Tuples = $Tuples(
     S = {S},

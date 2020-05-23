@@ -14,10 +14,10 @@ $Image(
   )),
   S: %Subset(X)
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = f,
     arguments = [S]
-  )],
+  ),
   definition = [%extendedSubset(
     #(x: %Element(S)),
     $value(

@@ -11,11 +11,11 @@ $"submonoid set"(
   𝐌: %Element($../Monoids),
   S: %Subset($../Carrier(𝐌 = {𝐌}))
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [S, 𝐌],
     singular = 'submonoid',
     plural = 'submonoids'
-  )],
+  ),
   definition = [%and(
     %forall(
       #(

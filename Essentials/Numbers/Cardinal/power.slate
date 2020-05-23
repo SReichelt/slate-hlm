@@ -10,10 +10,10 @@ $power(
   κ: %Element($"Cardinal numbers"),
   μ: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = κ,
     sup = μ
-  )],
+  ),
   definition = [%structuralCases(
     μ,
     $"Cardinal numbers",

@@ -9,10 +9,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#cardinal.aleph_zero
  */
 $aleph(α: %Element(%enumeration($../../Natural/number(value = 0)))): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'ℵ',
     sub = α
-  )],
+  ),
   definition = [
     $../"Cardinal numbers".cardinality(S = {$../../Natural/"Natural numbers"}),
     $../"Cardinal numbers".cardinality(S = {$../../Integer/Integers}),

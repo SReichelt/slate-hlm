@@ -19,11 +19,11 @@ $ring(
   ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
   "1": %Element(R)
 ): %Predicate {
-  notation = [$Structure(
+  notation = $Structure(
     items = [R, ⊕, "0", ⊖, ⊙, "1"],
     singular = 'ring',
     plural = 'rings'
-  )],
+  ),
   definition = [
     %and(
       $../Groups/"abelian group"(

@@ -7,10 +7,10 @@ $"Fresh variables"(
   V: %Subset($Variables),
   _1: %Constraint($../Essentials/Sets/finite(S = {V}))
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Fresh',
     arguments = [V]
-  )],
+  ),
   definition = [$../Essentials/Sets/"Relative complement"(
     U = {$Variables},
     S = {$Variables},

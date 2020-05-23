@@ -17,10 +17,10 @@ $"cartesian product"(
     Y = {Y}
   ))
 ): %ExplicitOperator {
-  notation = [$MultiplicationLikeOperator(
+  notation = $MultiplicationLikeOperator(
     symbol = '×',
     operands = [f, g]
-  )],
+  ),
   definition = [$Functions(
       X = {$../Sets/"Cartesian product"(
         S = {V},

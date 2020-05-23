@@ -16,12 +16,12 @@ $"abelian group"(
     Y = {G}
   ))
 ): %Predicate {
-  notation = [$Structure(
+  notation = $Structure(
     items = [G, ∗, e, i],
     singular = 'abelian group',
     plural = 'abelian groups',
     article = 'an'
-  )],
+  ),
   definition = [
     %and(
       $group(

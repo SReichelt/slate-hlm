@@ -12,17 +12,17 @@ $Bijections(
   X: %Set,
   Y: %Set
 ): %SetOperator {
-  notation = [$FunctionOperator(
+  notation = $FunctionOperator(
     symbol = '↔',
     operands = [X, Y]
-  )],
+  ),
   definitionNotation = {
     parameter = #(f: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = f,
       symbol = '↔',
       operands = [X, Y]
-    )],
+    ),
     singularName = 'bijection',
     pluralName = 'bijections',
     nameOptional = %true

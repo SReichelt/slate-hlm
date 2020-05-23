@@ -6,7 +6,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/rat/basic.html#rat.neg
  */
 $inverse(a: %Element($"Rational numbers")): %ExplicitOperator {
-  notation = [$NegationOperator(operand = a)],
+  notation = $NegationOperator(operand = a),
   definition = [%structuralCases(
     a,
     $"Rational numbers",

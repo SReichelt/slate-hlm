@@ -11,7 +11,7 @@ $sum(
   a: %Element($Carrier(𝐑 = {𝐑})),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$AdditionOperator(operands = [a, b])],
+  notation = $AdditionOperator(operands = [a, b]),
   definition = [%structuralCases(
     𝐑,
     $Semirings,

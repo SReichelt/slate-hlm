@@ -1,12 +1,12 @@
 %../../../../../../logics/hlm%
 
 $Multiples(n: %Element($../../Natural/"Natural numbers")): %SetOperator {
-  notation = [$Operator(
+  notation = $Operator(
     symbol = '',
     operands = [n, 'ℤ'],
     space = '',
     minParenLevel = 3
-  )],
+  ),
   definition = [%extendedSubset(
     #(z: %Element($../Integers)),
     $../product(

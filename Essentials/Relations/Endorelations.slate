@@ -16,7 +16,7 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       #(p: %Prop)
     ))
   )): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = p,
         style = '[]'
@@ -25,7 +25,7 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
         $Group(items = [s, t]),
         S
       ])
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(s: %Binding(
         S,
@@ -52,10 +52,10 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  notation = [$Function(
+  notation = $Function(
     function = '𝓡𝓮𝓵',
     arguments = [S]
-  )],
+  ),
   definitionNotation = {
     parameter = #(≺: %Expr),
     singularName = ['relation', ' on ', S],

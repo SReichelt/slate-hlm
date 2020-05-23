@@ -30,13 +30,13 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
       ⊙ = {⊙}
     ))
   ): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Tuple(
         items = [M, ⊕, "0", ⊖, ⊙],
         style = '[]'
       ),
       sub = 𝐑
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         M: %Set,
@@ -131,10 +131,10 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
     }
   }
 
-  notation = [$Function(
+  notation = $Function(
     function = '𝓛𝓜𝓸𝓭',
     arguments = [𝐑]
-  )],
+  ),
   definitionNotation = {
     parameter = #(𝐌: %Expr),
     singularName = [[

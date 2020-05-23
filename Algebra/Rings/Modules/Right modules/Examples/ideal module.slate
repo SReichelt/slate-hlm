@@ -12,13 +12,13 @@ $"ideal module"(
     I = {I}
   ))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = $Parens(
       body = I,
       style = '[]'
     ),
     sub = 𝐑
-  )],
+  ),
   definition = [%structuralCases(
     𝐑,
     $../../../Rings,

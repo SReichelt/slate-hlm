@@ -4,11 +4,11 @@ $Interval(
   a: %Element($../Integers),
   b: %Element(%previous)
 ): %SetOperator {
-  notation = [$Enumeration(items = [
+  notation = $Enumeration(items = [
     a,
     $BottomEllipsis,
     b
-  ])],
+  ]),
   definition = [%subset(
     #(c: %Element($../Integers)),
     %and(

@@ -14,12 +14,12 @@ $"left absorbing element"(
   )),
   z: %Element(X)
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [z, ∗],
     singular = 'left absorbing element',
     plural = 'left absorbing elements',
     preposition = 'for'
-  )],
+  ),
   definition = [%forall(
     #(a: %Element(Y)),
     %equals(

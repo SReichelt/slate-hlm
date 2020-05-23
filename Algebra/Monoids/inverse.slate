@@ -15,7 +15,7 @@ $inverse(
     a = {a}
   ))
 ): %ImplicitOperator {
-  notation = [$Inverse(term = a)],
+  notation = $Inverse(term = a),
   parameter = #(b: %Element($Carrier(𝐌 = {𝐌}))),
   definition = [%equals(
     $operation(

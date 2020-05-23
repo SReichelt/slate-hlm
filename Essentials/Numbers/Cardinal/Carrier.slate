@@ -4,16 +4,16 @@
  * @remarks This definition retrieves a representative set from a cardinal number.
  */
 $Carrier(κ: %Element($"Cardinal numbers")): %SetOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = κ,
     style = '()'
-  )],
+  ),
   definitionNotation = {
     parameter = #(a: %Expr),
-    notation = [$ElementParameter(
+    notation = $ElementParameter(
       variable = a,
       set = κ
-    )]
+    )
   },
   definition = [%setStructuralCases(
     κ,

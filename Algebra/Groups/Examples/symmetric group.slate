@@ -6,10 +6,10 @@
  *             * https://ncatlab.org/nlab/show/symmetric+group
  */
 $"symmetric group"(X: %Set): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝑆',
     sub = X
-  )],
+  ),
   definition = [$../Groups.group(
     G = {$../../../Essentials/Functions/Bijections(
       X = {X},

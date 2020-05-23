@@ -14,10 +14,10 @@ $"tuple from function"(
     Y = {S}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'tpl',
     arguments = [f]
-  )],
+  ),
   definition = [$Tuples(
       S = {S},
       α = {α}

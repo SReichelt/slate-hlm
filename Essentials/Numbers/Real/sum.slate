@@ -7,7 +7,7 @@ $sum(
   a: %Element($"Real numbers"),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$AdditionOperator(operands = [a, b])],
+  notation = $AdditionOperator(operands = [a, b]),
   definition = [%structuralCases(
     b,
     $"Real numbers",

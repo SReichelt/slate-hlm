@@ -6,10 +6,10 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.nonempty
  */
 $empty(S: %Set): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = S,
     property = %neg('empty', 'nonempty')
-  )],
+  ),
   definition = [
     %setEquals(
       S,

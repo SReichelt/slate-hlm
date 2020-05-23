@@ -18,10 +18,10 @@ $functors(
   𝓒: %Element($../Categories(u = {u})),
   𝓓: %Element($../Categories(u = {v}))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = '𝐅𝐮𝐧',
     arguments = [𝓒, 𝓓]
-  )],
+  ),
   definition = [$../Categories(u = {$../../Essentials/Numbers/Natural/sum(
       m = {$../../Essentials/Numbers/Natural/"maximum of two numbers"(
         m = {u},

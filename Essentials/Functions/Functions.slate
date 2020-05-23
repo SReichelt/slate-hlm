@@ -21,7 +21,7 @@ $Functions(
     X,
     #(y: %Element(Y))
   )): %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = $FunctionBody(
         domain = X,
         codomain = Y,
@@ -29,16 +29,16 @@ $Functions(
         value = y
       ),
       style = '()'
-    )],
+    ),
     definitionNotation = {
       parameter = #(f: %Expr),
-      notation = [$FunctionDefinition(
+      notation = $FunctionDefinition(
         function = f,
         domain = X,
         codomain = Y,
         parameter = x,
         value = y
-      )]
+      )
     },
     equalityDefinition = {
       leftParameters = #(x: %Binding(
@@ -57,13 +57,13 @@ $Functions(
     }
   }
 
-  notation = [$FunctionOperator(operands = [X, Y])],
+  notation = $FunctionOperator(operands = [X, Y]),
   definitionNotation = {
     parameter = #(f: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = f,
       operands = [X, Y]
-    )],
+    ),
     singularName = 'function',
     pluralName = 'functions',
     nameOptional = %true

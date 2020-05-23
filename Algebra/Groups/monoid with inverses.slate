@@ -10,10 +10,10 @@ $"monoid with inverses"(
     )
   ))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 𝐌,
     sub = '𝓖𝓻𝓹'
-  )],
+  ),
   definition = [%structuralCases(
     𝐌,
     $../Monoids/Monoids,

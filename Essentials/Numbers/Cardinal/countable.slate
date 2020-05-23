@@ -1,10 +1,10 @@
 %../../../../../logics/hlm%
 
 $countable(κ: %Element($"Cardinal numbers")): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = κ,
     property = %neg('countable', 'uncountable')
-  )],
+  ),
   definition = [
     $"less or equal"(
       κ = {κ},

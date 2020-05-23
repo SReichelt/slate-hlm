@@ -8,6 +8,6 @@ $predicate(
   parameter: %ParameterList,
   predicate[parameter]: %DefinitionRef
 ): %MacroOperator {
-  notation = [predicate],
+  notation = predicate,
   references = {Properties = $Properties(S = {S})}
 }

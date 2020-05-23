@@ -5,7 +5,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.add_monoid
  */
 $"natural numbers with addition": %ExplicitOperator {
-  notation = [$Tuple(items = ['ℕ', '+'])],
+  notation = $Tuple(items = ['ℕ', '+']),
   definition = [$../Monoids.monoid(
     M = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
     ∗ = {$../../../Essentials/Functions/Operations/operator(

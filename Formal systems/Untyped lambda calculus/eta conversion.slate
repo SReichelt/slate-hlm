@@ -8,10 +8,10 @@ $"eta conversion"(
   V: %Subset($../Variables),
   _1: %Constraint($../../Essentials/Sets/finite(S = {V}))
 ): %SetOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'η',
     sub = V
-  )],
+  ),
   definition = [%extendedSubset(
     #(M: %Element($Terms(V = {V}))),
     $../"Rewriting rules"(T = {$Terms(V = {V})}).rule(

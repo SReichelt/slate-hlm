@@ -18,10 +18,10 @@ $dimension(
     𝐕 = {𝐕}
   ))
 ): %ImplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'dim',
     arguments = [𝐕]
-  )],
+  ),
   parameter = #(n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")),
   definition = [
     %forall(

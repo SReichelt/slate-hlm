@@ -15,12 +15,12 @@ $"right identity element"(
   )),
   e: %Element(Y)
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [e, ∗],
     singular = 'right identity',
     plural = 'right identities',
     preposition = 'for'
-  )],
+  ),
   definition = [%forall(
     #(a: %Element(X)),
     %equals(

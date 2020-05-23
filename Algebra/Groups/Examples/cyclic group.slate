@@ -7,10 +7,10 @@
  *             * https://ncatlab.org/nlab/show/cyclic+group#examples
  */
 $"cyclic group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝐶',
     sub = n
-  )],
+  ),
   definition = [$../Quotients/"quotient group"(
     𝐆 = {$integers},
     S = {$../../../Essentials/Numbers/Integer/Subsets/Multiples(n = {n})}

@@ -10,16 +10,16 @@ $Carrier(
   ),
   𝐌: %Element($"Left modules"(𝐑 = {𝐑}))
 ): %SetOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = 𝐌,
     style = '()'
-  )],
+  ),
   definitionNotation = {
     parameter = #(x: %Expr),
-    notation = [$ElementParameter(
+    notation = $ElementParameter(
       variable = x,
       set = 𝐌
-    )]
+    )
   },
   definition = [%setStructuralCases(
     𝐌,

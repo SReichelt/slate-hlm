@@ -23,10 +23,10 @@ $Groups: %Construction {
       i = {i}
     ))
   ): %Constructor {
-    notation = [$Tuple(
+    notation = $Tuple(
       items = [G, ∗, e, i],
       style = '[]'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         G: %Set,
@@ -97,7 +97,7 @@ $Groups: %Construction {
     }
   }
 
-  notation = ['𝓖𝓻𝓹'],
+  notation = '𝓖𝓻𝓹',
   definitionNotation = {
     parameter = #(𝐆: %Expr),
     singularName = 'group',

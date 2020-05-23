@@ -7,9 +7,9 @@
  *             * https://ncatlab.org/nlab/show/symmetric+group
  */
 $"finite symmetric group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝑆',
     sub = n
-  )],
+  ),
   definition = [$"symmetric group"(X = {$../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n})})]
 }

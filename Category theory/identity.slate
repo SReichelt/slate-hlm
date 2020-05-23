@@ -20,10 +20,10 @@ $identity(
     auto = %true
   )
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'id',
     sub = 𝐗
-  )],
+  ),
   definition = [%structuralCases(
     𝓒,
     $Categories(u = {u}),

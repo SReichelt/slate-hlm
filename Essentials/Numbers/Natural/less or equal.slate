@@ -15,7 +15,7 @@ $"less or equal"(
     n = {m},
     m = {n}
   )},
-  notation = [$LessOrEqualRelation(operands = [m, n])],
+  notation = $LessOrEqualRelation(operands = [m, n]),
   definition = [
     %exists(
       #(x: %Element($"Natural numbers")),

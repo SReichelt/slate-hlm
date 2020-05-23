@@ -9,17 +9,17 @@
  *             * https://ncatlab.org/nlab/show/automorphism
  */
 $Automorphisms(κ: %Element($../"Cardinal numbers")): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Aut',
     arguments = [κ]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [κ, κ]
-    )],
+    ),
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },

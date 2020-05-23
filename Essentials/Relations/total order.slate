@@ -10,11 +10,11 @@ $"total order"(
   S: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = {S}))
 ): %Predicate {
-  notation = [$NounProperty(
+  notation = $NounProperty(
     operand = ⪯,
     singular = 'total order',
     plural = 'total orders'
-  )],
+  ),
   definition = [
     %and(
       $connex(

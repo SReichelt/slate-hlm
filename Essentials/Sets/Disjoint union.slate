@@ -24,10 +24,10 @@ $"Disjoint union"(
   )
 ): %Construction {
   $left(s: %Element(S)): %Constructor {
-    notation = [$Constructor(
+    notation = $Constructor(
       name = 'l',
       arguments = [s]
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(s: %Element(S)),
       rightParameters = #("s'": %Element(%previous)),
@@ -37,10 +37,10 @@ $"Disjoint union"(
   }
 
   $right(t: %Element(T)): %Constructor {
-    notation = [$Constructor(
+    notation = $Constructor(
       name = 'r',
       arguments = [t]
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(t: %Element(T)),
       rightParameters = #("t'": %Element(%previous)),
@@ -49,9 +49,9 @@ $"Disjoint union"(
     }
   }
 
-  notation = [$Operator(
+  notation = $Operator(
     symbol = '⊎',
     operands = [S, T],
     space = ' '
-  )]
+  )
 }

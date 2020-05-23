@@ -20,11 +20,11 @@ $substitution(
     T = {%enumeration(x)}
   )}))
 ): %ExplicitOperator {
-  notation = [$LambdaSubstitution(
+  notation = $LambdaSubstitution(
     term = T,
     variable = x,
     replacement = R
-  )],
+  ),
   definition = [%structuralCases(
     T,
     $Terms(V = {V}),

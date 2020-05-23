@@ -12,10 +12,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/finite.html#set.finite
  */
 $finite(S: %Set): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = S,
     property = %neg('finite', 'infinite')
-  )],
+  ),
   definition = [
     $../Numbers/Cardinal/finite(κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})}),
     %exists(#(

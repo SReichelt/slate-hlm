@@ -11,10 +11,10 @@ $"generalized conjunction"(
     T = {T}
   ))
 ): %ExplicitOperator {
-  notation = [$PrefixUnaryOperator(
+  notation = $PrefixUnaryOperator(
     symbol = '⋀',
     operand = R
-  )],
+  ),
   definition = [$Relations(
       S = {S},
       T = {T}

@@ -1,10 +1,10 @@
 %../../../../../../logics/hlm%
 
 $"tuple of numbers"(items: %Nat[]): %MacroOperator {
-  notation = [$Tuple(
+  notation = $Tuple(
     items = items,
     style = '()'
-  )],
+  ),
   variables = #(length: %Nat),
   references = {
     Tuples = $../../../Sequences/Tuples(

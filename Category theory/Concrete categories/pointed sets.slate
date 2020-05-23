@@ -8,10 +8,10 @@
  *             * https://proofwiki.org/wiki/Category:Category_of_Pointed_Sets
  */
 $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '𝐏𝐭𝐒𝐞𝐭',
     sub = u
-  )],
+  ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/"Pointed sets"/"Pointed sets"},
       𝐀 = {

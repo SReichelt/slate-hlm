@@ -26,10 +26,10 @@ $Coordinates(
     𝒂 = {𝒙}
   ))
 ): %SetOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 'Coord',
     sub = 𝒙
-  )],
+  ),
   definitionNotation = {
     parameter = #(𝐚: %Expr),
     singularName = ['coordinate sequence', ' for ', 𝒙],

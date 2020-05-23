@@ -12,10 +12,10 @@ $value(
   x: %Element(X),
   y: %Element(Y)
 ): %ExplicitOperator {
-  notation = [$Operator(
+  notation = $Operator(
     symbol = ∗,
     operands = [x, y]
-  )],
+  ),
   definition = [$../value(
     X = {$../../Sets/"Cartesian product"(
       S = {X},

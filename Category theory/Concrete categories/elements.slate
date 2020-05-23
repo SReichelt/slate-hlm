@@ -14,13 +14,13 @@ $elements(
   u: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
   S: %Set
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = '𝐃𝐢𝐬',
       sub = u
     ),
     arguments = [S]
-  )],
+  ),
   definition = [$../Categories(u = {u}).category(
       O = {S},
       𝐀 = {

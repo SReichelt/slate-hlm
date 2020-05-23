@@ -14,7 +14,7 @@ $"additive inverse"(
     𝐌 = {𝐌}
   ))
 ): %ExplicitOperator {
-  notation = [$NegationOperator(operand = x)],
+  notation = $NegationOperator(operand = x),
   definition = [%structuralCases(
     𝐌,
     $"Right modules"(𝐑 = {𝐑}),

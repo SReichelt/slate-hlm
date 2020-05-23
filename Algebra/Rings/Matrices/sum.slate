@@ -20,7 +20,7 @@ $sum(
   )),
   B: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$AdditionOperator(operands = [A, B])],
+  notation = $AdditionOperator(operands = [A, B]),
   definition = [%structuralCases(
     B,
     $Matrices(

@@ -13,13 +13,13 @@ $rewritable(
   L: %Element($Terms(V = {V})),
   R: %Element(%previous)
 ): %Predicate {
-  notation = [$Relation(
+  notation = $Relation(
     symbol = $SubSup(
       body = %neg('→', '↛'),
       sub = ℜ
     ),
     operands = [L, R]
-  )],
+  ),
   definition = [%or(
     %in(
       $../"Rewriting rules"(T = {$Terms(V = {V})}).rule(

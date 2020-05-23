@@ -1,10 +1,10 @@
 %../../../../../logics/hlm%
 
 $"countably infinite"(α: %Element($"Ordinal numbers")): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = α,
     property = 'countably infinite'
-  )],
+  ),
   definition = [
     %and(
       $countable(α = {α}),

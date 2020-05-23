@@ -19,10 +19,10 @@
  */
 $"Cardinal numbers": %Construction {
   $cardinality(S: %Set): %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = S,
       style = '||'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(S: %Set),
       rightParameters = #(T: %Set),
@@ -34,7 +34,7 @@ $"Cardinal numbers": %Construction {
     }
   }
 
-  notation = ['𝓒𝓻𝓭'],
+  notation = '𝓒𝓻𝓭',
   embedding = {
     parameter = #(n: %Element($../Natural/"Natural numbers")),
     target = $"Cardinal numbers".cardinality(S = {$../Natural/Subsets/"Segment (less)"(n = {n})}),

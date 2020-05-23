@@ -36,7 +36,7 @@ $"quotient ring"(
     ∼ = {∼}
   ))
 ): %ExplicitOperator {
-  notation = [$DivisionOperator(operands = [𝐑, I])],
+  notation = $DivisionOperator(operands = [𝐑, I]),
   definition = [$../Rings.ring(
     R = {Q},
     ⊕ = {$../../../Essentials/Functions/Functions(

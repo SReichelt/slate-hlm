@@ -25,10 +25,10 @@ $"element order"(
     )
   ))
 ): %ExplicitOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = g,
     style = '||'
-  )],
+  ),
   definition = [
     $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Subgroups/"Span of element"(
       𝐆 = {𝐆},

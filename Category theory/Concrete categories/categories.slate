@@ -9,10 +9,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/category/Cat.html#category_theory.Cat
  */
 $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = '𝐂𝐚𝐭',
     arguments = [u]
-  )],
+  ),
   definition = [$../Categories(u = {$../../Essentials/Numbers/Natural/sum(
       m = {u},
       n = {$../../Essentials/Numbers/Natural/number(value = 1)}

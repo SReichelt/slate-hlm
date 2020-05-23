@@ -10,10 +10,10 @@ $"additive group"(
   ),
   𝐌: %Element($"Right modules"(𝐑 = {𝐑}))
 ): %ExplicitOperator {
-  notation = [$Tuple(
+  notation = $Tuple(
     items = [𝐌, '+'],
     style = '[]'
-  )],
+  ),
   definition = [%structuralCases(
     𝐌,
     $"Right modules"(𝐑 = {𝐑}),

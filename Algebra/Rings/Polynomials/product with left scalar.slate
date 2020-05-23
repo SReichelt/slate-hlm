@@ -15,7 +15,7 @@ $"product with left scalar"(
     X = {X}
   ))
 ): %ExplicitOperator {
-  notation = [$MultiplicationOperator(operands = [a, p])],
+  notation = $MultiplicationOperator(operands = [a, p]),
   definition = [%structuralCases(
     p,
     $Polynomials(

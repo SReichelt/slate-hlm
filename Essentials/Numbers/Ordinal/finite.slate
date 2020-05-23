@@ -1,10 +1,10 @@
 %../../../../../logics/hlm%
 
 $finite(α: %Element($"Ordinal numbers")): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = α,
     property = %neg('finite', 'infinite')
-  )],
+  ),
   definition = [
     $../Cardinal/finite(κ = {$cardinality(α = {α})}),
     $../../Sets/finite(S = {$Carrier(α = {α})}),

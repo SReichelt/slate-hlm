@@ -15,7 +15,7 @@ $difference(
   )),
   q: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$SubtractionOperator(operands = [p, q])],
+  notation = $SubtractionOperator(operands = [p, q]),
   definition = [$sum(
     𝐑 = {𝐑},
     X = {X},

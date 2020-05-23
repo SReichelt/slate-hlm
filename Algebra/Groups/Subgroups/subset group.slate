@@ -11,13 +11,13 @@ $"subset group"(
     S = {S}
   ))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = $Parens(
       body = S,
       style = '[]'
     ),
     sub = 𝐆
-  )],
+  ),
   definition = [%structuralCases(
     𝐆,
     $../Groups,

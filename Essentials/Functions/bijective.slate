@@ -17,10 +17,10 @@ $bijective(
     Y = {Y}
   ))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = f,
     property = 'bijective'
-  )],
+  ),
   definition = [
     %and(
       $injective(

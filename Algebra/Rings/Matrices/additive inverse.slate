@@ -19,7 +19,7 @@ $"additive inverse"(
     n = {n}
   ))
 ): %ExplicitOperator {
-  notation = [$NegationOperator(operand = A)],
+  notation = $NegationOperator(operand = A),
   definition = [%structuralCases(
     A,
     $Matrices(

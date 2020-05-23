@@ -4,10 +4,10 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/ring.html#ring.to_monoid
  */
 $"multiplicative monoid"(𝐑: %Element($Rings)): %ExplicitOperator {
-  notation = [$Tuple(
+  notation = $Tuple(
     items = [𝐑, '⋅'],
     style = '[]'
-  )],
+  ),
   definition = [%structuralCases(
     𝐑,
     $Rings,

@@ -8,10 +8,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/equiv/ring.html#ring_aut.group
  */
 $"automorphism group"(𝐑: %Element($../Rings)): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Aut',
     arguments = [𝐑]
-  )],
+  ),
   definition = [$../../Groups/Subgroups/"subset group"(
     𝐆 = {$../../Groups/Examples/"symmetric group"(X = {$../Carrier(𝐑 = {𝐑})})},
     S = {$Automorphisms(𝐑 = {𝐑})}

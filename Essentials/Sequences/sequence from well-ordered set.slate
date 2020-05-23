@@ -17,13 +17,13 @@ $"sequence from well-ordered set"(
     ⪯ = {⪯}
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = 'seq',
       sub = ⪯
     ),
     arguments = [S]
-  )],
+  ),
   definition = [$"Ordinal-indexed sequences"(S = {S}).sequence(
       α = {α},
       𝐚 = {$Tuples(

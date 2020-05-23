@@ -11,10 +11,10 @@ $"iterated operation"(
   𝐌: %Element($Monoids),
   _1: %Constraint($commutative(𝐌 = {𝐌}))
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '∏',
     sub = 𝐌
-  )],
+  ),
   definition = [%structuralCases(
     𝐌,
     $Monoids,

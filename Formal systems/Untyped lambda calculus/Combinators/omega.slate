@@ -4,7 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Lambda_calculus#Standard_terms
  */
 $omega: %ExplicitOperator {
-  notation = ['𝞈'],
+  notation = '𝞈',
   definition = [$../Terms(V = {$../../../Essentials/Sets/"Empty set"}).abstraction(x = {
       #(x: %Element($../../"Fresh variables"(V = {$../../../Essentials/Sets/"Empty set"}))),
       {M = {$../Terms(V = {%enumeration(x)}).application(

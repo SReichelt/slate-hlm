@@ -10,10 +10,10 @@ $associative(
   X: %Set(auto = %true),
   ∗: %Element($"Inner operations"(X = {X}))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = ∗,
     property = 'associative'
-  )],
+  ),
   definition = [%forall(
     #(
       x: %Element(X),

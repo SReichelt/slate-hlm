@@ -10,7 +10,7 @@ $difference(
   a: %Element($"Rational numbers"),
   b: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$SubtractionOperator(operands = [a, b])],
+  notation = $SubtractionOperator(operands = [a, b]),
   definition = [
     %structuralCases(
       b,

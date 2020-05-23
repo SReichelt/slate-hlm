@@ -10,10 +10,10 @@ $"column vector space"(
   ),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = 𝐅,
     sup = n
-  )],
+  ),
   definition = [
     $../../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐅}).module(
         M = {$../../../Algebra/Rings/Matrices/Vectors(

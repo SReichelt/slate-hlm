@@ -17,14 +17,14 @@ $"Rational numbers": %Construction {
     n: %Element($../Integer/Integers),
     d: %Element($../Natural/Subsets/"Positive numbers")
   ): %Constructor {
-    notation = [$Parens(
+    notation = $Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '/'),
         operands = [n, d],
         space = ''
       ),
       style = '()'
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(
         n: %Element($../Integer/Integers),
@@ -54,7 +54,7 @@ $"Rational numbers": %Construction {
     }
   }
 
-  notation = ['ℚ'],
+  notation = 'ℚ',
   embedding = {
     parameter = #(x: %Element($../Integer/Integers)),
     target = $"Rational numbers".quotient(

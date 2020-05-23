@@ -22,13 +22,13 @@ $"basis coordinates"(
     𝐌 = {𝐌}
   ))
 ): %ImplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = 'coord',
       sub = 𝒙
     ),
     arguments = [m]
-  )],
+  ),
   parameter = #(𝐚: %Element($Coordinates(
     𝐑 = {𝐑},
     𝐌 = {𝐌},

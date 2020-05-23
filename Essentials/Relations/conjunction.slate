@@ -12,11 +12,11 @@ $conjunction(
   )),
   ⊂: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$Operator(
+  notation = $Operator(
     symbol = '∧',
     operands = [≺, ⊂],
     space = ' '
-  )],
+  ),
   definition = [$Relations(
       S = {S},
       T = {T}

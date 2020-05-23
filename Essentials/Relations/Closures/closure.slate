@@ -10,13 +10,13 @@ $closure(
   ≺: %Element($../Endorelations(S = {S})),
   p: %Element($../../Properties/Properties(S = {$../Endorelations(S = {S})}))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = 'cl',
       sub = p
     ),
     arguments = [≺]
-  )],
+  ),
   definition = [$../"generalized conjunction"(
     S = {S},
     T = {S},

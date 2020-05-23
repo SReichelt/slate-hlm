@@ -20,10 +20,10 @@ $succession(
     ⪯ = {⊑}
   ))
 ): %ExplicitOperator {
-  notation = [$Operator(
+  notation = $Operator(
     symbol = '≪',
     operands = [⪯, ⊑]
-  )],
+  ),
   definition = [$Endorelations(S = {$../Sets/"Disjoint union"(
       S = {S},
       T = {T}

@@ -4,10 +4,10 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#comm_monoid
  */
 $commutative(𝐌: %Element($Monoids)): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = 𝐌,
     property = 'commutative'
-  )],
+  ),
   definition = [%structural(
     𝐌,
     $Monoids,

@@ -24,7 +24,7 @@ $"codomain restriction"(
     B
   ))
 ): %ExplicitOperator {
-  notation = [$PostfixUnaryOperator(
+  notation = $PostfixUnaryOperator(
     symbol = $SubSup(
       body = '∣',
       sub = A,
@@ -32,7 +32,7 @@ $"codomain restriction"(
     ),
     operand = f,
     minParenLevel = 3
-  )],
+  ),
   definition = [$Functions(
       X = {A},
       Y = {B}

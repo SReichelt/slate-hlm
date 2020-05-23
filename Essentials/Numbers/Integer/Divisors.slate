@@ -1,13 +1,13 @@
 %../../../../../logics/hlm%
 
 $Divisors(b: %Element($Integers)): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = 'Div',
       sub = 'ℤ'
     ),
     arguments = [b]
-  )],
+  ),
   definition = [%subset(
     #(a: %Element($Subsets/"Nonzero numbers")),
     $divisible(

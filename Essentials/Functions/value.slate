@@ -17,10 +17,10 @@ $value(
   )),
   x: %Element(X)
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = f,
     arguments = [x]
-  )],
+  ),
   definition = [%structuralCases(
     f,
     $Functions(

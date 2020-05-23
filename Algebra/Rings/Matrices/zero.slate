@@ -5,7 +5,7 @@ $zero(
   m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
   n: %Element(%previous)
 ): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '0',
     sub = $SubSup(
       body = 𝐑,
@@ -14,7 +14,7 @@ $zero(
         operands = [m, n]
       )
     )
-  )],
+  ),
   definition = [$Matrices(
       𝐑 = {𝐑},
       m = {m},

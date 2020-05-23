@@ -56,13 +56,13 @@ $"Infranatural transformations"(
       )}
     )))
   )): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = n,
         style = '()'
       ),
       sub = $ElementRelation(operands = [𝐗, 𝓒])
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(𝐗: %Binding(
         $../Objects(
@@ -127,17 +127,17 @@ $"Infranatural transformations"(
     }
   }
 
-  notation = [$Function(
+  notation = $Function(
     function = 'Infranat',
     arguments = [F, G]
-  )],
+  ),
   definitionNotation = {
     parameter = #(η: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = η,
       symbol = '⇀',
       operands = [F, G]
-    )],
+    ),
     singularName = 'infranatural transformation',
     pluralName = 'infranatural transformations',
     nameOptional = %true

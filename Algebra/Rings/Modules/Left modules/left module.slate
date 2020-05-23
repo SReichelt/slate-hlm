@@ -22,7 +22,7 @@ $"left module"(
     Z = {M}
   ))
 ): %Predicate {
-  notation = [$Structure(
+  notation = $Structure(
     items = [M, ⊕, "0", ⊖, ⊙],
     singular = [
       'left ',
@@ -38,7 +38,7 @@ $"left module"(
         argument = 𝐑
       )
     ]
-  )],
+  ),
   definition = [
     %and(
       $../../../Groups/"abelian group"(

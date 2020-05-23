@@ -6,10 +6,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#eq
  */
 $equality(S: %Set): %ExplicitOperator {
-  notation = [$SubSup(
+  notation = $SubSup(
     body = '=',
     sub = S
-  )],
+  ),
   definition = [$Endorelations(S = {S}).relation(s = {
       #(s: %Element(S)),
       {t = {

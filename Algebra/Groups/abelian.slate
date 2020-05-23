@@ -8,10 +8,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#comm_group
  */
 $abelian(𝐆: %Element($Groups)): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = 𝐆,
     property = 'abelian'
-  )],
+  ),
   definition = [%structural(
     𝐆,
     $Groups,

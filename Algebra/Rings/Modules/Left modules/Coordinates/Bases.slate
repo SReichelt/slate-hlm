@@ -7,10 +7,10 @@ $Bases(
   ),
   𝐌: %Element($../"Left modules"(𝐑 = {𝐑}))
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Ba',
     arguments = [𝐌]
-  )],
+  ),
   definitionNotation = {
     parameter = #(𝒙: %Expr),
     singularName = ['basis', ' of ', 𝐌],

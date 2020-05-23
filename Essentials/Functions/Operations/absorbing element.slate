@@ -9,13 +9,13 @@ $"absorbing element"(
   ∗: %Element($"Inner operations"(X = {X})),
   z: %Element(X)
 ): %Predicate {
-  notation = [$NounRelation(
+  notation = $NounRelation(
     operands = [z, ∗],
     singular = 'absorbing element',
     plural = 'absorbing elements',
     article = 'an',
     preposition = 'for'
-  )],
+  ),
   definition = [
     %and(
       $"left absorbing element"(

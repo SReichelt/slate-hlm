@@ -7,13 +7,13 @@ $"free magma"(
   S: %Set,
   T: %SetDef($"Binary trees"(S = {S}))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = 'free',
       sub = '𝓜𝓰𝓶'
     ),
     arguments = [S]
-  )],
+  ),
   definition = [$../Magmas.magma(
     M = {T},
     ∗ = {$../../../Essentials/Functions/Functions(

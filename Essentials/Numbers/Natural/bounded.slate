@@ -7,10 +7,10 @@
  *             * https://ncatlab.org/nlab/show/bounded+set
  */
 $bounded(M: %Subset($"Natural numbers")): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = M,
     property = %neg('bounded', 'unbounded')
-  )],
+  ),
   definition = [
     %exists(
       #(n: %Element($"Natural numbers")),

@@ -30,13 +30,13 @@ $"index in well-ordered set"(
     )
   ))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = 'idx',
       sub = ⪯
     ),
     arguments = [s]
-  )],
+  ),
   definition = [$../Numbers/Ordinal/"Ordinal numbers"."order type"(
     S = {T},
     ⪯ = {$../Relations/restriction(

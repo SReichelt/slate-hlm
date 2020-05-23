@@ -10,10 +10,10 @@ $connex(
   S: %Set(auto = %true),
   ≺: %Element($Endorelations(S = {S}))
 ): %Predicate {
-  notation = [$Property(
+  notation = $Property(
     operand = ≺,
     property = 'connex'
-  )],
+  ),
   definition = [%forall(
     #(
       s: %Element(S),

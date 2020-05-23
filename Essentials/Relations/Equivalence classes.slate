@@ -22,13 +22,13 @@ $"Equivalence classes"(
   ))
 ): %Construction {
   $class(s: %Element(S)): %Constructor {
-    notation = [$SubSup(
+    notation = $SubSup(
       body = $Parens(
         body = s,
         style = '[]'
       ),
       sub = ∼
-    )],
+    ),
     equalityDefinition = {
       leftParameters = #(s: %Element(S)),
       rightParameters = #(t: %Element(%previous)),
@@ -42,5 +42,5 @@ $"Equivalence classes"(
     }
   }
 
-  notation = [$DivisionOperator(operands = [S, ∼])]
+  notation = $DivisionOperator(operands = [S, ∼])
 }

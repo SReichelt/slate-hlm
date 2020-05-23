@@ -10,10 +10,10 @@ $related(
   s: %Element(S),
   t: %Element(T)
 ): %Predicate {
-  notation = [$Relation(
+  notation = $Relation(
     symbol = ≺,
     operands = [s, t]
-  )],
+  ),
   definition = [%structural(
     ≺,
     $Relations(

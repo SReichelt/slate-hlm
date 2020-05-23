@@ -14,11 +14,11 @@ $"right operation transport"(
     Z = {X}
   ))
 ): %ExplicitOperator {
-  notation = [$../../Isomorphisms/Function(
+  notation = $../../Isomorphisms/Function(
     function = φ,
     arguments = [∗],
     style = '[]'
-  )],
+  ),
   definition = [
     %structuralCases(
       ∗,

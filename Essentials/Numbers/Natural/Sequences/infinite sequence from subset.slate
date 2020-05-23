@@ -7,13 +7,13 @@ $"infinite sequence from subset"(
   M: %Subset($../"Natural numbers"),
   _1: %Constraint(%not($../../../Sets/finite(S = {M})))
 ): %ExplicitOperator {
-  notation = [$Function(
+  notation = $Function(
     function = $SubSup(
       body = 'seq',
       sub = 'ω'
     ),
     arguments = [M]
-  )],
+  ),
   definition = [$../../../Sequences/"Infinite sequences"(S = {$../"Natural numbers"}).sequence(n = {
       #(n: %Element($../"Natural numbers")),
       {a = {$"indexed element"(

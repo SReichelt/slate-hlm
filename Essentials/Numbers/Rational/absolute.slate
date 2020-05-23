@@ -8,10 +8,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/rat/order.html#rat.abs_def
  */
 $absolute(a: %Element($"Rational numbers")): %ExplicitOperator {
-  notation = [$Parens(
+  notation = $Parens(
     body = a,
     style = '||'
-  )],
+  ),
   definition = [%cases([
     {
       formula = $"less or equal"(

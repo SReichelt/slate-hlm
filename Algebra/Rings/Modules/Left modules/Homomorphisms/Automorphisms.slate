@@ -13,17 +13,17 @@ $Automorphisms(
   ),
   𝐌: %Element($../"Left modules"(𝐑 = {𝐑}))
 ): %SetOperator {
-  notation = [$Function(
+  notation = $Function(
     function = 'Aut',
     arguments = [𝐌]
-  )],
+  ),
   definitionNotation = {
     parameter = #(φ: %Expr),
-    notation = [$FunctionDeclaration(
+    notation = $FunctionDeclaration(
       function = φ,
       symbol = '↔',
       operands = [𝐌, 𝐌]
-    )],
+    ),
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },
