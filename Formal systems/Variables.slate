@@ -25,6 +25,7 @@ $Variables: %Construction {
   definitionNotation = {
     parameter = #(v: %Expr),
     singularName = 'variable',
-    pluralName = 'variables'
+    pluralName = 'variables',
+    nameOptional = %true
   }
 }

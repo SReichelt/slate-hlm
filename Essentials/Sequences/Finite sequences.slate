@@ -81,6 +81,7 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
   definitionNotation = {
     parameter = #(𝒂: %Expr),
     singularName = ['finite sequence', ' on ', S],
-    pluralName = ['finite sequences', ' on ', S]
+    pluralName = ['finite sequences', ' on ', S],
+    nameOptional = %true
   }
 }

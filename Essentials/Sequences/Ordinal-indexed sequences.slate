@@ -74,7 +74,8 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
   definitionNotation = {
     parameter = #(𝒂: %Expr),
     singularName = ['ordinal-indexed sequence', ' on ', S],
-    pluralName = ['ordinal-indexed sequences', ' on ', S]
+    pluralName = ['ordinal-indexed sequences', ' on ', S],
+    nameOptional = %true
   },
   embedding = {
     parameter = #(_𝒂: %Element($"Finite sequences"(S = {S}))),

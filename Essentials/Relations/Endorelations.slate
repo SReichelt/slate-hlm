@@ -59,7 +59,8 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
   definitionNotation = {
     parameter = #(≺: %Expr),
     singularName = ['relation', ' on ', S],
-    pluralName = ['relations', ' on ', S]
+    pluralName = ['relations', ' on ', S],
+    nameOptional = %true
   },
   embedding = {
     parameter = #(≺: %Element($Relations(

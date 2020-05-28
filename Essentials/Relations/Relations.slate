@@ -63,6 +63,7 @@ $Relations(
   definitionNotation = {
     parameter = #(≺: %Expr),
     singularName = ['relation', ' from ', S, ' to ', T],
-    pluralName = ['relations', ' from ', S, ' to ', T]
+    pluralName = ['relations', ' from ', S, ' to ', T],
+    nameOptional = %true
   }
 }

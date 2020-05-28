@@ -42,6 +42,7 @@ $Properties(S: %Set(auto = %true)): %Construction {
   definitionNotation = {
     parameter = #(p: %Expr),
     singularName = ['property', ' on ', S],
-    pluralName = ['properties', ' on ', S]
+    pluralName = ['properties', ' on ', S],
+    nameOptional = %true
   }
 }
