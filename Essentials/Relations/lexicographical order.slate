@@ -31,17 +31,17 @@ $"lexicographical order"(
       S = {S},
       T = {T}
     )}).relation(s = {
-      #(_a: %Element($../Sets/"Cartesian product"(
+      #(a: %Element($../Sets/"Cartesian product"(
         S = {S},
         T = {T}
       ))),
       {t = {
-        #(_b: %Element($../Sets/"Cartesian product"(
+        #(b: %Element($../Sets/"Cartesian product"(
           S = {S},
           T = {T}
         ))),
         {p = {%structural(
-          _b,
+          b,
           $../Sets/"Cartesian product"(
             S = {S},
             T = {T}
@@ -53,7 +53,7 @@ $"lexicographical order"(
               "t'": %Element(T)
             ),
             value = %structural(
-              _a,
+              a,
               $../Sets/"Cartesian product"(
                 S = {S},
                 T = {T}

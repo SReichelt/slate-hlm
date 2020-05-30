@@ -46,12 +46,12 @@ $"quotient ring"(
         )},
         Y = {Q}
       ).function(x = {
-        #(_x: %Element($../../../Essentials/Sets/"Cartesian product"(
+        #(x: %Element($../../../Essentials/Sets/"Cartesian product"(
           S = {Q},
           T = {Q}
         ))),
         {y = {%structuralCases(
-          _x,
+          x,
           $../../../Essentials/Sets/"Cartesian product"(
             S = {Q},
             T = {Q}
@@ -103,9 +103,9 @@ $"quotient ring"(
         X = {Q},
         Y = {Q}
       ).function(x = {
-        #(_t: %Element(Q)),
+        #(t: %Element(Q)),
         {y = {%structuralCases(
-          _t,
+          t,
           $../../../Essentials/Relations/"Equivalence classes"(
             S = {$../Carrier(𝐑 = {𝐑})},
             ∼ = {∼}
@@ -130,12 +130,12 @@ $"quotient ring"(
         )},
         Y = {Q}
       ).function(x = {
-        #(_x: %Element($../../../Essentials/Sets/"Cartesian product"(
+        #(x: %Element($../../../Essentials/Sets/"Cartesian product"(
           S = {Q},
           T = {Q}
         ))),
         {y = {%structuralCases(
-          _x,
+          x,
           $../../../Essentials/Sets/"Cartesian product"(
             S = {Q},
             T = {Q}
@@ -143,11 +143,11 @@ $"quotient ring"(
           [{
             constructor = $../../../Essentials/Sets/"Cartesian product".pair,
             parameters = #(
-              _t: %Element(Q),
-              _u: %Element(Q)
+              t: %Element(Q),
+              u: %Element(Q)
             ),
             value = %structuralCases(
-              _t,
+              t,
               $../../../Essentials/Relations/"Equivalence classes"(
                 S = {$../Carrier(𝐑 = {𝐑})},
                 ∼ = {∼}
@@ -156,7 +156,7 @@ $"quotient ring"(
                 constructor = $../../../Essentials/Relations/"Equivalence classes".class,
                 parameters = #(g: %Element($../Carrier(𝐑 = {𝐑}))),
                 value = %structuralCases(
-                  _u,
+                  u,
                   $../../../Essentials/Relations/"Equivalence classes"(
                     S = {$../Carrier(𝐑 = {𝐑})},
                     ∼ = {∼}

@@ -36,12 +36,12 @@ $Coordinates(
     pluralName = ['coordinate sequences', ' for ', 𝒙]
   },
   definition = [%subset(
-    #(_a: %Element($../../../../../Essentials/Sequences/Tuples(
+    #(𝐚: %Element($../../../../../Essentials/Sequences/Tuples(
       S = {$../../../Carrier(𝐑 = {𝐑})},
       α = {α}
     ))),
     %structural(
-      _a,
+      𝐚,
       $../../../../../Essentials/Sequences/Tuples(
         S = {$../../../Carrier(𝐑 = {𝐑})},
         α = {α}

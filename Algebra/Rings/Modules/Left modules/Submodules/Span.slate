@@ -30,12 +30,12 @@ $Span(
       𝐌 = {𝐌}
     )},
     S = {%subset(
-      #(_s: %Element($../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
+      #(s: %Element($../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
         𝐑 = {𝐑},
         𝐌 = {𝐌}
       )}))),
       %structural(
-        _s,
+        s,
         $../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
           𝐑 = {𝐑},
           𝐌 = {𝐌}

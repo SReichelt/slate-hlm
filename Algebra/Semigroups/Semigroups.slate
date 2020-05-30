@@ -16,9 +16,9 @@ $Semigroups: %SetOperator {
   },
   definition = [
     %subset(
-      #(_𝐒: %Element($../Magmas/Magmas)),
+      #(𝐒: %Element($../Magmas/Magmas)),
       %structural(
-        _𝐒,
+        𝐒,
         $../Magmas/Magmas,
         [{
           constructor = $../Magmas/Magmas.magma,

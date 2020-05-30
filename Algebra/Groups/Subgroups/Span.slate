@@ -20,9 +20,9 @@ $Span(
   definition = [$../../../Essentials/Sets/"Generalized intersection using power set"(
     U = {$../Carrier(𝐆 = {𝐆})},
     S = {%subset(
-      #(_s: %Element($../../../Essentials/Sets/"Power set"(S = {$../Carrier(𝐆 = {𝐆})}))),
+      #(s: %Element($../../../Essentials/Sets/"Power set"(S = {$../Carrier(𝐆 = {𝐆})}))),
       %structural(
-        _s,
+        s,
         $../../../Essentials/Sets/"Power set"(S = {$../Carrier(𝐆 = {𝐆})}),
         [{
           constructor = $../../../Essentials/Sets/"Power set".subset,

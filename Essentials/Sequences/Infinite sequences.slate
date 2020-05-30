@@ -54,12 +54,12 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     nameOptional = %true
   },
   embedding = {
-    parameter = #(_𝐚: %Element($Tuples(
+    parameter = #(𝐚: %Element($Tuples(
       S = {S},
       α = {$../Numbers/Ordinal/Examples/omega}
     ))),
     target = %structuralCases(
-      _𝐚,
+      𝐚,
       $Tuples(
         S = {S},
         α = {$../Numbers/Ordinal/Examples/omega}

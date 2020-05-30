@@ -23,12 +23,12 @@ $"free magma"(
         )},
         Y = {T}
       ).function(x = {
-        #(_x: %Element($../../../Essentials/Sets/"Cartesian product"(
+        #(x: %Element($../../../Essentials/Sets/"Cartesian product"(
           S = {T},
           T = {T}
         ))),
         {y = {%structuralCases(
-          _x,
+          x,
           $../../../Essentials/Sets/"Cartesian product"(
             S = {T},
             T = {T}

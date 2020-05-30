@@ -78,9 +78,9 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
     nameOptional = %true
   },
   embedding = {
-    parameter = #(_𝒂: %Element($"Finite sequences"(S = {S}))),
+    parameter = #(𝒂: %Element($"Finite sequences"(S = {S}))),
     target = %structuralCases(
-      _𝒂,
+      𝒂,
       $"Finite sequences"(S = {S}),
       [{
         constructor = $"Finite sequences".sequence,

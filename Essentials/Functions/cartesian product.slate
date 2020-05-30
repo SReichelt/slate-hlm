@@ -31,12 +31,12 @@ $"cartesian product"(
         T = {Y}
       )}
     ).function(x = {
-      #(_z: %Element($../Sets/"Cartesian product"(
+      #(z: %Element($../Sets/"Cartesian product"(
         S = {V},
         T = {X}
       ))),
       {y = {%structuralCases(
-        _z,
+        z,
         $../Sets/"Cartesian product"(
           S = {V},
           T = {X}

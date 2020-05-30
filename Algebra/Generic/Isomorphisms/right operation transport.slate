@@ -45,12 +45,12 @@ $"right operation transport"(
             )},
             Y = {Y}
           ).function(x = {
-            parameter = #(_y: %Element($../../../Essentials/Sets/"Cartesian product"(
+            parameter = #(y: %Element($../../../Essentials/Sets/"Cartesian product"(
               S = {Y},
               T = {S}
             ))),
             arguments = {y = {%structuralCases(
-              _y,
+              y,
               $../../../Essentials/Sets/"Cartesian product"(
                 S = {Y},
                 T = {S}

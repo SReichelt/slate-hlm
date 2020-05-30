@@ -56,12 +56,12 @@ $"morphism transport"(
             )},
             Y = {Y_3}
           ).function(x = {
-            parameter = #(_y: %Element($../../../Essentials/Sets/"Cartesian product"(
+            parameter = #(y: %Element($../../../Essentials/Sets/"Cartesian product"(
               S = {Y_1},
               T = {Y_2}
             ))),
             arguments = {y = {%structuralCases(
-              _y,
+              y,
               $../../../Essentials/Sets/"Cartesian product"(
                 S = {Y_1},
                 T = {Y_2}
