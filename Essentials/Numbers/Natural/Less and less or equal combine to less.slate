@@ -12,7 +12,7 @@ $"Less and less or equal combine to less"(
     n = {b}
   )),
   _2: %Constraint($"less or equal"(
-    m = {b},
+    m = {%associative(b)},
     n = {c}
   ))
 ): %StandardTheorem {

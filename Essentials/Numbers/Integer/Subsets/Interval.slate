@@ -17,7 +17,7 @@ $Interval(
         b = {c}
       ),
       $../"less or equal"(
-        a = {c},
+        a = {%associative(c)},
         b = {b}
       )
     )
