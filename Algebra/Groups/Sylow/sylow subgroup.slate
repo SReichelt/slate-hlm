@@ -1,0 +1,50 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Sylow_theorems
+ *             * https://mathworld.wolfram.com/Sylowp-Subgroup.html
+ *             * https://proofwiki.org/wiki/Definition:Sylow_p-Subgroup
+ *             * https://ncatlab.org/nlab/show/Sylow+p-subgroup
+ */
+$"sylow subgroup"(
+  𝐆: %Element($../Groups),
+  H: %Subset($../Carrier(𝐆 = {𝐆})),
+  p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers")
+): %Predicate {
+  notation = $NounRelation(
+    operands = [H, 𝐆],
+    singular = [
+      'Sylow ',
+      $DependentWord(
+        word = 'subgroup',
+        argument = p
+      )
+    ],
+    plural = [
+      'Sylow ',
+      $DependentWord(
+        word = 'subgroups',
+        argument = p
+      )
+    ]
+  ),
+  definition = [%and(
+    $../Order/"P-Groups"/"p-subgroup"(
+      𝐆 = {𝐆},
+      H = {H},
+      p = {p}
+    ),
+    %forall(
+      #(
+        I: %Subset($../Carrier(𝐆 = {𝐆})),
+        _1: %Constraint($../Order/"P-Groups"/"p-subgroup"(
+          𝐆 = {𝐆},
+          H = {I},
+          p = {p}
+        )),
+        _1: %Constraint(%sub(H, I))
+      ),
+      %setEquals(H, I)
+    )
+  )]
+}

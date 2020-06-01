@@ -49,6 +49,10 @@ $Cardinal: %Section {
     %item(
       $"Continuum is uncountable",
       type = 'corollary'
+    ),
+    %subsection(
+      $"Iterated operators",
+      'Iterated operators'
     )
   ]
 }

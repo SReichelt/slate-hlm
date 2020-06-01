@@ -16,6 +16,17 @@ $Prime: %Section {
       type = 'theorem',
       title = 'Euclid\'s theorem'
     ),
-    %item($"Prime and power divisibility criterion")
+    %item($"Prime and power divisibility criterion"),
+    %item($multiplicity),
+    %item(
+      $"Prime factorization",
+      type = 'theorem',
+      title = 'Prime factorization'
+    ),
+    %item(
+      $"Fundamental theorem of arithmetic",
+      type = 'theorem',
+      title = 'Fundametal theorem of arithmetic'
+    )
   ]
 }

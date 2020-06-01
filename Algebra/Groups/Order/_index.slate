@@ -5,9 +5,10 @@ $Order: %Section {
   items = [
     %item($"group order"),
     %item($finite),
-    %item($"Groups with order"),
-    %item($"number of groups with order"),
-    %item($"Number of small groups"),
+    %subsection(
+      $"Number of groups",
+      'Number of groups'
+    ),
     %item($"element order"),
     %item(
       $"Lagranges theorem",
@@ -17,6 +18,10 @@ $Order: %Section {
     %item(
       $"Lagranges corollary",
       type = 'corollary'
+    ),
+    %subsection(
+      $"P-Groups",
+      'p-groups'
     )
   ]
 }

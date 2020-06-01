@@ -31,6 +31,10 @@ $Sets: %Section {
     %subsection(
       $Choice,
       'Choice functions and axioms'
+    ),
+    %subsection(
+      $Multisets,
+      'Multisets'
     )
   ]
 }

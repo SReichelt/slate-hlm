@@ -1,0 +1,22 @@
+%../../../../../../logics/hlm%
+
+$"generalized product"(
+  I: %Set,
+  i: %Binding(
+    I,
+    #(κ: %Element($../"Cardinal numbers"))
+  )
+): %ExplicitOperator {
+  notation = $LargeOperator(
+    symbol = '∏',
+    operand = κ,
+    under = $ElementRelation(operands = [i, I])
+  ),
+  definition = [$../"Cardinal numbers".cardinality(S = {$../../../Sets/"Generalized cartesian product"(
+    I = {I},
+    i = {
+      #(j: %Element(I)),
+      {S = {$../Carrier(κ = {κ[j]})}}
+    }
+  )})]
+}

@@ -1,0 +1,27 @@
+%../../../../../logics/hlm%
+
+$multiplicity(
+  S: %Set(auto = %true),
+  𝑻: %Element($Multisets(S = {S})),
+  t: %Element(S)
+): %ExplicitOperator {
+  notation = $Function(
+    function = $SubSup(
+      body = 'mult',
+      sub = 𝑻
+    ),
+    arguments = [t]
+  ),
+  definition = [%structuralCases(
+    𝑻,
+    $Multisets(S = {S}),
+    [{
+      constructor = $Multisets.multiset,
+      parameters = #(s: %Binding(
+        S,
+        #(m: %Element($../../Numbers/Natural/"Natural numbers"))
+      )),
+      value = m[t]
+    }]
+  )]
+}

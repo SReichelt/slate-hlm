@@ -1,0 +1,54 @@
+%../../../../../logics/hlm%
+
+/**
+ * @remarks Note that we only formalize multi-subsets of a given set `S`. Arbitrary multisets cannot be defined because there is no suitable notion of equality.
+ *
+ * @references * https://en.wikipedia.org/wiki/Multiset
+ *             * https://mathworld.wolfram.com/Multiset.html
+ *             * https://proofwiki.org/wiki/Definition:Multiset
+ *             * https://ncatlab.org/nlab/show/multiset
+ *             * https://coq.inria.fr/library/Coq.Sets.Multiset.html
+ *             * https://leanprover-community.github.io/mathlib_docs/data/multiset.html#multiset
+ */
+$Multisets(S: %Set): %Construction {
+  $multiset(s: %Binding(
+    S,
+    #(m: %Element($../../Numbers/Natural/"Natural numbers"))
+  )): %Constructor {
+    notation = $Set(body = $SubSup(
+      body = s,
+      sup = m
+    )),
+    equalityDefinition = {
+      leftParameters = #(s: %Binding(
+        S,
+        #(m: %Element($../../Numbers/Natural/"Natural numbers"))
+      )),
+      rightParameters = #(s: %Binding(
+        S,
+        #("m'": %Element($../../Numbers/Natural/"Natural numbers"))
+      )),
+      definition = [%forall(
+        #(s: %Element(S)),
+        %equals(m[s], "m'"[s])
+      )],
+      isomorphic = %true
+    }
+  }
+
+  notation = $Function(
+    function = '𝓜𝓾𝓵𝓽𝓲𝓢𝓮𝓽',
+    arguments = [S]
+  ),
+  definitionNotation = {
+    parameter = #(𝑻: %Expr),
+    singularName = $DependentWord(
+      word = 'multiset',
+      argument = S
+    ),
+    pluralName = $DependentWord(
+      word = 'multisets',
+      argument = S
+    )
+  }
+}

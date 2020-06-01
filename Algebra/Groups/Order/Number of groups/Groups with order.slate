@@ -1,10 +1,10 @@
-%../../../../../logics/hlm%
+%../../../../../../logics/hlm%
 
 /**
  * @remarks This is the set of all isomorphism classes of groups of order `κ`. (Note that all collections satisfying certain non-circularity rules are sets in HLM.)
  */
-$"Groups with order"(κ: %Element($../../../Essentials/Numbers/Cardinal/"Cardinal numbers")): %SetOperator {
-  notation = $SubSup(
+$"Groups with order"(κ: %Element($../../../../Essentials/Numbers/Cardinal/"Cardinal numbers")): %SetOperator {
+  notation = $../SubSup(
     body = '𝓖𝓻𝓹',
     sub = κ
   ),
@@ -14,9 +14,9 @@ $"Groups with order"(κ: %Element($../../../Essentials/Numbers/Cardinal/"Cardina
     pluralName = ['groups of order', ' ', κ]
   },
   definition = [%subset(
-    #(𝐆: %Element($../Groups)),
+    #(𝐆: %Element($../../Groups)),
     %equals(
-      $"group order"(𝐆 = {𝐆}),
+      $../"group order"(𝐆 = {𝐆}),
       κ
     )
   )]

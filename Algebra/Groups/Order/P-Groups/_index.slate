@@ -1,0 +1,10 @@
+%../../../../../../logics/library%
+
+$"P-Groups": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"p-element"),
+    %item($"p-group"),
+    %item($"p-subgroup")
+  ]
+}

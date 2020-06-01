@@ -1,0 +1,29 @@
+%../../../../../logics/hlm%
+
+$Set(
+  S: %Set(auto = %true),
+  𝑻: %Element($Multisets(S = {S}))
+): %SetOperator {
+  notation = $Function(
+    function = 'Set',
+    arguments = [𝑻]
+  ),
+  definitionNotation = {
+    parameter = #(t: %Expr),
+    notation = $ElementParameter(
+      variable = t,
+      set = 𝑻
+    )
+  },
+  definition = [%subset(
+    #(s: %Element(S)),
+    %not(%equals(
+      $multiplicity(
+        S = {S},
+        𝑻 = {𝑻},
+        t = {s}
+      ),
+      $../../Numbers/Natural/number(value = 0)
+    ))
+  )]
+}

@@ -1,0 +1,33 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @remarks This weaker but perhaps more useful version of the fundamental theorem of arithmetic simply states that each number can be written as the product of its prime divisors raised to their multiplicity (which is 0 for all primes that are not prime factors).
+ *
+ *          Therefore, it yields the prime factorization of `n`. However, it does not state that no other prime factorization exists. This strengthened version is stated in the following theorem.
+ *
+ * @references * https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic
+ *             * https://mathworld.wolfram.com/FundamentalTheoremofArithmetic.html
+ *             * https://proofwiki.org/wiki/Fundamental_Theorem_of_Arithmetic
+ *             * https://ncatlab.org/nlab/show/fundamental+theorem+of+arithmetic
+ *             * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.factors
+ */
+$"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTheorem {
+  claim = %equals(
+    n,
+    $../../../Functions/Operations/"Iterated operations"/"indexed by set with finite support"(
+      X = {$../"Natural numbers"},
+      ⨂ = {$../"Iterated operators"/"iterated product"},
+      I = {$"Prime numbers"},
+      i = {
+        #(p: %Element($"Prime numbers")),
+        {a = {$../power(
+          m = {p},
+          n = {$multiplicity(
+            n = {n},
+            p = {p}
+          )}
+        )}}
+      }
+    )
+  )
+}

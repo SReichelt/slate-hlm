@@ -1,0 +1,28 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @example `$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Cardinal numbers"}, ⨂ = {$"iterated product"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
+ *
+ * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_pi_notation
+ *             * https://mathworld.wolfram.com/Product.html
+ *             * https://proofwiki.org/wiki/Definition:Product_Notation_(Algebra)
+ */
+$"iterated product": %ExplicitOperator {
+  notation = '∏',
+  definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../"Cardinal numbers"}).operation(
+      ∗ = {$../../../Functions/Operations/operator(
+        X = {$../"Cardinal numbers"},
+        Y = {$../"Cardinal numbers"},
+        Z = {$../"Cardinal numbers"},
+        parameters = #(
+          κ: %Element($../"Cardinal numbers"),
+          μ: %Element(%previous)
+        ),
+        operator = $../product(
+          κ = {κ},
+          μ = {μ}
+        )
+      )},
+      e = {$../../Natural/number(value = 1)}
+  )]
+}

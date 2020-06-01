@@ -1,4 +1,4 @@
-%../../../../../logics/hlm%
+%../../../../../../logics/hlm%
 
 /**
  * @references * https://en.wikipedia.org/wiki/Finite_group#Number_of_groups_of_a_given_order
@@ -6,19 +6,19 @@
  *             * https://www.math.auckland.ac.nz/~obrien/research/gnu.pdf
  */
 $"Number of small groups": %StandardTheorem {
-  claim = $../../../Essentials/Sequences/"starts with"(
-    S = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
-    𝐚 = {$../../../Essentials/Sequences/"sequence from function"(
-      S = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
-      f = {$../../../Essentials/Functions/operator(
-        X = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
-        Y = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
-        parameter = #(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
+  claim = $../../../../Essentials/Sequences/"starts with"(
+    S = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
+    𝐚 = {$../../../../Essentials/Sequences/"sequence from function"(
+      S = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
+      f = {$../../../../Essentials/Functions/operator(
+        X = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
+        Y = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
+        parameter = #(n: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
         operator = $"number of groups with order"(n = {n})
       )}
     )},
-    n = {$../../../Essentials/Numbers/Natural/number(value = 2048)},
-    𝐛 = {$../../../Essentials/Numbers/Natural/Sequences/"tuple of numbers"(items = [
+    n = {$../../../../Essentials/Numbers/Natural/number(value = 2048)},
+    𝐛 = {$../../../../Essentials/Numbers/Natural/Sequences/"tuple of numbers"(items = [
       0, 1, 1, 1, 2, 1, 2, 1, 5, 2,
       2, 1, 5, 1, 2, 1, 14, 1, 5, 1,
       5, 2, 2, 1, 15, 2, 2, 5, 4, 1,

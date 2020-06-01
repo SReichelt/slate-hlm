@@ -1,0 +1,14 @@
+%../../../../../logics/library%
+
+$Multisets: %Section {
+  logic = 'hlm',
+  items = [
+    %item($Multisets),
+    %item($multiplicity),
+    %item($Set),
+    %item($Items),
+    %item($Elements),
+    %item($finite),
+    %item($cardinality)
+  ]
+}

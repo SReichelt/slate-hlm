@@ -1,0 +1,10 @@
+%../../../../../../logics/library%
+
+$"Number of groups": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"Groups with order"),
+    %item($"number of groups with order"),
+    %item($"Number of small groups")
+  ]
+}

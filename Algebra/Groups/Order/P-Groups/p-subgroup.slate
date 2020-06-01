@@ -1,0 +1,32 @@
+%../../../../../../logics/hlm%
+
+$"p-subgroup"(
+  𝐆: %Element($../../Groups),
+  H: %Subset($../../Carrier(𝐆 = {𝐆})),
+  p: %Element($../../../../Essentials/Numbers/Natural/Prime/"Prime numbers")
+): %Predicate {
+  notation = $NounRelation(
+    operands = [H, 𝐆],
+    singular = $DependentWord(
+      word = 'subgroup',
+      argument = p
+    ),
+    plural = $DependentWord(
+      word = 'subgroups',
+      argument = p
+    )
+  ),
+  definition = [%and(
+    $../../Subgroups/"subgroup set"(
+      𝐆 = {𝐆},
+      S = {H}
+    ),
+    $"p-group"(
+      𝐆 = {$../../Subgroups/"subset group"(
+        𝐆 = {𝐆},
+        S = {H}
+      )},
+      p = {p}
+    )
+  )]
+}

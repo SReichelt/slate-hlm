@@ -1,0 +1,32 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/P-group
+ *             * https://mathworld.wolfram.com/p-Group.html
+ *             * https://proofwiki.org/wiki/Definition:P-Group
+ *             * https://ncatlab.org/nlab/show/p-primary+group
+ */
+$"p-group"(
+  𝐆: %Element($../../Groups),
+  p: %Element($../../../../Essentials/Numbers/Natural/Prime/"Prime numbers")
+): %Predicate {
+  notation = $NounProperty(
+    operand = 𝐆,
+    singular = $DependentWord(
+      word = 'group',
+      argument = p
+    ),
+    plural = $DependentWord(
+      word = 'groups',
+      argument = p
+    )
+  ),
+  definition = [%forall(
+    #(g: %Element($../../Carrier(𝐆 = {𝐆}))),
+    $"p-element"(
+      𝐆 = {𝐆},
+      g = {g},
+      p = {p}
+    )
+  )]
+}

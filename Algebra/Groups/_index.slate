@@ -30,10 +30,14 @@ $Groups: %Section {
       $Examples,
       'Examples'
     ),
+    %item($"iterated operation"),
     %subsection(
       $Order,
       'Order'
     ),
-    %item($"iterated operation")
+    %subsection(
+      $Sylow,
+      'Sylow theorems'
+    )
   ]
 }

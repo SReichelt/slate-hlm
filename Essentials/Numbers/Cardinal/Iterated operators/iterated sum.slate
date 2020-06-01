@@ -1,0 +1,28 @@
+%../../../../../../logics/hlm%
+
+/**
+ * @example `$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Cardinal numbers"}, ⨂ = {$"iterated sum"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
+ *
+ * @references * https://en.wikipedia.org/wiki/Summation
+ *             * https://mathworld.wolfram.com/Sum.html
+ *             * https://proofwiki.org/wiki/Definition:Summation
+ */
+$"iterated sum": %ExplicitOperator {
+  notation = '∑',
+  definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../"Cardinal numbers"}).operation(
+      ∗ = {$../../../Functions/Operations/operator(
+        X = {$../"Cardinal numbers"},
+        Y = {$../"Cardinal numbers"},
+        Z = {$../"Cardinal numbers"},
+        parameters = #(
+          κ: %Element($../"Cardinal numbers"),
+          μ: %Element(%previous)
+        ),
+        operator = $../sum(
+          κ = {κ},
+          μ = {μ}
+        )
+      )},
+      e = {$../../Natural/number(value = 0)}
+  )]
+}

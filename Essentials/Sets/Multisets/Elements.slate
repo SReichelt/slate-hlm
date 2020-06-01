@@ -1,0 +1,45 @@
+%../../../../../logics/hlm%
+
+$Elements(
+  S: %Set(auto = %true),
+  𝑻: %Element($Multisets(S = {S}))
+): %SetOperator {
+  notation = $Function(
+    function = 'Elems',
+    arguments = [𝑻]
+  ),
+  definition = [
+    %extendedSubset(
+      #(
+        t: %Element(S),
+        n: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {$multiplicity(
+          S = {S},
+          𝑻 = {𝑻},
+          t = {t}
+        )}))
+      ),
+      $../"Cartesian product"(
+          S = {S},
+          T = {$../../Numbers/Natural/"Natural numbers"}
+        ).pair(
+          s = {t},
+          t = {n}
+      )
+    ),
+    $../"Generalized union"(
+      U = {$../"Cartesian product"(
+        S = {S},
+        T = {$../../Numbers/Natural/"Natural numbers"}
+      )},
+      I = {S},
+      i = {
+        #(t: %Element(S)),
+        {S = {$Items(
+          S = {S},
+          𝑻 = {𝑻},
+          t = {t}
+        )}}
+      }
+    )
+  ]
+}
