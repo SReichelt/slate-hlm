@@ -1,4 +1,4 @@
-%../../../../logics/hlm%
+%../../../../../logics/hlm%
 
 /**
  * @remarks Similarly to the definition of the intersection of two sets, we have to specify a common superset `U` for all sets. As a side effect, `I` is allowed to be empty, in which case the result is simply `U`.

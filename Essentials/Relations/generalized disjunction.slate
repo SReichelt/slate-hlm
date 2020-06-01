@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition is the equivalent of `$../Sets/"Generalized union using power set"(U = {$../Sets/"Cartesian product"(S = {S}, T = {T})}, S = {R})` (if relations were encoded as subsets).
+ * @remarks This definition is the equivalent of `$../Sets/"Generalized operators"/"Generalized union using power set"(U = {$../Sets/"Cartesian product"(S = {S}, T = {T})}, S = {R})` (if relations were encoded as subsets).
  */
 $"generalized disjunction"(
   S: %Set(auto = %true),

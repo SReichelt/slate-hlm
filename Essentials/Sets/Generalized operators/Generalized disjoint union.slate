@@ -1,0 +1,62 @@
+%../../../../../logics/hlm%
+
+/**
+ * @remarks In HLM, the disjoint union additionally needs to be equipped with a "dependent equality" `≃` that allows us to ask whether `%equals(s, t)` given `%equals(j, k)`.
+ *
+ * @references * https://en.wikipedia.org/wiki/Disjoint_union#Set_theory_definition
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#sigma
+ */
+$"Generalized disjoint union"(
+  I: %Set,
+  i: %Binding(
+    I,
+    #(S: %Set(auto = %true))
+  ),
+  ≃: %Element($../../Relations/"Dependent equality"/"Dependent equality"(
+    I = {I},
+    i = {
+      #(i: %Element(I)),
+      {S = {S[i]}}
+    }
+  ))
+): %Construction {
+  $"dependent pair"(
+    j: %Element(I),
+    s: %Element(S[j])
+  ): %Constructor {
+    notation = $Tuple(items = [j, s]),
+    equalityDefinition = {
+      leftParameters = #(
+        j: %Element(I),
+        s: %Element(S[j])
+      ),
+      rightParameters = #(
+        k: %Element(I),
+        t: %Element(S[k])
+      ),
+      definition = [%and(
+        %equals(j, k),
+        $../../Relations/"Dependent equality"/"dependently equal"(
+          I = {I},
+          i = {
+            #(k: %Element(I)),
+            {S = {S[k]}}
+          },
+          ≃ = {≃},
+          a = {j},
+          b = {k},
+          s = {s},
+          t = {t}
+        )
+      )],
+      isomorphic = %true
+    }
+  }
+
+  notation = $LargeOperator(
+    symbol = '⨄',
+    operand = S,
+    over = ≃,
+    under = $ElementRelation(operands = [i, I])
+  )
+}

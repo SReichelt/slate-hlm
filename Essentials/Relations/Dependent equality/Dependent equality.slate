@@ -1,0 +1,149 @@
+%../../../../../logics/hlm%
+
+/**
+ * @remarks This somewhat technical construction exposes the equality relation on `S[i]` in such a way that it becomes possible to ask whether `%equals(s, t)` for `%in(s, S[a])` and `%in(t, S[b])` whenever a `%equals(a, b)`.
+ *
+ *          It might seem that asking whether `%equals(s, t)` should simply be allowed in this case, but the type system of HLM restricts it to the case when `a` and `b` are literally the same expression. If `%equals(a, b)` is given as a proposition, the equality can carry information that needs to be transported from `I` to `S`.
+ *
+ *          E.g. in category theory, `I` may be a set of objects (which are equal whenever they are isomorphic), and `S[i]` may be a set of morphisms from or to `i`. To check whether two of these morphisms are equal, one of them first needs to be composed with a specific isomorphism.
+ *
+ *          Dependent equality is a prerequisite to formalizing arbitrary disjoint unions (see `$../../Sets/"Generalized operators"/"Generalized disjoint union"`).
+ *
+ *          Once GitHub issue [#65](https://github.com/SReichelt/slate/issues/65) is resolved, `%equals(a, b)` should be added as a condition on `≡`.
+ */
+$"Dependent equality"(
+  I: %Set,
+  i: %Binding(
+    I,
+    #(S: %Set)
+  )
+): %Construction {
+  $equality(
+    a: %Binding(
+      I,
+      #(b: %Binding(
+        %previous,
+        #(≡: %Element($../Relations(
+          S = {S[a]},
+          T = {S[b]}
+        )))
+      ))
+    ),
+    _1: %Constraint(%forall(
+      #(i: %Element(I)),
+      %equals(
+        ≡[i,i],
+        $../equality(S = {S[i]})
+      )
+    ))
+  ): %Constructor {
+    notation = $SubSup(
+      body = $Parens(
+        body = ≡,
+        style = '()'
+      ),
+      sub = $EqualityRelation(operands = [a, b]),
+      sup = $SubSup(
+        body = $Parens(
+          body = S,
+          style = '()'
+        ),
+        sub = $ElementParameter(
+          variable = i,
+          set = I
+        )
+      )
+    ),
+    equalityDefinition = {
+      leftParameters = #(
+        a: %Binding(
+          I,
+          #(b: %Binding(
+            %previous,
+            #(≡: %Element($../Relations(
+              S = {S[a]},
+              T = {S[b]}
+            )))
+          ))
+        ),
+        _1: %Constraint(%forall(
+          #(i: %Element(I)),
+          %equals(
+            ≡[i,i],
+            $../equality(S = {S[i]})
+          )
+        ))
+      ),
+      rightParameters = #(
+        a: %Binding(
+          I,
+          #(b: %Binding(
+            %previous,
+            #("≡'": %Element($../Relations(
+              S = {S[a]},
+              T = {S[b]}
+            )))
+          ))
+        ),
+        _1: %Constraint(%forall(
+          #(i: %Element(I)),
+          %equals(
+            "≡'"[i,i],
+            $../equality(S = {S[i]})
+          )
+        ))
+      ),
+      definition = [%forall(
+        #(
+          a: %Element(I),
+          b: %Element(%previous)
+        ),
+        %equals(≡[a,b], "≡'"[a,b])
+      )],
+      isomorphic = %true
+    }
+  }
+
+  notation = $Function(
+    function = '𝓓𝓮𝓹𝓔𝓺',
+    arguments = [$SubSup(
+      body = $Parens(
+        body = S,
+        style = '()'
+      ),
+      sub = $ElementParameter(
+        variable = i,
+        set = I
+      )
+    )]
+  ),
+  definitionNotation = {
+    parameter = #(≃: %Expr),
+    singularName = [
+      'dependent equality',
+      ' on ',
+      S,
+      ' ',
+      $Parens(
+        body = $ElementParameter(
+          variable = i,
+          set = I
+        ),
+        style = '()'
+      )
+    ],
+    pluralName = [
+      'dependent equalities',
+      ' on ',
+      S,
+      ' ',
+      $Parens(
+        body = $ElementParameter(
+          variable = i,
+          set = I
+        ),
+        style = '()'
+      )
+    ]
+  }
+}

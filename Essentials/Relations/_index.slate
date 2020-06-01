@@ -49,6 +49,10 @@ $Relations: %Section {
     %subsection(
       $Closures,
       'Closures'
+    ),
+    %subsection(
+      $"Dependent equality",
+      'Dependent equality'
     )
   ]
 }

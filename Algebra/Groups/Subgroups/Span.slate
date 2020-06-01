@@ -17,7 +17,7 @@ $Span(
     body = X,
     style = '<>'
   ),
-  definition = [$../../../Essentials/Sets/"Generalized intersection using power set"(
+  definition = [$../../../Essentials/Sets/"Generalized operators"/"Generalized intersection using power set"(
     U = {$../Carrier(𝐆 = {𝐆})},
     S = {%subset(
       #(s: %Element($../../../Essentials/Sets/"Power set"(S = {$../Carrier(𝐆 = {𝐆})}))),

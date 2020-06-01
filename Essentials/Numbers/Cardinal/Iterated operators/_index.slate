@@ -4,6 +4,7 @@ $"Iterated operators": %Section {
   logic = 'hlm',
   items = [
     %item($"iterated sum"),
+    %item($"generalized sum"),
     %item($"iterated product"),
     %item($"generalized product")
   ]

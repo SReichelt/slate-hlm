@@ -14,7 +14,7 @@ $"element transport"(
   )),
   x: %Element(X)
 ): %ExplicitOperator {
-  notation = $../../Isomorphisms/Function(
+  notation = $Function(
     function = φ,
     arguments = [x],
     style = '[]'

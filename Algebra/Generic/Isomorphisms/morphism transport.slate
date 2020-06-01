@@ -25,7 +25,7 @@ $"morphism transport"(
     Z = {X_3}
   ))
 ): %ExplicitOperator {
-  notation = $../../Isomorphisms/Function(
+  notation = $Function(
     function = $../../Isomorphisms/Tuple(items = [φ_1, φ_2, φ_3]),
     arguments = [∙],
     style = '[]'

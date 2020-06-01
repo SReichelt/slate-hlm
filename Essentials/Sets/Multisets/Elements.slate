@@ -26,7 +26,7 @@ $Elements(
           t = {n}
       )
     ),
-    $../"Generalized union"(
+    $../"Generalized operators"/"Generalized union"(
       U = {$../"Cartesian product"(
         S = {S},
         T = {$../../Numbers/Natural/"Natural numbers"}

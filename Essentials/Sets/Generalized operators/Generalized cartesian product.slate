@@ -1,4 +1,4 @@
-%../../../../logics/hlm%
+%../../../../../logics/hlm%
 
 /**
  * @remarks The generalized Cartesian product over an index set can be constructed in HLM via its integrated bound variable concept. It is essentially the same as a set of dependent functions.
@@ -32,11 +32,11 @@ $"Generalized cartesian product"(
       )),
       rightParameters = #(j: %Binding(
         I,
-        #("s'": %Element(S[j]))
+        #(t: %Element(S[j]))
       )),
       definition = [%forall(
         #(j: %Element(I)),
-        %equals(s[j], "s'"[j])
+        %equals(s[j], t[j])
       )],
       isomorphic = %true
     }

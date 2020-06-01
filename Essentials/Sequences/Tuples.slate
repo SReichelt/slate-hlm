@@ -5,7 +5,7 @@
  *
  *          We could define tuples simply as functions, but a custom construction has several advantages, including the ability to easily destruct a tuple into its elements, and the ability to omit `S` from the constructor.
  *
- *          In this definition, the codomain is a fixed set `S`. If each item is an element of a different set, a generalized Cartesian product `$../Sets/"Generalized cartesian product"` can be used instead.
+ *          In this definition, the codomain is a fixed set `S`. If each item is an element of a different set, a generalized Cartesian product `$../Sets/"Generalized operators"/"Generalized cartesian product"` can be used instead.
  *
  * @references * https://en.wikipedia.org/wiki/Tuple
  *             * https://mathworld.wolfram.com/n-Tuple.html

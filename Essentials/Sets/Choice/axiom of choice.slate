@@ -3,7 +3,7 @@
 /**
  * @remarks This is the simplest formulation of the axiom of choice that can be formalized in HLM. The standard formulation is not directly applicable because an indexed family of arbitrary sets cannot be defined as an object – there is no suitable equality definition.
  *
- *          It is possible to state, as a theorem, that AC implies that the Cartesian product `$../"Generalized cartesian product"` of any family of nonempty sets is nonempty. However, whether this is provable in HLM remains to be investigated. The equivalence with Zorn's lemma and the well-ordering theorem is likely to hold.
+ *          It is possible to state, as a theorem, that AC implies that the Cartesian product `$../"Generalized operators"/"Generalized cartesian product"` of any family of nonempty sets is nonempty. However, whether this is provable in HLM remains to be investigated. The equivalence with Zorn's lemma and the well-ordering theorem is likely to hold.
  *
  *          HLM actually does not have "axioms" as a concept; an axiom is simply a predicate. Thus, at the moment, every theorem (or definition) that requires the axiom of choice (or a weaker form) must be prefixed accordingly:
  *          * The simplest solution is to add "assume AC" as a condition. However, this condition will likely propagate to all dependent results, even if the axiom of choice is not needed in particular cases.

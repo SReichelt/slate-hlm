@@ -14,7 +14,7 @@ $"right operation transport"(
     Z = {X}
   ))
 ): %ExplicitOperator {
-  notation = $../../Isomorphisms/Function(
+  notation = $Function(
     function = φ,
     arguments = [∗],
     style = '[]'

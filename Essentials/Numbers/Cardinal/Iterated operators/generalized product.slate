@@ -1,5 +1,8 @@
 %../../../../../../logics/hlm%
 
+/**
+ * @remarks In contrast to the previous definition, this definition works for arbitrary index sets `I`, using the generalized Cartesian product to multiply cardinal numbers.
+ */
 $"generalized product"(
   I: %Set,
   i: %Binding(
@@ -12,7 +15,7 @@ $"generalized product"(
     operand = κ,
     under = $ElementRelation(operands = [i, I])
   ),
-  definition = [$../"Cardinal numbers".cardinality(S = {$../../../Sets/"Generalized cartesian product"(
+  definition = [$../"Cardinal numbers".cardinality(S = {$../../../Sets/"Generalized operators"/"Generalized cartesian product"(
     I = {I},
     i = {
       #(j: %Element(I)),

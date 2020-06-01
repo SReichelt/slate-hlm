@@ -1,0 +1,9 @@
+%../../../../../logics/library%
+
+$"Dependent equality": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"Dependent equality"),
+    %item($"dependently equal")
+  ]
+}

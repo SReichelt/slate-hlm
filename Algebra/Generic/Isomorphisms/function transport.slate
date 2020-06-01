@@ -12,7 +12,7 @@ $"function transport"(
     Y = {X}
   ))
 ): %ExplicitOperator {
-  notation = $../../Isomorphisms/Function(
+  notation = $Function(
     function = φ,
     arguments = [f],
     style = '[]'
