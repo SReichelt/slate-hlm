@@ -9,6 +9,10 @@ $finite(
     property = %neg('finite', 'infinite')
   ),
   definition = [
+    $../../Numbers/Cardinal/finite(κ = {$cardinality(
+      S = {S},
+      𝑻 = {𝑻}
+    )}),
     $../finite(S = {$Elements(
       S = {S},
       𝑻 = {𝑻}

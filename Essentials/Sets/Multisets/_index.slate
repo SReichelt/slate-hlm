@@ -8,7 +8,7 @@ $Multisets: %Section {
     %item($Set),
     %item($Items),
     %item($Elements),
-    %item($finite),
-    %item($cardinality)
+    %item($cardinality),
+    %item($finite)
   ]
 }

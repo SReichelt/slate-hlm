@@ -3,6 +3,8 @@
 /**
  * @remarks Note that we only formalize multi-subsets of a given set `S`. Arbitrary multisets cannot be defined because there is no suitable notion of equality.
  *
+ *          A multi-subset of `S` is essentially the same as a function from `S` to `$../../Numbers/Natural/"Natural numbers"`.
+ *
  * @references * https://en.wikipedia.org/wiki/Multiset
  *             * https://mathworld.wolfram.com/Multiset.html
  *             * https://proofwiki.org/wiki/Definition:Multiset
