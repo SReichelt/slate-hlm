@@ -1,0 +1,15 @@
+%../../../../../../logics/hlm%
+
+$"prime factors"(n: %Element($../"Natural numbers")): %ExplicitOperator {
+  notation = $Function(
+    function = 'PrimeFactors',
+    arguments = [n]
+  ),
+  definition = [$../../../Sets/Multisets/Multisets(S = {$"Prime numbers"}).multiset(s = {
+      #(p: %Element($"Prime numbers")),
+      {m = {$multiplicity(
+        n = {n},
+        p = {p}
+      )}}
+  })]
+}

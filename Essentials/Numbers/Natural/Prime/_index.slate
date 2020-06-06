@@ -18,6 +18,7 @@ $Prime: %Section {
     ),
     %item($"Prime and power divisibility criterion"),
     %item($multiplicity),
+    %item($"prime factors"),
     %item(
       $"Prime factorization",
       type = 'theorem',
