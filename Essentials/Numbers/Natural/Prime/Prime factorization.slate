@@ -29,18 +29,18 @@ $"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTh
         )}}
       }
     ),
-      $../../../Functions/Operations/"Iterated operations"/"indexed by finite multiset"(
-        X = {$../"Natural numbers"},
-        ⨂ = {$../"Iterated operators"/"iterated product"},
-        S = {$"Prime numbers"},
-        𝑰 = {$"prime factors"(n = {n})},
-        i = {
-          #(p: %Element($../../../Sets/Multisets/Set(
-            S = {$"Prime numbers"},
-            𝑻 = {$"prime factors"(n = {n})}
-          ))),
-          {a = {p}}
-        }
-      )
+    $../../../Functions/Operations/"Iterated operations"/"indexed by finite multiset"(
+      X = {$../"Natural numbers"},
+      ⨂ = {$../"Iterated operators"/"iterated product"},
+      S = {$"Prime numbers"},
+      𝑰 = {$"prime factors"(n = {n})},
+      i = {
+        #(p: %Element($../../../Sets/Multisets/Set(
+          S = {$"Prime numbers"},
+          𝑻 = {$"prime factors"(n = {n})}
+        ))),
+        {a = {p}}
+      }
+    )
   )
 }

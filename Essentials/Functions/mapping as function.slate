@@ -16,9 +16,12 @@ $"mapping as function"(
     ≺ = {≺}
   ))
 ): %ExplicitOperator {
-  notation = $Parens(
-    body = ≺,
-    style = '()'
+  notation = $SubSup(
+    body = $Parens(
+      body = ≺,
+      style = '()'
+    ),
+    sub = $FunctionOperator(operands = [S, T])
   ),
   definition = [$Functions(
       X = {S},

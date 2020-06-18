@@ -75,6 +75,7 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
             {a = {a[k]}}
         })
       }]
-    )
+    ),
+    full = %true
   }
 }

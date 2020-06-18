@@ -79,6 +79,7 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
             t = {t}
           )}}
         }}
-    })
+    }),
+    full = %true
   }
 }
