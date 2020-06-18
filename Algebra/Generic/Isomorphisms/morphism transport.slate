@@ -33,77 +33,56 @@ $"morphism transport"(
   definition = [
     %structuralCases(
       ∙,
-      $../../../Essentials/Functions/Functions(
-        X = {$../../../Essentials/Sets/"Cartesian product"(
-          S = {X_1},
-          T = {X_2}
-        )},
-        Y = {X_3}
+      $../../../Essentials/Functions/Operations/Operations(
+        X = {X_1},
+        Y = {X_2},
+        Z = {X_3}
       ),
       [{
-        constructor = $../../../Essentials/Functions/Functions.function,
-        parameters = #(x: %Binding(
-          $../../../Essentials/Sets/"Cartesian product"(
-            S = {X_1},
-            T = {X_2}
-          ),
-          #(z: %Element(X_3))
+        constructor = $../../../Essentials/Functions/Operations/Operations.operation,
+        parameters = #(x_1: %Binding(
+          X_1,
+          #(x_2: %Binding(
+            X_2,
+            #(z: %Element(X_3))
+          ))
         )),
-        value = $../../../Essentials/Functions/Functions(
-            X = {$../../../Essentials/Sets/"Cartesian product"(
-              S = {Y_1},
-              T = {Y_2}
-            )},
-            Y = {Y_3}
-          ).function(x = {
-            parameter = #(y: %Element($../../../Essentials/Sets/"Cartesian product"(
-              S = {Y_1},
-              T = {Y_2}
-            ))),
-            arguments = {y = {%structuralCases(
-              y,
-              $../../../Essentials/Sets/"Cartesian product"(
-                S = {Y_1},
-                T = {Y_2}
-              ),
-              [{
-                constructor = $../../../Essentials/Sets/"Cartesian product".pair,
-                parameters = #(
-                  y_1: %Element(Y_1),
-                  y_2: %Element(Y_2)
-                ),
-                value = $../../../Essentials/Functions/value(
-                  X = {X_3},
-                  Y = {Y_3},
-                  f = {φ_3},
-                  x = {z[$../../../Essentials/Sets/"Cartesian product"(
-                      S = {X_1},
-                      T = {X_2}
-                    ).pair(
-                      s = {$../../../Essentials/Functions/value(
-                        X = {Y_1},
-                        Y = {X_1},
-                        f = {$../../../Essentials/Functions/inverse(
-                          X = {X_1},
-                          Y = {Y_1},
-                          f = {φ_1}
-                        )},
-                        x = {y_1}
-                      )},
-                      t = {$../../../Essentials/Functions/value(
-                        X = {Y_2},
-                        Y = {X_2},
-                        f = {$../../../Essentials/Functions/inverse(
-                          X = {X_2},
-                          Y = {Y_2},
-                          f = {φ_2}
-                        )},
-                        x = {y_2}
-                      )}
-                  )]}
-                )
-              }]
-            )}}
+        value = $../../../Essentials/Functions/Operations/Operations(
+            X = {Y_1},
+            Y = {Y_2},
+            Z = {Y_3}
+          ).operation(x = {
+            parameter = #(y_1: %Element(Y_1)),
+            arguments = {y = {
+              parameter = #(y_2: %Element(Y_2)),
+              arguments = {z = {$../../../Essentials/Functions/value(
+                X = {X_3},
+                Y = {Y_3},
+                f = {φ_3},
+                x = {z[
+                  $../../../Essentials/Functions/value(
+                    X = {Y_1},
+                    Y = {X_1},
+                    f = {$../../../Essentials/Functions/inverse(
+                      X = {X_1},
+                      Y = {Y_1},
+                      f = {φ_1}
+                    )},
+                    x = {y_1}
+                  ),
+                  $../../../Essentials/Functions/value(
+                    X = {Y_2},
+                    Y = {X_2},
+                    f = {$../../../Essentials/Functions/inverse(
+                      X = {X_2},
+                      Y = {Y_2},
+                      f = {φ_2}
+                    )},
+                    x = {y_2}
+                  )
+                ]}
+              )}}
+            }}
         })
       }]
     ),

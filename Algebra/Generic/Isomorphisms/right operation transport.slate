@@ -22,68 +22,47 @@ $"right operation transport"(
   definition = [
     %structuralCases(
       ∗,
-      $../../../Essentials/Functions/Functions(
-        X = {$../../../Essentials/Sets/"Cartesian product"(
-          S = {X},
-          T = {S}
-        )},
-        Y = {X}
+      $../../../Essentials/Functions/Operations/Operations(
+        X = {X},
+        Y = {S},
+        Z = {X}
       ),
       [{
-        constructor = $../../../Essentials/Functions/Functions.function,
+        constructor = $../../../Essentials/Functions/Operations/Operations.operation,
         parameters = #(x: %Binding(
-          $../../../Essentials/Sets/"Cartesian product"(
-            S = {X},
-            T = {S}
-          ),
-          #(z: %Element(X))
+          X,
+          #(s: %Binding(
+            S,
+            #(z: %Element(X))
+          ))
         )),
-        value = $../../../Essentials/Functions/Functions(
-            X = {$../../../Essentials/Sets/"Cartesian product"(
-              S = {Y},
-              T = {S}
-            )},
-            Y = {Y}
-          ).function(x = {
-            parameter = #(y: %Element($../../../Essentials/Sets/"Cartesian product"(
-              S = {Y},
-              T = {S}
-            ))),
-            arguments = {y = {%structuralCases(
-              y,
-              $../../../Essentials/Sets/"Cartesian product"(
-                S = {Y},
-                T = {S}
-              ),
-              [{
-                constructor = $../../../Essentials/Sets/"Cartesian product".pair,
-                parameters = #(
-                  y: %Element(Y),
-                  s: %Element(S)
-                ),
-                value = $../../../Essentials/Functions/value(
-                  X = {X},
-                  Y = {Y},
-                  f = {φ},
-                  x = {z[$../../../Essentials/Sets/"Cartesian product"(
-                      S = {X},
-                      T = {S}
-                    ).pair(
-                      s = {$../../../Essentials/Functions/value(
-                        X = {Y},
-                        Y = {X},
-                        f = {$../../../Essentials/Functions/inverse(
-                          X = {X},
-                          Y = {Y},
-                          f = {φ}
-                        )},
-                        x = {y}
-                      )},
-                      t = {s}
-                  )]}
-                )
-              }]
-            )}}
+        value = $../../../Essentials/Functions/Operations/Operations(
+            X = {Y},
+            Y = {S},
+            Z = {Y}
+          ).operation(x = {
+            parameter = #(y: %Element(Y)),
+            arguments = {y = {
+              parameter = #(s: %Element(S)),
+              arguments = {z = {$../../../Essentials/Functions/value(
+                X = {X},
+                Y = {Y},
+                f = {φ},
+                x = {z[
+                  $../../../Essentials/Functions/value(
+                    X = {Y},
+                    Y = {X},
+                    f = {$../../../Essentials/Functions/inverse(
+                      X = {X},
+                      Y = {Y},
+                      f = {φ}
+                    )},
+                    x = {y}
+                  ),
+                  s
+                ]}
+              )}}
+            }}
         })
       }]
     ),

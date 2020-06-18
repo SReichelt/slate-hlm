@@ -7,7 +7,65 @@ $Operations(
   X: %Set(auto = %true),
   Y: %Set(auto = %true),
   Z: %Set(auto = %true)
-): %SetOperator {
+): %Construction {
+  $operation(x: %Binding(
+    X,
+    #(y: %Binding(
+      Y,
+      #(z: %Element(Z))
+    ))
+  )): %Constructor {
+    notation = $Parens(
+      body = $FunctionBody(
+        domain = $MultiplicationLikeOperator(
+          symbol = '×',
+          operands = [X, Y]
+        ),
+        codomain = Z,
+        parameter = $Tuple(items = [x, y]),
+        value = z
+      ),
+      style = '()'
+    ),
+    definitionNotation = {
+      parameter = #(∗: %Expr),
+      notation = $FunctionDefinition(
+        function = ∗,
+        domain = $MultiplicationLikeOperator(
+          symbol = '×',
+          operands = [X, Y]
+        ),
+        codomain = Z,
+        parameter = $Tuple(items = [x, y]),
+        value = z
+      )
+    },
+    equalityDefinition = {
+      leftParameters = #(x: %Binding(
+        X,
+        #(y: %Binding(
+          Y,
+          #(z: %Element(Z))
+        ))
+      )),
+      rightParameters = #(x: %Binding(
+        X,
+        #(y: %Binding(
+          Y,
+          #("z'": %Element(Z))
+        ))
+      )),
+      definition = [%forall(
+        #(
+          x: %Element(X),
+          y: %Element(Y)
+        ),
+        %equals(z[x,y], "z'"[x,y])
+      )],
+      isomorphic = %true
+    }
+  }
+
   notation = $Function(
     function = '𝓞𝓹',
     arguments = [X, Y, Z]
@@ -28,11 +86,39 @@ $Operations(
     pluralName = 'operations',
     nameOptional = %true
   },
-  definition = [$../Functions(
-    X = {$../../Sets/"Cartesian product"(
-      S = {X},
-      T = {Y}
-    )},
-    Y = {Z}
-  )]
+  embedding = {
+    parameter = #(f: %Element($../Functions(
+      X = {$../../Sets/"Cartesian product"(
+        S = {X},
+        T = {Y}
+      )},
+      Y = {Z}
+    ))),
+    target = $Operations(
+        X = {X},
+        Y = {Y},
+        Z = {Z}
+      ).operation(x = {
+        #(x: %Element(X)),
+        {y = {
+          #(y: %Element(Y)),
+          {z = {$../value(
+            X = {$../../Sets/"Cartesian product"(
+              S = {X},
+              T = {Y}
+            )},
+            Y = {Z},
+            f = {f},
+            x = {$../../Sets/"Cartesian product"(
+                S = {X},
+                T = {Y}
+              ).pair(
+                s = {x},
+                t = {y}
+            )}
+          )}}
+        }}
+    }),
+    full = %true
+  }
 }
