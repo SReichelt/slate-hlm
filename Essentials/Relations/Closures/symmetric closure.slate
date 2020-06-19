@@ -17,10 +17,10 @@ $"symmetric closure"(
       S = {S},
       ≺ = {≺},
       p = {$../../Properties/Properties(S = {$../Endorelations(S = {S})}).property(s = {
-          #(_1: %Element($../Endorelations(S = {S}))),
+          #(≺: %Element($../Endorelations(S = {S}))),
           {p = {$../symmetric(
             S = {S},
-            ≺ = {_1}
+            ≺ = {≺}
           )}}
       })}
     ),
