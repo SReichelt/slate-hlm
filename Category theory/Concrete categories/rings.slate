@@ -33,37 +33,38 @@ $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expli
           #(𝐄: %Element($../../Algebra/Rings/Rings)),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Rings/Rings)),
-            {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                𝐑 = {𝐄},
-                𝐒 = {𝐅}
-              )},
-              Y = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                𝐑 = {𝐃},
-                𝐒 = {𝐄}
-              )},
-              Z = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                𝐑 = {𝐃},
-                𝐒 = {𝐅}
-              )},
-              parameters = #(
-                ψ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
+            {∘ = {$../../Essentials/Functions/Operations/Operations(
+                X = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
                   𝐑 = {𝐄},
                   𝐒 = {𝐅}
-                )),
-                φ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
+                )},
+                Y = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
                   𝐑 = {𝐃},
                   𝐒 = {𝐄}
-                ))
-              ),
-              operator = $../../Essentials/Functions/composition(
-                X = {$../../Algebra/Rings/Carrier(𝐑 = {𝐃})},
-                Y = {$../../Algebra/Rings/Carrier(𝐑 = {𝐄})},
-                Z = {$../../Algebra/Rings/Carrier(𝐑 = {𝐅})},
-                f = {φ},
-                g = {ψ}
-              )
-            )}}
+                )},
+                Z = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
+                  𝐑 = {𝐃},
+                  𝐒 = {𝐅}
+                )}
+              ).operation(x = {
+                #(ψ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
+                  𝐑 = {𝐄},
+                  𝐒 = {𝐅}
+                ))),
+                {y = {
+                  #(φ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
+                    𝐑 = {𝐃},
+                    𝐒 = {𝐄}
+                  ))),
+                  {z = {$../../Essentials/Functions/composition(
+                    X = {$../../Algebra/Rings/Carrier(𝐑 = {𝐃})},
+                    Y = {$../../Algebra/Rings/Carrier(𝐑 = {𝐄})},
+                    Z = {$../../Algebra/Rings/Carrier(𝐑 = {𝐅})},
+                    f = {φ},
+                    g = {ψ}
+                  )}}
+                }}
+            })}}
           }}
         }}
       }

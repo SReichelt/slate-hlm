@@ -44,51 +44,52 @@ $"right modules"(
           #(𝐄: %Element($../../Algebra/Rings/Modules/"Right modules"/"Right modules"(𝐑 = {𝐑}))),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Rings/Modules/"Right modules"/"Right modules"(𝐑 = {𝐑}))),
-            {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
-                𝐑 = {𝐑},
-                𝐌 = {𝐄},
-                𝐍 = {𝐅}
-              )},
-              Y = {$../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
-                𝐑 = {𝐑},
-                𝐌 = {𝐃},
-                𝐍 = {𝐄}
-              )},
-              Z = {$../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
-                𝐑 = {𝐑},
-                𝐌 = {𝐃},
-                𝐍 = {𝐅}
-              )},
-              parameters = #(
-                ψ: %Element($../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
+            {∘ = {$../../Essentials/Functions/Operations/Operations(
+                X = {$../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
                   𝐑 = {𝐑},
                   𝐌 = {𝐄},
                   𝐍 = {𝐅}
-                )),
-                φ: %Element($../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
+                )},
+                Y = {$../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
                   𝐑 = {𝐑},
                   𝐌 = {𝐃},
                   𝐍 = {𝐄}
-                ))
-              ),
-              operator = $../../Essentials/Functions/composition(
-                X = {$../../Algebra/Rings/Modules/"Right modules"/Carrier(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐃}
                 )},
-                Y = {$../../Algebra/Rings/Modules/"Right modules"/Carrier(
+                Z = {$../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
                   𝐑 = {𝐑},
-                  𝐌 = {𝐄}
-                )},
-                Z = {$../../Algebra/Rings/Modules/"Right modules"/Carrier(
+                  𝐌 = {𝐃},
+                  𝐍 = {𝐅}
+                )}
+              ).operation(x = {
+                #(ψ: %Element($../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
                   𝐑 = {𝐑},
-                  𝐌 = {𝐅}
-                )},
-                f = {φ},
-                g = {ψ}
-              )
-            )}}
+                  𝐌 = {𝐄},
+                  𝐍 = {𝐅}
+                ))),
+                {y = {
+                  #(φ: %Element($../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
+                    𝐑 = {𝐑},
+                    𝐌 = {𝐃},
+                    𝐍 = {𝐄}
+                  ))),
+                  {z = {$../../Essentials/Functions/composition(
+                    X = {$../../Algebra/Rings/Modules/"Right modules"/Carrier(
+                      𝐑 = {𝐑},
+                      𝐌 = {𝐃}
+                    )},
+                    Y = {$../../Algebra/Rings/Modules/"Right modules"/Carrier(
+                      𝐑 = {𝐑},
+                      𝐌 = {𝐄}
+                    )},
+                    Z = {$../../Algebra/Rings/Modules/"Right modules"/Carrier(
+                      𝐑 = {𝐑},
+                      𝐌 = {𝐅}
+                    )},
+                    f = {φ},
+                    g = {ψ}
+                  )}}
+                }}
+            })}}
           }}
         }}
       }

@@ -7,39 +7,42 @@ $"rational numbers": %ExplicitOperator {
   notation = 'ℚ',
   definition = [$../../Rings/Rings.ring(
     R = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-    ⊕ = {$../../../Essentials/Functions/Operations/operator(
-      X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-      Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-      Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-      parameters = #(
-        a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers"),
-        b: %Element(%previous)
-      ),
-      operator = $../../../Essentials/Numbers/Rational/sum(
-        a = {a},
-        b = {b}
-      )
-    )},
+    ⊕ = {$../../../Essentials/Functions/Operations/Operations(
+        X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
+        Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
+        Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
+      ).operation(x = {
+        #(a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
+        {y = {
+          #(b: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
+          {z = {$../../../Essentials/Numbers/Rational/sum(
+            a = {a},
+            b = {b}
+          )}}
+        }}
+    })},
     "0" = {$../../../Essentials/Numbers/Natural/number(value = 0)},
-    ⊖ = {$../../../Essentials/Functions/operator(
-      X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-      Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-      parameter = #(a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
-      operator = $../../../Essentials/Numbers/Rational/inverse(a = {a})
-    )},
-    ⊙ = {$../../../Essentials/Functions/Operations/operator(
-      X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-      Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-      Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-      parameters = #(
-        a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers"),
-        b: %Element(%previous)
-      ),
-      operator = $../../../Essentials/Numbers/Rational/product(
-        a = {a},
-        b = {b}
-      )
-    )},
+    ⊖ = {$../../../Essentials/Functions/Functions(
+        X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
+        Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
+      ).function(x = {
+        #(a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
+        {y = {$../../../Essentials/Numbers/Rational/inverse(a = {a})}}
+    })},
+    ⊙ = {$../../../Essentials/Functions/Operations/Operations(
+        X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
+        Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
+        Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
+      ).operation(x = {
+        #(a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
+        {y = {
+          #(b: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
+          {z = {$../../../Essentials/Numbers/Rational/product(
+            a = {a},
+            b = {b}
+          )}}
+        }}
+    })},
     "1" = {$../../../Essentials/Numbers/Natural/number(value = 1)}
   )]
 }

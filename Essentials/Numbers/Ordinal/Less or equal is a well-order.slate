@@ -8,17 +8,18 @@
 $"Less or equal is a well-order": %StandardTheorem {
   claim = $../../Relations/"well-order"(
     S = {$"Ordinal numbers"},
-    ⪯ = {$../../Relations/predicate(
-      S = {$"Ordinal numbers"},
-      T = {$"Ordinal numbers"},
-      parameters = #(
-        α: %Element($"Ordinal numbers"),
-        β: %Element(%previous)
-      ),
-      predicate = $"less or equal"(
-        α = {α},
-        β = {β}
-      )
-    )}
+    ⪯ = {$../../Relations/Relations(
+        S = {$"Ordinal numbers"},
+        T = {$"Ordinal numbers"}
+      ).relation(s = {
+        #(α: %Element($"Ordinal numbers")),
+        {t = {
+          #(β: %Element($"Ordinal numbers")),
+          {p = {$"less or equal"(
+            α = {α},
+            β = {β}
+          )}}
+        }}
+    })}
   )
 }

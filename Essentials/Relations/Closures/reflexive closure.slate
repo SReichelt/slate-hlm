@@ -18,14 +18,13 @@ $"reflexive closure"(
     $closure(
       S = {S},
       ≺ = {≺},
-      p = {$../../Properties/predicate(
-        S = {$../Endorelations(S = {S})},
-        parameter = #(_1: %Element($../Endorelations(S = {S}))),
-        predicate = $../reflexive(
-          S = {S},
-          ⪯ = {_1}
-        )
-      )}
+      p = {$../../Properties/Properties(S = {$../Endorelations(S = {S})}).property(s = {
+          #(_1: %Element($../Endorelations(S = {S}))),
+          {p = {$../reflexive(
+            S = {S},
+            ⪯ = {_1}
+          )}}
+      })}
     ),
     $../disjunction(
       S = {S},

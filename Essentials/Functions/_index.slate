@@ -5,10 +5,6 @@ $Functions: %Section {
   items = [
     %item($Functions),
     %item($value),
-    %item(
-      $operator,
-      title = 'Operator as function'
-    ),
     %item($Image),
     %item($Preimage),
     %item($"mapping as function"),

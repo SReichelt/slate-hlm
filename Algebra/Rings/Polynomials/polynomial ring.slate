@@ -23,83 +23,92 @@ $"polynomial ring"(
       𝐑 = {𝐑},
       X = {X}
     )},
-    ⊕ = {$../../../Essentials/Functions/Operations/operator(
-      X = {$Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      )},
-      Y = {$Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      )},
-      Z = {$Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      )},
-      parameters = #(
-        p: %Element($Polynomials(
+    ⊕ = {$../../../Essentials/Functions/Operations/Operations(
+        X = {$Polynomials(
           𝐑 = {𝐑},
           X = {X}
-        )),
-        q: %Element(%previous)
-      ),
-      operator = $sum(
-        𝐑 = {𝐑},
-        X = {X},
-        p = {p},
-        q = {q}
-      )
-    )},
+        )},
+        Y = {$Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        Z = {$Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )}
+      ).operation(x = {
+        #(p: %Element($Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ))),
+        {y = {
+          #(q: %Element($Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ))),
+          {z = {$sum(
+            𝐑 = {𝐑},
+            X = {X},
+            p = {p},
+            q = {q}
+          )}}
+        }}
+    })},
     "0" = {$Polynomials(
         𝐑 = {𝐑},
         X = {X}
       ).zero},
-    ⊖ = {$../../../Essentials/Functions/operator(
-      X = {$Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      )},
-      Y = {$Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      )},
-      parameter = #(p: %Element($Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      ))),
-      operator = $"additive inverse"(
-        𝐑 = {𝐑},
-        X = {X},
-        p = {p}
-      )
-    )},
-    ⊙ = {$../../../Essentials/Functions/Operations/operator(
-      X = {$Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      )},
-      Y = {$Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      )},
-      Z = {$Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      )},
-      parameters = #(
-        p: %Element($Polynomials(
+    ⊖ = {$../../../Essentials/Functions/Functions(
+        X = {$Polynomials(
           𝐑 = {𝐑},
           X = {X}
-        )),
-        q: %Element(%previous)
-      ),
-      operator = $product(
-        𝐑 = {𝐑},
-        X = {X},
-        p = {p},
-        q = {q}
-      )
-    )},
+        )},
+        Y = {$Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )}
+      ).function(x = {
+        #(p: %Element($Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ))),
+        {y = {$"additive inverse"(
+          𝐑 = {𝐑},
+          X = {X},
+          p = {p}
+        )}}
+    })},
+    ⊙ = {$../../../Essentials/Functions/Operations/Operations(
+        X = {$Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        Y = {$Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )},
+        Z = {$Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        )}
+      ).operation(x = {
+        #(p: %Element($Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ))),
+        {y = {
+          #(q: %Element($Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ))),
+          {z = {$product(
+            𝐑 = {𝐑},
+            X = {X},
+            p = {p},
+            q = {q}
+          )}}
+        }}
+    })},
     "1" = {$../one(𝐑 = {𝐑})}
   )]
 }

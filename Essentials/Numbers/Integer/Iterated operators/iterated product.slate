@@ -10,19 +10,20 @@
 $"iterated product": %ExplicitOperator {
   notation = '∏',
   definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../Integers}).operation(
-      ∗ = {$../../../Functions/Operations/operator(
-        X = {$../Integers},
-        Y = {$../Integers},
-        Z = {$../Integers},
-        parameters = #(
-          a: %Element($../Integers),
-          b: %Element(%previous)
-        ),
-        operator = $../product(
-          a = {a},
-          b = {b}
-        )
-      )},
+      ∗ = {$../../../Functions/Operations/Operations(
+          X = {$../Integers},
+          Y = {$../Integers},
+          Z = {$../Integers}
+        ).operation(x = {
+          #(a: %Element($../Integers)),
+          {y = {
+            #(b: %Element($../Integers)),
+            {z = {$../product(
+              a = {a},
+              b = {b}
+            )}}
+          }}
+      })},
       e = {$../../Natural/number(value = 1)}
   )]
 }

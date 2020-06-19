@@ -95,61 +95,62 @@ $functors(
               𝓒 = {𝓒},
               𝓓 = {𝓓}
             ))),
-            {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../"Natural transformations"/"Natural transformations"(
-                u = {u},
-                v = {v},
-                𝓒 = {𝓒},
-                𝓓 = {𝓓},
-                F = {E},
-                G = {F}
-              )},
-              Y = {$../"Natural transformations"/"Natural transformations"(
-                u = {u},
-                v = {v},
-                𝓒 = {𝓒},
-                𝓓 = {𝓓},
-                F = {D},
-                G = {E}
-              )},
-              Z = {$../"Natural transformations"/"Natural transformations"(
-                u = {u},
-                v = {v},
-                𝓒 = {𝓒},
-                𝓓 = {𝓓},
-                F = {D},
-                G = {F}
-              )},
-              parameters = #(
-                ε: %Element($../"Natural transformations"/"Natural transformations"(
+            {∘ = {$../../Essentials/Functions/Operations/Operations(
+                X = {$../"Natural transformations"/"Natural transformations"(
                   u = {u},
                   v = {v},
                   𝓒 = {𝓒},
                   𝓓 = {𝓓},
                   F = {E},
                   G = {F}
-                )),
-                η: %Element($../"Natural transformations"/"Natural transformations"(
+                )},
+                Y = {$../"Natural transformations"/"Natural transformations"(
                   u = {u},
                   v = {v},
                   𝓒 = {𝓒},
                   𝓓 = {𝓓},
                   F = {D},
                   G = {E}
-                ))
-              ),
-              operator = $../"Natural transformations"/"vertical composition"(
-                u = {u},
-                v = {v},
-                𝓒 = {𝓒},
-                𝓓 = {𝓓},
-                F = {D},
-                G = {E},
-                H = {F},
-                η = {η},
-                ε = {ε}
-              )
-            )}}
+                )},
+                Z = {$../"Natural transformations"/"Natural transformations"(
+                  u = {u},
+                  v = {v},
+                  𝓒 = {𝓒},
+                  𝓓 = {𝓓},
+                  F = {D},
+                  G = {F}
+                )}
+              ).operation(x = {
+                #(ε: %Element($../"Natural transformations"/"Natural transformations"(
+                  u = {u},
+                  v = {v},
+                  𝓒 = {𝓒},
+                  𝓓 = {𝓓},
+                  F = {E},
+                  G = {F}
+                ))),
+                {y = {
+                  #(η: %Element($../"Natural transformations"/"Natural transformations"(
+                    u = {u},
+                    v = {v},
+                    𝓒 = {𝓒},
+                    𝓓 = {𝓓},
+                    F = {D},
+                    G = {E}
+                  ))),
+                  {z = {$../"Natural transformations"/"vertical composition"(
+                    u = {u},
+                    v = {v},
+                    𝓒 = {𝓒},
+                    𝓓 = {𝓓},
+                    F = {D},
+                    G = {E},
+                    H = {F},
+                    η = {η},
+                    ε = {ε}
+                  )}}
+                }}
+            })}}
           }}
         }}
       }

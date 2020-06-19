@@ -5,10 +5,6 @@ $Relations: %Section {
   items = [
     %item($Relations),
     %item($related),
-    %item(
-      $predicate,
-      title = 'Predicate as relation'
-    ),
     %item($converse),
     %item($implies),
     %item($conjunction),

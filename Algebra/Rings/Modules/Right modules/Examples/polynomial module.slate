@@ -18,79 +18,85 @@ $"polynomial module"(
         𝐑 = {𝐑},
         X = {X}
       )},
-      ⊕ = {$../../../../../Essentials/Functions/Operations/operator(
-        X = {$../../../Polynomials/Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        )},
-        Y = {$../../../Polynomials/Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        )},
-        Z = {$../../../Polynomials/Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        )},
-        parameters = #(
-          p: %Element($../../../Polynomials/Polynomials(
+      ⊕ = {$../../../../../Essentials/Functions/Operations/Operations(
+          X = {$../../../Polynomials/Polynomials(
             𝐑 = {𝐑},
             X = {X}
-          )),
-          q: %Element(%previous)
-        ),
-        operator = $../../../Polynomials/sum(
-          𝐑 = {𝐑},
-          X = {X},
-          p = {p},
-          q = {q}
-        )
-      )},
+          )},
+          Y = {$../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )},
+          Z = {$../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )}
+        ).operation(x = {
+          #(p: %Element($../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ))),
+          {y = {
+            #(q: %Element($../../../Polynomials/Polynomials(
+              𝐑 = {𝐑},
+              X = {X}
+            ))),
+            {z = {$../../../Polynomials/sum(
+              𝐑 = {𝐑},
+              X = {X},
+              p = {p},
+              q = {q}
+            )}}
+          }}
+      })},
       "0" = {$../../../Polynomials/Polynomials(
           𝐑 = {𝐑},
           X = {X}
         ).zero},
-      ⊖ = {$../../../../../Essentials/Functions/operator(
-        X = {$../../../Polynomials/Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        )},
-        Y = {$../../../Polynomials/Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        )},
-        parameter = #(p: %Element($../../../Polynomials/Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        ))),
-        operator = $../../../Polynomials/"additive inverse"(
-          𝐑 = {𝐑},
-          X = {X},
-          p = {p}
-        )
-      )},
-      ⊙ = {$../../../../../Essentials/Functions/Operations/operator(
-        X = {$../../../Polynomials/Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        )},
-        Y = {$../../../Carrier(𝐑 = {𝐑})},
-        Z = {$../../../Polynomials/Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        )},
-        parameters = #(
-          p: %Element($../../../Polynomials/Polynomials(
+      ⊖ = {$../../../../../Essentials/Functions/Functions(
+          X = {$../../../Polynomials/Polynomials(
             𝐑 = {𝐑},
             X = {X}
-          )),
-          a: %Element($../../../Carrier(𝐑 = {𝐑}))
-        ),
-        operator = $../../../Polynomials/"product with right scalar"(
-          𝐑 = {𝐑},
-          X = {X},
-          p = {p},
-          a = {a}
-        )
-      )}
+          )},
+          Y = {$../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )}
+        ).function(x = {
+          #(p: %Element($../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ))),
+          {y = {$../../../Polynomials/"additive inverse"(
+            𝐑 = {𝐑},
+            X = {X},
+            p = {p}
+          )}}
+      })},
+      ⊙ = {$../../../../../Essentials/Functions/Operations/Operations(
+          X = {$../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )},
+          Y = {$../../../Carrier(𝐑 = {𝐑})},
+          Z = {$../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          )}
+        ).operation(x = {
+          #(p: %Element($../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ))),
+          {y = {
+            #(a: %Element($../../../Carrier(𝐑 = {𝐑}))),
+            {z = {$../../../Polynomials/"product with right scalar"(
+              𝐑 = {𝐑},
+              X = {X},
+              p = {p},
+              a = {a}
+            )}}
+          }}
+      })}
   )]
 }

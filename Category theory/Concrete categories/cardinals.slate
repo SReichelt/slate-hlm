@@ -35,37 +35,38 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
           #(𝐄: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
           {𝐅 = {
             #(𝐅: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-            {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                κ = {𝐄},
-                μ = {𝐅}
-              )},
-              Y = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                κ = {𝐃},
-                μ = {𝐄}
-              )},
-              Z = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                κ = {𝐃},
-                μ = {𝐅}
-              )},
-              parameters = #(
-                ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+            {∘ = {$../../Essentials/Functions/Operations/Operations(
+                X = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
                   κ = {𝐄},
                   μ = {𝐅}
-                )),
-                φ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+                )},
+                Y = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
                   κ = {𝐃},
                   μ = {𝐄}
-                ))
-              ),
-              operator = $../../Essentials/Functions/composition(
-                X = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐃})},
-                Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐄})},
-                Z = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐅})},
-                f = {φ},
-                g = {ψ}
-              )
-            )}}
+                )},
+                Z = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+                  κ = {𝐃},
+                  μ = {𝐅}
+                )}
+              ).operation(x = {
+                #(ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+                  κ = {𝐄},
+                  μ = {𝐅}
+                ))),
+                {y = {
+                  #(φ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+                    κ = {𝐃},
+                    μ = {𝐄}
+                  ))),
+                  {z = {$../../Essentials/Functions/composition(
+                    X = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐃})},
+                    Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐄})},
+                    Z = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐅})},
+                    f = {φ},
+                    g = {ψ}
+                  )}}
+                }}
+            })}}
           }}
         }}
       }

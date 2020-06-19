@@ -9,18 +9,19 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         #(m: %Element(M)),
         formula = $../../Relations/"greatest element"(
           S = {$"Natural numbers"},
-          ⪯ = {$../../Relations/predicate(
-            S = {$"Natural numbers"},
-            T = {$"Natural numbers"},
-            parameters = #(
-              m: %Element($"Natural numbers"),
-              n: %Element(%previous)
-            ),
-            predicate = $"less or equal"(
-              m = {m},
-              n = {n}
-            )
-          )},
+          ⪯ = {$../../Relations/Relations(
+              S = {$"Natural numbers"},
+              T = {$"Natural numbers"}
+            ).relation(s = {
+              #(m: %Element($"Natural numbers")),
+              {t = {
+                #(n: %Element($"Natural numbers")),
+                {p = {$"less or equal"(
+                  m = {m},
+                  n = {n}
+                )}}
+              }}
+          })},
           T = {M},
           t = {m}
         )
@@ -52,18 +53,19 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
           #(m: %Element(M)),
           formula = $../../Relations/"greatest element"(
             S = {$"Natural numbers"},
-            ⪯ = {$../../Relations/predicate(
-              S = {$"Natural numbers"},
-              T = {$"Natural numbers"},
-              parameters = #(
-                m: %Element($"Natural numbers"),
-                n: %Element(%previous)
-              ),
-              predicate = $"less or equal"(
-                m = {m},
-                n = {n}
-              )
-            )},
+            ⪯ = {$../../Relations/Relations(
+                S = {$"Natural numbers"},
+                T = {$"Natural numbers"}
+              ).relation(s = {
+                #(m: %Element($"Natural numbers")),
+                {t = {
+                  #(n: %Element($"Natural numbers")),
+                  {p = {$"less or equal"(
+                    m = {m},
+                    n = {n}
+                  )}}
+                }}
+            })},
             T = {M},
             t = {m}
           )

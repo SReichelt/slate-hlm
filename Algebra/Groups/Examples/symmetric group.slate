@@ -15,34 +15,38 @@ $"symmetric group"(X: %Set): %ExplicitOperator {
       X = {X},
       Y = {X}
     )},
-    ∗ = {$../../../Essentials/Functions/Operations/operator(
-      X = {$../../../Essentials/Functions/Bijections(
-        X = {X},
-        Y = {X}
-      )},
-      Y = {$../../../Essentials/Functions/Bijections(
-        X = {X},
-        Y = {X}
-      )},
-      Z = {$../../../Essentials/Functions/Bijections(
-        X = {X},
-        Y = {X}
-      )},
-      parameters = #(
-        g: %Element($../../../Essentials/Functions/Bijections(
+    ∗ = {$../../../Essentials/Functions/Operations/Operations(
+        X = {$../../../Essentials/Functions/Bijections(
           X = {X},
           Y = {X}
-        )),
-        f: %Element(%previous)
-      ),
-      operator = $../../../Essentials/Functions/composition(
-        X = {X},
-        Y = {X},
-        Z = {X},
-        f = {f},
-        g = {g}
-      )
-    )},
+        )},
+        Y = {$../../../Essentials/Functions/Bijections(
+          X = {X},
+          Y = {X}
+        )},
+        Z = {$../../../Essentials/Functions/Bijections(
+          X = {X},
+          Y = {X}
+        )}
+      ).operation(x = {
+        #(g: %Element($../../../Essentials/Functions/Bijections(
+          X = {X},
+          Y = {X}
+        ))),
+        {y = {
+          #(f: %Element($../../../Essentials/Functions/Bijections(
+            X = {X},
+            Y = {X}
+          ))),
+          {z = {$../../../Essentials/Functions/composition(
+            X = {X},
+            Y = {X},
+            Z = {X},
+            f = {f},
+            g = {g}
+          )}}
+        }}
+    })},
     e = {$../../../Essentials/Functions/identity(X = {X})},
     i = {$../../../Essentials/Functions/Functions(
         X = {$../../../Essentials/Functions/Bijections(

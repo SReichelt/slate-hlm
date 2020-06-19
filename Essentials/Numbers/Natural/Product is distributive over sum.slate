@@ -6,31 +6,33 @@
 $"Product is distributive over sum": %StandardTheorem {
   claim = $../../Functions/Operations/distributive(
     X = {$"Natural numbers"},
-    ∗ = {$../../Functions/Operations/operator(
-      X = {$"Natural numbers"},
-      Y = {$"Natural numbers"},
-      Z = {$"Natural numbers"},
-      parameters = #(
-        m: %Element($"Natural numbers"),
-        n: %Element(%previous)
-      ),
-      operator = $product(
-        m = {m},
-        n = {n}
-      )
-    )},
-    ⋆ = {$../../Functions/Operations/operator(
-      X = {$"Natural numbers"},
-      Y = {$"Natural numbers"},
-      Z = {$"Natural numbers"},
-      parameters = #(
-        m: %Element($"Natural numbers"),
-        n: %Element(%previous)
-      ),
-      operator = $sum(
-        m = {m},
-        n = {n}
-      )
-    )}
+    ∗ = {$../../Functions/Operations/Operations(
+        X = {$"Natural numbers"},
+        Y = {$"Natural numbers"},
+        Z = {$"Natural numbers"}
+      ).operation(x = {
+        #(m: %Element($"Natural numbers")),
+        {y = {
+          #(n: %Element($"Natural numbers")),
+          {z = {$product(
+            m = {m},
+            n = {n}
+          )}}
+        }}
+    })},
+    ⋆ = {$../../Functions/Operations/Operations(
+        X = {$"Natural numbers"},
+        Y = {$"Natural numbers"},
+        Z = {$"Natural numbers"}
+      ).operation(x = {
+        #(m: %Element($"Natural numbers")),
+        {y = {
+          #(n: %Element($"Natural numbers")),
+          {z = {$sum(
+            m = {m},
+            n = {n}
+          )}}
+        }}
+    })}
   )
 }

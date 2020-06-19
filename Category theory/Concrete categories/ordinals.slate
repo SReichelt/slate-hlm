@@ -30,37 +30,38 @@ $ordinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Ex
           #(𝐄: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
           {𝐅 = {
             #(𝐅: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
-            {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
-                α = {𝐄},
-                β = {𝐅}
-              )},
-              Y = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
-                α = {𝐃},
-                β = {𝐄}
-              )},
-              Z = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
-                α = {𝐃},
-                β = {𝐅}
-              )},
-              parameters = #(
-                ψ: %Element($../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+            {∘ = {$../../Essentials/Functions/Operations/Operations(
+                X = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
                   α = {𝐄},
                   β = {𝐅}
-                )),
-                φ: %Element($../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+                )},
+                Y = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
                   α = {𝐃},
                   β = {𝐄}
-                ))
-              ),
-              operator = $../../Essentials/Functions/composition(
-                X = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐃})},
-                Y = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐄})},
-                Z = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐅})},
-                f = {φ},
-                g = {ψ}
-              )
-            )}}
+                )},
+                Z = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+                  α = {𝐃},
+                  β = {𝐅}
+                )}
+              ).operation(x = {
+                #(ψ: %Element($../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+                  α = {𝐄},
+                  β = {𝐅}
+                ))),
+                {y = {
+                  #(φ: %Element($../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+                    α = {𝐃},
+                    β = {𝐄}
+                  ))),
+                  {z = {$../../Essentials/Functions/composition(
+                    X = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐃})},
+                    Y = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐄})},
+                    Z = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐅})},
+                    f = {φ},
+                    g = {ψ}
+                  )}}
+                }}
+            })}}
           }}
         }}
       }

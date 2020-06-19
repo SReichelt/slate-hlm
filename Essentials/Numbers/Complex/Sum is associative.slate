@@ -3,18 +3,19 @@
 $"Sum is associative": %StandardTheorem {
   claim = $../../Functions/Operations/associative(
     X = {$"Complex numbers"},
-    ∗ = {$../../Functions/Operations/operator(
-      X = {$"Complex numbers"},
-      Y = {$"Complex numbers"},
-      Z = {$"Complex numbers"},
-      parameters = #(
-        a: %Element($"Complex numbers"),
-        b: %Element(%previous)
-      ),
-      operator = $sum(
-        a = {a},
-        b = {b}
-      )
-    )}
+    ∗ = {$../../Functions/Operations/Operations(
+        X = {$"Complex numbers"},
+        Y = {$"Complex numbers"},
+        Z = {$"Complex numbers"}
+      ).operation(x = {
+        #(a: %Element($"Complex numbers")),
+        {y = {
+          #(b: %Element($"Complex numbers")),
+          {z = {$sum(
+            a = {a},
+            b = {b}
+          )}}
+        }}
+    })}
   )
 }

@@ -6,18 +6,19 @@
 $"Sum is associative": %StandardTheorem {
   claim = $../../Functions/Operations/associative(
     X = {$Integers},
-    ∗ = {$../../Functions/Operations/operator(
-      X = {$Integers},
-      Y = {$Integers},
-      Z = {$Integers},
-      parameters = #(
-        a: %Element($Integers),
-        b: %Element(%previous)
-      ),
-      operator = $sum(
-        a = {a},
-        b = {b}
-      )
-    )}
+    ∗ = {$../../Functions/Operations/Operations(
+        X = {$Integers},
+        Y = {$Integers},
+        Z = {$Integers}
+      ).operation(x = {
+        #(a: %Element($Integers)),
+        {y = {
+          #(b: %Element($Integers)),
+          {z = {$sum(
+            a = {a},
+            b = {b}
+          )}}
+        }}
+    })}
   )
 }

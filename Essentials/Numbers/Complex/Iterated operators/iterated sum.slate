@@ -10,19 +10,20 @@
 $"iterated sum": %ExplicitOperator {
   notation = '∑',
   definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../"Complex numbers"}).operation(
-      ∗ = {$../../../Functions/Operations/operator(
-        X = {$../"Complex numbers"},
-        Y = {$../"Complex numbers"},
-        Z = {$../"Complex numbers"},
-        parameters = #(
-          a: %Element($../"Complex numbers"),
-          b: %Element(%previous)
-        ),
-        operator = $../sum(
-          a = {a},
-          b = {b}
-        )
-      )},
+      ∗ = {$../../../Functions/Operations/Operations(
+          X = {$../"Complex numbers"},
+          Y = {$../"Complex numbers"},
+          Z = {$../"Complex numbers"}
+        ).operation(x = {
+          #(a: %Element($../"Complex numbers")),
+          {y = {
+            #(b: %Element($../"Complex numbers")),
+            {z = {$../sum(
+              a = {a},
+              b = {b}
+            )}}
+          }}
+      })},
       e = {$../../Natural/number(value = 0)}
   )]
 }

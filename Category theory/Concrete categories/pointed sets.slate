@@ -34,37 +34,38 @@ $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
           #(𝐄: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
-            {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
-                𝐒 = {𝐄},
-                𝐓 = {𝐅}
-              )},
-              Y = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
-                𝐒 = {𝐃},
-                𝐓 = {𝐄}
-              )},
-              Z = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
-                𝐒 = {𝐃},
-                𝐓 = {𝐅}
-              )},
-              parameters = #(
-                ψ: %Element($../../Algebra/"Pointed sets"/Homomorphisms(
+            {∘ = {$../../Essentials/Functions/Operations/Operations(
+                X = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
                   𝐒 = {𝐄},
                   𝐓 = {𝐅}
-                )),
-                φ: %Element($../../Algebra/"Pointed sets"/Homomorphisms(
+                )},
+                Y = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
                   𝐒 = {𝐃},
                   𝐓 = {𝐄}
-                ))
-              ),
-              operator = $../../Essentials/Functions/composition(
-                X = {$../../Algebra/"Pointed sets"/Carrier(𝐒 = {𝐃})},
-                Y = {$../../Algebra/"Pointed sets"/Carrier(𝐒 = {𝐄})},
-                Z = {$../../Algebra/"Pointed sets"/Carrier(𝐒 = {𝐅})},
-                f = {φ},
-                g = {ψ}
-              )
-            )}}
+                )},
+                Z = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
+                  𝐒 = {𝐃},
+                  𝐓 = {𝐅}
+                )}
+              ).operation(x = {
+                #(ψ: %Element($../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
+                  𝐒 = {𝐄},
+                  𝐓 = {𝐅}
+                ))),
+                {y = {
+                  #(φ: %Element($../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
+                    𝐒 = {𝐃},
+                    𝐓 = {𝐄}
+                  ))),
+                  {z = {$../../Essentials/Functions/composition(
+                    X = {$../../Algebra/"Pointed sets"/Carrier(𝐒 = {𝐃})},
+                    Y = {$../../Algebra/"Pointed sets"/Carrier(𝐒 = {𝐄})},
+                    Z = {$../../Algebra/"Pointed sets"/Carrier(𝐒 = {𝐅})},
+                    f = {φ},
+                    g = {ψ}
+                  )}}
+                }}
+            })}}
           }}
         }}
       }

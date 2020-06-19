@@ -43,50 +43,51 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
           #(𝓔: %Element($../Categories(u = {u}))),
           {𝐅 = {
             #(𝓕: %Element($../Categories(u = {u}))),
-            {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../Functors/Functors(
-                u = {u},
-                v = {u},
-                𝓒 = {𝓔},
-                𝓓 = {𝓕}
-              )},
-              Y = {$../Functors/Functors(
-                u = {u},
-                v = {u},
-                𝓒 = {𝓓},
-                𝓓 = {𝓔}
-              )},
-              Z = {$../Functors/Functors(
-                u = {u},
-                v = {u},
-                𝓒 = {𝓓},
-                𝓓 = {𝓕}
-              )},
-              parameters = #(
-                G: %Element($../Functors/Functors(
+            {∘ = {$../../Essentials/Functions/Operations/Operations(
+                X = {$../Functors/Functors(
                   u = {u},
                   v = {u},
                   𝓒 = {𝓔},
                   𝓓 = {𝓕}
-                )),
-                F: %Element($../Functors/Functors(
+                )},
+                Y = {$../Functors/Functors(
                   u = {u},
                   v = {u},
                   𝓒 = {𝓓},
                   𝓓 = {𝓔}
-                ))
-              ),
-              operator = $../Functors/composition(
-                u = {u},
-                v = {u},
-                w = {u},
-                𝓒 = {𝓓},
-                𝓓 = {𝓔},
-                𝓔 = {𝓕},
-                F = {F},
-                G = {G}
-              )
-            )}}
+                )},
+                Z = {$../Functors/Functors(
+                  u = {u},
+                  v = {u},
+                  𝓒 = {𝓓},
+                  𝓓 = {𝓕}
+                )}
+              ).operation(x = {
+                #(G: %Element($../Functors/Functors(
+                  u = {u},
+                  v = {u},
+                  𝓒 = {𝓔},
+                  𝓓 = {𝓕}
+                ))),
+                {y = {
+                  #(F: %Element($../Functors/Functors(
+                    u = {u},
+                    v = {u},
+                    𝓒 = {𝓓},
+                    𝓓 = {𝓔}
+                  ))),
+                  {z = {$../Functors/composition(
+                    u = {u},
+                    v = {u},
+                    w = {u},
+                    𝓒 = {𝓓},
+                    𝓓 = {𝓔},
+                    𝓔 = {𝓕},
+                    F = {F},
+                    G = {G}
+                  )}}
+                }}
+            })}}
           }}
         }}
       }

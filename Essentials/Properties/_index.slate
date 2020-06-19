@@ -4,10 +4,6 @@ $Properties: %Section {
   logic = 'hlm',
   items = [
     %item($Properties),
-    %item($"has property"),
-    %item(
-      $predicate,
-      title = 'Predicate as property'
-    )
+    %item($"has property")
   ]
 }

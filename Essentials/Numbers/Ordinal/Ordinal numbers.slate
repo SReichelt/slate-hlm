@@ -64,18 +64,19 @@ $"Ordinal numbers": %Construction {
       ⪯ = {$../../Relations/restriction(
         S = {$../Natural/"Natural numbers"},
         T = {$../Natural/Subsets/"Segment (less)"(n = {n})},
-        ≺ = {$../../Relations/predicate(
-          S = {$../Natural/"Natural numbers"},
-          T = {$../Natural/"Natural numbers"},
-          parameters = #(
-            m: %Element($../Natural/"Natural numbers"),
-            n: %Element(%previous)
-          ),
-          predicate = $../Natural/"less or equal"(
-            m = {m},
-            n = {n}
-          )
-        )}
+        ≺ = {$../../Relations/Relations(
+            S = {$../Natural/"Natural numbers"},
+            T = {$../Natural/"Natural numbers"}
+          ).relation(s = {
+            #(m: %Element($../Natural/"Natural numbers")),
+            {t = {
+              #(n: %Element($../Natural/"Natural numbers")),
+              {p = {$../Natural/"less or equal"(
+                m = {m},
+                n = {n}
+              )}}
+            }}
+        })}
       )}
     )
   }

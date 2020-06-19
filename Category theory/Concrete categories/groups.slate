@@ -35,37 +35,38 @@ $groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
           #(𝐄: %Element($../../Algebra/Groups/Groups)),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Groups/Groups)),
-            {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
-                𝐆 = {𝐄},
-                𝐇 = {𝐅}
-              )},
-              Y = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
-                𝐆 = {𝐃},
-                𝐇 = {𝐄}
-              )},
-              Z = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
-                𝐆 = {𝐃},
-                𝐇 = {𝐅}
-              )},
-              parameters = #(
-                ψ: %Element($../../Algebra/Groups/Homomorphisms/Homomorphisms(
+            {∘ = {$../../Essentials/Functions/Operations/Operations(
+                X = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
                   𝐆 = {𝐄},
                   𝐇 = {𝐅}
-                )),
-                φ: %Element($../../Algebra/Groups/Homomorphisms/Homomorphisms(
+                )},
+                Y = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
                   𝐆 = {𝐃},
                   𝐇 = {𝐄}
-                ))
-              ),
-              operator = $../../Essentials/Functions/composition(
-                X = {$../../Algebra/Groups/Carrier(𝐆 = {𝐃})},
-                Y = {$../../Algebra/Groups/Carrier(𝐆 = {𝐄})},
-                Z = {$../../Algebra/Groups/Carrier(𝐆 = {𝐅})},
-                f = {φ},
-                g = {ψ}
-              )
-            )}}
+                )},
+                Z = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
+                  𝐆 = {𝐃},
+                  𝐇 = {𝐅}
+                )}
+              ).operation(x = {
+                #(ψ: %Element($../../Algebra/Groups/Homomorphisms/Homomorphisms(
+                  𝐆 = {𝐄},
+                  𝐇 = {𝐅}
+                ))),
+                {y = {
+                  #(φ: %Element($../../Algebra/Groups/Homomorphisms/Homomorphisms(
+                    𝐆 = {𝐃},
+                    𝐇 = {𝐄}
+                  ))),
+                  {z = {$../../Essentials/Functions/composition(
+                    X = {$../../Algebra/Groups/Carrier(𝐆 = {𝐃})},
+                    Y = {$../../Algebra/Groups/Carrier(𝐆 = {𝐄})},
+                    Z = {$../../Algebra/Groups/Carrier(𝐆 = {𝐅})},
+                    f = {φ},
+                    g = {ψ}
+                  )}}
+                }}
+            })}}
           }}
         }}
       }

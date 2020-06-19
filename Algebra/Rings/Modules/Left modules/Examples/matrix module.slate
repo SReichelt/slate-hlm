@@ -21,93 +21,100 @@ $"matrix module"(
         m = {m},
         n = {n}
       )},
-      ⊕ = {$../../../../../Essentials/Functions/Operations/operator(
-        X = {$../../../Matrices/Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
-        )},
-        Y = {$../../../Matrices/Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
-        )},
-        Z = {$../../../Matrices/Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
-        )},
-        parameters = #(
-          A: %Element($../../../Matrices/Matrices(
+      ⊕ = {$../../../../../Essentials/Functions/Operations/Operations(
+          X = {$../../../Matrices/Matrices(
             𝐑 = {𝐑},
             m = {m},
             n = {n}
-          )),
-          B: %Element(%previous)
-        ),
-        operator = $../../../Matrices/sum(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n},
-          A = {A},
-          B = {B}
-        )
-      )},
+          )},
+          Y = {$../../../Matrices/Matrices(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n}
+          )},
+          Z = {$../../../Matrices/Matrices(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n}
+          )}
+        ).operation(x = {
+          #(A: %Element($../../../Matrices/Matrices(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n}
+          ))),
+          {y = {
+            #(B: %Element($../../../Matrices/Matrices(
+              𝐑 = {𝐑},
+              m = {m},
+              n = {n}
+            ))),
+            {z = {$../../../Matrices/sum(
+              𝐑 = {𝐑},
+              m = {m},
+              n = {n},
+              A = {A},
+              B = {B}
+            )}}
+          }}
+      })},
       "0" = {$../../../Matrices/zero(
         𝐑 = {𝐑},
         m = {m},
         n = {n}
       )},
-      ⊖ = {$../../../../../Essentials/Functions/operator(
-        X = {$../../../Matrices/Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
-        )},
-        Y = {$../../../Matrices/Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
-        )},
-        parameter = #(A: %Element($../../../Matrices/Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
-        ))),
-        operator = $../../../Matrices/"additive inverse"(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n},
-          A = {A}
-        )
-      )},
-      ⊙ = {$../../../../../Essentials/Functions/Operations/operator(
-        X = {$../../../Carrier(𝐑 = {𝐑})},
-        Y = {$../../../Matrices/Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
-        )},
-        Z = {$../../../Matrices/Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
-        )},
-        parameters = #(
-          r: %Element($../../../Carrier(𝐑 = {𝐑})),
-          A: %Element($../../../Matrices/Matrices(
+      ⊖ = {$../../../../../Essentials/Functions/Functions(
+          X = {$../../../Matrices/Matrices(
             𝐑 = {𝐑},
             m = {m},
             n = {n}
-          ))
-        ),
-        operator = $../../../Matrices/"product with left scalar"(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n},
-          r = {r},
-          A = {A}
-        )
-      )}
+          )},
+          Y = {$../../../Matrices/Matrices(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n}
+          )}
+        ).function(x = {
+          #(A: %Element($../../../Matrices/Matrices(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n}
+          ))),
+          {y = {$../../../Matrices/"additive inverse"(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n},
+            A = {A}
+          )}}
+      })},
+      ⊙ = {$../../../../../Essentials/Functions/Operations/Operations(
+          X = {$../../../Carrier(𝐑 = {𝐑})},
+          Y = {$../../../Matrices/Matrices(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n}
+          )},
+          Z = {$../../../Matrices/Matrices(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n}
+          )}
+        ).operation(x = {
+          #(r: %Element($../../../Carrier(𝐑 = {𝐑}))),
+          {y = {
+            #(A: %Element($../../../Matrices/Matrices(
+              𝐑 = {𝐑},
+              m = {m},
+              n = {n}
+            ))),
+            {z = {$../../../Matrices/"product with left scalar"(
+              𝐑 = {𝐑},
+              m = {m},
+              n = {n},
+              r = {r},
+              A = {A}
+            )}}
+          }}
+      })}
   )]
 }

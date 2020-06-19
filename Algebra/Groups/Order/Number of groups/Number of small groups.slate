@@ -10,12 +10,13 @@ $"Number of small groups": %StandardTheorem {
     S = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
     𝐚 = {$../../../../Essentials/Sequences/"sequence from function"(
       S = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
-      f = {$../../../../Essentials/Functions/operator(
-        X = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
-        Y = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
-        parameter = #(n: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
-        operator = $"number of groups with order"(n = {n})
-      )}
+      f = {$../../../../Essentials/Functions/Functions(
+          X = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
+          Y = {$../../../../Essentials/Numbers/Natural/"Natural numbers"}
+        ).function(x = {
+          #(n: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
+          {y = {$"number of groups with order"(n = {n})}}
+      })}
     )},
     n = {$../../../../Essentials/Numbers/Natural/number(value = 2048)},
     𝐛 = {$../../../../Essentials/Numbers/Natural/Sequences/"tuple of numbers"(items = [

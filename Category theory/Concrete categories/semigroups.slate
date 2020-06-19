@@ -30,37 +30,38 @@ $semigroups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
           #(𝐄: %Element($../../Algebra/Semigroups/Semigroups)),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Semigroups/Semigroups)),
-            {∘ = {$../../Essentials/Functions/Operations/operator(
-              X = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
-                𝐌 = {𝐄},
-                𝐍 = {𝐅}
-              )},
-              Y = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
-                𝐌 = {𝐃},
-                𝐍 = {𝐄}
-              )},
-              Z = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
-                𝐌 = {𝐃},
-                𝐍 = {𝐅}
-              )},
-              parameters = #(
-                ψ: %Element($../../Algebra/Magmas/Homomorphisms/Homomorphisms(
+            {∘ = {$../../Essentials/Functions/Operations/Operations(
+                X = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
                   𝐌 = {𝐄},
                   𝐍 = {𝐅}
-                )),
-                φ: %Element($../../Algebra/Magmas/Homomorphisms/Homomorphisms(
+                )},
+                Y = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
                   𝐌 = {𝐃},
                   𝐍 = {𝐄}
-                ))
-              ),
-              operator = $../../Essentials/Functions/composition(
-                X = {$../../Algebra/Magmas/Carrier(𝐌 = {𝐃})},
-                Y = {$../../Algebra/Magmas/Carrier(𝐌 = {𝐄})},
-                Z = {$../../Algebra/Magmas/Carrier(𝐌 = {𝐅})},
-                f = {φ},
-                g = {ψ}
-              )
-            )}}
+                )},
+                Z = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
+                  𝐌 = {𝐃},
+                  𝐍 = {𝐅}
+                )}
+              ).operation(x = {
+                #(ψ: %Element($../../Algebra/Magmas/Homomorphisms/Homomorphisms(
+                  𝐌 = {𝐄},
+                  𝐍 = {𝐅}
+                ))),
+                {y = {
+                  #(φ: %Element($../../Algebra/Magmas/Homomorphisms/Homomorphisms(
+                    𝐌 = {𝐃},
+                    𝐍 = {𝐄}
+                  ))),
+                  {z = {$../../Essentials/Functions/composition(
+                    X = {$../../Algebra/Magmas/Carrier(𝐌 = {𝐃})},
+                    Y = {$../../Algebra/Magmas/Carrier(𝐌 = {𝐄})},
+                    Z = {$../../Algebra/Magmas/Carrier(𝐌 = {𝐅})},
+                    f = {φ},
+                    g = {ψ}
+                  )}}
+                }}
+            })}}
           }}
         }}
       }

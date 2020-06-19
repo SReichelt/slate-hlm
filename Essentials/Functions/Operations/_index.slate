@@ -6,10 +6,6 @@ $Operations: %Section {
     %item($Operations),
     %item($value),
     %item(
-      $operator,
-      title = 'Operator as operation'
-    ),
-    %item(
       $"Inner operations",
       title = 'Inner operations'
     ),
