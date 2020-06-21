@@ -12,9 +12,9 @@ $commutative(𝐑: %Element($Semirings)): %Predicate {
       constructor = $Semirings.semiring,
       parameters = #(
         R: %Set,
-        ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
         "0": %Element(R),
-        ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
         "1": %Element(R),
         _1: %Constraint($semiring(
           R = {R},
@@ -24,7 +24,7 @@ $commutative(𝐑: %Element($Semirings)): %Predicate {
           "1" = {"1"}
         ))
       ),
-      value = $../../Essentials/Functions/Operations/commutative(
+      value = $../../Essentials/Operations/commutative(
         X = {R},
         Z = {R},
         ∗ = {⊙}

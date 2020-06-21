@@ -95,7 +95,7 @@ $functors(
               𝓒 = {𝓒},
               𝓓 = {𝓓}
             ))),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../"Natural transformations"/"Natural transformations"(
                   u = {u},
                   v = {v},

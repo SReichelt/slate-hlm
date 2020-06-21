@@ -86,7 +86,7 @@ $"linear combination"(
                 )}),
                 #(a: %Element($../../../Carrier(𝐑 = {𝐑})))
               )),
-              value = $../../../../../Essentials/Functions/Operations/"Iterated operations"/"indexed by set with finite support"(
+              value = $../../../../../Essentials/Operations/"Iterated operations"/"indexed by set with finite support"(
                 X = {$../Carrier(
                   𝐑 = {𝐑},
                   𝐌 = {𝐌}

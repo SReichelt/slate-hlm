@@ -4,9 +4,9 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.mul_assoc
  */
 $"Product is associative": %StandardTheorem {
-  claim = $../../Functions/Operations/associative(
+  claim = $../../Operations/associative(
     X = {$Integers},
-    ∗ = {$../../Functions/Operations/Operations(
+    ∗ = {$../../Operations/Operations(
         X = {$Integers},
         Y = {$Integers},
         Z = {$Integers}

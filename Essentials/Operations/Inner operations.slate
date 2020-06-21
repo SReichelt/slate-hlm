@@ -1,0 +1,34 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Binary_operation
+ *             * https://mathworld.wolfram.com/BinaryOperation.html
+ *             * https://proofwiki.org/wiki/Definition:Operation/Binary_Operation
+ */
+$"Inner operations"(X: %Set(auto = %true)): %SetOperator {
+  notation = $Function(
+    function = '𝓞𝓹',
+    arguments = [X]
+  ),
+  definitionNotation = {
+    parameter = #(∗: %Expr),
+    notation = $FunctionDeclaration(
+      function = ∗,
+      operands = [
+        $MultiplicationLikeOperator(
+          symbol = '×',
+          operands = [X, X]
+        ),
+        X
+      ]
+    ),
+    singularName = ['operation', ' on ', X],
+    pluralName = ['operations', ' on ', X],
+    nameOptional = %true
+  },
+  definition = [$Operations(
+    X = {X},
+    Y = {X},
+    Z = {X}
+  )]
+}

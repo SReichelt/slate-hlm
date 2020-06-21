@@ -59,7 +59,7 @@ $Morphisms(
             %previous,
             #(𝐅: %Binding(
               %previous,
-              #(∘: %Element($../Essentials/Functions/Operations/Operations(
+              #(∘: %Element($../Essentials/Operations/Operations(
                 X = {M[𝐄,𝐅]},
                 Y = {M[𝐃,𝐄]},
                 Z = {M[𝐃,𝐅]}
@@ -78,12 +78,12 @@ $Morphisms(
             h: %Element(M[𝐘,𝐙])
           ),
           %equals(
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {M[𝐗,𝐙]},
               Y = {M[𝐖,𝐗]},
               Z = {M[𝐖,𝐙]},
               ∗ = {∘[𝐖,𝐗,𝐙]},
-              x = {$../Essentials/Functions/Operations/value(
+              x = {$../Essentials/Operations/value(
                 X = {M[𝐘,𝐙]},
                 Y = {M[𝐗,𝐘]},
                 Z = {M[𝐗,𝐙]},
@@ -93,13 +93,13 @@ $Morphisms(
               )},
               y = {f}
             ),
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {M[𝐘,𝐙]},
               Y = {M[𝐖,𝐘]},
               Z = {M[𝐖,𝐙]},
               ∗ = {∘[𝐖,𝐘,𝐙]},
               x = {h},
-              y = {$../Essentials/Functions/Operations/value(
+              y = {$../Essentials/Operations/value(
                 X = {M[𝐗,𝐘]},
                 Y = {M[𝐖,𝐗]},
                 Z = {M[𝐖,𝐘]},
@@ -117,7 +117,7 @@ $Morphisms(
             f: %Element(M[𝐗,𝐘])
           ),
           %equals(
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {M[𝐘,𝐘]},
               Y = {M[𝐗,𝐘]},
               Z = {M[𝐗,𝐘]},
@@ -125,7 +125,7 @@ $Morphisms(
               x = {i[𝐘]},
               y = {f}
             ),
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {M[𝐗,𝐘]},
               Y = {M[𝐗,𝐗]},
               Z = {M[𝐗,𝐘]},
@@ -147,7 +147,7 @@ $Morphisms(
               ),
               formula = %and(
                 %equals(
-                  $../Essentials/Functions/Operations/value(
+                  $../Essentials/Operations/value(
                     X = {M[𝐗,𝐘]},
                     Y = {M[𝐘,𝐗]},
                     Z = {M[𝐘,𝐘]},
@@ -158,7 +158,7 @@ $Morphisms(
                   i[𝐘]
                 ),
                 %equals(
-                  $../Essentials/Functions/Operations/value(
+                  $../Essentials/Operations/value(
                     X = {M[𝐘,𝐗]},
                     Y = {M[𝐗,𝐘]},
                     Z = {M[𝐗,𝐗]},

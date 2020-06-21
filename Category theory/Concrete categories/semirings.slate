@@ -30,7 +30,7 @@ $semirings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
           #(𝐄: %Element($../../Algebra/Semirings/Semirings)),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Semirings/Semirings)),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../../Algebra/Semirings/Homomorphisms/Homomorphisms(
                   𝐑 = {𝐄},
                   𝐒 = {𝐅}

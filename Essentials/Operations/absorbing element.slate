@@ -1,0 +1,57 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Absorbing_element
+ *             * https://proofwiki.org/wiki/Definition:Zero_Element#Zero
+ */
+$"absorbing element"(
+  X: %Set(auto = %true),
+  ∗: %Element($"Inner operations"(X = {X})),
+  z: %Element(X)
+): %Predicate {
+  notation = $NounRelation(
+    operands = [z, ∗],
+    singular = 'absorbing element',
+    plural = 'absorbing elements',
+    article = 'an',
+    preposition = 'for'
+  ),
+  definition = [
+    %and(
+      $"left absorbing element"(
+        X = {X},
+        Y = {X},
+        ∗ = {∗},
+        z = {z}
+      ),
+      $"right absorbing element"(
+        X = {X},
+        Y = {X},
+        ∗ = {∗},
+        z = {z}
+      )
+    ),
+    %forall(
+      #(a: %Element(X)),
+      %equals(
+        $value(
+          X = {X},
+          Y = {X},
+          Z = {X},
+          ∗ = {∗},
+          x = {a},
+          y = {z}
+        ),
+        $value(
+          X = {X},
+          Y = {X},
+          Z = {X},
+          ∗ = {∗},
+          x = {z},
+          y = {a}
+        ),
+        z
+      )
+    )
+  ]
+}

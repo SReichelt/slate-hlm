@@ -6,9 +6,9 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.add_assoc
  */
 $"Sum is associative": %StandardTheorem {
-  claim = $../../Functions/Operations/associative(
+  claim = $../../Operations/associative(
     X = {$"Natural numbers"},
-    ∗ = {$../../Functions/Operations/Operations(
+    ∗ = {$../../Operations/Operations(
         X = {$"Natural numbers"},
         Y = {$"Natural numbers"},
         Z = {$"Natural numbers"}

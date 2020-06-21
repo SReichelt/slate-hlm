@@ -21,7 +21,7 @@ $"monoid with inverses"(
       constructor = $../Monoids/Monoids.monoid,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M})),
         e: %Element(M),
         _1: %Constraint($../Monoids/monoid(
           M = {M},

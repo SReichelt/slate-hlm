@@ -7,7 +7,7 @@ $"complex numbers": %ExplicitOperator {
   notation = 'ℂ',
   definition = [$../../Rings/Rings.ring(
     R = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
-    ⊕ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊕ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
         Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
         Z = {$../../../Essentials/Numbers/Complex/"Complex numbers"}
@@ -29,7 +29,7 @@ $"complex numbers": %ExplicitOperator {
         #(a: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
         {y = {$../../../Essentials/Numbers/Complex/inverse(a = {a})}}
     })},
-    ⊙ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊙ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
         Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
         Z = {$../../../Essentials/Numbers/Complex/"Complex numbers"}

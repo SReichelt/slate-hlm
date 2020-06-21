@@ -19,7 +19,7 @@ $abelian(𝐆: %Element($Groups)): %Predicate {
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(
           X = {G},
@@ -32,7 +32,7 @@ $abelian(𝐆: %Element($Groups)): %Predicate {
           i = {i}
         ))
       ),
-      value = $../../Essentials/Functions/Operations/commutative(
+      value = $../../Essentials/Operations/commutative(
         X = {G},
         Z = {G},
         ∗ = {∗}

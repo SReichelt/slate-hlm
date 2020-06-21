@@ -33,7 +33,7 @@ $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expli
           #(𝐄: %Element($../../Algebra/Rings/Rings)),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Rings/Rings)),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
                   𝐑 = {𝐄},
                   𝐒 = {𝐅}

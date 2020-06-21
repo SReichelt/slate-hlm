@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @example `$../../Essentials/Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$Carrier(𝐌 = {𝐌})}, ⨂ = {$"iterated operation"(𝐌 = {𝐌})}, n = {n}, i = {#(i: %Element($../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
+ * @example `$../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(X = {$Carrier(𝐌 = {𝐌})}, ⨂ = {$"iterated operation"(𝐌 = {𝐌})}, n = {n}, i = {#(i: %Element($../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_pi_notation
  *             * https://mathworld.wolfram.com/Product.html
@@ -22,7 +22,7 @@ $"iterated operation"(
       constructor = $Monoids.monoid,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M})),
         e: %Element(M),
         _1: %Constraint($monoid(
           M = {M},
@@ -30,7 +30,7 @@ $"iterated operation"(
           e = {e}
         ))
       ),
-      value = $../../Essentials/Functions/Operations/"Iterated operations"/"Iterated operations"(X = {M}).operation(
+      value = $../../Essentials/Operations/"Iterated operations"/"Iterated operations"(X = {M}).operation(
           ∗ = {∗},
           e = {e}
       )

@@ -74,5 +74,35 @@ $Relations(
     singularName = ['relation', ' from ', S, ' to ', T],
     pluralName = ['relations', ' from ', S, ' to ', T],
     nameOptional = %true
+  },
+  embedding = {
+    parameter = #(r: %Element($../Properties/Properties(S = {$../Sets/"Cartesian product"(
+      S = {S},
+      T = {T}
+    )}))),
+    target = $Relations(
+        S = {S},
+        T = {T}
+      ).relation(s = {
+        #(s: %Element(S)),
+        {t = {
+          #(t: %Element(T)),
+          {p = {$../Properties/"has property"(
+            S = {$../Sets/"Cartesian product"(
+              S = {S},
+              T = {T}
+            )},
+            p = {r},
+            s = {$../Sets/"Cartesian product"(
+                S = {S},
+                T = {T}
+              ).pair(
+                s = {s},
+                t = {t}
+            )}
+          )}}
+        }}
+    }),
+    full = %true
   }
 }

@@ -12,7 +12,7 @@ $identity(𝐆: %Element($Groups)): %ExplicitOperator {
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(
           X = {G},

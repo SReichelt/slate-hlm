@@ -1,8 +1,5 @@
 %../../../../logics/hlm%
 
-/**
- * @remarks This definition is not exactly standard but very simple. The main reason to include it is that the result is defined to be a relation on `T` instead of `S`, which is sometimes needed.
- */
 $restriction(
   S: %Set(auto = %true),
   ≺: %Element($Endorelations(S = {S})),
@@ -16,17 +13,15 @@ $restriction(
     operand = ≺,
     minParenLevel = 3
   ),
-  definition = [$Endorelations(S = {T}).relation(s = {
-      #(t: %Element(T)),
-      {t = {
-        #(u: %Element(T)),
-        {p = {$related(
-          S = {S},
-          T = {S},
-          ≺ = {≺},
-          s = {t},
-          t = {u}
-        )}}
-      }}
-  })]
+  definition = [$../Properties/restriction(
+    S = {$../Sets/"Cartesian product"(
+      S = {S},
+      T = {S}
+    )},
+    p = {≺},
+    T = {$../Sets/"Cartesian product"(
+      S = {T},
+      T = {T}
+    )}
+  )]
 }

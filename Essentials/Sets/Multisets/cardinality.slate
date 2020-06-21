@@ -19,7 +19,7 @@ $cardinality(
           S = {S},
           𝑻 = {𝑻}
         ),
-        value = $../../Functions/Operations/"Iterated operations"/"indexed by finite set"(
+        value = $../../Operations/"Iterated operations"/"indexed by finite set"(
           X = {$../../Numbers/Natural/"Natural numbers"},
           ⨂ = {$../../Numbers/Natural/"Iterated operators"/"iterated sum"},
           I = {$Set(
@@ -56,7 +56,7 @@ $cardinality(
           S = {S},
           𝑻 = {𝑻}
         ),
-        value = $../../Functions/Operations/"Iterated operations"/"indexed by set with finite support"(
+        value = $../../Operations/"Iterated operations"/"indexed by set with finite support"(
           X = {$../../Numbers/Natural/"Natural numbers"},
           ⨂ = {$../../Numbers/Natural/"Iterated operators"/"iterated sum"},
           I = {S},

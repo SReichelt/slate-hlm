@@ -23,7 +23,7 @@ $"matrix ring"(
       m = {n},
       n = {n}
     )},
-    ⊕ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊕ = {$../../../Essentials/Operations/Operations(
         X = {$Matrices(
           𝐑 = {𝐑},
           m = {n},
@@ -89,7 +89,7 @@ $"matrix ring"(
           A = {A}
         )}}
     })},
-    ⊙ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊙ = {$../../../Essentials/Operations/Operations(
         X = {$Matrices(
           𝐑 = {𝐑},
           m = {n},

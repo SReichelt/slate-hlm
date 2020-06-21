@@ -15,7 +15,7 @@ $"symmetric group"(X: %Set): %ExplicitOperator {
       X = {X},
       Y = {X}
     )},
-    ∗ = {$../../../Essentials/Functions/Operations/Operations(
+    ∗ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Functions/Bijections(
           X = {X},
           Y = {X}

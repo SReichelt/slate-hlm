@@ -10,13 +10,13 @@
 $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
   $module(
     M: %Set,
-    ⊕: %Element($../../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+    ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = {M})),
     "0": %Element(M),
     ⊖: %Element($../../../../Essentials/Functions/Functions(
       X = {M},
       Y = {M}
     )),
-    ⊙: %Element($../../../../Essentials/Functions/Operations/Operations(
+    ⊙: %Element($../../../../Essentials/Operations/Operations(
       X = {$../../Carrier(𝐑 = {𝐑})},
       Y = {M},
       Z = {M}
@@ -40,13 +40,13 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
     equalityDefinition = {
       leftParameters = #(
         M: %Set,
-        ⊕: %Element($../../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = {M})),
         "0": %Element(M),
         ⊖: %Element($../../../../Essentials/Functions/Functions(
           X = {M},
           Y = {M}
         )),
-        ⊙: %Element($../../../../Essentials/Functions/Operations/Operations(
+        ⊙: %Element($../../../../Essentials/Operations/Operations(
           X = {$../../Carrier(𝐑 = {𝐑})},
           Y = {M},
           Z = {M}
@@ -62,13 +62,13 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
       ),
       rightParameters = #(
         N: %Set,
-        ⋆: %Element($../../../../Essentials/Functions/Operations/"Inner operations"(X = {N})),
+        ⋆: %Element($../../../../Essentials/Operations/"Inner operations"(X = {N})),
         𝟢: %Element(N),
         ∼: %Element($../../../../Essentials/Functions/Functions(
           X = {N},
           Y = {N}
         )),
-        ∗: %Element($../../../../Essentials/Functions/Operations/Operations(
+        ∗: %Element($../../../../Essentials/Operations/Operations(
           X = {$../../Carrier(𝐑 = {𝐑})},
           Y = {N},
           Z = {N}

@@ -25,7 +25,7 @@ $"subset group"(
       constructor = $../Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = {G})),
         e: %Element(G),
         i: %Element($../../../Essentials/Functions/Functions(
           X = {G},
@@ -40,7 +40,7 @@ $"subset group"(
       ),
       value = $../Groups.group(
         G = {S},
-        ∗ = {$../../../Essentials/Functions/Operations/"inner operation restriction"(
+        ∗ = {$../../../Essentials/Operations/"inner operation restriction"(
           X = {G},
           A = {S},
           ∗ = {∗}

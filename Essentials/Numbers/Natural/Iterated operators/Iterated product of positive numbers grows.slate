@@ -9,7 +9,7 @@ $"Iterated product of positive numbers grows"(
   m: %Element($../Subsets/"Segment (less or equal)"(n = {n}))
 ): %StandardTheorem {
   claim = $../"less or equal"(
-    m = {$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(
+    m = {$../../../Operations/"Iterated operations"/"indexed by natural number"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated product"},
       n = {m},
@@ -18,7 +18,7 @@ $"Iterated product of positive numbers grows"(
         {a = {a[j]}}
       }
     )},
-    n = {$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(
+    n = {$../../../Operations/"Iterated operations"/"indexed by natural number"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated product"},
       n = {n},

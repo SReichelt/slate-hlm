@@ -4,10 +4,10 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.mul_comm
  */
 $"Product is commutative": %StandardTheorem {
-  claim = $../../Functions/Operations/commutative(
+  claim = $../../Operations/commutative(
     X = {$"Natural numbers"},
     Z = {$"Natural numbers"},
-    ∗ = {$../../Functions/Operations/Operations(
+    ∗ = {$../../Operations/Operations(
         X = {$"Natural numbers"},
         Y = {$"Natural numbers"},
         Z = {$"Natural numbers"}

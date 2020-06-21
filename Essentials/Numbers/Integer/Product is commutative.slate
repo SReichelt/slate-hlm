@@ -4,10 +4,10 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.mul_comm
  */
 $"Product is commutative": %StandardTheorem {
-  claim = $../../Functions/Operations/commutative(
+  claim = $../../Operations/commutative(
     X = {$Integers},
     Z = {$Integers},
-    ∗ = {$../../Functions/Operations/Operations(
+    ∗ = {$../../Operations/Operations(
         X = {$Integers},
         Y = {$Integers},
         Z = {$Integers}

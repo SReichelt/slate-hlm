@@ -7,8 +7,15 @@
  */
 $closure(
   S: %Set(auto = %true),
-  ≺: %Element($../Endorelations(S = {S})),
-  p: %Element($../../Properties/Properties(S = {$../Endorelations(S = {S})}))
+  T: %Set(auto = %true),
+  ≺: %Element($../Relations(
+    S = {S},
+    T = {T}
+  )),
+  p: %Element($../../Properties/Properties(S = {$../Relations(
+    S = {S},
+    T = {T}
+  )}))
 ): %ExplicitOperator {
   notation = $Function(
     function = $SubSup(
@@ -17,20 +24,30 @@ $closure(
     ),
     arguments = [≺]
   ),
-  definition = [$../"generalized conjunction"(
-    S = {S},
-    T = {S},
-    R = {%subset(
-      #(⊂: %Element($../Endorelations(S = {S}))),
+  definition = [$../../Properties/"generalized conjunction"(
+    S = {$../../Sets/"Cartesian product"(
+      S = {S},
+      T = {T}
+    )},
+    P = {%subset(
+      #(⊂: %Element($../Relations(
+        S = {S},
+        T = {T}
+      ))),
       %and(
-        $../implies(
-          S = {S},
-          T = {S},
-          ≺ = {≺},
-          ⊂ = {⊂}
+        $../../Properties/implies(
+          S = {$../../Sets/"Cartesian product"(
+            S = {S},
+            T = {T}
+          )},
+          p = {≺},
+          q = {⊂}
         ),
         $../../Properties/"has property"(
-          S = {$../Endorelations(S = {S})},
+          S = {$../Relations(
+            S = {S},
+            T = {T}
+          )},
           p = {p},
           s = {⊂}
         )

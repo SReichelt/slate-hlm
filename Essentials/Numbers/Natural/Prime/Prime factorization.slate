@@ -14,7 +14,7 @@
 $"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTheorem {
   claim = %equals(
     n,
-    $../../../Functions/Operations/"Iterated operations"/"indexed by set with finite support"(
+    $../../../Operations/"Iterated operations"/"indexed by set with finite support"(
       X = {$../"Natural numbers"},
       ⨂ = {$../"Iterated operators"/"iterated product"},
       I = {$"Prime numbers"},
@@ -29,7 +29,7 @@ $"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTh
         )}}
       }
     ),
-    $../../../Functions/Operations/"Iterated operations"/"indexed by finite multiset"(
+    $../../../Operations/"Iterated operations"/"indexed by finite multiset"(
       X = {$../"Natural numbers"},
       ⨂ = {$../"Iterated operators"/"iterated product"},
       S = {$"Prime numbers"},

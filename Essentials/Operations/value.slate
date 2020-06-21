@@ -1,0 +1,55 @@
+%../../../../logics/hlm%
+
+$value(
+  X: %Set(auto = %true),
+  Y: %Set(auto = %true),
+  Z: %Set(auto = %true),
+  ∗: %Element($Operations(
+    X = {X},
+    Y = {Y},
+    Z = {Z}
+  )),
+  x: %Element(X),
+  y: %Element(Y)
+): %ExplicitOperator {
+  notation = $Operator(
+    symbol = ∗,
+    operands = [x, y]
+  ),
+  definition = [
+    %structuralCases(
+      ∗,
+      $Operations(
+        X = {X},
+        Y = {Y},
+        Z = {Z}
+      ),
+      [{
+        constructor = $Operations.operation,
+        parameters = #(a: %Binding(
+          X,
+          #(b: %Binding(
+            Y,
+            #(c: %Element(Z))
+          ))
+        )),
+        value = c[x,y]
+      }]
+    ),
+    $../Functions/value(
+      X = {$../Sets/"Cartesian product"(
+        S = {X},
+        T = {Y}
+      )},
+      Y = {Z},
+      f = {∗},
+      x = {$../Sets/"Cartesian product"(
+          S = {X},
+          T = {Y}
+        ).pair(
+          s = {x},
+          t = {y}
+      )}
+    )
+  ]
+}

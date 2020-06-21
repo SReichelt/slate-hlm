@@ -2,7 +2,7 @@
 
 $"commutative monoid"(
   M: %Set,
-  ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M})),
   e: %Element(M)
 ): %Predicate {
   notation = $Structure(
@@ -24,16 +24,16 @@ $"commutative monoid"(
       )})
     ),
     %and(
-      $../../Essentials/Functions/Operations/associative(
+      $../../Essentials/Operations/associative(
         X = {M},
         ∗ = {∗}
       ),
-      $../../Essentials/Functions/Operations/commutative(
+      $../../Essentials/Operations/commutative(
         X = {M},
         Z = {M},
         ∗ = {∗}
       ),
-      $../../Essentials/Functions/Operations/"identity element"(
+      $../../Essentials/Operations/"identity element"(
         X = {M},
         ∗ = {∗},
         e = {e}

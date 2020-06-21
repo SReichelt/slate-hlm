@@ -23,7 +23,7 @@ $"polynomial ring"(
       𝐑 = {𝐑},
       X = {X}
     )},
-    ⊕ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊕ = {$../../../Essentials/Operations/Operations(
         X = {$Polynomials(
           𝐑 = {𝐑},
           X = {X}
@@ -78,7 +78,7 @@ $"polynomial ring"(
           p = {p}
         )}}
     })},
-    ⊙ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊙ = {$../../../Essentials/Operations/Operations(
         X = {$Polynomials(
           𝐑 = {𝐑},
           X = {X}

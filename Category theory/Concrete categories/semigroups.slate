@@ -30,7 +30,7 @@ $semigroups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
           #(𝐄: %Element($../../Algebra/Semigroups/Semigroups)),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Semigroups/Semigroups)),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
                   𝐌 = {𝐄},
                   𝐍 = {𝐅}

@@ -1,0 +1,49 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Restriction/Operation
+ */
+$"inner operation restriction"(
+  X: %Set(auto = %true),
+  A: %Subset(X),
+  ∗: %Element($"Inner operations"(X = {X})),
+  _1: %Constraint(%forall(
+    #(
+      x: %Element(A),
+      y: %Element(%previous)
+    ),
+    %in(
+      $value(
+        X = {X},
+        Y = {X},
+        Z = {X},
+        ∗ = {∗},
+        x = {x},
+        y = {y}
+      ),
+      A
+    )
+  ))
+): %ExplicitOperator {
+  notation = $PostfixUnaryOperator(
+    symbol = $SubSup(
+      body = '∣',
+      sub = A
+    ),
+    operand = ∗,
+    minParenLevel = 3
+  ),
+  definition = [$../Functions/"codomain restriction"(
+    X = {$../Sets/"Cartesian product"(
+      S = {X},
+      T = {X}
+    )},
+    A = {$../Sets/"Cartesian product"(
+      S = {A},
+      T = {A}
+    )},
+    Y = {X},
+    B = {A},
+    f = {∗}
+  )]
+}

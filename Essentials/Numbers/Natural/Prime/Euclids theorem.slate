@@ -25,7 +25,7 @@ $"Euclids theorem": %StandardTheorem {
           Y = {$"Prime numbers"}
         ))
       )),
-      a: %Def($../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(
+      a: %Def($../../../Operations/"Iterated operations"/"indexed by natural number"(
         X = {$../"Natural numbers"},
         ⨂ = {$../"Iterated operators"/"iterated product"},
         n = {n},

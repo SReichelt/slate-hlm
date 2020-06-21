@@ -8,7 +8,7 @@ $"natural numbers with multiplication": %ExplicitOperator {
   notation = $Tuple(items = ['ℕ', '⋅']),
   definition = [$../Monoids.monoid(
     M = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
-    ∗ = {$../../../Essentials/Functions/Operations/Operations(
+    ∗ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Y = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Z = {$../../../Essentials/Numbers/Natural/"Natural numbers"}

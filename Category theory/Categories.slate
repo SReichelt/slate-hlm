@@ -33,7 +33,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         %previous,
         #(𝐅: %Binding(
           %previous,
-          #(∘: %Element($../Essentials/Functions/Operations/Operations(
+          #(∘: %Element($../Essentials/Operations/Operations(
             X = {M[𝐄,𝐅]},
             Y = {M[𝐃,𝐄]},
             Z = {M[𝐃,𝐅]}
@@ -52,12 +52,12 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         h: %Element(M[𝐘,𝐙])
       ),
       %equals(
-        $../Essentials/Functions/Operations/value(
+        $../Essentials/Operations/value(
           X = {M[𝐗,𝐙]},
           Y = {M[𝐖,𝐗]},
           Z = {M[𝐖,𝐙]},
           ∗ = {∘[𝐖,𝐗,𝐙]},
-          x = {$../Essentials/Functions/Operations/value(
+          x = {$../Essentials/Operations/value(
             X = {M[𝐘,𝐙]},
             Y = {M[𝐗,𝐘]},
             Z = {M[𝐗,𝐙]},
@@ -67,13 +67,13 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           )},
           y = {f}
         ),
-        $../Essentials/Functions/Operations/value(
+        $../Essentials/Operations/value(
           X = {M[𝐘,𝐙]},
           Y = {M[𝐖,𝐘]},
           Z = {M[𝐖,𝐙]},
           ∗ = {∘[𝐖,𝐘,𝐙]},
           x = {h},
-          y = {$../Essentials/Functions/Operations/value(
+          y = {$../Essentials/Operations/value(
             X = {M[𝐗,𝐘]},
             Y = {M[𝐖,𝐗]},
             Z = {M[𝐖,𝐘]},
@@ -91,7 +91,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         f: %Element(M[𝐗,𝐘])
       ),
       %equals(
-        $../Essentials/Functions/Operations/value(
+        $../Essentials/Operations/value(
           X = {M[𝐘,𝐘]},
           Y = {M[𝐗,𝐘]},
           Z = {M[𝐗,𝐘]},
@@ -99,7 +99,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           x = {i[𝐘]},
           y = {f}
         ),
-        $../Essentials/Functions/Operations/value(
+        $../Essentials/Operations/value(
           X = {M[𝐗,𝐘]},
           Y = {M[𝐗,𝐗]},
           Z = {M[𝐗,𝐘]},
@@ -121,7 +121,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           ),
           formula = %and(
             %equals(
-              $../Essentials/Functions/Operations/value(
+              $../Essentials/Operations/value(
                 X = {M[𝐗,𝐘]},
                 Y = {M[𝐘,𝐗]},
                 Z = {M[𝐘,𝐘]},
@@ -132,7 +132,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               i[𝐘]
             ),
             %equals(
-              $../Essentials/Functions/Operations/value(
+              $../Essentials/Operations/value(
                 X = {M[𝐘,𝐗]},
                 Y = {M[𝐗,𝐘]},
                 Z = {M[𝐗,𝐗]},
@@ -210,7 +210,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             %previous,
             #(𝐅: %Binding(
               %previous,
-              #(∘: %Element($../Essentials/Functions/Operations/Operations(
+              #(∘: %Element($../Essentials/Operations/Operations(
                 X = {M[𝐄,𝐅]},
                 Y = {M[𝐃,𝐄]},
                 Z = {M[𝐃,𝐅]}
@@ -229,12 +229,12 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             h: %Element(M[𝐘,𝐙])
           ),
           %equals(
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {M[𝐗,𝐙]},
               Y = {M[𝐖,𝐗]},
               Z = {M[𝐖,𝐙]},
               ∗ = {∘[𝐖,𝐗,𝐙]},
-              x = {$../Essentials/Functions/Operations/value(
+              x = {$../Essentials/Operations/value(
                 X = {M[𝐘,𝐙]},
                 Y = {M[𝐗,𝐘]},
                 Z = {M[𝐗,𝐙]},
@@ -244,13 +244,13 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               )},
               y = {f}
             ),
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {M[𝐘,𝐙]},
               Y = {M[𝐖,𝐘]},
               Z = {M[𝐖,𝐙]},
               ∗ = {∘[𝐖,𝐘,𝐙]},
               x = {h},
-              y = {$../Essentials/Functions/Operations/value(
+              y = {$../Essentials/Operations/value(
                 X = {M[𝐗,𝐘]},
                 Y = {M[𝐖,𝐗]},
                 Z = {M[𝐖,𝐘]},
@@ -268,7 +268,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             f: %Element(M[𝐗,𝐘])
           ),
           %equals(
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {M[𝐘,𝐘]},
               Y = {M[𝐗,𝐘]},
               Z = {M[𝐗,𝐘]},
@@ -276,7 +276,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               x = {i[𝐘]},
               y = {f}
             ),
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {M[𝐗,𝐘]},
               Y = {M[𝐗,𝐗]},
               Z = {M[𝐗,𝐘]},
@@ -298,7 +298,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               ),
               formula = %and(
                 %equals(
-                  $../Essentials/Functions/Operations/value(
+                  $../Essentials/Operations/value(
                     X = {M[𝐗,𝐘]},
                     Y = {M[𝐘,𝐗]},
                     Z = {M[𝐘,𝐘]},
@@ -309,7 +309,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
                   i[𝐘]
                 ),
                 %equals(
-                  $../Essentials/Functions/Operations/value(
+                  $../Essentials/Operations/value(
                     X = {M[𝐘,𝐗]},
                     Y = {M[𝐗,𝐘]},
                     Z = {M[𝐗,𝐗]},
@@ -344,7 +344,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             %previous,
             #(𝐅: %Binding(
               %previous,
-              #(∙: %Element($../Essentials/Functions/Operations/Operations(
+              #(∙: %Element($../Essentials/Operations/Operations(
                 X = {N[𝐄,𝐅]},
                 Y = {N[𝐃,𝐄]},
                 Z = {N[𝐃,𝐅]}
@@ -363,12 +363,12 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             h: %Element(N[𝐘,𝐙])
           ),
           %equals(
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {N[𝐗,𝐙]},
               Y = {N[𝐖,𝐗]},
               Z = {N[𝐖,𝐙]},
               ∗ = {∙[𝐖,𝐗,𝐙]},
-              x = {$../Essentials/Functions/Operations/value(
+              x = {$../Essentials/Operations/value(
                 X = {N[𝐘,𝐙]},
                 Y = {N[𝐗,𝐘]},
                 Z = {N[𝐗,𝐙]},
@@ -378,13 +378,13 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               )},
               y = {f}
             ),
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {N[𝐘,𝐙]},
               Y = {N[𝐖,𝐘]},
               Z = {N[𝐖,𝐙]},
               ∗ = {∙[𝐖,𝐘,𝐙]},
               x = {h},
-              y = {$../Essentials/Functions/Operations/value(
+              y = {$../Essentials/Operations/value(
                 X = {N[𝐗,𝐘]},
                 Y = {N[𝐖,𝐗]},
                 Z = {N[𝐖,𝐘]},
@@ -402,7 +402,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             f: %Element(N[𝐗,𝐘])
           ),
           %equals(
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {N[𝐘,𝐘]},
               Y = {N[𝐗,𝐘]},
               Z = {N[𝐗,𝐘]},
@@ -410,7 +410,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               x = {j[𝐘]},
               y = {f}
             ),
-            $../Essentials/Functions/Operations/value(
+            $../Essentials/Operations/value(
               X = {N[𝐗,𝐘]},
               Y = {N[𝐗,𝐗]},
               Z = {N[𝐗,𝐘]},
@@ -432,7 +432,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               ),
               formula = %and(
                 %equals(
-                  $../Essentials/Functions/Operations/value(
+                  $../Essentials/Operations/value(
                     X = {N[𝐗,𝐘]},
                     Y = {N[𝐘,𝐗]},
                     Z = {N[𝐘,𝐘]},
@@ -443,7 +443,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
                   j[𝐘]
                 ),
                 %equals(
-                  $../Essentials/Functions/Operations/value(
+                  $../Essentials/Operations/value(
                     X = {N[𝐘,𝐗]},
                     Y = {N[𝐗,𝐘]},
                     Z = {N[𝐗,𝐗]},

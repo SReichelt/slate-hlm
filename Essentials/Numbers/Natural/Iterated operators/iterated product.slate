@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @example `$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Natural numbers"}, ⨂ = {$"iterated product"}, n = {n}, i = {#(i: %Element($../Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
+ * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Natural numbers"}, ⨂ = {$"iterated product"}, n = {n}, i = {#(i: %Element($../Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_pi_notation
  *             * https://mathworld.wolfram.com/Product.html
@@ -9,8 +9,8 @@
  */
 $"iterated product": %ExplicitOperator {
   notation = '∏',
-  definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../"Natural numbers"}).operation(
-      ∗ = {$../../../Functions/Operations/Operations(
+  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = {$../"Natural numbers"}).operation(
+      ∗ = {$../../../Operations/Operations(
           X = {$../"Natural numbers"},
           Y = {$../"Natural numbers"},
           Z = {$../"Natural numbers"}

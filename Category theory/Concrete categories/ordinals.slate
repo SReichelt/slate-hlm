@@ -30,7 +30,7 @@ $ordinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Ex
           #(𝐄: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
           {𝐅 = {
             #(𝐅: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
                   α = {𝐄},
                   β = {𝐅}

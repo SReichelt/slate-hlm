@@ -1,0 +1,24 @@
+%../../../../logics/hlm%
+
+$restriction(
+  S: %Set(auto = %true),
+  p: %Element($Properties(S = {S})),
+  T: %Subset(S)
+): %ExplicitOperator {
+  notation = $PostfixUnaryOperator(
+    symbol = $SubSup(
+      body = '∣',
+      sub = T
+    ),
+    operand = p,
+    minParenLevel = 3
+  ),
+  definition = [$Properties(S = {T}).property(s = {
+      #(t: %Element(T)),
+      {p = {$"has property"(
+        S = {S},
+        p = {p},
+        s = {t}
+      )}}
+  })]
+}

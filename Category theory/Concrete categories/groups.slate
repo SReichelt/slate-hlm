@@ -35,7 +35,7 @@ $groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
           #(𝐄: %Element($../../Algebra/Groups/Groups)),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Groups/Groups)),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
                   𝐆 = {𝐄},
                   𝐇 = {𝐅}

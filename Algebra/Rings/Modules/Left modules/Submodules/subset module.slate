@@ -33,13 +33,13 @@ $"subset module"(
       constructor = $../"Left modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        ⊕: %Element($../../../../../Essentials/Operations/"Inner operations"(X = {M})),
         "0": %Element(M),
         ⊖: %Element($../../../../../Essentials/Functions/Functions(
           X = {M},
           Y = {M}
         )),
-        ⊙: %Element($../../../../../Essentials/Functions/Operations/Operations(
+        ⊙: %Element($../../../../../Essentials/Operations/Operations(
           X = {$../../../Carrier(𝐑 = {𝐑})},
           Y = {M},
           Z = {M}
@@ -55,7 +55,7 @@ $"subset module"(
       ),
       value = $../"Left modules"(𝐑 = {𝐑}).module(
           M = {S},
-          ⊕ = {$../../../../../Essentials/Functions/Operations/"inner operation restriction"(
+          ⊕ = {$../../../../../Essentials/Operations/"inner operation restriction"(
             X = {M},
             A = {S},
             ∗ = {⊕}
@@ -68,7 +68,7 @@ $"subset module"(
             B = {S},
             f = {⊖}
           )},
-          ⊙ = {$../../../../../Essentials/Functions/Operations/"left operation restriction"(
+          ⊙ = {$../../../../../Essentials/Operations/"left operation restriction"(
             X = {$../../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             A = {S},

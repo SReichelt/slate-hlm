@@ -21,7 +21,7 @@ $"semigroup with identity"(
       constructor = $../Magmas/Magmas.magma,
       parameters = #(
         S: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {S}))
       ),
       value = $Monoids.monoid(
         M = {S},

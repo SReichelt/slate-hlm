@@ -10,13 +10,13 @@
 $"left module"(
   𝐑: %Element($../../Rings),
   M: %Set,
-  ⊕: %Element($../../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+  ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = {M})),
   "0": %Element(M),
   ⊖: %Element($../../../../Essentials/Functions/Functions(
     X = {M},
     Y = {M}
   )),
-  ⊙: %Element($../../../../Essentials/Functions/Operations/Operations(
+  ⊙: %Element($../../../../Essentials/Operations/Operations(
     X = {$../../Carrier(𝐑 = {𝐑})},
     Y = {M},
     Z = {M}
@@ -47,7 +47,7 @@ $"left module"(
         e = {"0"},
         i = {⊖}
       ),
-      $../../../../Essentials/Functions/Operations/"left-distributive"(
+      $../../../../Essentials/Operations/"left-distributive"(
         X = {$../../Carrier(𝐑 = {𝐑})},
         Y = {M},
         ∗ = {⊙},
@@ -60,7 +60,7 @@ $"left module"(
           x: %Element(M)
         ),
         %equals(
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {$../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             Z = {M},
@@ -72,12 +72,12 @@ $"left module"(
             )},
             y = {x}
           ),
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {M},
             Y = {M},
             Z = {M},
             ∗ = {⊕},
-            x = {$../../../../Essentials/Functions/Operations/value(
+            x = {$../../../../Essentials/Operations/value(
               X = {$../../Carrier(𝐑 = {𝐑})},
               Y = {M},
               Z = {M},
@@ -85,7 +85,7 @@ $"left module"(
               x = {a},
               y = {x}
             )},
-            y = {$../../../../Essentials/Functions/Operations/value(
+            y = {$../../../../Essentials/Operations/value(
               X = {$../../Carrier(𝐑 = {𝐑})},
               Y = {M},
               Z = {M},
@@ -99,7 +99,7 @@ $"left module"(
       %forall(
         #(x: %Element(M)),
         %equals(
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {$../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             Z = {M},
@@ -110,7 +110,7 @@ $"left module"(
           "0"
         )
       ),
-      $../../../../Essentials/Functions/Operations/"right absorbing element"(
+      $../../../../Essentials/Operations/"right absorbing element"(
         X = {$../../Carrier(𝐑 = {𝐑})},
         Y = {M},
         ∗ = {⊙},
@@ -122,7 +122,7 @@ $"left module"(
           x: %Element(M)
         ),
         %equals(
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {$../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             Z = {M},
@@ -133,7 +133,7 @@ $"left module"(
             )},
             y = {x}
           ),
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {$../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             Z = {M},
@@ -150,7 +150,7 @@ $"left module"(
             X = {M},
             Y = {M},
             f = {⊖},
-            x = {$../../../../Essentials/Functions/Operations/value(
+            x = {$../../../../Essentials/Operations/value(
               X = {$../../Carrier(𝐑 = {𝐑})},
               Y = {M},
               Z = {M},
@@ -168,7 +168,7 @@ $"left module"(
           x: %Element(M)
         ),
         %equals(
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {$../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             Z = {M},
@@ -180,13 +180,13 @@ $"left module"(
             )},
             y = {x}
           ),
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {$../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             Z = {M},
             ∗ = {⊙},
             x = {a},
-            y = {$../../../../Essentials/Functions/Operations/value(
+            y = {$../../../../Essentials/Operations/value(
               X = {$../../Carrier(𝐑 = {𝐑})},
               Y = {M},
               Z = {M},
@@ -197,7 +197,7 @@ $"left module"(
           )
         )
       ),
-      $../../../../Essentials/Functions/Operations/"left identity element"(
+      $../../../../Essentials/Operations/"left identity element"(
         X = {$../../Carrier(𝐑 = {𝐑})},
         Y = {M},
         ∗ = {⊙},
@@ -211,7 +211,7 @@ $"left module"(
         e = {"0"},
         i = {⊖}
       ),
-      $../../../../Essentials/Functions/Operations/"left-distributive"(
+      $../../../../Essentials/Operations/"left-distributive"(
         X = {$../../Carrier(𝐑 = {𝐑})},
         Y = {M},
         ∗ = {⊙},
@@ -224,7 +224,7 @@ $"left module"(
           x: %Element(M)
         ),
         %equals(
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {$../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             Z = {M},
@@ -236,12 +236,12 @@ $"left module"(
             )},
             y = {x}
           ),
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {M},
             Y = {M},
             Z = {M},
             ∗ = {⊕},
-            x = {$../../../../Essentials/Functions/Operations/value(
+            x = {$../../../../Essentials/Operations/value(
               X = {$../../Carrier(𝐑 = {𝐑})},
               Y = {M},
               Z = {M},
@@ -249,7 +249,7 @@ $"left module"(
               x = {a},
               y = {x}
             )},
-            y = {$../../../../Essentials/Functions/Operations/value(
+            y = {$../../../../Essentials/Operations/value(
               X = {$../../Carrier(𝐑 = {𝐑})},
               Y = {M},
               Z = {M},
@@ -267,7 +267,7 @@ $"left module"(
           x: %Element(M)
         ),
         %equals(
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {$../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             Z = {M},
@@ -279,13 +279,13 @@ $"left module"(
             )},
             y = {x}
           ),
-          $../../../../Essentials/Functions/Operations/value(
+          $../../../../Essentials/Operations/value(
             X = {$../../Carrier(𝐑 = {𝐑})},
             Y = {M},
             Z = {M},
             ∗ = {⊙},
             x = {a},
-            y = {$../../../../Essentials/Functions/Operations/value(
+            y = {$../../../../Essentials/Operations/value(
               X = {$../../Carrier(𝐑 = {𝐑})},
               Y = {M},
               Z = {M},
@@ -296,7 +296,7 @@ $"left module"(
           )
         )
       ),
-      $../../../../Essentials/Functions/Operations/"left identity element"(
+      $../../../../Essentials/Operations/"left identity element"(
         X = {$../../Carrier(𝐑 = {𝐑})},
         Y = {M},
         ∗ = {⊙},

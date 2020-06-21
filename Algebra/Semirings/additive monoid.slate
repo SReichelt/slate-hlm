@@ -15,9 +15,9 @@ $"additive monoid"(𝐑: %Element($Semirings)): %ExplicitOperator {
       constructor = $Semirings.semiring,
       parameters = #(
         R: %Set,
-        ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
         "0": %Element(R),
-        ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
         "1": %Element(R),
         _1: %Constraint($semiring(
           R = {R},

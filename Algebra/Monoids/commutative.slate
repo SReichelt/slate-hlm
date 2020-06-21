@@ -15,7 +15,7 @@ $commutative(𝐌: %Element($Monoids)): %Predicate {
       constructor = $Monoids.monoid,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M})),
         e: %Element(M),
         _1: %Constraint($monoid(
           M = {M},
@@ -23,7 +23,7 @@ $commutative(𝐌: %Element($Monoids)): %Predicate {
           e = {e}
         ))
       ),
-      value = $../../Essentials/Functions/Operations/commutative(
+      value = $../../Essentials/Operations/commutative(
         X = {M},
         Z = {M},
         ∗ = {∗}

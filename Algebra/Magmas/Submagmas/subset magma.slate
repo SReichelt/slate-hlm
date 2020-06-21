@@ -22,11 +22,11 @@ $"subset magma"(
       constructor = $../Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = {M}))
       ),
       value = $../Magmas.magma(
         M = {S},
-        ∗ = {$../../../Essentials/Functions/Operations/"inner operation restriction"(
+        ∗ = {$../../../Essentials/Operations/"inner operation restriction"(
           X = {M},
           A = {S},
           ∗ = {∗}

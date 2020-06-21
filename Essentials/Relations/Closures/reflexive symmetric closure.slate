@@ -11,9 +11,16 @@ $"reflexive symmetric closure"(
   definition = [
     $closure(
       S = {S},
+      T = {S},
       ≺ = {≺},
-      p = {$../../Properties/Properties(S = {$../Endorelations(S = {S})}).property(s = {
-          #(⊂: %Element($../Endorelations(S = {S}))),
+      p = {$../../Properties/Properties(S = {$../Relations(
+          S = {S},
+          T = {S}
+        )}).property(s = {
+          #(⊂: %Element($../Relations(
+            S = {S},
+            T = {S}
+          ))),
           {p = {%and(
             $../reflexive(
               S = {S},

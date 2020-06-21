@@ -22,9 +22,9 @@ $"subset semiring"(
       constructor = $../Semirings.semiring,
       parameters = #(
         R: %Set,
-        ⊕: %Element($../../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        ⊕: %Element($../../../Essentials/Operations/"Inner operations"(X = {R})),
         "0": %Element(R),
-        ⊙: %Element($../../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        ⊙: %Element($../../../Essentials/Operations/"Inner operations"(X = {R})),
         "1": %Element(R),
         _1: %Constraint($../semiring(
           R = {R},
@@ -36,13 +36,13 @@ $"subset semiring"(
       ),
       value = $../Semirings.semiring(
         R = {S},
-        ⊕ = {$../../../Essentials/Functions/Operations/"inner operation restriction"(
+        ⊕ = {$../../../Essentials/Operations/"inner operation restriction"(
           X = {R},
           A = {S},
           ∗ = {⊕}
         )},
         "0" = {"0"},
-        ⊙ = {$../../../Essentials/Functions/Operations/"inner operation restriction"(
+        ⊙ = {$../../../Essentials/Operations/"inner operation restriction"(
           X = {R},
           A = {S},
           ∗ = {⊙}

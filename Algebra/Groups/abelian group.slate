@@ -9,7 +9,7 @@
  */
 $"abelian group"(
   G: %Set,
-  ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
   e: %Element(G),
   i: %Element($../../Essentials/Functions/Functions(
     X = {G},
@@ -44,7 +44,7 @@ $"abelian group"(
         e = {e},
         i = {i}
       ),
-      $../../Essentials/Functions/Operations/commutative(
+      $../../Essentials/Operations/commutative(
         X = {G},
         Z = {G},
         ∗ = {∗}

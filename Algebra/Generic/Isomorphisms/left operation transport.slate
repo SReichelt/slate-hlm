@@ -8,7 +8,7 @@ $"left operation transport"(
     X = {X},
     Y = {Y}
   )),
-  ∗: %Element($../../../Essentials/Functions/Operations/Operations(
+  ∗: %Element($../../../Essentials/Operations/Operations(
     X = {S},
     Y = {X},
     Z = {X}
@@ -22,13 +22,13 @@ $"left operation transport"(
   definition = [
     %structuralCases(
       ∗,
-      $../../../Essentials/Functions/Operations/Operations(
+      $../../../Essentials/Operations/Operations(
         X = {S},
         Y = {X},
         Z = {X}
       ),
       [{
-        constructor = $../../../Essentials/Functions/Operations/Operations.operation,
+        constructor = $../../../Essentials/Operations/Operations.operation,
         parameters = #(s: %Binding(
           S,
           #(x: %Binding(
@@ -36,7 +36,7 @@ $"left operation transport"(
             #(z: %Element(X))
           ))
         )),
-        value = $../../../Essentials/Functions/Operations/Operations(
+        value = $../../../Essentials/Operations/Operations(
             X = {S},
             Y = {Y},
             Z = {Y}

@@ -10,7 +10,7 @@
 $Groups: %Construction {
   $group(
     G: %Set,
-    ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+    ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
     e: %Element(G),
     i: %Element($../../Essentials/Functions/Functions(
       X = {G},
@@ -30,7 +30,7 @@ $Groups: %Construction {
     equalityDefinition = {
       leftParameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(
           X = {G},
@@ -45,7 +45,7 @@ $Groups: %Construction {
       ),
       rightParameters = #(
         H: %Set,
-        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {H})),
+        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = {H})),
         f: %Element(H),
         j: %Element($../../Essentials/Functions/Functions(
           X = {H},

@@ -7,7 +7,7 @@ $"inner operation transport"(
     X = {X},
     Y = {Y}
   )),
-  ∗: %Element($../../../Essentials/Functions/Operations/"Inner operations"(X = {X}))
+  ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = {X}))
 ): %ExplicitOperator {
   notation = $Function(
     function = φ,
@@ -17,13 +17,13 @@ $"inner operation transport"(
   definition = [
     %structuralCases(
       ∗,
-      $../../../Essentials/Functions/Operations/Operations(
+      $../../../Essentials/Operations/Operations(
         X = {X},
         Y = {X},
         Z = {X}
       ),
       [{
-        constructor = $../../../Essentials/Functions/Operations/Operations.operation,
+        constructor = $../../../Essentials/Operations/Operations.operation,
         parameters = #(x_1: %Binding(
           X,
           #(x_2: %Binding(
@@ -31,7 +31,7 @@ $"inner operation transport"(
             #(z: %Element(X))
           ))
         )),
-        value = $../../../Essentials/Functions/Operations/Operations(
+        value = $../../../Essentials/Operations/Operations(
             X = {Y},
             Y = {Y},
             Z = {Y}

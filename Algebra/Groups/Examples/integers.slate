@@ -8,7 +8,7 @@ $integers: %ExplicitOperator {
   notation = 'ℤ',
   definition = [$../Groups.group(
     G = {$../../../Essentials/Numbers/Integer/Integers},
-    ∗ = {$../../../Essentials/Functions/Operations/Operations(
+    ∗ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Integer/Integers},
         Y = {$../../../Essentials/Numbers/Integer/Integers},
         Z = {$../../../Essentials/Numbers/Integer/Integers}

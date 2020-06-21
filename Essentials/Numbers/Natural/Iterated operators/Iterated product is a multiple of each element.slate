@@ -10,7 +10,7 @@ $"Iterated product is a multiple of each element"(
 ): %StandardTheorem {
   claim = $../divisible(
     m = {a[j]},
-    n = {$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(
+    n = {$../../../Operations/"Iterated operations"/"indexed by natural number"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated product"},
       n = {n},

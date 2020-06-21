@@ -28,13 +28,13 @@ $Carrier(
       constructor = $"Left modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = {M})),
         "0": %Element(M),
         ⊖: %Element($../../../../Essentials/Functions/Functions(
           X = {M},
           Y = {M}
         )),
-        ⊙: %Element($../../../../Essentials/Functions/Operations/Operations(
+        ⊙: %Element($../../../../Essentials/Operations/Operations(
           X = {$../../Carrier(𝐑 = {𝐑})},
           Y = {M},
           Z = {M}

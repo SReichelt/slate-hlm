@@ -21,7 +21,7 @@ $"matrix module"(
         m = {m},
         n = {n}
       )},
-      ⊕ = {$../../../../../Essentials/Functions/Operations/Operations(
+      ⊕ = {$../../../../../Essentials/Operations/Operations(
           X = {$../../../Matrices/Matrices(
             𝐑 = {𝐑},
             m = {m},
@@ -87,7 +87,7 @@ $"matrix module"(
             A = {A}
           )}}
       })},
-      ⊙ = {$../../../../../Essentials/Functions/Operations/Operations(
+      ⊙ = {$../../../../../Essentials/Operations/Operations(
           X = {$../../../Carrier(𝐑 = {𝐑})},
           Y = {$../../../Matrices/Matrices(
             𝐑 = {𝐑},

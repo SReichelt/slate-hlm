@@ -22,7 +22,7 @@ $"Fundamental theorem of arithmetic"(n: %Element($../Subsets/"Positive numbers")
     ),
     formula = %equals(
       n,
-      $../../../Functions/Operations/"Iterated operations"/"indexed by finite multiset"(
+      $../../../Operations/"Iterated operations"/"indexed by finite multiset"(
         X = {$../"Natural numbers"},
         ⨂ = {$../"Iterated operators"/"iterated product"},
         S = {$"Prime numbers"},

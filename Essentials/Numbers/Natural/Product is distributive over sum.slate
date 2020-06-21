@@ -4,9 +4,9 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.distrib
  */
 $"Product is distributive over sum": %StandardTheorem {
-  claim = $../../Functions/Operations/distributive(
+  claim = $../../Operations/distributive(
     X = {$"Natural numbers"},
-    ∗ = {$../../Functions/Operations/Operations(
+    ∗ = {$../../Operations/Operations(
         X = {$"Natural numbers"},
         Y = {$"Natural numbers"},
         Z = {$"Natural numbers"}
@@ -20,7 +20,7 @@ $"Product is distributive over sum": %StandardTheorem {
           )}}
         }}
     })},
-    ⋆ = {$../../Functions/Operations/Operations(
+    ⋆ = {$../../Operations/Operations(
         X = {$"Natural numbers"},
         Y = {$"Natural numbers"},
         Z = {$"Natural numbers"}

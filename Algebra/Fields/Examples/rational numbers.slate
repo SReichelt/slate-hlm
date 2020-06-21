@@ -7,7 +7,7 @@ $"rational numbers": %ExplicitOperator {
   notation = 'ℚ',
   definition = [$../../Rings/Rings.ring(
     R = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
-    ⊕ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊕ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
@@ -29,7 +29,7 @@ $"rational numbers": %ExplicitOperator {
         #(a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
         {y = {$../../../Essentials/Numbers/Rational/inverse(a = {a})}}
     })},
-    ⊙ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊙ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"}

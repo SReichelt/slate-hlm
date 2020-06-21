@@ -23,9 +23,9 @@ $"identity element"(
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
       ),
-      value = $../../Essentials/Functions/Operations/"identity element"(
+      value = $../../Essentials/Operations/"identity element"(
         X = {M},
         ∗ = {∗},
         e = {e}

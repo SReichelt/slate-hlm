@@ -9,7 +9,7 @@ $integers: %ExplicitOperator {
   notation = 'ℤ',
   definition = [$../Rings.ring(
     R = {$../../../Essentials/Numbers/Integer/Integers},
-    ⊕ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊕ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Integer/Integers},
         Y = {$../../../Essentials/Numbers/Integer/Integers},
         Z = {$../../../Essentials/Numbers/Integer/Integers}
@@ -31,7 +31,7 @@ $integers: %ExplicitOperator {
         #(a: %Element($../../../Essentials/Numbers/Integer/Integers)),
         {y = {$../../../Essentials/Numbers/Integer/inverse(a = {a})}}
     })},
-    ⊙ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊙ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Integer/Integers},
         Y = {$../../../Essentials/Numbers/Integer/Integers},
         Z = {$../../../Essentials/Numbers/Integer/Integers}

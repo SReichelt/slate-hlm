@@ -7,7 +7,7 @@ $"real numbers": %ExplicitOperator {
   notation = 'ℝ',
   definition = [$../../Rings/Rings.ring(
     R = {$../../../Essentials/Numbers/Real/"Real numbers"},
-    ⊕ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊕ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Real/"Real numbers"},
         Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
         Z = {$../../../Essentials/Numbers/Real/"Real numbers"}
@@ -29,7 +29,7 @@ $"real numbers": %ExplicitOperator {
         #(a: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
         {y = {$../../../Essentials/Numbers/Real/inverse(a = {a})}}
     })},
-    ⊙ = {$../../../Essentials/Functions/Operations/Operations(
+    ⊙ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Real/"Real numbers"},
         Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
         Z = {$../../../Essentials/Numbers/Real/"Real numbers"}

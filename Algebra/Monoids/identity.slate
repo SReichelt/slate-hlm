@@ -12,7 +12,7 @@ $identity(𝐌: %Element($Monoids)): %ExplicitOperator {
       constructor = $Monoids.monoid,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M})),
         e: %Element(M),
         _1: %Constraint($monoid(
           M = {M},

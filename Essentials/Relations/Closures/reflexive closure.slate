@@ -17,20 +17,29 @@ $"reflexive closure"(
   definition = [
     $closure(
       S = {S},
+      T = {S},
       ≺ = {≺},
-      p = {$../../Properties/Properties(S = {$../Endorelations(S = {S})}).property(s = {
-          #(⪯: %Element($../Endorelations(S = {S}))),
+      p = {$../../Properties/Properties(S = {$../Relations(
+          S = {S},
+          T = {S}
+        )}).property(s = {
+          #(⪯: %Element($../Relations(
+            S = {S},
+            T = {S}
+          ))),
           {p = {$../reflexive(
             S = {S},
             ⪯ = {⪯}
           )}}
       })}
     ),
-    $../disjunction(
-      S = {S},
-      T = {S},
-      ≺ = {≺},
-      ⊂ = {$../equality(S = {S})}
+    $../../Properties/disjunction(
+      S = {$../../Sets/"Cartesian product"(
+        S = {S},
+        T = {S}
+      )},
+      p = {≺},
+      q = {$../equality(S = {S})}
     )
   ]
 }

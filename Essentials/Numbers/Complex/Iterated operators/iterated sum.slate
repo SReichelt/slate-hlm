@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @example `$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Complex numbers"}, ⨂ = {$"iterated sum"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
+ * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Complex numbers"}, ⨂ = {$"iterated sum"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Summation
  *             * https://mathworld.wolfram.com/Sum.html
@@ -9,8 +9,8 @@
  */
 $"iterated sum": %ExplicitOperator {
   notation = '∑',
-  definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../"Complex numbers"}).operation(
-      ∗ = {$../../../Functions/Operations/Operations(
+  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = {$../"Complex numbers"}).operation(
+      ∗ = {$../../../Operations/Operations(
           X = {$../"Complex numbers"},
           Y = {$../"Complex numbers"},
           Z = {$../"Complex numbers"}

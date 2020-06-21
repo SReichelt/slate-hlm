@@ -1,0 +1,70 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Distributive_property
+ *             * https://mathworld.wolfram.com/Distributive.html
+ *             * https://proofwiki.org/wiki/Definition:Distributive_Operation/Right
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#right_distributive
+ */
+$"right-distributive"(
+  X: %Set(auto = %true),
+  Y: %Set(auto = %true),
+  ∗: %Element($Operations(
+    X = {Y},
+    Y = {X},
+    Z = {Y}
+  )),
+  ⋆: %Element($"Inner operations"(X = {Y}))
+): %Predicate {
+  notation = $RelationalProperty(
+    operands = [∗, ⋆],
+    property = 'right-distributive',
+    preposition = 'over'
+  ),
+  definition = [%forall(
+    #(
+      x: %Element(X),
+      y: %Element(Y),
+      z: %Element(%previous)
+    ),
+    %equals(
+      $value(
+        X = {Y},
+        Y = {X},
+        Z = {Y},
+        ∗ = {∗},
+        x = {$value(
+          X = {Y},
+          Y = {Y},
+          Z = {Y},
+          ∗ = {⋆},
+          x = {y},
+          y = {z}
+        )},
+        y = {x}
+      ),
+      $value(
+        X = {Y},
+        Y = {Y},
+        Z = {Y},
+        ∗ = {⋆},
+        x = {$value(
+          X = {Y},
+          Y = {X},
+          Z = {Y},
+          ∗ = {∗},
+          x = {y},
+          y = {x}
+        )},
+        y = {$value(
+          X = {Y},
+          Y = {X},
+          Z = {Y},
+          ∗ = {∗},
+          x = {z},
+          y = {x}
+        )}
+      )
+    )
+  )]
+}

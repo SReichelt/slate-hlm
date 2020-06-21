@@ -1,9 +1,9 @@
 %../../../../../logics/hlm%
 
 $"Product is associative": %StandardTheorem {
-  claim = $../../Functions/Operations/associative(
+  claim = $../../Operations/associative(
     X = {$"Complex numbers"},
-    ∗ = {$../../Functions/Operations/Operations(
+    ∗ = {$../../Operations/Operations(
         X = {$"Complex numbers"},
         Y = {$"Complex numbers"},
         Z = {$"Complex numbers"}

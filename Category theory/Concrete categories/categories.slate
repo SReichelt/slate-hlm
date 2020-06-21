@@ -43,7 +43,7 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
           #(𝓔: %Element($../Categories(u = {u}))),
           {𝐅 = {
             #(𝓕: %Element($../Categories(u = {u}))),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../Functors/Functors(
                   u = {u},
                   v = {u},

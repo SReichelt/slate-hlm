@@ -6,11 +6,6 @@ $Relations: %Section {
     %item($Relations),
     %item($related),
     %item($converse),
-    %item($implies),
-    %item($conjunction),
-    %item($disjunction),
-    %item($"generalized conjunction"),
-    %item($"generalized disjunction"),
     %item($mapping),
     %item($"mapping value"),
     %item(

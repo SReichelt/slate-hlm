@@ -9,14 +9,14 @@
  */
 $semigroup(
   M: %Set,
-  ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
 ): %Predicate {
   notation = $Structure(
     items = [M, ∗],
     singular = 'semigroup',
     plural = 'semigroups'
   ),
-  definition = [$../../Essentials/Functions/Operations/associative(
+  definition = [$../../Essentials/Operations/associative(
     X = {M},
     ∗ = {∗}
   )]

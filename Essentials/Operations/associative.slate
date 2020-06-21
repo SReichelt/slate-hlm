@@ -1,0 +1,56 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Associative_property
+ *             * https://mathworld.wolfram.com/Associative.html
+ *             * https://proofwiki.org/wiki/Definition:Associative_Operation
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#associative
+ */
+$associative(
+  X: %Set(auto = %true),
+  ∗: %Element($"Inner operations"(X = {X}))
+): %Predicate {
+  notation = $Property(
+    operand = ∗,
+    property = 'associative'
+  ),
+  definition = [%forall(
+    #(
+      x: %Element(X),
+      y: %Element(%previous),
+      z: %Element(%previous)
+    ),
+    %equals(
+      $value(
+        X = {X},
+        Y = {X},
+        Z = {X},
+        ∗ = {∗},
+        x = {$value(
+          X = {X},
+          Y = {X},
+          Z = {X},
+          ∗ = {∗},
+          x = {x},
+          y = {y}
+        )},
+        y = {z}
+      ),
+      $value(
+        X = {X},
+        Y = {X},
+        Z = {X},
+        ∗ = {∗},
+        x = {x},
+        y = {$value(
+          X = {X},
+          Y = {X},
+          Z = {X},
+          ∗ = {∗},
+          x = {y},
+          y = {z}
+        )}
+      )
+    )
+  )]
+}

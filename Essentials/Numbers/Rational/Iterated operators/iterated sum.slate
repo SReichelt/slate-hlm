@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @example `$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Rational numbers"}, ⨂ = {$"iterated sum"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
+ * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Rational numbers"}, ⨂ = {$"iterated sum"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Summation
  *             * https://mathworld.wolfram.com/Sum.html
@@ -9,8 +9,8 @@
  */
 $"iterated sum": %ExplicitOperator {
   notation = '∑',
-  definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../"Rational numbers"}).operation(
-      ∗ = {$../../../Functions/Operations/Operations(
+  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = {$../"Rational numbers"}).operation(
+      ∗ = {$../../../Operations/Operations(
           X = {$../"Rational numbers"},
           Y = {$../"Rational numbers"},
           Z = {$../"Rational numbers"}

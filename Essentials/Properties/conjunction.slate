@@ -1,0 +1,31 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition is the equivalent of `$../Sets/Intersection`.
+ */
+$conjunction(
+  S: %Set(auto = %true),
+  p: %Element($Properties(S = {S})),
+  q: %Element(%previous)
+): %ExplicitOperator {
+  notation = $Operator(
+    symbol = '∧',
+    operands = [p, q],
+    space = ' '
+  ),
+  definition = [$Properties(S = {S}).property(s = {
+      #(s: %Element(S)),
+      {p = {%and(
+        $"has property"(
+          S = {S},
+          p = {p},
+          s = {s}
+        ),
+        $"has property"(
+          S = {S},
+          p = {q},
+          s = {s}
+        )
+      )}}
+  })]
+}

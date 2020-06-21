@@ -5,7 +5,7 @@ $"Iterated sum over constant"(
   a: %Element(%previous)
 ): %StandardTheorem {
   claim = %equals(
-    $../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(
+    $../../../Operations/"Iterated operations"/"indexed by natural number"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated sum"},
       i = {

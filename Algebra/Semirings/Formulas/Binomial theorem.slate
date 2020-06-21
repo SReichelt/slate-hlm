@@ -23,7 +23,7 @@ $"Binomial theorem"(
       )},
       n = {n}
     ),
-    $../../../Essentials/Functions/Operations/"Iterated operations"/"indexed by integer"(
+    $../../../Essentials/Operations/"Iterated operations"/"indexed by integer"(
       X = {$../Carrier(𝐑 = {𝐑})},
       ⨂ = {$../"Iterated operations"/"iterated sum"(𝐑 = {𝐑})},
       j = {$../../../Essentials/Numbers/Natural/number(value = 0)},

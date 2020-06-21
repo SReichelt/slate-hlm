@@ -1,0 +1,25 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition is the equivalent of `$../Sets/"Generalized operators"/"Generalized intersection using power set"`.
+ */
+$"generalized conjunction"(
+  S: %Set(auto = %true),
+  P: %Subset($Properties(S = {S}))
+): %ExplicitOperator {
+  notation = $PrefixUnaryOperator(
+    symbol = '⋀',
+    operand = P
+  ),
+  definition = [$Properties(S = {S}).property(s = {
+      #(s: %Element(S)),
+      {p = {%forall(
+        #(p: %Element(P)),
+        $"has property"(
+          S = {S},
+          p = {p},
+          s = {s}
+        )
+      )}}
+  })]
+}

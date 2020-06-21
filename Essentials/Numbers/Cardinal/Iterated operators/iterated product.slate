@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @example `$../../../Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Cardinal numbers"}, ⨂ = {$"iterated product"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
+ * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Cardinal numbers"}, ⨂ = {$"iterated product"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_pi_notation
  *             * https://mathworld.wolfram.com/Product.html
@@ -9,8 +9,8 @@
  */
 $"iterated product": %ExplicitOperator {
   notation = '∏',
-  definition = [$../../../Functions/Operations/"Iterated operations"/"Iterated operations"(X = {$../"Cardinal numbers"}).operation(
-      ∗ = {$../../../Functions/Operations/Operations(
+  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = {$../"Cardinal numbers"}).operation(
+      ∗ = {$../../../Operations/Operations(
           X = {$../"Cardinal numbers"},
           Y = {$../"Cardinal numbers"},
           Z = {$../"Cardinal numbers"}

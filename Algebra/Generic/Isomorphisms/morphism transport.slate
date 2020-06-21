@@ -19,7 +19,7 @@ $"morphism transport"(
     X = {X_3},
     Y = {Y_3}
   )),
-  ∙: %Element($../../../Essentials/Functions/Operations/Operations(
+  ∙: %Element($../../../Essentials/Operations/Operations(
     X = {X_1},
     Y = {X_2},
     Z = {X_3}
@@ -33,13 +33,13 @@ $"morphism transport"(
   definition = [
     %structuralCases(
       ∙,
-      $../../../Essentials/Functions/Operations/Operations(
+      $../../../Essentials/Operations/Operations(
         X = {X_1},
         Y = {X_2},
         Z = {X_3}
       ),
       [{
-        constructor = $../../../Essentials/Functions/Operations/Operations.operation,
+        constructor = $../../../Essentials/Operations/Operations.operation,
         parameters = #(x_1: %Binding(
           X_1,
           #(x_2: %Binding(
@@ -47,7 +47,7 @@ $"morphism transport"(
             #(z: %Element(X_3))
           ))
         )),
-        value = $../../../Essentials/Functions/Operations/Operations(
+        value = $../../../Essentials/Operations/Operations(
             X = {Y_1},
             Y = {Y_2},
             Z = {Y_3}

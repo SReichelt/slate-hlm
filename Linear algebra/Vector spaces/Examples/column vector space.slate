@@ -20,7 +20,7 @@ $"column vector space"(
           𝐑 = {𝐅},
           n = {n}
         )},
-        ⊕ = {$../../../Essentials/Functions/Operations/Operations(
+        ⊕ = {$../../../Essentials/Operations/Operations(
             X = {$../../../Algebra/Rings/Matrices/Vectors(
               𝐑 = {𝐅},
               n = {n}
@@ -78,7 +78,7 @@ $"column vector space"(
               A = {v}
             )}}
         })},
-        ⊙ = {$../../../Essentials/Functions/Operations/Operations(
+        ⊙ = {$../../../Essentials/Operations/Operations(
             X = {$../../../Algebra/Rings/Carrier(𝐑 = {𝐅})},
             Y = {$../../../Algebra/Rings/Matrices/Vectors(
               𝐑 = {𝐅},

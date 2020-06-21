@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @example `$../../Essentials/Functions/Operations/"Iterated operations"/"indexed by natural number"(X = {$Carrier(𝐆 = {𝐆})}, ⨂ = {$"iterated operation"(𝐆 = {𝐆})}, n = {n}, i = {#(i: %Element($../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
+ * @example `$../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(X = {$Carrier(𝐆 = {𝐆})}, ⨂ = {$"iterated operation"(𝐆 = {𝐆})}, n = {n}, i = {#(i: %Element($../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_pi_notation
  *             * https://mathworld.wolfram.com/Product.html
@@ -22,7 +22,7 @@ $"iterated operation"(
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(
           X = {G},
@@ -35,7 +35,7 @@ $"iterated operation"(
           i = {i}
         ))
       ),
-      value = $../../Essentials/Functions/Operations/"Iterated operations"/"Iterated operations"(X = {G}).operation(
+      value = $../../Essentials/Operations/"Iterated operations"/"Iterated operations"(X = {G}).operation(
           ∗ = {∗},
           e = {e}
       )

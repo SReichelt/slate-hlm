@@ -25,7 +25,7 @@ $"subset monoid"(
       constructor = $../Monoids.monoid,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../../Essentials/Functions/Operations/"Inner operations"(X = {M})),
+        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = {M})),
         e: %Element(M),
         _1: %Constraint($../monoid(
           M = {M},
@@ -35,7 +35,7 @@ $"subset monoid"(
       ),
       value = $../Monoids.monoid(
         M = {S},
-        ∗ = {$../../../Essentials/Functions/Operations/"inner operation restriction"(
+        ∗ = {$../../../Essentials/Operations/"inner operation restriction"(
           X = {M},
           A = {S},
           ∗ = {∗}

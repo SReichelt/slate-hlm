@@ -32,7 +32,7 @@ $magmas(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
           #(𝐄: %Element($../../Algebra/Magmas/Magmas)),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Magmas/Magmas)),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
                   𝐌 = {𝐄},
                   𝐍 = {𝐅}

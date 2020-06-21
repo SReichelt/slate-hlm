@@ -35,7 +35,7 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
           #(𝐄: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
           {𝐅 = {
             #(𝐅: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
                   κ = {𝐄},
                   μ = {𝐅}

@@ -1,0 +1,33 @@
+%../../../../logics/hlm%
+
+/**
+ * @remarks This definition is the equivalent of ⊆.
+ *
+ * @references * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#contains (for endorelations only)
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#subrelation (ditto)
+ */
+$implies(
+  S: %Set(auto = %true),
+  p: %Element($Properties(S = {S})),
+  q: %Element(%previous)
+): %Predicate {
+  notation = $ImplicationRelation(
+    operands = [p, q],
+    space = ' '
+  ),
+  definition = [%forall(
+    #(
+      s: %Element(S),
+      _1: %Constraint($"has property"(
+        S = {S},
+        p = {p},
+        s = {s}
+      ))
+    ),
+    $"has property"(
+      S = {S},
+      p = {q},
+      s = {s}
+    )
+  )]
+}

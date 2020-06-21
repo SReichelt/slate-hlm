@@ -34,7 +34,7 @@ $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
           #(𝐄: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
                   𝐒 = {𝐄},
                   𝐓 = {𝐅}

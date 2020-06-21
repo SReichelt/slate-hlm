@@ -22,7 +22,7 @@ $Carrier(𝐆: %Element($Groups)): %SetOperator {
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(
           X = {G},

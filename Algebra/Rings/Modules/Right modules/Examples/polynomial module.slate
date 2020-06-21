@@ -18,7 +18,7 @@ $"polynomial module"(
         𝐑 = {𝐑},
         X = {X}
       )},
-      ⊕ = {$../../../../../Essentials/Functions/Operations/Operations(
+      ⊕ = {$../../../../../Essentials/Operations/Operations(
           X = {$../../../Polynomials/Polynomials(
             𝐑 = {𝐑},
             X = {X}
@@ -73,7 +73,7 @@ $"polynomial module"(
             p = {p}
           )}}
       })},
-      ⊙ = {$../../../../../Essentials/Functions/Operations/Operations(
+      ⊙ = {$../../../../../Essentials/Operations/Operations(
           X = {$../../../Polynomials/Polynomials(
             𝐑 = {𝐑},
             X = {X}

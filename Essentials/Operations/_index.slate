@@ -1,0 +1,31 @@
+%../../../../logics/library%
+
+$Operations: %Section {
+  logic = 'hlm',
+  items = [
+    %item($Operations),
+    %item($value),
+    %item(
+      $"Inner operations",
+      title = 'Inner operations'
+    ),
+    %item($associative),
+    %item($commutative),
+    %item($"left identity element"),
+    %item($"right identity element"),
+    %item($"identity element"),
+    %item($"left absorbing element"),
+    %item($"right absorbing element"),
+    %item($"absorbing element"),
+    %item($"left-distributive"),
+    %item($"right-distributive"),
+    %item($distributive),
+    %item($"left operation restriction"),
+    %item($"right operation restriction"),
+    %item($"inner operation restriction"),
+    %subsection(
+      $"Iterated operations",
+      'Iterated operations'
+    )
+  ]
+}

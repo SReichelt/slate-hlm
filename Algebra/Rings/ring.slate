@@ -10,13 +10,13 @@
  */
 $ring(
   R: %Set,
-  ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+  ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
   "0": %Element(R),
   ⊖: %Element($../../Essentials/Functions/Functions(
     X = {R},
     Y = {R}
   )),
-  ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+  ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
   "1": %Element(R)
 ): %Predicate {
   notation = $Structure(
@@ -37,12 +37,12 @@ $ring(
         ∗ = {⊙},
         e = {"1"}
       ),
-      $../../Essentials/Functions/Operations/distributive(
+      $../../Essentials/Operations/distributive(
         X = {R},
         ∗ = {⊙},
         ⋆ = {⊕}
       ),
-      $../../Essentials/Functions/Operations/"absorbing element"(
+      $../../Essentials/Operations/"absorbing element"(
         X = {R},
         ∗ = {⊙},
         z = {"0"}
@@ -53,7 +53,7 @@ $ring(
           b: %Element(%previous)
         ),
         %equals(
-          $../../Essentials/Functions/Operations/value(
+          $../../Essentials/Operations/value(
             X = {R},
             Y = {R},
             Z = {R},
@@ -66,7 +66,7 @@ $ring(
               x = {b}
             )}
           ),
-          $../../Essentials/Functions/Operations/value(
+          $../../Essentials/Operations/value(
             X = {R},
             Y = {R},
             Z = {R},
@@ -83,7 +83,7 @@ $ring(
             X = {R},
             Y = {R},
             f = {⊖},
-            x = {$../../Essentials/Functions/Operations/value(
+            x = {$../../Essentials/Operations/value(
               X = {R},
               Y = {R},
               Z = {R},
@@ -107,7 +107,7 @@ $ring(
         ∗ = {⊙},
         e = {"1"}
       ),
-      $../../Essentials/Functions/Operations/distributive(
+      $../../Essentials/Operations/distributive(
         X = {R},
         ∗ = {⊙},
         ⋆ = {⊕}
@@ -124,7 +124,7 @@ $ring(
       %forall(
         #(a: %Element(R)),
         %equals(
-          $../../Essentials/Functions/Operations/value(
+          $../../Essentials/Operations/value(
             X = {R},
             Y = {R},
             Z = {R},
@@ -137,7 +137,7 @@ $ring(
               x = {a}
             )}
           ),
-          $../../Essentials/Functions/Operations/value(
+          $../../Essentials/Operations/value(
             X = {R},
             Y = {R},
             Z = {R},

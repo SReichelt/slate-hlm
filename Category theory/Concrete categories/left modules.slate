@@ -45,7 +45,7 @@ $"left modules"(
           #(𝐄: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
           {𝐅 = {
             #(𝐅: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
-            {∘ = {$../../Essentials/Functions/Operations/Operations(
+            {∘ = {$../../Essentials/Operations/Operations(
                 X = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
                   𝐑 = {𝐑},
                   𝐌 = {𝐄},

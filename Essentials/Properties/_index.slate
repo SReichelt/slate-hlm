@@ -4,6 +4,12 @@ $Properties: %Section {
   logic = 'hlm',
   items = [
     %item($Properties),
-    %item($"has property")
+    %item($"has property"),
+    %item($implies),
+    %item($conjunction),
+    %item($disjunction),
+    %item($"generalized conjunction"),
+    %item($"generalized disjunction"),
+    %item($restriction)
   ]
 }

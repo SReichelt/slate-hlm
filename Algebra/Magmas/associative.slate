@@ -15,9 +15,9 @@ $associative(𝐌: %Element($Magmas)): %Predicate {
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
       ),
-      value = $../../Essentials/Functions/Operations/associative(
+      value = $../../Essentials/Operations/associative(
         X = {M},
         ∗ = {∗}
       )

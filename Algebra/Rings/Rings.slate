@@ -11,13 +11,13 @@
 $Rings: %Construction {
   $ring(
     R: %Set,
-    ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+    ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
     "0": %Element(R),
     ⊖: %Element($../../Essentials/Functions/Functions(
       X = {R},
       Y = {R}
     )),
-    ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+    ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
     "1": %Element(R),
     _1: %Constraint($ring(
       R = {R},
@@ -35,13 +35,13 @@ $Rings: %Construction {
     equalityDefinition = {
       leftParameters = #(
         R: %Set,
-        ⊕: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
         "0": %Element(R),
         ⊖: %Element($../../Essentials/Functions/Functions(
           X = {R},
           Y = {R}
         )),
-        ⊙: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {R})),
+        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
         "1": %Element(R),
         _1: %Constraint($ring(
           R = {R},
@@ -54,13 +54,13 @@ $Rings: %Construction {
       ),
       rightParameters = #(
         S: %Set,
-        ⋆: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = {S})),
         𝟢: %Element(S),
         ∼: %Element($../../Essentials/Functions/Functions(
           X = {S},
           Y = {S}
         )),
-        ∗: %Element($../../Essentials/Functions/Operations/"Inner operations"(X = {S})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {S})),
         𝟣: %Element(S),
         _2: %Constraint($ring(
           R = {S},

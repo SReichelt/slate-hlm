@@ -20,6 +20,10 @@ $Essentials: %Section {
       'Functions'
     ),
     %subsection(
+      $Operations,
+      'Operations'
+    ),
+    %subsection(
       $Sequences,
       'Sequences'
     ),
