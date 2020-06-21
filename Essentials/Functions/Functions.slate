@@ -30,6 +30,15 @@ $Functions(
       ),
       style = '()'
     ),
+    abbreviations = [{
+      parameters = #(function: %Expr),
+      originalParameter = y,
+      originalParameterValue = $Function(
+        function = function,
+        arguments = [x]
+      ),
+      abbreviation = function
+    }],
     definitionNotation = {
       parameter = #(f: %Expr),
       notation = $FunctionDefinition(

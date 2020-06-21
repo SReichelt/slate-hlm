@@ -30,6 +30,15 @@ $Relations(
         $ElementRelation(operands = [t, T])
       ])
     ),
+    abbreviations = [{
+      parameters = #(relation: %Expr),
+      originalParameter = p,
+      originalParameterValue = $Relation(
+        symbol = relation,
+        operands = [s, t]
+      ),
+      abbreviation = relation
+    }],
     equalityDefinition = {
       leftParameters = #(s: %Binding(
         S,

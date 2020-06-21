@@ -18,6 +18,15 @@ $Properties(S: %Set(auto = %true)): %Construction {
       ),
       sub = $ElementRelation(operands = [s, S])
     ),
+    abbreviations = [{
+      parameters = #(property: %Expr),
+      originalParameter = p,
+      originalParameterValue = $Property(
+        operand = s,
+        property = property
+      ),
+      abbreviation = property
+    }],
     equalityDefinition = {
       leftParameters = #(s: %Binding(
         S,

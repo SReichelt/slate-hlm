@@ -27,6 +27,15 @@ $Operations(
       ),
       style = '()'
     ),
+    abbreviations = [{
+      parameters = #(operator: %Expr),
+      originalParameter = z,
+      originalParameterValue = $Operator(
+        symbol = operator,
+        operands = [x, y]
+      ),
+      abbreviation = operator
+    }],
     definitionNotation = {
       parameter = #(∗: %Expr),
       notation = $FunctionDefinition(
