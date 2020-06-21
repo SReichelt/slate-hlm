@@ -30,15 +30,26 @@ $Functions(
       ),
       style = '()'
     ),
-    abbreviations = [{
-      parameters = #(function: %Expr),
-      originalParameter = y,
-      originalParameterValue = $Function(
-        function = function,
-        arguments = [x]
-      ),
-      abbreviation = function
-    }],
+    abbreviations = [
+      {
+        parameters = #(function: %Expr),
+        originalParameter = y,
+        originalParameterValue = $Function(
+          function = function,
+          arguments = [x]
+        ),
+        abbreviation = function
+      },
+      {
+        parameters = #(function: %Expr),
+        originalParameter = y,
+        originalParameterValue = $PrefixUnaryOperator(
+          symbol = function,
+          operand = x
+        ),
+        abbreviation = function
+      }
+    ],
     definitionNotation = {
       parameter = #(f: %Expr),
       notation = $FunctionDefinition(
