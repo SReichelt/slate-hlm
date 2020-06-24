@@ -13,25 +13,38 @@ $"reflexive symmetric closure"(
       S = {S},
       T = {S},
       ≺ = {≺},
-      p = {$../../Properties/Properties(S = {$../Relations(
+      p = {$../../Properties/conjunction(
+        S = {$../Relations(
           S = {S},
           T = {S}
-        )}).property(s = {
-          #(⊂: %Element($../Relations(
+        )},
+        p = {$../../Properties/Properties(S = {$../Relations(
             S = {S},
             T = {S}
-          ))),
-          {p = {%and(
-            $../reflexive(
+          )}).property(s = {
+            #(⊂: %Element($../Relations(
+              S = {S},
+              T = {S}
+            ))),
+            {p = {$../reflexive(
               S = {S},
               ⪯ = {⊂}
-            ),
-            $../symmetric(
+            )}}
+        })},
+        q = {$../../Properties/Properties(S = {$../Relations(
+            S = {S},
+            T = {S}
+          )}).property(s = {
+            #(⊂: %Element($../Relations(
+              S = {S},
+              T = {S}
+            ))),
+            {p = {$../symmetric(
               S = {S},
               ≺ = {⊂}
-            )
-          )}}
-      })}
+            )}}
+        })}
+      )}
     ),
     $"symmetric closure"(
       S = {S},
