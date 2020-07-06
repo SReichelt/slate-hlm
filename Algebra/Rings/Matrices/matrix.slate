@@ -8,14 +8,16 @@ $matrix(
     $../Rings,
     auto = %true
   ),
-  m: %Nat,
-  n: %Nat,
   items: %Element($../Carrier(𝐑 = {𝐑}))[,]
 ): %MacroOperator {
   notation = $Matrix(items = items),
+  variables = #(
+    rows: %Nat,
+    columns: %Nat
+  ),
   references = {Matrices = $Matrices(
     𝐑 = {𝐑},
-    m = {$../../../Essentials/Numbers/Natural/number(value = m)},
-    n = {$../../../Essentials/Numbers/Natural/number(value = n)}
+    m = {$../../../Essentials/Numbers/Natural/number(value = rows)},
+    n = {$../../../Essentials/Numbers/Natural/number(value = columns)}
   )}
 }

@@ -27,7 +27,7 @@ $Prime: %Section {
     %item(
       $"Fundamental theorem of arithmetic",
       type = 'theorem',
-      title = 'Fundametal theorem of arithmetic'
+      title = 'Fundamental theorem of arithmetic'
     )
   ]
 }

@@ -8,8 +8,6 @@ $"Identity matrix of dimension 2"(𝐑: %Element($../../Rings)): %StandardTheore
     ),
     $../matrix(
       𝐑 = {𝐑},
-      m = 2,
-      n = 2,
       items = [
         [
           {$../../one(𝐑 = {𝐑})},
