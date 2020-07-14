@@ -12,7 +12,7 @@ $difference(
   m: %Element($Subsets/"Segment (less or equal)"(n = {n}))
 ): %ImplicitOperator {
   notation = $SubtractionOperator(operands = [n, m]),
-  parameter = #(x: %Element($Subsets/"Segment (less or equal)"(n = {n}))),
+  parameter = #(x: %Element($"Natural numbers")),
   definition = [%equals(
     n,
     $sum(

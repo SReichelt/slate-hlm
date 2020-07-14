@@ -61,41 +61,33 @@ $Semirings: %Construction {
           Y = {S}
         ))),
         formula = %and(
-          %equals(
-            $../Generic/Isomorphisms/"inner operation transport"(
-              X = {R},
-              Y = {S},
-              φ = {φ},
-              ∗ = {⊕}
-            ),
-            ⋆
+          $../Generic/Isomorphisms/"inner operation condition"(
+            X = {R},
+            Y = {S},
+            φ = {φ},
+            ∗ = {⊕},
+            ⋆ = {⋆}
           ),
-          %equals(
-            $../Generic/Isomorphisms/"element transport"(
-              X = {R},
-              Y = {S},
-              φ = {φ},
-              x = {"0"}
-            ),
-            𝟢
+          $../Generic/Isomorphisms/"element condition"(
+            X = {R},
+            Y = {S},
+            φ = {φ},
+            x = {"0"},
+            y = {𝟢}
           ),
-          %equals(
-            $../Generic/Isomorphisms/"inner operation transport"(
-              X = {R},
-              Y = {S},
-              φ = {φ},
-              ∗ = {⊙}
-            ),
-            ∗
+          $../Generic/Isomorphisms/"inner operation condition"(
+            X = {R},
+            Y = {S},
+            φ = {φ},
+            ∗ = {⊙},
+            ⋆ = {∗}
           ),
-          %equals(
-            $../Generic/Isomorphisms/"element transport"(
-              X = {R},
-              Y = {S},
-              φ = {φ},
-              x = {"1"}
-            ),
-            𝟣
+          $../Generic/Isomorphisms/"element condition"(
+            X = {R},
+            Y = {S},
+            φ = {φ},
+            x = {"1"},
+            y = {𝟣}
           )
         )
       )],

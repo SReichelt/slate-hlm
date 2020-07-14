@@ -49,23 +49,19 @@ $Monoids: %Construction {
           Y = {N}
         ))),
         formula = %and(
-          %equals(
-            $../Generic/Isomorphisms/"inner operation transport"(
-              X = {M},
-              Y = {N},
-              φ = {φ},
-              ∗ = {∗}
-            ),
-            ⋆
+          $../Generic/Isomorphisms/"inner operation condition"(
+            X = {M},
+            Y = {N},
+            φ = {φ},
+            ∗ = {∗},
+            ⋆ = {⋆}
           ),
-          %equals(
-            $../Generic/Isomorphisms/"element transport"(
-              X = {M},
-              Y = {N},
-              φ = {φ},
-              x = {e}
-            ),
-            f
+          $../Generic/Isomorphisms/"element condition"(
+            X = {M},
+            Y = {N},
+            φ = {φ},
+            x = {e},
+            y = {f}
           )
         )
       )],

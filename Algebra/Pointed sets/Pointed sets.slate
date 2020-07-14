@@ -30,14 +30,12 @@ $"Pointed sets": %Construction {
           X = {S},
           Y = {T}
         ))),
-        formula = %equals(
-          $../Generic/Isomorphisms/"element transport"(
-            X = {S},
-            Y = {T},
-            φ = {φ},
-            x = {s}
-          ),
-          t
+        formula = $../Generic/Isomorphisms/"element condition"(
+          X = {S},
+          Y = {T},
+          φ = {φ},
+          x = {s},
+          y = {t}
         )
       )],
       isomorphic = %true

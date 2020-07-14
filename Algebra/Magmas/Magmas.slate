@@ -31,14 +31,12 @@ $Magmas: %Construction {
           X = {M},
           Y = {N}
         ))),
-        formula = %equals(
-          $../Generic/Isomorphisms/"inner operation transport"(
-            X = {M},
-            Y = {N},
-            φ = {φ},
-            ∗ = {∗}
-          ),
-          ⋆
+        formula = $../Generic/Isomorphisms/"inner operation condition"(
+          X = {M},
+          Y = {N},
+          φ = {φ},
+          ∗ = {∗},
+          ⋆ = {⋆}
         )
       )],
       isomorphic = %true

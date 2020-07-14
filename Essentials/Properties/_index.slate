@@ -10,6 +10,7 @@ $Properties: %Section {
     %item($disjunction),
     %item($"generalized conjunction"),
     %item($"generalized disjunction"),
-    %item($restriction)
+    %item($restriction),
+    %item($"Equality is extensional")
   ]
 }

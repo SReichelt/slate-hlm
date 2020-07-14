@@ -42,14 +42,13 @@ $"Ordinal numbers": %Construction {
           X = {S},
           Y = {T}
         ))),
-        formula = %equals(
-          $../../../Algebra/Generic/Isomorphisms/"relation transport"(
+        formula = 
+          $../../../Algebra/Generic/Isomorphisms/"relation condition"(
             X = {S},
             Y = {T},
             φ = {φ},
-            ≺ = {⪯}
-          ),
-          ⊑
+            ≺ = {⪯},
+            ⊂ = {⊑}
         )
       )],
       isomorphic = %true

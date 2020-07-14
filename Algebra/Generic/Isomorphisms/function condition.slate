@@ -1,0 +1,113 @@
+%../../../../../logics/hlm%
+
+$"function condition"(
+  X: %Set(auto = %true),
+  Y: %Set(auto = %true),
+  φ: %Element($../../../Essentials/Functions/Bijections(
+    X = {X},
+    Y = {Y}
+  )),
+  f: %Element($../../../Essentials/Functions/Functions(
+    X = {X},
+    Y = {X}
+  )),
+  g: %Element($../../../Essentials/Functions/Functions(
+    X = {Y},
+    Y = {Y}
+  ))
+): %Predicate {
+  notation = $SpecificIsomorphismRelation(
+    operands = [f, g],
+    function = φ
+  ),
+  definition = [
+    %structural(
+      g,
+      $../../../Essentials/Functions/Functions(
+        X = {Y},
+        Y = {Y}
+      ),
+      [{
+        constructor = $../../../Essentials/Functions/Functions.function,
+        parameters = #(y: %Binding(
+          Y,
+          #(b: %Element(Y))
+        )),
+        value = %structural(
+          f,
+          $../../../Essentials/Functions/Functions(
+            X = {X},
+            Y = {X}
+          ),
+          [{
+            constructor = $../../../Essentials/Functions/Functions.function,
+            parameters = #(x: %Binding(
+              X,
+              #(a: %Element(X))
+            )),
+            value = %forall(
+              #(x: %Element(X)),
+              %equals(
+                $../../../Essentials/Functions/value(
+                  X = {X},
+                  Y = {Y},
+                  f = {φ},
+                  x = {a[x]}
+                ),
+                b[$../../../Essentials/Functions/value(
+                  X = {X},
+                  Y = {Y},
+                  f = {φ},
+                  x = {x}
+                )]
+              )
+            )
+          }]
+        )
+      }]
+    ),
+    %forall(
+      #(x: %Element(X)),
+      %equals(
+        $../../../Essentials/Functions/value(
+          X = {X},
+          Y = {Y},
+          f = {φ},
+          x = {$../../../Essentials/Functions/value(
+            X = {X},
+            Y = {X},
+            f = {f},
+            x = {x}
+          )}
+        ),
+        $../../../Essentials/Functions/value(
+          X = {Y},
+          Y = {Y},
+          f = {g},
+          x = {$../../../Essentials/Functions/value(
+            X = {X},
+            Y = {Y},
+            f = {φ},
+            x = {x}
+          )}
+        )
+      )
+    ),
+    %equals(
+      $../../../Essentials/Functions/composition(
+        X = {X},
+        Y = {X},
+        Z = {Y},
+        g = {φ},
+        f = {f}
+      ),
+      $../../../Essentials/Functions/composition(
+        X = {X},
+        Y = {Y},
+        Z = {Y},
+        g = {g},
+        f = {φ}
+      )
+    )
+  ]
+}

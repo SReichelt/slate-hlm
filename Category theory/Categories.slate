@@ -472,16 +472,16 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               #(ψ: %Element($../Essentials/Functions/Bijections(
                 X = {M[𝐀,𝐁]},
                 Y = {N[
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
+                  $../Essentials/Functions/value(
                     X = {O},
                     Y = {P},
-                    φ = {φ},
+                    f = {φ},
                     x = {𝐀}
                   ),
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
+                  $../Essentials/Functions/value(
                     X = {O},
                     Y = {P},
-                    φ = {φ},
+                    f = {φ},
                     x = {𝐁}
                   )
                 ]}
@@ -492,32 +492,30 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         formula = %and(
           %forall(
             #(𝐂: %Element(O)),
-            %equals(
-              $../Algebra/Generic/Isomorphisms/"element transport"(
-                X = {M[𝐂,𝐂]},
-                Y = {N[
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
-                    X = {O},
-                    Y = {P},
-                    φ = {φ},
-                    x = {𝐂}
-                  ),
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
-                    X = {O},
-                    Y = {P},
-                    φ = {φ},
-                    x = {𝐂}
-                  )
-                ]},
-                φ = {ψ[𝐂,𝐂]},
-                x = {i[𝐂]}
-              ),
-              j[$../Algebra/Generic/Isomorphisms/"element transport"(
+            $../Algebra/Generic/Isomorphisms/"element condition"(
+              X = {M[𝐂,𝐂]},
+              Y = {N[
+                $../Essentials/Functions/value(
+                  X = {O},
+                  Y = {P},
+                  f = {φ},
+                  x = {𝐂}
+                ),
+                $../Essentials/Functions/value(
+                  X = {O},
+                  Y = {P},
+                  f = {φ},
+                  x = {𝐂}
+                )
+              ]},
+              φ = {ψ[𝐂,𝐂]},
+              x = {i[𝐂]},
+              y = {j[$../Essentials/Functions/value(
                 X = {O},
                 Y = {P},
-                φ = {φ},
+                f = {φ},
                 x = {𝐂}
-              )]
+              )]}
             )
           ),
           %forall(
@@ -526,78 +524,76 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               𝐄: %Element(%previous),
               𝐅: %Element(%previous)
             ),
-            %equals(
-              $../Algebra/Generic/Isomorphisms/"morphism transport"(
-                X_1 = {M[𝐄,𝐅]},
-                X_2 = {M[𝐃,𝐄]},
-                X_3 = {M[𝐃,𝐅]},
-                Y_1 = {N[
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
-                    X = {O},
-                    Y = {P},
-                    φ = {φ},
-                    x = {𝐄}
-                  ),
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
-                    X = {O},
-                    Y = {P},
-                    φ = {φ},
-                    x = {𝐅}
-                  )
-                ]},
-                Y_2 = {N[
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
-                    X = {O},
-                    Y = {P},
-                    φ = {φ},
-                    x = {𝐃}
-                  ),
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
-                    X = {O},
-                    Y = {P},
-                    φ = {φ},
-                    x = {𝐄}
-                  )
-                ]},
-                Y_3 = {N[
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
-                    X = {O},
-                    Y = {P},
-                    φ = {φ},
-                    x = {𝐃}
-                  ),
-                  $../Algebra/Generic/Isomorphisms/"element transport"(
-                    X = {O},
-                    Y = {P},
-                    φ = {φ},
-                    x = {𝐅}
-                  )
-                ]},
-                φ_1 = {ψ[𝐄,𝐅]},
-                φ_2 = {ψ[𝐃,𝐄]},
-                φ_3 = {ψ[𝐃,𝐅]},
-                ∙ = {∘[𝐃,𝐄,𝐅]}
-              ),
-              ∙[
-                $../Algebra/Generic/Isomorphisms/"element transport"(
+            $../Algebra/Generic/Isomorphisms/"morphism condition"(
+              X_1 = {M[𝐄,𝐅]},
+              X_2 = {M[𝐃,𝐄]},
+              X_3 = {M[𝐃,𝐅]},
+              Y_1 = {N[
+                $../Essentials/Functions/value(
                   X = {O},
                   Y = {P},
-                  φ = {φ},
-                  x = {𝐃}
-                ),
-                $../Algebra/Generic/Isomorphisms/"element transport"(
-                  X = {O},
-                  Y = {P},
-                  φ = {φ},
+                  f = {φ},
                   x = {𝐄}
                 ),
-                $../Algebra/Generic/Isomorphisms/"element transport"(
+                $../Essentials/Functions/value(
                   X = {O},
                   Y = {P},
-                  φ = {φ},
+                  f = {φ},
                   x = {𝐅}
                 )
-              ]
+              ]},
+              Y_2 = {N[
+                $../Essentials/Functions/value(
+                  X = {O},
+                  Y = {P},
+                  f = {φ},
+                  x = {𝐃}
+                ),
+                $../Essentials/Functions/value(
+                  X = {O},
+                  Y = {P},
+                  f = {φ},
+                  x = {𝐄}
+                )
+              ]},
+              Y_3 = {N[
+                $../Essentials/Functions/value(
+                  X = {O},
+                  Y = {P},
+                  f = {φ},
+                  x = {𝐃}
+                ),
+                $../Essentials/Functions/value(
+                  X = {O},
+                  Y = {P},
+                  f = {φ},
+                  x = {𝐅}
+                )
+              ]},
+              φ_1 = {ψ[𝐄,𝐅]},
+              φ_2 = {ψ[𝐃,𝐄]},
+              φ_3 = {ψ[𝐃,𝐅]},
+              ∗ = {∘[𝐃,𝐄,𝐅]},
+              ⋆ = {∙[
+                $../Essentials/Functions/value(
+                  X = {O},
+                  Y = {P},
+                  f = {φ},
+                  x = {𝐃}
+                ),
+                $../Essentials/Functions/value(
+                  X = {O},
+                  Y = {P},
+                  f = {φ},
+                  x = {𝐄}
+                ),
+                $../Essentials/Functions/value(
+                  X = {O},
+                  Y = {P},
+                  f = {φ},
+                  x = {𝐅}
+                )
+              ]}
             )
           )
         )

@@ -64,32 +64,26 @@ $Groups: %Construction {
           Y = {H}
         ))),
         formula = %and(
-          %equals(
-            $../Generic/Isomorphisms/"inner operation transport"(
-              X = {G},
-              Y = {H},
-              φ = {φ},
-              ∗ = {∗}
-            ),
-            ⋆
+          $../Generic/Isomorphisms/"inner operation condition"(
+            X = {G},
+            Y = {H},
+            φ = {φ},
+            ∗ = {∗},
+            ⋆ = {⋆}
           ),
-          %equals(
-            $../Generic/Isomorphisms/"element transport"(
-              X = {G},
-              Y = {H},
-              φ = {φ},
-              x = {e}
-            ),
-            f
+          $../Generic/Isomorphisms/"element condition"(
+            X = {G},
+            Y = {H},
+            φ = {φ},
+            x = {e},
+            y = {f}
           ),
-          %equals(
-            $../Generic/Isomorphisms/"function transport"(
-              X = {G},
-              Y = {H},
-              φ = {φ},
-              f = {i}
-            ),
-            j
+          $../Generic/Isomorphisms/"function condition"(
+            X = {G},
+            Y = {H},
+            φ = {φ},
+            f = {i},
+            g = {j}
           )
         )
       )],

@@ -1,0 +1,99 @@
+%../../../../../logics/hlm%
+
+$"relation condition"(
+  X: %Set(auto = %true),
+  Y: %Set(auto = %true),
+  φ: %Element($../../../Essentials/Functions/Bijections(
+    X = {X},
+    Y = {Y}
+  )),
+  ≺: %Element($../../../Essentials/Relations/Endorelations(S = {X})),
+  ⊂: %Element($../../../Essentials/Relations/Endorelations(S = {Y}))
+): %Predicate {
+  notation = $SpecificIsomorphismRelation(
+    operands = [≺, ⊂],
+    function = φ
+  ),
+  definition = [
+    %structural(
+      ≺,
+      $../../../Essentials/Relations/Endorelations(S = {X}),
+      [{
+        constructor = $../../../Essentials/Relations/Endorelations.relation,
+        parameters = #(x_1: %Binding(
+          X,
+          #(x_2: %Binding(
+            %previous,
+            #(p: %Prop)
+          ))
+        )),
+        value = %structural(
+          ⊂,
+          $../../../Essentials/Relations/Endorelations(S = {Y}),
+          [{
+            constructor = $../../../Essentials/Relations/Endorelations.relation,
+            parameters = #(y_1: %Binding(
+              Y,
+              #(y_2: %Binding(
+                %previous,
+                #(q: %Prop)
+              ))
+            )),
+            value = %forall(
+              #(
+                x_1: %Element(X),
+                x_2: %Element(%previous)
+              ),
+              %equiv(p[x_1,x_2], q[
+                  $../../../Essentials/Functions/value(
+                    X = {X},
+                    Y = {Y},
+                    f = {φ},
+                    x = {x_1}
+                  ),
+                  $../../../Essentials/Functions/value(
+                    X = {X},
+                    Y = {Y},
+                    f = {φ},
+                    x = {x_2}
+                  )
+              ])
+            )
+          }]
+        )
+      }]
+    ),
+    %forall(
+      #(
+        x_1: %Element(X),
+        x_2: %Element(%previous)
+      ),
+      %equiv(
+        $../../../Essentials/Relations/related(
+          S = {X},
+          T = {X},
+          ≺ = {≺},
+          s = {x_1},
+          t = {x_2}
+        ),
+        $../../../Essentials/Relations/related(
+          S = {Y},
+          T = {Y},
+          ≺ = {⊂},
+          s = {$../../../Essentials/Functions/value(
+            X = {X},
+            Y = {Y},
+            f = {φ},
+            x = {x_1}
+          )},
+          t = {$../../../Essentials/Functions/value(
+            X = {X},
+            Y = {Y},
+            f = {φ},
+            x = {x_2}
+          )}
+        )
+      )
+    )
+  ]
+}

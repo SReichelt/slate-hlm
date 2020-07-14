@@ -1,0 +1,26 @@
+%../../../../logics/hlm%
+
+$"Equality is extensional"(
+  S: %Set,
+  s: %Element(S),
+  t: %Element(%previous)
+): %EquivalenceTheorem {
+  conditions = [
+    %equals(s, t),
+    %forall(
+      #(p: %Element($Properties(S = {S}))),
+      %equiv(
+        $"has property"(
+          S = {S},
+          p = {p},
+          s = {s}
+        ),
+        $"has property"(
+          S = {S},
+          p = {p},
+          s = {t}
+        )
+      )
+    )
+  ]
+}

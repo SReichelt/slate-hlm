@@ -88,42 +88,34 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
           Y = {N}
         ))),
         formula = %and(
-          %equals(
-            $../../../Generic/Isomorphisms/"inner operation transport"(
-              X = {M},
-              Y = {N},
-              φ = {φ},
-              ∗ = {⊕}
-            ),
-            ⋆
+          $../../../Generic/Isomorphisms/"inner operation condition"(
+            X = {M},
+            Y = {N},
+            φ = {φ},
+            ∗ = {⊕},
+            ⋆ = {⋆}
           ),
-          %equals(
-            $../../../Generic/Isomorphisms/"element transport"(
-              X = {M},
-              Y = {N},
-              φ = {φ},
-              x = {"0"}
-            ),
-            𝟢
+          $../../../Generic/Isomorphisms/"element condition"(
+            X = {M},
+            Y = {N},
+            φ = {φ},
+            x = {"0"},
+            y = {𝟢}
           ),
-          %equals(
-            $../../../Generic/Isomorphisms/"function transport"(
-              X = {M},
-              Y = {N},
-              φ = {φ},
-              f = {⊖}
-            ),
-            ∼
+          $../../../Generic/Isomorphisms/"function condition"(
+            X = {M},
+            Y = {N},
+            φ = {φ},
+            f = {⊖},
+            g = {∼}
           ),
-          %equals(
-            $../../../Generic/Isomorphisms/"left operation transport"(
-              S = {$../../Carrier(𝐑 = {𝐑})},
-              X = {M},
-              Y = {N},
-              φ = {φ},
-              ∗ = {⊙}
-            ),
-            ∗
+          $../../../Generic/Isomorphisms/"left operation condition"(
+            S = {$../../Carrier(𝐑 = {𝐑})},
+            X = {M},
+            Y = {N},
+            φ = {φ},
+            ∗ = {⊙},
+            ⋆ = {∗}
           )
         )
       )],
