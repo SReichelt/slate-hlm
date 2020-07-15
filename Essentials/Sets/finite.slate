@@ -65,10 +65,7 @@ $finite(S: %Set): %Predicate {
     {
       from = 1,
       to = 2,
-      parameters = #(@: %Constraint(%in(
-        $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S}),
-        $../Numbers/Natural/"Natural numbers"
-      ))),
+      parameters = #(@: %Constraint($../Numbers/Cardinal/finite(κ = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})}))),
       goal = %exists(#(
         k: %Element($../Numbers/Natural/"Natural numbers"),
         f: %Element($../Functions/Bijections(

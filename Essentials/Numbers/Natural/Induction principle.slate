@@ -16,6 +16,7 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
   equivalenceProofs = [{
     from = 1,
     to = 2,
+    parameters = #(@: %Constraint($inductive(M = {M}))),
     steps = #(_: %ProveSetEquals(
       subsetProof = {steps = #()},
       supersetProof = {steps = #(_: %ProveDef(proof = {

@@ -32,7 +32,7 @@ $"morphism condition"(
 ): %Predicate {
   notation = $SpecificIsomorphismRelation(
     operands = [∗, ⋆],
-    function = $Group(items = [φ_1,φ_2,φ_3])
+    function = $Group(items = [φ_1, φ_2, φ_3])
   ),
   definition = [
     %structural(

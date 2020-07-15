@@ -42,13 +42,12 @@ $"Ordinal numbers": %Construction {
           X = {S},
           Y = {T}
         ))),
-        formula = 
-          $../../../Algebra/Generic/Isomorphisms/"relation condition"(
-            X = {S},
-            Y = {T},
-            φ = {φ},
-            ≺ = {⪯},
-            ⊂ = {⊑}
+        formula = $../../../Algebra/Generic/Isomorphisms/"relation condition"(
+          X = {S},
+          Y = {T},
+          φ = {φ},
+          ≺ = {⪯},
+          ⊂ = {⊑}
         )
       )],
       isomorphic = %true

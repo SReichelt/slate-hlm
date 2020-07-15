@@ -220,12 +220,23 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         $../../Sets/empty(S = {M}),
         %exists(
           #(m: %Element(M)),
-          formula = %forall(
-            #(n: %Element(M)),
-            $"less or equal"(
-              m = {n},
-              n = {m}
-            )
+          formula = $../../Relations/"greatest element"(
+            S = {$"Natural numbers"},
+            ⪯ = {$../../Relations/Relations(
+                S = {$"Natural numbers"},
+                T = {$"Natural numbers"}
+              ).relation(s = {
+                #(m: %Element($"Natural numbers")),
+                {t = {
+                  #(n: %Element($"Natural numbers")),
+                  {p = {$"less or equal"(
+                    m = {m},
+                    n = {n}
+                  )}}
+                }}
+            })},
+            T = {M},
+            t = {m}
           )
         )
       ))),
