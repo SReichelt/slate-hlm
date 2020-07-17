@@ -74,8 +74,6 @@ $Natural: %Section {
     ),
     %item($minimum),
     %item($"minimum of two numbers"),
-    %item($bounded),
-    %item($"Finite subsets are bounded"),
     %item($maximum),
     %item($"maximum of two numbers"),
     %subsection(

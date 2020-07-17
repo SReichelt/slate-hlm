@@ -27,6 +27,30 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         )
       )
     ),
+    %or(
+      $../../Sets/empty(S = {M}),
+      %existsUnique(
+        #(m: %Element(M)),
+        formula = $../../Relations/"greatest element"(
+          S = {$"Natural numbers"},
+          ⪯ = {$../../Relations/Relations(
+              S = {$"Natural numbers"},
+              T = {$"Natural numbers"}
+            ).relation(s = {
+              #(m: %Element($"Natural numbers")),
+              {t = {
+                #(n: %Element($"Natural numbers")),
+                {p = {$"less or equal"(
+                  m = {m},
+                  n = {n}
+                )}}
+              }}
+          })},
+          T = {M},
+          t = {m}
+        )
+      )
+    ),
     %exists(
       #(a: %Element($"Natural numbers")),
       formula = %sub(
@@ -215,7 +239,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
     },
     {
       from = 2,
-      to = 3,
+      to = 4,
       parameters = #(@: %Constraint(%or(
         $../../Sets/empty(S = {M}),
         %exists(
@@ -336,8 +360,8 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
       ]))
     },
     {
-      from = 3,
-      to = 4,
+      from = 4,
+      to = 5,
       parameters = #(@: %Constraint(%exists(
         #(a: %Element($"Natural numbers")),
         formula = %sub(
@@ -363,7 +387,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
       )
     },
     {
-      from = 4,
+      from = 5,
       to = 1,
       parameters = #(@: %Constraint(%exists(
         #(b: %Element($"Natural numbers")),

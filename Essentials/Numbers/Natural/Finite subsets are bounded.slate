@@ -1,8 +1,0 @@
-%../../../../../logics/hlm%
-
-$"Finite subsets are bounded"(
-  M: %Subset($"Natural numbers"),
-  _1: %Constraint($../../Sets/finite(S = {M}))
-): %StandardTheorem {
-  claim = $bounded(M = {M})
-}
