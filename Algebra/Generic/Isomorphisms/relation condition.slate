@@ -20,44 +20,41 @@ $"relation condition"(
       $../../../Essentials/Relations/Endorelations(S = {X}),
       [{
         constructor = $../../../Essentials/Relations/Endorelations.relation,
-        parameters = #(x_1: %Binding(
-          X,
-          #(x_2: %Binding(
-            %previous,
-            #(p: %Prop)
-          ))
+        parameters = #(_x_1: %Binder(
+          #(
+            x_1: %Element(X),
+            x_2: %Element(%previous)
+          ),
+          #(p: %Prop)
         )),
         value = %structural(
           ⊂,
           $../../../Essentials/Relations/Endorelations(S = {Y}),
           [{
             constructor = $../../../Essentials/Relations/Endorelations.relation,
-            parameters = #(y_1: %Binding(
-              Y,
-              #(y_2: %Binding(
-                %previous,
-                #(q: %Prop)
-              ))
+            parameters = #(_y_1: %Binder(
+              #(
+                y_1: %Element(Y),
+                y_2: %Element(%previous)
+              ),
+              #(q: %Prop)
             )),
             value = %forall(
               #(
                 x_1: %Element(X),
                 x_2: %Element(%previous)
               ),
-              %equiv(p[x_1,x_2], q[
-                  $../../../Essentials/Functions/value(
+              %equiv(p[x_1 = {x_1}, x_2 = {x_2}], q[y_1 = {$../../../Essentials/Functions/value(
                     X = {X},
                     Y = {Y},
                     f = {φ},
                     x = {x_1}
-                  ),
-                  $../../../Essentials/Functions/value(
+                  )}, y_2 = {$../../../Essentials/Functions/value(
                     X = {X},
                     Y = {Y},
                     f = {φ},
                     x = {x_2}
-                  )
-              ])
+              )}])
             )
           }]
         )

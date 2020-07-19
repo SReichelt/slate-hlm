@@ -8,12 +8,12 @@ $Operations(
   Y: %Set(auto = %true),
   Z: %Set(auto = %true)
 ): %Construction {
-  $operation(x: %Binding(
-    X,
-    #(y: %Binding(
-      Y,
-      #(z: %Element(Z))
-    ))
+  $operation(_x: %Binder(
+    #(
+      x: %Element(X),
+      y: %Element(Y)
+    ),
+    #(z: %Element(Z))
   )): %Constructor {
     notation = $Parens(
       body = $FunctionBody(
@@ -50,26 +50,26 @@ $Operations(
       )
     },
     equalityDefinition = {
-      leftParameters = #(x: %Binding(
-        X,
-        #(y: %Binding(
-          Y,
-          #(z: %Element(Z))
-        ))
+      leftParameters = #(_x: %Binder(
+        #(
+          x: %Element(X),
+          y: %Element(Y)
+        ),
+        #(z: %Element(Z))
       )),
-      rightParameters = #(x: %Binding(
-        X,
-        #(y: %Binding(
-          Y,
-          #("z'": %Element(Z))
-        ))
+      rightParameters = #(_x: %Binder(
+        #(
+          x: %Element(X),
+          y: %Element(Y)
+        ),
+        #("z'": %Element(Z))
       )),
       definition = [%forall(
         #(
           x: %Element(X),
           y: %Element(Y)
         ),
-        %equals(z[x,y], "z'"[x,y])
+        %equals(z[x = {x}, y = {y}], "z'"[x = {x}, y = {y}])
       )],
       isomorphic = %true
     }
@@ -107,26 +107,26 @@ $Operations(
         X = {X},
         Y = {Y},
         Z = {Z}
-      ).operation(x = {
-        #(x: %Element(X)),
-        {y = {
-          #(y: %Element(Y)),
-          {z = {$../Functions/value(
-            X = {$../Sets/"Cartesian product"(
+      ).operation(_x = {
+        #(
+          x: %Element(X),
+          y: %Element(Y)
+        ),
+        {z = {$../Functions/value(
+          X = {$../Sets/"Cartesian product"(
+            S = {X},
+            T = {Y}
+          )},
+          Y = {Z},
+          f = {f},
+          x = {$../Sets/"Cartesian product"(
               S = {X},
               T = {Y}
-            )},
-            Y = {Z},
-            f = {f},
-            x = {$../Sets/"Cartesian product"(
-                S = {X},
-                T = {Y}
-              ).pair(
-                s = {x},
-                t = {y}
-            )}
-          )}}
-        }}
+            ).pair(
+              s = {x},
+              t = {y}
+          )}
+        )}}
     }),
     full = %true
   }

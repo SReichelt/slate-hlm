@@ -13,12 +13,12 @@ $Relations(
   S: %Set(auto = %true),
   T: %Set(auto = %true)
 ): %Construction {
-  $relation(s: %Binding(
-    S,
-    #(t: %Binding(
-      T,
-      #(p: %Prop)
-    ))
+  $relation(_s: %Binder(
+    #(
+      s: %Element(S),
+      t: %Element(T)
+    ),
+    #(p: %Prop)
   )): %Constructor {
     notation = $SubSup(
       body = $Parens(
@@ -40,26 +40,26 @@ $Relations(
       abbreviation = relation
     }],
     equalityDefinition = {
-      leftParameters = #(s: %Binding(
-        S,
-        #(t: %Binding(
-          T,
-          #(p: %Prop)
-        ))
+      leftParameters = #(_s: %Binder(
+        #(
+          s: %Element(S),
+          t: %Element(T)
+        ),
+        #(p: %Prop)
       )),
-      rightParameters = #(s: %Binding(
-        S,
-        #(t: %Binding(
-          T,
-          #(q: %Prop)
-        ))
+      rightParameters = #(_s: %Binder(
+        #(
+          s: %Element(S),
+          t: %Element(T)
+        ),
+        #(q: %Prop)
       )),
       definition = [%forall(
         #(
           s: %Element(S),
           t: %Element(T)
         ),
-        %equiv(p[s,t], q[s,t])
+        %equiv(p[s = {s}, t = {t}], q[s = {s}, t = {t}])
       )],
       isomorphic = %true
     }
@@ -83,25 +83,25 @@ $Relations(
     target = $Relations(
         S = {S},
         T = {T}
-      ).relation(s = {
-        #(s: %Element(S)),
-        {t = {
-          #(t: %Element(T)),
-          {p = {$../Properties/"has property"(
-            S = {$../Sets/"Cartesian product"(
+      ).relation(_s = {
+        #(
+          s: %Element(S),
+          t: %Element(T)
+        ),
+        {p = {$../Properties/"has property"(
+          S = {$../Sets/"Cartesian product"(
+            S = {S},
+            T = {T}
+          )},
+          p = {r},
+          s = {$../Sets/"Cartesian product"(
               S = {S},
               T = {T}
-            )},
-            p = {r},
-            s = {$../Sets/"Cartesian product"(
-                S = {S},
-                T = {T}
-              ).pair(
-                s = {s},
-                t = {t}
-            )}
-          )}}
-        }}
+            ).pair(
+              s = {s},
+              t = {t}
+          )}
+        )}}
     }),
     full = %true
   }

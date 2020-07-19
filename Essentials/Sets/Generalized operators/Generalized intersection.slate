@@ -9,8 +9,8 @@
 $"Generalized intersection"(
   U: %Set(auto = %true),
   I: %Set,
-  i: %Binding(
-    I,
+  _i: %Binder(
+    #(i: %Element(I)),
     #(S: %Subset(U))
   )
 ): %SetOperator {
@@ -23,7 +23,7 @@ $"Generalized intersection"(
     #(x: %Element(U)),
     %forall(
       #(j: %Element(I)),
-      %in(x, S[j])
+      %in(x, S[i = {j}])
     )
   )]
 }

@@ -7,8 +7,8 @@
  *             * https://proofwiki.org/wiki/Definition:Propositional_Function
  */
 $Properties(S: %Set(auto = %true)): %Construction {
-  $property(s: %Binding(
-    S,
+  $property(_s: %Binder(
+    #(s: %Element(S)),
     #(p: %Prop)
   )): %Constructor {
     notation = $SubSup(
@@ -28,17 +28,17 @@ $Properties(S: %Set(auto = %true)): %Construction {
       abbreviation = property
     }],
     equalityDefinition = {
-      leftParameters = #(s: %Binding(
-        S,
+      leftParameters = #(_s: %Binder(
+        #(s: %Element(S)),
         #(p: %Prop)
       )),
-      rightParameters = #(s: %Binding(
-        S,
+      rightParameters = #(_s: %Binder(
+        #(s: %Element(S)),
         #(q: %Prop)
       )),
       definition = [%forall(
         #(s: %Element(S)),
-        %equiv(p[s], q[s])
+        %equiv(p[s = {s}], q[s = {s}])
       )],
       isomorphic = %true
     }

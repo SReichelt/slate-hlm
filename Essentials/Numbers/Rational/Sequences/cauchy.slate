@@ -17,8 +17,8 @@ $cauchy(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Ration
     $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
     [{
       constructor = $../../../Sequences/"Infinite sequences".sequence,
-      parameters = #(n: %Binding(
-        $../../Natural/"Natural numbers",
+      parameters = #(_n: %Binder(
+        #(n: %Element($../../Natural/"Natural numbers")),
         #(a: %Element($../"Rational numbers"))
       )),
       value = %forall(
@@ -32,8 +32,8 @@ $cauchy(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Ration
             ),
             $../less(
               a = {$../absolute(a = {$../difference(
-                a = {a[l]},
-                b = {a[m]}
+                a = {a[n = {l}]},
+                b = {a[n = {m}]}
               )})},
               b = {ε}
             )

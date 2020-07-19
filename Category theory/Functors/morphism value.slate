@@ -51,38 +51,36 @@ $"morphism value"(
       [{
         constructor = $Functors.functor,
         parameters = #(
-          𝐀: %Binding(
-            $../Objects(
+          _𝐀: %Binder(
+            #(𝐀: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
-            ),
+            ))),
             #(𝐃: %Element($../Objects(
               u = {v},
               𝓒 = {𝓓}
             )))
           ),
-          𝐁: %Binding(
-            $../Objects(
-              u = {u},
-              𝓒 = {𝓒}
-            ),
-            #(𝐂: %Binding(
-              %previous,
-              #(g: %Binding(
-                $../Morphisms(
-                  u = {u},
-                  𝓒 = {𝓒},
-                  𝐗 = {𝐁},
-                  𝐘 = {𝐂}
-                ),
-                #(h: %Element($../Morphisms(
-                  u = {v},
-                  𝓒 = {𝓓},
-                  𝐗 = {𝐃[𝐁]},
-                  𝐘 = {𝐃[𝐂]}
-                )))
+          _𝐁: %Binder(
+            #(
+              𝐁: %Element($../Objects(
+                u = {u},
+                𝓒 = {𝓒}
+              )),
+              𝐂: %Element(%previous),
+              g: %Element($../Morphisms(
+                u = {u},
+                𝓒 = {𝓒},
+                𝐗 = {𝐁},
+                𝐘 = {𝐂}
               ))
-            ))
+            ),
+            #(h: %Element($../Morphisms(
+              u = {v},
+              𝓒 = {𝓓},
+              𝐗 = {𝐃[𝐀 = {𝐁}]},
+              𝐘 = {𝐃[𝐀 = {𝐂}]}
+            )))
           ),
           _1: %Constraint(%forall(
             #(𝐀: %Element($../Objects(
@@ -90,19 +88,15 @@ $"morphism value"(
               𝓒 = {𝓒}
             ))),
             %equals(
-              h[
-                𝐀,
-                𝐀,
-                $../identity(
+              h[𝐁 = {𝐀}, 𝐂 = {𝐀}, g = {$../identity(
                   u = {u},
                   𝓒 = {𝓒},
                   𝐗 = {𝐀}
-                )
-              ],
+              )}],
               $../identity(
                 u = {v},
                 𝓒 = {𝓓},
-                𝐗 = {𝐃[𝐀]}
+                𝐗 = {𝐃[𝐀 = {𝐀}]}
               )
             )
           )),
@@ -128,10 +122,7 @@ $"morphism value"(
               ))
             ),
             %equals(
-              h[
-                𝐀,
-                𝐂,
-                $../composition(
+              h[𝐁 = {𝐀}, 𝐂 = {𝐂}, g = {$../composition(
                   u = {u},
                   𝓒 = {𝓒},
                   𝐗 = {𝐀},
@@ -139,21 +130,20 @@ $"morphism value"(
                   𝐙 = {𝐂},
                   g = {e},
                   f = {d}
-                )
-              ],
+              )}],
               $../composition(
                 u = {v},
                 𝓒 = {𝓓},
-                𝐗 = {𝐃[𝐀]},
-                𝐘 = {𝐃[𝐁]},
-                𝐙 = {𝐃[𝐂]},
-                g = {h[𝐁,𝐂,e]},
-                f = {h[𝐀,𝐁,d]}
+                𝐗 = {𝐃[𝐀 = {𝐀}]},
+                𝐘 = {𝐃[𝐀 = {𝐁}]},
+                𝐙 = {𝐃[𝐀 = {𝐂}]},
+                g = {h[𝐁 = {𝐁}, 𝐂 = {𝐂}, g = {e}]},
+                f = {h[𝐁 = {𝐀}, 𝐂 = {𝐁}, g = {d}]}
               )
             )
           ))
         ),
-        value = h[𝐗,𝐘,f]
+        value = h[𝐁 = {𝐗}, 𝐂 = {𝐘}, g = {f}]
       }]
     ),
     $../Morphisms(

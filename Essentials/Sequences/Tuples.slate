@@ -18,8 +18,8 @@ $Tuples(
   S: %Set(auto = %true),
   α: %Element($../Numbers/Ordinal/"Ordinal numbers")
 ): %Construction {
-  $sequence(k: %Binding(
-    $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+  $sequence(_k: %Binder(
+    #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
     #(a: %Element(S))
   )): %Constructor {
     notation = $SubSup(
@@ -30,17 +30,17 @@ $Tuples(
       sub = $LessThanRelation(operands = [k, α])
     ),
     equalityDefinition = {
-      leftParameters = #(k: %Binding(
-        $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+      leftParameters = #(_k: %Binder(
+        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
         #(a: %Element(S))
       )),
-      rightParameters = #(k: %Binding(
-        $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+      rightParameters = #(_k: %Binder(
+        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
         #(b: %Element(S))
       )),
       definition = [%forall(
         #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
-        %equals(a[k], b[k])
+        %equals(a[k = {k}], b[k = {k}])
       )],
       isomorphic = %true
     }

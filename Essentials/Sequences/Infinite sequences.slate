@@ -15,8 +15,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/data/stream.html#stream
  */
 $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
-  $sequence(n: %Binding(
-    $../Numbers/Natural/"Natural numbers",
+  $sequence(_n: %Binder(
+    #(n: %Element($../Numbers/Natural/"Natural numbers")),
     #(a: %Element(S))
   )): %Constructor {
     notation = $SubSup(
@@ -27,17 +27,17 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
       sub = $ElementRelation(operands = [n, 'ℕ'])
     ),
     equalityDefinition = {
-      leftParameters = #(n: %Binding(
-        $../Numbers/Natural/"Natural numbers",
+      leftParameters = #(_n: %Binder(
+        #(n: %Element($../Numbers/Natural/"Natural numbers")),
         #(a: %Element(S))
       )),
-      rightParameters = #(n: %Binding(
-        $../Numbers/Natural/"Natural numbers",
+      rightParameters = #(_n: %Binder(
+        #(n: %Element($../Numbers/Natural/"Natural numbers")),
         #(b: %Element(S))
       )),
       definition = [%forall(
         #(n: %Element($../Numbers/Natural/"Natural numbers")),
-        %equals(a[n], b[n])
+        %equals(a[n = {n}], b[n = {n}])
       )],
       isomorphic = %true
     }
@@ -66,13 +66,13 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
       ),
       [{
         constructor = $Tuples.sequence,
-        parameters = #(j: %Binding(
-          $../Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../Numbers/Ordinal/Examples/omega}),
+        parameters = #(_j: %Binder(
+          #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../Numbers/Ordinal/Examples/omega}))),
           #(a: %Element(S))
         )),
-        value = $"Infinite sequences"(S = {S}).sequence(n = {
+        value = $"Infinite sequences"(S = {S}).sequence(_n = {
             #(k: %Element($../Numbers/Natural/"Natural numbers")),
-            {a = {a[k]}}
+            {a = {a[j = {k}]}}
         })
       }]
     ),

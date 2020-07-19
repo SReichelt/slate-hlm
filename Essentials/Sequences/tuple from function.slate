@@ -21,7 +21,7 @@ $"tuple from function"(
   definition = [$Tuples(
       S = {S},
       α = {α}
-    ).sequence(k = {
+    ).sequence(_k = {
       #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
       {a = {$../Functions/value(
         X = {$../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},

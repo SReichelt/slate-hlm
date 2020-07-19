@@ -10,15 +10,15 @@ $"Less or equal is a total order": %StandardTheorem {
     ⪯ = {$../../Relations/Relations(
         S = {$"Natural numbers"},
         T = {$"Natural numbers"}
-      ).relation(s = {
-        #(m: %Element($"Natural numbers")),
-        {t = {
-          #(n: %Element($"Natural numbers")),
-          {p = {$"less or equal"(
-            m = {m},
-            n = {n}
-          )}}
-        }}
+      ).relation(_s = {
+        #(
+          m: %Element($"Natural numbers"),
+          n: %Element(%previous)
+        ),
+        {p = {$"less or equal"(
+          m = {m},
+          n = {n}
+        )}}
     })}
   )
 }

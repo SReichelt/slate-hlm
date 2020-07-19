@@ -62,11 +62,11 @@ $component(
     ),
     [{
       constructor = $"Infranatural transformations".transformation,
-      parameters = #(𝐘: %Binding(
-        $../Objects(
+      parameters = #(_𝐘: %Binder(
+        #(𝐘: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
-        ),
+        ))),
         #(n: %Element($../Morphisms(
           u = {v},
           𝓒 = {𝓓},
@@ -88,7 +88,7 @@ $component(
           )}
         )))
       )),
-      value = n[𝐗]
+      value = n[𝐘 = {𝐗}]
     }]
   )]
 }

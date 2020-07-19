@@ -33,12 +33,12 @@ $"right operation condition"(
       ),
       [{
         constructor = $../../../Essentials/Operations/Operations.operation,
-        parameters = #(y: %Binding(
-          Y,
-          #(s: %Binding(
-            S,
-            #(b: %Element(Y))
-          ))
+        parameters = #(_y: %Binder(
+          #(
+            y: %Element(Y),
+            s: %Element(S)
+          ),
+          #(b: %Element(Y))
         )),
         value = %structural(
           ∗,
@@ -49,12 +49,12 @@ $"right operation condition"(
           ),
           [{
             constructor = $../../../Essentials/Operations/Operations.operation,
-            parameters = #(x: %Binding(
-              X,
-              #(s: %Binding(
-                S,
-                #(a: %Element(X))
-              ))
+            parameters = #(_x: %Binder(
+              #(
+                x: %Element(X),
+                s: %Element(S)
+              ),
+              #(a: %Element(X))
             )),
             value = %forall(
               #(
@@ -66,17 +66,14 @@ $"right operation condition"(
                   X = {X},
                   Y = {Y},
                   f = {φ},
-                  x = {a[x,s]}
+                  x = {a[x = {x}, s = {s}]}
                 ),
-                b[
-                  $../../../Essentials/Functions/value(
+                b[y = {$../../../Essentials/Functions/value(
                     X = {X},
                     Y = {Y},
                     f = {φ},
                     x = {x}
-                  ),
-                  s
-                ]
+                  )}, s = {s}]
               )
             )
           }]

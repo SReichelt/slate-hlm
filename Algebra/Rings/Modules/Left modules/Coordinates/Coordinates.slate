@@ -48,8 +48,8 @@ $Coordinates(
       ),
       [{
         constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
-        parameters = #(k: %Binding(
-          $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+        parameters = #(_k: %Binder(
+          #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
           #(a: %Element($../../../Carrier(𝐑 = {𝐑})))
         )),
         value = %exists(
@@ -63,7 +63,7 @@ $Coordinates(
                 T = {S}
               ))),
               %equals(
-                a[j],
+                a[k = {j}],
                 $../../../zero(𝐑 = {𝐑})
               )
             )

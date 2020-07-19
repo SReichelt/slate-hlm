@@ -33,24 +33,21 @@ $"column vector space"(
               𝐑 = {𝐅},
               n = {n}
             )}
-          ).operation(x = {
-            #(v: %Element($../../../Algebra/Rings/Matrices/Vectors(
-              𝐑 = {𝐅},
-              n = {n}
-            ))),
-            {y = {
-              #(w: %Element($../../../Algebra/Rings/Matrices/Vectors(
+          ).operation(_x = {
+            #(
+              v: %Element($../../../Algebra/Rings/Matrices/Vectors(
                 𝐑 = {𝐅},
                 n = {n}
-              ))),
-              {z = {$../../../Algebra/Rings/Matrices/sum(
-                𝐑 = {𝐅},
-                m = {$../../../Essentials/Numbers/Natural/number(value = 1)},
-                n = {n},
-                A = {v},
-                B = {w}
-              )}}
-            }}
+              )),
+              w: %Element(%previous)
+            ),
+            {z = {$../../../Algebra/Rings/Matrices/sum(
+              𝐑 = {𝐅},
+              m = {$../../../Essentials/Numbers/Natural/number(value = 1)},
+              n = {n},
+              A = {v},
+              B = {w}
+            )}}
         })},
         "0" = {$../../../Algebra/Rings/Matrices/zero(
           𝐑 = {𝐅},
@@ -66,7 +63,7 @@ $"column vector space"(
               𝐑 = {𝐅},
               n = {n}
             )}
-          ).function(x = {
+          ).function(_x = {
             #(v: %Element($../../../Algebra/Rings/Matrices/Vectors(
               𝐑 = {𝐅},
               n = {n}
@@ -88,21 +85,21 @@ $"column vector space"(
               𝐑 = {𝐅},
               n = {n}
             )}
-          ).operation(x = {
-            #(a: %Element($../../../Algebra/Rings/Carrier(𝐑 = {𝐅}))),
-            {y = {
-              #(v: %Element($../../../Algebra/Rings/Matrices/Vectors(
+          ).operation(_x = {
+            #(
+              a: %Element($../../../Algebra/Rings/Carrier(𝐑 = {𝐅})),
+              v: %Element($../../../Algebra/Rings/Matrices/Vectors(
                 𝐑 = {𝐅},
                 n = {n}
-              ))),
-              {z = {$../../../Algebra/Rings/Matrices/"product with left scalar"(
-                𝐑 = {𝐅},
-                m = {$../../../Essentials/Numbers/Natural/number(value = 1)},
-                n = {n},
-                r = {a},
-                A = {v}
-              )}}
-            }}
+              ))
+            ),
+            {z = {$../../../Algebra/Rings/Matrices/"product with left scalar"(
+              𝐑 = {𝐅},
+              m = {$../../../Essentials/Numbers/Natural/number(value = 1)},
+              n = {n},
+              r = {a},
+              A = {v}
+            )}}
         })}
     ),
     $../../../Algebra/Rings/Modules/"Left modules"/Examples/"matrix module"(

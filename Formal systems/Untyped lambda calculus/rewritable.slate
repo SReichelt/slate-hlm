@@ -40,8 +40,8 @@ $rewritable(
         {
           constructor = $Terms.abstraction,
           parameters = #(
-            z: %Binding(
-              $../"Fresh variables"(V = {V}),
+            _z: %Binder(
+              #(z: %Element($../"Fresh variables"(V = {V}))),
               #(N: %Element($Terms(V = {$../../Essentials/Sets/Union(
                 U = {$../Variables},
                 S = {V},
@@ -60,11 +60,11 @@ $rewritable(
                     S = {V},
                     T = {%enumeration(a)}
                   )})},
-                  T = {N[a]},
+                  T = {N[z = {a}]},
                   x = {a},
                   R = {b}
                 ),
-                N[b]
+                N[z = {b}]
               )
             ))
           ),
@@ -80,8 +80,8 @@ $rewritable(
               {
                 constructor = $Terms.abstraction,
                 parameters = #(
-                  y: %Binding(
-                    $../"Fresh variables"(V = {V}),
+                  _y: %Binder(
+                    #(y: %Element($../"Fresh variables"(V = {V}))),
                     #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
                       U = {$../Variables},
                       S = {V},
@@ -100,11 +100,11 @@ $rewritable(
                           S = {V},
                           T = {%enumeration(a)}
                         )})},
-                        T = {M[a]},
+                        T = {M[y = {a}]},
                         x = {a},
                         R = {b}
                       ),
-                      M[b]
+                      M[y = {b}]
                     )
                   ))
                 ),
@@ -117,8 +117,8 @@ $rewritable(
                       T = {%enumeration(v)}
                     )},
                     ℜ = {ℜ},
-                    L = {M[v]},
-                    R = {N[v]}
+                    L = {M[y = {v}]},
+                    R = {N[z = {v}]}
                   )
                 )
               },
@@ -151,8 +151,8 @@ $rewritable(
               {
                 constructor = $Terms.abstraction,
                 parameters = #(
-                  y: %Binding(
-                    $../"Fresh variables"(V = {V}),
+                  _y: %Binder(
+                    #(y: %Element($../"Fresh variables"(V = {V}))),
                     #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
                       U = {$../Variables},
                       S = {V},
@@ -171,11 +171,11 @@ $rewritable(
                           S = {V},
                           T = {%enumeration(a)}
                         )})},
-                        T = {M[a]},
+                        T = {M[y = {a}]},
                         x = {a},
                         R = {b}
                       ),
-                      M[b]
+                      M[y = {b}]
                     )
                   ))
                 ),

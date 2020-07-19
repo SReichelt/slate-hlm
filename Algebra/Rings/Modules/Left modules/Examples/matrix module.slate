@@ -37,26 +37,22 @@ $"matrix module"(
             m = {m},
             n = {n}
           )}
-        ).operation(x = {
-          #(A: %Element($../../../Matrices/Matrices(
-            𝐑 = {𝐑},
-            m = {m},
-            n = {n}
-          ))),
-          {y = {
-            #(B: %Element($../../../Matrices/Matrices(
+        ).operation(_x = {
+          #(
+            A: %Element($../../../Matrices/Matrices(
               𝐑 = {𝐑},
               m = {m},
               n = {n}
-            ))),
-            {z = {$../../../Matrices/sum(
-              𝐑 = {𝐑},
-              m = {m},
-              n = {n},
-              A = {A},
-              B = {B}
-            )}}
-          }}
+            )),
+            B: %Element(%previous)
+          ),
+          {z = {$../../../Matrices/sum(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n},
+            A = {A},
+            B = {B}
+          )}}
       })},
       "0" = {$../../../Matrices/zero(
         𝐑 = {𝐑},
@@ -74,7 +70,7 @@ $"matrix module"(
             m = {m},
             n = {n}
           )}
-        ).function(x = {
+        ).function(_x = {
           #(A: %Element($../../../Matrices/Matrices(
             𝐑 = {𝐑},
             m = {m},
@@ -99,22 +95,22 @@ $"matrix module"(
             m = {m},
             n = {n}
           )}
-        ).operation(x = {
-          #(r: %Element($../../../Carrier(𝐑 = {𝐑}))),
-          {y = {
-            #(A: %Element($../../../Matrices/Matrices(
+        ).operation(_x = {
+          #(
+            r: %Element($../../../Carrier(𝐑 = {𝐑})),
+            A: %Element($../../../Matrices/Matrices(
               𝐑 = {𝐑},
               m = {m},
               n = {n}
-            ))),
-            {z = {$../../../Matrices/"product with left scalar"(
-              𝐑 = {𝐑},
-              m = {m},
-              n = {n},
-              r = {r},
-              A = {A}
-            )}}
-          }}
+            ))
+          ),
+          {z = {$../../../Matrices/"product with left scalar"(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n},
+            r = {r},
+            A = {A}
+          )}}
       })}
   )]
 }

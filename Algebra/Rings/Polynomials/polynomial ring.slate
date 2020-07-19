@@ -36,23 +36,20 @@ $"polynomial ring"(
           𝐑 = {𝐑},
           X = {X}
         )}
-      ).operation(x = {
-        #(p: %Element($Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        ))),
-        {y = {
-          #(q: %Element($Polynomials(
+      ).operation(_x = {
+        #(
+          p: %Element($Polynomials(
             𝐑 = {𝐑},
             X = {X}
-          ))),
-          {z = {$sum(
-            𝐑 = {𝐑},
-            X = {X},
-            p = {p},
-            q = {q}
-          )}}
-        }}
+          )),
+          q: %Element(%previous)
+        ),
+        {z = {$sum(
+          𝐑 = {𝐑},
+          X = {X},
+          p = {p},
+          q = {q}
+        )}}
     })},
     "0" = {$Polynomials(
         𝐑 = {𝐑},
@@ -67,7 +64,7 @@ $"polynomial ring"(
           𝐑 = {𝐑},
           X = {X}
         )}
-      ).function(x = {
+      ).function(_x = {
         #(p: %Element($Polynomials(
           𝐑 = {𝐑},
           X = {X}
@@ -91,23 +88,20 @@ $"polynomial ring"(
           𝐑 = {𝐑},
           X = {X}
         )}
-      ).operation(x = {
-        #(p: %Element($Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        ))),
-        {y = {
-          #(q: %Element($Polynomials(
+      ).operation(_x = {
+        #(
+          p: %Element($Polynomials(
             𝐑 = {𝐑},
             X = {X}
-          ))),
-          {z = {$product(
-            𝐑 = {𝐑},
-            X = {X},
-            p = {p},
-            q = {q}
-          )}}
-        }}
+          )),
+          q: %Element(%previous)
+        ),
+        {z = {$product(
+          𝐑 = {𝐑},
+          X = {X},
+          p = {p},
+          q = {q}
+        )}}
     })},
     "1" = {$../one(𝐑 = {𝐑})}
   )]

@@ -27,8 +27,8 @@ $Terms(
   }
 
   $abstraction(
-    x: %Binding(
-      $../"Fresh variables"(V = {V}),
+    _x: %Binder(
+      #(x: %Element($../"Fresh variables"(V = {V}))),
       #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
         U = {$../Variables},
         S = {V},
@@ -47,11 +47,11 @@ $Terms(
             S = {V},
             T = {%enumeration(x)}
           )})},
-          T = {M[x]},
+          T = {M[x = {x}]},
           x = {x},
           R = {y}
         ),
-        M[y]
+        M[x = {y}]
       )
     ))
   ): %Constructor {
@@ -61,8 +61,8 @@ $Terms(
     ),
     equalityDefinition = {
       leftParameters = #(
-        x: %Binding(
-          $../"Fresh variables"(V = {V}),
+        _x: %Binder(
+          #(x: %Element($../"Fresh variables"(V = {V}))),
           #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
             U = {$../Variables},
             S = {V},
@@ -81,17 +81,17 @@ $Terms(
                 S = {V},
                 T = {%enumeration(x)}
               )})},
-              T = {M[x]},
+              T = {M[x = {x}]},
               x = {x},
               R = {y}
             ),
-            M[y]
+            M[x = {y}]
           )
         ))
       ),
       rightParameters = #(
-        x: %Binding(
-          $../"Fresh variables"(V = {V}),
+        _x: %Binder(
+          #(x: %Element($../"Fresh variables"(V = {V}))),
           #("M'": %Element($Terms(V = {$../../Essentials/Sets/Union(
             U = {$../Variables},
             S = {V},
@@ -110,22 +110,22 @@ $Terms(
                 S = {V},
                 T = {%enumeration(x)}
               )})},
-              T = {"M'"[x]},
+              T = {"M'"[x = {x}]},
               x = {x},
               R = {y}
             ),
-            "M'"[y]
+            "M'"[x = {y}]
           )
         ))
       ),
       definition = [
         %forall(
           #(x: %Element($../"Fresh variables"(V = {V}))),
-          %equals(M[x], "M'"[x])
+          %equals(M[x = {x}], "M'"[x = {x}])
         ),
         %exists(
           #(x: %Element($../"Fresh variables"(V = {V}))),
-          formula = %equals(M[x], "M'"[x])
+          formula = %equals(M[x = {x}], "M'"[x = {x}])
         )
       ],
       isomorphic = %true

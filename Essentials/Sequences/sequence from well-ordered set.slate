@@ -29,7 +29,7 @@ $"sequence from well-ordered set"(
       𝐚 = {$Tuples(
           S = {S},
           α = {α}
-        ).sequence(k = {
+        ).sequence(_k = {
           #(β: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
           {a = {$"indexed element in well-ordered set"(
             S = {S},

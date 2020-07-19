@@ -7,13 +7,13 @@ $"sequence inverse"(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = 
     $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
     [{
       constructor = $../../../Sequences/"Infinite sequences".sequence,
-      parameters = #(n: %Binding(
-        $../../Natural/"Natural numbers",
+      parameters = #(_n: %Binder(
+        #(n: %Element($../../Natural/"Natural numbers")),
         #(a: %Element($../"Rational numbers"))
       )),
-      value = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(n = {
+      value = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(_n = {
           #(n: %Element($../../Natural/"Natural numbers")),
-          {a = {$../inverse(a = {a[n]})}}
+          {a = {$../inverse(a = {a[n = {n}]})}}
       })
     }]
   )]

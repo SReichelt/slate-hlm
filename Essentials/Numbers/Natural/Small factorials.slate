@@ -6,7 +6,7 @@
 $"Small factorials": %StandardTheorem {
   claim = $../../Sequences/"starts with"(
     S = {$"Natural numbers"},
-    𝐚 = {$../../Sequences/"Infinite sequences"(S = {$"Natural numbers"}).sequence(n = {
+    𝐚 = {$../../Sequences/"Infinite sequences"(S = {$"Natural numbers"}).sequence(_n = {
         #(n: %Element($"Natural numbers")),
         {a = {$factorial(n = {n})}}
     })},

@@ -21,78 +21,76 @@ $"left modules"(
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑})},
-      𝐀 = {
-        #(𝐀: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
-        {𝐁 = {
-          #(𝐁: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
-          {M = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
-            𝐑 = {𝐑},
-            𝐌 = {𝐀},
-            𝐍 = {𝐁}
-          )}}
-        }}
+      _𝐀 = {
+        #(
+          𝐀: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑})),
+          𝐁: %Element(%previous)
+        ),
+        {M = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+          𝐑 = {𝐑},
+          𝐌 = {𝐀},
+          𝐍 = {𝐁}
+        )}}
       },
-      𝐂 = {
+      _𝐂 = {
         #(𝐂: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
         {i = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/identity(
           𝐑 = {𝐑},
           𝐌 = {𝐂}
         )}}
       },
-      𝐃 = {
-        #(𝐃: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
-        {𝐄 = {
-          #(𝐄: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
-          {𝐅 = {
-            #(𝐅: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
-            {∘ = {$../../Essentials/Operations/Operations(
-                X = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐄},
-                  𝐍 = {𝐅}
-                )},
-                Y = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐃},
-                  𝐍 = {𝐄}
-                )},
-                Z = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐃},
-                  𝐍 = {𝐅}
-                )}
-              ).operation(x = {
-                #(ψ: %Element($../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐄},
-                  𝐍 = {𝐅}
-                ))),
-                {y = {
-                  #(φ: %Element($../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
-                    𝐑 = {𝐑},
-                    𝐌 = {𝐃},
-                    𝐍 = {𝐄}
-                  ))),
-                  {z = {$../../Essentials/Functions/composition(
-                    X = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
-                      𝐑 = {𝐑},
-                      𝐌 = {𝐃}
-                    )},
-                    Y = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
-                      𝐑 = {𝐑},
-                      𝐌 = {𝐄}
-                    )},
-                    Z = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
-                      𝐑 = {𝐑},
-                      𝐌 = {𝐅}
-                    )},
-                    f = {φ},
-                    g = {ψ}
-                  )}}
-                }}
-            })}}
-          }}
-        }}
+      _𝐃 = {
+        #(
+          𝐃: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑})),
+          𝐄: %Element(%previous),
+          𝐅: %Element(%previous)
+        ),
+        {∘ = {$../../Essentials/Operations/Operations(
+            X = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+              𝐑 = {𝐑},
+              𝐌 = {𝐄},
+              𝐍 = {𝐅}
+            )},
+            Y = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+              𝐑 = {𝐑},
+              𝐌 = {𝐃},
+              𝐍 = {𝐄}
+            )},
+            Z = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+              𝐑 = {𝐑},
+              𝐌 = {𝐃},
+              𝐍 = {𝐅}
+            )}
+          ).operation(_x = {
+            #(
+              ψ: %Element($../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+                𝐑 = {𝐑},
+                𝐌 = {𝐄},
+                𝐍 = {𝐅}
+              )),
+              φ: %Element($../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
+                𝐑 = {𝐑},
+                𝐌 = {𝐃},
+                𝐍 = {𝐄}
+              ))
+            ),
+            {z = {$../../Essentials/Functions/composition(
+              X = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+                𝐑 = {𝐑},
+                𝐌 = {𝐃}
+              )},
+              Y = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+                𝐑 = {𝐑},
+                𝐌 = {𝐄}
+              )},
+              Z = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
+                𝐑 = {𝐑},
+                𝐌 = {𝐅}
+              )},
+              f = {φ},
+              g = {ψ}
+            )}}
+        })}}
       }
   )]
 }

@@ -28,7 +28,7 @@ $"Binomial theorem"(
       ⨂ = {$../"Iterated operations"/"iterated sum"(𝐑 = {𝐑})},
       j = {$../../../Essentials/Numbers/Natural/number(value = 0)},
       k = {n},
-      i = {
+      _i = {
         #(k: %Element($../../../Essentials/Numbers/Integer/Subsets/Interval(
           a = {$../../../Essentials/Numbers/Natural/number(value = 0)},
           b = {n}

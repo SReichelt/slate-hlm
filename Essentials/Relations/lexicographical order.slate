@@ -30,63 +30,60 @@ $"lexicographical order"(
   definition = [$Endorelations(S = {$../Sets/"Cartesian product"(
       S = {S},
       T = {T}
-    )}).relation(s = {
-      #(a: %Element($../Sets/"Cartesian product"(
-        S = {S},
-        T = {T}
-      ))),
-      {t = {
-        #(b: %Element($../Sets/"Cartesian product"(
+    )}).relation(_s = {
+      #(
+        a: %Element($../Sets/"Cartesian product"(
           S = {S},
           T = {T}
-        ))),
-        {p = {%structural(
-          b,
-          $../Sets/"Cartesian product"(
-            S = {S},
-            T = {T}
+        )),
+        b: %Element(%previous)
+      ),
+      {p = {%structural(
+        b,
+        $../Sets/"Cartesian product"(
+          S = {S},
+          T = {T}
+        ),
+        [{
+          constructor = $../Sets/"Cartesian product".pair,
+          parameters = #(
+            "s'": %Element(S),
+            "t'": %Element(T)
           ),
-          [{
-            constructor = $../Sets/"Cartesian product".pair,
-            parameters = #(
-              "s'": %Element(S),
-              "t'": %Element(T)
+          value = %structural(
+            a,
+            $../Sets/"Cartesian product"(
+              S = {S},
+              T = {T}
             ),
-            value = %structural(
-              a,
-              $../Sets/"Cartesian product"(
-                S = {S},
-                T = {T}
+            [{
+              constructor = $../Sets/"Cartesian product".pair,
+              parameters = #(
+                s: %Element(S),
+                t: %Element(T)
               ),
-              [{
-                constructor = $../Sets/"Cartesian product".pair,
-                parameters = #(
-                  s: %Element(S),
-                  t: %Element(T)
+              value = %and(
+                $related(
+                  S = {S},
+                  T = {S},
+                  ≺ = {⪯},
+                  s = {s},
+                  t = {"s'"}
                 ),
-                value = %and(
+                %or(
+                  %not(%equals(s, "s'")),
                   $related(
-                    S = {S},
-                    T = {S},
-                    ≺ = {⪯},
-                    s = {s},
-                    t = {"s'"}
-                  ),
-                  %or(
-                    %not(%equals(s, "s'")),
-                    $related(
-                      S = {T},
-                      T = {T},
-                      ≺ = {⊑},
-                      s = {t},
-                      t = {"t'"}
-                    )
+                    S = {T},
+                    T = {T},
+                    ≺ = {⊑},
+                    s = {t},
+                    t = {"t'"}
                   )
                 )
-              }]
-            )
-          }]
-        )}}
-      }}
+              )
+            }]
+          )
+        }]
+      )}}
   })]
 }

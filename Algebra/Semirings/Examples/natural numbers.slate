@@ -13,30 +13,30 @@ $"natural numbers": %ExplicitOperator {
         X = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Y = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Z = {$../../../Essentials/Numbers/Natural/"Natural numbers"}
-      ).operation(x = {
-        #(m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-        {y = {
-          #(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-          {z = {$../../../Essentials/Numbers/Natural/sum(
-            m = {m},
-            n = {n}
-          )}}
-        }}
+      ).operation(_x = {
+        #(
+          m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
+          n: %Element(%previous)
+        ),
+        {z = {$../../../Essentials/Numbers/Natural/sum(
+          m = {m},
+          n = {n}
+        )}}
     })},
     "0" = {$../../../Essentials/Numbers/Natural/number(value = 0)},
     ⊙ = {$../../../Essentials/Operations/Operations(
         X = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Y = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Z = {$../../../Essentials/Numbers/Natural/"Natural numbers"}
-      ).operation(x = {
-        #(m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-        {y = {
-          #(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-          {z = {$../../../Essentials/Numbers/Natural/product(
-            m = {m},
-            n = {n}
-          )}}
-        }}
+      ).operation(_x = {
+        #(
+          m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
+          n: %Element(%previous)
+        ),
+        {z = {$../../../Essentials/Numbers/Natural/product(
+          m = {m},
+          n = {n}
+        )}}
     })},
     "1" = {$../../../Essentials/Numbers/Natural/number(value = 1)}
   )]

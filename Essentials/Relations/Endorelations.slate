@@ -9,12 +9,12 @@
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Relation
  */
 $Endorelations(S: %Set(auto = %true)): %Construction {
-  $relation(s: %Binding(
-    S,
-    #(t: %Binding(
-      %previous,
-      #(p: %Prop)
-    ))
+  $relation(_s: %Binder(
+    #(
+      s: %Element(S),
+      t: %Element(%previous)
+    ),
+    #(p: %Prop)
   )): %Constructor {
     notation = $SubSup(
       body = $Parens(
@@ -27,26 +27,26 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       ])
     ),
     equalityDefinition = {
-      leftParameters = #(s: %Binding(
-        S,
-        #(t: %Binding(
-          %previous,
-          #(p: %Prop)
-        ))
+      leftParameters = #(_s: %Binder(
+        #(
+          s: %Element(S),
+          t: %Element(%previous)
+        ),
+        #(p: %Prop)
       )),
-      rightParameters = #(s: %Binding(
-        S,
-        #(t: %Binding(
-          %previous,
-          #(q: %Prop)
-        ))
+      rightParameters = #(_s: %Binder(
+        #(
+          s: %Element(S),
+          t: %Element(%previous)
+        ),
+        #(q: %Prop)
       )),
       definition = [%forall(
         #(
           s: %Element(S),
           t: %Element(%previous)
         ),
-        %equiv(p[s,t], q[s,t])
+        %equiv(p[s = {s}, t = {t}], q[s = {s}, t = {t}])
       )],
       isomorphic = %true
     }
@@ -67,18 +67,18 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       S = {S},
       T = {S}
     ))),
-    target = $Endorelations(S = {S}).relation(s = {
-        #(s: %Element(S)),
-        {t = {
-          #(t: %Element(S)),
-          {p = {$related(
-            S = {S},
-            T = {S},
-            ≺ = {≺},
-            s = {s},
-            t = {t}
-          )}}
-        }}
+    target = $Endorelations(S = {S}).relation(_s = {
+        #(
+          s: %Element(S),
+          t: %Element(%previous)
+        ),
+        {p = {$related(
+          S = {S},
+          T = {S},
+          ≺ = {≺},
+          s = {s},
+          t = {t}
+        )}}
     }),
     full = %true
   }

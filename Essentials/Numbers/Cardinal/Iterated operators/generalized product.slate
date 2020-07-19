@@ -5,8 +5,8 @@
  */
 $"generalized product"(
   I: %Set,
-  i: %Binding(
-    I,
+  _i: %Binder(
+    #(i: %Element(I)),
     #(κ: %Element($../"Cardinal numbers"))
   )
 ): %ExplicitOperator {
@@ -17,9 +17,9 @@ $"generalized product"(
   ),
   definition = [$../"Cardinal numbers".cardinality(S = {$../../../Sets/"Generalized operators"/"Generalized cartesian product"(
     I = {I},
-    i = {
+    _i = {
       #(j: %Element(I)),
-      {S = {$../Carrier(κ = {κ[j]})}}
+      {S = {$../Carrier(κ = {κ[i = {j}]})}}
     }
   )})]
 }

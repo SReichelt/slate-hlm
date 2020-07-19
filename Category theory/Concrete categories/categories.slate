@@ -18,78 +18,76 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
       n = {$../../Essentials/Numbers/Natural/number(value = 1)}
     )}).category(
       O = {$../Categories(u = {u})},
-      𝐀 = {
-        #(𝓐: %Element($../Categories(u = {u}))),
-        {𝐁 = {
-          #(𝓑: %Element($../Categories(u = {u}))),
-          {M = {$../Functors/Functors(
-            u = {u},
-            v = {u},
-            𝓒 = {𝓐},
-            𝓓 = {𝓑}
-          )}}
-        }}
+      _𝐀 = {
+        #(
+          𝓐: %Element($../Categories(u = {u})),
+          𝓑: %Element(%previous)
+        ),
+        {M = {$../Functors/Functors(
+          u = {u},
+          v = {u},
+          𝓒 = {𝓐},
+          𝓓 = {𝓑}
+        )}}
       },
-      𝐂 = {
+      _𝐂 = {
         #(𝓒: %Element($../Categories(u = {u}))),
         {i = {$../Functors/identity(
           u = {u},
           𝓒 = {𝓒}
         )}}
       },
-      𝐃 = {
-        #(𝓓: %Element($../Categories(u = {u}))),
-        {𝐄 = {
-          #(𝓔: %Element($../Categories(u = {u}))),
-          {𝐅 = {
-            #(𝓕: %Element($../Categories(u = {u}))),
-            {∘ = {$../../Essentials/Operations/Operations(
-                X = {$../Functors/Functors(
-                  u = {u},
-                  v = {u},
-                  𝓒 = {𝓔},
-                  𝓓 = {𝓕}
-                )},
-                Y = {$../Functors/Functors(
-                  u = {u},
-                  v = {u},
-                  𝓒 = {𝓓},
-                  𝓓 = {𝓔}
-                )},
-                Z = {$../Functors/Functors(
-                  u = {u},
-                  v = {u},
-                  𝓒 = {𝓓},
-                  𝓓 = {𝓕}
-                )}
-              ).operation(x = {
-                #(G: %Element($../Functors/Functors(
-                  u = {u},
-                  v = {u},
-                  𝓒 = {𝓔},
-                  𝓓 = {𝓕}
-                ))),
-                {y = {
-                  #(F: %Element($../Functors/Functors(
-                    u = {u},
-                    v = {u},
-                    𝓒 = {𝓓},
-                    𝓓 = {𝓔}
-                  ))),
-                  {z = {$../Functors/composition(
-                    u = {u},
-                    v = {u},
-                    w = {u},
-                    𝓒 = {𝓓},
-                    𝓓 = {𝓔},
-                    𝓔 = {𝓕},
-                    F = {F},
-                    G = {G}
-                  )}}
-                }}
-            })}}
-          }}
-        }}
+      _𝐃 = {
+        #(
+          𝓓: %Element($../Categories(u = {u})),
+          𝓔: %Element(%previous),
+          𝓕: %Element(%previous)
+        ),
+        {∘ = {$../../Essentials/Operations/Operations(
+            X = {$../Functors/Functors(
+              u = {u},
+              v = {u},
+              𝓒 = {𝓔},
+              𝓓 = {𝓕}
+            )},
+            Y = {$../Functors/Functors(
+              u = {u},
+              v = {u},
+              𝓒 = {𝓓},
+              𝓓 = {𝓔}
+            )},
+            Z = {$../Functors/Functors(
+              u = {u},
+              v = {u},
+              𝓒 = {𝓓},
+              𝓓 = {𝓕}
+            )}
+          ).operation(_x = {
+            #(
+              G: %Element($../Functors/Functors(
+                u = {u},
+                v = {u},
+                𝓒 = {𝓔},
+                𝓓 = {𝓕}
+              )),
+              F: %Element($../Functors/Functors(
+                u = {u},
+                v = {u},
+                𝓒 = {𝓓},
+                𝓓 = {𝓔}
+              ))
+            ),
+            {z = {$../Functors/composition(
+              u = {u},
+              v = {u},
+              w = {u},
+              𝓒 = {𝓓},
+              𝓓 = {𝓔},
+              𝓔 = {𝓕},
+              F = {F},
+              G = {G}
+            )}}
+        })}}
       }
   )]
 }

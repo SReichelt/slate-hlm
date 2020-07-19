@@ -5,7 +5,7 @@
  */
 $identity: %ExplicitOperator {
   notation = '𝗜',
-  definition = [$../Terms(V = {$../../../Essentials/Sets/"Empty set"}).abstraction(x = {
+  definition = [$../Terms(V = {$../../../Essentials/Sets/"Empty set"}).abstraction(_x = {
       #(x: %Element($../../"Fresh variables"(V = {$../../../Essentials/Sets/"Empty set"}))),
       {M = {x}}
   })]

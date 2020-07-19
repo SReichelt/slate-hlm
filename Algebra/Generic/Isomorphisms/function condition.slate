@@ -29,8 +29,8 @@ $"function condition"(
       ),
       [{
         constructor = $../../../Essentials/Functions/Functions.function,
-        parameters = #(y: %Binding(
-          Y,
+        parameters = #(_y: %Binder(
+          #(y: %Element(Y)),
           #(b: %Element(Y))
         )),
         value = %structural(
@@ -41,8 +41,8 @@ $"function condition"(
           ),
           [{
             constructor = $../../../Essentials/Functions/Functions.function,
-            parameters = #(x: %Binding(
-              X,
+            parameters = #(_x: %Binder(
+              #(x: %Element(X)),
               #(a: %Element(X))
             )),
             value = %forall(
@@ -52,14 +52,14 @@ $"function condition"(
                   X = {X},
                   Y = {Y},
                   f = {φ},
-                  x = {a[x]}
+                  x = {a[x = {x}]}
                 ),
-                b[$../../../Essentials/Functions/value(
+                b[y = {$../../../Essentials/Functions/value(
                   X = {X},
                   Y = {Y},
                   f = {φ},
                   x = {x}
-                )]
+                )}]
               )
             )
           }]

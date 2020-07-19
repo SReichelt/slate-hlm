@@ -17,11 +17,11 @@ $"has property"(
     $Properties(S = {S}),
     [{
       constructor = $Properties.property,
-      parameters = #(t: %Binding(
-        S,
+      parameters = #(_t: %Binder(
+        #(t: %Element(S)),
         #(p: %Prop)
       )),
-      value = p[s]
+      value = p[t = {s}]
     }]
   )]
 }

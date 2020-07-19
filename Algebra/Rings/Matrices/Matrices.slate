@@ -15,12 +15,12 @@ $Matrices(
   m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
   n: %Element(%previous)
 ): %Construction {
-  $matrix(i: %Binding(
-    $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
-    #(j: %Binding(
-      $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-      #(a: %Element($../Carrier(𝐑 = {𝐑})))
-    ))
+  $matrix(_i: %Binder(
+    #(
+      i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
+      j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+    ),
+    #(a: %Element($../Carrier(𝐑 = {𝐑})))
   )): %Constructor {
     notation = $SubSup(
       body = $Parens(
@@ -33,26 +33,26 @@ $Matrices(
       ])
     ),
     equalityDefinition = {
-      leftParameters = #(i: %Binding(
-        $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
-        #(j: %Binding(
-          $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-          #(a: %Element($../Carrier(𝐑 = {𝐑})))
-        ))
+      leftParameters = #(_i: %Binder(
+        #(
+          i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
+          j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+        ),
+        #(a: %Element($../Carrier(𝐑 = {𝐑})))
       )),
-      rightParameters = #(i: %Binding(
-        $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
-        #(j: %Binding(
-          $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-          #(b: %Element($../Carrier(𝐑 = {𝐑})))
-        ))
+      rightParameters = #(_i: %Binder(
+        #(
+          i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
+          j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+        ),
+        #(b: %Element($../Carrier(𝐑 = {𝐑})))
       )),
       definition = [%forall(
         #(
           i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
           j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
         ),
-        %equals(a[i,j], b[i,j])
+        %equals(a[i = {i}, j = {j}], b[i = {i}, j = {j}])
       )],
       isomorphic = %true
     }

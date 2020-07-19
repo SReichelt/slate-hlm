@@ -30,7 +30,7 @@ $"cartesian product"(
         S = {W},
         T = {Y}
       )}
-    ).function(x = {
+    ).function(_x = {
       #(z: %Element($../Sets/"Cartesian product"(
         S = {V},
         T = {X}

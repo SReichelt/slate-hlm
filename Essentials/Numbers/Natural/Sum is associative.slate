@@ -12,15 +12,15 @@ $"Sum is associative": %StandardTheorem {
         X = {$"Natural numbers"},
         Y = {$"Natural numbers"},
         Z = {$"Natural numbers"}
-      ).operation(x = {
-        #(m: %Element($"Natural numbers")),
-        {y = {
-          #(n: %Element($"Natural numbers")),
-          {z = {$sum(
-            m = {m},
-            n = {n}
-          )}}
-        }}
+      ).operation(_x = {
+        #(
+          m: %Element($"Natural numbers"),
+          n: %Element(%previous)
+        ),
+        {z = {$sum(
+          m = {m},
+          n = {n}
+        )}}
     })}
   )
 }

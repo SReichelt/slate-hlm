@@ -11,8 +11,8 @@ $"sequence difference"(
       $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
       [{
         constructor = $../../../Sequences/"Infinite sequences".sequence,
-        parameters = #(n: %Binding(
-          $../../Natural/"Natural numbers",
+        parameters = #(_n: %Binder(
+          #(n: %Element($../../Natural/"Natural numbers")),
           #(b: %Element($../"Rational numbers"))
         )),
         value = %structuralCases(
@@ -20,15 +20,15 @@ $"sequence difference"(
           $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
           [{
             constructor = $../../../Sequences/"Infinite sequences".sequence,
-            parameters = #(n: %Binding(
-              $../../Natural/"Natural numbers",
+            parameters = #(_n: %Binder(
+              #(n: %Element($../../Natural/"Natural numbers")),
               #(a: %Element($../"Rational numbers"))
             )),
-            value = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(n = {
+            value = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(_n = {
                 #(n: %Element($../../Natural/"Natural numbers")),
                 {a = {$../difference(
-                  a = {a[n]},
-                  b = {b[n]}
+                  a = {a[n = {n}]},
+                  b = {b[n = {n}]}
                 )}}
             })
           }]

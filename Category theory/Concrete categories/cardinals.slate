@@ -15,60 +15,58 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Essentials/Numbers/Cardinal/"Cardinal numbers"},
-      𝐀 = {
-        #(𝐀: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-        {𝐁 = {
-          #(𝐁: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-          {M = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-            κ = {𝐀},
-            μ = {𝐁}
-          )}}
-        }}
+      _𝐀 = {
+        #(
+          𝐀: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers"),
+          𝐁: %Element(%previous)
+        ),
+        {M = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+          κ = {𝐀},
+          μ = {𝐁}
+        )}}
       },
-      𝐂 = {
+      _𝐂 = {
         #(𝐂: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
         {i = {$../../Essentials/Numbers/Cardinal/Homomorphisms/identity(κ = {𝐂})}}
       },
-      𝐃 = {
-        #(𝐃: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-        {𝐄 = {
-          #(𝐄: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-          {𝐅 = {
-            #(𝐅: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-            {∘ = {$../../Essentials/Operations/Operations(
-                X = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                  κ = {𝐄},
-                  μ = {𝐅}
-                )},
-                Y = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                  κ = {𝐃},
-                  μ = {𝐄}
-                )},
-                Z = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                  κ = {𝐃},
-                  μ = {𝐅}
-                )}
-              ).operation(x = {
-                #(ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                  κ = {𝐄},
-                  μ = {𝐅}
-                ))),
-                {y = {
-                  #(φ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                    κ = {𝐃},
-                    μ = {𝐄}
-                  ))),
-                  {z = {$../../Essentials/Functions/composition(
-                    X = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐃})},
-                    Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐄})},
-                    Z = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐅})},
-                    f = {φ},
-                    g = {ψ}
-                  )}}
-                }}
-            })}}
-          }}
-        }}
+      _𝐃 = {
+        #(
+          𝐃: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers"),
+          𝐄: %Element(%previous),
+          𝐅: %Element(%previous)
+        ),
+        {∘ = {$../../Essentials/Operations/Operations(
+            X = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+              κ = {𝐄},
+              μ = {𝐅}
+            )},
+            Y = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+              κ = {𝐃},
+              μ = {𝐄}
+            )},
+            Z = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+              κ = {𝐃},
+              μ = {𝐅}
+            )}
+          ).operation(_x = {
+            #(
+              ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+                κ = {𝐄},
+                μ = {𝐅}
+              )),
+              φ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
+                κ = {𝐃},
+                μ = {𝐄}
+              ))
+            ),
+            {z = {$../../Essentials/Functions/composition(
+              X = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐃})},
+              Y = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐄})},
+              Z = {$../../Essentials/Numbers/Cardinal/Carrier(κ = {𝐅})},
+              f = {φ},
+              g = {ψ}
+            )}}
+        })}}
       }
   )]
 }

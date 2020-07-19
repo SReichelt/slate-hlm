@@ -26,7 +26,7 @@ $cardinality(
             S = {S},
             𝑻 = {𝑻}
           )},
-          i = {
+          _i = {
             #(i: %Element($Set(
               S = {S},
               𝑻 = {𝑻}
@@ -60,7 +60,7 @@ $cardinality(
           X = {$../../Numbers/Natural/"Natural numbers"},
           ⨂ = {$../../Numbers/Natural/"Iterated operators"/"iterated sum"},
           I = {S},
-          i = {
+          _i = {
             #(i: %Element(S)),
             {a = {$multiplicity(
               S = {S},

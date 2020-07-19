@@ -13,60 +13,58 @@ $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expli
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Rings/Rings},
-      𝐀 = {
-        #(𝐀: %Element($../../Algebra/Rings/Rings)),
-        {𝐁 = {
-          #(𝐁: %Element($../../Algebra/Rings/Rings)),
-          {M = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
-            𝐑 = {𝐀},
-            𝐒 = {𝐁}
-          )}}
-        }}
+      _𝐀 = {
+        #(
+          𝐀: %Element($../../Algebra/Rings/Rings),
+          𝐁: %Element(%previous)
+        ),
+        {M = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
+          𝐑 = {𝐀},
+          𝐒 = {𝐁}
+        )}}
       },
-      𝐂 = {
+      _𝐂 = {
         #(𝐂: %Element($../../Algebra/Rings/Rings)),
         {i = {$../../Algebra/Rings/Homomorphisms/identity(𝐑 = {𝐂})}}
       },
-      𝐃 = {
-        #(𝐃: %Element($../../Algebra/Rings/Rings)),
-        {𝐄 = {
-          #(𝐄: %Element($../../Algebra/Rings/Rings)),
-          {𝐅 = {
-            #(𝐅: %Element($../../Algebra/Rings/Rings)),
-            {∘ = {$../../Essentials/Operations/Operations(
-                X = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                  𝐑 = {𝐄},
-                  𝐒 = {𝐅}
-                )},
-                Y = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                  𝐑 = {𝐃},
-                  𝐒 = {𝐄}
-                )},
-                Z = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                  𝐑 = {𝐃},
-                  𝐒 = {𝐅}
-                )}
-              ).operation(x = {
-                #(ψ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                  𝐑 = {𝐄},
-                  𝐒 = {𝐅}
-                ))),
-                {y = {
-                  #(φ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                    𝐑 = {𝐃},
-                    𝐒 = {𝐄}
-                  ))),
-                  {z = {$../../Essentials/Functions/composition(
-                    X = {$../../Algebra/Rings/Carrier(𝐑 = {𝐃})},
-                    Y = {$../../Algebra/Rings/Carrier(𝐑 = {𝐄})},
-                    Z = {$../../Algebra/Rings/Carrier(𝐑 = {𝐅})},
-                    f = {φ},
-                    g = {ψ}
-                  )}}
-                }}
-            })}}
-          }}
-        }}
+      _𝐃 = {
+        #(
+          𝐃: %Element($../../Algebra/Rings/Rings),
+          𝐄: %Element(%previous),
+          𝐅: %Element(%previous)
+        ),
+        {∘ = {$../../Essentials/Operations/Operations(
+            X = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
+              𝐑 = {𝐄},
+              𝐒 = {𝐅}
+            )},
+            Y = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
+              𝐑 = {𝐃},
+              𝐒 = {𝐄}
+            )},
+            Z = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
+              𝐑 = {𝐃},
+              𝐒 = {𝐅}
+            )}
+          ).operation(_x = {
+            #(
+              ψ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
+                𝐑 = {𝐄},
+                𝐒 = {𝐅}
+              )),
+              φ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
+                𝐑 = {𝐃},
+                𝐒 = {𝐄}
+              ))
+            ),
+            {z = {$../../Essentials/Functions/composition(
+              X = {$../../Algebra/Rings/Carrier(𝐑 = {𝐃})},
+              Y = {$../../Algebra/Rings/Carrier(𝐑 = {𝐄})},
+              Z = {$../../Algebra/Rings/Carrier(𝐑 = {𝐅})},
+              f = {φ},
+              g = {ψ}
+            )}}
+        })}}
       }
   )]
 }

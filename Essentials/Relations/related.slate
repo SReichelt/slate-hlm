@@ -22,14 +22,14 @@ $related(
     ),
     [{
       constructor = $Relations.relation,
-      parameters = #(u: %Binding(
-        S,
-        #(v: %Binding(
-          T,
-          #(p: %Prop)
-        ))
+      parameters = #(_u: %Binder(
+        #(
+          u: %Element(S),
+          v: %Element(T)
+        ),
+        #(p: %Prop)
       )),
-      value = p[s,t]
+      value = p[u = {s}, v = {t}]
     }]
   )]
 }

@@ -14,15 +14,15 @@ $"iterated product": %ExplicitOperator {
           X = {$../"Complex numbers"},
           Y = {$../"Complex numbers"},
           Z = {$../"Complex numbers"}
-        ).operation(x = {
-          #(a: %Element($../"Complex numbers")),
-          {y = {
-            #(b: %Element($../"Complex numbers")),
-            {z = {$../product(
-              a = {a},
-              b = {b}
-            )}}
-          }}
+        ).operation(_x = {
+          #(
+            a: %Element($../"Complex numbers"),
+            b: %Element(%previous)
+          ),
+          {z = {$../product(
+            a = {a},
+            b = {b}
+          )}}
       })},
       e = {$../../Natural/number(value = 1)}
   )]

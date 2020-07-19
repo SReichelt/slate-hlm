@@ -33,12 +33,12 @@ $"left operation condition"(
       ),
       [{
         constructor = $../../../Essentials/Operations/Operations.operation,
-        parameters = #(s: %Binding(
-          S,
-          #(y: %Binding(
-            Y,
-            #(b: %Element(Y))
-          ))
+        parameters = #(_s: %Binder(
+          #(
+            s: %Element(S),
+            y: %Element(Y)
+          ),
+          #(b: %Element(Y))
         )),
         value = %structural(
           ∗,
@@ -49,12 +49,12 @@ $"left operation condition"(
           ),
           [{
             constructor = $../../../Essentials/Operations/Operations.operation,
-            parameters = #(s: %Binding(
-              S,
-              #(x: %Binding(
-                X,
-                #(a: %Element(X))
-              ))
+            parameters = #(_s: %Binder(
+              #(
+                s: %Element(S),
+                x: %Element(X)
+              ),
+              #(a: %Element(X))
             )),
             value = %forall(
               #(
@@ -66,17 +66,14 @@ $"left operation condition"(
                   X = {X},
                   Y = {Y},
                   f = {φ},
-                  x = {a[s,x]}
+                  x = {a[s = {s}, x = {x}]}
                 ),
-                b[
-                  s,
-                  $../../../Essentials/Functions/value(
+                b[s = {s}, y = {$../../../Essentials/Functions/value(
                     X = {X},
                     Y = {Y},
                     f = {φ},
                     x = {x}
-                  )
-                ]
+                )}]
               )
             )
           }]

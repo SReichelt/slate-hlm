@@ -1,9 +1,9 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This definition uses a feature of the HLM logic called "bindings." It is equivalent to the usual set-theoretic definition, which is called "mapping" in this library to distinguish the two definitions (see `$../Relations/mapping`, `$"mapping as function"`).
+ * @remarks This definition uses binders as a built-in feature of the HLM logic. It is equivalent to the usual set-theoretic definition, which is called "mapping" in this library to distinguish the two definitions (see `$../Relations/mapping`, `$"mapping as function"`).
  *
- *          The major advantage of the definition using bindings is that given an explicitly defined function, determining the value at a specific input is simply a matter of resolving definitions.
+ *          The major advantage of the definition using binders is that given an explicitly defined function, determining the value at a specific input is simply a matter of resolving definitions.
  *
  *          Function [extensionality](https://en.wikipedia.org/wiki/Extensionality) is a consequence of the requirement to specify an equality definition for the constructor.
  *
@@ -17,8 +17,8 @@ $Functions(
   X: %Set,
   Y: %Set
 ): %Construction {
-  $function(x: %Binding(
-    X,
+  $function(_x: %Binder(
+    #(x: %Element(X)),
     #(y: %Element(Y))
   )): %Constructor {
     notation = $Parens(
@@ -61,17 +61,17 @@ $Functions(
       )
     },
     equalityDefinition = {
-      leftParameters = #(x: %Binding(
-        X,
+      leftParameters = #(_x: %Binder(
+        #(x: %Element(X)),
         #(y: %Element(Y))
       )),
-      rightParameters = #(x: %Binding(
-        X,
+      rightParameters = #(_x: %Binder(
+        #(x: %Element(X)),
         #("y'": %Element(Y))
       )),
       definition = [%forall(
         #(x: %Element(X)),
-        %equals(y[x], "y'"[x])
+        %equals(y[x = {x}], "y'"[x = {x}])
       )],
       isomorphic = %true
     }

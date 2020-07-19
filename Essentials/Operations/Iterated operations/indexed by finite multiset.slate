@@ -9,11 +9,11 @@ $"indexed by finite multiset"(
     S = {S},
     𝑻 = {𝑰}
   )),
-  i: %Binding(
-    $../../Sets/Multisets/Set(
+  _i: %Binder(
+    #(i: %Element($../../Sets/Multisets/Set(
       S = {S},
       𝑻 = {𝑰}
-    ),
+    ))),
     #(a: %Element(X))
   )
 ): %ExplicitOperator {
@@ -31,7 +31,7 @@ $"indexed by finite multiset"(
         S = {S},
         𝑻 = {𝑰}
       )},
-      i = {
+      _i = {
         #(j: %Element($../../Sets/Multisets/Elements(
           S = {S},
           𝑻 = {𝑰}
@@ -48,7 +48,7 @@ $"indexed by finite multiset"(
               t: %Element(S),
               n: %Element($../../Numbers/Natural/"Natural numbers")
             ),
-            value = a[t]
+            value = a[i = {t}]
           }]
         )}}
       }
@@ -60,7 +60,7 @@ $"indexed by finite multiset"(
         S = {S},
         𝑻 = {𝑰}
       )},
-      i = {
+      _i = {
         #(j: %Element($../../Sets/Multisets/Set(
           S = {S},
           𝑻 = {𝑰}
@@ -73,13 +73,13 @@ $"indexed by finite multiset"(
             𝑻 = {𝑰},
             t = {j}
           )},
-          i = {
+          _i = {
             #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {$../../Sets/Multisets/multiplicity(
               S = {S},
               𝑻 = {𝑰},
               t = {j}
             )}))),
-            {a = {a[j]}}
+            {a = {a[i = {j}]}}
           }
         )}}
       }
@@ -88,7 +88,7 @@ $"indexed by finite multiset"(
       X = {X},
       ⨂ = {⨂},
       I = {S},
-      i = {
+      _i = {
         #(j: %Element(S)),
         {a = {$"indexed by natural number"(
           X = {X},
@@ -98,13 +98,13 @@ $"indexed by finite multiset"(
             𝑻 = {𝑰},
             t = {j}
           )},
-          i = {
+          _i = {
             #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {$../../Sets/Multisets/multiplicity(
               S = {S},
               𝑻 = {𝑰},
               t = {j}
             )}))),
-            {a = {a[j]}}
+            {a = {a[i = {j}]}}
           }
         )}}
       }

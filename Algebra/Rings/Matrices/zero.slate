@@ -19,11 +19,11 @@ $zero(
       𝐑 = {𝐑},
       m = {m},
       n = {n}
-    ).matrix(i = {
-      #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
-      {j = {
-        #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-        {a = {$../zero(𝐑 = {𝐑})}}
-      }}
+    ).matrix(_i = {
+      #(
+        i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
+        j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+      ),
+      {a = {$../zero(𝐑 = {𝐑})}}
   })]
 }

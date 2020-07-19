@@ -4,8 +4,8 @@ $"Iterated operation indexed by natural number is distributive"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = {X})),
   n: %Element($../../Numbers/Natural/"Natural numbers"),
-  i: %Binding(
-    $../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+  _i: %Binder(
+    #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
     #(
       a: %Element(X),
       b: %Element(%previous)
@@ -17,13 +17,13 @@ $"Iterated operation indexed by natural number is distributive"(
       X = {X},
       ⨂ = {⨂},
       n = {n},
-      i = {
+      _i = {
         #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
         {a = {$operation(
           X = {X},
           ⨂ = {⨂},
-          x = {a[i]},
-          y = {b[i]}
+          x = {a[i = {i}]},
+          y = {b[i = {i}]}
         )}}
       }
     ),
@@ -34,18 +34,18 @@ $"Iterated operation indexed by natural number is distributive"(
         X = {X},
         ⨂ = {⨂},
         n = {n},
-        i = {
+        _i = {
           #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-          {a = {a[i]}}
+          {a = {a[i = {i}]}}
         }
       )},
       y = {$"indexed by natural number"(
         X = {X},
         ⨂ = {⨂},
         n = {n},
-        i = {
+        _i = {
           #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-          {a = {b[i]}}
+          {a = {b[i = {i}]}}
         }
       )}
     )

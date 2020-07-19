@@ -66,12 +66,12 @@ $"vertical composition"(
       𝓓 = {𝓓},
       F = {F},
       G = {H}
-    ).transformation(𝐗 = {
-      parameter = #(𝐗: %Element($../Objects(
+    ).transformation(_𝐗 = {
+      #(𝐗: %Element($../Objects(
         u = {u},
         𝓒 = {𝓒}
       ))),
-      arguments = {n = {$../composition(
+      {n = {$../composition(
         u = {v},
         𝓒 = {𝓓},
         𝐗 = {$../Functors/"object value"(

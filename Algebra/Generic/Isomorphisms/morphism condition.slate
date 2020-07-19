@@ -44,12 +44,12 @@ $"morphism condition"(
       ),
       [{
         constructor = $../../../Essentials/Operations/Operations.operation,
-        parameters = #(y_1: %Binding(
-          Y_1,
-          #(y_2: %Binding(
-            Y_2,
-            #(b: %Element(Y_3))
-          ))
+        parameters = #(_y_1: %Binder(
+          #(
+            y_1: %Element(Y_1),
+            y_2: %Element(Y_2)
+          ),
+          #(b: %Element(Y_3))
         )),
         value = %structural(
           ∗,
@@ -60,12 +60,12 @@ $"morphism condition"(
           ),
           [{
             constructor = $../../../Essentials/Operations/Operations.operation,
-            parameters = #(x_1: %Binding(
-              X_1,
-              #(x_2: %Binding(
-                X_2,
-                #(a: %Element(X_3))
-              ))
+            parameters = #(_x_1: %Binder(
+              #(
+                x_1: %Element(X_1),
+                x_2: %Element(X_2)
+              ),
+              #(a: %Element(X_3))
             )),
             value = %forall(
               #(
@@ -77,22 +77,19 @@ $"morphism condition"(
                   X = {X_3},
                   Y = {Y_3},
                   f = {φ_3},
-                  x = {a[x_1,x_2]}
+                  x = {a[x_1 = {x_1}, x_2 = {x_2}]}
                 ),
-                b[
-                  $../../../Essentials/Functions/value(
+                b[y_1 = {$../../../Essentials/Functions/value(
                     X = {X_1},
                     Y = {Y_1},
                     f = {φ_1},
                     x = {x_1}
-                  ),
-                  $../../../Essentials/Functions/value(
+                  )}, y_2 = {$../../../Essentials/Functions/value(
                     X = {X_2},
                     Y = {Y_2},
                     f = {φ_2},
                     x = {x_2}
-                  )
-                ]
+                )}]
               )
             )
           }]

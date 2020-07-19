@@ -24,12 +24,12 @@ $"inner operation condition"(
       ),
       [{
         constructor = $../../../Essentials/Operations/Operations.operation,
-        parameters = #(y_1: %Binding(
-          Y,
-          #(y_2: %Binding(
-            Y,
-            #(b: %Element(Y))
-          ))
+        parameters = #(_y_1: %Binder(
+          #(
+            y_1: %Element(Y),
+            y_2: %Element(Y)
+          ),
+          #(b: %Element(Y))
         )),
         value = %structural(
           ∗,
@@ -40,12 +40,12 @@ $"inner operation condition"(
           ),
           [{
             constructor = $../../../Essentials/Operations/Operations.operation,
-            parameters = #(x_1: %Binding(
-              X,
-              #(x_2: %Binding(
-                X,
-                #(a: %Element(X))
-              ))
+            parameters = #(_x_1: %Binder(
+              #(
+                x_1: %Element(X),
+                x_2: %Element(X)
+              ),
+              #(a: %Element(X))
             )),
             value = %forall(
               #(
@@ -57,22 +57,19 @@ $"inner operation condition"(
                   X = {X},
                   Y = {Y},
                   f = {φ},
-                  x = {a[x_1,x_2]}
+                  x = {a[x_1 = {x_1}, x_2 = {x_2}]}
                 ),
-                b[
-                  $../../../Essentials/Functions/value(
+                b[y_1 = {$../../../Essentials/Functions/value(
                     X = {X},
                     Y = {Y},
                     f = {φ},
                     x = {x_1}
-                  ),
-                  $../../../Essentials/Functions/value(
+                  )}, y_2 = {$../../../Essentials/Functions/value(
                     X = {X},
                     Y = {Y},
                     f = {φ},
                     x = {x_2}
-                  )
-                ]
+                )}]
               )
             )
           }]

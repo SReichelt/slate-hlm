@@ -29,26 +29,26 @@ $"additive inverse"(
     ),
     [{
       constructor = $Matrices.matrix,
-      parameters = #(i: %Binding(
-        $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
-        #(j: %Binding(
-          $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-          #(a: %Element($../Carrier(𝐑 = {𝐑})))
-        ))
+      parameters = #(_i: %Binder(
+        #(
+          i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
+          j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+        ),
+        #(a: %Element($../Carrier(𝐑 = {𝐑})))
       )),
       value = $Matrices(
           𝐑 = {𝐑},
           m = {m},
           n = {n}
-        ).matrix(i = {
-          #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
-          {j = {
-            #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-            {a = {$../"additive inverse"(
-              𝐑 = {𝐑},
-              a = {a[i,j]}
-            )}}
-          }}
+        ).matrix(_i = {
+          #(
+            i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
+            j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+          ),
+          {a = {$../"additive inverse"(
+            𝐑 = {𝐑},
+            a = {a[i = {i}, j = {j}]}
+          )}}
       })
     }]
   )]

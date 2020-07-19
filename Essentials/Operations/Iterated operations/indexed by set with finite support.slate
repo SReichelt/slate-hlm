@@ -4,14 +4,14 @@ $"indexed by set with finite support"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = {X})),
   I: %Set,
-  i: %Binding(
-    I,
+  _i: %Binder(
+    #(i: %Element(I)),
     #(a: %Element(X))
   ),
   J: %SetDef(%subset(
     #(i: %Element(I)),
     %not(%equals(
-      a[i],
+      a[i = {i}],
       $"identity element"(
         X = {X},
         ⨂ = {⨂}
@@ -30,9 +30,9 @@ $"indexed by set with finite support"(
     X = {X},
     ⨂ = {⨂},
     I = {J},
-    i = {
+    _i = {
       #(j: %Element(J)),
-      {a = {a[j]}}
+      {a = {a[i = {j}]}}
     }
   )]
 }

@@ -13,7 +13,7 @@ $conjunction(
     operands = [p, q],
     space = ' '
   ),
-  definition = [$Properties(S = {S}).property(s = {
+  definition = [$Properties(S = {S}).property(_s = {
       #(s: %Element(S)),
       {p = {%and(
         $"has property"(

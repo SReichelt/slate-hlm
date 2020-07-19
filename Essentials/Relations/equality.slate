@@ -13,11 +13,11 @@ $equality(S: %Set): %ExplicitOperator {
     ),
     style = '()'
   ),
-  definition = [$Endorelations(S = {S}).relation(s = {
-      #(s: %Element(S)),
-      {t = {
-        #(t: %Element(S)),
-        {p = {%equals(s, t)}}
-      }}
+  definition = [$Endorelations(S = {S}).relation(_s = {
+      #(
+        s: %Element(S),
+        t: %Element(%previous)
+      ),
+      {p = {%equals(s, t)}}
   })]
 }

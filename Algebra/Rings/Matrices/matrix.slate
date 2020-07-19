@@ -8,7 +8,7 @@ $matrix(
     $../Rings,
     auto = %true
   ),
-  items: %Element($../Carrier(𝐑 = {𝐑}))[,]
+  items: %Element($../Carrier(𝐑 = {𝐑}))[][]
 ): %MacroOperator {
   notation = $Matrix(items = items),
   variables = #(

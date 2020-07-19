@@ -10,60 +10,58 @@ $ordinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Ex
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Essentials/Numbers/Ordinal/"Ordinal numbers"},
-      𝐀 = {
-        #(𝐀: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
-        {𝐁 = {
-          #(𝐁: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
-          {M = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
-            α = {𝐀},
-            β = {𝐁}
-          )}}
-        }}
+      _𝐀 = {
+        #(
+          𝐀: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers"),
+          𝐁: %Element(%previous)
+        ),
+        {M = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+          α = {𝐀},
+          β = {𝐁}
+        )}}
       },
-      𝐂 = {
+      _𝐂 = {
         #(𝐂: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
         {i = {$../../Essentials/Numbers/Ordinal/Homomorphisms/identity(α = {𝐂})}}
       },
-      𝐃 = {
-        #(𝐃: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
-        {𝐄 = {
-          #(𝐄: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
-          {𝐅 = {
-            #(𝐅: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
-            {∘ = {$../../Essentials/Operations/Operations(
-                X = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
-                  α = {𝐄},
-                  β = {𝐅}
-                )},
-                Y = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
-                  α = {𝐃},
-                  β = {𝐄}
-                )},
-                Z = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
-                  α = {𝐃},
-                  β = {𝐅}
-                )}
-              ).operation(x = {
-                #(ψ: %Element($../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
-                  α = {𝐄},
-                  β = {𝐅}
-                ))),
-                {y = {
-                  #(φ: %Element($../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
-                    α = {𝐃},
-                    β = {𝐄}
-                  ))),
-                  {z = {$../../Essentials/Functions/composition(
-                    X = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐃})},
-                    Y = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐄})},
-                    Z = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐅})},
-                    f = {φ},
-                    g = {ψ}
-                  )}}
-                }}
-            })}}
-          }}
-        }}
+      _𝐃 = {
+        #(
+          𝐃: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers"),
+          𝐄: %Element(%previous),
+          𝐅: %Element(%previous)
+        ),
+        {∘ = {$../../Essentials/Operations/Operations(
+            X = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+              α = {𝐄},
+              β = {𝐅}
+            )},
+            Y = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+              α = {𝐃},
+              β = {𝐄}
+            )},
+            Z = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+              α = {𝐃},
+              β = {𝐅}
+            )}
+          ).operation(_x = {
+            #(
+              ψ: %Element($../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+                α = {𝐄},
+                β = {𝐅}
+              )),
+              φ: %Element($../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
+                α = {𝐃},
+                β = {𝐄}
+              ))
+            ),
+            {z = {$../../Essentials/Functions/composition(
+              X = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐃})},
+              Y = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐄})},
+              Z = {$../../Essentials/Numbers/Ordinal/Carrier(α = {𝐅})},
+              f = {φ},
+              g = {ψ}
+            )}}
+        })}}
       }
   )]
 }

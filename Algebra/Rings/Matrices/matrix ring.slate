@@ -39,26 +39,22 @@ $"matrix ring"(
           m = {n},
           n = {n}
         )}
-      ).operation(x = {
-        #(A: %Element($Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
-        ))),
-        {y = {
-          #(B: %Element($Matrices(
+      ).operation(_x = {
+        #(
+          A: %Element($Matrices(
             𝐑 = {𝐑},
             m = {n},
             n = {n}
-          ))),
-          {z = {$sum(
-            𝐑 = {𝐑},
-            m = {n},
-            n = {n},
-            A = {A},
-            B = {B}
-          )}}
-        }}
+          )),
+          B: %Element(%previous)
+        ),
+        {z = {$sum(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n},
+          A = {A},
+          B = {B}
+        )}}
     })},
     "0" = {$zero(
       𝐑 = {𝐑},
@@ -76,7 +72,7 @@ $"matrix ring"(
           m = {n},
           n = {n}
         )}
-      ).function(x = {
+      ).function(_x = {
         #(A: %Element($Matrices(
           𝐑 = {𝐑},
           m = {n},
@@ -105,27 +101,23 @@ $"matrix ring"(
           m = {n},
           n = {n}
         )}
-      ).operation(x = {
-        #(A: %Element($Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
-        ))),
-        {y = {
-          #(B: %Element($Matrices(
+      ).operation(_x = {
+        #(
+          A: %Element($Matrices(
             𝐑 = {𝐑},
             m = {n},
             n = {n}
-          ))),
-          {z = {$product(
-            𝐑 = {𝐑},
-            l = {n},
-            m = {n},
-            n = {n},
-            A = {A},
-            B = {B}
-          )}}
-        }}
+          )),
+          B: %Element(%previous)
+        ),
+        {z = {$product(
+          𝐑 = {𝐑},
+          l = {n},
+          m = {n},
+          n = {n},
+          A = {A},
+          B = {B}
+        )}}
     })},
     "1" = {$identity(
       𝐑 = {𝐑},

@@ -13,15 +13,15 @@ $"AC is equivalent to total order": %EquivalenceTheorem {
       ⪯ = {$../../Relations/Relations(
           S = {$"Cardinal numbers"},
           T = {$"Cardinal numbers"}
-        ).relation(s = {
-          #(κ: %Element($"Cardinal numbers")),
-          {t = {
-            #(μ: %Element($"Cardinal numbers")),
-            {p = {$"less or equal"(
-              κ = {κ},
-              μ = {μ}
-            )}}
-          }}
+        ).relation(_s = {
+          #(
+            κ: %Element($"Cardinal numbers"),
+            μ: %Element(%previous)
+          ),
+          {p = {$"less or equal"(
+            κ = {κ},
+            μ = {μ}
+          )}}
       })}
     )
   ]

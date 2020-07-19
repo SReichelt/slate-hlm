@@ -14,7 +14,7 @@ $"infinite sequence from subset"(
     ),
     arguments = [M]
   ),
-  definition = [$../../../Sequences/"Infinite sequences"(S = {$../"Natural numbers"}).sequence(n = {
+  definition = [$../../../Sequences/"Infinite sequences"(S = {$../"Natural numbers"}).sequence(_n = {
       #(n: %Element($../"Natural numbers")),
       {a = {$"indexed element"(
         M = {M},

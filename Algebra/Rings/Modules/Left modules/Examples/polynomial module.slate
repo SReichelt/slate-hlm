@@ -32,23 +32,20 @@ $"polynomial module"(
             𝐑 = {𝐑},
             X = {X}
           )}
-        ).operation(x = {
-          #(p: %Element($../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          ))),
-          {y = {
-            #(q: %Element($../../../Polynomials/Polynomials(
+        ).operation(_x = {
+          #(
+            p: %Element($../../../Polynomials/Polynomials(
               𝐑 = {𝐑},
               X = {X}
-            ))),
-            {z = {$../../../Polynomials/sum(
-              𝐑 = {𝐑},
-              X = {X},
-              p = {p},
-              q = {q}
-            )}}
-          }}
+            )),
+            q: %Element(%previous)
+          ),
+          {z = {$../../../Polynomials/sum(
+            𝐑 = {𝐑},
+            X = {X},
+            p = {p},
+            q = {q}
+          )}}
       })},
       "0" = {$../../../Polynomials/Polynomials(
           𝐑 = {𝐑},
@@ -63,7 +60,7 @@ $"polynomial module"(
             𝐑 = {𝐑},
             X = {X}
           )}
-        ).function(x = {
+        ).function(_x = {
           #(p: %Element($../../../Polynomials/Polynomials(
             𝐑 = {𝐑},
             X = {X}
@@ -84,20 +81,20 @@ $"polynomial module"(
             𝐑 = {𝐑},
             X = {X}
           )}
-        ).operation(x = {
-          #(a: %Element($../../../Carrier(𝐑 = {𝐑}))),
-          {y = {
-            #(p: %Element($../../../Polynomials/Polynomials(
+        ).operation(_x = {
+          #(
+            a: %Element($../../../Carrier(𝐑 = {𝐑})),
+            p: %Element($../../../Polynomials/Polynomials(
               𝐑 = {𝐑},
               X = {X}
-            ))),
-            {z = {$../../../Polynomials/"product with left scalar"(
-              𝐑 = {𝐑},
-              X = {X},
-              a = {a},
-              p = {p}
-            )}}
-          }}
+            ))
+          ),
+          {z = {$../../../Polynomials/"product with left scalar"(
+            𝐑 = {𝐑},
+            X = {X},
+            a = {a},
+            p = {p}
+          )}}
       })}
   )]
 }

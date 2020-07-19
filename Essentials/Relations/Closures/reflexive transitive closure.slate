@@ -22,7 +22,7 @@ $"reflexive transitive closure"(
       p = {$../../Properties/Properties(S = {$../Relations(
           S = {S},
           T = {S}
-        )}).property(s = {
+        )}).property(_s = {
           #(≺: %Element($../Relations(
             S = {S},
             T = {S}

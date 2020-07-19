@@ -4,8 +4,8 @@ $"indexed by natural number"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = {X})),
   n: %Element($../../Numbers/Natural/"Natural numbers"),
-  i: %Binding(
-    $../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
+  _i: %Binder(
+    #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
     #(a: %Element(X))
   )
 ): %ExplicitOperator {
@@ -37,12 +37,12 @@ $"indexed by natural number"(
             X = {X},
             ⨂ = {⨂},
             n = {m},
-            i = {
+            _i = {
               #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
-              {a = {a[j]}}
+              {a = {a[i = {j}]}}
             }
           )},
-          y = {a[m]}
+          y = {a[i = {m}]}
         ),
         rewrite = %true
       }

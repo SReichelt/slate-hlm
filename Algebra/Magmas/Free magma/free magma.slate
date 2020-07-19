@@ -22,7 +22,7 @@ $"free magma"(
           T = {T}
         )},
         Y = {T}
-      ).function(x = {
+      ).function(_x = {
         #(x: %Element($../../../Essentials/Sets/"Cartesian product"(
           S = {T},
           T = {T}

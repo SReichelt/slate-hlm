@@ -2,15 +2,15 @@
 
 $"dependently equal"(
   I: %Set(auto = %true),
-  i: %Binding(
-    I,
+  _i: %Binder(
+    #(i: %Element(I)),
     #(S: %Set(auto = %true))
   ),
   ≃: %Element($"Dependent equality"(
     I = {I},
-    i = {
+    _i = {
       #(i: %Element(I)),
-      {S = {S[i]}}
+      {S = {S[i = {i}]}}
     }
   )),
   a: %Element(
@@ -21,8 +21,8 @@ $"dependently equal"(
     %previous,
     auto = %true
   ),
-  s: %Element(S[a]),
-  t: %Element(S[b])
+  s: %Element(S[i = {a}]),
+  t: %Element(S[i = {b}])
 ): %Predicate {
   notation = $Relation(
     symbol = ≃,
@@ -32,36 +32,36 @@ $"dependently equal"(
     ≃,
     $"Dependent equality"(
       I = {I},
-      i = {
+      _i = {
         #(i: %Element(I)),
-        {S = {S[i]}}
+        {S = {S[i = {i}]}}
       }
     ),
     [{
       constructor = $"Dependent equality".equality,
       parameters = #(
-        j: %Binding(
-          I,
-          #(k: %Binding(
-            %previous,
-            #(≡: %Element($../Relations(
-              S = {S[j]},
-              T = {S[k]}
-            )))
-          ))
+        _j: %Binder(
+          #(
+            j: %Element(I),
+            k: %Element(%previous)
+          ),
+          #(≡: %Element($../Relations(
+            S = {S[i = {j}]},
+            T = {S[i = {k}]}
+          )))
         ),
         _1: %Constraint(%forall(
           #(i: %Element(I)),
           %equals(
-            ≡[i,i],
-            $../equality(S = {S[i]})
+            ≡[j = {i}, k = {i}],
+            $../equality(S = {S[i = {i}]})
           )
         ))
       ),
       value = $../related(
-        S = {S[a]},
-        T = {S[b]},
-        ≺ = {≡[a,b]},
+        S = {S[i = {a}]},
+        T = {S[i = {b}]},
+        ≺ = {≡[j = {a}, k = {b}]},
         s = {s},
         t = {t}
       )

@@ -22,15 +22,15 @@ $"sequence from subset"(
         ≺ = {$../../../Relations/Relations(
             S = {$../"Natural numbers"},
             T = {$../"Natural numbers"}
-          ).relation(s = {
-            #(m: %Element($../"Natural numbers")),
-            {t = {
-              #(n: %Element($../"Natural numbers")),
-              {p = {$../"less or equal"(
-                m = {m},
-                n = {n}
-              )}}
-            }}
+          ).relation(_s = {
+            #(
+              m: %Element($../"Natural numbers"),
+              n: %Element(%previous)
+            ),
+            {p = {$../"less or equal"(
+              m = {m},
+              n = {n}
+            )}}
         })},
         T = {M}
       )}
@@ -40,7 +40,7 @@ $"sequence from subset"(
         𝐚 = {$../../../Sequences/Tuples(
             S = {M},
             α = {α}
-          ).sequence(k = {
+          ).sequence(_k = {
             #(n: %Element($../../Ordinal/Subsets/"Segment (less)"(α = {α}))),
             {a = {$"indexed element"(
               M = {M},

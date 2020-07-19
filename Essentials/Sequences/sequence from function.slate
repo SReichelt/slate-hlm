@@ -14,7 +14,7 @@ $"sequence from function"(
     function = 'seq',
     arguments = [f]
   ),
-  definition = [$"Infinite sequences"(S = {S}).sequence(n = {
+  definition = [$"Infinite sequences"(S = {S}).sequence(_n = {
       #(n: %Element($../Numbers/Natural/"Natural numbers")),
       {a = {$../Functions/value(
         X = {$../Numbers/Natural/"Natural numbers"},

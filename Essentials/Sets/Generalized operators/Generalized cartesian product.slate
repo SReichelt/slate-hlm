@@ -9,14 +9,14 @@
  */
 $"Generalized cartesian product"(
   I: %Set,
-  i: %Binding(
-    I,
+  _i: %Binder(
+    #(i: %Element(I)),
     #(S: %Set(auto = %true))
   )
 ): %Construction {
-  $product(j: %Binding(
-    I,
-    #(s: %Element(S[j]))
+  $product(_j: %Binder(
+    #(j: %Element(I)),
+    #(s: %Element(S[i = {j}]))
   )): %Constructor {
     notation = $SubSup(
       body = $Parens(
@@ -26,17 +26,17 @@ $"Generalized cartesian product"(
       sub = $ElementRelation(operands = [j, I])
     ),
     equalityDefinition = {
-      leftParameters = #(j: %Binding(
-        I,
-        #(s: %Element(S[j]))
+      leftParameters = #(_j: %Binder(
+        #(j: %Element(I)),
+        #(s: %Element(S[i = {j}]))
       )),
-      rightParameters = #(j: %Binding(
-        I,
-        #(t: %Element(S[j]))
+      rightParameters = #(_j: %Binder(
+        #(j: %Element(I)),
+        #(t: %Element(S[i = {j}]))
       )),
       definition = [%forall(
         #(j: %Element(I)),
-        %equals(s[j], t[j])
+        %equals(s[j = {j}], t[j = {j}])
       )],
       isomorphic = %true
     }

@@ -33,7 +33,7 @@ $"hom-functor"(
       𝓒 = {𝓒},
       𝓓 = {$../"Concrete categories"/cardinals(u = {v})}
     ).functor(
-      𝐗 = {
+      _𝐗 = {
         #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
@@ -45,55 +45,50 @@ $"hom-functor"(
           𝐘 = {𝐗}
         )})}}
       },
-      𝐀 = {
-        #(𝐘: %Element($../Objects(
-          u = {u},
-          𝓒 = {𝓒}
-        ))),
-        {𝐁 = {
-          #(𝐙: %Element($../Objects(
+      _𝐀 = {
+        #(
+          𝐘: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
-          ))),
-          {f = {
-            #(f: %Element($../Morphisms(
+          )),
+          𝐙: %Element(%previous),
+          f: %Element($../Morphisms(
+            u = {u},
+            𝓒 = {𝓒},
+            𝐗 = {𝐘},
+            𝐘 = {𝐙}
+          ))
+        ),
+        {g = {$../../Essentials/Functions/Functions(
+            X = {$../Morphisms(
               u = {u},
               𝓒 = {𝓒},
-              𝐗 = {𝐘},
+              𝐗 = {𝐀},
+              𝐘 = {𝐘}
+            )},
+            Y = {$../Morphisms(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐀},
               𝐘 = {𝐙}
+            )}
+          ).function(_x = {
+            #(g: %Element($../Morphisms(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐀},
+              𝐘 = {𝐘}
             ))),
-            {g = {$../../Essentials/Functions/Functions(
-                X = {$../Morphisms(
-                  u = {u},
-                  𝓒 = {𝓒},
-                  𝐗 = {𝐀},
-                  𝐘 = {𝐘}
-                )},
-                Y = {$../Morphisms(
-                  u = {u},
-                  𝓒 = {𝓒},
-                  𝐗 = {𝐀},
-                  𝐘 = {𝐙}
-                )}
-              ).function(x = {
-                #(g: %Element($../Morphisms(
-                  u = {u},
-                  𝓒 = {𝓒},
-                  𝐗 = {𝐀},
-                  𝐘 = {𝐘}
-                ))),
-                {y = {$../composition(
-                  u = {u},
-                  𝓒 = {𝓒},
-                  𝐗 = {𝐀},
-                  𝐘 = {𝐘},
-                  𝐙 = {𝐙},
-                  f = {g},
-                  g = {f}
-                )}}
-            })}}
-          }}
-        }}
+            {y = {$../composition(
+              u = {u},
+              𝓒 = {𝓒},
+              𝐗 = {𝐀},
+              𝐘 = {𝐘},
+              𝐙 = {𝐙},
+              f = {g},
+              g = {f}
+            )}}
+        })}}
       }
   )]
 }

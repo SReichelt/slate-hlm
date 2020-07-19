@@ -14,15 +14,15 @@ $"iterated sum": %ExplicitOperator {
           X = {$../"Rational numbers"},
           Y = {$../"Rational numbers"},
           Z = {$../"Rational numbers"}
-        ).operation(x = {
-          #(a: %Element($../"Rational numbers")),
-          {y = {
-            #(b: %Element($../"Rational numbers")),
-            {z = {$../sum(
-              a = {a},
-              b = {b}
-            )}}
-          }}
+        ).operation(_x = {
+          #(
+            a: %Element($../"Rational numbers"),
+            b: %Element(%previous)
+          ),
+          {z = {$../sum(
+            a = {a},
+            b = {b}
+          )}}
       })},
       e = {$../../Natural/number(value = 0)}
   )]

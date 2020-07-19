@@ -11,15 +11,15 @@ $"Less or equal is a well-order": %StandardTheorem {
     ⪯ = {$../../Relations/Relations(
         S = {$"Ordinal numbers"},
         T = {$"Ordinal numbers"}
-      ).relation(s = {
-        #(α: %Element($"Ordinal numbers")),
-        {t = {
-          #(β: %Element($"Ordinal numbers")),
-          {p = {$"less or equal"(
-            α = {α},
-            β = {β}
-          )}}
-        }}
+      ).relation(_s = {
+        #(
+          α: %Element($"Ordinal numbers"),
+          β: %Element(%previous)
+        ),
+        {p = {$"less or equal"(
+          α = {α},
+          β = {β}
+        )}}
     })}
   )
 }

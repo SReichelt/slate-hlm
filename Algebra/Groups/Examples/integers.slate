@@ -12,21 +12,21 @@ $integers: %ExplicitOperator {
         X = {$../../../Essentials/Numbers/Integer/Integers},
         Y = {$../../../Essentials/Numbers/Integer/Integers},
         Z = {$../../../Essentials/Numbers/Integer/Integers}
-      ).operation(x = {
-        #(a: %Element($../../../Essentials/Numbers/Integer/Integers)),
-        {y = {
-          #(b: %Element($../../../Essentials/Numbers/Integer/Integers)),
-          {z = {$../../../Essentials/Numbers/Integer/sum(
-            a = {a},
-            b = {b}
-          )}}
-        }}
+      ).operation(_x = {
+        #(
+          a: %Element($../../../Essentials/Numbers/Integer/Integers),
+          b: %Element(%previous)
+        ),
+        {z = {$../../../Essentials/Numbers/Integer/sum(
+          a = {a},
+          b = {b}
+        )}}
     })},
     e = {$../../../Essentials/Numbers/Natural/number(value = 0)},
     i = {$../../../Essentials/Functions/Functions(
         X = {$../../../Essentials/Numbers/Integer/Integers},
         Y = {$../../../Essentials/Numbers/Integer/Integers}
-      ).function(x = {
+      ).function(_x = {
         #(a: %Element($../../../Essentials/Numbers/Integer/Integers)),
         {y = {$../../../Essentials/Numbers/Integer/inverse(a = {a})}}
     })}

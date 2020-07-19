@@ -45,12 +45,12 @@ $product(
     ),
     [{
       constructor = $Matrices.matrix,
-      parameters = #(j: %Binding(
-        $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
-        #(k: %Binding(
-          $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}),
-          #(b: %Element($../Carrier(𝐑 = {𝐑})))
-        ))
+      parameters = #(_j: %Binder(
+        #(
+          j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
+          k: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+        ),
+        #(b: %Element($../Carrier(𝐑 = {𝐑})))
       )),
       value = %structuralCases(
         A,
@@ -61,35 +61,35 @@ $product(
         ),
         [{
           constructor = $Matrices.matrix,
-          parameters = #(i: %Binding(
-            $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {l}),
-            #(j: %Binding(
-              $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
-              #(a: %Element($../Carrier(𝐑 = {𝐑})))
-            ))
+          parameters = #(_i: %Binder(
+            #(
+              i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {l})),
+              j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))
+            ),
+            #(a: %Element($../Carrier(𝐑 = {𝐑})))
           )),
           value = $Matrices(
               𝐑 = {𝐑},
               m = {l},
               n = {n}
-            ).matrix(i = {
-              #(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {l}))),
-              {j = {
-                #(k: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-                {a = {$../../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(
-                  X = {$../Carrier(𝐑 = {𝐑})},
-                  ⨂ = {$../"Iterated operations"/"iterated sum"(𝐑 = {𝐑})},
-                  n = {m},
-                  i = {
-                    #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
-                    {a = {$../product(
-                      𝐑 = {𝐑},
-                      a = {a[i,j]},
-                      b = {b[j,k]}
-                    )}}
-                  }
-                )}}
-              }}
+            ).matrix(_i = {
+              #(
+                i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {l})),
+                k: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+              ),
+              {a = {$../../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(
+                X = {$../Carrier(𝐑 = {𝐑})},
+                ⨂ = {$../"Iterated operations"/"iterated sum"(𝐑 = {𝐑})},
+                n = {m},
+                _i = {
+                  #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
+                  {a = {$../product(
+                    𝐑 = {𝐑},
+                    a = {a[i = {i}, j = {j}]},
+                    b = {b[j = {j}, k = {k}]}
+                  )}}
+                }
+              )}}
           })
         }]
       )

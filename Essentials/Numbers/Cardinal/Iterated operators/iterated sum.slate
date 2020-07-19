@@ -14,15 +14,15 @@ $"iterated sum": %ExplicitOperator {
           X = {$../"Cardinal numbers"},
           Y = {$../"Cardinal numbers"},
           Z = {$../"Cardinal numbers"}
-        ).operation(x = {
-          #(κ: %Element($../"Cardinal numbers")),
-          {y = {
-            #(μ: %Element($../"Cardinal numbers")),
-            {z = {$../sum(
-              κ = {κ},
-              μ = {μ}
-            )}}
-          }}
+        ).operation(_x = {
+          #(
+            κ: %Element($../"Cardinal numbers"),
+            μ: %Element(%previous)
+          ),
+          {z = {$../sum(
+            κ = {κ},
+            μ = {μ}
+          )}}
       })},
       e = {$../../Natural/number(value = 0)}
   )]

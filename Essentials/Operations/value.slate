@@ -26,14 +26,14 @@ $value(
       ),
       [{
         constructor = $Operations.operation,
-        parameters = #(a: %Binding(
-          X,
-          #(b: %Binding(
-            Y,
-            #(c: %Element(Z))
-          ))
+        parameters = #(_a: %Binder(
+          #(
+            a: %Element(X),
+            b: %Element(Y)
+          ),
+          #(c: %Element(Z))
         )),
-        value = c[x,y]
+        value = c[a = {x}, b = {y}]
       }]
     ),
     $../Functions/value(

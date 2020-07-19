@@ -43,12 +43,12 @@ $identity(
         𝓓 = {𝓓},
         F = {F},
         G = {F}
-      ).transformation(𝐗 = {
-        parameter = #(𝐗: %Element($../Objects(
+      ).transformation(_𝐗 = {
+        #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
         ))),
-        arguments = {n = {$../identity(
+        {n = {$../identity(
           u = {v},
           𝓒 = {𝓓},
           𝐗 = {$../Functors/"object value"(
@@ -68,12 +68,12 @@ $identity(
         𝓓 = {𝓓},
         F = {F},
         G = {F}
-      ).transformation(𝐗 = {
-        parameter = #(𝐗: %Element($../Objects(
+      ).transformation(_𝐗 = {
+        #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
         ))),
-        arguments = {n = {$../Functors/"morphism value"(
+        {n = {$../Functors/"morphism value"(
           u = {u},
           v = {v},
           𝓒 = {𝓒},

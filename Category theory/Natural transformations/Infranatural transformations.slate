@@ -30,11 +30,11 @@ $"Infranatural transformations"(
   )),
   G: %Element(%previous)
 ): %Construction {
-  $transformation(𝐗: %Binding(
-    $../Objects(
+  $transformation(_𝐗: %Binder(
+    #(𝐗: %Element($../Objects(
       u = {u},
       𝓒 = {𝓒}
-    ),
+    ))),
     #(n: %Element($../Morphisms(
       u = {v},
       𝓒 = {𝓓},
@@ -64,11 +64,11 @@ $"Infranatural transformations"(
       sub = $ElementRelation(operands = [𝐗, 𝓒])
     ),
     equalityDefinition = {
-      leftParameters = #(𝐗: %Binding(
-        $../Objects(
+      leftParameters = #(_𝐗: %Binder(
+        #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
-        ),
+        ))),
         #(n: %Element($../Morphisms(
           u = {v},
           𝓒 = {𝓓},
@@ -90,11 +90,11 @@ $"Infranatural transformations"(
           )}
         )))
       )),
-      rightParameters = #(𝐗: %Binding(
-        $../Objects(
+      rightParameters = #(_𝐗: %Binder(
+        #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
-        ),
+        ))),
         #(m: %Element($../Morphisms(
           u = {v},
           𝓒 = {𝓓},
@@ -121,7 +121,7 @@ $"Infranatural transformations"(
           u = {u},
           𝓒 = {𝓒}
         ))),
-        %equals(n[𝐗], m[𝐗])
+        %equals(n[𝐗 = {𝐗}], m[𝐗 = {𝐗}])
       )],
       isomorphic = %true
     }

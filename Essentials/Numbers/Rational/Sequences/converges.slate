@@ -19,8 +19,8 @@ $converges(
     $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
     [{
       constructor = $../../../Sequences/"Infinite sequences".sequence,
-      parameters = #(n: %Binding(
-        $../../Natural/"Natural numbers",
+      parameters = #(_n: %Binder(
+        #(n: %Element($../../Natural/"Natural numbers")),
         #(a: %Element($../"Rational numbers"))
       )),
       value = %forall(
@@ -31,7 +31,7 @@ $converges(
             #(m: %Element($../../Natural/Subsets/"Segment (greater or equal)"(n = {n}))),
             $../less(
               a = {$../absolute(a = {$../difference(
-                a = {a[m]},
+                a = {a[n = {m}]},
                 b = {l}
               )})},
               b = {ε}

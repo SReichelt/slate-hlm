@@ -5,8 +5,8 @@ $"indexed by finite set"(
   ⨂: %Element($"Iterated operations"(X = {X})),
   I: %Set,
   _1: %Constraint($../../Sets/finite(S = {I})),
-  i: %Binding(
-    I,
+  _i: %Binder(
+    #(i: %Element(I)),
     #(a: %Element(X))
   )
 ): %ImplicitOperator {
@@ -31,14 +31,14 @@ $"indexed by finite set"(
           X = {X},
           ⨂ = {⨂},
           n = {n},
-          i = {
+          _i = {
             #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-            {a = {a[$../../Functions/value(
+            {a = {a[i = {$../../Functions/value(
               X = {$../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
               Y = {I},
               f = {f},
               x = {j}
-            )]}}
+            )}]}}
           }
         ),
         x
@@ -57,14 +57,14 @@ $"indexed by finite set"(
           X = {X},
           ⨂ = {⨂},
           n = {n},
-          i = {
+          _i = {
             #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-            {a = {a[$../../Functions/value(
+            {a = {a[i = {$../../Functions/value(
               X = {$../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
               Y = {I},
               f = {f},
               x = {j}
-            )]}}
+            )}]}}
           }
         ),
         x

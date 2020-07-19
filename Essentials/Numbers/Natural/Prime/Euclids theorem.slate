@@ -29,7 +29,7 @@ $"Euclids theorem": %StandardTheorem {
         X = {$../"Natural numbers"},
         ⨂ = {$../"Iterated operators"/"iterated product"},
         n = {n},
-        i = {
+        _i = {
           #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
           {a = {$../../../Functions/value(
             X = {$../Subsets/"Segment (less)"(n = {n})},
@@ -42,7 +42,7 @@ $"Euclids theorem": %StandardTheorem {
       _: %UseTheorem(
         $../"Iterated operators"/"Iterated product of positive numbers grows"(
           n = {n},
-          i = {
+          _i = {
             #(j: %Element($../Subsets/"Segment (less)"(n = {n}))),
             {a = {$../../../Functions/value(
               X = {$../Subsets/"Segment (less)"(n = {n})},
@@ -101,7 +101,7 @@ $"Euclids theorem": %StandardTheorem {
       _: %UseTheorem(
         $../"Iterated operators"/"Iterated product is a multiple of each element"(
           n = {n},
-          i = {
+          _i = {
             #(k: %Element($../Subsets/"Segment (less)"(n = {n}))),
             {a = {$../../../Functions/value(
               X = {$../Subsets/"Segment (less)"(n = {n})},

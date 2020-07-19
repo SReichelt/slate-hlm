@@ -7,13 +7,13 @@
  *             * https://ncatlab.org/nlab/show/convergence
  */
 $limit(
-  n: %Binding(
-    $../../Natural/"Natural numbers",
+  _n: %Binder(
+    #(n: %Element($../../Natural/"Natural numbers")),
     #(a: %Element($../"Rational numbers"))
   ),
-  𝐚: %Def($../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(n = {
+  𝐚: %Def($../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(_n = {
       #(m: %Element($../../Natural/"Natural numbers")),
-      {a = {a[m]}}
+      {a = {a[n = {m}]}}
   })),
   _1: %Constraint($convergent(𝐚 = {𝐚}))
 ): %ImplicitOperator {

@@ -36,7 +36,7 @@ $"codomain restriction"(
   definition = [$Functions(
       X = {A},
       Y = {B}
-    ).function(x = {
+    ).function(_x = {
       #(x: %Element(A)),
       {y = {$value(
         X = {X},

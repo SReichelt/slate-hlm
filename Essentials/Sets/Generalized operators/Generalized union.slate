@@ -7,8 +7,8 @@
 $"Generalized union"(
   U: %Set(auto = %true),
   I: %Set,
-  i: %Binding(
-    I,
+  _i: %Binder(
+    #(i: %Element(I)),
     #(S: %Subset(U))
   )
 ): %SetOperator {
@@ -21,7 +21,7 @@ $"Generalized union"(
     #(x: %Element(U)),
     %exists(
       #(j: %Element(I)),
-      formula = %in(x, S[j])
+      formula = %in(x, S[i = {j}])
     )
   )]
 }

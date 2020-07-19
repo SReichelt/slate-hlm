@@ -6,15 +6,15 @@ $"Less or equal is a partial order": %StandardTheorem {
     ⪯ = {$../../Relations/Relations(
         S = {$"Cardinal numbers"},
         T = {$"Cardinal numbers"}
-      ).relation(s = {
-        #(κ: %Element($"Cardinal numbers")),
-        {t = {
-          #(μ: %Element($"Cardinal numbers")),
-          {p = {$"less or equal"(
-            κ = {κ},
-            μ = {μ}
-          )}}
-        }}
+      ).relation(_s = {
+        #(
+          κ: %Element($"Cardinal numbers"),
+          μ: %Element(%previous)
+        ),
+        {p = {$"less or equal"(
+          κ = {κ},
+          μ = {μ}
+        )}}
     })}
   )
 }

@@ -36,8 +36,8 @@ $"less or equal"(
             $../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}),
             [{
               constructor = $../../Sequences/"Infinite sequences".sequence,
-              parameters = #(n: %Binding(
-                $../Natural/"Natural numbers",
+              parameters = #(_n: %Binder(
+                #(n: %Element($../Natural/"Natural numbers")),
                 #(y: %Element($../Rational/"Rational numbers"))
               )),
               value = %structural(
@@ -45,8 +45,8 @@ $"less or equal"(
                 $../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}),
                 [{
                   constructor = $../../Sequences/"Infinite sequences".sequence,
-                  parameters = #(n: %Binding(
-                    $../Natural/"Natural numbers",
+                  parameters = #(_n: %Binder(
+                    #(n: %Element($../Natural/"Natural numbers")),
                     #(x: %Element($../Rational/"Rational numbers"))
                   )),
                   value = %forall(
@@ -56,9 +56,9 @@ $"less or equal"(
                       formula = %forall(
                         #(m: %Element($../Natural/Subsets/"Segment (greater or equal)"(n = {n}))),
                         $../Rational/"less or equal"(
-                          a = {x[m]},
+                          a = {x[n = {m}]},
                           b = {$../Rational/sum(
-                            a = {y[m]},
+                            a = {y[n = {m}]},
                             b = {ε}
                           )}
                         )

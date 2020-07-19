@@ -44,38 +44,36 @@ $"object value"(
       [{
         constructor = $Functors.functor,
         parameters = #(
-          𝐀: %Binding(
-            $../Objects(
+          _𝐀: %Binder(
+            #(𝐀: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
-            ),
+            ))),
             #(𝐘: %Element($../Objects(
               u = {v},
               𝓒 = {𝓓}
             )))
           ),
-          𝐁: %Binding(
-            $../Objects(
-              u = {u},
-              𝓒 = {𝓒}
-            ),
-            #(𝐂: %Binding(
-              %previous,
-              #(f: %Binding(
-                $../Morphisms(
-                  u = {u},
-                  𝓒 = {𝓒},
-                  𝐗 = {𝐁},
-                  𝐘 = {𝐂}
-                ),
-                #(g: %Element($../Morphisms(
-                  u = {v},
-                  𝓒 = {𝓓},
-                  𝐗 = {𝐘[𝐁]},
-                  𝐘 = {𝐘[𝐂]}
-                )))
+          _𝐁: %Binder(
+            #(
+              𝐁: %Element($../Objects(
+                u = {u},
+                𝓒 = {𝓒}
+              )),
+              𝐂: %Element(%previous),
+              f: %Element($../Morphisms(
+                u = {u},
+                𝓒 = {𝓒},
+                𝐗 = {𝐁},
+                𝐘 = {𝐂}
               ))
-            ))
+            ),
+            #(g: %Element($../Morphisms(
+              u = {v},
+              𝓒 = {𝓓},
+              𝐗 = {𝐘[𝐀 = {𝐁}]},
+              𝐘 = {𝐘[𝐀 = {𝐂}]}
+            )))
           ),
           _1: %Constraint(%forall(
             #(𝐀: %Element($../Objects(
@@ -83,19 +81,15 @@ $"object value"(
               𝓒 = {𝓒}
             ))),
             %equals(
-              g[
-                𝐀,
-                𝐀,
-                $../identity(
+              g[𝐁 = {𝐀}, 𝐂 = {𝐀}, f = {$../identity(
                   u = {u},
                   𝓒 = {𝓒},
                   𝐗 = {𝐀}
-                )
-              ],
+              )}],
               $../identity(
                 u = {v},
                 𝓒 = {𝓓},
-                𝐗 = {𝐘[𝐀]}
+                𝐗 = {𝐘[𝐀 = {𝐀}]}
               )
             )
           )),
@@ -121,10 +115,7 @@ $"object value"(
               ))
             ),
             %equals(
-              g[
-                𝐀,
-                𝐂,
-                $../composition(
+              g[𝐁 = {𝐀}, 𝐂 = {𝐂}, f = {$../composition(
                   u = {u},
                   𝓒 = {𝓒},
                   𝐗 = {𝐀},
@@ -132,21 +123,20 @@ $"object value"(
                   𝐙 = {𝐂},
                   g = {e},
                   f = {d}
-                )
-              ],
+              )}],
               $../composition(
                 u = {v},
                 𝓒 = {𝓓},
-                𝐗 = {𝐘[𝐀]},
-                𝐘 = {𝐘[𝐁]},
-                𝐙 = {𝐘[𝐂]},
-                g = {g[𝐁,𝐂,e]},
-                f = {g[𝐀,𝐁,d]}
+                𝐗 = {𝐘[𝐀 = {𝐀}]},
+                𝐘 = {𝐘[𝐀 = {𝐁}]},
+                𝐙 = {𝐘[𝐀 = {𝐂}]},
+                g = {g[𝐁 = {𝐁}, 𝐂 = {𝐂}, f = {e}]},
+                f = {g[𝐁 = {𝐀}, 𝐂 = {𝐁}, f = {d}]}
               )
             )
           ))
         ),
-        value = 𝐘[𝐗]
+        value = 𝐘[𝐀 = {𝐗}]
       }]
     ),
     $../Objects(

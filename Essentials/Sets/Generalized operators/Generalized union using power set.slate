@@ -12,7 +12,7 @@ $"Generalized union using power set"(
     operand = S
   ),
   definition = [$"Generalized union"(
-    i = {
+    _i = {
       #(_i: %Element(S)),
       {S = {%setStructuralCases(
         _i,

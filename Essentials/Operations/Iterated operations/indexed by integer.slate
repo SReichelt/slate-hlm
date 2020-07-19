@@ -5,11 +5,11 @@ $"indexed by integer"(
   ⨂: %Element($"Iterated operations"(X = {X})),
   j: %Element($../../Numbers/Integer/Integers),
   k: %Element(%previous),
-  i: %Binding(
-    $../../Numbers/Integer/Subsets/Interval(
+  _i: %Binder(
+    #(i: %Element($../../Numbers/Integer/Subsets/Interval(
       a = {j},
       b = {k}
-    ),
+    ))),
     #(a: %Element(X))
   )
 ): %ExplicitOperator {
@@ -30,7 +30,7 @@ $"indexed by integer"(
       ))},
       b = {$../../Numbers/Natural/number(value = 1)}
     )},
-    i = {
+    _i = {
       #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {$../../Numbers/Integer/sum(
         a = {%associative($../../Numbers/Integer/difference(
           a = {k},
@@ -38,10 +38,10 @@ $"indexed by integer"(
         ))},
         b = {$../../Numbers/Natural/number(value = 1)}
       )}))),
-      {a = {a[$../../Numbers/Integer/sum(
+      {a = {a[i = {$../../Numbers/Integer/sum(
         a = {i},
         b = {j}
-      )]}}
+      )}]}}
     }
   )]
 }

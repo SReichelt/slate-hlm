@@ -8,39 +8,39 @@
  */
 $"Generalized disjoint union"(
   I: %Set,
-  i: %Binding(
-    I,
+  _i: %Binder(
+    #(i: %Element(I)),
     #(S: %Set(auto = %true))
   ),
   ≃: %Element($../../Relations/"Dependent equality"/"Dependent equality"(
     I = {I},
-    i = {
+    _i = {
       #(i: %Element(I)),
-      {S = {S[i]}}
+      {S = {S[i = {i}]}}
     }
   ))
 ): %Construction {
   $"dependent pair"(
     j: %Element(I),
-    s: %Element(S[j])
+    s: %Element(S[i = {j}])
   ): %Constructor {
     notation = $Tuple(items = [j, s]),
     equalityDefinition = {
       leftParameters = #(
         j: %Element(I),
-        s: %Element(S[j])
+        s: %Element(S[i = {j}])
       ),
       rightParameters = #(
         k: %Element(I),
-        t: %Element(S[k])
+        t: %Element(S[i = {k}])
       ),
       definition = [%and(
         %equals(j, k),
         $../../Relations/"Dependent equality"/"dependently equal"(
           I = {I},
-          i = {
+          _i = {
             #(k: %Element(I)),
-            {S = {S[k]}}
+            {S = {S[i = {k}]}}
           },
           ≃ = {≃},
           a = {j},

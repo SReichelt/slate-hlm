@@ -65,15 +65,15 @@ $"Ordinal numbers": %Construction {
         ≺ = {$../../Relations/Relations(
             S = {$../Natural/"Natural numbers"},
             T = {$../Natural/"Natural numbers"}
-          ).relation(s = {
-            #(m: %Element($../Natural/"Natural numbers")),
-            {t = {
-              #(n: %Element($../Natural/"Natural numbers")),
-              {p = {$../Natural/"less or equal"(
-                m = {m},
-                n = {n}
-              )}}
-            }}
+          ).relation(_s = {
+            #(
+              m: %Element($../Natural/"Natural numbers"),
+              n: %Element(%previous)
+            ),
+            {p = {$../Natural/"less or equal"(
+              m = {m},
+              n = {n}
+            )}}
         })}
       )}
     )

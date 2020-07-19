@@ -31,23 +31,20 @@ $"polynomial module"(
             𝐑 = {𝐑},
             X = {X}
           )}
-        ).operation(x = {
-          #(p: %Element($../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          ))),
-          {y = {
-            #(q: %Element($../../../Polynomials/Polynomials(
+        ).operation(_x = {
+          #(
+            p: %Element($../../../Polynomials/Polynomials(
               𝐑 = {𝐑},
               X = {X}
-            ))),
-            {z = {$../../../Polynomials/sum(
-              𝐑 = {𝐑},
-              X = {X},
-              p = {p},
-              q = {q}
-            )}}
-          }}
+            )),
+            q: %Element(%previous)
+          ),
+          {z = {$../../../Polynomials/sum(
+            𝐑 = {𝐑},
+            X = {X},
+            p = {p},
+            q = {q}
+          )}}
       })},
       "0" = {$../../../Polynomials/Polynomials(
           𝐑 = {𝐑},
@@ -62,7 +59,7 @@ $"polynomial module"(
             𝐑 = {𝐑},
             X = {X}
           )}
-        ).function(x = {
+        ).function(_x = {
           #(p: %Element($../../../Polynomials/Polynomials(
             𝐑 = {𝐑},
             X = {X}
@@ -83,20 +80,20 @@ $"polynomial module"(
             𝐑 = {𝐑},
             X = {X}
           )}
-        ).operation(x = {
-          #(p: %Element($../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          ))),
-          {y = {
-            #(a: %Element($../../../Carrier(𝐑 = {𝐑}))),
-            {z = {$../../../Polynomials/"product with right scalar"(
+        ).operation(_x = {
+          #(
+            p: %Element($../../../Polynomials/Polynomials(
               𝐑 = {𝐑},
-              X = {X},
-              p = {p},
-              a = {a}
-            )}}
-          }}
+              X = {X}
+            )),
+            a: %Element($../../../Carrier(𝐑 = {𝐑}))
+          ),
+          {z = {$../../../Polynomials/"product with right scalar"(
+            𝐑 = {𝐑},
+            X = {X},
+            p = {p},
+            a = {a}
+          )}}
       })}
   )]
 }

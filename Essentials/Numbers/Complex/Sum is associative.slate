@@ -7,15 +7,15 @@ $"Sum is associative": %StandardTheorem {
         X = {$"Complex numbers"},
         Y = {$"Complex numbers"},
         Z = {$"Complex numbers"}
-      ).operation(x = {
-        #(a: %Element($"Complex numbers")),
-        {y = {
-          #(b: %Element($"Complex numbers")),
-          {z = {$sum(
-            a = {a},
-            b = {b}
-          )}}
-        }}
+      ).operation(_x = {
+        #(
+          a: %Element($"Complex numbers"),
+          b: %Element(%previous)
+        ),
+        {z = {$sum(
+          a = {a},
+          b = {b}
+        )}}
     })}
   )
 }

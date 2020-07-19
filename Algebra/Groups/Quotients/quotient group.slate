@@ -14,22 +14,22 @@ $"quotient group"(
     𝐆 = {𝐆},
     S = {S}
   )),
-  ∼: %Def($../../../Essentials/Relations/Endorelations(S = {$../Carrier(𝐆 = {𝐆})}).relation(s = {
-      #(g: %Element($../Carrier(𝐆 = {𝐆}))),
-      {t = {
-        #(h: %Element($../Carrier(𝐆 = {𝐆}))),
-        {p = {%exists(
-          #(s: %Element(S)),
-          formula = %equals(
-            $../operation(
-              𝐆 = {𝐆},
-              a = {g},
-              b = {s}
-            ),
-            h
-          )
-        )}}
-      }}
+  ∼: %Def($../../../Essentials/Relations/Endorelations(S = {$../Carrier(𝐆 = {𝐆})}).relation(_s = {
+      #(
+        g: %Element($../Carrier(𝐆 = {𝐆})),
+        h: %Element(%previous)
+      ),
+      {p = {%exists(
+        #(s: %Element(S)),
+        formula = %equals(
+          $../operation(
+            𝐆 = {𝐆},
+            a = {g},
+            b = {s}
+          ),
+          h
+        )
+      )}}
   })),
   Q: %SetDef($../../../Essentials/Relations/"Equivalence classes"(
     S = {$../Carrier(𝐆 = {𝐆})},
@@ -45,7 +45,7 @@ $"quotient group"(
           T = {Q}
         )},
         Y = {Q}
-      ).function(x = {
+      ).function(_x = {
         #(x: %Element($../../../Essentials/Sets/"Cartesian product"(
           S = {Q},
           T = {Q}
@@ -102,7 +102,7 @@ $"quotient group"(
     i = {$../../../Essentials/Functions/Functions(
         X = {Q},
         Y = {Q}
-      ).function(x = {
+      ).function(_x = {
         #(t: %Element(Q)),
         {y = {%structuralCases(
           t,

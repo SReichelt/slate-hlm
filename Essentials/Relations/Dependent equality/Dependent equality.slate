@@ -13,27 +13,27 @@
  */
 $"Dependent equality"(
   I: %Set,
-  i: %Binding(
-    I,
+  _i: %Binder(
+    #(i: %Element(I)),
     #(S: %Set)
   )
 ): %Construction {
   $equality(
-    a: %Binding(
-      I,
-      #(b: %Binding(
-        %previous,
-        #(≡: %Element($../Relations(
-          S = {S[a]},
-          T = {S[b]}
-        )))
-      ))
+    _a: %Binder(
+      #(
+        a: %Element(I),
+        b: %Element(%previous)
+      ),
+      #(≡: %Element($../Relations(
+        S = {S[i = {a}]},
+        T = {S[i = {b}]}
+      )))
     ),
     _1: %Constraint(%forall(
       #(i: %Element(I)),
       %equals(
-        ≡[i,i],
-        $../equality(S = {S[i]})
+        ≡[a = {i}, b = {i}],
+        $../equality(S = {S[i = {i}]})
       )
     ))
   ): %Constructor {
@@ -56,40 +56,40 @@ $"Dependent equality"(
     ),
     equalityDefinition = {
       leftParameters = #(
-        a: %Binding(
-          I,
-          #(b: %Binding(
-            %previous,
-            #(≡: %Element($../Relations(
-              S = {S[a]},
-              T = {S[b]}
-            )))
-          ))
+        _a: %Binder(
+          #(
+            a: %Element(I),
+            b: %Element(%previous)
+          ),
+          #(≡: %Element($../Relations(
+            S = {S[i = {a}]},
+            T = {S[i = {b}]}
+          )))
         ),
         _1: %Constraint(%forall(
           #(i: %Element(I)),
           %equals(
-            ≡[i,i],
-            $../equality(S = {S[i]})
+            ≡[a = {i}, b = {i}],
+            $../equality(S = {S[i = {i}]})
           )
         ))
       ),
       rightParameters = #(
-        a: %Binding(
-          I,
-          #(b: %Binding(
-            %previous,
-            #("≡'": %Element($../Relations(
-              S = {S[a]},
-              T = {S[b]}
-            )))
-          ))
+        _a: %Binder(
+          #(
+            a: %Element(I),
+            b: %Element(%previous)
+          ),
+          #("≡'": %Element($../Relations(
+            S = {S[i = {a}]},
+            T = {S[i = {b}]}
+          )))
         ),
         _1: %Constraint(%forall(
           #(i: %Element(I)),
           %equals(
-            "≡'"[i,i],
-            $../equality(S = {S[i]})
+            "≡'"[a = {i}, b = {i}],
+            $../equality(S = {S[i = {i}]})
           )
         ))
       ),
@@ -98,7 +98,7 @@ $"Dependent equality"(
           a: %Element(I),
           b: %Element(%previous)
         ),
-        %equals(≡[a,b], "≡'"[a,b])
+        %equals(≡[a = {a}, b = {b}], "≡'"[a = {a}, b = {b}])
       )],
       isomorphic = %true
     }

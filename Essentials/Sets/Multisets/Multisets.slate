@@ -13,8 +13,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/multiset.html#multiset
  */
 $Multisets(S: %Set): %Construction {
-  $multiset(s: %Binding(
-    S,
+  $multiset(_s: %Binder(
+    #(s: %Element(S)),
     #(m: %Element($../../Numbers/Natural/"Natural numbers"))
   )): %Constructor {
     notation = $Set(body = $SubSup(
@@ -22,17 +22,17 @@ $Multisets(S: %Set): %Construction {
       sup = m
     )),
     equalityDefinition = {
-      leftParameters = #(s: %Binding(
-        S,
+      leftParameters = #(_s: %Binder(
+        #(s: %Element(S)),
         #(m: %Element($../../Numbers/Natural/"Natural numbers"))
       )),
-      rightParameters = #(s: %Binding(
-        S,
+      rightParameters = #(_s: %Binder(
+        #(s: %Element(S)),
         #("m'": %Element($../../Numbers/Natural/"Natural numbers"))
       )),
       definition = [%forall(
         #(s: %Element(S)),
-        %equals(m[s], "m'"[s])
+        %equals(m[s = {s}], "m'"[s = {s}])
       )],
       isomorphic = %true
     }

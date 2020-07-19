@@ -11,21 +11,21 @@ $"rational numbers": %ExplicitOperator {
         X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
-      ).operation(x = {
-        #(a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
-        {y = {
-          #(b: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
-          {z = {$../../../Essentials/Numbers/Rational/sum(
-            a = {a},
-            b = {b}
-          )}}
-        }}
+      ).operation(_x = {
+        #(
+          a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers"),
+          b: %Element(%previous)
+        ),
+        {z = {$../../../Essentials/Numbers/Rational/sum(
+          a = {a},
+          b = {b}
+        )}}
     })},
     "0" = {$../../../Essentials/Numbers/Natural/number(value = 0)},
     ⊖ = {$../../../Essentials/Functions/Functions(
         X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
-      ).function(x = {
+      ).function(_x = {
         #(a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
         {y = {$../../../Essentials/Numbers/Rational/inverse(a = {a})}}
     })},
@@ -33,15 +33,15 @@ $"rational numbers": %ExplicitOperator {
         X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
-      ).operation(x = {
-        #(a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
-        {y = {
-          #(b: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
-          {z = {$../../../Essentials/Numbers/Rational/product(
-            a = {a},
-            b = {b}
-          )}}
-        }}
+      ).operation(_x = {
+        #(
+          a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers"),
+          b: %Element(%previous)
+        ),
+        {z = {$../../../Essentials/Numbers/Rational/product(
+          a = {a},
+          b = {b}
+        )}}
     })},
     "1" = {$../../../Essentials/Numbers/Natural/number(value = 1)}
   )]

@@ -55,8 +55,8 @@ $"linear combination"(
         ),
         [{
           constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
-          parameters = #(k: %Binding(
-            $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}),
+          parameters = #(_k: %Binder(
+            #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
             #(x: %Element($../Carrier(
               𝐑 = {𝐑},
               𝐌 = {𝐌}
@@ -76,14 +76,14 @@ $"linear combination"(
             ),
             [{
               constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
-              parameters = #(k: %Binding(
-                $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
+              parameters = #(_k: %Binder(
+                #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
                   S = {$../Carrier(
                     𝐑 = {𝐑},
                     𝐌 = {𝐌}
                   )},
                   𝒂 = {𝒙}
-                )}),
+                )}))),
                 #(a: %Element($../../../Carrier(𝐑 = {𝐑})))
               )),
               value = $../../../../../Essentials/Operations/"Iterated operations"/"indexed by set with finite support"(
@@ -96,13 +96,13 @@ $"linear combination"(
                   𝐌 = {𝐌}
                 )},
                 I = {$../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
-                i = {
+                _i = {
                   #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
                   {a = {$../product(
                     𝐑 = {𝐑},
                     𝐌 = {𝐌},
-                    x = {x[k]},
-                    a = {a[k]}
+                    x = {x[k = {k}]},
+                    a = {a[k = {k}]}
                   )}}
                 }
               )

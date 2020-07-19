@@ -31,30 +31,28 @@ $identity(
       constructor = $Categories.category,
       parameters = #(
         O: %Set,
-        𝐀: %Binding(
-          O,
-          #(𝐁: %Binding(
-            %previous,
-            #(M: %Set)
-          ))
+        _𝐀: %Binder(
+          #(
+            𝐀: %Element(O),
+            𝐁: %Element(%previous)
+          ),
+          #(M: %Set)
         ),
-        𝐂: %Binding(
-          O,
-          #(i: %Element(M[𝐂,𝐂]))
+        _𝐂: %Binder(
+          #(𝐂: %Element(O)),
+          #(i: %Element(M[𝐀 = {𝐂}, 𝐁 = {𝐂}]))
         ),
-        𝐃: %Binding(
-          O,
-          #(𝐄: %Binding(
-            %previous,
-            #(𝐅: %Binding(
-              %previous,
-              #(∘: %Element($../Essentials/Operations/Operations(
-                X = {M[𝐄,𝐅]},
-                Y = {M[𝐃,𝐄]},
-                Z = {M[𝐃,𝐅]}
-              )))
-            ))
-          ))
+        _𝐃: %Binder(
+          #(
+            𝐃: %Element(O),
+            𝐄: %Element(%previous),
+            𝐅: %Element(%previous)
+          ),
+          #(∘: %Element($../Essentials/Operations/Operations(
+            X = {M[𝐀 = {𝐄}, 𝐁 = {𝐅}]},
+            Y = {M[𝐀 = {𝐃}, 𝐁 = {𝐄}]},
+            Z = {M[𝐀 = {𝐃}, 𝐁 = {𝐅}]}
+          )))
         ),
         _1: %Constraint(%forall(
           #(
@@ -62,37 +60,37 @@ $identity(
             𝐗: %Element(%previous),
             𝐘: %Element(%previous),
             𝐙: %Element(%previous),
-            f: %Element(M[𝐖,𝐗]),
-            g: %Element(M[𝐗,𝐘]),
-            h: %Element(M[𝐘,𝐙])
+            f: %Element(M[𝐀 = {𝐖}, 𝐁 = {𝐗}]),
+            g: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}]),
+            h: %Element(M[𝐀 = {𝐘}, 𝐁 = {𝐙}])
           ),
           %equals(
             $../Essentials/Operations/value(
-              X = {M[𝐗,𝐙]},
-              Y = {M[𝐖,𝐗]},
-              Z = {M[𝐖,𝐙]},
-              ∗ = {∘[𝐖,𝐗,𝐙]},
+              X = {M[𝐀 = {𝐗}, 𝐁 = {𝐙}]},
+              Y = {M[𝐀 = {𝐖}, 𝐁 = {𝐗}]},
+              Z = {M[𝐀 = {𝐖}, 𝐁 = {𝐙}]},
+              ∗ = {∘[𝐃 = {𝐖}, 𝐄 = {𝐗}, 𝐅 = {𝐙}]},
               x = {$../Essentials/Operations/value(
-                X = {M[𝐘,𝐙]},
-                Y = {M[𝐗,𝐘]},
-                Z = {M[𝐗,𝐙]},
-                ∗ = {∘[𝐗,𝐘,𝐙]},
+                X = {M[𝐀 = {𝐘}, 𝐁 = {𝐙}]},
+                Y = {M[𝐀 = {𝐗}, 𝐁 = {𝐘}]},
+                Z = {M[𝐀 = {𝐗}, 𝐁 = {𝐙}]},
+                ∗ = {∘[𝐃 = {𝐗}, 𝐄 = {𝐘}, 𝐅 = {𝐙}]},
                 x = {h},
                 y = {g}
               )},
               y = {f}
             ),
             $../Essentials/Operations/value(
-              X = {M[𝐘,𝐙]},
-              Y = {M[𝐖,𝐘]},
-              Z = {M[𝐖,𝐙]},
-              ∗ = {∘[𝐖,𝐘,𝐙]},
+              X = {M[𝐀 = {𝐘}, 𝐁 = {𝐙}]},
+              Y = {M[𝐀 = {𝐖}, 𝐁 = {𝐘}]},
+              Z = {M[𝐀 = {𝐖}, 𝐁 = {𝐙}]},
+              ∗ = {∘[𝐃 = {𝐖}, 𝐄 = {𝐘}, 𝐅 = {𝐙}]},
               x = {h},
               y = {$../Essentials/Operations/value(
-                X = {M[𝐗,𝐘]},
-                Y = {M[𝐖,𝐗]},
-                Z = {M[𝐖,𝐘]},
-                ∗ = {∘[𝐖,𝐗,𝐘]},
+                X = {M[𝐀 = {𝐗}, 𝐁 = {𝐘}]},
+                Y = {M[𝐀 = {𝐖}, 𝐁 = {𝐗}]},
+                Z = {M[𝐀 = {𝐖}, 𝐁 = {𝐘}]},
+                ∗ = {∘[𝐃 = {𝐖}, 𝐄 = {𝐗}, 𝐅 = {𝐘}]},
                 x = {g},
                 y = {f}
               )}
@@ -103,24 +101,24 @@ $identity(
           #(
             𝐗: %Element(O),
             𝐘: %Element(%previous),
-            f: %Element(M[𝐗,𝐘])
+            f: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}])
           ),
           %equals(
             $../Essentials/Operations/value(
-              X = {M[𝐘,𝐘]},
-              Y = {M[𝐗,𝐘]},
-              Z = {M[𝐗,𝐘]},
-              ∗ = {∘[𝐗,𝐘,𝐘]},
-              x = {i[𝐘]},
+              X = {M[𝐀 = {𝐘}, 𝐁 = {𝐘}]},
+              Y = {M[𝐀 = {𝐗}, 𝐁 = {𝐘}]},
+              Z = {M[𝐀 = {𝐗}, 𝐁 = {𝐘}]},
+              ∗ = {∘[𝐃 = {𝐗}, 𝐄 = {𝐘}, 𝐅 = {𝐘}]},
+              x = {i[𝐂 = {𝐘}]},
               y = {f}
             ),
             $../Essentials/Operations/value(
-              X = {M[𝐗,𝐘]},
-              Y = {M[𝐗,𝐗]},
-              Z = {M[𝐗,𝐘]},
-              ∗ = {∘[𝐗,𝐗,𝐘]},
+              X = {M[𝐀 = {𝐗}, 𝐁 = {𝐘}]},
+              Y = {M[𝐀 = {𝐗}, 𝐁 = {𝐗}]},
+              Z = {M[𝐀 = {𝐗}, 𝐁 = {𝐘}]},
+              ∗ = {∘[𝐃 = {𝐗}, 𝐄 = {𝐗}, 𝐅 = {𝐘}]},
               x = {f},
-              y = {i[𝐗]}
+              y = {i[𝐂 = {𝐗}]}
             ),
             f
           )
@@ -131,31 +129,31 @@ $identity(
             𝐘: %Element(%previous),
             _4: %Constraint(%exists(
               #(
-                f: %Element(M[𝐗,𝐘]),
-                g: %Element(M[𝐘,𝐗])
+                f: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}]),
+                g: %Element(M[𝐀 = {𝐘}, 𝐁 = {𝐗}])
               ),
               formula = %and(
                 %equals(
                   $../Essentials/Operations/value(
-                    X = {M[𝐗,𝐘]},
-                    Y = {M[𝐘,𝐗]},
-                    Z = {M[𝐘,𝐘]},
-                    ∗ = {∘[𝐘,𝐗,𝐘]},
+                    X = {M[𝐀 = {𝐗}, 𝐁 = {𝐘}]},
+                    Y = {M[𝐀 = {𝐘}, 𝐁 = {𝐗}]},
+                    Z = {M[𝐀 = {𝐘}, 𝐁 = {𝐘}]},
+                    ∗ = {∘[𝐃 = {𝐘}, 𝐄 = {𝐗}, 𝐅 = {𝐘}]},
                     x = {f},
                     y = {g}
                   ),
-                  i[𝐘]
+                  i[𝐂 = {𝐘}]
                 ),
                 %equals(
                   $../Essentials/Operations/value(
-                    X = {M[𝐘,𝐗]},
-                    Y = {M[𝐗,𝐘]},
-                    Z = {M[𝐗,𝐗]},
-                    ∗ = {∘[𝐗,𝐘,𝐗]},
+                    X = {M[𝐀 = {𝐘}, 𝐁 = {𝐗}]},
+                    Y = {M[𝐀 = {𝐗}, 𝐁 = {𝐘}]},
+                    Z = {M[𝐀 = {𝐗}, 𝐁 = {𝐗}]},
+                    ∗ = {∘[𝐃 = {𝐗}, 𝐄 = {𝐘}, 𝐅 = {𝐗}]},
                     x = {g},
                     y = {f}
                   ),
-                  i[𝐗]
+                  i[𝐂 = {𝐗}]
                 )
               )
             ))
@@ -163,7 +161,7 @@ $identity(
           %equals(𝐗, 𝐘)
         ))
       ),
-      value = i[𝐗]
+      value = i[𝐂 = {𝐗}]
     }]
   )]
 }
