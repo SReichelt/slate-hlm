@@ -1,8 +1,8 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://en.wikipedia.org/wiki/Euler's_criterion
- *             * https://proofwiki.org/wiki/Euler's_Criterion
+ * @references * https://en.wikipedia.org/wiki/Euler%27s_criterion
+ *             * https://proofwiki.org/wiki/Euler%27s_Criterion
  */
 $"Eulers criterion"(
   p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers"),

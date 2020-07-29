@@ -1,11 +1,13 @@
 %../../../../../logics/hlm%
 
 /**
- * @remarks This somewhat technical construction exposes the equality relation on `S[i]` in such a way that it becomes possible to ask whether `%equals(s, t)` for `%in(s, S[a])` and `%in(t, S[b])` whenever a `%equals(a, b)`.
+ * TODO #65 fix comment rendering
+ *
+ * @remarks This somewhat technical construction exposes the equality relation on `S[i = {i}]` in such a way that it becomes possible to ask whether `%equals(s, t)` for `%in(s, S[i = {a}])` and `%in(t, S[i = {b}])` whenever a `%equals(a, b)`.
  *
  *          It might seem that asking whether `%equals(s, t)` should simply be allowed in this case, but the type system of HLM restricts it to the case when `a` and `b` are literally the same expression. If `%equals(a, b)` is given as a proposition, the equality can carry information that needs to be transported from `I` to `S`.
  *
- *          E.g. in category theory, `I` may be a set of objects (which are equal whenever they are isomorphic), and `S[i]` may be a set of morphisms from or to `i`. To check whether two of these morphisms are equal, one of them first needs to be composed with a specific isomorphism.
+ *          E.g. in category theory, `I` may be a set of objects (which are equal whenever they are isomorphic), and `S[i = {i}]` may be a set of morphisms from or to `i`. To check whether two of these morphisms are equal, one of them first needs to be composed with a specific isomorphism.
  *
  *          Dependent equality is a prerequisite to formalizing arbitrary disjoint unions (see `$../../Sets/"Generalized operators"/"Generalized disjoint union"`).
  *

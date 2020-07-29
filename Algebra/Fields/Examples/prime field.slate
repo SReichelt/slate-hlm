@@ -5,7 +5,7 @@
  *             * https://mathworld.wolfram.com/PrimeField.html
  *             * https://proofwiki.org/wiki/Ring_of_Integers_Modulo_Prime_is_Field
  *             * https://ncatlab.org/nlab/show/prime+field
- *             * https://leanprover-community.github.io/mathlib_docs/data/zmod/basic.html#zmodp.field
+ *             * https://leanprover-community.github.io/mathlib_docs/data/zmod/basic.html#zmod.field
  */
 $"prime field"(p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers")): %ExplicitOperator {
   notation = $SubSup(
