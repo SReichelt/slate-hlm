@@ -43,14 +43,15 @@ $"dependently equal"(
         _j: %Binder(
           #(
             j: %Element(I),
-            k: %Element(%previous)
+            k: %Element(%previous),
+            _1: %Constraint(%equals(j, k))
           ),
           #(≡: %Element($../Relations(
             S = {S[i = {j}]},
             T = {S[i = {k}]}
           )))
         ),
-        _1: %Constraint(%forall(
+        _2: %Constraint(%forall(
           #(i: %Element(I)),
           %equals(
             ≡[j = {i}, k = {i}],
