@@ -5,7 +5,7 @@ $"indexed by finite set"(
   ⨂: %Element($"Iterated operations"(X = {X})),
   I: %Set,
   _1: %Constraint($../../Sets/finite(S = {I})),
-  _i: %Binder(
+  _2: %Binder(
     #(i: %Element(I)),
     #(a: %Element(X))
   )
@@ -31,7 +31,7 @@ $"indexed by finite set"(
           X = {X},
           ⨂ = {⨂},
           n = {n},
-          _i = {
+          _1 = {
             #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
             {a = {a[i = {$../../Functions/value(
               X = {$../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
@@ -57,7 +57,7 @@ $"indexed by finite set"(
           X = {X},
           ⨂ = {⨂},
           n = {n},
-          _i = {
+          _1 = {
             #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
             {a = {a[i = {$../../Functions/value(
               X = {$../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},

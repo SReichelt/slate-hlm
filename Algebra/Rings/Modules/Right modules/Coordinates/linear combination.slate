@@ -96,7 +96,7 @@ $"linear combination"(
                   𝐌 = {𝐌}
                 )},
                 I = {$../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
-                _i = {
+                _1 = {
                   #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
                   {a = {$../product(
                     𝐑 = {𝐑},

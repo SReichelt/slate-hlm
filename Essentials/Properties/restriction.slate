@@ -13,7 +13,7 @@ $restriction(
     operand = p,
     minParenLevel = 3
   ),
-  definition = [$Properties(S = {T}).property(_s = {
+  definition = [$Properties(S = {T}).property(_1 = {
       #(t: %Element(T)),
       {p = {$"has property"(
         S = {S},

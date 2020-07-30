@@ -46,7 +46,7 @@ $substitution(
       {
         constructor = $Terms.abstraction,
         parameters = #(
-          _y: %Binder(
+          _2: %Binder(
             #(y: %Element($../"Fresh variables"(V = {V}))),
             #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
               U = {$../Variables},
@@ -54,7 +54,7 @@ $substitution(
               T = {%enumeration(y)}
             )})))
           ),
-          _2: %Constraint(%forall(
+          _3: %Constraint(%forall(
             #(y,z: %Element($../"Fresh variables"(V = {V}))),
             %equals(
               $substitution(
@@ -75,7 +75,7 @@ $substitution(
             U = {V},
             S = {V},
             T = {%enumeration(x)}
-          )}).abstraction(_x = {
+          )}).abstraction(_2 = {
             #(z: %Element($../"Fresh variables"(V = {$../../Essentials/Sets/"Relative complement"(
               U = {V},
               S = {V},

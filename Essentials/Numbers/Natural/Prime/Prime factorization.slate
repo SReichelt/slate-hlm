@@ -18,7 +18,7 @@ $"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTh
       X = {$../"Natural numbers"},
       ⨂ = {$../"Iterated operators"/"iterated product"},
       I = {$"Prime numbers"},
-      _i = {
+      _1 = {
         #(p: %Element($"Prime numbers")),
         {a = {$../power(
           m = {p},
@@ -34,7 +34,7 @@ $"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTh
       ⨂ = {$../"Iterated operators"/"iterated product"},
       S = {$"Prime numbers"},
       𝑰 = {$"prime factors"(n = {n})},
-      _i = {
+      _2 = {
         #(p: %Element($../../../Sets/Multisets/Set(
           S = {$"Prime numbers"},
           𝑻 = {$"prime factors"(n = {n})}

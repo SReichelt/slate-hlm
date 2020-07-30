@@ -8,13 +8,13 @@
  */
 $"Generalized disjoint union"(
   I: %Set,
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element(I)),
     #(S: %Set(auto = %true))
   ),
   ≃: %Element($../../Relations/"Dependent equality"/"Dependent equality"(
     I = {I},
-    _i = {
+    _1 = {
       #(i: %Element(I)),
       {S = {S[i = {i}]}}
     }
@@ -38,7 +38,7 @@ $"Generalized disjoint union"(
         %equals(j, k),
         $../../Relations/"Dependent equality"/"dependently equal"(
           I = {I},
-          _i = {
+          _1 = {
             #(k: %Element(I)),
             {S = {S[i = {k}]}}
           },

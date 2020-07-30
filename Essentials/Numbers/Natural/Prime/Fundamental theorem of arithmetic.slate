@@ -27,7 +27,7 @@ $"Fundamental theorem of arithmetic"(n: %Element($../Subsets/"Positive numbers")
         ⨂ = {$../"Iterated operators"/"iterated product"},
         S = {$"Prime numbers"},
         𝑰 = {𝑷},
-        _i = {
+        _2 = {
           #(p: %Element($../../../Sets/Multisets/Set(
             S = {$"Prime numbers"},
             𝑻 = {𝑷}

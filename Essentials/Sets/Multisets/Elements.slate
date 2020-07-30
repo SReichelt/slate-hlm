@@ -32,7 +32,7 @@ $Elements(
         T = {$../../Numbers/Natural/"Natural numbers"}
       )},
       I = {S},
-      _i = {
+      _1 = {
         #(t: %Element(S)),
         {S = {$Items(
           S = {S},

@@ -2,7 +2,7 @@
 
 $"Iterated product of positive numbers grows"(
   n: %Element($../"Natural numbers"),
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
     #(a: %Element($../Subsets/"Positive numbers"))
   ),
@@ -13,7 +13,7 @@ $"Iterated product of positive numbers grows"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated product"},
       n = {m},
-      _i = {
+      _1 = {
         #(j: %Element($../Subsets/"Segment (less)"(n = {m}))),
         {a = {a[i = {j}]}}
       }
@@ -22,7 +22,7 @@ $"Iterated product of positive numbers grows"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated product"},
       n = {n},
-      _i = {
+      _1 = {
         #(k: %Element($../Subsets/"Segment (less)"(n = {n}))),
         {a = {a[i = {k}]}}
       }

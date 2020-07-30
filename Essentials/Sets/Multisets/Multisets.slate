@@ -13,7 +13,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/multiset.html#multiset
  */
 $Multisets(S: %Set): %Construction {
-  $multiset(_s: %Binder(
+  $multiset(_1: %Binder(
     #(s: %Element(S)),
     #(m: %Element($../../Numbers/Natural/"Natural numbers"))
   )): %Constructor {
@@ -22,11 +22,11 @@ $Multisets(S: %Set): %Construction {
       sup = m
     )),
     equalityDefinition = {
-      leftParameters = #(_s: %Binder(
+      leftParameters = #(_1: %Binder(
         #(s: %Element(S)),
         #(m: %Element($../../Numbers/Natural/"Natural numbers"))
       )),
-      rightParameters = #(_s: %Binder(
+      rightParameters = #(_2: %Binder(
         #(s: %Element(S)),
         #("m'": %Element($../../Numbers/Natural/"Natural numbers"))
       )),

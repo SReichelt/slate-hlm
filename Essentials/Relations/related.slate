@@ -21,7 +21,7 @@ $related(
     ),
     [{
       constructor = $Relations.relation,
-      parameters = #(_u: %Binder(
+      parameters = #(_1: %Binder(
         #(
           u: %Element(S),
           v: %Element(T)

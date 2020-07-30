@@ -12,10 +12,10 @@ $"Generalized intersection using power set"(
     operand = S
   ),
   definition = [$"Generalized intersection"(
-    _i = {
-      #(_i: %Element(S)),
+    _1 = {
+      #(i: %Element(S)),
       {S = {%setStructuralCases(
-        _i,
+        i,
         $../"Power set"(S = {U}),
         [{
           constructor = $../"Power set".subset,

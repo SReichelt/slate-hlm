@@ -45,7 +45,7 @@ $"linearly dependent"(
             )},
             𝒂 = {𝒙}
           )}
-        ).sequence(_k = {
+        ).sequence(_1 = {
           #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
             S = {$../Carrier(
               𝐑 = {𝐑},

@@ -27,7 +27,7 @@ $Terms(
   }
 
   $abstraction(
-    _x: %Binder(
+    _2: %Binder(
       #(x: %Element($../"Fresh variables"(V = {V}))),
       #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
         U = {$../Variables},
@@ -35,7 +35,7 @@ $Terms(
         T = {%enumeration(x)}
       )})))
     ),
-    _2: %Constraint(%forall(
+    _3: %Constraint(%forall(
       #(x,y: %Element($../"Fresh variables"(V = {V}))),
       %equals(
         $substitution(
@@ -58,7 +58,7 @@ $Terms(
     ),
     equalityDefinition = {
       leftParameters = #(
-        _x: %Binder(
+        _2: %Binder(
           #(x: %Element($../"Fresh variables"(V = {V}))),
           #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
             U = {$../Variables},
@@ -66,7 +66,7 @@ $Terms(
             T = {%enumeration(x)}
           )})))
         ),
-        _2: %Constraint(%forall(
+        _3: %Constraint(%forall(
           #(x,y: %Element($../"Fresh variables"(V = {V}))),
           %equals(
             $substitution(
@@ -84,7 +84,7 @@ $Terms(
         ))
       ),
       rightParameters = #(
-        _x: %Binder(
+        _4: %Binder(
           #(x: %Element($../"Fresh variables"(V = {V}))),
           #("M'": %Element($Terms(V = {$../../Essentials/Sets/Union(
             U = {$../Variables},
@@ -92,7 +92,7 @@ $Terms(
             T = {%enumeration(x)}
           )})))
         ),
-        "_2'": %Constraint(%forall(
+        _5: %Constraint(%forall(
           #(x,y: %Element($../"Fresh variables"(V = {V}))),
           %equals(
             $substitution(

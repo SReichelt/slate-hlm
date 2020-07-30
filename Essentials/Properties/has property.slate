@@ -17,7 +17,7 @@ $"has property"(
     $Properties(S = {S}),
     [{
       constructor = $Properties.property,
-      parameters = #(_t: %Binder(
+      parameters = #(_1: %Binder(
         #(t: %Element(S)),
         #(p: %Prop)
       )),

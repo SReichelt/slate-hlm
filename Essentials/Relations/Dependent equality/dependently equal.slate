@@ -2,13 +2,13 @@
 
 $"dependently equal"(
   I: %Set(auto = %true),
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element(I)),
     #(S: %Set(auto = %true))
   ),
   ≃: %Element($"Dependent equality"(
     I = {I},
-    _i = {
+    _1 = {
       #(i: %Element(I)),
       {S = {S[i = {i}]}}
     }
@@ -28,7 +28,7 @@ $"dependently equal"(
     ≃,
     $"Dependent equality"(
       I = {I},
-      _i = {
+      _1 = {
         #(i: %Element(I)),
         {S = {S[i = {i}]}}
       }
@@ -36,17 +36,17 @@ $"dependently equal"(
     [{
       constructor = $"Dependent equality".equality,
       parameters = #(
-        _j: %Binder(
+        _2: %Binder(
           #(
             j,k: %Element(I),
-            _1: %Constraint(%equals(j, k))
+            _3: %Constraint(%equals(j, k))
           ),
           #(≡: %Element($../Relations(
             S = {S[i = {j}]},
             T = {S[i = {k}]}
           )))
         ),
-        _2: %Constraint(%forall(
+        _4: %Constraint(%forall(
           #(i: %Element(I)),
           %equals(
             ≡[j = {i}, k = {i}],

@@ -18,7 +18,7 @@ $Tuples(
   S: %Set(auto = %true),
   α: %Element($../Numbers/Ordinal/"Ordinal numbers")
 ): %Construction {
-  $sequence(_k: %Binder(
+  $sequence(_1: %Binder(
     #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
     #(a: %Element(S))
   )): %Constructor {
@@ -30,11 +30,11 @@ $Tuples(
       sub = $LessThanRelation(operands = [k, α])
     ),
     equalityDefinition = {
-      leftParameters = #(_k: %Binder(
+      leftParameters = #(_1: %Binder(
         #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
         #(a: %Element(S))
       )),
-      rightParameters = #(_k: %Binder(
+      rightParameters = #(_2: %Binder(
         #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
         #(b: %Element(S))
       )),

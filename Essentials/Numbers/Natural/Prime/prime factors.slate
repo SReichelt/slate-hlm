@@ -5,7 +5,7 @@ $"prime factors"(n: %Element($../"Natural numbers")): %ExplicitOperator {
     function = 'PrimeFactors',
     arguments = [n]
   ),
-  definition = [$../../../Sets/Multisets/Multisets(S = {$"Prime numbers"}).multiset(_s = {
+  definition = [$../../../Sets/Multisets/Multisets(S = {$"Prime numbers"}).multiset(_1 = {
       #(p: %Element($"Prime numbers")),
       {m = {$multiplicity(
         n = {n},

@@ -14,7 +14,7 @@ $"beta reduction"(
   ),
   definition = [%extendedSubset(
     #(
-      _x: %Binder(
+      _2: %Binder(
         #(x: %Element($../"Fresh variables"(V = {V}))),
         #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
           U = {$../Variables},
@@ -27,7 +27,7 @@ $"beta reduction"(
     ),
     $../"Rewriting rules"(T = {$Terms(V = {V})}).rule(
         l = {$Terms(V = {V}).application(
-            M = {$Terms(V = {V}).abstraction(_x = {
+            M = {$Terms(V = {V}).abstraction(_2 = {
                 #(z: %Element($../"Fresh variables"(V = {V}))),
                 {M = {M[x = {z}]}}
             })},

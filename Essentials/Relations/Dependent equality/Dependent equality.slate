@@ -11,23 +11,23 @@
  */
 $"Dependent equality"(
   I: %Set,
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element(I)),
     #(S: %Set)
   )
 ): %Construction {
   $equality(
-    _a: %Binder(
+    _2: %Binder(
       #(
         a,b: %Element(I),
-        _1: %Constraint(%equals(a, b))
+        _3: %Constraint(%equals(a, b))
       ),
       #(≡: %Element($../Relations(
         S = {S[i = {a}]},
         T = {S[i = {b}]}
       )))
     ),
-    _2: %Constraint(%forall(
+    _4: %Constraint(%forall(
       #(i: %Element(I)),
       %equals(
         ≡[a = {i}, b = {i}],
@@ -54,17 +54,17 @@ $"Dependent equality"(
     ),
     equalityDefinition = {
       leftParameters = #(
-        _a: %Binder(
+        _2: %Binder(
           #(
             a,b: %Element(I),
-            _1: %Constraint(%equals(a, b))
+            _3: %Constraint(%equals(a, b))
           ),
           #(≡: %Element($../Relations(
             S = {S[i = {a}]},
             T = {S[i = {b}]}
           )))
         ),
-        _2: %Constraint(%forall(
+        _4: %Constraint(%forall(
           #(i: %Element(I)),
           %equals(
             ≡[a = {i}, b = {i}],
@@ -73,17 +73,17 @@ $"Dependent equality"(
         ))
       ),
       rightParameters = #(
-        _a: %Binder(
+        _5: %Binder(
           #(
             a,b: %Element(I),
-            _1: %Constraint(%equals(a, b))
+            _6: %Constraint(%equals(a, b))
           ),
           #("≡'": %Element($../Relations(
             S = {S[i = {a}]},
             T = {S[i = {b}]}
           )))
         ),
-        "_2'": %Constraint(%forall(
+        _7: %Constraint(%forall(
           #(i: %Element(I)),
           %equals(
             "≡'"[a = {i}, b = {i}],

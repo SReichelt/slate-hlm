@@ -17,7 +17,7 @@ $multiplicity(
     $Multisets(S = {S}),
     [{
       constructor = $Multisets.multiset,
-      parameters = #(_s: %Binder(
+      parameters = #(_1: %Binder(
         #(s: %Element(S)),
         #(m: %Element($../../Numbers/Natural/"Natural numbers"))
       )),

@@ -2,7 +2,7 @@
 
 $"Iterated sum is greater or equal to each element"(
   n: %Element($../"Natural numbers"),
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
     #(a: %Element($../"Natural numbers"))
   ),
@@ -14,7 +14,7 @@ $"Iterated sum is greater or equal to each element"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated product"},
       n = {n},
-      _i = {
+      _1 = {
         #(k: %Element($../Subsets/"Segment (less)"(n = {n}))),
         {a = {a[i = {k}]}}
       }

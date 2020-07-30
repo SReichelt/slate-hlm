@@ -5,7 +5,7 @@
  */
 $"generalized product"(
   I: %Set,
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element(I)),
     #(κ: %Element($../"Cardinal numbers"))
   )
@@ -17,7 +17,7 @@ $"generalized product"(
   ),
   definition = [$../"Cardinal numbers".cardinality(S = {$../../../Sets/"Generalized operators"/"Generalized cartesian product"(
     I = {I},
-    _i = {
+    _1 = {
       #(j: %Element(I)),
       {S = {$../Carrier(κ = {κ[i = {j}]})}}
     }

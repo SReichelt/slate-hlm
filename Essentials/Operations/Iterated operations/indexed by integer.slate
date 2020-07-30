@@ -4,7 +4,7 @@ $"indexed by integer"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = {X})),
   j,k: %Element($../../Numbers/Integer/Integers),
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element($../../Numbers/Integer/Subsets/Interval(
       a = {j},
       b = {k}
@@ -29,7 +29,7 @@ $"indexed by integer"(
       ))},
       b = {$../../Numbers/Natural/number(value = 1)}
     )},
-    _i = {
+    _1 = {
       #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {$../../Numbers/Integer/sum(
         a = {%associative($../../Numbers/Integer/difference(
           a = {k},

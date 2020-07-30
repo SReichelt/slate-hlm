@@ -5,13 +5,13 @@
  */
 $"generalized sum"(
   I: %Set,
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element(I)),
     #(κ: %Element($../"Cardinal numbers"))
   ),
   ≃: %Element($../../../Relations/"Dependent equality"/"Dependent equality"(
     I = {I},
-    _i = {
+    _1 = {
       #(i: %Element(I)),
       {S = {$../Carrier(κ = {κ[i = {i}]})}}
     }
@@ -25,7 +25,7 @@ $"generalized sum"(
   ),
   definition = [$../"Cardinal numbers".cardinality(S = {$../../../Sets/"Generalized operators"/"Generalized disjoint union"(
     I = {I},
-    _i = {
+    _1 = {
       #(j: %Element(I)),
       {S = {$../Carrier(κ = {κ[i = {j}]})}}
     },

@@ -19,7 +19,7 @@ $converges(
     $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
     [{
       constructor = $../../../Sequences/"Infinite sequences".sequence,
-      parameters = #(_n: %Binder(
+      parameters = #(_1: %Binder(
         #(n: %Element($../../Natural/"Natural numbers")),
         #(a: %Element($../"Rational numbers"))
       )),

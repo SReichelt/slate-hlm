@@ -39,7 +39,7 @@ $"Real numbers": %Construction {
   notation = 'ℝ',
   embedding = {
     parameter = #(x: %Element($../Rational/"Rational numbers")),
-    target = $"Real numbers".class(r = {$../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}).sequence(_n = {
+    target = $"Real numbers".class(r = {$../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}).sequence(_1 = {
         #(k: %Element($../Natural/"Natural numbers")),
         {a = {x}}
     })})

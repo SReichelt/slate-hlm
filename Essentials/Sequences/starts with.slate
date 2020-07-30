@@ -24,8 +24,8 @@ $"starts with"(
     ),
     [{
       constructor = $Tuples.sequence,
-      parameters = #(_j: %Binder(
-        #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}))),
+      parameters = #(_2: %Binder(
+        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}))),
         #(b: %Element(S))
       )),
       value = %structural(
@@ -33,13 +33,13 @@ $"starts with"(
         $"Infinite sequences"(S = {S}),
         [{
           constructor = $"Infinite sequences".sequence,
-          parameters = #(_k: %Binder(
+          parameters = #(_1: %Binder(
             #(k: %Element($../Numbers/Natural/"Natural numbers")),
             #(a: %Element(S))
           )),
           value = %forall(
             #(k: %Element($../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-            %equals(a[k = {k}], b[j = {k}])
+            %equals(a[k = {k}], b[k = {k}])
           )
         }]
       )

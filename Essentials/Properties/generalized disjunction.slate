@@ -11,7 +11,7 @@ $"generalized disjunction"(
     symbol = '⋁',
     operand = P
   ),
-  definition = [$Properties(S = {S}).property(_s = {
+  definition = [$Properties(S = {S}).property(_1 = {
       #(s: %Element(S)),
       {p = {%exists(
         #(p: %Element(P)),

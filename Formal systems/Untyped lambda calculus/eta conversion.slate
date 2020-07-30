@@ -15,7 +15,7 @@ $"eta conversion"(
   definition = [%extendedSubset(
     #(M: %Element($Terms(V = {V}))),
     $../"Rewriting rules"(T = {$Terms(V = {V})}).rule(
-        l = {$Terms(V = {V}).abstraction(_x = {
+        l = {$Terms(V = {V}).abstraction(_2 = {
             #(z: %Element($../"Fresh variables"(V = {V}))),
             {M = {$Terms(V = {V}).application(
                 M = {M},

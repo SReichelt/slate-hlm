@@ -9,12 +9,12 @@
  */
 $"Generalized cartesian product"(
   I: %Set,
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element(I)),
     #(S: %Set(auto = %true))
   )
 ): %Construction {
-  $product(_j: %Binder(
+  $product(_2: %Binder(
     #(j: %Element(I)),
     #(s: %Element(S[i = {j}]))
   )): %Constructor {
@@ -26,11 +26,11 @@ $"Generalized cartesian product"(
       sub = $ElementRelation(operands = [j, I])
     ),
     equalityDefinition = {
-      leftParameters = #(_j: %Binder(
+      leftParameters = #(_2: %Binder(
         #(j: %Element(I)),
         #(s: %Element(S[i = {j}]))
       )),
-      rightParameters = #(_j: %Binder(
+      rightParameters = #(_3: %Binder(
         #(j: %Element(I)),
         #(t: %Element(S[i = {j}]))
       )),

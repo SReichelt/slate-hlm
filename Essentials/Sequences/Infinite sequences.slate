@@ -15,7 +15,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/data/stream.html#stream
  */
 $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
-  $sequence(_n: %Binder(
+  $sequence(_1: %Binder(
     #(n: %Element($../Numbers/Natural/"Natural numbers")),
     #(a: %Element(S))
   )): %Constructor {
@@ -27,11 +27,11 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
       sub = $ElementRelation(operands = [n, 'ℕ'])
     ),
     equalityDefinition = {
-      leftParameters = #(_n: %Binder(
+      leftParameters = #(_1: %Binder(
         #(n: %Element($../Numbers/Natural/"Natural numbers")),
         #(a: %Element(S))
       )),
-      rightParameters = #(_n: %Binder(
+      rightParameters = #(_2: %Binder(
         #(n: %Element($../Numbers/Natural/"Natural numbers")),
         #(b: %Element(S))
       )),
@@ -66,11 +66,11 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
       ),
       [{
         constructor = $Tuples.sequence,
-        parameters = #(_j: %Binder(
+        parameters = #(_1: %Binder(
           #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../Numbers/Ordinal/Examples/omega}))),
           #(a: %Element(S))
         )),
-        value = $"Infinite sequences"(S = {S}).sequence(_n = {
+        value = $"Infinite sequences"(S = {S}).sequence(_1 = {
             #(k: %Element($../Numbers/Natural/"Natural numbers")),
             {a = {a[j = {k}]}}
         })

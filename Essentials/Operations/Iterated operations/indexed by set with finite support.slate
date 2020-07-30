@@ -4,7 +4,7 @@ $"indexed by set with finite support"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = {X})),
   I: %Set,
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element(I)),
     #(a: %Element(X))
   ),
@@ -18,7 +18,7 @@ $"indexed by set with finite support"(
       )
     ))
   )),
-  _1: %Constraint($../../Sets/finite(S = {J}))
+  _2: %Constraint($../../Sets/finite(S = {J}))
 ): %ExplicitOperator {
   notation = $LargeOperator(
     symbol = ⨂,
@@ -30,7 +30,7 @@ $"indexed by set with finite support"(
     X = {X},
     ⨂ = {⨂},
     I = {J},
-    _i = {
+    _2 = {
       #(j: %Element(J)),
       {a = {a[i = {j}]}}
     }

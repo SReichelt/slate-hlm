@@ -33,7 +33,7 @@ $"less or equal"(a,b: %Element($"Real numbers")): %Predicate {
             $../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}),
             [{
               constructor = $../../Sequences/"Infinite sequences".sequence,
-              parameters = #(_n: %Binder(
+              parameters = #(_2: %Binder(
                 #(n: %Element($../Natural/"Natural numbers")),
                 #(y: %Element($../Rational/"Rational numbers"))
               )),
@@ -42,7 +42,7 @@ $"less or equal"(a,b: %Element($"Real numbers")): %Predicate {
                 $../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}),
                 [{
                   constructor = $../../Sequences/"Infinite sequences".sequence,
-                  parameters = #(_n: %Binder(
+                  parameters = #(_1: %Binder(
                     #(n: %Element($../Natural/"Natural numbers")),
                     #(x: %Element($../Rational/"Rational numbers"))
                   )),

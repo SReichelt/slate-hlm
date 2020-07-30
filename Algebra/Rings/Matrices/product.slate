@@ -73,7 +73,7 @@ $product(
                 X = {$../Carrier(𝐑 = {𝐑})},
                 ⨂ = {$../"Iterated operations"/"iterated sum"(𝐑 = {𝐑})},
                 n = {m},
-                _i = {
+                _1 = {
                   #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
                   {a = {$../product(
                     𝐑 = {𝐑},

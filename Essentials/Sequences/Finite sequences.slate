@@ -55,14 +55,14 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
             ),
             [{
               constructor = $Tuples.sequence,
-              parameters = #(_k: %Binder(
+              parameters = #(_1: %Binder(
                 #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}))),
                 #(b: %Element(S))
               )),
               value = $Tuples(
                   S = {S},
                   α = {m}
-                ).sequence(_k = {
+                ).sequence(_1 = {
                   #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {m}))),
                   {a = {b[k = {j}]}}
               })

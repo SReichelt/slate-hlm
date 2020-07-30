@@ -8,7 +8,7 @@ $"sequence difference"(𝐚,𝐛: %Element($../../../Sequences/"Infinite sequenc
       $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
       [{
         constructor = $../../../Sequences/"Infinite sequences".sequence,
-        parameters = #(_n: %Binder(
+        parameters = #(_2: %Binder(
           #(n: %Element($../../Natural/"Natural numbers")),
           #(b: %Element($../"Rational numbers"))
         )),
@@ -17,11 +17,11 @@ $"sequence difference"(𝐚,𝐛: %Element($../../../Sequences/"Infinite sequenc
           $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
           [{
             constructor = $../../../Sequences/"Infinite sequences".sequence,
-            parameters = #(_n: %Binder(
+            parameters = #(_1: %Binder(
               #(n: %Element($../../Natural/"Natural numbers")),
               #(a: %Element($../"Rational numbers"))
             )),
-            value = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(_n = {
+            value = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(_1 = {
                 #(n: %Element($../../Natural/"Natural numbers")),
                 {a = {$../difference(
                   a = {a[n = {n}]},

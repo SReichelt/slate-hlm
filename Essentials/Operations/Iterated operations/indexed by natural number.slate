@@ -4,7 +4,7 @@ $"indexed by natural number"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = {X})),
   n: %Element($../../Numbers/Natural/"Natural numbers"),
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
     #(a: %Element(X))
   )
@@ -37,7 +37,7 @@ $"indexed by natural number"(
             X = {X},
             ⨂ = {⨂},
             n = {m},
-            _i = {
+            _1 = {
               #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {m}))),
               {a = {a[i = {j}]}}
             }

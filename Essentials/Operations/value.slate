@@ -24,7 +24,7 @@ $value(
       ),
       [{
         constructor = $Operations.operation,
-        parameters = #(_a: %Binder(
+        parameters = #(_1: %Binder(
           #(
             a: %Element(X),
             b: %Element(Y)

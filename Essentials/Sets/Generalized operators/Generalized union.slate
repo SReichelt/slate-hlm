@@ -7,7 +7,7 @@
 $"Generalized union"(
   U: %Set(auto = %true),
   I: %Set,
-  _i: %Binder(
+  _1: %Binder(
     #(i: %Element(I)),
     #(S: %Subset(U))
   )

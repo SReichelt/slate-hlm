@@ -5,7 +5,7 @@ $"Iterated sum over variable"(n: %Element($../"Natural numbers")): %StandardTheo
     $../../../Operations/"Iterated operations"/"indexed by natural number"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated sum"},
-      _i = {
+      _1 = {
         #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
         {a = {i}}
       },

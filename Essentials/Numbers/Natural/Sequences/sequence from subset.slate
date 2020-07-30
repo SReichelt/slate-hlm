@@ -37,7 +37,7 @@ $"sequence from subset"(
         𝐚 = {$../../../Sequences/Tuples(
             S = {M},
             α = {α}
-          ).sequence(_k = {
+          ).sequence(_1 = {
             #(n: %Element($../../Ordinal/Subsets/"Segment (less)"(α = {α}))),
             {a = {$"indexed element"(
               M = {M},
