@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = {$../Integers}, ⨂ = {$"iterated product"}, n = {n}, i = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i]}}})`
+ * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = {$../Integers}, ⨂ = {$"iterated product"}, n = {n}, _1 = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i = {i}]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation
  *             * https://mathworld.wolfram.com/Product.html
