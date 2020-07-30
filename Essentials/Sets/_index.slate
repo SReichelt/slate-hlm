@@ -23,6 +23,7 @@ $Sets: %Section {
     %item($"Cartesian product"),
     %item($"Power set"),
     %item($"Truth values"),
+    %item($"maximal subset"),
     %subsection(
       $"Generalized operators",
       'Generalized operators'

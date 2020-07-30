@@ -1,0 +1,26 @@
+%../../../../logics/hlm%
+
+$"maximal subset"(
+  S: %Set,
+  T: %Subset(S),
+  _1: %Binder(
+    #(I: %Subset(S)),
+    #(p: %Prop)
+  )
+): %Predicate {
+  notation = $Verb(
+    operand = T,
+    verb = ['is a maximal subset ', I, ' of ', S, ' such that ', p]
+  ),
+  definition = [%and(
+    p[I = {T}],
+    %forall(
+      #(
+        I: %Subset(S),
+        _2: %Constraint(p[I = {I}]),
+        _3: %Constraint(%sub(T, I))
+      ),
+      %setEquals(T, I)
+    )
+  )]
+}
