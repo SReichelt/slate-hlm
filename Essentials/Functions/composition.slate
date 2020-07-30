@@ -26,7 +26,7 @@ $composition(
   definition = [$Functions(
       X = {X},
       Y = {Z}
-    ).function(_x = {
+    ).function(_1 = {
       #(x: %Element(X)),
       {y = {$value(
         X = {Y},

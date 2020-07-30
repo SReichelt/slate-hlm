@@ -22,7 +22,7 @@ $"complex numbers": %ExplicitOperator {
     ⊖ = {$../../../Essentials/Functions/Functions(
         X = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
         Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"}
-      ).function(_x = {
+      ).function(_1 = {
         #(a: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
         {y = {$../../../Essentials/Numbers/Complex/inverse(a = {a})}}
     })},

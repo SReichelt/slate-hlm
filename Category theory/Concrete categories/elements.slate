@@ -55,7 +55,7 @@ $elements(
               S = {%enumeration(d)},
               T = {%enumeration(f)}
             )}
-          ).function(_x = {
+          ).function(_1 = {
             #(x: %Element($../../Essentials/Sets/"Cartesian product"(
               S = {$../../Essentials/Sets/Intersection(
                 U = {S},

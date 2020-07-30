@@ -42,7 +42,7 @@ $"quotient group"(
           T = {Q}
         )},
         Y = {Q}
-      ).function(_x = {
+      ).function(_1 = {
         #(x: %Element($../../../Essentials/Sets/"Cartesian product"(
           S = {Q},
           T = {Q}
@@ -99,7 +99,7 @@ $"quotient group"(
     i = {$../../../Essentials/Functions/Functions(
         X = {Q},
         Y = {Q}
-      ).function(_x = {
+      ).function(_1 = {
         #(t: %Element(Q)),
         {y = {%structuralCases(
           t,

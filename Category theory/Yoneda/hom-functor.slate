@@ -70,7 +70,7 @@ $"hom-functor"(
               𝐗 = {𝐀},
               𝐘 = {𝐙}
             )}
-          ).function(_x = {
+          ).function(_1 = {
             #(g: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},

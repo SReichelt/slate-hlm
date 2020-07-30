@@ -14,7 +14,7 @@
  *             * https://coq.inria.fr/library/Coq.Program.Basics.html#arrow
  */
 $Functions(X,Y: %Set): %Construction {
-  $function(_x: %Binder(
+  $function(_1: %Binder(
     #(x: %Element(X)),
     #(y: %Element(Y))
   )): %Constructor {
@@ -58,11 +58,11 @@ $Functions(X,Y: %Set): %Construction {
       )
     },
     equalityDefinition = {
-      leftParameters = #(_x: %Binder(
+      leftParameters = #(_1: %Binder(
         #(x: %Element(X)),
         #(y: %Element(Y))
       )),
-      rightParameters = #(_x: %Binder(
+      rightParameters = #(_2: %Binder(
         #(x: %Element(X)),
         #("y'": %Element(Y))
       )),

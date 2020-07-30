@@ -23,7 +23,7 @@ $integers: %ExplicitOperator {
     i = {$../../../Essentials/Functions/Functions(
         X = {$../../../Essentials/Numbers/Integer/Integers},
         Y = {$../../../Essentials/Numbers/Integer/Integers}
-      ).function(_x = {
+      ).function(_1 = {
         #(a: %Element($../../../Essentials/Numbers/Integer/Integers)),
         {y = {$../../../Essentials/Numbers/Integer/inverse(a = {a})}}
     })}

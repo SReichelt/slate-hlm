@@ -48,7 +48,7 @@ $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
         i = {$../../Essentials/Functions/Functions(
             X = {$Units(𝐑 = {𝐑})},
             Y = {$Units(𝐑 = {𝐑})}
-          ).function(_x = {
+          ).function(_1 = {
             #(a: %Element($Units(𝐑 = {𝐑}))),
             {y = {$"multiplicative inverse"(
               𝐑 = {𝐑},

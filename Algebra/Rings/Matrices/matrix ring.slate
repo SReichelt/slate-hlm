@@ -69,7 +69,7 @@ $"matrix ring"(
           m = {n},
           n = {n}
         )}
-      ).function(_x = {
+      ).function(_1 = {
         #(A: %Element($Matrices(
           𝐑 = {𝐑},
           m = {n},

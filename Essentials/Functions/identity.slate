@@ -14,7 +14,7 @@ $identity(X: %Set(auto = %true)): %ExplicitOperator {
   definition = [$Functions(
       X = {X},
       Y = {X}
-    ).function(_x = {
+    ).function(_1 = {
       #(x: %Element(X)),
       {y = {x}}
   })]

@@ -30,7 +30,7 @@ $"generalized restriction"(
   definition = [$Functions(
       X = {A},
       Y = {B}
-    ).function(_x = {
+    ).function(_1 = {
       #(x: %Element(A)),
       {y = {$value(
         X = {X},

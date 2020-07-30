@@ -13,7 +13,7 @@ $"Number of small groups": %StandardTheorem {
       f = {$../../../../Essentials/Functions/Functions(
           X = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
           Y = {$../../../../Essentials/Numbers/Natural/"Natural numbers"}
-        ).function(_x = {
+        ).function(_1 = {
           #(n: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
           {y = {$"number of groups with order"(n = {n})}}
       })}

@@ -60,7 +60,7 @@ $"column vector space"(
               𝐑 = {𝐅},
               n = {n}
             )}
-          ).function(_x = {
+          ).function(_1 = {
             #(v: %Element($../../../Algebra/Rings/Matrices/Vectors(
               𝐑 = {𝐅},
               n = {n}

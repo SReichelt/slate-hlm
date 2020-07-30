@@ -51,7 +51,7 @@ $"yoneda equivalence"(
         F = {F},
         𝐗 = {𝐀}
       )})}
-    ).function(_x = {
+    ).function(_1 = {
       #(η: %Element($../"Natural transformations"/"Natural transformations"(
         u = {u},
         v = {v},

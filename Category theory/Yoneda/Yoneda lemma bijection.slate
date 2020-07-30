@@ -110,7 +110,7 @@ $"Yoneda lemma bijection"(
             )},
             G = {F}
           )}
-        ).function(_x = {
+        ).function(_1 = {
           #(x: %Element($../../Essentials/Numbers/Cardinal/Carrier(κ = {$../Functors/"object value"(
             u = {u},
             v = {v},
@@ -151,7 +151,7 @@ $"Yoneda lemma bijection"(
                     F = {F},
                     𝐗 = {𝐗}
                   )})}
-                ).function(_x = {
+                ).function(_1 = {
                   #(f: %Element($../Morphisms(
                     u = {u},
                     𝓒 = {𝓒},

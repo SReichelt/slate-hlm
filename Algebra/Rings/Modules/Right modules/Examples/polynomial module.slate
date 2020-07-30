@@ -56,7 +56,7 @@ $"polynomial module"(
             𝐑 = {𝐑},
             X = {X}
           )}
-        ).function(_x = {
+        ).function(_1 = {
           #(p: %Element($../../../Polynomials/Polynomials(
             𝐑 = {𝐑},
             X = {X}

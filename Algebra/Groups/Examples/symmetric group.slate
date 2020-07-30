@@ -51,7 +51,7 @@ $"symmetric group"(X: %Set): %ExplicitOperator {
           X = {X},
           Y = {X}
         )}
-      ).function(_x = {
+      ).function(_1 = {
         #(f: %Element($../../../Essentials/Functions/Bijections(
           X = {X},
           Y = {X}

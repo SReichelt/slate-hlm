@@ -22,7 +22,7 @@ $"rational numbers": %ExplicitOperator {
     ⊖ = {$../../../Essentials/Functions/Functions(
         X = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
-      ).function(_x = {
+      ).function(_1 = {
         #(a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
         {y = {$../../../Essentials/Numbers/Rational/inverse(a = {a})}}
     })},

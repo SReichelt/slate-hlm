@@ -36,7 +36,7 @@ $"monoid with inverses"(
         i = {$../../Essentials/Functions/Functions(
             X = {M},
             Y = {M}
-          ).function(_x = {
+          ).function(_1 = {
             #(a: %Element(M)),
             {y = {$../Monoids/inverse(
               𝐌 = {𝐌},

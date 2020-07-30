@@ -25,7 +25,7 @@ $"mapping as function"(
   definition = [$Functions(
       X = {S},
       Y = {T}
-    ).function(_x = {
+    ).function(_1 = {
       #(s: %Element(S)),
       {y = {$../Relations/"mapping value"(
         S = {S},
