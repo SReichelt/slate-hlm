@@ -27,64 +27,64 @@ $"linear combination"(
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [𝒙, 𝐚]),
   definition = [%structuralCases(
-    𝒙,
-    $../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = {$../Carrier(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌}
-    )}),
+    𝐚,
+    $../../../../../Essentials/Sequences/Tuples(
+      S = {$../../../Carrier(𝐑 = {𝐑})},
+      α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
+        S = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌}
+        )},
+        𝒂 = {𝒙}
+      )}
+    ),
     [{
-      constructor = $../../../../../Essentials/Sequences/"Ordinal-indexed sequences".sequence,
-      parameters = #(
-        α: %Element($../../../../../Essentials/Numbers/Ordinal/"Ordinal numbers"),
-        _m: %Element($../../../../../Essentials/Sequences/Tuples(
+      constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
+      parameters = #(_1: %Binder(
+        #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
           S = {$../Carrier(
             𝐑 = {𝐑},
             𝐌 = {𝐌}
           )},
-          α = {α}
-        ))
-      ),
+          𝒂 = {𝒙}
+        )}))),
+        #(a: %Element($../../../Carrier(𝐑 = {𝐑})))
+      )),
       value = %structuralCases(
-        _m,
-        $../../../../../Essentials/Sequences/Tuples(
-          S = {$../Carrier(
-            𝐑 = {𝐑},
-            𝐌 = {𝐌}
-          )},
-          α = {α}
-        ),
+        𝒙,
+        $../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = {$../Carrier(
+          𝐑 = {𝐑},
+          𝐌 = {𝐌}
+        )}),
         [{
-          constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
-          parameters = #(_k: %Binder(
-            #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
-            #(x: %Element($../Carrier(
-              𝐑 = {𝐑},
-              𝐌 = {𝐌}
-            )))
-          )),
+          constructor = $../../../../../Essentials/Sequences/"Ordinal-indexed sequences".sequence,
+          parameters = #(
+            α: %Element($../../../../../Essentials/Numbers/Ordinal/"Ordinal numbers"),
+            m: %Element($../../../../../Essentials/Sequences/Tuples(
+              S = {$../Carrier(
+                𝐑 = {𝐑},
+                𝐌 = {𝐌}
+              )},
+              α = {α}
+            ))
+          ),
           value = %structuralCases(
-            𝐚,
+            m,
             $../../../../../Essentials/Sequences/Tuples(
-              S = {$../../../Carrier(𝐑 = {𝐑})},
-              α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-                S = {$../Carrier(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐌}
-                )},
-                𝒂 = {𝒙}
-              )}
+              S = {$../Carrier(
+                𝐑 = {𝐑},
+                𝐌 = {𝐌}
+              )},
+              α = {α}
             ),
             [{
               constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
-              parameters = #(_k: %Binder(
-                #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-                  S = {$../Carrier(
-                    𝐑 = {𝐑},
-                    𝐌 = {𝐌}
-                  )},
-                  𝒂 = {𝒙}
-                )}))),
-                #(a: %Element($../../../Carrier(𝐑 = {𝐑})))
+              parameters = #(_2: %Binder(
+                #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+                #(x: %Element($../Carrier(
+                  𝐑 = {𝐑},
+                  𝐌 = {𝐌}
+                )))
               )),
               value = $../../../../../Essentials/Operations/"Iterated operations"/"indexed by set with finite support"(
                 X = {$../Carrier(

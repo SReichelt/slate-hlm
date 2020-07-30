@@ -37,7 +37,7 @@ $product(
     ),
     [{
       constructor = $Matrices.matrix,
-      parameters = #(_j: %Binder(
+      parameters = #(_2: %Binder(
         #(
           j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
           k: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
@@ -53,7 +53,7 @@ $product(
         ),
         [{
           constructor = $Matrices.matrix,
-          parameters = #(_i: %Binder(
+          parameters = #(_1: %Binder(
             #(
               i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {l})),
               j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m}))
@@ -64,7 +64,7 @@ $product(
               𝐑 = {𝐑},
               m = {l},
               n = {n}
-            ).matrix(_i = {
+            ).matrix(_1 = {
               #(
                 i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {l})),
                 k: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))

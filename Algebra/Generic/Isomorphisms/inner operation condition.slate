@@ -23,7 +23,7 @@ $"inner operation condition"(
       ),
       [{
         constructor = $../../../Essentials/Operations/Operations.operation,
-        parameters = #(_y_1: %Binder(
+        parameters = #(_2: %Binder(
           #(
             y_1: %Element(Y),
             y_2: %Element(Y)
@@ -39,7 +39,7 @@ $"inner operation condition"(
           ),
           [{
             constructor = $../../../Essentials/Operations/Operations.operation,
-            parameters = #(_x_1: %Binder(
+            parameters = #(_1: %Binder(
               #(
                 x_1: %Element(X),
                 x_2: %Element(X)

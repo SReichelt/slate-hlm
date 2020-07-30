@@ -31,7 +31,7 @@ $"right operation condition"(
       ),
       [{
         constructor = $../../../Essentials/Operations/Operations.operation,
-        parameters = #(_y: %Binder(
+        parameters = #(_2: %Binder(
           #(
             y: %Element(Y),
             s: %Element(S)
@@ -47,7 +47,7 @@ $"right operation condition"(
           ),
           [{
             constructor = $../../../Essentials/Operations/Operations.operation,
-            parameters = #(_x: %Binder(
+            parameters = #(_1: %Binder(
               #(
                 x: %Element(X),
                 s: %Element(S)

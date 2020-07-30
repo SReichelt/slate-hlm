@@ -19,7 +19,7 @@ $"relation condition"(
       $../../../Essentials/Relations/Endorelations(S = {X}),
       [{
         constructor = $../../../Essentials/Relations/Endorelations.relation,
-        parameters = #(_x_1: %Binder(
+        parameters = #(_2: %Binder(
           #(x_1,x_2: %Element(X)),
           #(p: %Prop)
         )),
@@ -28,7 +28,7 @@ $"relation condition"(
           $../../../Essentials/Relations/Endorelations(S = {Y}),
           [{
             constructor = $../../../Essentials/Relations/Endorelations.relation,
-            parameters = #(_y_1: %Binder(
+            parameters = #(_1: %Binder(
               #(y_1,y_2: %Element(Y)),
               #(q: %Prop)
             )),

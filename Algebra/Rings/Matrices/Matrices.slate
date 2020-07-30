@@ -14,7 +14,7 @@ $Matrices(
   ),
   m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %Construction {
-  $matrix(_i: %Binder(
+  $matrix(_1: %Binder(
     #(
       i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
       j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
@@ -32,14 +32,14 @@ $Matrices(
       ])
     ),
     equalityDefinition = {
-      leftParameters = #(_i: %Binder(
+      leftParameters = #(_1: %Binder(
         #(
           i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
           j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
         ),
         #(a: %Element($../Carrier(𝐑 = {𝐑})))
       )),
-      rightParameters = #(_i: %Binder(
+      rightParameters = #(_2: %Binder(
         #(
           i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
           j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))

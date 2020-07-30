@@ -25,7 +25,7 @@ $identity(
       𝐑 = {𝐑},
       m = {n},
       n = {n}
-    ).matrix(_i = {
+    ).matrix(_1 = {
       #(i,j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
       {a = {$../"kronecker delta"(
         𝐑 = {𝐑},

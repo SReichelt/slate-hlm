@@ -28,7 +28,7 @@ $"function condition"(
       ),
       [{
         constructor = $../../../Essentials/Functions/Functions.function,
-        parameters = #(_y: %Binder(
+        parameters = #(_2: %Binder(
           #(y: %Element(Y)),
           #(b: %Element(Y))
         )),
@@ -40,7 +40,7 @@ $"function condition"(
           ),
           [{
             constructor = $../../../Essentials/Functions/Functions.function,
-            parameters = #(_x: %Binder(
+            parameters = #(_1: %Binder(
               #(x: %Element(X)),
               #(a: %Element(X))
             )),
