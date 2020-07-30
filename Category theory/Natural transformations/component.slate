@@ -4,12 +4,8 @@
  * @references https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans.app
  */
 $component(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element(
@@ -20,17 +16,13 @@ $component(
     $../Categories(u = {v}),
     auto = %true
   ),
-  F: %Element(
+  F,G: %Element(
     $../Functors/Functors(
       u = {u},
       v = {v},
       𝓒 = {𝓒},
       𝓓 = {𝓓}
     ),
-    auto = %true
-  ),
-  G: %Element(
-    %previous,
     auto = %true
   ),
   η: %Element($"Infranatural transformations"(

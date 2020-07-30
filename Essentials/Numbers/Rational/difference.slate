@@ -6,10 +6,7 @@
  *             * https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Qminus
  *             * https://leanprover-community.github.io/mathlib_docs/data/rat/basic.html#rat.sub_def
  */
-$difference(
-  a: %Element($"Rational numbers"),
-  b: %Element(%previous)
-): %ExplicitOperator {
+$difference(a,b: %Element($"Rational numbers")): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),
   definition = [
     %structuralCases(

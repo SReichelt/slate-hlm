@@ -6,12 +6,8 @@
  * @references * https://en.wikipedia.org/wiki/Natural_transformation#Definition: infranatural transformation
  */
 $"Infranatural transformations"(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element(
@@ -22,13 +18,12 @@ $"Infranatural transformations"(
     $../Categories(u = {v}),
     auto = %true
   ),
-  F: %Element($../Functors/Functors(
+  F,G: %Element($../Functors/Functors(
     u = {u},
     v = {v},
     𝓒 = {𝓒},
     𝓓 = {𝓓}
-  )),
-  G: %Element(%previous)
+  ))
 ): %Construction {
   $transformation(_𝐗: %Binder(
     #(𝐗: %Element($../Objects(

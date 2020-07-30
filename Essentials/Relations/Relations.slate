@@ -9,10 +9,7 @@
  *             * https://ncatlab.org/nlab/show/relation#binary_relations
  *             * https://leanprover-community.github.io/mathlib_docs/data/rel.html#rel
  */
-$Relations(
-  S: %Set(auto = %true),
-  T: %Set(auto = %true)
-): %Construction {
+$Relations(S,T: %Set(auto = %true)): %Construction {
   $relation(_s: %Binder(
     #(
       s: %Element(S),

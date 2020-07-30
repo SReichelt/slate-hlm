@@ -1,12 +1,8 @@
 %../../../../logics/hlm%
 
 $"morphism value"(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element(
@@ -23,11 +19,10 @@ $"morphism value"(
     𝓒 = {𝓒},
     𝓓 = {𝓓}
   )),
-  𝐗: %Element($../Objects(
+  𝐗,𝐘: %Element($../Objects(
     u = {u},
     𝓒 = {𝓒}
   )),
-  𝐘: %Element(%previous),
   f: %Element($../Morphisms(
     u = {u},
     𝓒 = {𝓒},
@@ -63,11 +58,10 @@ $"morphism value"(
           ),
           _𝐁: %Binder(
             #(
-              𝐁: %Element($../Objects(
+              𝐁,𝐂: %Element($../Objects(
                 u = {u},
                 𝓒 = {𝓒}
               )),
-              𝐂: %Element(%previous),
               g: %Element($../Morphisms(
                 u = {u},
                 𝓒 = {𝓒},
@@ -102,12 +96,10 @@ $"morphism value"(
           )),
           _2: %Constraint(%forall(
             #(
-              𝐀: %Element($../Objects(
+              𝐀,𝐁,𝐂: %Element($../Objects(
                 u = {u},
                 𝓒 = {𝓒}
               )),
-              𝐁: %Element(%previous),
-              𝐂: %Element(%previous),
               d: %Element($../Morphisms(
                 u = {u},
                 𝓒 = {𝓒},

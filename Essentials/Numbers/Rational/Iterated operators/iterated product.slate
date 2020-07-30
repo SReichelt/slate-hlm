@@ -15,10 +15,7 @@ $"iterated product": %ExplicitOperator {
           Y = {$../"Rational numbers"},
           Z = {$../"Rational numbers"}
         ).operation(_x = {
-          #(
-            a: %Element($../"Rational numbers"),
-            b: %Element(%previous)
-          ),
+          #(a,b: %Element($../"Rational numbers")),
           {z = {$../product(
             a = {a},
             b = {b}

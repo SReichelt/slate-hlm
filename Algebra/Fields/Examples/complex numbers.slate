@@ -12,10 +12,7 @@ $"complex numbers": %ExplicitOperator {
         Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
         Z = {$../../../Essentials/Numbers/Complex/"Complex numbers"}
       ).operation(_x = {
-        #(
-          a: %Element($../../../Essentials/Numbers/Complex/"Complex numbers"),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
         {z = {$../../../Essentials/Numbers/Complex/sum(
           a = {a},
           b = {b}
@@ -34,10 +31,7 @@ $"complex numbers": %ExplicitOperator {
         Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
         Z = {$../../../Essentials/Numbers/Complex/"Complex numbers"}
       ).operation(_x = {
-        #(
-          a: %Element($../../../Essentials/Numbers/Complex/"Complex numbers"),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
         {z = {$../../../Essentials/Numbers/Complex/product(
           a = {a},
           b = {b}

@@ -15,11 +15,10 @@ $Isomorphisms(
     $Categories(u = {u}),
     auto = %true
   ),
-  𝐗: %Element($Objects(
+  𝐗,𝐘: %Element($Objects(
     u = {u},
     𝓒 = {𝓒}
-  )),
-  𝐘: %Element(%previous)
+  ))
 ): %SetOperator {
   notation = $Function(
     function = 'Iso',

@@ -12,16 +12,8 @@ $product(
     $../Rings,
     auto = %true
   ),
-  l: %Element(
+  l,m,n: %Element(
     $../../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  m: %Element(
-    %previous,
-    auto = %true
-  ),
-  n: %Element(
-    %previous,
     auto = %true
   ),
   A: %Element($Matrices(

@@ -15,10 +15,7 @@ $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/"Pointed sets"/"Pointed sets"},
       _𝐀 = {
-        #(
-          𝐀: %Element($../../Algebra/"Pointed sets"/"Pointed sets"),
-          𝐁: %Element(%previous)
-        ),
+        #(𝐀,𝐁: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
         {M = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
           𝐒 = {𝐀},
           𝐓 = {𝐁}
@@ -29,11 +26,7 @@ $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
         {i = {$../../Algebra/"Pointed sets"/Homomorphisms/identity(𝐒 = {𝐂})}}
       },
       _𝐃 = {
-        #(
-          𝐃: %Element($../../Algebra/"Pointed sets"/"Pointed sets"),
-          𝐄: %Element(%previous),
-          𝐅: %Element(%previous)
-        ),
+        #(𝐃,𝐄,𝐅: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
               𝐒 = {𝐄},

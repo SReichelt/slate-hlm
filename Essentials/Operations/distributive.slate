@@ -8,8 +8,7 @@
  */
 $distributive(
   X: %Set(auto = %true),
-  ∗: %Element($"Inner operations"(X = {X})),
-  ⋆: %Element(%previous)
+  ∗,⋆: %Element($"Inner operations"(X = {X}))
 ): %Predicate {
   notation = $RelationalProperty(
     operands = [∗, ⋆],

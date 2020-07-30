@@ -9,11 +9,10 @@ $difference(
     $"Left modules"(𝐑 = {𝐑}),
     auto = %true
   ),
-  x: %Element($Carrier(
+  x,y: %Element($Carrier(
     𝐑 = {𝐑},
     𝐌 = {𝐌}
-  )),
-  y: %Element(%previous)
+  ))
 ): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [x, y]),
   definition = [$sum(

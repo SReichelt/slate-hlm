@@ -5,12 +5,8 @@ $"product with left scalar"(
     $../Rings,
     auto = %true
   ),
-  m: %Element(
+  m,n: %Element(
     $../../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  n: %Element(
-    %previous,
     auto = %true
   ),
   r: %Element($../Carrier(𝐑 = {𝐑})),

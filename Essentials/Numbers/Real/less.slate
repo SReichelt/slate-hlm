@@ -4,10 +4,7 @@
  * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CRealLt
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.has_lt
  */
-$less(
-  a: %Element($"Real numbers"),
-  b: %Element(%previous)
-): %Predicate {
+$less(a,b: %Element($"Real numbers")): %Predicate {
   properties = {negation = $"less or equal"(
     b = {a},
     a = {b}

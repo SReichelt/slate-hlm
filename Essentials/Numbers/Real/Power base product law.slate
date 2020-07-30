@@ -4,8 +4,7 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#mul_pow
  */
 $"Power base product law"(
-  a: %Element($"Real numbers"),
-  b: %Element(%previous),
+  a,b: %Element($"Real numbers"),
   n: %Element($../Natural/"Natural numbers")
 ): %StandardTheorem {
   claim = %equals(

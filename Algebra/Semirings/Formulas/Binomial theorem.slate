@@ -9,8 +9,7 @@
  */
 $"Binomial theorem"(
   𝐑: %Element($../Semirings),
-  a: %Element($../Carrier(𝐑 = {𝐑})),
-  b: %Element(%previous),
+  a,b: %Element($../Carrier(𝐑 = {𝐑})),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %StandardTheorem {
   claim = %equals(

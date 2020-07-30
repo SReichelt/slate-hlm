@@ -15,11 +15,7 @@ $associative(
     property = 'associative'
   ),
   definition = [%forall(
-    #(
-      x: %Element(X),
-      y: %Element(%previous),
-      z: %Element(%previous)
-    ),
+    #(x,y,z: %Element(X)),
     %equals(
       $value(
         X = {X},

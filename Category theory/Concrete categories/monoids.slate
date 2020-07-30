@@ -14,10 +14,7 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Monoids/Monoids},
       _𝐀 = {
-        #(
-          𝐀: %Element($../../Algebra/Monoids/Monoids),
-          𝐁: %Element(%previous)
-        ),
+        #(𝐀,𝐁: %Element($../../Algebra/Monoids/Monoids)),
         {M = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
           𝐌 = {𝐀},
           𝐍 = {𝐁}
@@ -28,11 +25,7 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
         {i = {$../../Algebra/Monoids/Homomorphisms/identity(𝐌 = {𝐂})}}
       },
       _𝐃 = {
-        #(
-          𝐃: %Element($../../Algebra/Monoids/Monoids),
-          𝐄: %Element(%previous),
-          𝐅: %Element(%previous)
-        ),
+        #(𝐃,𝐄,𝐅: %Element($../../Algebra/Monoids/Monoids)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
               𝐌 = {𝐄},

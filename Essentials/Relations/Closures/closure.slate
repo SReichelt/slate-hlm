@@ -6,8 +6,7 @@
  * @references * https://en.wikipedia.org/wiki/Closure_(mathematics)#Binary_relation_closures
  */
 $closure(
-  S: %Set(auto = %true),
-  T: %Set(auto = %true),
+  S,T: %Set(auto = %true),
   ≺: %Element($../Relations(
     S = {S},
     T = {T}

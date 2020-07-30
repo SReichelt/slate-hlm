@@ -29,13 +29,10 @@ $"symmetric group"(X: %Set): %ExplicitOperator {
           Y = {X}
         )}
       ).operation(_x = {
-        #(
-          g: %Element($../../../Essentials/Functions/Bijections(
-            X = {X},
-            Y = {X}
-          )),
-          f: %Element(%previous)
-        ),
+        #(g,f: %Element($../../../Essentials/Functions/Bijections(
+          X = {X},
+          Y = {X}
+        ))),
         {z = {$../../../Essentials/Functions/composition(
           X = {X},
           Y = {X},

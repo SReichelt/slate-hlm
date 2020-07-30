@@ -11,8 +11,7 @@ $Homomorphisms(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Left modules"(𝐑 = {𝐑})),
-  𝐍: %Element(%previous)
+  𝐌,𝐍: %Element($../"Left modules"(𝐑 = {𝐑}))
 ): %SetOperator {
   notation = $Function(
     function = 'Hom',
@@ -41,13 +40,10 @@ $Homomorphisms(
       ))),
       %and(
         %forall(
-          #(
-            x: %Element($../Carrier(
-              𝐑 = {𝐑},
-              𝐌 = {𝐌}
-            )),
-            y: %Element(%previous)
-          ),
+          #(x,y: %Element($../Carrier(
+            𝐑 = {𝐑},
+            𝐌 = {𝐌}
+          ))),
           %equals(
             $../../../../../Essentials/Functions/value(
               X = {$../Carrier(
@@ -217,13 +213,11 @@ $Homomorphisms(
       ))),
       %forall(
         #(
-          a: %Element($../../../Carrier(𝐑 = {𝐑})),
-          b: %Element(%previous),
-          x: %Element($../Carrier(
+          a,b: %Element($../../../Carrier(𝐑 = {𝐑})),
+          x,y: %Element($../Carrier(
             𝐑 = {𝐑},
             𝐌 = {𝐌}
-          )),
-          y: %Element(%previous)
+          ))
         ),
         %equals(
           $../../../../../Essentials/Functions/value(

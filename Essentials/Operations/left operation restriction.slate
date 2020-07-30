@@ -1,8 +1,7 @@
 %../../../../logics/hlm%
 
 $"left operation restriction"(
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
+  X,Y: %Set(auto = %true),
   A: %Subset(Y),
   ∗: %Element($Operations(
     X = {X},

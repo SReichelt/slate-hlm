@@ -1,8 +1,7 @@
 %../../../../../logics/hlm%
 
 $"Power base product law"(
-  a: %Element($Integers),
-  b: %Element(%previous),
+  a,b: %Element($Integers),
   n: %Element($../Natural/"Natural numbers")
 ): %StandardTheorem {
   claim = %equals(

@@ -1,8 +1,7 @@
 %../../../../../logics/hlm%
 
 $"Multiplication of a nonzero number is injective"(
-  a: %Element($Integers),
-  b: %Element(%previous),
+  a,b: %Element($Integers),
   c: %Element($Subsets/"Nonzero numbers"),
   _1: %Constraint(%equals(
     $product(

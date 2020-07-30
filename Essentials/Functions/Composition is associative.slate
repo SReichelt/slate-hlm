@@ -8,10 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.comp.assoc
  */
 $"Composition is associative"(
-  W: %Set(auto = %true),
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
-  Z: %Set(auto = %true),
+  W,X,Y,Z: %Set(auto = %true),
   f: %Element($Functions(
     X = {W},
     Y = {X}

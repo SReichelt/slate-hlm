@@ -9,9 +9,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.comp
  */
 $composition(
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
-  Z: %Set(auto = %true),
+  X,Y,Z: %Set(auto = %true),
   f: %Element($Functions(
     X = {X},
     Y = {Y}

@@ -19,8 +19,7 @@ $"Dependent equality"(
   $equality(
     _a: %Binder(
       #(
-        a: %Element(I),
-        b: %Element(%previous),
+        a,b: %Element(I),
         _1: %Constraint(%equals(a, b))
       ),
       #(≡: %Element($../Relations(
@@ -57,8 +56,7 @@ $"Dependent equality"(
       leftParameters = #(
         _a: %Binder(
           #(
-            a: %Element(I),
-            b: %Element(%previous),
+            a,b: %Element(I),
             _1: %Constraint(%equals(a, b))
           ),
           #(≡: %Element($../Relations(
@@ -77,8 +75,7 @@ $"Dependent equality"(
       rightParameters = #(
         _a: %Binder(
           #(
-            a: %Element(I),
-            b: %Element(%previous),
+            a,b: %Element(I),
             _1: %Constraint(%equals(a, b))
           ),
           #("≡'": %Element($../Relations(
@@ -95,10 +92,7 @@ $"Dependent equality"(
         ))
       ),
       definition = [%forall(
-        #(
-          a: %Element(I),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element(I)),
         %equals(≡[a = {a}, b = {b}], "≡'"[a = {a}, b = {b}])
       )],
       isomorphic = %true

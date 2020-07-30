@@ -5,10 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/homomorphism
  */
-$Homomorphisms(
-  𝐒: %Element($../"Pointed sets"),
-  𝐓: %Element(%previous)
-): %SetOperator {
+$Homomorphisms(𝐒,𝐓: %Element($../"Pointed sets")): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [𝐒, 𝐓]

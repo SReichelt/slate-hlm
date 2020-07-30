@@ -18,9 +18,7 @@ $transitive(
   ),
   definition = [%forall(
     #(
-      s: %Element(S),
-      t: %Element(%previous),
-      u: %Element(%previous),
+      s,t,u: %Element(S),
       _1: %Constraint($related(
         S = {S},
         T = {S},

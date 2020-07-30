@@ -13,10 +13,7 @@
  *             * https://ncatlab.org/nlab/show/function
  *             * https://coq.inria.fr/library/Coq.Program.Basics.html#arrow
  */
-$Functions(
-  X: %Set,
-  Y: %Set
-): %Construction {
+$Functions(X,Y: %Set): %Construction {
   $function(_x: %Binder(
     #(x: %Element(X)),
     #(y: %Element(Y))

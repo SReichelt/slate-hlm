@@ -37,13 +37,10 @@ $"polynomial ring"(
           X = {X}
         )}
       ).operation(_x = {
-        #(
-          p: %Element($Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          )),
-          q: %Element(%previous)
-        ),
+        #(p,q: %Element($Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ))),
         {z = {$sum(
           𝐑 = {𝐑},
           X = {X},
@@ -89,13 +86,10 @@ $"polynomial ring"(
           X = {X}
         )}
       ).operation(_x = {
-        #(
-          p: %Element($Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          )),
-          q: %Element(%previous)
-        ),
+        #(p,q: %Element($Polynomials(
+          𝐑 = {𝐑},
+          X = {X}
+        ))),
         {z = {$product(
           𝐑 = {𝐑},
           X = {X},

@@ -3,29 +3,20 @@
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex.has_mul
  */
-$product(
-  a: %Element($"Complex numbers"),
-  b: %Element(%previous)
-): %ExplicitOperator {
+$product(a,b: %Element($"Complex numbers")): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [a, b]),
   definition = [%structuralCases(
     b,
     $"Complex numbers",
     [{
       constructor = $"Complex numbers".complex,
-      parameters = #(
-        r_b: %Element($../Real/"Real numbers"),
-        i_b: %Element(%previous)
-      ),
+      parameters = #(r_b,i_b: %Element($../Real/"Real numbers")),
       value = %structuralCases(
         a,
         $"Complex numbers",
         [{
           constructor = $"Complex numbers".complex,
-          parameters = #(
-            r_a: %Element($../Real/"Real numbers"),
-            i_a: %Element(%previous)
-          ),
+          parameters = #(r_a,i_a: %Element($../Real/"Real numbers")),
           value = $"Complex numbers".complex(
             r = {$../Real/difference(
               a = {$../Real/product(

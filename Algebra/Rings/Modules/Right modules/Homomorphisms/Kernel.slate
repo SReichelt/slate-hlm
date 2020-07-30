@@ -11,12 +11,8 @@ $Kernel(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element(
+  𝐌,𝐍: %Element(
     $../"Right modules"(𝐑 = {𝐑}),
-    auto = %true
-  ),
-  𝐍: %Element(
-    %previous,
     auto = %true
   ),
   φ: %Element($Homomorphisms(

@@ -1,12 +1,7 @@
 %../../../../../logics/hlm%
 
 $"morphism condition"(
-  X_1: %Set(auto = %true),
-  X_2: %Set(auto = %true),
-  X_3: %Set(auto = %true),
-  Y_1: %Set(auto = %true),
-  Y_2: %Set(auto = %true),
-  Y_3: %Set(auto = %true),
+  X_1,X_2,X_3,Y_1,Y_2,Y_3: %Set(auto = %true),
   φ_1: %Element($../../../Essentials/Functions/Bijections(
     X = {X_1},
     Y = {Y_1}

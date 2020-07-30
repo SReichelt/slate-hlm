@@ -6,8 +6,7 @@ $operation(
     $"Iterated operations"(X = {X}),
     auto = %true
   ),
-  x: %Element(X),
-  y: %Element(%previous)
+  x,y: %Element(X)
 ): %ExplicitOperator {
   notation = $Operator(
     symbol = ⨂,

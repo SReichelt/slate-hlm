@@ -8,12 +8,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor.html#category_theory.functor
  */
 $Functors(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element($../Categories(u = {u})),
@@ -32,11 +28,10 @@ $Functors(
     ),
     _𝐀: %Binder(
       #(
-        𝐀: %Element($../Objects(
+        𝐀,𝐁: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
         )),
-        𝐁: %Element(%previous),
         f: %Element($../Morphisms(
           u = {u},
           𝓒 = {𝓒},
@@ -71,12 +66,10 @@ $Functors(
     )),
     _2: %Constraint(%forall(
       #(
-        𝐀: %Element($../Objects(
+        𝐀,𝐁,𝐂: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
         )),
-        𝐁: %Element(%previous),
-        𝐂: %Element(%previous),
         d: %Element($../Morphisms(
           u = {u},
           𝓒 = {𝓒},
@@ -161,11 +154,10 @@ $Functors(
         ),
         _𝐀: %Binder(
           #(
-            𝐀: %Element($../Objects(
+            𝐀,𝐁: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
             )),
-            𝐁: %Element(%previous),
             f: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},
@@ -200,12 +192,10 @@ $Functors(
         )),
         _2: %Constraint(%forall(
           #(
-            𝐀: %Element($../Objects(
+            𝐀,𝐁,𝐂: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
             )),
-            𝐁: %Element(%previous),
-            𝐂: %Element(%previous),
             d: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},
@@ -254,11 +244,10 @@ $Functors(
         ),
         _𝐀: %Binder(
           #(
-            𝐀: %Element($../Objects(
+            𝐀,𝐁: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
             )),
-            𝐁: %Element(%previous),
             f: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},
@@ -293,12 +282,10 @@ $Functors(
         )),
         _2: %Constraint(%forall(
           #(
-            𝐀: %Element($../Objects(
+            𝐀,𝐁,𝐂: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
             )),
-            𝐁: %Element(%previous),
-            𝐂: %Element(%previous),
             d: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},
@@ -349,11 +336,10 @@ $Functors(
         )),
         formula = %forall(
           #(
-            𝐀: %Element($../Objects(
+            𝐀,𝐁: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
             )),
-            𝐁: %Element(%previous),
             f: %Element($../Morphisms(
               u = {u},
               𝓒 = {𝓒},

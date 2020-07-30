@@ -6,10 +6,7 @@
  * @references * https://en.wikipedia.org/wiki/Pascal%27s_rule
  *             * https://leanprover-community.github.io/mathlib_docs/data/nat/basic.html#nat.choose
  */
-$"binomial coefficient"(
-  n: %Element($"Natural numbers"),
-  k: %Element(%previous)
-): %ExplicitOperator {
+$"binomial coefficient"(n,k: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $BinomialCoefficient(
     top = n,
     bottom = k

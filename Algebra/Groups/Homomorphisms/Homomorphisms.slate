@@ -7,10 +7,7 @@
  *             * https://ncatlab.org/nlab/show/homomorphism
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/hom.html#monoid_hom
  */
-$Homomorphisms(
-  𝐆: %Element($../Groups),
-  𝐇: %Element(%previous)
-): %SetOperator {
+$Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [𝐆, 𝐇]
@@ -32,10 +29,7 @@ $Homomorphisms(
       ))),
       %and(
         %forall(
-          #(
-            a: %Element($../Carrier(𝐆 = {𝐆})),
-            b: %Element(%previous)
-          ),
+          #(a,b: %Element($../Carrier(𝐆 = {𝐆}))),
           %equals(
             $../../../Essentials/Functions/value(
               X = {$../Carrier(𝐆 = {𝐆})},
@@ -104,10 +98,7 @@ $Homomorphisms(
         Y = {$../Carrier(𝐆 = {𝐇})}
       ))),
       %forall(
-        #(
-          a: %Element($../Carrier(𝐆 = {𝐆})),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element($../Carrier(𝐆 = {𝐆}))),
         %equals(
           $../../../Essentials/Functions/value(
             X = {$../Carrier(𝐆 = {𝐆})},

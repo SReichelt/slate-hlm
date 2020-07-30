@@ -1,9 +1,7 @@
 %../../../../logics/hlm%
 
 $value(
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
-  Z: %Set(auto = %true),
+  X,Y,Z: %Set(auto = %true),
   ∗: %Element($Operations(
     X = {X},
     Y = {Y},

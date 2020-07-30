@@ -5,10 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Order_Isomorphism
  *             * https://leanprover-community.github.io/mathlib_docs/order/order_iso.html#order_iso
  */
-$Isomorphisms(
-  α: %Element($../"Ordinal numbers"),
-  β: %Element(%previous)
-): %SetOperator {
+$Isomorphisms(α,β: %Element($../"Ordinal numbers")): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [α, β]
@@ -42,10 +39,7 @@ $Isomorphisms(
         Y = {$../Carrier(α = {β})}
       ))),
       %forall(
-        #(
-          a: %Element($../Carrier(α = {α})),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element($../Carrier(α = {α}))),
         %equiv(
           $../before(
             α = {α},

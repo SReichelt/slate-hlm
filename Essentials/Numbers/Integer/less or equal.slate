@@ -5,10 +5,7 @@
  *
  * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.leb
  */
-$"less or equal"(
-  a: %Element($Integers),
-  b: %Element(%previous)
-): %Predicate {
+$"less or equal"(a,b: %Element($Integers)): %Predicate {
   properties = {negation = $less(
     b = {a},
     a = {b}
@@ -20,19 +17,13 @@ $"less or equal"(
       $Integers,
       [{
         constructor = $Integers.difference,
-        parameters = #(
-          n_b: %Element($../Natural/"Natural numbers"),
-          m_b: %Element(%previous)
-        ),
+        parameters = #(n_b,m_b: %Element($../Natural/"Natural numbers")),
         value = %structural(
           a,
           $Integers,
           [{
             constructor = $Integers.difference,
-            parameters = #(
-              n_a: %Element($../Natural/"Natural numbers"),
-              m_a: %Element(%previous)
-            ),
+            parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),
             value = $../Natural/"less or equal"(
               m = {$../Natural/sum(
                 m = {n_a},

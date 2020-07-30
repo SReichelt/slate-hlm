@@ -6,10 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Product_of_Cardinals
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.mul_def
  */
-$product(
-  κ: %Element($"Cardinal numbers"),
-  μ: %Element(%previous)
-): %ExplicitOperator {
+$product(κ,μ: %Element($"Cardinal numbers")): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [κ, μ]),
   definition = [%structuralCases(
     μ,

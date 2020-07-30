@@ -8,8 +8,7 @@ $sum(
     $Rings,
     auto = %true
   ),
-  a: %Element($Carrier(𝐑 = {𝐑})),
-  b: %Element(%previous)
+  a,b: %Element($Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
   notation = $AdditionOperator(operands = [a, b]),
   definition = [%structuralCases(

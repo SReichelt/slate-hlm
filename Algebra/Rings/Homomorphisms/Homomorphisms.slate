@@ -7,10 +7,7 @@
  *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#ring_morph
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring.html#ring_hom
  */
-$Homomorphisms(
-  𝐑: %Element($../Rings),
-  𝐒: %Element(%previous)
-): %SetOperator {
+$Homomorphisms(𝐑,𝐒: %Element($../Rings)): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [𝐑, 𝐒]
@@ -32,10 +29,7 @@ $Homomorphisms(
       ))),
       %and(
         %forall(
-          #(
-            a: %Element($../Carrier(𝐑 = {𝐑})),
-            b: %Element(%previous)
-          ),
+          #(a,b: %Element($../Carrier(𝐑 = {𝐑}))),
           %equals(
             $../../../Essentials/Functions/value(
               X = {$../Carrier(𝐑 = {𝐑})},
@@ -97,10 +91,7 @@ $Homomorphisms(
           )
         ),
         %forall(
-          #(
-            d: %Element($../Carrier(𝐑 = {𝐑})),
-            e: %Element(%previous)
-          ),
+          #(d,e: %Element($../Carrier(𝐑 = {𝐑}))),
           %equals(
             $../../../Essentials/Functions/value(
               X = {$../Carrier(𝐑 = {𝐑})},
@@ -147,10 +138,7 @@ $Homomorphisms(
       ))),
       %and(
         %forall(
-          #(
-            a: %Element($../Carrier(𝐑 = {𝐑})),
-            b: %Element(%previous)
-          ),
+          #(a,b: %Element($../Carrier(𝐑 = {𝐑}))),
           %equals(
             $../../../Essentials/Functions/value(
               X = {$../Carrier(𝐑 = {𝐑})},
@@ -180,10 +168,7 @@ $Homomorphisms(
           )
         ),
         %forall(
-          #(
-            d: %Element($../Carrier(𝐑 = {𝐑})),
-            e: %Element(%previous)
-          ),
+          #(d,e: %Element($../Carrier(𝐑 = {𝐑}))),
           %equals(
             $../../../Essentials/Functions/value(
               X = {$../Carrier(𝐑 = {𝐑})},

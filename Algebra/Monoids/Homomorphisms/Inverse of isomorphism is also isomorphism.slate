@@ -1,8 +1,7 @@
 %../../../../../logics/hlm%
 
 $"Inverse of isomorphism is also isomorphism"(
-  𝐌: %Element($../Monoids),
-  𝐍: %Element(%previous),
+  𝐌,𝐍: %Element($../Monoids),
   φ: %Element($Isomorphisms(
     𝐌 = {𝐌},
     𝐍 = {𝐍}

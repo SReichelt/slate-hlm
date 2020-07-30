@@ -40,14 +40,11 @@ $"matrix ring"(
           n = {n}
         )}
       ).operation(_x = {
-        #(
-          A: %Element($Matrices(
-            𝐑 = {𝐑},
-            m = {n},
-            n = {n}
-          )),
-          B: %Element(%previous)
-        ),
+        #(A,B: %Element($Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        ))),
         {z = {$sum(
           𝐑 = {𝐑},
           m = {n},
@@ -102,14 +99,11 @@ $"matrix ring"(
           n = {n}
         )}
       ).operation(_x = {
-        #(
-          A: %Element($Matrices(
-            𝐑 = {𝐑},
-            m = {n},
-            n = {n}
-          )),
-          B: %Element(%previous)
-        ),
+        #(A,B: %Element($Matrices(
+          𝐑 = {𝐑},
+          m = {n},
+          n = {n}
+        ))),
         {z = {$product(
           𝐑 = {𝐑},
           l = {n},

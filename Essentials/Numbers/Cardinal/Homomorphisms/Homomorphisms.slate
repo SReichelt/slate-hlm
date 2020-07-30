@@ -10,10 +10,7 @@
  *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/homomorphism
  */
-$Homomorphisms(
-  κ: %Element($../"Cardinal numbers"),
-  μ: %Element(%previous)
-): %SetOperator {
+$Homomorphisms(κ,μ: %Element($../"Cardinal numbers")): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [κ, μ]

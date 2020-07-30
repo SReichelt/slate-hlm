@@ -4,9 +4,7 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.lt_of_lt_of_le
  */
 $"Less and less or equal combine to less"(
-  a: %Element($"Natural numbers"),
-  b: %Element(%previous),
-  c: %Element(%previous),
+  a,b,c: %Element($"Natural numbers"),
   _1: %Constraint($less(
     m = {a},
     n = {b}

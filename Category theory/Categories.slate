@@ -17,10 +17,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
   $category(
     O: %Set,
     _𝐀: %Binder(
-      #(
-        𝐀: %Element(O),
-        𝐁: %Element(%previous)
-      ),
+      #(𝐀,𝐁: %Element(O)),
       #(M: %Set)
     ),
     _𝐂: %Binder(
@@ -28,11 +25,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
       #(i: %Element(M[𝐀 = {𝐂}, 𝐁 = {𝐂}]))
     ),
     _𝐃: %Binder(
-      #(
-        𝐃: %Element(O),
-        𝐄: %Element(%previous),
-        𝐅: %Element(%previous)
-      ),
+      #(𝐃,𝐄,𝐅: %Element(O)),
       #(∘: %Element($../Essentials/Operations/Operations(
         X = {M[𝐀 = {𝐄}, 𝐁 = {𝐅}]},
         Y = {M[𝐀 = {𝐃}, 𝐁 = {𝐄}]},
@@ -41,10 +34,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
     ),
     _1: %Constraint(%forall(
       #(
-        𝐖: %Element(O),
-        𝐗: %Element(%previous),
-        𝐘: %Element(%previous),
-        𝐙: %Element(%previous),
+        𝐖,𝐗,𝐘,𝐙: %Element(O),
         f: %Element(M[𝐀 = {𝐖}, 𝐁 = {𝐗}]),
         g: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}]),
         h: %Element(M[𝐀 = {𝐘}, 𝐁 = {𝐙}])
@@ -84,8 +74,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
     )),
     _2: %Constraint(%forall(
       #(
-        𝐗: %Element(O),
-        𝐘: %Element(%previous),
+        𝐗,𝐘: %Element(O),
         f: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}])
       ),
       %equals(
@@ -110,8 +99,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
     )),
     _3: %Constraint(%forall(
       #(
-        𝐗: %Element(O),
-        𝐘: %Element(%previous),
+        𝐗,𝐘: %Element(O),
         _4: %Constraint(%exists(
           #(
             f: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}]),
@@ -192,10 +180,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
       leftParameters = #(
         O: %Set,
         _𝐀: %Binder(
-          #(
-            𝐀: %Element(O),
-            𝐁: %Element(%previous)
-          ),
+          #(𝐀,𝐁: %Element(O)),
           #(M: %Set)
         ),
         _𝐂: %Binder(
@@ -203,11 +188,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           #(i: %Element(M[𝐀 = {𝐂}, 𝐁 = {𝐂}]))
         ),
         _𝐃: %Binder(
-          #(
-            𝐃: %Element(O),
-            𝐄: %Element(%previous),
-            𝐅: %Element(%previous)
-          ),
+          #(𝐃,𝐄,𝐅: %Element(O)),
           #(∘: %Element($../Essentials/Operations/Operations(
             X = {M[𝐀 = {𝐄}, 𝐁 = {𝐅}]},
             Y = {M[𝐀 = {𝐃}, 𝐁 = {𝐄}]},
@@ -216,10 +197,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         ),
         _1: %Constraint(%forall(
           #(
-            𝐖: %Element(O),
-            𝐗: %Element(%previous),
-            𝐘: %Element(%previous),
-            𝐙: %Element(%previous),
+            𝐖,𝐗,𝐘,𝐙: %Element(O),
             f: %Element(M[𝐀 = {𝐖}, 𝐁 = {𝐗}]),
             g: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}]),
             h: %Element(M[𝐀 = {𝐘}, 𝐁 = {𝐙}])
@@ -259,8 +237,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         )),
         _2: %Constraint(%forall(
           #(
-            𝐗: %Element(O),
-            𝐘: %Element(%previous),
+            𝐗,𝐘: %Element(O),
             f: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}])
           ),
           %equals(
@@ -285,8 +262,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         )),
         _3: %Constraint(%forall(
           #(
-            𝐗: %Element(O),
-            𝐘: %Element(%previous),
+            𝐗,𝐘: %Element(O),
             _4: %Constraint(%exists(
               #(
                 f: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}]),
@@ -324,10 +300,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
       rightParameters = #(
         P: %Set,
         _𝐀: %Binder(
-          #(
-            𝐀: %Element(P),
-            𝐁: %Element(%previous)
-          ),
+          #(𝐀,𝐁: %Element(P)),
           #(N: %Set)
         ),
         _𝐂: %Binder(
@@ -335,11 +308,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           #(j: %Element(N[𝐀 = {𝐂}, 𝐁 = {𝐂}]))
         ),
         _𝐃: %Binder(
-          #(
-            𝐃: %Element(P),
-            𝐄: %Element(%previous),
-            𝐅: %Element(%previous)
-          ),
+          #(𝐃,𝐄,𝐅: %Element(P)),
           #(∙: %Element($../Essentials/Operations/Operations(
             X = {N[𝐀 = {𝐄}, 𝐁 = {𝐅}]},
             Y = {N[𝐀 = {𝐃}, 𝐁 = {𝐄}]},
@@ -348,10 +317,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         ),
         _1: %Constraint(%forall(
           #(
-            𝐖: %Element(P),
-            𝐗: %Element(%previous),
-            𝐘: %Element(%previous),
-            𝐙: %Element(%previous),
+            𝐖,𝐗,𝐘,𝐙: %Element(P),
             f: %Element(N[𝐀 = {𝐖}, 𝐁 = {𝐗}]),
             g: %Element(N[𝐀 = {𝐗}, 𝐁 = {𝐘}]),
             h: %Element(N[𝐀 = {𝐘}, 𝐁 = {𝐙}])
@@ -391,8 +357,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         )),
         _2: %Constraint(%forall(
           #(
-            𝐗: %Element(P),
-            𝐘: %Element(%previous),
+            𝐗,𝐘: %Element(P),
             f: %Element(N[𝐀 = {𝐗}, 𝐁 = {𝐘}])
           ),
           %equals(
@@ -417,8 +382,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         )),
         _3: %Constraint(%forall(
           #(
-            𝐗: %Element(P),
-            𝐘: %Element(%previous),
+            𝐗,𝐘: %Element(P),
             _4: %Constraint(%exists(
               #(
                 f: %Element(N[𝐀 = {𝐗}, 𝐁 = {𝐘}]),
@@ -460,10 +424,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             Y = {P}
           )),
           _𝐀: %Binder(
-            #(
-              𝐀: %Element(O),
-              𝐁: %Element(%previous)
-            ),
+            #(𝐀,𝐁: %Element(O)),
             #(ψ: %Element($../Essentials/Functions/Bijections(
               X = {M[𝐀 = {𝐀}, 𝐁 = {𝐁}]},
               Y = {N[𝐀 = {$../Essentials/Functions/value(
@@ -507,11 +468,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             )
           ),
           %forall(
-            #(
-              𝐃: %Element(O),
-              𝐄: %Element(%previous),
-              𝐅: %Element(%previous)
-            ),
+            #(𝐃,𝐄,𝐅: %Element(O)),
             $../Algebra/Generic/Isomorphisms/"morphism condition"(
               X_1 = {M[𝐀 = {𝐄}, 𝐁 = {𝐅}]},
               X_2 = {M[𝐀 = {𝐃}, 𝐁 = {𝐄}]},

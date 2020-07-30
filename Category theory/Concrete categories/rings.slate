@@ -14,10 +14,7 @@ $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expli
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Rings/Rings},
       _𝐀 = {
-        #(
-          𝐀: %Element($../../Algebra/Rings/Rings),
-          𝐁: %Element(%previous)
-        ),
+        #(𝐀,𝐁: %Element($../../Algebra/Rings/Rings)),
         {M = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
           𝐑 = {𝐀},
           𝐒 = {𝐁}
@@ -28,11 +25,7 @@ $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expli
         {i = {$../../Algebra/Rings/Homomorphisms/identity(𝐑 = {𝐂})}}
       },
       _𝐃 = {
-        #(
-          𝐃: %Element($../../Algebra/Rings/Rings),
-          𝐄: %Element(%previous),
-          𝐅: %Element(%previous)
-        ),
+        #(𝐃,𝐄,𝐅: %Element($../../Algebra/Rings/Rings)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
               𝐑 = {𝐄},

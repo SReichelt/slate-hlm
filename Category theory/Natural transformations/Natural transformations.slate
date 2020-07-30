@@ -8,12 +8,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans
  */
 $"Natural transformations"(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element(
@@ -24,13 +20,12 @@ $"Natural transformations"(
     $../Categories(u = {v}),
     auto = %true
   ),
-  F: %Element($../Functors/Functors(
+  F,G: %Element($../Functors/Functors(
     u = {u},
     v = {v},
     𝓒 = {𝓒},
     𝓓 = {𝓓}
-  )),
-  G: %Element(%previous)
+  ))
 ): %SetOperator {
   notation = $Function(
     function = 'Nat',
@@ -58,11 +53,10 @@ $"Natural transformations"(
     ))),
     %forall(
       #(
-        𝐗: %Element($../Objects(
+        𝐗,𝐘: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
         )),
-        𝐘: %Element(%previous),
         f: %Element($../Morphisms(
           u = {u},
           𝓒 = {𝓒},

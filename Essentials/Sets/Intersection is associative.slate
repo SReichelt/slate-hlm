@@ -6,9 +6,7 @@
  */
 $"Intersection is associative"(
   U: %Set,
-  R: %Subset(U),
-  S: %Subset(%previous),
-  T: %Subset(%previous)
+  R,S,T: %Subset(U)
 ): %StandardTheorem {
   claim = %setEquals(
     $Intersection(

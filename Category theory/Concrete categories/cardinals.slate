@@ -16,10 +16,7 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
   definition = [$../Categories(u = {u}).category(
       O = {$../../Essentials/Numbers/Cardinal/"Cardinal numbers"},
       _𝐀 = {
-        #(
-          𝐀: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers"),
-          𝐁: %Element(%previous)
-        ),
+        #(𝐀,𝐁: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
         {M = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
           κ = {𝐀},
           μ = {𝐁}
@@ -30,11 +27,7 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
         {i = {$../../Essentials/Numbers/Cardinal/Homomorphisms/identity(κ = {𝐂})}}
       },
       _𝐃 = {
-        #(
-          𝐃: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers"),
-          𝐄: %Element(%previous),
-          𝐅: %Element(%previous)
-        ),
+        #(𝐃,𝐄,𝐅: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
               κ = {𝐄},

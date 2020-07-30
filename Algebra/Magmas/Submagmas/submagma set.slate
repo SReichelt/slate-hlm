@@ -13,10 +13,7 @@ $"submagma set"(
     plural = 'submagmas'
   ),
   definition = [%forall(
-    #(
-      a: %Element(S),
-      b: %Element(%previous)
-    ),
+    #(a,b: %Element(S)),
     %in(
       $../operation(
         𝐌 = {𝐌},

@@ -3,10 +3,7 @@
 /**
  * @remarks Note that without the axiom of choice, this is not equivalent to the negation of "greater or equal".
  */
-$less(
-  κ: %Element($"Cardinal numbers"),
-  μ: %Element(%previous)
-): %Predicate {
+$less(κ,μ: %Element($"Cardinal numbers")): %Predicate {
   notation = $LessThanRelation(operands = [κ, μ]),
   definition = [%and(
     $"less or equal"(

@@ -6,10 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Exponentiation_of_Cardinals
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.power_def
  */
-$power(
-  κ: %Element($"Cardinal numbers"),
-  μ: %Element(%previous)
-): %ExplicitOperator {
+$power(κ,μ: %Element($"Cardinal numbers")): %ExplicitOperator {
   notation = $SubSup(
     body = κ,
     sup = μ

@@ -1,8 +1,7 @@
 %../../../../../logics/hlm%
 
 $"relation condition"(
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
+  X,Y: %Set(auto = %true),
   φ: %Element($../../../Essentials/Functions/Bijections(
     X = {X},
     Y = {Y}
@@ -21,10 +20,7 @@ $"relation condition"(
       [{
         constructor = $../../../Essentials/Relations/Endorelations.relation,
         parameters = #(_x_1: %Binder(
-          #(
-            x_1: %Element(X),
-            x_2: %Element(%previous)
-          ),
+          #(x_1,x_2: %Element(X)),
           #(p: %Prop)
         )),
         value = %structural(
@@ -33,17 +29,11 @@ $"relation condition"(
           [{
             constructor = $../../../Essentials/Relations/Endorelations.relation,
             parameters = #(_y_1: %Binder(
-              #(
-                y_1: %Element(Y),
-                y_2: %Element(%previous)
-              ),
+              #(y_1,y_2: %Element(Y)),
               #(q: %Prop)
             )),
             value = %forall(
-              #(
-                x_1: %Element(X),
-                x_2: %Element(%previous)
-              ),
+              #(x_1,x_2: %Element(X)),
               %equiv(p[x_1 = {x_1}, x_2 = {x_2}], q[y_1 = {$../../../Essentials/Functions/value(
                     X = {X},
                     Y = {Y},
@@ -61,10 +51,7 @@ $"relation condition"(
       }]
     ),
     %forall(
-      #(
-        x_1: %Element(X),
-        x_2: %Element(%previous)
-      ),
+      #(x_1,x_2: %Element(X)),
       %equiv(
         $../../../Essentials/Relations/related(
           S = {X},

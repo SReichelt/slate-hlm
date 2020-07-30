@@ -19,10 +19,7 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
     )}).category(
       O = {$../Categories(u = {u})},
       _𝐀 = {
-        #(
-          𝓐: %Element($../Categories(u = {u})),
-          𝓑: %Element(%previous)
-        ),
+        #(𝓐,𝓑: %Element($../Categories(u = {u}))),
         {M = {$../Functors/Functors(
           u = {u},
           v = {u},
@@ -38,11 +35,7 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
         )}}
       },
       _𝐃 = {
-        #(
-          𝓓: %Element($../Categories(u = {u})),
-          𝓔: %Element(%previous),
-          𝓕: %Element(%previous)
-        ),
+        #(𝓓,𝓔,𝓕: %Element($../Categories(u = {u}))),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../Functors/Functors(
               u = {u},

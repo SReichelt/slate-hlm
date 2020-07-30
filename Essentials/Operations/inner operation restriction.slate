@@ -8,10 +8,7 @@ $"inner operation restriction"(
   A: %Subset(X),
   ∗: %Element($"Inner operations"(X = {X})),
   _1: %Constraint(%forall(
-    #(
-      x: %Element(A),
-      y: %Element(%previous)
-    ),
+    #(x,y: %Element(A)),
     %in(
       $value(
         X = {X},

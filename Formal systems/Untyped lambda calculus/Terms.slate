@@ -20,7 +20,7 @@ $Terms(
     ),
     equalityDefinition = {
       leftParameters = #(x: %Element(V)),
-      rightParameters = #(y: %Element(%previous)),
+      rightParameters = #(y: %Element(V)),
       definition = [%equals(x, y)],
       isomorphic = %true
     }
@@ -36,10 +36,7 @@ $Terms(
       )})))
     ),
     _2: %Constraint(%forall(
-      #(
-        x: %Element($../"Fresh variables"(V = {V})),
-        y: %Element(%previous)
-      ),
+      #(x,y: %Element($../"Fresh variables"(V = {V}))),
       %equals(
         $substitution(
           V = {$Terms(V = {$../../Essentials/Sets/Union(
@@ -70,10 +67,7 @@ $Terms(
           )})))
         ),
         _2: %Constraint(%forall(
-          #(
-            x: %Element($../"Fresh variables"(V = {V})),
-            y: %Element(%previous)
-          ),
+          #(x,y: %Element($../"Fresh variables"(V = {V}))),
           %equals(
             $substitution(
               V = {$Terms(V = {$../../Essentials/Sets/Union(
@@ -99,10 +93,7 @@ $Terms(
           )})))
         ),
         "_2'": %Constraint(%forall(
-          #(
-            x: %Element($../"Fresh variables"(V = {V})),
-            y: %Element(%previous)
-          ),
+          #(x,y: %Element($../"Fresh variables"(V = {V}))),
           %equals(
             $substitution(
               V = {$Terms(V = {$../../Essentials/Sets/Union(
@@ -132,23 +123,14 @@ $Terms(
     }
   }
 
-  $application(
-    M: %Element($Terms(V = {V})),
-    N: %Element(%previous)
-  ): %Constructor {
+  $application(M,N: %Element($Terms(V = {V}))): %Constructor {
     notation = $LambdaApplication(
       function = M,
       argument = N
     ),
     equalityDefinition = {
-      leftParameters = #(
-        M: %Element($Terms(V = {V})),
-        N: %Element(%previous)
-      ),
-      rightParameters = #(
-        "M'": %Element(%previous),
-        "N'": %Element(%previous)
-      ),
+      leftParameters = #(M,N: %Element($Terms(V = {V}))),
+      rightParameters = #("M'","N'": %Element($Terms(V = {V}))),
       definition = [%and(
         %equals(M, "M'"),
         %equals(N, "N'")

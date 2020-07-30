@@ -1,9 +1,6 @@
 %../../../../../logics/hlm%
 
-$subsemiring(
-  𝐑: %Element($../Semirings),
-  𝐒: %Element(%previous)
-): %Predicate {
+$subsemiring(𝐑,𝐒: %Element($../Semirings)): %Predicate {
   notation = $SubObjectRelation(operands = [𝐑, 𝐒]),
   definition = [
     %exists(

@@ -1,8 +1,7 @@
 %../../../../../logics/hlm%
 
 $"inner operation condition"(
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
+  X,Y: %Set(auto = %true),
   φ: %Element($../../../Essentials/Functions/Bijections(
     X = {X},
     Y = {Y}
@@ -48,10 +47,7 @@ $"inner operation condition"(
               #(a: %Element(X))
             )),
             value = %forall(
-              #(
-                x_1: %Element(X),
-                x_2: %Element(%previous)
-              ),
+              #(x_1,x_2: %Element(X)),
               %equals(
                 $../../../Essentials/Functions/value(
                   X = {X},
@@ -77,10 +73,7 @@ $"inner operation condition"(
       }]
     ),
     %forall(
-      #(
-        x_1: %Element(X),
-        x_2: %Element(%previous)
-      ),
+      #(x_1,x_2: %Element(X)),
       %equals(
         $../../../Essentials/Functions/value(
           X = {X},

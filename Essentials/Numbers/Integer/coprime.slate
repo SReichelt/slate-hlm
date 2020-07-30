@@ -6,10 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Coprime/Integers
  *             * https://coq.inria.fr/library/Coq.ZArith.Znumtheory.html#rel_prime
  */
-$coprime(
-  a: %Element($Integers),
-  b: %Element(%previous)
-): %Predicate {
+$coprime(a,b: %Element($Integers)): %Predicate {
   notation = $MultiProperty(
     operands = [a, b],
     property = 'coprime'

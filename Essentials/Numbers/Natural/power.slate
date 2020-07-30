@@ -7,10 +7,7 @@
  *             * https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.pow
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.pow
  */
-$power(
-  m: %Element($"Natural numbers"),
-  n: %Element(%previous)
-): %ExplicitOperator {
+$power(m,n: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $SubSup(
     body = m,
     sup = n

@@ -5,12 +5,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans.vcomp
  */
 $"vertical composition"(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element(
@@ -21,21 +17,13 @@ $"vertical composition"(
     $../Categories(u = {v}),
     auto = %true
   ),
-  F: %Element(
+  F,G,H: %Element(
     $../Functors/Functors(
       u = {u},
       v = {v},
       𝓒 = {𝓒},
       𝓓 = {𝓓}
     ),
-    auto = %true
-  ),
-  G: %Element(
-    %previous,
-    auto = %true
-  ),
-  H: %Element(
-    %previous,
     auto = %true
   ),
   η: %Element($"Infranatural transformations"(

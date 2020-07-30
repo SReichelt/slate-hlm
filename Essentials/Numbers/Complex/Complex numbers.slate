@@ -10,10 +10,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex
  */
 $"Complex numbers": %Construction {
-  $complex(
-    r: %Element($../Real/"Real numbers"),
-    i: %Element(%previous)
-  ): %Constructor {
+  $complex(r,i: %Element($../Real/"Real numbers")): %Constructor {
     notation = $Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '+'),
@@ -31,14 +28,8 @@ $"Complex numbers": %Construction {
       style = '()'
     ),
     equalityDefinition = {
-      leftParameters = #(
-        r: %Element($../Real/"Real numbers"),
-        i: %Element(%previous)
-      ),
-      rightParameters = #(
-        "r'": %Element(%previous),
-        "i'": %Element(%previous)
-      ),
+      leftParameters = #(r,i: %Element($../Real/"Real numbers")),
+      rightParameters = #("r'","i'": %Element($../Real/"Real numbers")),
       definition = [%and(
         %equals(r, "r'"),
         %equals(i, "i'")

@@ -19,8 +19,7 @@ $symmetric(
   definition = [
     %forall(
       #(
-        s: %Element(S),
-        t: %Element(%previous),
+        s,t: %Element(S),
         _1: %Constraint($related(
           S = {S},
           T = {S},

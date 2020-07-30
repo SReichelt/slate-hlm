@@ -1,12 +1,8 @@
 %../../../../../logics/hlm%
 
 $Kernel(
-  𝐑: %Element(
+  𝐑,𝐒: %Element(
     $../Rings,
-    auto = %true
-  ),
-  𝐒: %Element(
-    %previous,
     auto = %true
   ),
   φ: %Element($Homomorphisms(

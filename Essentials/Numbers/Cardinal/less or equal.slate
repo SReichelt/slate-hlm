@@ -4,10 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Cardinal_number
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.has_le
  */
-$"less or equal"(
-  κ: %Element($"Cardinal numbers"),
-  μ: %Element(%previous)
-): %Predicate {
+$"less or equal"(κ,μ: %Element($"Cardinal numbers")): %Predicate {
   notation = $LessOrEqualRelation(operands = [κ, μ]),
   definition = [
     %exists(

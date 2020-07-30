@@ -2,8 +2,7 @@
 
 $"Equality is extensional"(
   S: %Set,
-  s: %Element(S),
-  t: %Element(%previous)
+  s,t: %Element(S)
 ): %EquivalenceTheorem {
   conditions = [
     %equals(s, t),

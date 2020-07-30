@@ -1,9 +1,6 @@
 %../../../../../logics/hlm%
 
-$submagma(
-  𝐌: %Element($../Magmas),
-  𝐍: %Element(%previous)
-): %Predicate {
+$submagma(𝐌,𝐍: %Element($../Magmas)): %Predicate {
   notation = $SubObjectRelation(operands = [𝐌, 𝐍]),
   definition = [
     %exists(

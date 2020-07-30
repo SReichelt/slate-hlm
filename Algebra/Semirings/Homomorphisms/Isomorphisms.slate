@@ -5,10 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/isomorphism
  */
-$Isomorphisms(
-  𝐑: %Element($../Semirings),
-  𝐒: %Element(%previous)
-): %SetOperator {
+$Isomorphisms(𝐑,𝐒: %Element($../Semirings)): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [𝐑, 𝐒]
@@ -42,10 +39,7 @@ $Isomorphisms(
       ))),
       %and(
         %forall(
-          #(
-            a: %Element($../Carrier(𝐑 = {𝐑})),
-            b: %Element(%previous)
-          ),
+          #(a,b: %Element($../Carrier(𝐑 = {𝐑}))),
           %equals(
             $../../../Essentials/Functions/value(
               X = {$../Carrier(𝐑 = {𝐑})},
@@ -84,10 +78,7 @@ $Isomorphisms(
           $../zero(𝐑 = {𝐒})
         ),
         %forall(
-          #(
-            c: %Element($../Carrier(𝐑 = {𝐑})),
-            d: %Element(%previous)
-          ),
+          #(c,d: %Element($../Carrier(𝐑 = {𝐑}))),
           %equals(
             $../../../Essentials/Functions/value(
               X = {$../Carrier(𝐑 = {𝐑})},

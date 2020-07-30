@@ -48,10 +48,7 @@ $ring(
         z = {"0"}
       ),
       %forall(
-        #(
-          a: %Element(R),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element(R)),
         %equals(
           $../../Essentials/Operations/value(
             X = {R},

@@ -15,7 +15,7 @@ $Variables: %Construction {
     ),
     equalityDefinition = {
       leftParameters = #(m: %Element($../Essentials/Numbers/Natural/"Natural numbers")),
-      rightParameters = #(n: %Element(%previous)),
+      rightParameters = #(n: %Element($../Essentials/Numbers/Natural/"Natural numbers")),
       definition = [%equals(m, n)],
       isomorphic = %true
     }

@@ -11,10 +11,7 @@ $"subsemiring set"(
   ),
   definition = [%and(
     %forall(
-      #(
-        a: %Element(S),
-        b: %Element(%previous)
-      ),
+      #(a,b: %Element(S)),
       %in(
         $../sum(
           𝐑 = {𝐑},
@@ -29,10 +26,7 @@ $"subsemiring set"(
       S
     ),
     %forall(
-      #(
-        c: %Element(S),
-        d: %Element(%previous)
-      ),
+      #(c,d: %Element(S)),
       %in(
         $../product(
           𝐑 = {𝐑},

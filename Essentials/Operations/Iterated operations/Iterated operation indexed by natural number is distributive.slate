@@ -6,10 +6,7 @@ $"Iterated operation indexed by natural number is distributive"(
   n: %Element($../../Numbers/Natural/"Natural numbers"),
   _i: %Binder(
     #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-    #(
-      a: %Element(X),
-      b: %Element(%previous)
-    )
+    #(a,b: %Element(X))
   )
 ): %StandardTheorem {
   claim = %equals(

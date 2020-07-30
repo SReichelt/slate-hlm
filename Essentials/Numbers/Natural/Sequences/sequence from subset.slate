@@ -23,10 +23,7 @@ $"sequence from subset"(
             S = {$../"Natural numbers"},
             T = {$../"Natural numbers"}
           ).relation(_s = {
-            #(
-              m: %Element($../"Natural numbers"),
-              n: %Element(%previous)
-            ),
+            #(m,n: %Element($../"Natural numbers")),
             {p = {$../"less or equal"(
               m = {m},
               n = {n}

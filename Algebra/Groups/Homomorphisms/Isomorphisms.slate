@@ -1,9 +1,6 @@
 %../../../../../logics/hlm%
 
-$Isomorphisms(
-  𝐆: %Element($../Groups),
-  𝐇: %Element(%previous)
-): %SetOperator {
+$Isomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [𝐆, 𝐇]
@@ -36,10 +33,7 @@ $Isomorphisms(
         Y = {$../Carrier(𝐆 = {𝐇})}
       ))),
       %forall(
-        #(
-          a: %Element($../Carrier(𝐆 = {𝐆})),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element($../Carrier(𝐆 = {𝐆}))),
         %equals(
           $../../../Essentials/Functions/value(
             X = {$../Carrier(𝐆 = {𝐆})},

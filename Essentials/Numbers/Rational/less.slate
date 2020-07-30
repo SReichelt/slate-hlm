@@ -4,10 +4,7 @@
  * @references * https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Qlt
  *             * https://leanprover-community.github.io/mathlib_docs/data/rat/order.html#rat.lt_def
  */
-$less(
-  a: %Element($"Rational numbers"),
-  b: %Element(%previous)
-): %Predicate {
+$less(a,b: %Element($"Rational numbers")): %Predicate {
   properties = {negation = $"less or equal"(
     b = {a},
     a = {b}

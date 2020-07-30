@@ -8,8 +8,7 @@
  */
 $implies(
   S: %Set(auto = %true),
-  p: %Element($Properties(S = {S})),
-  q: %Element(%previous)
+  p,q: %Element($Properties(S = {S}))
 ): %Predicate {
   notation = $ImplicationRelation(
     operands = [p, q],

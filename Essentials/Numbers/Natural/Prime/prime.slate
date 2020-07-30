@@ -66,8 +66,7 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))
     ),
     %forall(
       #(
-        a: %Element($../"Natural numbers"),
-        b: %Element(%previous),
+        a,b: %Element($../"Natural numbers"),
         _3: %Constraint(%equals(
           n,
           $../product(
@@ -94,10 +93,7 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))
       )
     ),
     %not(%exists(
-      #(
-        c: %Element($../Subsets/"Segment (less)"(n = {n})),
-        d: %Element(%previous)
-      ),
+      #(c,d: %Element($../Subsets/"Segment (less)"(n = {n}))),
       formula = %equals(
         n,
         $../product(
@@ -108,8 +104,7 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))
     )),
     %forall(
       #(
-        e: %Element($../"Natural numbers"),
-        f: %Element(%previous),
+        e,f: %Element($../"Natural numbers"),
         _5: %Constraint($../divisible(
           m = {n},
           n = {$../product(

@@ -8,12 +8,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/group_theory/subgroup.html#is_group_hom.ker
  */
 $Kernel(
-  𝐆: %Element(
+  𝐆,𝐇: %Element(
     $../Groups,
-    auto = %true
-  ),
-  𝐇: %Element(
-    %previous,
     auto = %true
   ),
   φ: %Element($Homomorphisms(

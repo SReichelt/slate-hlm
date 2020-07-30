@@ -8,8 +8,7 @@ $operation(
     $Groups,
     auto = %true
   ),
-  a: %Element($Carrier(𝐆 = {𝐆})),
-  b: %Element(%previous)
+  a,b: %Element($Carrier(𝐆 = {𝐆}))
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(operands = [a, b]),
   definition = [%structuralCases(

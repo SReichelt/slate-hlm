@@ -7,10 +7,7 @@ $"Less or equal is a partial order": %StandardTheorem {
         S = {$"Cardinal numbers"},
         T = {$"Cardinal numbers"}
       ).relation(_s = {
-        #(
-          κ: %Element($"Cardinal numbers"),
-          μ: %Element(%previous)
-        ),
+        #(κ,μ: %Element($"Cardinal numbers")),
         {p = {$"less or equal"(
           κ = {κ},
           μ = {μ}

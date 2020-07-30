@@ -22,10 +22,7 @@ $"left modules"(
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑})},
       _𝐀 = {
-        #(
-          𝐀: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑})),
-          𝐁: %Element(%previous)
-        ),
+        #(𝐀,𝐁: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
         {M = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
           𝐑 = {𝐑},
           𝐌 = {𝐀},
@@ -40,11 +37,7 @@ $"left modules"(
         )}}
       },
       _𝐃 = {
-        #(
-          𝐃: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑})),
-          𝐄: %Element(%previous),
-          𝐅: %Element(%previous)
-        ),
+        #(𝐃,𝐄,𝐅: %Element($../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐑}))),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
               𝐑 = {𝐑},

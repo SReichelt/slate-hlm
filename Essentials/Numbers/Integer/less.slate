@@ -3,10 +3,7 @@
 /**
  * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.ltb
  */
-$less(
-  a: %Element($Integers),
-  b: %Element(%previous)
-): %Predicate {
+$less(a,b: %Element($Integers)): %Predicate {
   properties = {negation = $"less or equal"(
     b = {a},
     a = {b}

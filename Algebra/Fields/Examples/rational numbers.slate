@@ -12,10 +12,7 @@ $"rational numbers": %ExplicitOperator {
         Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
       ).operation(_x = {
-        #(
-          a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers"),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
         {z = {$../../../Essentials/Numbers/Rational/sum(
           a = {a},
           b = {b}
@@ -34,10 +31,7 @@ $"rational numbers": %ExplicitOperator {
         Y = {$../../../Essentials/Numbers/Rational/"Rational numbers"},
         Z = {$../../../Essentials/Numbers/Rational/"Rational numbers"}
       ).operation(_x = {
-        #(
-          a: %Element($../../../Essentials/Numbers/Rational/"Rational numbers"),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element($../../../Essentials/Numbers/Rational/"Rational numbers")),
         {z = {$../../../Essentials/Numbers/Rational/product(
           a = {a},
           b = {b}

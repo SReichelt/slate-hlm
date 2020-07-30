@@ -5,10 +5,7 @@
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html#min
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/functions.html#min
  */
-$"minimum of two numbers"(
-  m: %Element($"Natural numbers"),
-  n: %Element(%previous)
-): %ExplicitOperator {
+$"minimum of two numbers"(m,n: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $Function(
     function = 'min',
     arguments = [m, n]

@@ -10,8 +10,7 @@ $rewritable(
   ),
   _1: %Constraint($../../Essentials/Sets/finite(S = {V})),
   ℜ: %Subset($../"Rewriting rules"(T = {$Terms(V = {V})})),
-  L: %Element($Terms(V = {V})),
-  R: %Element(%previous)
+  L,R: %Element($Terms(V = {V}))
 ): %Predicate {
   notation = $Relation(
     symbol = $SubSup(
@@ -49,10 +48,7 @@ $rewritable(
               )})))
             ),
             _2: %Constraint(%forall(
-              #(
-                a: %Element($../"Fresh variables"(V = {V})),
-                b: %Element(%previous)
-              ),
+              #(a,b: %Element($../"Fresh variables"(V = {V}))),
               %equals(
                 $substitution(
                   V = {$Terms(V = {$../../Essentials/Sets/Union(
@@ -89,10 +85,7 @@ $rewritable(
                     )})))
                   ),
                   _2: %Constraint(%forall(
-                    #(
-                      a: %Element($../"Fresh variables"(V = {V})),
-                      b: %Element(%previous)
-                    ),
+                    #(a,b: %Element($../"Fresh variables"(V = {V}))),
                     %equals(
                       $substitution(
                         V = {$Terms(V = {$../../Essentials/Sets/Union(
@@ -124,10 +117,7 @@ $rewritable(
               },
               {
                 constructor = $Terms.application,
-                parameters = #(
-                  M: %Element($Terms(V = {V})),
-                  N: %Element(%previous)
-                ),
+                parameters = #(M,N: %Element($Terms(V = {V}))),
                 value = %or
               }
             ]
@@ -135,10 +125,7 @@ $rewritable(
         },
         {
           constructor = $Terms.application,
-          parameters = #(
-            O: %Element($Terms(V = {V})),
-            P: %Element(%previous)
-          ),
+          parameters = #(O,P: %Element($Terms(V = {V}))),
           value = %structural(
             L,
             $Terms(V = {V}),
@@ -160,10 +147,7 @@ $rewritable(
                     )})))
                   ),
                   _2: %Constraint(%forall(
-                    #(
-                      a: %Element($../"Fresh variables"(V = {V})),
-                      b: %Element(%previous)
-                    ),
+                    #(a,b: %Element($../"Fresh variables"(V = {V}))),
                     %equals(
                       $substitution(
                         V = {$Terms(V = {$../../Essentials/Sets/Union(
@@ -183,10 +167,7 @@ $rewritable(
               },
               {
                 constructor = $Terms.application,
-                parameters = #(
-                  M: %Element($Terms(V = {V})),
-                  N: %Element(%previous)
-                ),
+                parameters = #(M,N: %Element($Terms(V = {V}))),
                 value = %or(
                   %and(
                     $rewritable(

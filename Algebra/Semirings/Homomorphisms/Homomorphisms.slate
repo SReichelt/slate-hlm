@@ -7,10 +7,7 @@
  *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#semi_morph
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring.html#ring_hom
  */
-$Homomorphisms(
-  𝐑: %Element($../Semirings),
-  𝐒: %Element(%previous)
-): %SetOperator {
+$Homomorphisms(𝐑,𝐒: %Element($../Semirings)): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [𝐑, 𝐒]
@@ -31,10 +28,7 @@ $Homomorphisms(
     ))),
     %and(
       %forall(
-        #(
-          a: %Element($../Carrier(𝐑 = {𝐑})),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element($../Carrier(𝐑 = {𝐑}))),
         %equals(
           $../../../Essentials/Functions/value(
             X = {$../Carrier(𝐑 = {𝐑})},
@@ -73,10 +67,7 @@ $Homomorphisms(
         $../zero(𝐑 = {𝐒})
       ),
       %forall(
-        #(
-          c: %Element($../Carrier(𝐑 = {𝐑})),
-          d: %Element(%previous)
-        ),
+        #(c,d: %Element($../Carrier(𝐑 = {𝐑}))),
         %equals(
           $../../../Essentials/Functions/value(
             X = {$../Carrier(𝐑 = {𝐑})},

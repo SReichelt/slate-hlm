@@ -5,8 +5,7 @@
  */
 $"matrix module"(
   𝐑: %Element($../../../Rings),
-  m: %Element($../../../../../Essentials/Numbers/Natural/"Natural numbers"),
-  n: %Element(%previous)
+  m,n: %Element($../../../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
   notation = $SubSup(
     body = 𝐑,
@@ -38,14 +37,11 @@ $"matrix module"(
             n = {n}
           )}
         ).operation(_x = {
-          #(
-            A: %Element($../../../Matrices/Matrices(
-              𝐑 = {𝐑},
-              m = {m},
-              n = {n}
-            )),
-            B: %Element(%previous)
-          ),
+          #(A,B: %Element($../../../Matrices/Matrices(
+            𝐑 = {𝐑},
+            m = {m},
+            n = {n}
+          ))),
           {z = {$../../../Matrices/sum(
             𝐑 = {𝐑},
             m = {m},

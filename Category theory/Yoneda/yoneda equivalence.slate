@@ -6,12 +6,8 @@
  *             * https://ncatlab.org/nlab/show/Yoneda+lemma
  */
 $"yoneda equivalence"(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element(

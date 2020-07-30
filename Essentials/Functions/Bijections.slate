@@ -8,10 +8,7 @@
  *             * https://proofwiki.org/wiki/Definition:Bijection
  *             * https://ncatlab.org/nlab/show/bijection
  */
-$Bijections(
-  X: %Set,
-  Y: %Set
-): %SetOperator {
+$Bijections(X,Y: %Set): %SetOperator {
   notation = $FunctionOperator(
     symbol = '↔',
     operands = [X, Y]

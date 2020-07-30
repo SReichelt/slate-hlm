@@ -16,10 +16,7 @@ $"subring set"(
   ),
   definition = [%and(
     %forall(
-      #(
-        a: %Element(S),
-        b: %Element(%previous)
-      ),
+      #(a,b: %Element(S)),
       %in(
         $../sum(
           𝐑 = {𝐑},
@@ -44,10 +41,7 @@ $"subring set"(
       )
     ),
     %forall(
-      #(
-        d: %Element(S),
-        e: %Element(%previous)
-      ),
+      #(d,e: %Element(S)),
       %in(
         $../product(
           𝐑 = {𝐑},

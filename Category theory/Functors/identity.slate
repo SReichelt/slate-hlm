@@ -34,11 +34,10 @@ $identity(
       },
       _𝐀 = {
         #(
-          𝐀: %Element($../Objects(
+          𝐀,𝐁: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
           )),
-          𝐁: %Element(%previous),
           f: %Element($../Morphisms(
             u = {u},
             𝓒 = {𝓒},

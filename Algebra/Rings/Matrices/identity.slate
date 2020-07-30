@@ -26,10 +26,7 @@ $identity(
       m = {n},
       n = {n}
     ).matrix(_i = {
-      #(
-        i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n})),
-        j: %Element(%previous)
-      ),
+      #(i,j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
       {a = {$../"kronecker delta"(
         𝐑 = {𝐑},
         S = {$../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n})},

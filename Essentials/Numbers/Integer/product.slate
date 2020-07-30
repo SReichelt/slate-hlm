@@ -6,29 +6,20 @@
  * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.mul
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.mul
  */
-$product(
-  a: %Element($Integers),
-  b: %Element(%previous)
-): %ExplicitOperator {
+$product(a,b: %Element($Integers)): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [a, b]),
   definition = [%structuralCases(
     b,
     $Integers,
     [{
       constructor = $Integers.difference,
-      parameters = #(
-        n_b: %Element($../Natural/"Natural numbers"),
-        m_b: %Element(%previous)
-      ),
+      parameters = #(n_b,m_b: %Element($../Natural/"Natural numbers")),
       value = %structuralCases(
         a,
         $Integers,
         [{
           constructor = $Integers.difference,
-          parameters = #(
-            n_a: %Element($../Natural/"Natural numbers"),
-            m_a: %Element(%previous)
-          ),
+          parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),
           value = $Integers.difference(
             n = {$../Natural/sum(
               m = {$../Natural/product(

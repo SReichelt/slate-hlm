@@ -1,9 +1,6 @@
 %../../../../../logics/hlm%
 
-$Isomorphisms(
-  𝐑: %Element($../Rings),
-  𝐒: %Element(%previous)
-): %SetOperator {
+$Isomorphisms(𝐑,𝐒: %Element($../Rings)): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [𝐑, 𝐒]
@@ -37,10 +34,7 @@ $Isomorphisms(
       ))),
       %and(
         %forall(
-          #(
-            a: %Element($../Carrier(𝐑 = {𝐑})),
-            b: %Element(%previous)
-          ),
+          #(a,b: %Element($../Carrier(𝐑 = {𝐑}))),
           %equals(
             $../../../Essentials/Functions/value(
               X = {$../Carrier(𝐑 = {𝐑})},
@@ -70,10 +64,7 @@ $Isomorphisms(
           )
         ),
         %forall(
-          #(
-            d: %Element($../Carrier(𝐑 = {𝐑})),
-            e: %Element(%previous)
-          ),
+          #(d,e: %Element($../Carrier(𝐑 = {𝐑}))),
           %equals(
             $../../../Essentials/Functions/value(
               X = {$../Carrier(𝐑 = {𝐑})},

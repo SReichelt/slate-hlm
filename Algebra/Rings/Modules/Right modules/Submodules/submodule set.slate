@@ -24,10 +24,7 @@ $"submodule set"(
   ),
   definition = [%and(
     %forall(
-      #(
-        a: %Element(S),
-        b: %Element(%previous)
-      ),
+      #(a,b: %Element(S)),
       %in(
         $../sum(
           𝐑 = {𝐑},

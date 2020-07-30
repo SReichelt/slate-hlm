@@ -5,8 +5,7 @@
  */
 $conjunction(
   S: %Set(auto = %true),
-  p: %Element($Properties(S = {S})),
-  q: %Element(%previous)
+  p,q: %Element($Properties(S = {S}))
 ): %ExplicitOperator {
   notation = $Operator(
     symbol = '∧',

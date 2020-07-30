@@ -10,10 +10,7 @@
  */
 $Endorelations(S: %Set(auto = %true)): %Construction {
   $relation(_s: %Binder(
-    #(
-      s: %Element(S),
-      t: %Element(%previous)
-    ),
+    #(s,t: %Element(S)),
     #(p: %Prop)
   )): %Constructor {
     notation = $SubSup(
@@ -28,24 +25,15 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
     ),
     equalityDefinition = {
       leftParameters = #(_s: %Binder(
-        #(
-          s: %Element(S),
-          t: %Element(%previous)
-        ),
+        #(s,t: %Element(S)),
         #(p: %Prop)
       )),
       rightParameters = #(_s: %Binder(
-        #(
-          s: %Element(S),
-          t: %Element(%previous)
-        ),
+        #(s,t: %Element(S)),
         #(q: %Prop)
       )),
       definition = [%forall(
-        #(
-          s: %Element(S),
-          t: %Element(%previous)
-        ),
+        #(s,t: %Element(S)),
         %equiv(p[s = {s}, t = {t}], q[s = {s}, t = {t}])
       )],
       isomorphic = %true
@@ -68,10 +56,7 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       T = {S}
     ))),
     target = $Endorelations(S = {S}).relation(_s = {
-        #(
-          s: %Element(S),
-          t: %Element(%previous)
-        ),
+        #(s,t: %Element(S)),
         {p = {$related(
           S = {S},
           T = {S},

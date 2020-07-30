@@ -11,10 +11,7 @@ $"Sum is associative": %StandardTheorem {
         Y = {$Integers},
         Z = {$Integers}
       ).operation(_x = {
-        #(
-          a: %Element($Integers),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element($Integers)),
         {z = {$sum(
           a = {a},
           b = {b}

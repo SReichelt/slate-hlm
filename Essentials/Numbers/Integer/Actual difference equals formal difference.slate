@@ -3,10 +3,7 @@
 /**
  * @remarks This proposition justifies the notation used for the constructor. Note that the subtraction on the right is subtraction in `$Integers`, using the embedding of the natural numbers `m` and `n` into the integers.
  */
-$"Actual difference equals formal difference"(
-  n: %Element($../Natural/"Natural numbers"),
-  m: %Element(%previous)
-): %StandardTheorem {
+$"Actual difference equals formal difference"(n,m: %Element($../Natural/"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $Integers.difference(
       n = {n},

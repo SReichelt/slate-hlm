@@ -5,8 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Left_Zero
  */
 $"left absorbing element"(
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
+  X,Y: %Set(auto = %true),
   ∗: %Element($Operations(
     X = {X},
     Y = {Y},

@@ -2,8 +2,7 @@
 
 $zero(
   𝐑: %Element($../Rings),
-  m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
-  n: %Element(%previous)
+  m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
   notation = $SubSup(
     body = '0',

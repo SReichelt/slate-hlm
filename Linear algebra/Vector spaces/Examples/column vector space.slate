@@ -34,13 +34,10 @@ $"column vector space"(
               n = {n}
             )}
           ).operation(_x = {
-            #(
-              v: %Element($../../../Algebra/Rings/Matrices/Vectors(
-                𝐑 = {𝐅},
-                n = {n}
-              )),
-              w: %Element(%previous)
-            ),
+            #(v,w: %Element($../../../Algebra/Rings/Matrices/Vectors(
+              𝐑 = {𝐅},
+              n = {n}
+            ))),
             {z = {$../../../Algebra/Rings/Matrices/sum(
               𝐑 = {𝐅},
               m = {$../../../Essentials/Numbers/Natural/number(value = 1)},

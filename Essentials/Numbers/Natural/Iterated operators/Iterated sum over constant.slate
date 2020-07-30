@@ -1,9 +1,6 @@
 %../../../../../../logics/hlm%
 
-$"Iterated sum over constant"(
-  n: %Element($../"Natural numbers"),
-  a: %Element(%previous)
-): %StandardTheorem {
+$"Iterated sum over constant"(n,a: %Element($../"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $../../../Operations/"Iterated operations"/"indexed by natural number"(
       X = {$../"Natural numbers"},

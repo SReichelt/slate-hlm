@@ -8,10 +8,7 @@
  *             * https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/isomorphism
  */
-$Isomorphisms(
-  κ: %Element($../"Cardinal numbers"),
-  μ: %Element(%previous)
-): %SetOperator {
+$Isomorphisms(κ,μ: %Element($../"Cardinal numbers")): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [κ, μ]

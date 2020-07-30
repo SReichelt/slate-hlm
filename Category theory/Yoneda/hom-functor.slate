@@ -6,11 +6,10 @@
  *             * https://ncatlab.org/nlab/show/hom-functor
  */
 $"hom-functor"(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
-  v: %Element(%previous),
   𝓒: %Element(
     $../Categories(u = {u}),
     auto = %true
@@ -47,11 +46,10 @@ $"hom-functor"(
       },
       _𝐀 = {
         #(
-          𝐘: %Element($../Objects(
+          𝐘,𝐙: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
           )),
-          𝐙: %Element(%previous),
           f: %Element($../Morphisms(
             u = {u},
             𝓒 = {𝓒},

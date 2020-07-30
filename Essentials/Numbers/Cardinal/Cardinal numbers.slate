@@ -40,8 +40,7 @@ $"Cardinal numbers": %Construction {
     target = $"Cardinal numbers".cardinality(S = {$../Natural/Subsets/"Segment (less)"(n = {n})}),
     wellDefinednessProof = {
       parameters = #(
-        m: %Element($../Natural/"Natural numbers"),
-        n: %Element(%previous),
+        m,n: %Element($../Natural/"Natural numbers"),
         _1: %Constraint(%equals(
           $"Cardinal numbers".cardinality(S = {$../Natural/Subsets/"Segment (less)"(n = {m})}),
           $"Cardinal numbers".cardinality(S = {$../Natural/Subsets/"Segment (less)"(n = {n})})

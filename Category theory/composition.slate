@@ -12,19 +12,11 @@ $composition(
     $Categories(u = {u}),
     auto = %true
   ),
-  𝐗: %Element(
+  𝐗,𝐘,𝐙: %Element(
     $Objects(
       u = {u},
       𝓒 = {𝓒}
     ),
-    auto = %true
-  ),
-  𝐘: %Element(
-    %previous,
-    auto = %true
-  ),
-  𝐙: %Element(
-    %previous,
     auto = %true
   ),
   f: %Element($Morphisms(
@@ -52,10 +44,7 @@ $composition(
       parameters = #(
         O: %Set,
         _𝐀: %Binder(
-          #(
-            𝐀: %Element(O),
-            𝐁: %Element(%previous)
-          ),
+          #(𝐀,𝐁: %Element(O)),
           #(M: %Set)
         ),
         _𝐂: %Binder(
@@ -63,11 +52,7 @@ $composition(
           #(i: %Element(M[𝐀 = {𝐂}, 𝐁 = {𝐂}]))
         ),
         _𝐃: %Binder(
-          #(
-            𝐃: %Element(O),
-            𝐄: %Element(%previous),
-            𝐅: %Element(%previous)
-          ),
+          #(𝐃,𝐄,𝐅: %Element(O)),
           #(∘: %Element($../Essentials/Operations/Operations(
             X = {M[𝐀 = {𝐄}, 𝐁 = {𝐅}]},
             Y = {M[𝐀 = {𝐃}, 𝐁 = {𝐄}]},
@@ -76,10 +61,7 @@ $composition(
         ),
         _1: %Constraint(%forall(
           #(
-            𝐖: %Element(O),
-            𝐗: %Element(%previous),
-            𝐘: %Element(%previous),
-            𝐙: %Element(%previous),
+            𝐖,𝐗,𝐘,𝐙: %Element(O),
             f: %Element(M[𝐀 = {𝐖}, 𝐁 = {𝐗}]),
             g: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}]),
             h: %Element(M[𝐀 = {𝐘}, 𝐁 = {𝐙}])
@@ -119,8 +101,7 @@ $composition(
         )),
         _2: %Constraint(%forall(
           #(
-            𝐗: %Element(O),
-            𝐘: %Element(%previous),
+            𝐗,𝐘: %Element(O),
             f: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}])
           ),
           %equals(
@@ -145,8 +126,7 @@ $composition(
         )),
         _3: %Constraint(%forall(
           #(
-            𝐗: %Element(O),
-            𝐘: %Element(%previous),
+            𝐗,𝐘: %Element(O),
             _4: %Constraint(%exists(
               #(
                 f: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}]),

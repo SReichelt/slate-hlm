@@ -11,10 +11,7 @@ $semigroups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Semigroups/Semigroups},
       _𝐀 = {
-        #(
-          𝐀: %Element($../../Algebra/Semigroups/Semigroups),
-          𝐁: %Element(%previous)
-        ),
+        #(𝐀,𝐁: %Element($../../Algebra/Semigroups/Semigroups)),
         {M = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
           𝐌 = {𝐀},
           𝐍 = {𝐁}
@@ -25,11 +22,7 @@ $semigroups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
         {i = {$../../Algebra/Magmas/Homomorphisms/identity(𝐌 = {𝐂})}}
       },
       _𝐃 = {
-        #(
-          𝐃: %Element($../../Algebra/Semigroups/Semigroups),
-          𝐄: %Element(%previous),
-          𝐅: %Element(%previous)
-        ),
+        #(𝐃,𝐄,𝐅: %Element($../../Algebra/Semigroups/Semigroups)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
               𝐌 = {𝐄},

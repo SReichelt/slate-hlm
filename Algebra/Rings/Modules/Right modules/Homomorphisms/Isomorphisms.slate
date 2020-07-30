@@ -10,8 +10,7 @@ $Isomorphisms(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Right modules"(𝐑 = {𝐑})),
-  𝐍: %Element(%previous)
+  𝐌,𝐍: %Element($../"Right modules"(𝐑 = {𝐑}))
 ): %SetOperator {
   notation = $Function(
     function = 'Iso',
@@ -59,13 +58,11 @@ $Isomorphisms(
       ))),
       %forall(
         #(
-          a: %Element($../../../Carrier(𝐑 = {𝐑})),
-          b: %Element(%previous),
-          x: %Element($../Carrier(
+          a,b: %Element($../../../Carrier(𝐑 = {𝐑})),
+          x,y: %Element($../Carrier(
             𝐑 = {𝐑},
             𝐌 = {𝐌}
-          )),
-          y: %Element(%previous)
+          ))
         ),
         %equals(
           $../../../../../Essentials/Functions/value(

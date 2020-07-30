@@ -16,10 +16,7 @@ $groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Groups/Groups},
       _𝐀 = {
-        #(
-          𝐀: %Element($../../Algebra/Groups/Groups),
-          𝐁: %Element(%previous)
-        ),
+        #(𝐀,𝐁: %Element($../../Algebra/Groups/Groups)),
         {M = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
           𝐆 = {𝐀},
           𝐇 = {𝐁}
@@ -30,11 +27,7 @@ $groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
         {i = {$../../Algebra/Groups/Homomorphisms/identity(𝐆 = {𝐂})}}
       },
       _𝐃 = {
-        #(
-          𝐃: %Element($../../Algebra/Groups/Groups),
-          𝐄: %Element(%previous),
-          𝐅: %Element(%previous)
-        ),
+        #(𝐃,𝐄,𝐅: %Element($../../Algebra/Groups/Groups)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
               𝐆 = {𝐄},

@@ -7,10 +7,7 @@
  *             * https://ncatlab.org/nlab/show/ordinal+sum
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal.has_add
  */
-$sum(
-  α: %Element($"Ordinal numbers"),
-  β: %Element(%previous)
-): %ExplicitOperator {
+$sum(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
   notation = $AdditionOperator(operands = [α, β]),
   definition = [%structuralCases(
     β,

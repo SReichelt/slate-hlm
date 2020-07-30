@@ -15,10 +15,7 @@ $connex(
     property = 'connex'
   ),
   definition = [%forall(
-    #(
-      s: %Element(S),
-      t: %Element(%previous)
-    ),
+    #(s,t: %Element(S)),
     %or(
       $related(
         S = {S},

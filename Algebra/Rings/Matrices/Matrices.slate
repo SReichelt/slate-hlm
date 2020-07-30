@@ -12,8 +12,7 @@ $Matrices(
     $../Rings,
     auto = %true
   ),
-  m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers"),
-  n: %Element(%previous)
+  m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %Construction {
   $matrix(_i: %Binder(
     #(

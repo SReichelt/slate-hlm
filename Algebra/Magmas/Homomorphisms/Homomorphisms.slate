@@ -5,10 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/homomorphism
  */
-$Homomorphisms(
-  𝐌: %Element($../Magmas),
-  𝐍: %Element(%previous)
-): %SetOperator {
+$Homomorphisms(𝐌,𝐍: %Element($../Magmas)): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [𝐌, 𝐍]
@@ -28,10 +25,7 @@ $Homomorphisms(
       Y = {$../Carrier(𝐌 = {𝐍})}
     ))),
     %forall(
-      #(
-        a: %Element($../Carrier(𝐌 = {𝐌})),
-        b: %Element(%previous)
-      ),
+      #(a,b: %Element($../Carrier(𝐌 = {𝐌}))),
       %equals(
         $../../../Essentials/Functions/value(
           X = {$../Carrier(𝐌 = {𝐌})},

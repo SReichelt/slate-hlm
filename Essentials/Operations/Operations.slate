@@ -3,11 +3,7 @@
 /**
  * @references * https://proofwiki.org/wiki/Definition:Operation/Binary_Operation
  */
-$Operations(
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
-  Z: %Set(auto = %true)
-): %Construction {
+$Operations(X,Y,Z: %Set(auto = %true)): %Construction {
   $operation(_x: %Binder(
     #(
       x: %Element(X),

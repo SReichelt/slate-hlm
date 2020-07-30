@@ -8,10 +8,7 @@
  *             * [https://proofwiki.org/wiki/Cantor-Bernstein-Schröder_Theorem](https://proofwiki.org/wiki/Cantor-Bernstein-Schr%C3%B6der_Theorem)
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/schroeder_bernstein.html#function.embedding.antisymm
  */
-$"Equality criterion"(
-  κ: %Element($"Cardinal numbers"),
-  μ: %Element(%previous)
-): %EquivalenceTheorem {
+$"Equality criterion"(κ,μ: %Element($"Cardinal numbers")): %EquivalenceTheorem {
   conditions = [
     %and(
       $"less or equal"(

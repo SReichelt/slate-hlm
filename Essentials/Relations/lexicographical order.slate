@@ -10,8 +10,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/wf.html#prod.lex
  */
 $"lexicographical order"(
-  S: %Set(auto = %true),
-  T: %Set(auto = %true),
+  S,T: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = {S})),
   _1: %Constraint($"partial order"(
     S = {S},
@@ -31,13 +30,10 @@ $"lexicographical order"(
       S = {S},
       T = {T}
     )}).relation(_s = {
-      #(
-        a: %Element($../Sets/"Cartesian product"(
-          S = {S},
-          T = {T}
-        )),
-        b: %Element(%previous)
-      ),
+      #(a,b: %Element($../Sets/"Cartesian product"(
+        S = {S},
+        T = {T}
+      ))),
       {p = {%structural(
         b,
         $../Sets/"Cartesian product"(

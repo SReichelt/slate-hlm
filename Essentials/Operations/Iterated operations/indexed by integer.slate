@@ -3,8 +3,7 @@
 $"indexed by integer"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = {X})),
-  j: %Element($../../Numbers/Integer/Integers),
-  k: %Element(%previous),
+  j,k: %Element($../../Numbers/Integer/Integers),
   _i: %Binder(
     #(i: %Element($../../Numbers/Integer/Subsets/Interval(
       a = {j},

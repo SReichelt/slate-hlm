@@ -5,8 +5,7 @@ $difference(
     $Rings,
     auto = %true
   ),
-  a: %Element($Carrier(𝐑 = {𝐑})),
-  b: %Element(%previous)
+  a,b: %Element($Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),
   definition = [$sum(

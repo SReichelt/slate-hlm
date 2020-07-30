@@ -3,10 +3,7 @@
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal.le
  */
-$"less or equal"(
-  α: %Element($"Ordinal numbers"),
-  β: %Element(%previous)
-): %Predicate {
+$"less or equal"(α,β: %Element($"Ordinal numbers")): %Predicate {
   notation = $LessOrEqualRelation(operands = [α, β]),
   definition = [
     %exists(

@@ -5,16 +5,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor.html#category_theory.functor.comp
  */
 $composition(
-  u: %Element(
+  u,v,w: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
-    auto = %true
-  ),
-  w: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element(
@@ -75,11 +67,10 @@ $composition(
       },
       _𝐀 = {
         #(
-          𝐀: %Element($../Objects(
+          𝐀,𝐁: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
           )),
-          𝐁: %Element(%previous),
           f: %Element($../Morphisms(
             u = {u},
             𝓒 = {𝓒},

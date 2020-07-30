@@ -9,10 +9,7 @@
  *             * https://coq.inria.fr/library/Coq.ZArith.Znumtheory.html#rel_prime (for integers)
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/gcd.html#nat.coprime
  */
-$coprime(
-  m: %Element($"Natural numbers"),
-  n: %Element(%previous)
-): %Predicate {
+$coprime(m,n: %Element($"Natural numbers")): %Predicate {
   notation = $MultiProperty(
     operands = [m, n],
     property = 'coprime'

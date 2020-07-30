@@ -5,10 +5,7 @@
  *             * https://coq.inria.fr/library/Coq.NArith.BinNat.html#N.add_succ_l
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.succ_add
  */
-$"Successor can be pulled over addition"(
-  m: %Element($"Natural numbers"),
-  n: %Element(%previous)
-): %StandardTheorem {
+$"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $sum(
       m = {$"Natural numbers".successor(n = {m})},
@@ -52,7 +49,8 @@ $"Successor can be pulled over addition"(
             $"Natural numbers".successor(n = {m}),
             $"Natural numbers".successor(n = {m})
           ),
-          steps = #()
+          steps = #(
+          )
         },
         {
           parameters = #(x: %Element($"Natural numbers")),
@@ -66,25 +64,22 @@ $"Successor can be pulled over addition"(
               n = {x}
             )})})
           ),
-          steps = #(
-            _: %UseTheorem(
-              $"Successor can be pulled over addition"(
-                m = {m},
+          steps = #(_: %UseTheorem(
+            $"Successor can be pulled over addition"(
+              m = {m},
+              n = {x}
+            ),
+            %equals(
+              $sum(
+                m = {$"Natural numbers".successor(n = {m})},
                 n = {x}
               ),
-              %equals(
-                $sum(
-                  m = {$"Natural numbers".successor(n = {m})},
-                  n = {x}
-                ),
-                $"Natural numbers".successor(n = {$sum(
-                  m = {m},
-                  n = {x}
-                )})
-              )
-            ),
-            _: %Extend($"Natural numbers".successor(n = {%previous}))
-          )
+              $"Natural numbers".successor(n = {$sum(
+                m = {m},
+                n = {x}
+              )})
+            )
+          ))
         }
       ]
     ))

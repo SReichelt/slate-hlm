@@ -18,10 +18,7 @@ $"submonoid set"(
   ),
   definition = [%and(
     %forall(
-      #(
-        a: %Element(S),
-        b: %Element(%previous)
-      ),
+      #(a,b: %Element(S)),
       %in(
         $../operation(
           𝐌 = {𝐌},

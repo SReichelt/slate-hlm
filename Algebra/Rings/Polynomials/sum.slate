@@ -9,11 +9,10 @@ $sum(
     $../../../"Formal systems"/Variables,
     auto = %true
   ),
-  p: %Element($Polynomials(
+  p,q: %Element($Polynomials(
     𝐑 = {𝐑},
     X = {X}
-  )),
-  q: %Element(%previous)
+  ))
 ): %ExplicitOperator {
   notation = $AdditionOperator(operands = [p, q]),
   definition = [%structuralCases(

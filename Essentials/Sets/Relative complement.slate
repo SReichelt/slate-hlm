@@ -8,8 +8,7 @@
  */
 $"Relative complement"(
   U: %Set(auto = %true),
-  S: %Subset(U),
-  T: %Subset(%previous)
+  S,T: %Subset(U)
 ): %SetOperator {
   notation = $Operator(
     symbol = '∖',

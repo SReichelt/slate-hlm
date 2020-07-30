@@ -7,8 +7,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#commutative
  */
 $commutative(
-  X: %Set(auto = %true),
-  Z: %Set(auto = %true),
+  X,Z: %Set(auto = %true),
   ∗: %Element($Operations(
     X = {X},
     Y = {X},
@@ -20,10 +19,7 @@ $commutative(
     property = 'commutative'
   ),
   definition = [%forall(
-    #(
-      x: %Element(X),
-      y: %Element(%previous)
-    ),
+    #(x,y: %Element(X)),
     %equals(
       $value(
         X = {X},

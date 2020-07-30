@@ -7,20 +7,11 @@ $"Rewriting rules"(T: %Set(
   auto = %true,
   embedSubsets = %true
 )): %Construction {
-  $rule(
-    l: %Element(T),
-    r: %Element(%previous)
-  ): %Constructor {
+  $rule(l,r: %Element(T)): %Constructor {
     notation = $FunctionOperator(operands = [l, r]),
     equalityDefinition = {
-      leftParameters = #(
-        l: %Element(T),
-        r: %Element(%previous)
-      ),
-      rightParameters = #(
-        "l'": %Element(%previous),
-        "r'": %Element(%previous)
-      ),
+      leftParameters = #(l,r: %Element(T)),
+      rightParameters = #("l'","r'": %Element(T)),
       definition = [%and(
         %equals(l, "l'"),
         %equals(r, "r'")

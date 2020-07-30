@@ -24,10 +24,7 @@ $elements(
   definition = [$../Categories(u = {u}).category(
       O = {S},
       _𝐀 = {
-        #(
-          a: %Element(S),
-          b: %Element(%previous)
-        ),
+        #(a,b: %Element(S)),
         {M = {$../../Essentials/Sets/Intersection(
           U = {S},
           S = {%enumeration(a)},
@@ -39,11 +36,7 @@ $elements(
         {i = {c}}
       },
       _𝐃 = {
-        #(
-          d: %Element(S),
-          e: %Element(%previous),
-          f: %Element(%previous)
-        ),
+        #(d,e,f: %Element(S)),
         {∘ = {$../../Essentials/Functions/Functions(
             X = {$../../Essentials/Sets/"Cartesian product"(
               S = {$../../Essentials/Sets/Intersection(

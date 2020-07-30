@@ -3,10 +3,7 @@
 /**
  * @remarks This is the ordinal-number analogue of the Schröder-Bernstein theorem, together with the HLM-specific equality criterion on structures.
  */
-$"Equality criterion"(
-  α: %Element($"Ordinal numbers"),
-  β: %Element(%previous)
-): %EquivalenceTheorem {
+$"Equality criterion"(α,β: %Element($"Ordinal numbers")): %EquivalenceTheorem {
   conditions = [
     %and(
       $"less or equal"(

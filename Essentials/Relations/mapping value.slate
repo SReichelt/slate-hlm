@@ -4,8 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Function_(mathematics)#Functional_notation
  */
 $"mapping value"(
-  S: %Set(auto = %true),
-  T: %Set(auto = %true),
+  S,T: %Set(auto = %true),
   ≺: %Element($Relations(
     S = {S},
     T = {T}

@@ -7,10 +7,7 @@
  *             * https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.mul
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.mul
  */
-$product(
-  m: %Element($"Natural numbers"),
-  n: %Element(%previous)
-): %ExplicitOperator {
+$product(m,n: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [m, n]),
   definition = [%structuralCases(
     n,

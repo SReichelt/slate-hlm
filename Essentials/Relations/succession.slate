@@ -7,8 +7,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/sum.html#sum.lex
  */
 $succession(
-  S: %Set(auto = %true),
-  T: %Set(auto = %true),
+  S,T: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = {S})),
   _1: %Constraint($"partial order"(
     S = {S},
@@ -28,13 +27,10 @@ $succession(
       S = {S},
       T = {T}
     )}).relation(_s = {
-      #(
-        a: %Element($../Sets/"Disjoint union"(
-          S = {S},
-          T = {T}
-        )),
-        b: %Element(%previous)
-      ),
+      #(a,b: %Element($../Sets/"Disjoint union"(
+        S = {S},
+        T = {T}
+      ))),
       {p = {%structural(
         b,
         $../Sets/"Disjoint union"(

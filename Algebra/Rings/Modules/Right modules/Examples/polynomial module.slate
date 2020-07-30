@@ -32,13 +32,10 @@ $"polynomial module"(
             X = {X}
           )}
         ).operation(_x = {
-          #(
-            p: %Element($../../../Polynomials/Polynomials(
-              𝐑 = {𝐑},
-              X = {X}
-            )),
-            q: %Element(%previous)
-          ),
+          #(p,q: %Element($../../../Polynomials/Polynomials(
+            𝐑 = {𝐑},
+            X = {X}
+          ))),
           {z = {$../../../Polynomials/sum(
             𝐑 = {𝐑},
             X = {X},

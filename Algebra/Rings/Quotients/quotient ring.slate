@@ -15,10 +15,7 @@ $"quotient ring"(
     I = {I}
   )),
   ∼: %Def($../../../Essentials/Relations/Endorelations(S = {$../Carrier(𝐑 = {𝐑})}).relation(_s = {
-      #(
-        g: %Element($../Carrier(𝐑 = {𝐑})),
-        h: %Element(%previous)
-      ),
+      #(g,h: %Element($../Carrier(𝐑 = {𝐑}))),
       {p = {%exists(
         #(s: %Element(I)),
         formula = %equals(

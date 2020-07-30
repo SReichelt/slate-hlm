@@ -1,9 +1,6 @@
 %../../../../../../logics/hlm%
 
-$"sequence difference"(
-  𝐚: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"})),
-  𝐛: %Element(%previous)
-): %ExplicitOperator {
+$"sequence difference"(𝐚,𝐛: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}))): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [𝐚, 𝐛]),
   definition = [
     %structuralCases(

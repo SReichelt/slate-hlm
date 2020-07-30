@@ -1,8 +1,7 @@
 %../../../../../logics/hlm%
 
 $"Inverse of isomorphism is also isomorphism"(
-  𝐆: %Element($../Groups),
-  𝐇: %Element(%previous),
+  𝐆,𝐇: %Element($../Groups),
   φ: %Element($Isomorphisms(
     𝐆 = {𝐆},
     𝐇 = {𝐇}

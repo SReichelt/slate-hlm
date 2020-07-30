@@ -15,10 +15,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int (but uses a different encoding as an inductive data type with two constructors)
  */
 $Integers: %Construction {
-  $difference(
-    n: %Element($../Natural/"Natural numbers"),
-    m: %Element(%previous)
-  ): %Constructor {
+  $difference(n,m: %Element($../Natural/"Natural numbers")): %Constructor {
     notation = $Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '-'),
@@ -28,14 +25,8 @@ $Integers: %Construction {
       style = '()'
     ),
     equalityDefinition = {
-      leftParameters = #(
-        n: %Element($../Natural/"Natural numbers"),
-        m: %Element(%previous)
-      ),
-      rightParameters = #(
-        "n'": %Element(%previous),
-        "m'": %Element(%previous)
-      ),
+      leftParameters = #(n,m: %Element($../Natural/"Natural numbers")),
+      rightParameters = #("n'","m'": %Element($../Natural/"Natural numbers")),
       definition = [%equals(
         $../Natural/sum(
           m = {n},
@@ -65,8 +56,7 @@ $Integers: %Construction {
     ),
     wellDefinednessProof = {
       parameters = #(
-        x: %Element($../Natural/"Natural numbers"),
-        y: %Element(%previous),
+        x,y: %Element($../Natural/"Natural numbers"),
         _1: %Constraint(%equals(
           $Integers.difference(
             n = {x},

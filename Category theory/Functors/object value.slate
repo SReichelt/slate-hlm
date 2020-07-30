@@ -1,12 +1,8 @@
 %../../../../logics/hlm%
 
 $"object value"(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element(
@@ -56,11 +52,10 @@ $"object value"(
           ),
           _𝐁: %Binder(
             #(
-              𝐁: %Element($../Objects(
+              𝐁,𝐂: %Element($../Objects(
                 u = {u},
                 𝓒 = {𝓒}
               )),
-              𝐂: %Element(%previous),
               f: %Element($../Morphisms(
                 u = {u},
                 𝓒 = {𝓒},
@@ -95,12 +90,10 @@ $"object value"(
           )),
           _2: %Constraint(%forall(
             #(
-              𝐀: %Element($../Objects(
+              𝐀,𝐁,𝐂: %Element($../Objects(
                 u = {u},
                 𝓒 = {𝓒}
               )),
-              𝐁: %Element(%previous),
-              𝐂: %Element(%previous),
               d: %Element($../Morphisms(
                 u = {u},
                 𝓒 = {𝓒},

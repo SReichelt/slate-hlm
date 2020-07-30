@@ -55,10 +55,7 @@ $substitution(
             )})))
           ),
           _2: %Constraint(%forall(
-            #(
-              y: %Element($../"Fresh variables"(V = {V})),
-              z: %Element(%previous)
-            ),
+            #(y,z: %Element($../"Fresh variables"(V = {V}))),
             %equals(
               $substitution(
                 V = {$Terms(V = {$../../Essentials/Sets/Union(
@@ -94,10 +91,7 @@ $substitution(
       },
       {
         constructor = $Terms.application,
-        parameters = #(
-          M: %Element($Terms(V = {V})),
-          N: %Element(%previous)
-        ),
+        parameters = #(M,N: %Element($Terms(V = {V}))),
         value = $Terms(V = {$../../Essentials/Sets/"Relative complement"(
             U = {V},
             S = {V},

@@ -13,16 +13,10 @@
  *             * https://ncatlab.org/nlab/show/disjoint+union#special_cases
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#sum
  */
-$"Disjoint union"(
-  S: %Set(
-    auto = %false,
-    embedSubsets = %true
-  ),
-  T: %Set(
-    auto = %false,
-    embedSubsets = %true
-  )
-): %Construction {
+$"Disjoint union"(S,T: %Set(
+  auto = %false,
+  embedSubsets = %true
+)): %Construction {
   $left(s: %Element(S)): %Constructor {
     notation = $Constructor(
       name = 'l',
@@ -30,7 +24,7 @@ $"Disjoint union"(
     ),
     equalityDefinition = {
       leftParameters = #(s: %Element(S)),
-      rightParameters = #("s'": %Element(%previous)),
+      rightParameters = #("s'": %Element(S)),
       definition = [%equals(s, "s'")],
       isomorphic = %true
     }
@@ -43,7 +37,7 @@ $"Disjoint union"(
     ),
     equalityDefinition = {
       leftParameters = #(t: %Element(T)),
-      rightParameters = #("t'": %Element(%previous)),
+      rightParameters = #("t'": %Element(T)),
       definition = [%equals(t, "t'")],
       isomorphic = %true
     }

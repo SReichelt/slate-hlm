@@ -1,9 +1,7 @@
 %../../../../../logics/hlm%
 
 $"left operation condition"(
-  S: %Set(auto = %true),
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
+  S,X,Y: %Set(auto = %true),
   φ: %Element($../../../Essentials/Functions/Bijections(
     X = {X},
     Y = {Y}

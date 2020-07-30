@@ -3,10 +3,7 @@
 /**
  * @remarks This follows immediately from the HLM-specific definition of equality of monoids.
  */
-$"Equality criterion"(
-  𝐌: %Element($../Monoids),
-  𝐍: %Element(%previous)
-): %EquivalenceTheorem {
+$"Equality criterion"(𝐌,𝐍: %Element($../Monoids)): %EquivalenceTheorem {
   conditions = [
     %not($../../../Essentials/Sets/empty(S = {$Isomorphisms(
       𝐌 = {𝐌},

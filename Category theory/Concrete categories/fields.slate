@@ -14,10 +14,7 @@ $fields(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Fields/Fields},
       _𝐀 = {
-        #(
-          𝐀: %Element($../../Algebra/Fields/Fields),
-          𝐁: %Element(%previous)
-        ),
+        #(𝐀,𝐁: %Element($../../Algebra/Fields/Fields)),
         {M = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
           𝐑 = {𝐀},
           𝐒 = {𝐁}
@@ -28,11 +25,7 @@ $fields(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
         {i = {$../../Algebra/Rings/Homomorphisms/identity(𝐑 = {𝐂})}}
       },
       _𝐃 = {
-        #(
-          𝐃: %Element($../../Algebra/Fields/Fields),
-          𝐄: %Element(%previous),
-          𝐅: %Element(%previous)
-        ),
+        #(𝐃,𝐄,𝐅: %Element($../../Algebra/Fields/Fields)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
               𝐑 = {𝐄},

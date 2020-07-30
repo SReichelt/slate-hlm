@@ -9,8 +9,7 @@
 $"kronecker delta"(
   𝐑: %Element($Rings),
   S: %Set(auto = %true),
-  i: %Element(S),
-  j: %Element(%previous)
+  i,j: %Element(S)
 ): %ExplicitOperator {
   notation = $SubSup(
     body = 'δ',

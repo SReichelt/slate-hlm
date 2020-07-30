@@ -5,20 +5,15 @@ $sum(
     $../Rings,
     auto = %true
   ),
-  m: %Element(
+  m,n: %Element(
     $../../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
-  n: %Element(
-    %previous,
-    auto = %true
-  ),
-  A: %Element($Matrices(
+  A,B: %Element($Matrices(
     𝐑 = {𝐑},
     m = {m},
     n = {n}
-  )),
-  B: %Element(%previous)
+  ))
 ): %ExplicitOperator {
   notation = $AdditionOperator(operands = [A, B]),
   definition = [%structuralCases(

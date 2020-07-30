@@ -55,8 +55,7 @@ $"right module"(
       %forall(
         #(
           x: %Element(M),
-          a: %Element($../../Carrier(𝐑 = {𝐑})),
-          b: %Element(%previous)
+          a,b: %Element($../../Carrier(𝐑 = {𝐑}))
         ),
         %equals(
           $../../../../Essentials/Operations/value(
@@ -163,8 +162,7 @@ $"right module"(
       %forall(
         #(
           x: %Element(M),
-          a: %Element($../../Carrier(𝐑 = {𝐑})),
-          b: %Element(%previous)
+          a,b: %Element($../../Carrier(𝐑 = {𝐑}))
         ),
         %equals(
           $../../../../Essentials/Operations/value(
@@ -219,8 +217,7 @@ $"right module"(
       %forall(
         #(
           x: %Element(M),
-          a: %Element($../../Carrier(𝐑 = {𝐑})),
-          b: %Element(%previous)
+          a,b: %Element($../../Carrier(𝐑 = {𝐑}))
         ),
         %equals(
           $../../../../Essentials/Operations/value(
@@ -262,8 +259,7 @@ $"right module"(
       %forall(
         #(
           x: %Element(M),
-          a: %Element($../../Carrier(𝐑 = {𝐑})),
-          b: %Element(%previous)
+          a,b: %Element($../../Carrier(𝐑 = {𝐑}))
         ),
         %equals(
           $../../../../Essentials/Operations/value(

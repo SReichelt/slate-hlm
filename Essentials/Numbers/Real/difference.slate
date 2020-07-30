@@ -3,10 +3,7 @@
 /**
  * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal_minus
  */
-$difference(
-  a: %Element($"Real numbers"),
-  b: %Element(%previous)
-): %ExplicitOperator {
+$difference(a,b: %Element($"Real numbers")): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),
   definition = [
     %structuralCases(

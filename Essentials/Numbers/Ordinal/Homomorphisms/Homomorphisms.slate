@@ -5,10 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Order_Embedding
  *             * https://leanprover-community.github.io/mathlib_docs/order/order_iso.html#order_embedding
  */
-$Homomorphisms(
-  α: %Element($../"Ordinal numbers"),
-  β: %Element(%previous)
-): %SetOperator {
+$Homomorphisms(α,β: %Element($../"Ordinal numbers")): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [α, β]
@@ -28,10 +25,7 @@ $Homomorphisms(
       Y = {$../Carrier(α = {β})}
     ))),
     %forall(
-      #(
-        a: %Element($../Carrier(α = {α})),
-        b: %Element(%previous)
-      ),
+      #(a,b: %Element($../Carrier(α = {α}))),
       %equiv(
         $../before(
           α = {α},

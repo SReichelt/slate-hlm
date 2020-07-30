@@ -7,12 +7,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor_category.html#category_theory.functor.category
  */
 $functors(
-  u: %Element(
+  u,v: %Element(
     $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  v: %Element(
-    %previous,
     auto = %true
   ),
   𝓒: %Element($../Categories(u = {u})),
@@ -36,15 +32,12 @@ $functors(
         𝓓 = {𝓓}
       )},
       _𝐀 = {
-        #(
-          A: %Element($../Functors/Functors(
-            u = {u},
-            v = {v},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓}
-          )),
-          B: %Element(%previous)
-        ),
+        #(A,B: %Element($../Functors/Functors(
+          u = {u},
+          v = {v},
+          𝓒 = {𝓒},
+          𝓓 = {𝓓}
+        ))),
         {M = {$../"Natural transformations"/"Natural transformations"(
           u = {u},
           v = {v},
@@ -70,16 +63,12 @@ $functors(
         )}}
       },
       _𝐃 = {
-        #(
-          D: %Element($../Functors/Functors(
-            u = {u},
-            v = {v},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓}
-          )),
-          E: %Element(%previous),
-          F: %Element(%previous)
-        ),
+        #(D,E,F: %Element($../Functors/Functors(
+          u = {u},
+          v = {v},
+          𝓒 = {𝓒},
+          𝓓 = {𝓓}
+        ))),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../"Natural transformations"/"Natural transformations"(
               u = {u},

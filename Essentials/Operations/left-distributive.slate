@@ -7,8 +7,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#left_distributive
  */
 $"left-distributive"(
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
+  X,Y: %Set(auto = %true),
   ∗: %Element($Operations(
     X = {X},
     Y = {Y},
@@ -24,8 +23,7 @@ $"left-distributive"(
   definition = [%forall(
     #(
       x: %Element(X),
-      y: %Element(Y),
-      z: %Element(%previous)
+      y,z: %Element(Y)
     ),
     %equals(
       $value(

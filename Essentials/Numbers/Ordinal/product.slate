@@ -6,10 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Ordinal_Multiplication
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#ordinal.type_mul
  */
-$product(
-  α: %Element($"Ordinal numbers"),
-  β: %Element(%previous)
-): %ExplicitOperator {
+$product(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [α, β]),
   definition = [%structuralCases(
     β,

@@ -1,9 +1,6 @@
 %../../../../../../logics/hlm%
 
-$Interval(
-  a: %Element($../Integers),
-  b: %Element(%previous)
-): %SetOperator {
+$Interval(a,b: %Element($../Integers)): %SetOperator {
   notation = $Enumeration(items = [
     a,
     $BottomEllipsis,

@@ -1,9 +1,6 @@
 %../../../../../logics/hlm%
 
-$subgroup(
-  𝐆: %Element($../Groups),
-  𝐇: %Element(%previous)
-): %Predicate {
+$subgroup(𝐆,𝐇: %Element($../Groups)): %Predicate {
   notation = $SubObjectRelation(operands = [𝐆, 𝐇]),
   definition = [
     %exists(

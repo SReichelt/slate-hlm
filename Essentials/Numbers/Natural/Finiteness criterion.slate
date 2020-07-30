@@ -13,10 +13,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
               S = {$"Natural numbers"},
               T = {$"Natural numbers"}
             ).relation(_s = {
-              #(
-                m: %Element($"Natural numbers"),
-                n: %Element(%previous)
-              ),
+              #(m,n: %Element($"Natural numbers")),
               {p = {$"less or equal"(
                 m = {m},
                 n = {n}
@@ -37,10 +34,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
               S = {$"Natural numbers"},
               T = {$"Natural numbers"}
             ).relation(_s = {
-              #(
-                m: %Element($"Natural numbers"),
-                n: %Element(%previous)
-              ),
+              #(m,n: %Element($"Natural numbers")),
               {p = {$"less or equal"(
                 m = {m},
                 n = {n}
@@ -81,10 +75,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                 S = {$"Natural numbers"},
                 T = {$"Natural numbers"}
               ).relation(_s = {
-                #(
-                  m: %Element($"Natural numbers"),
-                  n: %Element(%previous)
-                ),
+                #(m,n: %Element($"Natural numbers")),
                 {p = {$"less or equal"(
                   m = {m},
                   n = {n}
@@ -250,10 +241,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                 S = {$"Natural numbers"},
                 T = {$"Natural numbers"}
               ).relation(_s = {
-                #(
-                  m: %Element($"Natural numbers"),
-                  n: %Element(%previous)
-                ),
+                #(m,n: %Element($"Natural numbers")),
                 {p = {$"less or equal"(
                   m = {m},
                   n = {n}
@@ -271,93 +259,41 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
           $Subsets/"Segment (less or equal)"(n = {a})
         )
       ),
-      steps = #(_: %UseCases(caseProofs = [
-        {
-          parameters = #(_: %Constraint($../../Sets/empty(S = {M}))),
-          steps = #(
-            _1: %UseDef(result = %setEquals(
-              M,
-              $../../Sets/"Empty set"
-            )),
-            _: %ProveExists(
-              {a = {$number(value = 0)}},
-              proof = {
-                goal = %sub(
-                  M,
-                  $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
+      steps = #(_: %UseCases(caseProofs = [{
+        parameters = #(_: %Constraint($../../Sets/empty(S = {M}))),
+        steps = #(
+          _1: %UseDef(result = %setEquals(
+            M,
+            $../../Sets/"Empty set"
+          )),
+          _: %ProveExists(
+            {a = {$number(value = 0)}},
+            proof = {
+              goal = %sub(
+                M,
+                $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
+              ),
+              steps = #(
+                _: %UseTheorem(
+                  $../../Sets/"Empty set is subset of any set"(S = {$Subsets/"Segment (less or equal)"(n = {$number(value = 0)})}),
+                  %sub(
+                    $../../Sets/"Empty set",
+                    $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
+                  )
                 ),
-                steps = #(
-                  _: %UseTheorem(
-                    $../../Sets/"Empty set is subset of any set"(S = {$Subsets/"Segment (less or equal)"(n = {$number(value = 0)})}),
-                    %sub(
-                      $../../Sets/"Empty set",
-                      $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
-                    )
-                  ),
-                  _: %Substitute(
-                    #(_: %Consider(_1)),
-                    0,
-                    %sub(
-                      M,
-                      $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
-                    )
+                _: %Substitute(
+                  #(_: %Consider(_1)),
+                  0,
+                  %sub(
+                    M,
+                    $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
                   )
                 )
-              }
-            )
-          )
-        },
-        {
-          parameters = #(@: %Constraint(%exists(
-            #(m: %Element(M)),
-            formula = %forall(
-              #(n: %Element(M)),
-              $"less or equal"(
-                m = {n},
-                n = {m}
               )
-            )
-          ))),
-          steps = #(
-            _2: %UseExists(#(m: %Element(M))),
-            _: %ProveExists(
-              {a = {m}},
-              proof = {
-                goal = %sub(
-                  M,
-                  $Subsets/"Segment (less or equal)"(n = {m})
-                ),
-                steps = #(_: %ProveDef(proof = {
-                  goal = %forall(
-                    #(x: %Element(M)),
-                    %in(
-                      x,
-                      $Subsets/"Segment (less or equal)"(n = {m})
-                    )
-                  ),
-                  steps = #(_: %ProveForAll({
-                    parameters = #(x: %Element(M)),
-                    goal = %in(
-                      x,
-                      $Subsets/"Segment (less or equal)"(n = {m})
-                    ),
-                    steps = #(_: %ProveDef(proof = {
-                      goal = $"less or equal"(
-                        m = {x},
-                        n = {m}
-                      ),
-                      steps = #(
-                        _: %Consider(_2),
-                        _: %UseForAll({n = {x}})
-                      )
-                    }))
-                  }))
-                }))
-              }
-            )
+            }
           )
-        }
-      ]))
+        )
+      }]))
     },
     {
       from = 4,

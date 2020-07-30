@@ -5,8 +5,7 @@ $submodule(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Left modules"(𝐑 = {𝐑})),
-  𝐍: %Element(%previous)
+  𝐌,𝐍: %Element($../"Left modules"(𝐑 = {𝐑}))
 ): %Predicate {
   notation = $SubObjectRelation(operands = [𝐌, 𝐍]),
   definition = [

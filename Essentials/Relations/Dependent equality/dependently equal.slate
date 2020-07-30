@@ -13,12 +13,8 @@ $"dependently equal"(
       {S = {S[i = {i}]}}
     }
   )),
-  a: %Element(
+  a,b: %Element(
     I,
-    auto = %true
-  ),
-  b: %Element(
-    %previous,
     auto = %true
   ),
   s: %Element(S[i = {a}]),
@@ -42,8 +38,7 @@ $"dependently equal"(
       parameters = #(
         _j: %Binder(
           #(
-            j: %Element(I),
-            k: %Element(%previous),
+            j,k: %Element(I),
             _1: %Constraint(%equals(j, k))
           ),
           #(≡: %Element($../Relations(

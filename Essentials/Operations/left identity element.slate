@@ -6,8 +6,7 @@
  *             * https://ncatlab.org/nlab/show/identity+element
  */
 $"left identity element"(
-  X: %Set(auto = %true),
-  Y: %Set(auto = %true),
+  X,Y: %Set(auto = %true),
   ∗: %Element($Operations(
     X = {X},
     Y = {Y},

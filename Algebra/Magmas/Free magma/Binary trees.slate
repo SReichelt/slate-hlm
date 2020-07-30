@@ -18,30 +18,21 @@ $"Binary trees"(S: %Set(
     ),
     equalityDefinition = {
       leftParameters = #(s: %Element(S)),
-      rightParameters = #("s'": %Element(%previous)),
+      rightParameters = #("s'": %Element(S)),
       definition = [%equals(s, "s'")],
       isomorphic = %true
     }
   }
 
-  $join(
-    a: %Element($"Binary trees"(S = {S})),
-    b: %Element(%previous)
-  ): %Constructor {
+  $join(a,b: %Element($"Binary trees"(S = {S}))): %Constructor {
     notation = $Operator(
       symbol = '^',
       operands = [a, b],
       space = ''
     ),
     equalityDefinition = {
-      leftParameters = #(
-        a: %Element($"Binary trees"(S = {S})),
-        b: %Element(%previous)
-      ),
-      rightParameters = #(
-        "a'": %Element(%previous),
-        "b'": %Element(%previous)
-      ),
+      leftParameters = #(a,b: %Element($"Binary trees"(S = {S}))),
+      rightParameters = #("a'","b'": %Element($"Binary trees"(S = {S}))),
       definition = [%and(
         %equals(a, "a'"),
         %equals(b, "b'")

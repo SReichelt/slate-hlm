@@ -4,10 +4,7 @@
  * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.sub
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.has_sub
  */
-$difference(
-  a: %Element($Integers),
-  b: %Element(%previous)
-): %ExplicitOperator {
+$difference(a,b: %Element($Integers)): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),
   definition = [
     %structuralCases(
@@ -15,19 +12,13 @@ $difference(
       $Integers,
       [{
         constructor = $Integers.difference,
-        parameters = #(
-          n_b: %Element($../Natural/"Natural numbers"),
-          m_b: %Element(%previous)
-        ),
+        parameters = #(n_b,m_b: %Element($../Natural/"Natural numbers")),
         value = %structuralCases(
           a,
           $Integers,
           [{
             constructor = $Integers.difference,
-            parameters = #(
-              n_a: %Element($../Natural/"Natural numbers"),
-              m_a: %Element(%previous)
-            ),
+            parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),
             value = $Integers.difference(
               n = {$../Natural/sum(
                 m = {n_a},

@@ -1,9 +1,6 @@
 %../../../../../logics/hlm%
 
-$subring(
-  𝐑: %Element($../Rings),
-  𝐒: %Element(%previous)
-): %Predicate {
+$subring(𝐑,𝐒: %Element($../Rings)): %Predicate {
   notation = $SubObjectRelation(operands = [𝐑, 𝐒]),
   definition = [
     %exists(

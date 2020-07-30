@@ -6,10 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Sum_of_Cardinals
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.add_def
  */
-$sum(
-  κ: %Element($"Cardinal numbers"),
-  μ: %Element(%previous)
-): %ExplicitOperator {
+$sum(κ,μ: %Element($"Cardinal numbers")): %ExplicitOperator {
   notation = $AdditionOperator(operands = [κ, μ]),
   definition = [%structuralCases(
     μ,

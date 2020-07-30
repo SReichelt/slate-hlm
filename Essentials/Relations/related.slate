@@ -1,8 +1,7 @@
 %../../../../logics/hlm%
 
 $related(
-  S: %Set(auto = %true),
-  T: %Set(auto = %true),
+  S,T: %Set(auto = %true),
   ≺: %Element($Relations(
     S = {S},
     T = {T}

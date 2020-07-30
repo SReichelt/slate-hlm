@@ -8,8 +8,7 @@ $before(
     $"Ordinal numbers",
     auto = %true
   ),
-  a: %Element($Carrier(α = {α})),
-  b: %Element(%previous)
+  a,b: %Element($Carrier(α = {α}))
 ): %Predicate {
   notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [%structural(

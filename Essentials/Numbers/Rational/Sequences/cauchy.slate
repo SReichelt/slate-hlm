@@ -26,10 +26,7 @@ $cauchy(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Ration
         %exists(
           #(n: %Element($../../Natural/"Natural numbers")),
           formula = %forall(
-            #(
-              l: %Element($../../Natural/Subsets/"Segment (greater or equal)"(n = {n})),
-              m: %Element(%previous)
-            ),
+            #(l,m: %Element($../../Natural/Subsets/"Segment (greater or equal)"(n = {n}))),
             $../less(
               a = {$../absolute(a = {$../difference(
                 a = {a[n = {l}]},

@@ -8,8 +8,7 @@ $product(
     $Semirings,
     auto = %true
   ),
-  a: %Element($Carrier(𝐑 = {𝐑})),
-  b: %Element(%previous)
+  a,b: %Element($Carrier(𝐑 = {𝐑}))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [a, b]),
   definition = [%structuralCases(
