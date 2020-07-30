@@ -10,7 +10,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/rel.html#rel
  */
 $Relations(S,T: %Set(auto = %true)): %Construction {
-  $relation(_s: %Binder(
+  $relation(_1: %Binder(
     #(
       s: %Element(S),
       t: %Element(T)
@@ -37,14 +37,14 @@ $Relations(S,T: %Set(auto = %true)): %Construction {
       abbreviation = relation
     }],
     equalityDefinition = {
-      leftParameters = #(_s: %Binder(
+      leftParameters = #(_1: %Binder(
         #(
           s: %Element(S),
           t: %Element(T)
         ),
         #(p: %Prop)
       )),
-      rightParameters = #(_s: %Binder(
+      rightParameters = #(_1: %Binder(
         #(
           s: %Element(S),
           t: %Element(T)
@@ -80,7 +80,7 @@ $Relations(S,T: %Set(auto = %true)): %Construction {
     target = $Relations(
         S = {S},
         T = {T}
-      ).relation(_s = {
+      ).relation(_1 = {
         #(
           s: %Element(S),
           t: %Element(T)

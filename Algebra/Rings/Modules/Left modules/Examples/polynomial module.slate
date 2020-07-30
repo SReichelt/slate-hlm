@@ -32,7 +32,7 @@ $"polynomial module"(
             𝐑 = {𝐑},
             X = {X}
           )}
-        ).operation(_x = {
+        ).operation(_1 = {
           #(p,q: %Element($../../../Polynomials/Polynomials(
             𝐑 = {𝐑},
             X = {X}
@@ -78,7 +78,7 @@ $"polynomial module"(
             𝐑 = {𝐑},
             X = {X}
           )}
-        ).operation(_x = {
+        ).operation(_1 = {
           #(
             a: %Element($../../../Carrier(𝐑 = {𝐑})),
             p: %Element($../../../Polynomials/Polynomials(

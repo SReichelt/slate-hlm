@@ -14,7 +14,7 @@ $"iterated product": %ExplicitOperator {
           X = {$../"Real numbers"},
           Y = {$../"Real numbers"},
           Z = {$../"Real numbers"}
-        ).operation(_x = {
+        ).operation(_1 = {
           #(a,b: %Element($../"Real numbers")),
           {z = {$../product(
             a = {a},

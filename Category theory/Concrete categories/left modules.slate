@@ -54,7 +54,7 @@ $"left modules"(
               𝐌 = {𝐃},
               𝐍 = {𝐅}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               ψ: %Element($../../Algebra/Rings/Modules/"Left modules"/Homomorphisms/Homomorphisms(
                 𝐑 = {𝐑},

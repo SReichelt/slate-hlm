@@ -14,7 +14,7 @@ $"quotient group"(
     𝐆 = {𝐆},
     S = {S}
   )),
-  ∼: %Def($../../../Essentials/Relations/Endorelations(S = {$../Carrier(𝐆 = {𝐆})}).relation(_s = {
+  ∼: %Def($../../../Essentials/Relations/Endorelations(S = {$../Carrier(𝐆 = {𝐆})}).relation(_1 = {
       #(g,h: %Element($../Carrier(𝐆 = {𝐆}))),
       {p = {%exists(
         #(s: %Element(S)),

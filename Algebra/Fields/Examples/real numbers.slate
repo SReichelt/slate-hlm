@@ -11,7 +11,7 @@ $"real numbers": %ExplicitOperator {
         X = {$../../../Essentials/Numbers/Real/"Real numbers"},
         Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
         Z = {$../../../Essentials/Numbers/Real/"Real numbers"}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
         {z = {$../../../Essentials/Numbers/Real/sum(
           a = {a},
@@ -30,7 +30,7 @@ $"real numbers": %ExplicitOperator {
         X = {$../../../Essentials/Numbers/Real/"Real numbers"},
         Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
         Z = {$../../../Essentials/Numbers/Real/"Real numbers"}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
         {z = {$../../../Essentials/Numbers/Real/product(
           a = {a},

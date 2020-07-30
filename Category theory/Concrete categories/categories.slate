@@ -55,7 +55,7 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
               𝓒 = {𝓓},
               𝓓 = {𝓕}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               G: %Element($../Functors/Functors(
                 u = {u},

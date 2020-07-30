@@ -13,7 +13,7 @@ $"Sum is commutative": %StandardTheorem {
         X = {$"Natural numbers"},
         Y = {$"Natural numbers"},
         Z = {$"Natural numbers"}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(m,n: %Element($"Natural numbers")),
         {z = {$sum(
           m = {m},

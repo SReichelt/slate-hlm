@@ -36,7 +36,7 @@ $ordinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Ex
               α = {𝐃},
               β = {𝐅}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               ψ: %Element($../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
                 α = {𝐄},

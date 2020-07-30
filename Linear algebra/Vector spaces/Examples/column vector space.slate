@@ -33,7 +33,7 @@ $"column vector space"(
               𝐑 = {𝐅},
               n = {n}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(v,w: %Element($../../../Algebra/Rings/Matrices/Vectors(
               𝐑 = {𝐅},
               n = {n}
@@ -82,7 +82,7 @@ $"column vector space"(
               𝐑 = {𝐅},
               n = {n}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               a: %Element($../../../Algebra/Rings/Carrier(𝐑 = {𝐅})),
               v: %Element($../../../Algebra/Rings/Matrices/Vectors(

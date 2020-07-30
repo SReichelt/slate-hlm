@@ -8,7 +8,7 @@ $"Product is commutative": %StandardTheorem {
         X = {$"Complex numbers"},
         Y = {$"Complex numbers"},
         Z = {$"Complex numbers"}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(a,b: %Element($"Complex numbers")),
         {z = {$product(
           a = {a},

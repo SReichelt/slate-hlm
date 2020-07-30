@@ -39,7 +39,7 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
               𝐌 = {𝐃},
               𝐍 = {𝐅}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               ψ: %Element($../../Algebra/Monoids/Homomorphisms/Homomorphisms(
                 𝐌 = {𝐄},

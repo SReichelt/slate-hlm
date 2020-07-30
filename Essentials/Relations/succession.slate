@@ -26,7 +26,7 @@ $succession(
   definition = [$Endorelations(S = {$../Sets/"Disjoint union"(
       S = {S},
       T = {T}
-    )}).relation(_s = {
+    )}).relation(_1 = {
       #(a,b: %Element($../Sets/"Disjoint union"(
         S = {S},
         T = {T}

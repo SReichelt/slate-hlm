@@ -36,7 +36,7 @@ $"polynomial ring"(
           𝐑 = {𝐑},
           X = {X}
         )}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(p,q: %Element($Polynomials(
           𝐑 = {𝐑},
           X = {X}
@@ -85,7 +85,7 @@ $"polynomial ring"(
           𝐑 = {𝐑},
           X = {X}
         )}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(p,q: %Element($Polynomials(
           𝐑 = {𝐑},
           X = {X}

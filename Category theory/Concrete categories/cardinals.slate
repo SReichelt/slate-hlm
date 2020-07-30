@@ -41,7 +41,7 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
               κ = {𝐃},
               μ = {𝐅}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
                 κ = {𝐄},

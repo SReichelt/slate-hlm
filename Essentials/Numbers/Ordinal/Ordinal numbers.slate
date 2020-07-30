@@ -65,7 +65,7 @@ $"Ordinal numbers": %Construction {
         ≺ = {$../../Relations/Relations(
             S = {$../Natural/"Natural numbers"},
             T = {$../Natural/"Natural numbers"}
-          ).relation(_s = {
+          ).relation(_1 = {
             #(m,n: %Element($../Natural/"Natural numbers")),
             {p = {$../Natural/"less or equal"(
               m = {m},

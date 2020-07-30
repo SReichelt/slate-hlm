@@ -14,7 +14,7 @@ $"iterated sum": %ExplicitOperator {
           X = {$../"Rational numbers"},
           Y = {$../"Rational numbers"},
           Z = {$../"Rational numbers"}
-        ).operation(_x = {
+        ).operation(_1 = {
           #(a,b: %Element($../"Rational numbers")),
           {z = {$../sum(
             a = {a},

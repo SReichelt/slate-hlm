@@ -29,7 +29,7 @@ $"lexicographical order"(
   definition = [$Endorelations(S = {$../Sets/"Cartesian product"(
       S = {S},
       T = {T}
-    )}).relation(_s = {
+    )}).relation(_1 = {
       #(a,b: %Element($../Sets/"Cartesian product"(
         S = {S},
         T = {T}

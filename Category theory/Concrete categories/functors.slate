@@ -94,7 +94,7 @@ $functors(
               F = {D},
               G = {F}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               ε: %Element($../"Natural transformations"/"Natural transformations"(
                 u = {u},

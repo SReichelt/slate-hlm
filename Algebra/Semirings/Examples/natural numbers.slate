@@ -13,7 +13,7 @@ $"natural numbers": %ExplicitOperator {
         X = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Y = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Z = {$../../../Essentials/Numbers/Natural/"Natural numbers"}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
         {z = {$../../../Essentials/Numbers/Natural/sum(
           m = {m},
@@ -25,7 +25,7 @@ $"natural numbers": %ExplicitOperator {
         X = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Y = {$../../../Essentials/Numbers/Natural/"Natural numbers"},
         Z = {$../../../Essentials/Numbers/Natural/"Natural numbers"}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
         {z = {$../../../Essentials/Numbers/Natural/product(
           m = {m},

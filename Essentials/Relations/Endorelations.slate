@@ -9,7 +9,7 @@
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Relation
  */
 $Endorelations(S: %Set(auto = %true)): %Construction {
-  $relation(_s: %Binder(
+  $relation(_1: %Binder(
     #(s,t: %Element(S)),
     #(p: %Prop)
   )): %Constructor {
@@ -24,11 +24,11 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       ])
     ),
     equalityDefinition = {
-      leftParameters = #(_s: %Binder(
+      leftParameters = #(_1: %Binder(
         #(s,t: %Element(S)),
         #(p: %Prop)
       )),
-      rightParameters = #(_s: %Binder(
+      rightParameters = #(_2: %Binder(
         #(s,t: %Element(S)),
         #(q: %Prop)
       )),
@@ -55,7 +55,7 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       S = {S},
       T = {S}
     ))),
-    target = $Endorelations(S = {S}).relation(_s = {
+    target = $Endorelations(S = {S}).relation(_1 = {
         #(s,t: %Element(S)),
         {p = {$related(
           S = {S},

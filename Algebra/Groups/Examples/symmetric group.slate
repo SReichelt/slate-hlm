@@ -28,7 +28,7 @@ $"symmetric group"(X: %Set): %ExplicitOperator {
           X = {X},
           Y = {X}
         )}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(g,f: %Element($../../../Essentials/Functions/Bijections(
           X = {X},
           Y = {X}

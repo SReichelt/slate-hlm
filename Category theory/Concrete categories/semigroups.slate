@@ -36,7 +36,7 @@ $semigroups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
               𝐌 = {𝐃},
               𝐍 = {𝐅}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               ψ: %Element($../../Algebra/Magmas/Homomorphisms/Homomorphisms(
                 𝐌 = {𝐄},

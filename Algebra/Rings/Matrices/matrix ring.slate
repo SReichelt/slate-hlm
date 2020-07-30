@@ -39,7 +39,7 @@ $"matrix ring"(
           m = {n},
           n = {n}
         )}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(A,B: %Element($Matrices(
           𝐑 = {𝐑},
           m = {n},
@@ -98,7 +98,7 @@ $"matrix ring"(
           m = {n},
           n = {n}
         )}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(A,B: %Element($Matrices(
           𝐑 = {𝐑},
           m = {n},

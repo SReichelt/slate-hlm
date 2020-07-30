@@ -10,7 +10,7 @@ $"Product is associative": %StandardTheorem {
         X = {$Integers},
         Y = {$Integers},
         Z = {$Integers}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(a,b: %Element($Integers)),
         {z = {$product(
           a = {a},

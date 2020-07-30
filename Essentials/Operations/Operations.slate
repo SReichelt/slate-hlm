@@ -4,7 +4,7 @@
  * @references * https://proofwiki.org/wiki/Definition:Operation/Binary_Operation
  */
 $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
-  $operation(_x: %Binder(
+  $operation(_1: %Binder(
     #(
       x: %Element(X),
       y: %Element(Y)
@@ -46,14 +46,14 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
       )
     },
     equalityDefinition = {
-      leftParameters = #(_x: %Binder(
+      leftParameters = #(_1: %Binder(
         #(
           x: %Element(X),
           y: %Element(Y)
         ),
         #(z: %Element(Z))
       )),
-      rightParameters = #(_x: %Binder(
+      rightParameters = #(_2: %Binder(
         #(
           x: %Element(X),
           y: %Element(Y)
@@ -103,7 +103,7 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
         X = {X},
         Y = {Y},
         Z = {Z}
-      ).operation(_x = {
+      ).operation(_1 = {
         #(
           x: %Element(X),
           y: %Element(Y)

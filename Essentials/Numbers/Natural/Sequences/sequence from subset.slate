@@ -22,7 +22,7 @@ $"sequence from subset"(
         ≺ = {$../../../Relations/Relations(
             S = {$../"Natural numbers"},
             T = {$../"Natural numbers"}
-          ).relation(_s = {
+          ).relation(_1 = {
             #(m,n: %Element($../"Natural numbers")),
             {p = {$../"less or equal"(
               m = {m},

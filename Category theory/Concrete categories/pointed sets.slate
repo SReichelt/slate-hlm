@@ -40,7 +40,7 @@ $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
               𝐒 = {𝐃},
               𝐓 = {𝐅}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               ψ: %Element($../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
                 𝐒 = {𝐄},

@@ -53,7 +53,7 @@ $"right modules"(
               𝐌 = {𝐃},
               𝐍 = {𝐅}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               ψ: %Element($../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
                 𝐑 = {𝐑},

@@ -41,7 +41,7 @@ $groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
               𝐆 = {𝐃},
               𝐇 = {𝐅}
             )}
-          ).operation(_x = {
+          ).operation(_1 = {
             #(
               ψ: %Element($../../Algebra/Groups/Homomorphisms/Homomorphisms(
                 𝐆 = {𝐄},

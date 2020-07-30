@@ -22,7 +22,7 @@ $converse(
   definition = [$Relations(
       S = {T},
       T = {S}
-    ).relation(_s = {
+    ).relation(_1 = {
       #(
         t: %Element(T),
         s: %Element(S)

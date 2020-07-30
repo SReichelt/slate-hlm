@@ -33,7 +33,7 @@ $"matrix module"(
             m = {m},
             n = {n}
           )}
-        ).operation(_x = {
+        ).operation(_1 = {
           #(A,B: %Element($../../../Matrices/Matrices(
             𝐑 = {𝐑},
             m = {m},
@@ -88,7 +88,7 @@ $"matrix module"(
             m = {m},
             n = {n}
           )}
-        ).operation(_x = {
+        ).operation(_1 = {
           #(
             A: %Element($../../../Matrices/Matrices(
               𝐑 = {𝐑},
