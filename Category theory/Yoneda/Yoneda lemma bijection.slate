@@ -131,7 +131,7 @@ $"Yoneda lemma bijection"(
                 𝐀 = {𝐀}
               )},
               G = {F}
-            ).transformation(_𝐗 = {
+            ).transformation(_1 = {
               #(𝐗: %Element($../Objects(
                 u = {u},
                 𝓒 = {𝓒}

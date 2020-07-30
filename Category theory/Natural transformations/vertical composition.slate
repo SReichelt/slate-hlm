@@ -54,7 +54,7 @@ $"vertical composition"(
       𝓓 = {𝓓},
       F = {F},
       G = {H}
-    ).transformation(_𝐗 = {
+    ).transformation(_1 = {
       #(𝐗: %Element($../Objects(
         u = {u},
         𝓒 = {𝓒}

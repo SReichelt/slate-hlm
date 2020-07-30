@@ -31,15 +31,15 @@ $identity(
       constructor = $Categories.category,
       parameters = #(
         O: %Set,
-        _𝐀: %Binder(
+        _1: %Binder(
           #(𝐀,𝐁: %Element(O)),
           #(M: %Set)
         ),
-        _𝐂: %Binder(
+        _2: %Binder(
           #(𝐂: %Element(O)),
           #(i: %Element(M[𝐀 = {𝐂}, 𝐁 = {𝐂}]))
         ),
-        _𝐃: %Binder(
+        _3: %Binder(
           #(𝐃,𝐄,𝐅: %Element(O)),
           #(∘: %Element($../Essentials/Operations/Operations(
             X = {M[𝐀 = {𝐄}, 𝐁 = {𝐅}]},
@@ -47,7 +47,7 @@ $identity(
             Z = {M[𝐀 = {𝐃}, 𝐁 = {𝐅}]}
           )))
         ),
-        _1: %Constraint(%forall(
+        _4: %Constraint(%forall(
           #(
             𝐖,𝐗,𝐘,𝐙: %Element(O),
             f: %Element(M[𝐀 = {𝐖}, 𝐁 = {𝐗}]),
@@ -87,7 +87,7 @@ $identity(
             )
           )
         )),
-        _2: %Constraint(%forall(
+        _5: %Constraint(%forall(
           #(
             𝐗,𝐘: %Element(O),
             f: %Element(M[𝐀 = {𝐗}, 𝐁 = {𝐘}])
@@ -112,7 +112,7 @@ $identity(
             f
           )
         )),
-        _3: %Constraint(%forall(
+        _6: %Constraint(%forall(
           #(
             𝐗,𝐘: %Element(O),
             _4: %Constraint(%exists(

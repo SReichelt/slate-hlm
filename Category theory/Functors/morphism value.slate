@@ -46,7 +46,7 @@ $"morphism value"(
       [{
         constructor = $Functors.functor,
         parameters = #(
-          _𝐀: %Binder(
+          _1: %Binder(
             #(𝐀: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
@@ -56,7 +56,7 @@ $"morphism value"(
               𝓒 = {𝓓}
             )))
           ),
-          _𝐁: %Binder(
+          _2: %Binder(
             #(
               𝐁,𝐂: %Element($../Objects(
                 u = {u},
@@ -76,7 +76,7 @@ $"morphism value"(
               𝐘 = {𝐃[𝐀 = {𝐂}]}
             )))
           ),
-          _1: %Constraint(%forall(
+          _3: %Constraint(%forall(
             #(𝐀: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
@@ -94,7 +94,7 @@ $"morphism value"(
               )
             )
           )),
-          _2: %Constraint(%forall(
+          _4: %Constraint(%forall(
             #(
               𝐀,𝐁,𝐂: %Element($../Objects(
                 u = {u},

@@ -14,18 +14,18 @@ $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/"Pointed sets"/"Pointed sets"},
-      _𝐀 = {
+      _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
         {M = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
           𝐒 = {𝐀},
           𝐓 = {𝐁}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝐂: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
         {i = {$../../Algebra/"Pointed sets"/Homomorphisms/identity(𝐒 = {𝐂})}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(

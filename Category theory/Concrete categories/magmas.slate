@@ -12,18 +12,18 @@ $magmas(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Magmas/Magmas},
-      _𝐀 = {
+      _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Magmas/Magmas)),
         {M = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(
           𝐌 = {𝐀},
           𝐍 = {𝐁}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝐂: %Element($../../Algebra/Magmas/Magmas)),
         {i = {$../../Algebra/Magmas/Homomorphisms/identity(𝐌 = {𝐂})}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Magmas/Magmas)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Magmas/Homomorphisms/Homomorphisms(

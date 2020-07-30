@@ -15,18 +15,18 @@ $groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Groups/Groups},
-      _𝐀 = {
+      _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Groups/Groups)),
         {M = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(
           𝐆 = {𝐀},
           𝐇 = {𝐁}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝐂: %Element($../../Algebra/Groups/Groups)),
         {i = {$../../Algebra/Groups/Homomorphisms/identity(𝐆 = {𝐂})}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Groups/Groups)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Groups/Homomorphisms/Homomorphisms(

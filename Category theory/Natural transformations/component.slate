@@ -54,7 +54,7 @@ $component(
     ),
     [{
       constructor = $"Infranatural transformations".transformation,
-      parameters = #(_𝐘: %Binder(
+      parameters = #(_1: %Binder(
         #(𝐘: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}

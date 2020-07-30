@@ -13,18 +13,18 @@ $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expli
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Rings/Rings},
-      _𝐀 = {
+      _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Rings/Rings)),
         {M = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
           𝐑 = {𝐀},
           𝐒 = {𝐁}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝐂: %Element($../../Algebra/Rings/Rings)),
         {i = {$../../Algebra/Rings/Homomorphisms/identity(𝐑 = {𝐂})}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Rings/Rings)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(

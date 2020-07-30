@@ -44,7 +44,7 @@ $composition(
       𝓒 = {𝓒},
       𝓓 = {𝓔}
     ).functor(
-      _𝐗 = {
+      _1 = {
         #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
@@ -65,7 +65,7 @@ $composition(
           )}
         )}}
       },
-      _𝐀 = {
+      _2 = {
         #(
           𝐀,𝐁: %Element($../Objects(
             u = {u},

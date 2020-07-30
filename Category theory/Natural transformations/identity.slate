@@ -39,7 +39,7 @@ $identity(
         𝓓 = {𝓓},
         F = {F},
         G = {F}
-      ).transformation(_𝐗 = {
+      ).transformation(_1 = {
         #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
@@ -64,7 +64,7 @@ $identity(
         𝓓 = {𝓓},
         F = {F},
         G = {F}
-      ).transformation(_𝐗 = {
+      ).transformation(_1 = {
         #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}

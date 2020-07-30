@@ -32,7 +32,7 @@ $"hom-functor"(
       𝓒 = {𝓒},
       𝓓 = {$../"Concrete categories"/cardinals(u = {v})}
     ).functor(
-      _𝐗 = {
+      _1 = {
         #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
@@ -44,7 +44,7 @@ $"hom-functor"(
           𝐘 = {𝐗}
         )})}}
       },
-      _𝐀 = {
+      _2 = {
         #(
           𝐘,𝐙: %Element($../Objects(
             u = {u},

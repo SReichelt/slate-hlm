@@ -15,18 +15,18 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Essentials/Numbers/Cardinal/"Cardinal numbers"},
-      _𝐀 = {
+      _1 = {
         #(𝐀,𝐁: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
         {M = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
           κ = {𝐀},
           μ = {𝐁}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝐂: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
         {i = {$../../Essentials/Numbers/Cardinal/Homomorphisms/identity(κ = {𝐂})}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(

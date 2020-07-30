@@ -40,7 +40,7 @@ $"object value"(
       [{
         constructor = $Functors.functor,
         parameters = #(
-          _𝐀: %Binder(
+          _1: %Binder(
             #(𝐀: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
@@ -50,7 +50,7 @@ $"object value"(
               𝓒 = {𝓓}
             )))
           ),
-          _𝐁: %Binder(
+          _2: %Binder(
             #(
               𝐁,𝐂: %Element($../Objects(
                 u = {u},
@@ -70,7 +70,7 @@ $"object value"(
               𝐘 = {𝐘[𝐀 = {𝐂}]}
             )))
           ),
-          _1: %Constraint(%forall(
+          _3: %Constraint(%forall(
             #(𝐀: %Element($../Objects(
               u = {u},
               𝓒 = {𝓒}
@@ -88,7 +88,7 @@ $"object value"(
               )
             )
           )),
-          _2: %Constraint(%forall(
+          _4: %Constraint(%forall(
             #(
               𝐀,𝐁,𝐂: %Element($../Objects(
                 u = {u},

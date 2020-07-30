@@ -25,7 +25,7 @@ $"Infranatural transformations"(
     𝓓 = {𝓓}
   ))
 ): %Construction {
-  $transformation(_𝐗: %Binder(
+  $transformation(_1: %Binder(
     #(𝐗: %Element($../Objects(
       u = {u},
       𝓒 = {𝓒}
@@ -59,7 +59,7 @@ $"Infranatural transformations"(
       sub = $ElementRelation(operands = [𝐗, 𝓒])
     ),
     equalityDefinition = {
-      leftParameters = #(_𝐗: %Binder(
+      leftParameters = #(_1: %Binder(
         #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}
@@ -85,7 +85,7 @@ $"Infranatural transformations"(
           )}
         )))
       )),
-      rightParameters = #(_𝐗: %Binder(
+      rightParameters = #(_2: %Binder(
         #(𝐗: %Element($../Objects(
           u = {u},
           𝓒 = {𝓒}

@@ -23,7 +23,7 @@ $elements(
   ),
   definition = [$../Categories(u = {u}).category(
       O = {S},
-      _𝐀 = {
+      _1 = {
         #(a,b: %Element(S)),
         {M = {$../../Essentials/Sets/Intersection(
           U = {S},
@@ -31,11 +31,11 @@ $elements(
           T = {%enumeration(b)}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(c: %Element(S)),
         {i = {c}}
       },
-      _𝐃 = {
+      _3 = {
         #(d,e,f: %Element(S)),
         {∘ = {$../../Essentials/Functions/Functions(
             X = {$../../Essentials/Sets/"Cartesian product"(

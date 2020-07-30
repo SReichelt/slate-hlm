@@ -20,7 +20,7 @@ $"right modules"(
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Rings/Modules/"Right modules"/"Right modules"(𝐑 = {𝐑})},
-      _𝐀 = {
+      _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Rings/Modules/"Right modules"/"Right modules"(𝐑 = {𝐑}))),
         {M = {$../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(
           𝐑 = {𝐑},
@@ -28,14 +28,14 @@ $"right modules"(
           𝐍 = {𝐁}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝐂: %Element($../../Algebra/Rings/Modules/"Right modules"/"Right modules"(𝐑 = {𝐑}))),
         {i = {$../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/identity(
           𝐑 = {𝐑},
           𝐌 = {𝐂}
         )}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Rings/Modules/"Right modules"/"Right modules"(𝐑 = {𝐑}))),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Rings/Modules/"Right modules"/Homomorphisms/Homomorphisms(

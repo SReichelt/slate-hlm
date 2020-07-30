@@ -16,7 +16,7 @@ $Functors(
   𝓓: %Element($../Categories(u = {v}))
 ): %Construction {
   $functor(
-    _𝐗: %Binder(
+    _1: %Binder(
       #(𝐗: %Element($../Objects(
         u = {u},
         𝓒 = {𝓒}
@@ -26,7 +26,7 @@ $Functors(
         𝓒 = {𝓓}
       )))
     ),
-    _𝐀: %Binder(
+    _2: %Binder(
       #(
         𝐀,𝐁: %Element($../Objects(
           u = {u},
@@ -46,7 +46,7 @@ $Functors(
         𝐘 = {𝐘[𝐗 = {𝐁}]}
       )))
     ),
-    _1: %Constraint(%forall(
+    _3: %Constraint(%forall(
       #(𝐀: %Element($../Objects(
         u = {u},
         𝓒 = {𝓒}
@@ -64,7 +64,7 @@ $Functors(
         )
       )
     )),
-    _2: %Constraint(%forall(
+    _4: %Constraint(%forall(
       #(
         𝐀,𝐁,𝐂: %Element($../Objects(
           u = {u},
@@ -142,7 +142,7 @@ $Functors(
     },
     equalityDefinition = {
       leftParameters = #(
-        _𝐗: %Binder(
+        _1: %Binder(
           #(𝐗: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
@@ -152,7 +152,7 @@ $Functors(
             𝓒 = {𝓓}
           )))
         ),
-        _𝐀: %Binder(
+        _2: %Binder(
           #(
             𝐀,𝐁: %Element($../Objects(
               u = {u},
@@ -172,7 +172,7 @@ $Functors(
             𝐘 = {𝐘[𝐗 = {𝐁}]}
           )))
         ),
-        _1: %Constraint(%forall(
+        _3: %Constraint(%forall(
           #(𝐀: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
@@ -190,7 +190,7 @@ $Functors(
             )
           )
         )),
-        _2: %Constraint(%forall(
+        _4: %Constraint(%forall(
           #(
             𝐀,𝐁,𝐂: %Element($../Objects(
               u = {u},
@@ -232,7 +232,7 @@ $Functors(
         ))
       ),
       rightParameters = #(
-        _𝐗: %Binder(
+        _5: %Binder(
           #(𝐗: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
@@ -242,7 +242,7 @@ $Functors(
             𝓒 = {𝓓}
           )))
         ),
-        _𝐀: %Binder(
+        _6: %Binder(
           #(
             𝐀,𝐁: %Element($../Objects(
               u = {u},
@@ -262,7 +262,7 @@ $Functors(
             𝐘 = {"𝐘'"[𝐗 = {𝐁}]}
           )))
         ),
-        _1: %Constraint(%forall(
+        _7: %Constraint(%forall(
           #(𝐀: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}
@@ -280,7 +280,7 @@ $Functors(
             )
           )
         )),
-        _2: %Constraint(%forall(
+        _8: %Constraint(%forall(
           #(
             𝐀,𝐁,𝐂: %Element($../Objects(
               u = {u},
@@ -322,7 +322,7 @@ $Functors(
         ))
       ),
       definition = [%exists(
-        #(_𝐗: %Binder(
+        #(_9: %Binder(
           #(𝐗: %Element($../Objects(
             u = {u},
             𝓒 = {𝓒}

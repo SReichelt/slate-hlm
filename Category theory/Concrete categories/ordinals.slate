@@ -10,18 +10,18 @@ $ordinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Ex
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Essentials/Numbers/Ordinal/"Ordinal numbers"},
-      _𝐀 = {
+      _1 = {
         #(𝐀,𝐁: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
         {M = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(
           α = {𝐀},
           β = {𝐁}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝐂: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
         {i = {$../../Essentials/Numbers/Ordinal/Homomorphisms/identity(α = {𝐂})}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Essentials/Numbers/Ordinal/"Ordinal numbers")),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Essentials/Numbers/Ordinal/Homomorphisms/Homomorphisms(

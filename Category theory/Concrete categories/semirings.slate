@@ -10,18 +10,18 @@ $semirings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Semirings/Semirings},
-      _𝐀 = {
+      _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Semirings/Semirings)),
         {M = {$../../Algebra/Semirings/Homomorphisms/Homomorphisms(
           𝐑 = {𝐀},
           𝐒 = {𝐁}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝐂: %Element($../../Algebra/Semirings/Semirings)),
         {i = {$../../Algebra/Semirings/Homomorphisms/identity(𝐑 = {𝐂})}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Semirings/Semirings)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Semirings/Homomorphisms/Homomorphisms(

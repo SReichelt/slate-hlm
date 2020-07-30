@@ -13,18 +13,18 @@ $fields(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
   ),
   definition = [$../Categories(u = {u}).category(
       O = {$../../Algebra/Fields/Fields},
-      _𝐀 = {
+      _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Fields/Fields)),
         {M = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(
           𝐑 = {𝐀},
           𝐒 = {𝐁}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝐂: %Element($../../Algebra/Fields/Fields)),
         {i = {$../../Algebra/Rings/Homomorphisms/identity(𝐑 = {𝐂})}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Fields/Fields)),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../../Algebra/Rings/Homomorphisms/Homomorphisms(

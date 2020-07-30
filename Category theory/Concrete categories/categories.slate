@@ -18,7 +18,7 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
       n = {$../../Essentials/Numbers/Natural/number(value = 1)}
     )}).category(
       O = {$../Categories(u = {u})},
-      _𝐀 = {
+      _1 = {
         #(𝓐,𝓑: %Element($../Categories(u = {u}))),
         {M = {$../Functors/Functors(
           u = {u},
@@ -27,14 +27,14 @@ $categories(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
           𝓓 = {𝓑}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(𝓒: %Element($../Categories(u = {u}))),
         {i = {$../Functors/identity(
           u = {u},
           𝓒 = {𝓒}
         )}}
       },
-      _𝐃 = {
+      _3 = {
         #(𝓓,𝓔,𝓕: %Element($../Categories(u = {u}))),
         {∘ = {$../../Essentials/Operations/Operations(
             X = {$../Functors/Functors(

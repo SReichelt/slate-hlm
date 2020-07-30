@@ -31,7 +31,7 @@ $functors(
         𝓒 = {𝓒},
         𝓓 = {𝓓}
       )},
-      _𝐀 = {
+      _1 = {
         #(A,B: %Element($../Functors/Functors(
           u = {u},
           v = {v},
@@ -47,7 +47,7 @@ $functors(
           G = {B}
         )}}
       },
-      _𝐂 = {
+      _2 = {
         #(C: %Element($../Functors/Functors(
           u = {u},
           v = {v},
@@ -62,7 +62,7 @@ $functors(
           F = {C}
         )}}
       },
-      _𝐃 = {
+      _3 = {
         #(D,E,F: %Element($../Functors/Functors(
           u = {u},
           v = {v},
