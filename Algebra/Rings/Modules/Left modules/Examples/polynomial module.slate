@@ -3,7 +3,7 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Module_(mathematics)#Examples
  *             * https://proofwiki.org/wiki/Definition:Module_Structure_of_Polynomial_Ring
- *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial.html#polynomial.module
+ *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial/basic.html#polynomial.module
  */
 $"polynomial module"(
   𝐑: %Element($../../../Rings),

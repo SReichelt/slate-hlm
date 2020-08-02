@@ -10,7 +10,7 @@
  *             * https://proofwiki.org/wiki/Definition:Multiset
  *             * https://ncatlab.org/nlab/show/multiset
  *             * https://coq.inria.fr/library/Coq.Sets.Multiset.html
- *             * https://leanprover-community.github.io/mathlib_docs/data/multiset.html#multiset
+ *             * https://leanprover-community.github.io/mathlib_docs/data/multiset/basic.html#multiset
  */
 $Multisets(S: %Set): %Construction {
   $multiset(_1: %Binder(

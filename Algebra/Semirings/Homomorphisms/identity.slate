@@ -2,7 +2,7 @@
 
 /**
  * @references * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#IDphi
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring.html#ring_hom.id
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring/basic.html#ring_hom.id
  */
 $identity(𝐑: %Element(
   $../Semirings,

@@ -4,7 +4,7 @@
  * @references * https://mathworld.wolfram.com/Invertible.html
  *             * https://proofwiki.org/wiki/Definition:Invertible_Element
  *             * https://ncatlab.org/nlab/show/unit#units_in_monoids
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/is_unit.html#is_unit
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/units.html#is_unit
  */
 $invertible(
   𝐌: %Element(

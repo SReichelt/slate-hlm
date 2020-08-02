@@ -5,7 +5,7 @@
  *             * https://mathworld.wolfram.com/RealNumber.html
  *             * https://proofwiki.org/wiki/Definition:Real_Number
  *             * https://ncatlab.org/nlab/show/real+number
- *             * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal
+ *             * https://coq.inria.fr/library/Coq.Reals.Cauchy.ConstructiveCauchyReals.html#CReal
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real
  */
 $"Real numbers": %Construction {

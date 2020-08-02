@@ -2,7 +2,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Polynomial_ring#Polynomial_evaluation
- *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial.html#polynomial.eval
+ *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial/basic.html#polynomial.eval
  */
 $value(
   𝐑: %Element(

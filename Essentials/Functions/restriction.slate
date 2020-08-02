@@ -4,7 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Restriction_(mathematics)
  *             * https://proofwiki.org/wiki/Definition:Restriction/Mapping
  *             * https://ncatlab.org/nlab/show/restriction
- *             * https://leanprover-community.github.io/mathlib_docs/logic/function.html#function.restrict
+ *             * https://leanprover-community.github.io/mathlib_docs/data/subtype.html#subtype.restrict
  */
 $restriction(
   X: %Set(auto = %true),

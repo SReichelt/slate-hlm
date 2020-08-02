@@ -8,7 +8,7 @@
  * @references * https://en.wikipedia.org/wiki/Polynomial#Abstract_algebra
  *             * https://proofwiki.org/wiki/Definition:Polynomial_over_Ring/One_Variable
  *             * https://ncatlab.org/nlab/show/polynomial
- *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial.html#polynomial
+ *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial/basic.html#polynomial
  */
 $Polynomials(
   𝐑: %Element(

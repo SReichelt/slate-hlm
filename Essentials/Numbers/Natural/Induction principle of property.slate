@@ -5,7 +5,7 @@
  *
  * @references * https://en.wikipedia.org/wiki/Mathematical_induction
  *             * https://mathworld.wolfram.com/PrincipleofMathematicalInduction.html
- *             * https://proofwiki.org/wiki/Principle_of_Mathematical_Induction/Predicate
+ *             * https://proofwiki.org/wiki/Principle_of_Mathematical_Induction/Zero-Based
  */
 $"Induction principle of property"(
   p: %Element($../../Properties/Properties(S = {$"Natural numbers"})),

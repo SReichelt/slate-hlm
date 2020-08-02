@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal_opp
+ * @references * https://coq.inria.fr/library/Coq.Reals.Cauchy.ConstructiveCauchyReals.html#CReal_opp
  */
 $inverse(a: %Element($"Real numbers")): %ExplicitOperator {
   notation = $NegationOperator(operand = a),

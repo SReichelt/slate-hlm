@@ -5,7 +5,7 @@
  *             * https://mathworld.wolfram.com/Group.html
  *             * https://proofwiki.org/wiki/Definition:Group
  *             * https://ncatlab.org/nlab/show/group
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#group
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/basic.html#group
  */
 $Groups: %Construction {
   $group(

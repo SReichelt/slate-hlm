@@ -5,7 +5,7 @@
  *             * https://mathworld.wolfram.com/Module.html
  *             * https://proofwiki.org/wiki/Definition:Unitary_Module
  *             * https://ncatlab.org/nlab/show/module#ModulesOverARingInTermsOfStabilizedSlices
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#module
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/module/basic.html#module
  */
 $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
   $module(

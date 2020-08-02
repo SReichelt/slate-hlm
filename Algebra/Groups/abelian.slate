@@ -5,7 +5,7 @@
  *             * https://mathworld.wolfram.com/Abelian.html
  *             * https://proofwiki.org/wiki/Definition:Abelian_Group
  *             * https://ncatlab.org/nlab/show/abelian+group
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#comm_group
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/basic.html#comm_group
  */
 $abelian(𝐆: %Element($Groups)): %Predicate {
   notation = $Property(

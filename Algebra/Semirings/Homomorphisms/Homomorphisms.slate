@@ -5,7 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/homomorphism
  *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#semi_morph
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring.html#ring_hom
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring/basic.html#ring_hom
  */
 $Homomorphisms(𝐑,𝐒: %Element($../Semirings)): %SetOperator {
   notation = $Function(

@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyRealsMult.html#CReal_mult
+ * @references * https://coq.inria.fr/library/Coq.Reals.Cauchy.ConstructiveCauchyRealsMult.html#CReal_mult
  */
 $product(a,b: %Element($"Real numbers")): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [a, b]),

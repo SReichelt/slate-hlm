@@ -5,7 +5,7 @@
  *             * https://mathworld.wolfram.com/Monoid.html
  *             * https://proofwiki.org/wiki/Definition:Monoid
  *             * https://ncatlab.org/nlab/show/monoid
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#monoid
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/basic.html#monoid
  */
 $monoid(
   M: %Set,

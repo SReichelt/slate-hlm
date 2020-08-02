@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal_plus
+ * @references * https://coq.inria.fr/library/Coq.Reals.Cauchy.ConstructiveCauchyReals.html#CReal_plus
  */
 $sum(a,b: %Element($"Real numbers")): %ExplicitOperator {
   notation = $AdditionOperator(operands = [a, b]),

@@ -5,7 +5,7 @@
  *             * https://mathworld.wolfram.com/Submodule.html
  *             * https://proofwiki.org/wiki/Definition:Submodule
  *             * https://ncatlab.org/nlab/show/submodule
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#submodule
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/module/basic.html#submodule
  */
 $"submodule set"(
   𝐑: %Element(

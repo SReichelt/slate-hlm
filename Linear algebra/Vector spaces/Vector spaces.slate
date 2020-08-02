@@ -7,7 +7,7 @@
  *             * https://mathworld.wolfram.com/VectorSpace.html
  *             * https://proofwiki.org/wiki/Definition:Vector_Space
  *             * https://ncatlab.org/nlab/show/vector+space
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#vector_space
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/module/basic.html#vector_space
  */
 $"Vector spaces"(𝐅: %Element($../../Algebra/Fields/Fields)): %SetOperator {
   notation = $Function(

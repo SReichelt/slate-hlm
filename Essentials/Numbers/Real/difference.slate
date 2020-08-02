@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CReal_minus
+ * @references * https://coq.inria.fr/library/Coq.Reals.Cauchy.ConstructiveCauchyReals.html#CReal_minus
  */
 $difference(a,b: %Element($"Real numbers")): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),

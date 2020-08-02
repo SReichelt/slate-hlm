@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/ring.html#semiring.to_add_comm_monoid
+ * @references * https://leanprover-community.github.io/mathlib_docs/algebra/ring/basic.html#semiring.to_add_comm_monoid
  */
 $"additive monoid"(𝐑: %Element($Semirings)): %ExplicitOperator {
   notation = $Tuple(

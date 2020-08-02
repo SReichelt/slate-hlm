@@ -3,7 +3,7 @@
 /**
  * @remarks Structural induction on the natural numbers is a direct consequence of their definition as a construction. This set-theoretic form of the induction principle is provable from it.
  *
- * @references * https://proofwiki.org/wiki/Principle_of_Mathematical_Induction/Set
+ * @references * https://proofwiki.org/wiki/Principle_of_Mathematical_Induction/Well-Ordered_Set
  */
 $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
   conditions = [

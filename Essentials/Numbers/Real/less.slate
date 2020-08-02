@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://coq.inria.fr/library/Coq.Reals.ConstructiveCauchyReals.html#CRealLt
+ * @references * https://coq.inria.fr/library/Coq.Reals.Cauchy.ConstructiveCauchyReals.html#CRealLt
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.has_lt
  */
 $less(a,b: %Element($"Real numbers")): %Predicate {

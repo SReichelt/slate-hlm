@@ -5,7 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Rig#Also_defined_as
  *             * https://ncatlab.org/nlab/show/rig
  *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#semi_ring_theory
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/ring.html#semiring
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring/basic.html#semiring
  */
 $semiring(
   R: %Set,

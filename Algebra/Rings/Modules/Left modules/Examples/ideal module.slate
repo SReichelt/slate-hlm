@@ -3,7 +3,7 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Module_(mathematics)#Examples
  *             * https://proofwiki.org/wiki/Left_Ideal_is_Left_Module_over_Ring
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/module.html#ideal (defined as submodule)
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/module/basic.html#ideal (defined as submodule)
  */
 $"ideal module"(
   𝐑: %Element($../../../Rings),

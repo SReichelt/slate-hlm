@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/ring.html#ring.to_add_comm_group
+ * @references * https://leanprover-community.github.io/mathlib_docs/algebra/ring/basic.html#ring.to_add_comm_group
  */
 $"additive group"(𝐑: %Element($Rings)): %ExplicitOperator {
   notation = $Tuple(

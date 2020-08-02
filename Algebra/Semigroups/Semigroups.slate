@@ -5,7 +5,7 @@
  *             * https://mathworld.wolfram.com/Semigroup.html
  *             * https://proofwiki.org/wiki/Definition:Semigroup
  *             * https://ncatlab.org/nlab/show/semigroup
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/group.html#semigroup
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/basic.html#semigroup
  */
 $Semigroups: %SetOperator {
   notation = '𝓢𝓮𝓶𝓲𝓖𝓻𝓹',

@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/group_theory/submonoid.html#subtype.monoid
+ * @references * https://leanprover-community.github.io/mathlib_docs/group_theory/submonoid/basic.html#subtype.monoid
  */
 $"subset monoid"(
   𝐌: %Element($../Monoids),
