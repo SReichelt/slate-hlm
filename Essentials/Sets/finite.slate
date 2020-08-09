@@ -74,10 +74,12 @@ $finite(S: %Set): %Predicate {
         ))
       )),
       steps = #(
-        _: %Embed(
-          $../Numbers/Cardinal/"Cardinal numbers",
-          $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S}),
-          $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})})})
+        _: %State(
+          %equals(
+            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S}),
+            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {$../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})})})
+          ),
+          proof = {steps = #(_: %ProveDef)}
         ),
         _: %UseDef(result = %exists(#(r: %Element($../Functions/Bijections(
           X = {S},
@@ -150,10 +152,12 @@ $finite(S: %Set): %Predicate {
             }))}
           ),
           _1: %Substitute(
-            #(_: %Embed(
-              $../Numbers/Cardinal/"Cardinal numbers",
-              l,
-              $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {l})})
+            #(_: %State(
+              %equals(
+                l,
+                $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {l})})
+              ),
+              proof = {steps = #(_: %ProveDef)}
             )),
             1,
             %equals(
