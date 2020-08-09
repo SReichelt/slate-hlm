@@ -55,6 +55,12 @@ $"Ordinal numbers": %Construction {
   }
 
   notation = '𝓞𝓻𝓭',
+  definitionNotation = {
+    parameter = #(α: %Expr),
+    singularName = 'ordinal number',
+    pluralName = 'ordinal numbers',
+    nameOptional = %true
+  },
   embedding = {
     parameter = #(n: %Element($../Natural/"Natural numbers")),
     target = $"Ordinal numbers"."order type"(
