@@ -138,9 +138,8 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
               steps = #(_: %ProveDef(proof = {
                 goal = %not(%exists(#(c: %Element(M)))),
                 steps = #(_: %ProveNeg({
-                  parameters = #(_: %Constraint(%exists(#(c: %Element(M))))),
+                  parameters = #(c: %Element(M)),
                   steps = #(
-                    _: %UseExists(#(c: %Element(M))),
                     _: %Consider(f),
                     _: %UseDef(result = $../../Functions/bijective(
                       X = {$Subsets/"Segment (less)"(n = {l})},
@@ -298,13 +297,13 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
     {
       from = 4,
       to = 5,
-      parameters = #(@: %Constraint(%exists(
-        #(a: %Element($"Natural numbers")),
-        formula = %sub(
+      parameters = #(
+        a: %Element($"Natural numbers"),
+        _1: %Constraint(%sub(
           M,
           $Subsets/"Segment (less or equal)"(n = {a})
-        )
-      ))),
+        ))
+      ),
       goal = %exists(
         #(b: %Element($"Natural numbers")),
         formula = %sub(
@@ -313,8 +312,6 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         )
       ),
       steps = #(
-        _: %Consider(@),
-        _: %UseExists(#(a: %Element($"Natural numbers"))),
         _: %UnfoldDef(%sub(
           M,
           $Subsets/"Segment (less)"(n = {$"Natural numbers".successor(n = {a})})
@@ -325,16 +322,15 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
     {
       from = 5,
       to = 1,
-      parameters = #(@: %Constraint(%exists(
-        #(b: %Element($"Natural numbers")),
-        formula = %sub(
+      parameters = #(
+        b: %Element($"Natural numbers"),
+        _1: %Constraint(%sub(
           M,
           $Subsets/"Segment (less)"(n = {b})
-        )
-      ))),
+        ))
+      ),
       goal = $../../Sets/finite(S = {M}),
       steps = #(
-        _: %UseExists(#(b: %Element($"Natural numbers"))),
         _: %UseTheorem(
           $Subsets/"Initial segments are finite"(n = {b}),
           $../../Sets/finite(S = {$Subsets/"Segment (less)"(n = {b})})

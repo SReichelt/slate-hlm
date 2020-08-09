@@ -6,69 +6,63 @@ $"Induction lemma"(
   n: %Element($"Natural numbers")
 ): %StandardTheorem {
   claim = %in(n, M),
-  proofs = [{steps = #(_: %State(
-    %structural(
-      n,
-      $"Natural numbers",
-      [
-        {
-          constructor = $"Natural numbers".zero,
-          value = %in(n, M),
-          rewrite = %true
-        },
-        {
-          constructor = $"Natural numbers".successor,
-          parameters = #(x: %Element($"Natural numbers")),
-          value = %in(n, M),
-          rewrite = %true
-        }
-      ]
-    ),
-    proof = {steps = #(_: %ProveCases(caseProofs = [
+  proofs = [{steps = #(_: %ProveByInduction(
+    n,
+    $"Natural numbers",
+    [
       {
-        goal = %in(
-          $number(value = 0),
-          M
-        ),
-        steps = #(
-          _: %Consider(_1),
-          _: %UseDef(result = %in(
+        constructor = $"Natural numbers".zero,
+        value = {
+          goal = %in(
             $number(value = 0),
             M
-          ))
-        )
+          ),
+          steps = #(
+            _: %Consider(_1),
+            _: %UseDef(result = %in(
+              $number(value = 0),
+              M
+            ))
+          )
+        },
+        rewrite = %true
       },
       {
+        constructor = $"Natural numbers".successor,
         parameters = #(x: %Element($"Natural numbers")),
-        goal = %in(
-          $sum(
-            m = {x},
-            n = {$number(value = 1)}
-          ),
-          M
-        ),
-        steps = #(
-          _: %UseTheorem(
-            $"Induction lemma"(
-              M = {M},
-              n = {x}
+        value = {
+          parameters = #(x: %Element($"Natural numbers")),
+          goal = %in(
+            $sum(
+              m = {x},
+              n = {$number(value = 1)}
             ),
-            %in(x, M)
+            M
           ),
-          _: %Consider(_1),
-          _: %UseDef(result = %forall(
-            #(m: %Element(M)),
-            %in(
-              $sum(
-                m = {m},
-                n = {$number(value = 1)}
+          steps = #(
+            _: %UseTheorem(
+              $"Induction lemma"(
+                M = {M},
+                n = {x}
               ),
-              M
-            )
-          )),
-          _: %UseForAll({m = {x}})
-        )
+              %in(x, M)
+            ),
+            _: %Consider(_1),
+            _: %UseDef(result = %forall(
+              #(m: %Element(M)),
+              %in(
+                $sum(
+                  m = {m},
+                  n = {$number(value = 1)}
+                ),
+                M
+              )
+            )),
+            _: %UseForAll({m = {x}})
+          )
+        },
+        rewrite = %true
       }
-    ]))}
+    ]
   ))}]
 }

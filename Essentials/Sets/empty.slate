@@ -54,9 +54,8 @@ $empty(S: %Set): %Predicate {
       ))),
       goal = %not(%exists(#(x: %Element(S)))),
       steps = #(_: %ProveNeg({
-        parameters = #(_: %Constraint(%exists(#(x: %Element(S))))),
+        parameters = #(x: %Element(S)),
         steps = #(
-          _: %UseExists(#(x: %Element(S))),
           _: %Consider(@),
           _: %UseDef(result = %forall(
             #(s: %Element(S)),
