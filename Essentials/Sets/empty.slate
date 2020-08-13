@@ -77,35 +77,43 @@ $empty(S: %Set): %Predicate {
         S,
         $"Empty set"
       ),
-      steps = #(_: %ProveSetEquals(
-        subsetProof = {steps = #(_: %ProveDef(proof = {
-          goal = %forall(
-            #(a: %Element(S)),
-            %in(
-              a,
-              $"Empty set"
-            )
-          ),
-          steps = #(_: %ProveForAll({
-            parameters = #(a: %Element(S)),
-            goal = %in(
-              a,
-              $"Empty set"
+      steps = #(_: %ProveEquivalence([
+        {
+          from = 1,
+          to = 2,
+          steps = #(_: %ProveDef(proof = {
+            goal = %forall(
+              #(a: %Element(S)),
+              %in(
+                a,
+                $"Empty set"
+              )
             ),
-            steps = #(_: %State(
-              %exists(#(x: %Element(S))),
-              proof = {steps = #(_: %ProveExists({x = {a}}))}
-            ))
+            steps = #(_: %ProveForAll({
+              parameters = #(a: %Element(S)),
+              goal = %in(
+                a,
+                $"Empty set"
+              ),
+              steps = #(_: %State(
+                %exists(#(x: %Element(S))),
+                proof = {steps = #(_: %ProveExists({x = {a}}))}
+              ))
+            }))
           }))
-        }))},
-        supersetProof = {steps = #(_: %UseTheorem(
-          $"Empty set is subset of any set"(S = {S}),
-          %sub(
-            $"Empty set",
-            S
-          )
-        ))}
-      ))
+        },
+        {
+          from = 2,
+          to = 1,
+          steps = #(_: %UseTheorem(
+            $"Empty set is subset of any set"(S = {S}),
+            %sub(
+              $"Empty set",
+              S
+            )
+          ))
+        }
+      ]))
     }
   ]
 }

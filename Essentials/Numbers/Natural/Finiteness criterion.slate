@@ -312,11 +312,18 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         )
       ),
       steps = #(
+        _: %Consider(_1),
         _: %UnfoldDef(%sub(
           M,
-          $Subsets/"Segment (less)"(n = {$"Natural numbers".successor(n = {a})})
+          $Subsets/"Segment (less)"(n = {$sum(
+            m = {a},
+            n = {$number(value = 1)}
+          )})
         )),
-        _: %ProveExists({b = {$"Natural numbers".successor(n = {a})}})
+        _: %ProveExists({b = {$sum(
+          m = {a},
+          n = {$number(value = 1)}
+        )}})
       )
     },
     {

@@ -17,10 +17,14 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
     from = 1,
     to = 2,
     parameters = #(@: %Constraint($inductive(M = {M}))),
-    steps = #(_: %ProveSetEquals(
-      subsetProof = {steps = #(
-      )},
-      supersetProof = {steps = #(_: %ProveDef(proof = {
+    goal = %setEquals(
+      M,
+      $"Natural numbers"
+    ),
+    steps = #(_: %ProveEquivalence([{
+      from = 2,
+      to = 1,
+      steps = #(_: %ProveDef(proof = {
         goal = %forall(
           #(n: %Element($"Natural numbers")),
           %in(n, M)
@@ -36,7 +40,7 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
             %in(n, M)
           ))
         }))
-      }))}
-    ))
+      }))
+    }]))
   }]
 }

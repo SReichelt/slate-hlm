@@ -1,22 +1,23 @@
 %../../../../../../logics/hlm%
 
 $"Iterated sum is greater or equal to each element"(
-  n: %Element($../"Natural numbers"),
-  _1: %Binder(
-    #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
+  I: %Set,
+  _1: %Constraint($../../../Sets/finite(S = {I})),
+  _2: %Binder(
+    #(i: %Element(I)),
     #(a: %Element($../"Natural numbers"))
   ),
-  j: %Element($../Subsets/"Segment (less)"(n = {n}))
+  j: %Element(I)
 ): %StandardTheorem {
   claim = $../"less or equal"(
     m = {a[i = {j}]},
-    n = {$../../../Operations/"Iterated operations"/"indexed by natural number"(
+    n = {$../../../Operations/"Iterated operations"/"indexed by finite set"(
       X = {$../"Natural numbers"},
-      ⨂ = {$"iterated product"},
-      n = {n},
-      _1 = {
-        #(k: %Element($../Subsets/"Segment (less)"(n = {n}))),
-        {a = {a[i = {k}]}}
+      ⨂ = {$"iterated sum"},
+      I = {I},
+      _2 = {
+        #(i: %Element(I)),
+        {a = {a[i = {i}]}}
       }
     )}
   )

@@ -1,30 +1,31 @@
 %../../../../../../logics/hlm%
 
 $"Iterated product of positive numbers grows"(
-  n: %Element($../"Natural numbers"),
-  _1: %Binder(
-    #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
+  I: %Set,
+  _1: %Constraint($../../../Sets/finite(S = {I})),
+  _2: %Binder(
+    #(i: %Element(I)),
     #(a: %Element($../Subsets/"Positive numbers"))
   ),
-  m: %Element($../Subsets/"Segment (less or equal)"(n = {n}))
+  J: %Subset(I)
 ): %StandardTheorem {
   claim = $../"less or equal"(
-    m = {$../../../Operations/"Iterated operations"/"indexed by natural number"(
+    m = {$../../../Operations/"Iterated operations"/"indexed by finite set"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated product"},
-      n = {m},
-      _1 = {
-        #(j: %Element($../Subsets/"Segment (less)"(n = {m}))),
-        {a = {a[i = {j}]}}
+      I = {J},
+      _2 = {
+        #(i: %Element(J)),
+        {a = {a[i = {i}]}}
       }
     )},
-    n = {$../../../Operations/"Iterated operations"/"indexed by natural number"(
+    n = {$../../../Operations/"Iterated operations"/"indexed by finite set"(
       X = {$../"Natural numbers"},
       ⨂ = {$"iterated product"},
-      n = {n},
-      _1 = {
-        #(k: %Element($../Subsets/"Segment (less)"(n = {n}))),
-        {a = {a[i = {k}]}}
+      I = {I},
+      _2 = {
+        #(i: %Element(I)),
+        {a = {a[i = {i}]}}
       }
     )}
   )

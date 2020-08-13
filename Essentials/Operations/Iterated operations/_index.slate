@@ -10,6 +10,9 @@ $"Iterated operations": %Section {
     %item($"Iterated operation indexed by natural number is distributive"),
     %item($"indexed by integer"),
     %item($"indexed by finite set"),
+    %item($"Operation on empty set"),
+    %item($"Natural number equalities"),
+    %item($"Integer equalities"),
     %item($"indexed by set with finite support"),
     %item($"indexed by finite multiset")
   ]

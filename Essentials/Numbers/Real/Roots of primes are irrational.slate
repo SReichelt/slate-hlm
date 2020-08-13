@@ -177,7 +177,7 @@ $"Roots of primes are irrational"(
           n
         )
       )),
-      _: %UseExists(#(m: %Element($../Natural/Subsets/"Positive numbers"))),
+      _4: %UseExists(#(m: %Element($../Natural/Subsets/"Positive numbers"))),
       _: %Consider(m),
       _: %UseDef(result = %exists(
         #(l: %Element($../Natural/"Natural numbers")),
@@ -191,23 +191,50 @@ $"Roots of primes are irrational"(
       )),
       _: %UseExists(#(l: %Element($../Natural/"Natural numbers"))),
       _: %Consider(_2),
+      _: %Substitute(
+        #(_: %Consider(_4)),
+        1,
+        %equals(
+          $../Integer/product(
+            a = {p},
+            b = {$../Integer/power(
+              a = {a},
+              n = {n}
+            )}
+          ),
+          $../Integer/power(
+            a = {b},
+            n = {$../Natural/sum(
+              m = {$../Natural/number(value = 1)},
+              n = {m}
+            )}
+          )
+        )
+      ),
       _: %UnfoldDef(%equals(
+        $../Integer/product(
+          a = {p},
+          b = {$../Integer/power(
+            a = {a},
+            n = {n}
+          )}
+        ),
         $../Integer/product(
           a = {$../Integer/power(
             a = {b},
             n = {m}
           )},
           b = {b}
-        ),
-        $../Integer/product(
-          a = {$../Integer/power(
-            a = {a},
-            n = {n}
-          )},
-          b = {p}
         )
       )),
       _: %UnfoldDef(%equals(
+        $../Integer/product(
+          a = {p},
+          b = {$../Integer/power(
+            a = {a},
+            n = {n}
+          )}
+        ),
         $../Integer/product(
           a = {%associative($../Integer/product(
             a = {$../Integer/power(
@@ -217,19 +244,19 @@ $"Roots of primes are irrational"(
             b = {b}
           ))},
           b = {b}
-        ),
-        $../Integer/product(
-          a = {$../Integer/power(
-            a = {a},
-            n = {n}
-          )},
-          b = {p}
         )
       )),
       _: %Substitute(
         #(_: %Consider(_3)),
         1,
         %equals(
+          $../Integer/product(
+            a = {$../Integer/power(
+              a = {a},
+              n = {n}
+            )},
+            b = {p}
+          ),
           $../Integer/product(
             a = {%associative($../Integer/product(
               a = {$../Integer/power(
@@ -245,13 +272,6 @@ $"Roots of primes are irrational"(
               a = {p},
               b = {y}
             ))}
-          ),
-          $../Integer/product(
-            a = {$../Integer/power(
-              a = {a},
-              n = {n}
-            )},
-            b = {p}
           )
         )
       ),
@@ -277,6 +297,10 @@ $"Roots of primes are irrational"(
           c = {p}
         ),
         %equals(
+          $../Integer/power(
+            a = {a},
+            n = {n}
+          ),
           $../Integer/product(
             a = {%associative($../Integer/product(
               a = {$../Integer/power(
@@ -289,10 +313,6 @@ $"Roots of primes are irrational"(
               ))}
             ))},
             b = {y}
-          ),
-          $../Integer/power(
-            a = {a},
-            n = {n}
           )
         )
       ),
@@ -357,20 +377,13 @@ $"Roots of primes are irrational"(
         ),
         proof = {steps = #(_: %ProveExists({q = {p}}))}
       ),
-      _: %Consider(_1),
-      _: %UseDef(result = %not(%exists(
-        #(r: %Element($../Natural/Prime/"Prime numbers")),
-        formula = %and(
-          $../Integer/divisible(
-            a = {r},
-            b = {a}
-          ),
-          $../Integer/divisible(
-            a = {r},
-            b = {b}
-          )
-        )
-      )))
+      _: %State(
+        %not($../Integer/coprime(
+          a = {a},
+          b = {b}
+        )),
+        proof = {steps = #(_: %ProveDef)}
+      )
     )
   }))}]
 }
