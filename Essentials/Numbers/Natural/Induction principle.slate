@@ -31,7 +31,6 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         ),
         steps = #(_: %ProveForAll({
           parameters = #(n: %Element($"Natural numbers")),
-          goal = %in(n, M),
           steps = #(_: %UseTheorem(
             $"Induction lemma"(
               M = {M},

@@ -13,9 +13,9 @@ $"Positive numbers": %SetOperator {
   definition = [
     $"Segment (greater)"(n = {$../number(value = 0)}),
     %subset(
-      #(m: %Element($../"Natural numbers")),
+      #(n: %Element($../"Natural numbers")),
       $../less(
-        n = {m},
+        n = {n},
         m = {$../number(value = 0)}
       )
     ),
@@ -33,36 +33,43 @@ $"Positive numbers": %SetOperator {
     ),
     $"Segment (greater or equal)"(n = {$../number(value = 1)}),
     %subset(
-      #(m: %Element($../"Natural numbers")),
-      $../less(
-        n = {m},
-        m = {$../number(value = 0)}
+      #(n: %Element($../"Natural numbers")),
+      $../"less or equal"(
+        n = {n},
+        m = {$../number(value = 1)}
       )
     ),
     %subset(
-      #(a: %Element($../"Natural numbers")),
+      #(n: %Element($../"Natural numbers")),
       %exists(
-        #(b: %Element($../"Natural numbers")),
+        #(m: %Element($../"Natural numbers")),
         formula = %equals(
           $../sum(
-            m = {b},
+            m = {m},
             n = {$../number(value = 1)}
           ),
-          a
+          n
         )
       )
     ),
     %subset(
-      #(c: %Element($../"Natural numbers")),
+      #(n: %Element($../"Natural numbers")),
       %existsUnique(
-        #(d: %Element($../"Natural numbers")),
+        #(m: %Element($../"Natural numbers")),
         formula = %equals(
           $../sum(
-            m = {d},
+            m = {m},
             n = {$../number(value = 1)}
           ),
-          c
+          n
         )
+      )
+    ),
+    %extendedSubset(
+      #(m: %Element($../"Natural numbers")),
+      $../sum(
+        m = {m},
+        n = {$../number(value = 1)}
       )
     )
   ]

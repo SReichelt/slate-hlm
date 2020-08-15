@@ -194,35 +194,27 @@ $"Roots of primes are irrational"(
               n = {n},
               m = {$../Natural/number(value = 1)}
             )),
+            _: %UseDef(result = $../Natural/"less or equal"(
+              n = {n},
+              m = {$../Natural/number(value = 2)}
+            )),
             _: %UseDef(result = %exists(
-              #(m: %Element($../Natural/Subsets/"Positive numbers")),
+              #(m: %Element($../Natural/"Natural numbers")),
               formula = %equals(
                 $../Natural/sum(
-                  m = {$../Natural/number(value = 1)},
+                  m = {$../Natural/number(value = 2)},
                   n = {m}
                 ),
                 n
               )
             )),
-            _4: %UseExists(#(m: %Element($../Natural/Subsets/"Positive numbers"))),
-            _: %Consider(m),
-            _: %UseDef(result = %exists(
-              #(l: %Element($../Natural/"Natural numbers")),
-              formula = %equals(
-                $../Natural/sum(
-                  m = {$../Natural/number(value = 1)},
-                  n = {l}
-                ),
-                m
-              )
-            )),
-            _5: %UseExists(#(l: %Element($../Natural/"Natural numbers"))),
+            _5: %UseExists(#(m: %Element($../Natural/"Natural numbers"))),
             _: %ProveExists(
               {y = {$../Integer/product(
                 a = {%associative($../Integer/product(
                   a = {$../Integer/power(
                     a = {b},
-                    n = {l}
+                    n = {m}
                   )},
                   b = {z}
                 ))},
@@ -231,7 +223,7 @@ $"Roots of primes are irrational"(
               proof = {steps = #(
                 _: %Consider(_2),
                 _: %Substitute(
-                  #(_: %Consider(_4)),
+                  #(_: %Consider(_5)),
                   1,
                   %equals(
                     $../Integer/product(
@@ -244,48 +236,9 @@ $"Roots of primes are irrational"(
                     $../Integer/power(
                       a = {b},
                       n = {$../Natural/sum(
-                        m = {$../Natural/number(value = 1)},
+                        m = {$../Natural/number(value = 2)},
                         n = {m}
                       )}
-                    )
-                  )
-                ),
-                _: %UnfoldDef(%equals(
-                  $../Integer/product(
-                    a = {p},
-                    b = {$../Integer/power(
-                      a = {a},
-                      n = {n}
-                    )}
-                  ),
-                  $../Integer/product(
-                    a = {$../Integer/power(
-                      a = {b},
-                      n = {m}
-                    )},
-                    b = {b}
-                  )
-                )),
-                _: %Substitute(
-                  #(_: %Consider(_5)),
-                  1,
-                  %equals(
-                    $../Integer/product(
-                      a = {p},
-                      b = {$../Integer/power(
-                        a = {a},
-                        n = {n}
-                      )}
-                    ),
-                    $../Integer/product(
-                      a = {$../Integer/power(
-                        a = {b},
-                        n = {$../Natural/sum(
-                          m = {$../Natural/number(value = 1)},
-                          n = {l}
-                        )}
-                      )},
-                      b = {b}
                     )
                   )
                 ),
@@ -301,7 +254,7 @@ $"Roots of primes are irrational"(
                     a = {%associative($../Integer/product(
                       a = {$../Integer/power(
                         a = {b},
-                        n = {l}
+                        n = {m}
                       )},
                       b = {b}
                     ))},
@@ -323,7 +276,7 @@ $"Roots of primes are irrational"(
                       a = {%associative($../Integer/product(
                         a = {$../Integer/power(
                           a = {b},
-                          n = {l}
+                          n = {m}
                         )},
                         b = {%associative($../Integer/product(
                           a = {p},
@@ -343,7 +296,7 @@ $"Roots of primes are irrational"(
                       a = {%associative($../Integer/product(
                         a = {$../Integer/power(
                           a = {b},
-                          n = {l}
+                          n = {m}
                         )},
                         b = {z}
                       ))},
@@ -368,7 +321,7 @@ $"Roots of primes are irrational"(
                       a = {%associative($../Integer/product(
                         a = {$../Integer/power(
                           a = {b},
-                          n = {l}
+                          n = {m}
                         )},
                         b = {z}
                       ))},
