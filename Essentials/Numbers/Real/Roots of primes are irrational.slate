@@ -134,16 +134,13 @@ $"Roots of primes are irrational"(
               )
             )
           ),
-          steps = #(_: %ProveExists(
-            {x = {$../Integer/power(
-              a = {a},
-              n = {n}
-            )}},
-            proof = {steps = #(_: %Consider(_2))}
-          ))
+          steps = #(_: %ProveExists({x = {$../Integer/power(
+            a = {a},
+            n = {n}
+          )}}))
         }))}
       ),
-      _8: %UseTheorem(
+      _4: %UseTheorem(
         $../Integer/Prime/"Prime and power divisibility criterion"(
           p = {p},
           a = {b},
@@ -177,7 +174,7 @@ $"Roots of primes are irrational"(
             )
           ),
           steps = #(
-            _: %Consider(_8),
+            _: %Consider(_4),
             _: %UseDef(result = %exists(
               #(z: %Element($../Integer/Integers)),
               formula = %equals(
@@ -190,14 +187,6 @@ $"Roots of primes are irrational"(
             )),
             _3: %UseExists(#(z: %Element($../Integer/Integers))),
             _: %Consider(n),
-            _: %UseDef(result = $../Natural/less(
-              n = {n},
-              m = {$../Natural/number(value = 1)}
-            )),
-            _: %UseDef(result = $../Natural/"less or equal"(
-              n = {n},
-              m = {$../Natural/number(value = 2)}
-            )),
             _: %UseDef(result = %exists(
               #(m: %Element($../Natural/"Natural numbers")),
               formula = %equals(
@@ -337,7 +326,7 @@ $"Roots of primes are irrational"(
           )
         }))}
       ),
-      _7: %UseTheorem(
+      _: %UseTheorem(
         $../Integer/Prime/"Prime and power divisibility criterion"(
           p = {p},
           a = {a},
@@ -367,13 +356,7 @@ $"Roots of primes are irrational"(
               )
             )
           ),
-          steps = #(_: %ProveExists(
-            {q = {p}},
-            proof = {steps = #(_: %ProveCases(caseProofs = [
-              {steps = #(_: %Consider(_7))},
-              {steps = #(_: %Consider(_8))}
-            ]))}
-          ))
+          steps = #(_: %ProveExists({q = {p}}))
         }))}
       )
     )
