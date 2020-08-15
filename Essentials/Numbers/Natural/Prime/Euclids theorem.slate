@@ -129,7 +129,10 @@ $"Euclids theorem": %StandardTheorem {
             m = {a},
             n = {$../number(value = 1)}
           ),
-          elementProof = {steps = #(_: %Consider(_2))}
+          elementProof = {steps = #(
+            _: %Consider(_2),
+            _: %ProveDef
+          )}
         }),
         %exists(
           #(p: %Element($"Prime numbers")),

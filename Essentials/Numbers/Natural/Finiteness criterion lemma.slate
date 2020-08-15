@@ -45,16 +45,13 @@ $"Finiteness criterion lemma"(
         constructor = $"Natural numbers".successor,
         parameters = #(x: %Element($"Natural numbers")),
         value = {
-          parameters = #(
-            x: %Element($"Natural numbers"),
-            _: %Constraint(%equals(
-              k,
-              $sum(
-                m = {x},
-                n = {$number(value = 1)}
-              )
-            ))
-          ),
+          parameters = #(_: %Constraint(%equals(
+            k,
+            $sum(
+              m = {x},
+              n = {$number(value = 1)}
+            )
+          ))),
           steps = #(
             S: %SetDef($Subsets/"Segment (less or equal)"(n = {x})),
             _: %UseTheorem(
@@ -66,11 +63,17 @@ $"Finiteness criterion lemma"(
                   S = {S}
                 )},
                 k = {x},
-                f = {$../../Functions/restriction(
+                f = {$../../Functions/"codomain restriction"(
                   X = {$Subsets/"Segment (less or equal)"(n = {k})},
                   Y = {M},
                   f = {f},
-                  A = {S}
+                  A = {S},
+                  B = {$../../Functions/Image(
+                    X = {$Subsets/"Segment (less or equal)"(n = {k})},
+                    Y = {M},
+                    f = {f},
+                    S = {S}
+                  )}
                 )}
               ),
               %exists(

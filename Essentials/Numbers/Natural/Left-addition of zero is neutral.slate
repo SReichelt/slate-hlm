@@ -11,65 +11,64 @@
 $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $sum(
-      m = {$number(value = 0)},
+      m = {$"Natural numbers".zero},
       n = {n}
     ),
     n
   ),
-  proofs = [{
-    goal = %equals(
-      %structuralCases(
-        n,
-        $"Natural numbers",
-        [
-          {
-            constructor = $"Natural numbers".zero,
-            value = $number(value = 0)
-          },
-          {
-            constructor = $"Natural numbers".successor,
-            parameters = #(x: %Element($"Natural numbers")),
-            value = $"Natural numbers".successor(n = {$sum(
-              m = {$number(value = 0)},
-              n = {x}
-            )})
-          }
-        ]
-      ),
-      n
-    ),
-    steps = #(_: %ProveCases(
-      side = 0,
-      caseProofs = [
-        {
+  proofs = [{steps = #(_: %ProveByInduction(
+    n,
+    $"Natural numbers",
+    [
+      {
+        constructor = $"Natural numbers".zero,
+        value = {
           goal = %equals(
-            $number(value = 0),
-            $number(value = 0)
+            $"Natural numbers".zero,
+            $"Natural numbers".zero
           ),
-          steps = #(
-          )
-        },
-        {
-          parameters = #(x: %Element($"Natural numbers")),
+          steps = #()
+        }
+      },
+      {
+        constructor = $"Natural numbers".successor,
+        parameters = #(x: %Element($"Natural numbers")),
+        value = {
           goal = %equals(
             $"Natural numbers".successor(n = {$sum(
-              m = {$number(value = 0)},
+              m = {$"Natural numbers".zero},
               n = {x}
             )}),
             $"Natural numbers".successor(n = {x})
           ),
-          steps = #(_: %UseTheorem(
-            $"Left-addition of zero is neutral"(n = {x}),
-            %equals(
-              $sum(
-                m = {$number(value = 0)},
-                n = {x}
-              ),
-              x
+          steps = #(
+            _: %State(%equals(
+              $"Natural numbers".successor(n = {x}),
+              $"Natural numbers".successor(n = {x})
+            )),
+            _: %Substitute(
+              #(_: %UseTheorem(
+                $"Left-addition of zero is neutral"(n = {x}),
+                %equals(
+                  $sum(
+                    m = {$"Natural numbers".zero},
+                    n = {x}
+                  ),
+                  x
+                )
+              )),
+              1,
+              %equals(
+                $"Natural numbers".successor(n = {$sum(
+                  m = {$"Natural numbers".zero},
+                  n = {x}
+                )}),
+                $"Natural numbers".successor(n = {x})
+              )
             )
-          ))
+          )
         }
-      ]
-    ))
-  }]
+      }
+    ]
+  ))}]
 }
