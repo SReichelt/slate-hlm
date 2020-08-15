@@ -134,13 +134,16 @@ $"Roots of primes are irrational"(
               )
             )
           ),
-          steps = #(_: %ProveExists({x = {$../Integer/power(
-            a = {a},
-            n = {n}
-          )}}))
+          steps = #(_: %ProveExists(
+            {x = {$../Integer/power(
+              a = {a},
+              n = {n}
+            )}},
+            proof = {steps = #(_: %Consider(_2))}
+          ))
         }))}
       ),
-      _: %UseTheorem(
+      _8: %UseTheorem(
         $../Integer/Prime/"Prime and power divisibility criterion"(
           p = {p},
           a = {b},
@@ -149,171 +152,6 @@ $"Roots of primes are irrational"(
         $../Integer/divisible(
           a = {p},
           b = {b}
-        )
-      ),
-      _: %UseDef(result = %exists(
-        #(y: %Element($../Integer/Integers)),
-        formula = %equals(
-          $../Integer/product(
-            a = {p},
-            b = {y}
-          ),
-          b
-        )
-      )),
-      _3: %UseExists(#(y: %Element($../Integer/Integers))),
-      _: %Consider(n),
-      _: %UseDef(result = $../Natural/less(
-        n = {n},
-        m = {$../Natural/number(value = 1)}
-      )),
-      _: %UseDef(result = %exists(
-        #(m: %Element($../Natural/Subsets/"Positive numbers")),
-        formula = %equals(
-          $../Natural/sum(
-            m = {$../Natural/number(value = 1)},
-            n = {m}
-          ),
-          n
-        )
-      )),
-      _4: %UseExists(#(m: %Element($../Natural/Subsets/"Positive numbers"))),
-      _: %Consider(m),
-      _: %UseDef(result = %exists(
-        #(l: %Element($../Natural/"Natural numbers")),
-        formula = %equals(
-          $../Natural/sum(
-            m = {$../Natural/number(value = 1)},
-            n = {l}
-          ),
-          m
-        )
-      )),
-      _: %UseExists(#(l: %Element($../Natural/"Natural numbers"))),
-      _: %Consider(_2),
-      _: %Substitute(
-        #(_: %Consider(_4)),
-        1,
-        %equals(
-          $../Integer/product(
-            a = {p},
-            b = {$../Integer/power(
-              a = {a},
-              n = {n}
-            )}
-          ),
-          $../Integer/power(
-            a = {b},
-            n = {$../Natural/sum(
-              m = {$../Natural/number(value = 1)},
-              n = {m}
-            )}
-          )
-        )
-      ),
-      _: %UnfoldDef(%equals(
-        $../Integer/product(
-          a = {p},
-          b = {$../Integer/power(
-            a = {a},
-            n = {n}
-          )}
-        ),
-        $../Integer/product(
-          a = {$../Integer/power(
-            a = {b},
-            n = {m}
-          )},
-          b = {b}
-        )
-      )),
-      _: %UnfoldDef(%equals(
-        $../Integer/product(
-          a = {p},
-          b = {$../Integer/power(
-            a = {a},
-            n = {n}
-          )}
-        ),
-        $../Integer/product(
-          a = {%associative($../Integer/product(
-            a = {$../Integer/power(
-              a = {b},
-              n = {l}
-            )},
-            b = {b}
-          ))},
-          b = {b}
-        )
-      )),
-      _: %Substitute(
-        #(_: %Consider(_3)),
-        1,
-        %equals(
-          $../Integer/product(
-            a = {$../Integer/power(
-              a = {a},
-              n = {n}
-            )},
-            b = {p}
-          ),
-          $../Integer/product(
-            a = {%associative($../Integer/product(
-              a = {$../Integer/power(
-                a = {b},
-                n = {l}
-              )},
-              b = {%associative($../Integer/product(
-                a = {p},
-                b = {y}
-              ))}
-            ))},
-            b = {%associative($../Integer/product(
-              a = {p},
-              b = {y}
-            ))}
-          )
-        )
-      ),
-      _: %UseTheorem(
-        $../Integer/"Multiplication of a nonzero number is injective"(
-          a = {$../Integer/product(
-            a = {%associative($../Integer/product(
-              a = {$../Integer/power(
-                a = {b},
-                n = {l}
-              )},
-              b = {%associative($../Integer/product(
-                a = {p},
-                b = {y}
-              ))}
-            ))},
-            b = {y}
-          )},
-          b = {$../Integer/power(
-            a = {a},
-            n = {n}
-          )},
-          c = {p}
-        ),
-        %equals(
-          $../Integer/power(
-            a = {a},
-            n = {n}
-          ),
-          $../Integer/product(
-            a = {%associative($../Integer/product(
-              a = {$../Integer/power(
-                a = {b},
-                n = {l}
-              )},
-              b = {%associative($../Integer/product(
-                a = {p},
-                b = {y}
-              ))}
-            ))},
-            b = {y}
-          )
         )
       ),
       _: %State(
@@ -326,11 +164,11 @@ $"Roots of primes are irrational"(
         ),
         proof = {steps = #(_: %ProveDef(proof = {
           goal = %exists(
-            #(z: %Element($../Integer/Integers)),
+            #(y: %Element($../Integer/Integers)),
             formula = %equals(
               $../Integer/product(
                 a = {p},
-                b = {z}
+                b = {y}
               ),
               $../Integer/power(
                 a = {a},
@@ -338,19 +176,215 @@ $"Roots of primes are irrational"(
               )
             )
           ),
-          steps = #(_: %ProveExists({z = {$../Integer/product(
-            a = {%associative($../Integer/product(
-              a = {$../Integer/power(
-                a = {b},
-                n = {l}
-              )},
-              b = {y}
-            ))},
-            b = {y}
-          )}}))
+          steps = #(
+            _: %Consider(_8),
+            _: %UseDef(result = %exists(
+              #(z: %Element($../Integer/Integers)),
+              formula = %equals(
+                $../Integer/product(
+                  a = {p},
+                  b = {z}
+                ),
+                b
+              )
+            )),
+            _3: %UseExists(#(z: %Element($../Integer/Integers))),
+            _: %Consider(n),
+            _: %UseDef(result = $../Natural/less(
+              n = {n},
+              m = {$../Natural/number(value = 1)}
+            )),
+            _: %UseDef(result = %exists(
+              #(m: %Element($../Natural/Subsets/"Positive numbers")),
+              formula = %equals(
+                $../Natural/sum(
+                  m = {$../Natural/number(value = 1)},
+                  n = {m}
+                ),
+                n
+              )
+            )),
+            _4: %UseExists(#(m: %Element($../Natural/Subsets/"Positive numbers"))),
+            _: %Consider(m),
+            _: %UseDef(result = %exists(
+              #(l: %Element($../Natural/"Natural numbers")),
+              formula = %equals(
+                $../Natural/sum(
+                  m = {$../Natural/number(value = 1)},
+                  n = {l}
+                ),
+                m
+              )
+            )),
+            _5: %UseExists(#(l: %Element($../Natural/"Natural numbers"))),
+            _: %ProveExists(
+              {y = {$../Integer/product(
+                a = {%associative($../Integer/product(
+                  a = {$../Integer/power(
+                    a = {b},
+                    n = {l}
+                  )},
+                  b = {z}
+                ))},
+                b = {z}
+              )}},
+              proof = {steps = #(
+                _: %Consider(_2),
+                _: %Substitute(
+                  #(_: %Consider(_4)),
+                  1,
+                  %equals(
+                    $../Integer/product(
+                      a = {p},
+                      b = {$../Integer/power(
+                        a = {a},
+                        n = {n}
+                      )}
+                    ),
+                    $../Integer/power(
+                      a = {b},
+                      n = {$../Natural/sum(
+                        m = {$../Natural/number(value = 1)},
+                        n = {m}
+                      )}
+                    )
+                  )
+                ),
+                _: %UnfoldDef(%equals(
+                  $../Integer/product(
+                    a = {p},
+                    b = {$../Integer/power(
+                      a = {a},
+                      n = {n}
+                    )}
+                  ),
+                  $../Integer/product(
+                    a = {$../Integer/power(
+                      a = {b},
+                      n = {m}
+                    )},
+                    b = {b}
+                  )
+                )),
+                _: %Substitute(
+                  #(_: %Consider(_5)),
+                  1,
+                  %equals(
+                    $../Integer/product(
+                      a = {p},
+                      b = {$../Integer/power(
+                        a = {a},
+                        n = {n}
+                      )}
+                    ),
+                    $../Integer/product(
+                      a = {$../Integer/power(
+                        a = {b},
+                        n = {$../Natural/sum(
+                          m = {$../Natural/number(value = 1)},
+                          n = {l}
+                        )}
+                      )},
+                      b = {b}
+                    )
+                  )
+                ),
+                _: %UnfoldDef(%equals(
+                  $../Integer/product(
+                    a = {p},
+                    b = {$../Integer/power(
+                      a = {a},
+                      n = {n}
+                    )}
+                  ),
+                  $../Integer/product(
+                    a = {%associative($../Integer/product(
+                      a = {$../Integer/power(
+                        a = {b},
+                        n = {l}
+                      )},
+                      b = {b}
+                    ))},
+                    b = {b}
+                  )
+                )),
+                _6: %Substitute(
+                  #(_: %Consider(_3)),
+                  1,
+                  %equals(
+                    $../Integer/product(
+                      a = {p},
+                      b = {$../Integer/power(
+                        a = {a},
+                        n = {n}
+                      )}
+                    ),
+                    $../Integer/product(
+                      a = {%associative($../Integer/product(
+                        a = {$../Integer/power(
+                          a = {b},
+                          n = {l}
+                        )},
+                        b = {%associative($../Integer/product(
+                          a = {p},
+                          b = {z}
+                        ))}
+                      ))},
+                      b = {%associative($../Integer/product(
+                        a = {p},
+                        b = {z}
+                      ))}
+                    )
+                  )
+                ),
+                _: %UseTheorem(
+                  $../Integer/"Multiplication of a nonzero number is injective"(
+                    a = {$../Integer/product(
+                      a = {%associative($../Integer/product(
+                        a = {$../Integer/power(
+                          a = {b},
+                          n = {l}
+                        )},
+                        b = {z}
+                      ))},
+                      b = {%associative($../Integer/product(
+                        a = {p},
+                        b = {z}
+                      ))}
+                    )},
+                    b = {$../Integer/power(
+                      a = {a},
+                      n = {n}
+                    )},
+                    c = {p},
+                    _1 = {proof = {steps = #(_: %Consider(_6))}}
+                  ),
+                  %equals(
+                    $../Integer/power(
+                      a = {a},
+                      n = {n}
+                    ),
+                    $../Integer/product(
+                      a = {%associative($../Integer/product(
+                        a = {$../Integer/power(
+                          a = {b},
+                          n = {l}
+                        )},
+                        b = {z}
+                      ))},
+                      b = {%associative($../Integer/product(
+                        a = {p},
+                        b = {z}
+                      ))}
+                    )
+                  )
+                )
+              )}
+            )
+          )
         }))}
       ),
-      _: %UseTheorem(
+      _7: %UseTheorem(
         $../Integer/Prime/"Prime and power divisibility criterion"(
           p = {p},
           a = {a},
@@ -362,27 +396,32 @@ $"Roots of primes are irrational"(
         )
       ),
       _: %State(
-        %exists(
-          #(q: %Element($../Natural/Prime/"Prime numbers")),
-          formula = %and(
-            $../Integer/divisible(
-              a = {q},
-              b = {a}
-            ),
-            $../Integer/divisible(
-              a = {q},
-              b = {b}
-            )
-          )
-        ),
-        proof = {steps = #(_: %ProveExists({q = {p}}))}
-      ),
-      _: %State(
         %not($../Integer/coprime(
           a = {a},
           b = {b}
         )),
-        proof = {steps = #(_: %ProveDef)}
+        proof = {steps = #(_: %ProveDef(proof = {
+          goal = %exists(
+            #(q: %Element($../Natural/Prime/"Prime numbers")),
+            formula = %and(
+              $../Integer/divisible(
+                a = {q},
+                b = {a}
+              ),
+              $../Integer/divisible(
+                a = {q},
+                b = {b}
+              )
+            )
+          ),
+          steps = #(_: %ProveExists(
+            {q = {p}},
+            proof = {steps = #(_: %ProveCases(caseProofs = [
+              {steps = #(_: %Consider(_7))},
+              {steps = #(_: %Consider(_8))}
+            ]))}
+          ))
+        }))}
       )
     )
   }))}]
