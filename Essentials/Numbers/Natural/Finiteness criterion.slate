@@ -175,7 +175,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                     )),
                     _: %UseTheorem(
                       $"Zero is the smallest number"(n = {s}),
-                      $"less or equal"(
+                      result = $"less or equal"(
                         n = {s},
                         m = {$number(value = 0)}
                       )
@@ -211,7 +211,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                   k = {k},
                   f = {f}
                 ),
-                %exists(
+                result = %exists(
                   #(y: %Element(M)),
                   formula = %forall(
                     #(z: %Element(M)),
@@ -275,7 +275,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
               steps = #(
                 _: %UseTheorem(
                   $../../Sets/"Empty set is subset of any set"(S = {$Subsets/"Segment (less or equal)"(n = {$number(value = 0)})}),
-                  %sub(
+                  result = %sub(
                     $../../Sets/"Empty set",
                     $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
                   )
@@ -340,14 +340,14 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
       steps = #(
         _: %UseTheorem(
           $Subsets/"Initial segments are finite"(n = {b}),
-          $../../Sets/finite(S = {$Subsets/"Segment (less)"(n = {b})})
+          result = $../../Sets/finite(S = {$Subsets/"Segment (less)"(n = {b})})
         ),
         _: %UseTheorem(
           $../../Sets/"Subsets of finite sets are finite"(
             S = {$Subsets/"Segment (less)"(n = {b})},
             T = {M}
           ),
-          $../../Sets/finite(S = {M})
+          result = $../../Sets/finite(S = {M})
         )
       )
     }

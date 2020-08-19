@@ -245,7 +245,7 @@ $finite(S: %Set): %Predicate {
       steps = #(
         _: %UseTheorem(
           $../Numbers/Natural/Subsets/"Exclusive initial segment is subset of inclusive segment"(n = {m}),
-          %sub(
+          result = %sub(
             $../Numbers/Natural/Subsets/"Segment (less)"(n = {m}),
             $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = {m})
           )

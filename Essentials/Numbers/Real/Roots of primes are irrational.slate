@@ -64,7 +64,7 @@ $"Roots of primes are irrational"(
             a = {a},
             n = {n}
           ),
-          %equals(
+          result = %equals(
             $power(
               a = {$quotient(
                 a = {b},
@@ -112,7 +112,7 @@ $"Roots of primes are irrational"(
           n = {n}
         )
       )),
-      _: %State(
+      _7: %State(
         $../Integer/divisible(
           a = {p},
           b = {$../Integer/power(
@@ -146,12 +146,13 @@ $"Roots of primes are irrational"(
           a = {b},
           n = {n}
         ),
-        $../Integer/divisible(
+        input = #(_: %Consider(_7)),
+        result = $../Integer/divisible(
           a = {p},
           b = {b}
         )
       ),
-      _: %State(
+      _8: %State(
         $../Integer/divisible(
           a = {p},
           b = {$../Integer/power(
@@ -301,7 +302,7 @@ $"Roots of primes are irrational"(
                     c = {p},
                     _1 = {proof = {steps = #(_: %Consider(_6))}}
                   ),
-                  %equals(
+                  result = %equals(
                     $../Integer/power(
                       a = {a},
                       n = {n}
@@ -332,7 +333,8 @@ $"Roots of primes are irrational"(
           a = {a},
           n = {n}
         ),
-        $../Integer/divisible(
+        input = #(_: %Consider(_8)),
+        result = $../Integer/divisible(
           a = {p},
           b = {a}
         )

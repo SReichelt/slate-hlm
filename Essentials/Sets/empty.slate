@@ -107,7 +107,7 @@ $empty(S: %Set): %Predicate {
           to = 1,
           steps = #(_: %UseTheorem(
             $"Empty set is subset of any set"(S = {S}),
-            %sub(
+            result = %sub(
               $"Empty set",
               S
             )

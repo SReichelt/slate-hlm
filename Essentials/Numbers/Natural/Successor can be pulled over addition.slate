@@ -61,7 +61,7 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
                   m = {m},
                   n = {x}
                 ),
-                %equals(
+                result = %equals(
                   $sum(
                     m = {$"Natural numbers".successor(n = {m})},
                     n = {x}

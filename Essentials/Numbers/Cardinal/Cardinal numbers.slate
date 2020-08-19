@@ -69,7 +69,7 @@ $"Cardinal numbers": %Construction {
             n = {n},
             f = {f}
           ),
-          %equals(m, n)
+          result = %equals(m, n)
         )
       )
     }

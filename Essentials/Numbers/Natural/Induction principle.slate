@@ -36,7 +36,7 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
               M = {M},
               n = {n}
             ),
-            %in(n, M)
+            result = %in(n, M)
           ))
         }))
       }))

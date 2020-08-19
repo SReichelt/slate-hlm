@@ -26,7 +26,7 @@ $"Euclids theorem": %StandardTheorem {
           m = {$../number(value = 1)}
         ),
         proof = {steps = #(
-          _1: %UseTheorem(
+          _: %UseTheorem(
             $../"Iterated operators"/"Iterated product of positive numbers grows"(
               I = {$"Prime numbers"},
               _2 = {
@@ -35,7 +35,7 @@ $"Euclids theorem": %StandardTheorem {
               },
               J = {$../../../Sets/"Empty set"}
             ),
-            $../"less or equal"(
+            result = $../"less or equal"(
               m = {$../../../Operations/"Iterated operations"/"indexed by finite set"(
                 X = {$../"Natural numbers"},
                 ⨂ = {$../"Iterated operators"/"iterated product"},
@@ -66,7 +66,7 @@ $"Euclids theorem": %StandardTheorem {
                   {a = {x}}
                 }
               ),
-              %equals(
+              result = %equals(
                 $../../../Operations/"Iterated operations"/"indexed by finite set"(
                   X = {$../"Natural numbers"},
                   ⨂ = {$../"Iterated operators"/"iterated product"},
@@ -106,7 +106,7 @@ $"Euclids theorem": %StandardTheorem {
           _1 = {proof = {steps = #(_: %Consider(_1))}},
           _2 = {proof = {steps = #(_: %UseTheorem(
             $../"Successor is always greater"(n = {a}),
-            $../less(
+            result = $../less(
               n = {$../sum(
                 m = {a},
                 n = {$../number(value = 1)}
@@ -115,7 +115,7 @@ $"Euclids theorem": %StandardTheorem {
             )
           ))}}
         ),
-        $../less(
+        result = $../less(
           n = {$../sum(
             m = {a},
             n = {$../number(value = 1)}
@@ -134,7 +134,7 @@ $"Euclids theorem": %StandardTheorem {
             _: %ProveDef
           )}
         }),
-        %exists(
+        result = %exists(
           #(p: %Element($"Prime numbers")),
           formula = $../divisible(
             m = {p},
@@ -145,8 +145,8 @@ $"Euclids theorem": %StandardTheorem {
           )
         )
       ),
-      _: %UseExists(#(p: %Element($"Prime numbers"))),
-      _3: %UseTheorem(
+      _3: %UseExists(#(p: %Element($"Prime numbers"))),
+      _4: %UseTheorem(
         $../"Divisibility criterion"(
           a = {p},
           b = {a},
@@ -159,14 +159,15 @@ $"Euclids theorem": %StandardTheorem {
               },
               j = {p}
             ),
-            $../divisible(
+            result = $../divisible(
               m = {p},
               n = {a}
             )
           ))}},
           c = {$../number(value = 1)}
         ),
-        $../divisible(
+        input = #(_: %Consider(_3)),
+        result = $../divisible(
           m = {p},
           n = {$../number(value = 1)}
         )
@@ -175,9 +176,9 @@ $"Euclids theorem": %StandardTheorem {
         $../"Divisors are less or equal"(
           m = {p},
           n = {$../number(value = 1)},
-          _1 = {proof = {steps = #(_: %Consider(_3))}}
+          _1 = {proof = {steps = #(_: %Consider(_4))}}
         ),
-        $../"less or equal"(
+        result = $../"less or equal"(
           m = {p},
           n = {$../number(value = 1)}
         )

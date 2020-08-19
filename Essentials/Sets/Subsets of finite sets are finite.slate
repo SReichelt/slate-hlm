@@ -77,7 +77,7 @@ $"Subsets of finite sets are finite"(
               f = {g},
               A = {T}
             ),
-            $../Functions/injective(
+            result = $../Functions/injective(
               X = {T},
               Y = {$../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
               f = {$../Functions/restriction(

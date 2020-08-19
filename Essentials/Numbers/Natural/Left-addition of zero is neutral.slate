@@ -49,7 +49,7 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
             _: %Substitute(
               #(_: %UseTheorem(
                 $"Left-addition of zero is neutral"(n = {x}),
-                %equals(
+                result = %equals(
                   $sum(
                     m = {$"Natural numbers".zero},
                     n = {x}

@@ -76,7 +76,7 @@ $"Finiteness criterion lemma"(
                   )}
                 )}
               ),
-              %exists(
+              result = %exists(
                 #(i: %Element($../../Functions/Image(
                   X = {$Subsets/"Segment (less or equal)"(n = {k})},
                   Y = {M},

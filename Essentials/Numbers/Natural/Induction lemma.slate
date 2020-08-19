@@ -30,7 +30,7 @@ $"Induction lemma"(
               M = {M},
               n = {x}
             ),
-            %in(x, M)
+            result = %in(x, M)
           ),
           _: %Consider(_1),
           _: %UseDef(result = %forall(

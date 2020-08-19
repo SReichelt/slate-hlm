@@ -8,14 +8,14 @@ $"Square root of two is irrational": %StandardTheorem {
   proofs = [{steps = #(
     _: %UseTheorem(
       $../Natural/Prime/"Two is prime",
-      $../Natural/Prime/prime(n = {$../Natural/number(value = 2)})
+      result = $../Natural/Prime/prime(n = {$../Natural/number(value = 2)})
     ),
     _: %UseTheorem(
       $"Roots of primes are irrational"(
         p = {$../Natural/number(value = 2)},
         n = {$../Natural/number(value = 2)}
       ),
-      %not($rational(a = {$root(
+      result = %not($rational(a = {$root(
         a = {$../Natural/number(value = 2)},
         n = {$../Natural/number(value = 2)}
       )}))
