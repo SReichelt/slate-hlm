@@ -1,0 +1,3 @@
+[build]
+  publish = ".static/dist/"
+  command = ".static/build.sh"

@@ -5,7 +5,7 @@ This repository contains its standard library.
 
 ## Web access
 
-Slate is designed as a web application; the entire library can be edited using the web interface at http://slate-prover.org/.
+Slate is designed as a web application; the entire library can be edited using the web interface at https://slate-prover.org/.
 
 The web interface automatically creates personal forks of this repository for each contributor, and sends submissions as pull requests.
 
