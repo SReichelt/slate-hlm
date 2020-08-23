@@ -1,2 +1,4 @@
 *.js
+*.ejs
+*.slate
 dist

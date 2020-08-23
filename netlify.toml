@@ -1,3 +1,12 @@
 [build]
   publish = ".static/dist/"
   command = ".static/build.sh"
+
+# The content at this site is accessed via redirects from the Slate website.
+# Therefore, don't send any redirects but use code 200 for fallbacks.
+
+# Fall back to the root for any static page that we can't find (e.g. because it has not been accepted yet).
+[[redirects]]
+  from = "/static/*"
+  to = "/static/Library"
+  status = 200
