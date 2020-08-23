@@ -8,5 +8,5 @@
 # Fall back to the root for any static page that we can't find (e.g. because it has not been accepted yet).
 [[redirects]]
   from = "/static/*"
-  to = "/static/Library"
+  to = "/static/index.html"
   status = 200
