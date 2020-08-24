@@ -12,4 +12,4 @@ else
 fi
 
 node .static/buildPreload.js Library.slate .static/dist/preload
-node .static/buildStatic.js Library.slate hlm .static/template.ejs .static/templates.slate libraries/hlm .static/dist/static
+node .static/buildStatic.js Library.slate hlm .static/template.ejs .static/templates.slate libraries/hlm https://github.com/SReichelt/slate-hlm/blob/master/ .static/dist/static
