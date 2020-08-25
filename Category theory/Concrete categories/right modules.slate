@@ -40,8 +40,7 @@ $"right modules"(
               X = $../../Algebra/Rings/Modules/"Right modules"/Carrier(𝐑 = 𝐑, 𝐌 = 𝐃),
               Y = $../../Algebra/Rings/Modules/"Right modules"/Carrier(𝐑 = 𝐑, 𝐌 = 𝐄),
               Z = $../../Algebra/Rings/Modules/"Right modules"/Carrier(𝐑 = 𝐑, 𝐌 = 𝐅),
-              f = φ,
-              g = ψ
+              f = φ, g = ψ
             )}
         })}
       }

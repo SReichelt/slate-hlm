@@ -29,8 +29,7 @@ $"bounded cardinality"(
             value = $../sum(
               m = $"bounded cardinality"(
                 M = $../../../Sets/"Relative complement"(
-                  U = M,
-                  S = M,
+                  U = M, S = M,
                   T = %enumeration($../minimum(M = M))
                 ),
                 n = x

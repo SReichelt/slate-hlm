@@ -30,8 +30,7 @@ $ordinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Ex
               X = $../../Essentials/Numbers/Ordinal/Carrier(α = 𝐃),
               Y = $../../Essentials/Numbers/Ordinal/Carrier(α = 𝐄),
               Z = $../../Essentials/Numbers/Ordinal/Carrier(α = 𝐅),
-              f = φ,
-              g = ψ
+              f = φ, g = ψ
             )}
         })}
       }

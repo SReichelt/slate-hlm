@@ -30,8 +30,7 @@ $semigroups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %
               X = $../../Algebra/Magmas/Carrier(𝐌 = 𝐃),
               Y = $../../Algebra/Magmas/Carrier(𝐌 = 𝐄),
               Z = $../../Algebra/Magmas/Carrier(𝐌 = 𝐅),
-              f = φ,
-              g = ψ
+              f = φ, g = ψ
             )}
         })}
       }

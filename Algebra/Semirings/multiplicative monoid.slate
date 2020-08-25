@@ -9,8 +9,7 @@ $"multiplicative monoid"(𝐑: %Element($Semirings)): %ExplicitOperator {
     style = '[]'
   ),
   definition = [%structuralCases(
-    𝐑,
-    $Semirings,
+    𝐑, $Semirings,
     [{
       constructor = $Semirings.semiring,
       parameters = #(

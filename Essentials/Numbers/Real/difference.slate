@@ -7,8 +7,7 @@ $difference(a,b: %Element($"Real numbers")): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),
   definition = [
     %structuralCases(
-      b,
-      $"Real numbers",
+      b, $"Real numbers",
       [{
         constructor = $"Real numbers".class,
         parameters = #(
@@ -16,8 +15,7 @@ $difference(a,b: %Element($"Real numbers")): %ExplicitOperator {
           _2: %Constraint($../Rational/Sequences/cauchy(𝐚 = r_b))
         ),
         value = %structuralCases(
-          a,
-          $"Real numbers",
+          a, $"Real numbers",
           [{
             constructor = $"Real numbers".class,
             parameters = #(

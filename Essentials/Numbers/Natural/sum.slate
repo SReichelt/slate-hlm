@@ -12,8 +12,7 @@
 $sum(m,n: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $AdditionOperator(operands = [m, n]),
   definition = [%structuralCases(
-    n,
-    $"Natural numbers",
+    n, $"Natural numbers",
     [
       {
         constructor = $"Natural numbers".zero,

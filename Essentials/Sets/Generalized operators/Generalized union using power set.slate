@@ -21,7 +21,6 @@ $"Generalized union using power set"(
         }]
       )}
     },
-    U = U,
-    I = S
+    U = U, I = S
   )]
 }

@@ -13,8 +13,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
               #(m,n: %Element($"Natural numbers")),
               {p = $"less or equal"(m = m, n = n)}
           }),
-          T = M,
-          t = m
+          T = M, t = m
         )
       )
     ),
@@ -28,8 +27,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
               #(m,n: %Element($"Natural numbers")),
               {p = $"less or equal"(m = m, n = n)}
           }),
-          T = M,
-          t = m
+          T = M, t = m
         )
       )
     ),
@@ -63,8 +61,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                 #(m,n: %Element($"Natural numbers")),
                 {p = $"less or equal"(m = m, n = n)}
             }),
-            T = M,
-            t = m
+            T = M, t = m
           )
         )
       ),
@@ -85,8 +82,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         )),
         _: %State(
           %structural(
-            l,
-            $"Natural numbers",
+            l, $"Natural numbers",
             [
               {
                 constructor = $"Natural numbers".zero,
@@ -122,13 +118,11 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                     _: %Consider(f),
                     _: %UseDef(result = $../../Functions/bijective(
                       X = $Subsets/"Segment (less)"(n = l),
-                      Y = M,
-                      f = f
+                      Y = M, f = f
                     )),
                     _: %UseDef(result = $../../Functions/surjective(
                       X = $Subsets/"Segment (less)"(n = l),
-                      Y = M,
-                      f = f
+                      Y = M, f = f
                     )),
                     _: %UseDef(result = %forall(
                       #(t: %Element(M)),
@@ -137,9 +131,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                         formula = %equals(
                           $../../Functions/value(
                             X = $Subsets/"Segment (less)"(n = l),
-                            Y = M,
-                            f = f,
-                            x = s
+                            Y = M, f = f, x = s
                           ),
                           t
                         )
@@ -209,8 +201,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                 #(m,n: %Element($"Natural numbers")),
                 {p = $"less or equal"(m = m, n = n)}
             }),
-            T = M,
-            t = m
+            T = M, t = m
           )
         )
       ))),

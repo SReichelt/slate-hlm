@@ -11,8 +11,7 @@ $"index in well-ordered set"(
   s: %Element(S),
   T: %SetDef(%subset(
     #(t: %Element($../Sets/"Relative complement"(
-      U = S,
-      S = S,
+      U = S, S = S,
       T = %enumeration(s)
     ))),
     $../Relations/related(S = S, T = S, ≺ = ⪯, s = t, t = s)

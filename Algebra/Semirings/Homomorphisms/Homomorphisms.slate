@@ -41,14 +41,12 @@ $Homomorphisms(𝐑,𝐒: %Element($../Semirings)): %SetOperator {
             a = $../../../Essentials/Functions/value(
               X = $../Carrier(𝐑 = 𝐑),
               Y = $../Carrier(𝐑 = 𝐒),
-              f = f,
-              x = a
+              f = f, x = a
             ),
             b = $../../../Essentials/Functions/value(
               X = $../Carrier(𝐑 = 𝐑),
               Y = $../Carrier(𝐑 = 𝐒),
-              f = f,
-              x = b
+              f = f, x = b
             )
           )
         )
@@ -76,14 +74,12 @@ $Homomorphisms(𝐑,𝐒: %Element($../Semirings)): %SetOperator {
             a = $../../../Essentials/Functions/value(
               X = $../Carrier(𝐑 = 𝐑),
               Y = $../Carrier(𝐑 = 𝐒),
-              f = f,
-              x = c
+              f = f, x = c
             ),
             b = $../../../Essentials/Functions/value(
               X = $../Carrier(𝐑 = 𝐑),
               Y = $../Carrier(𝐑 = 𝐒),
-              f = f,
-              x = d
+              f = f, x = d
             )
           )
         )

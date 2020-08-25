@@ -9,8 +9,7 @@
 $sum(a,b: %Element($"Rational numbers")): %ExplicitOperator {
   notation = $AdditionOperator(operands = [a, b]),
   definition = [%structuralCases(
-    b,
-    $"Rational numbers",
+    b, $"Rational numbers",
     [{
       constructor = $"Rational numbers".quotient,
       parameters = #(
@@ -18,8 +17,7 @@ $sum(a,b: %Element($"Rational numbers")): %ExplicitOperator {
         d_b: %Element($../Natural/Subsets/"Positive numbers")
       ),
       value = %structuralCases(
-        a,
-        $"Rational numbers",
+        a, $"Rational numbers",
         [{
           constructor = $"Rational numbers".quotient,
           parameters = #(

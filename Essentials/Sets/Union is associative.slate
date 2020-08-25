@@ -15,8 +15,7 @@ $"Union is associative"(
       T = T
     ),
     $Union(
-      U = U,
-      S = R,
+      U = U, S = R,
       T = $Union(U = U, S = S, T = T)
     )
   )

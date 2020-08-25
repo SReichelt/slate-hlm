@@ -28,8 +28,7 @@ $value(
     ),
     $../Functions/value(
       X = $../Sets/"Cartesian product"(S = X, T = Y),
-      Y = Z,
-      f = ∗,
+      Y = Z, f = ∗,
       x = $../Sets/"Cartesian product"(S = X, T = Y).pair(s = x, t = y)
     )
   ]

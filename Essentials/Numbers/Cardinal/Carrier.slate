@@ -10,8 +10,7 @@ $Carrier(κ: %Element($"Cardinal numbers")): %SetOperator {
     notation = $ElementParameter(variable = a, set = κ)
   },
   definition = [%setStructuralCases(
-    κ,
-    $"Cardinal numbers",
+    κ, $"Cardinal numbers",
     [{
       constructor = $"Cardinal numbers".cardinality,
       parameters = #(K: %Set),

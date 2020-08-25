@@ -10,8 +10,7 @@ $Carrier(𝐌: %Element($Monoids)): %SetOperator {
     notation = $ElementParameter(variable = a, set = 𝐌)
   },
   definition = [%setStructuralCases(
-    𝐌,
-    $Monoids,
+    𝐌, $Monoids,
     [{
       constructor = $Monoids.monoid,
       parameters = #(

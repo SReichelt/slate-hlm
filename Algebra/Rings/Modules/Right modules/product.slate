@@ -33,10 +33,7 @@ $product(
       value = $../../../../Essentials/Operations/value(
         X = M,
         Y = $../../Carrier(𝐑 = 𝐑),
-        Z = M,
-        ∗ = ⊙,
-        x = x,
-        y = a
+        Z = M, ∗ = ⊙, x = x, y = a
       )
     }]
   )]

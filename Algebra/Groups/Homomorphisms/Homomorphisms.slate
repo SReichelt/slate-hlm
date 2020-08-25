@@ -42,14 +42,12 @@ $Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
               a = $../../../Essentials/Functions/value(
                 X = $../Carrier(𝐆 = 𝐆),
                 Y = $../Carrier(𝐆 = 𝐇),
-                f = f,
-                x = a
+                f = f, x = a
               ),
               b = $../../../Essentials/Functions/value(
                 X = $../Carrier(𝐆 = 𝐆),
                 Y = $../Carrier(𝐆 = 𝐇),
-                f = f,
-                x = b
+                f = f, x = b
               )
             )
           )
@@ -77,8 +75,7 @@ $Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
               a = $../../../Essentials/Functions/value(
                 X = $../Carrier(𝐆 = 𝐆),
                 Y = $../Carrier(𝐆 = 𝐇),
-                f = f,
-                x = c
+                f = f, x = c
               )
             )
           )
@@ -104,14 +101,12 @@ $Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
             a = $../../../Essentials/Functions/value(
               X = $../Carrier(𝐆 = 𝐆),
               Y = $../Carrier(𝐆 = 𝐇),
-              f = f,
-              x = a
+              f = f, x = a
             ),
             b = $../../../Essentials/Functions/value(
               X = $../Carrier(𝐆 = 𝐆),
               Y = $../Carrier(𝐆 = 𝐇),
-              f = f,
-              x = b
+              f = f, x = b
             )
           )
         )

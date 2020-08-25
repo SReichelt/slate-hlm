@@ -23,8 +23,7 @@ $"greatest element"(
   definition = [
     $"upper bound"(S = S, ≺ = ⪯, T = T, s = t),
     $"least element"(
-      S = S,
-      T = T,
+      S = S, T = T,
       ⪯ = $converse(S = S, T = S, ≺ = ⪯),
       t = t
     )

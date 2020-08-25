@@ -24,18 +24,11 @@ $group(
       #(a: %Element(G)),
       %equals(
         $../../Essentials/Operations/value(
-          X = G,
-          Y = G,
-          Z = G,
-          ∗ = ∗,
-          x = a,
+          X = G, Y = G, Z = G, ∗ = ∗, x = a,
           y = $../../Essentials/Functions/value(X = G, Y = G, f = i, x = a)
         ),
         $../../Essentials/Operations/value(
-          X = G,
-          Y = G,
-          Z = G,
-          ∗ = ∗,
+          X = G, Y = G, Z = G, ∗ = ∗,
           x = $../../Essentials/Functions/value(X = G, Y = G, f = i, x = a),
           y = a
         ),

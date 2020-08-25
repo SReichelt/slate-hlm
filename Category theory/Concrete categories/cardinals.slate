@@ -35,8 +35,7 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
               X = $../../Essentials/Numbers/Cardinal/Carrier(κ = 𝐃),
               Y = $../../Essentials/Numbers/Cardinal/Carrier(κ = 𝐄),
               Z = $../../Essentials/Numbers/Cardinal/Carrier(κ = 𝐅),
-              f = φ,
-              g = ψ
+              f = φ, g = ψ
             )}
         })}
       }

@@ -6,8 +6,7 @@ $"Inverse of inverse yields original"(
 ): %StandardTheorem {
   claim = %equals(
     $inverse(
-      X = Y,
-      Y = X,
+      X = Y, Y = X,
       f = $inverse(X = X, Y = Y, f = f)
     ),
     f

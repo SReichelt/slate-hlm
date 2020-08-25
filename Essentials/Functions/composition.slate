@@ -20,9 +20,7 @@ $composition(
   definition = [$Functions(X = X, Y = Z).function(_1 = {
       #(x: %Element(X)),
       {y = $value(
-        X = Y,
-        Y = Z,
-        f = g,
+        X = Y, Y = Z, f = g,
         x = $value(X = X, Y = Y, f = f, x = x)
       )}
   })]

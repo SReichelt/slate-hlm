@@ -3,8 +3,7 @@
 $inverse(a: %Element($"Complex numbers")): %ExplicitOperator {
   notation = $NegationOperator(operand = a),
   definition = [%structuralCases(
-    a,
-    $"Complex numbers",
+    a, $"Complex numbers",
     [{
       constructor = $"Complex numbers".complex,
       parameters = #(r_a,i_a: %Element($../Real/"Real numbers")),

@@ -12,8 +12,7 @@ $before(
 ): %Predicate {
   notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [%structural(
-    α,
-    $"Ordinal numbers",
+    α, $"Ordinal numbers",
     [{
       constructor = $"Ordinal numbers"."order type",
       parameters = #(

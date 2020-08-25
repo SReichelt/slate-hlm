@@ -3,8 +3,7 @@
 $identity(𝐌: %Element($Monoids)): %ExplicitOperator {
   notation = $SubSup(body = 'e', sub = 𝐌),
   definition = [%structuralCases(
-    𝐌,
-    $Monoids,
+    𝐌, $Monoids,
     [{
       constructor = $Monoids.monoid,
       parameters = #(

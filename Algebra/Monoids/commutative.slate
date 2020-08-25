@@ -6,8 +6,7 @@
 $commutative(𝐌: %Element($Monoids)): %Predicate {
   notation = $Property(operand = 𝐌, property = 'commutative'),
   definition = [%structural(
-    𝐌,
-    $Monoids,
+    𝐌, $Monoids,
     [{
       constructor = $Monoids.monoid,
       parameters = #(

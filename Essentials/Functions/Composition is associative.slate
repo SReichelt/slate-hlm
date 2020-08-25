@@ -15,16 +15,11 @@ $"Composition is associative"(
 ): %StandardTheorem {
   claim = %equals(
     $composition(
-      X = W,
-      Y = X,
-      Z = Z,
-      f = f,
+      X = W, Y = X, Z = Z, f = f,
       g = $composition(X = X, Y = Y, Z = Z, f = g, g = h)
     ),
     $composition(
-      X = W,
-      Y = Y,
-      Z = Z,
+      X = W, Y = Y, Z = Z,
       f = $composition(X = W, Y = X, Z = Y, f = f, g = g),
       g = h
     )

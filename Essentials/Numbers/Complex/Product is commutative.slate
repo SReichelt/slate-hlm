@@ -2,8 +2,7 @@
 
 $"Product is commutative": %StandardTheorem {
   claim = $../../Operations/commutative(
-    X = $"Complex numbers",
-    Z = $"Complex numbers",
+    X = $"Complex numbers", Z = $"Complex numbers",
     ∗ = $../../Operations/Operations(X = $"Complex numbers", Y = $"Complex numbers", Z = $"Complex numbers").operation(_1 = {
         #(a,b: %Element($"Complex numbers")),
         {z = $product(a = a, b = b)}

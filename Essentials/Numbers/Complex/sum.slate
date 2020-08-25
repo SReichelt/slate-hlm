@@ -6,14 +6,12 @@
 $sum(a,b: %Element($"Complex numbers")): %ExplicitOperator {
   notation = $AdditionOperator(operands = [a, b]),
   definition = [%structuralCases(
-    b,
-    $"Complex numbers",
+    b, $"Complex numbers",
     [{
       constructor = $"Complex numbers".complex,
       parameters = #(r_b,i_b: %Element($../Real/"Real numbers")),
       value = %structuralCases(
-        a,
-        $"Complex numbers",
+        a, $"Complex numbers",
         [{
           constructor = $"Complex numbers".complex,
           parameters = #(r_a,i_a: %Element($../Real/"Real numbers")),

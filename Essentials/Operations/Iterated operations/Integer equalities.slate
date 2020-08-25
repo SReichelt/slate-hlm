@@ -11,18 +11,14 @@ $"Integer equalities"(
 ): %StandardTheorem {
   claim = %equals(
     $"indexed by integer"(
-      X = X,
-      ⨂ = ⨂,
-      j = j,
-      k = k,
+      X = X, ⨂ = ⨂, j = j, k = k,
       _1 = {
         #(i: %Element($../../Numbers/Integer/Subsets/Interval(a = j, b = k))),
         {a = a[i = i]}
       }
     ),
     $"indexed by finite set"(
-      X = X,
-      ⨂ = ⨂,
+      X = X, ⨂ = ⨂,
       I = $../../Numbers/Integer/Subsets/Interval(a = j, b = k),
       _2 = {
         #(i: %Element($../../Numbers/Integer/Subsets/Interval(a = j, b = k))),

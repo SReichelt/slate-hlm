@@ -30,7 +30,10 @@ $converges(
           formula = %forall(
             #(m: %Element($../../Natural/Subsets/"Segment (greater or equal)"(n = n))),
             $../less(
-              a = $../absolute(a = $../difference(a = a[n = m], b = l)),
+              a = $../absolute(a = $../difference(
+                a = a[n = m],
+                b = l
+              )),
               b = ε
             )
           )

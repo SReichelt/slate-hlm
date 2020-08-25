@@ -9,8 +9,7 @@ $"additive group"(𝐑: %Element($Rings)): %ExplicitOperator {
     style = '[]'
   ),
   definition = [%structuralCases(
-    𝐑,
-    $Rings,
+    𝐑, $Rings,
     [{
       constructor = $Rings.ring,
       parameters = #(

@@ -24,8 +24,7 @@ $sum(
         ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
         ⊙: %Element($../../../../Essentials/Operations/Operations(
           X = $../../Carrier(𝐑 = 𝐑),
-          Y = M,
-          Z = M
+          Y = M, Z = M
         )),
         _1: %Constraint($"left module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),

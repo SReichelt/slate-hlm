@@ -13,9 +13,7 @@ $"transitive closure"(
 ): %ExplicitOperator {
   notation = $SubSup(body = ≺, sup = '+'),
   definition = [$closure(
-    S = S,
-    T = S,
-    ≺ = ≺,
+    S = S, T = S, ≺ = ≺,
     p = $../../Properties/Properties(S = $../Relations(S = S, T = S)).property(_1 = {
         #(≺: %Element($../Relations(S = S, T = S))),
         {p = $../transitive(S = S, ≺ = ≺)}

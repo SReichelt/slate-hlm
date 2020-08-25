@@ -3,8 +3,7 @@
 $one(𝐑: %Element($Rings)): %ExplicitOperator {
   notation = $SubSup(body = '1', sub = 𝐑),
   definition = [%structuralCases(
-    𝐑,
-    $Rings,
+    𝐑, $Rings,
     [{
       constructor = $Rings.ring,
       parameters = #(

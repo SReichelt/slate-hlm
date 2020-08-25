@@ -33,8 +33,7 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
               X = $../../Algebra/Monoids/Carrier(𝐌 = 𝐃),
               Y = $../../Algebra/Monoids/Carrier(𝐌 = 𝐄),
               Z = $../../Algebra/Monoids/Carrier(𝐌 = 𝐅),
-              f = φ,
-              g = ψ
+              f = φ, g = ψ
             )}
         })}
       }

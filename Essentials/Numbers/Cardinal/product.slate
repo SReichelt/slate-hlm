@@ -9,14 +9,12 @@
 $product(κ,μ: %Element($"Cardinal numbers")): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [κ, μ]),
   definition = [%structuralCases(
-    μ,
-    $"Cardinal numbers",
+    μ, $"Cardinal numbers",
     [{
       constructor = $"Cardinal numbers".cardinality,
       parameters = #(J: %Set),
       value = %structuralCases(
-        κ,
-        $"Cardinal numbers",
+        κ, $"Cardinal numbers",
         [{
           constructor = $"Cardinal numbers".cardinality,
           parameters = #(K: %Set),

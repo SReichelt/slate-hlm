@@ -25,7 +25,10 @@ $cauchy(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = $../"Rationa
           formula = %forall(
             #(l,m: %Element($../../Natural/Subsets/"Segment (greater or equal)"(n = n))),
             $../less(
-              a = $../absolute(a = $../difference(a = a[n = l], b = a[n = m])),
+              a = $../absolute(a = $../difference(
+                a = a[n = l],
+                b = a[n = m]
+              )),
               b = ε
             )
           )

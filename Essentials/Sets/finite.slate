@@ -207,10 +207,7 @@ $finite(S: %Set): %Predicate {
           Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = k),
           f = f
         )),
-        _: %ProveExists({
-          m = k,
-          h = f
-        })
+        _: %ProveExists({m = k, h = f})
       )
     },
     {
@@ -253,8 +250,7 @@ $finite(S: %Set): %Predicate {
         _: %ProveExists({
           n = m,
           i = $../Functions/"generalized restriction"(
-            X = S,
-            A = S,
+            X = S, A = S,
             B = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = m),
             Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = m),
             f = h

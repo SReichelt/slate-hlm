@@ -41,7 +41,11 @@ $difference(
                 i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
                 j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
               ),
-              {a = $../difference(𝐑 = 𝐑, a = a[i = i, j = j], b = b[i = i, j = j])}
+              {a = $../difference(
+                𝐑 = 𝐑,
+                a = a[i = i, j = j],
+                b = b[i = i, j = j]
+              )}
           })
         }]
       )

@@ -18,15 +18,11 @@ $"monomial with exponent one"(
   ),
   definition = [
     $monomial(
-      𝐑 = 𝐑,
-      X = X,
-      a = a,
+      𝐑 = 𝐑, X = X, a = a,
       n = $../../../Essentials/Numbers/Natural/number(value = 1)
     ),
     $normalized(
-      𝐑 = 𝐑,
-      X = X,
-      p = a,
+      𝐑 = 𝐑, X = X, p = a,
       a = $Polynomials(𝐑 = 𝐑, X = X).zero
     ),
     %cases([

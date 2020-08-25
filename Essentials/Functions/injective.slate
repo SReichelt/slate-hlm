@@ -27,9 +27,7 @@ $injective(
       #(
         c: %Element(Y),
         d,e: %Element($Preimage(
-          X = X,
-          Y = Y,
-          f = f,
+          X = X, Y = Y, f = f,
           S = %enumeration(c)
         ))
       ),

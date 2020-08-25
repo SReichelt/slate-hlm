@@ -14,8 +14,7 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
     $"Natural numbers".successor(n = $sum(m = m, n = n))
   ),
   proofs = [{steps = #(_: %ProveByInduction(
-    n,
-    $"Natural numbers",
+    n, $"Natural numbers",
     [
       {
         constructor = $"Natural numbers".zero,

@@ -42,11 +42,7 @@ $"Generalized disjoint union"(
             #(k: %Element(I)),
             {S = S[i = k]}
           },
-          ≃ = ≃,
-          a = j,
-          b = k,
-          s = s,
-          t = t
+          ≃ = ≃, a = j, b = k, s = s, t = t
         )
       )],
       isomorphic = %true

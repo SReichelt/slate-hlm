@@ -13,8 +13,7 @@ $"Nonzero numbers": %SetOperator {
     ),
     $../../../Sets/Union(
       U = $../"Real numbers",
-      S = $"Negative numbers",
-      T = $"Positive numbers"
+      S = $"Negative numbers", T = $"Positive numbers"
     )
   ]
 }

@@ -9,8 +9,7 @@
 $product(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [α, β]),
   definition = [%structuralCases(
-    β,
-    $"Ordinal numbers",
+    β, $"Ordinal numbers",
     [{
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
@@ -19,8 +18,7 @@ $product(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
         _1: %Constraint($../../Relations/"well-order"(S = B, ⪯ = ⊑))
       ),
       value = %structuralCases(
-        α,
-        $"Ordinal numbers",
+        α, $"Ordinal numbers",
         [{
           constructor = $"Ordinal numbers"."order type",
           parameters = #(

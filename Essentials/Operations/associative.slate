@@ -15,19 +15,12 @@ $associative(
     #(x,y,z: %Element(X)),
     %equals(
       $value(
-        X = X,
-        Y = X,
-        Z = X,
-        ∗ = ∗,
+        X = X, Y = X, Z = X, ∗ = ∗,
         x = $value(X = X, Y = X, Z = X, ∗ = ∗, x = x, y = y),
         y = z
       ),
       $value(
-        X = X,
-        Y = X,
-        Z = X,
-        ∗ = ∗,
-        x = x,
+        X = X, Y = X, Z = X, ∗ = ∗, x = x,
         y = $value(X = X, Y = X, Z = X, ∗ = ∗, x = y, y = z)
       )
     )

@@ -24,9 +24,7 @@ $"indexed by set with finite support"(
     maxParenLevel = 1
   ),
   definition = [$"indexed by finite set"(
-    X = X,
-    ⨂ = ⨂,
-    I = J,
+    X = X, ⨂ = ⨂, I = J,
     _2 = {
       #(j: %Element(J)),
       {a = a[i = j]}

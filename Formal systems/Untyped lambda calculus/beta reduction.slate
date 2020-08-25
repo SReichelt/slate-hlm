@@ -37,8 +37,7 @@ $"beta reduction"(
             T = %enumeration(y)
           ),
           T = M[x = y],
-          x = y,
-          R = N
+          x = y, R = N
         )
     )
   )]

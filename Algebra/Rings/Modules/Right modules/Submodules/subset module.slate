@@ -38,8 +38,7 @@ $"subset module"(
           ⊙ = $../../../../../Essentials/Operations/"right operation restriction"(
             X = M,
             Y = $../../../Carrier(𝐑 = 𝐑),
-            A = S,
-            ∗ = ⊙
+            A = S, ∗ = ⊙
           )
       )
     }]

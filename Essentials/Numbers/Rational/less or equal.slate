@@ -9,8 +9,7 @@ $"less or equal"(a,b: %Element($"Rational numbers")): %Predicate {
   properties = {negation = $less(b = a, a = b)},
   notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [%structural(
-    b,
-    $"Rational numbers",
+    b, $"Rational numbers",
     [{
       constructor = $"Rational numbers".quotient,
       parameters = #(
@@ -18,8 +17,7 @@ $"less or equal"(a,b: %Element($"Rational numbers")): %Predicate {
         d_b: %Element($../Natural/Subsets/"Positive numbers")
       ),
       value = %structural(
-        a,
-        $"Rational numbers",
+        a, $"Rational numbers",
         [{
           constructor = $"Rational numbers".quotient,
           parameters = #(

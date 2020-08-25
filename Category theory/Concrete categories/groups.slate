@@ -35,8 +35,7 @@ $groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
               X = $../../Algebra/Groups/Carrier(𝐆 = 𝐃),
               Y = $../../Algebra/Groups/Carrier(𝐆 = 𝐄),
               Z = $../../Algebra/Groups/Carrier(𝐆 = 𝐅),
-              f = φ,
-              g = ψ
+              f = φ, g = ψ
             )}
         })}
       }

@@ -31,25 +31,16 @@ $ring(
         #(a,b: %Element(R)),
         %equals(
           $../../Essentials/Operations/value(
-            X = R,
-            Y = R,
-            Z = R,
-            ∗ = ⊙,
-            x = a,
+            X = R, Y = R, Z = R, ∗ = ⊙, x = a,
             y = $../../Essentials/Functions/value(X = R, Y = R, f = ⊖, x = b)
           ),
           $../../Essentials/Operations/value(
-            X = R,
-            Y = R,
-            Z = R,
-            ∗ = ⊙,
+            X = R, Y = R, Z = R, ∗ = ⊙,
             x = $../../Essentials/Functions/value(X = R, Y = R, f = ⊖, x = a),
             y = b
           ),
           $../../Essentials/Functions/value(
-            X = R,
-            Y = R,
-            f = ⊖,
+            X = R, Y = R, f = ⊖,
             x = $../../Essentials/Operations/value(X = R, Y = R, Z = R, ∗ = ⊙, x = a, y = b)
           )
         )
@@ -66,18 +57,11 @@ $ring(
         #(a: %Element(R)),
         %equals(
           $../../Essentials/Operations/value(
-            X = R,
-            Y = R,
-            Z = R,
-            ∗ = ⊕,
-            x = a,
+            X = R, Y = R, Z = R, ∗ = ⊕, x = a,
             y = $../../Essentials/Functions/value(X = R, Y = R, f = ⊖, x = a)
           ),
           $../../Essentials/Operations/value(
-            X = R,
-            Y = R,
-            Z = R,
-            ∗ = ⊕,
+            X = R, Y = R, Z = R, ∗ = ⊕,
             x = $../../Essentials/Functions/value(X = R, Y = R, f = ⊖, x = a),
             y = a
           ),

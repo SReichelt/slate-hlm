@@ -5,8 +5,7 @@
  */
 $"Sum is commutative": %StandardTheorem {
   claim = $../../Operations/commutative(
-    X = $Integers,
-    Z = $Integers,
+    X = $Integers, Z = $Integers,
     ∗ = $../../Operations/Operations(X = $Integers, Y = $Integers, Z = $Integers).operation(_1 = {
         #(a,b: %Element($Integers)),
         {z = $sum(a = a, b = b)}

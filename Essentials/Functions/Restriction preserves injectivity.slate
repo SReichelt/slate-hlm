@@ -8,8 +8,7 @@ $"Restriction preserves injectivity"(
   _1: %Constraint($injective(X = X, Y = Y, f = f))
 ): %StandardTheorem {
   claim = $injective(
-    X = A,
-    Y = Y,
+    X = A, Y = Y,
     f = $restriction(X = X, A = A, Y = Y, f = f)
   )
 }

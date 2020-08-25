@@ -38,8 +38,7 @@ $"product with right scalar"(
           ))
         ),
         value = $normalized(
-          𝐑 = 𝐑,
-          X = X,
+          𝐑 = 𝐑, X = X,
           p = $"product with right scalar"(𝐑 = 𝐑, X = X, p = q, a = a),
           a = $../product(𝐑 = 𝐑, a = b, b = a)
         )

@@ -27,21 +27,14 @@ $identity(
     $"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = F).transformation(_1 = {
         #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
         {n = $../identity(
-          u = v,
-          𝓒 = 𝓓,
+          u = v, 𝓒 = 𝓓,
           𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗)
         )}
     }),
     $"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = F).transformation(_1 = {
         #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
         {n = $../Functors/"morphism value"(
-          u = u,
-          v = v,
-          𝓒 = 𝓒,
-          𝓓 = 𝓓,
-          F = F,
-          𝐗 = 𝐗,
-          𝐘 = 𝐗,
+          u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗, 𝐘 = 𝐗,
           f = $../identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗)
         )}
     })

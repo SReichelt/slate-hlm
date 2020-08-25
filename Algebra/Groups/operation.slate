@@ -12,8 +12,7 @@ $operation(
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(operands = [a, b]),
   definition = [%structuralCases(
-    𝐆,
-    $Groups,
+    𝐆, $Groups,
     [{
       constructor = $Groups.group,
       parameters = #(

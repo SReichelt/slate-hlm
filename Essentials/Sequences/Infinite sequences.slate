@@ -34,7 +34,10 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
       )),
       definition = [%forall(
         #(n: %Element($../Numbers/Natural/"Natural numbers")),
-        %equals(a[n = n], b[n = n])
+        %equals(
+          a[n = n],
+          b[n = n]
+        )
       )],
       isomorphic = %true
     }

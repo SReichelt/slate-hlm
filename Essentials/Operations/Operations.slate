@@ -65,7 +65,10 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
           x: %Element(X),
           y: %Element(Y)
         ),
-        %equals(z[x = x, y = y], "z'"[x = x, y = y])
+        %equals(
+          z[x = x, y = y],
+          "z'"[x = x, y = y]
+        )
       )],
       isomorphic = %true
     }
@@ -103,8 +106,7 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
         ),
         {z = $../Functions/value(
           X = $../Sets/"Cartesian product"(S = X, T = Y),
-          Y = Z,
-          f = f,
+          Y = Z, f = f,
           x = $../Sets/"Cartesian product"(S = X, T = Y).pair(s = x, t = y)
         )}
     }),

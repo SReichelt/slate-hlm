@@ -43,19 +43,16 @@ $Homomorphisms(
               x = $../sum(𝐑 = 𝐑, 𝐌 = 𝐌, x = x, y = y)
             ),
             $../sum(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍,
+              𝐑 = 𝐑, 𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
                 Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
-                f = f,
-                x = x
+                f = f, x = x
               ),
               y = $../../../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
                 Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
-                f = f,
-                x = y
+                f = f, x = y
               )
             )
           )
@@ -79,13 +76,11 @@ $Homomorphisms(
               x = $../"additive inverse"(𝐑 = 𝐑, 𝐌 = 𝐌, x = z)
             ),
             $../"additive inverse"(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍,
+              𝐑 = 𝐑, 𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
                 Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
-                f = f,
-                x = z
+                f = f, x = z
               )
             )
           )
@@ -103,14 +98,11 @@ $Homomorphisms(
               x = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = a, x = w)
             ),
             $../product(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍,
-              a = a,
+              𝐑 = 𝐑, 𝐌 = 𝐍, a = a,
               x = $../../../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
                 Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
-                f = f,
-                x = w
+                f = f, x = w
               )
             )
           )
@@ -133,35 +125,27 @@ $Homomorphisms(
             Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
             f = f,
             x = $../sum(
-              𝐑 = 𝐑,
-              𝐌 = 𝐌,
+              𝐑 = 𝐑, 𝐌 = 𝐌,
               x = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = a, x = x),
               y = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = b, x = y)
             )
           ),
           $../sum(
-            𝐑 = 𝐑,
-            𝐌 = 𝐍,
+            𝐑 = 𝐑, 𝐌 = 𝐍,
             x = $../product(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍,
-              a = a,
+              𝐑 = 𝐑, 𝐌 = 𝐍, a = a,
               x = $../../../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
                 Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
-                f = f,
-                x = x
+                f = f, x = x
               )
             ),
             y = $../product(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍,
-              a = b,
+              𝐑 = 𝐑, 𝐌 = 𝐍, a = b,
               x = $../../../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
                 Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
-                f = f,
-                x = y
+                f = f, x = y
               )
             )
           )

@@ -12,8 +12,7 @@ $"Iterated sum grows"(
   claim = $../"less or equal"(
     m = $../../../Operations/"Iterated operations"/"indexed by finite set"(
       X = $../"Natural numbers",
-      ⨂ = $"iterated sum",
-      I = J,
+      ⨂ = $"iterated sum", I = J,
       _2 = {
         #(i: %Element(J)),
         {a = a[i = i]}
@@ -21,8 +20,7 @@ $"Iterated sum grows"(
     ),
     n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
       X = $../"Natural numbers",
-      ⨂ = $"iterated sum",
-      I = I,
+      ⨂ = $"iterated sum", I = I,
       _2 = {
         #(i: %Element(I)),
         {a = a[i = i]}

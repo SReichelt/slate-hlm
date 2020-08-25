@@ -6,8 +6,7 @@ $"Extension preserves surjectivity"(
   Y: %Set(auto = %true),
   f: %Element($Functions(X = X, Y = Y)),
   _1: %Constraint($surjective(
-    X = A,
-    Y = Y,
+    X = A, Y = Y,
     f = $restriction(X = X, A = A, Y = Y, f = f)
   ))
 ): %StandardTheorem {

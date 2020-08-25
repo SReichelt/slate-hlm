@@ -38,8 +38,14 @@ $"inner operation condition"(
             value = %forall(
               #(x_1,x_2: %Element(X)),
               %equals(
-                $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = a[x_1 = x_1, x_2 = x_2]),
-                b[y_1 = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_1), y_2 = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_2)]
+                $../../../Essentials/Functions/value(
+                  X = X, Y = Y, f = φ,
+                  x = a[x_1 = x_1, x_2 = x_2]
+                ),
+                b[
+                  y_1 = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_1),
+                  y_2 = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_2)
+                ]
               )
             )
           }]
@@ -50,16 +56,11 @@ $"inner operation condition"(
       #(x_1,x_2: %Element(X)),
       %equals(
         $../../../Essentials/Functions/value(
-          X = X,
-          Y = Y,
-          f = φ,
+          X = X, Y = Y, f = φ,
           x = $../../../Essentials/Operations/value(X = X, Y = X, Z = X, ∗ = ∗, x = x_1, y = x_2)
         ),
         $../../../Essentials/Operations/value(
-          X = Y,
-          Y = Y,
-          Z = Y,
-          ∗ = ⋆,
+          X = Y, Y = Y, Z = Y, ∗ = ⋆,
           x = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_1),
           y = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_2)
         )
@@ -68,16 +69,12 @@ $"inner operation condition"(
     %equals(
       $../../../Essentials/Functions/composition(
         X = $../../../Essentials/Sets/"Cartesian product"(S = X, T = X),
-        Y = X,
-        Z = Y,
-        g = φ,
-        f = ∗
+        Y = X, Z = Y, g = φ, f = ∗
       ),
       $../../../Essentials/Functions/composition(
         X = $../../../Essentials/Sets/"Cartesian product"(S = X, T = X),
         Y = $../../../Essentials/Sets/"Cartesian product"(S = Y, T = Y),
-        Z = Y,
-        g = ⋆,
+        Z = Y, g = ⋆,
         f = $../../../Essentials/Functions/"cartesian product"(V = X, W = Y, X = X, Y = Y, f = φ, g = φ)
       )
     )

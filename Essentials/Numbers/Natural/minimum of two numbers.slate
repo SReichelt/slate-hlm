@@ -23,8 +23,7 @@ $"minimum of two numbers"(m,n: %Element($"Natural numbers")): %ExplicitOperator 
       }
     ]),
     %structuralCases(
-      n,
-      $"Natural numbers",
+      n, $"Natural numbers",
       [
         {
           constructor = $"Natural numbers".zero,
@@ -35,8 +34,7 @@ $"minimum of two numbers"(m,n: %Element($"Natural numbers")): %ExplicitOperator 
           constructor = $"Natural numbers".successor,
           parameters = #(y: %Element($"Natural numbers")),
           value = %structuralCases(
-            m,
-            $"Natural numbers",
+            m, $"Natural numbers",
             [
               {
                 constructor = $"Natural numbers".zero,

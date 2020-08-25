@@ -10,8 +10,7 @@ $"Operation on empty set"(
 ): %StandardTheorem {
   claim = %equals(
     $"indexed by finite set"(
-      X = X,
-      ⨂ = ⨂,
+      X = X, ⨂ = ⨂,
       I = $../../Sets/"Empty set",
       _2 = {
         #(i: %Element($../../Sets/"Empty set")),

@@ -48,14 +48,12 @@ $Isomorphisms(𝐌,𝐍: %Element($../Magmas)): %SetOperator {
             a = $../../../Essentials/Functions/value(
               X = $../Carrier(𝐌 = 𝐌),
               Y = $../Carrier(𝐌 = 𝐍),
-              f = f,
-              x = a
+              f = f, x = a
             ),
             b = $../../../Essentials/Functions/value(
               X = $../Carrier(𝐌 = 𝐌),
               Y = $../Carrier(𝐌 = 𝐍),
-              f = f,
-              x = b
+              f = f, x = b
             )
           )
         )

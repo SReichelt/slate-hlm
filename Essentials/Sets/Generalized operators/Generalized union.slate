@@ -21,7 +21,10 @@ $"Generalized union"(
     #(x: %Element(U)),
     %exists(
       #(j: %Element(I)),
-      formula = %in(x, S[i = j])
+      formula = %in(
+        x,
+        S[i = j]
+      )
     )
   )]
 }

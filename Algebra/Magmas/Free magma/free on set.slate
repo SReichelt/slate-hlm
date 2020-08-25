@@ -27,8 +27,7 @@ $"free on set"(
           $../../../Essentials/Functions/restriction(
             X = $../Carrier(𝐌 = 𝐌),
             Y = $../Carrier(𝐌 = 𝐍),
-            A = S,
-            f = φ
+            A = S, f = φ
           ),
           f
         )

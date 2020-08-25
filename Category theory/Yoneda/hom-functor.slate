@@ -21,9 +21,7 @@ $"hom-functor"(
     arguments = [𝐀, '−']
   ),
   definition = [$../Functors/Functors(
-      u = u,
-      v = v,
-      𝓒 = 𝓒,
+      u = u, v = v, 𝓒 = 𝓒,
       𝓓 = $../"Concrete categories"/cardinals(u = v)
     ).functor(
       _1 = {

@@ -10,8 +10,7 @@
 $sum(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
   notation = $AdditionOperator(operands = [α, β]),
   definition = [%structuralCases(
-    β,
-    $"Ordinal numbers",
+    β, $"Ordinal numbers",
     [{
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
@@ -20,8 +19,7 @@ $sum(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
         _1: %Constraint($../../Relations/"well-order"(S = B, ⪯ = ⊑))
       ),
       value = %structuralCases(
-        α,
-        $"Ordinal numbers",
+        α, $"Ordinal numbers",
         [{
           constructor = $"Ordinal numbers"."order type",
           parameters = #(

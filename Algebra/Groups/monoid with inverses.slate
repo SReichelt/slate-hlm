@@ -20,9 +20,7 @@ $"monoid with inverses"(
         _1: %Constraint($../Monoids/monoid(M = M, ∗ = ∗, e = e))
       ),
       value = $Groups.group(
-        G = M,
-        ∗ = ∗,
-        e = e,
+        G = M, ∗ = ∗, e = e,
         i = $../../Essentials/Functions/Functions(X = M, Y = M).function(_1 = {
             #(a: %Element(M)),
             {y = $../Monoids/inverse(𝐌 = 𝐌, a = a)}

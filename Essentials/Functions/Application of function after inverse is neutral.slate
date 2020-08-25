@@ -7,12 +7,9 @@ $"Application of function after inverse is neutral"(
 ): %StandardTheorem {
   claim = %equals(
     $value(
-      X = X,
-      Y = Y,
-      f = f,
+      X = X, Y = Y, f = f,
       x = $value(
-        X = Y,
-        Y = X,
+        X = Y, Y = X,
         f = $inverse(X = X, Y = Y, f = f),
         x = y
       )

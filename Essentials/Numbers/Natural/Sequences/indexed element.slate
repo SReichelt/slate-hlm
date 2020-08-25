@@ -31,8 +31,7 @@ $"indexed element"(
         parameters = #(x: %Element($../"Natural numbers")),
         value = $"indexed element"(
           M = $../../../Sets/"Relative complement"(
-            U = M,
-            S = M,
+            U = M, S = M,
             T = %enumeration(m)
           ),
           n = x

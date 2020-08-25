@@ -10,8 +10,7 @@ $Carrier(𝐑: %Element($Semirings)): %SetOperator {
     notation = $ElementParameter(variable = a, set = 𝐑)
   },
   definition = [%setStructuralCases(
-    𝐑,
-    $Semirings,
+    𝐑, $Semirings,
     [{
       constructor = $Semirings.semiring,
       parameters = #(

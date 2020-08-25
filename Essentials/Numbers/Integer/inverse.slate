@@ -7,8 +7,7 @@
 $inverse(a: %Element($Integers)): %ExplicitOperator {
   notation = $NegationOperator(operand = a),
   definition = [%structuralCases(
-    a,
-    $Integers,
+    a, $Integers,
     [{
       constructor = $Integers.difference,
       parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),

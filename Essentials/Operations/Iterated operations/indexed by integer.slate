@@ -17,8 +17,7 @@ $"indexed by integer"(
     maxParenLevel = 1
   ),
   definition = [$"indexed by natural number"(
-    X = X,
-    ⨂ = ⨂,
+    X = X, ⨂ = ⨂,
     n = $../../Numbers/Integer/sum(
       a = %associative($../../Numbers/Integer/difference(a = k, b = j)),
       b = $../../Numbers/Natural/number(value = 1)

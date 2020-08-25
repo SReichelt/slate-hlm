@@ -8,8 +8,7 @@
 $inverse(a: %Element($"Rational numbers")): %ExplicitOperator {
   notation = $NegationOperator(operand = a),
   definition = [%structuralCases(
-    a,
-    $"Rational numbers",
+    a, $"Rational numbers",
     [{
       constructor = $"Rational numbers".quotient,
       parameters = #(

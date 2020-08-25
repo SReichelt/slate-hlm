@@ -34,8 +34,7 @@ $"Binomial theorem"(
           a = %associative($../product(
             𝐑 = 𝐑,
             a = $../"power to natural number"(
-              𝐑 = 𝐑,
-              a = a,
+              𝐑 = 𝐑, a = a,
               n = $../../../Essentials/Numbers/Natural/difference(n = n, m = k)
             ),
             b = $../"power to natural number"(𝐑 = 𝐑, a = b, n = k)

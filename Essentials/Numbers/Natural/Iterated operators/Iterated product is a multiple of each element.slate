@@ -13,8 +13,7 @@ $"Iterated product is a multiple of each element"(
     m = a[i = j],
     n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
       X = $../"Natural numbers",
-      ⨂ = $"iterated product",
-      I = I,
+      ⨂ = $"iterated product", I = I,
       _2 = {
         #(i: %Element(I)),
         {a = a[i = i]}

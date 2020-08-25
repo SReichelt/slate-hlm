@@ -44,14 +44,12 @@ $Isomorphisms(α,β: %Element($../"Ordinal numbers")): %SetOperator {
             a = $../../../Functions/value(
               X = $../Carrier(α = α),
               Y = $../Carrier(α = β),
-              f = f,
-              x = a
+              f = f, x = a
             ),
             b = $../../../Functions/value(
               X = $../Carrier(α = α),
               Y = $../Carrier(α = β),
-              f = f,
-              x = b
+              f = f, x = b
             )
           )
         )

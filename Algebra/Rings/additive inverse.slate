@@ -9,8 +9,7 @@ $"additive inverse"(
 ): %ExplicitOperator {
   notation = $NegationOperator(operand = a),
   definition = [%structuralCases(
-    𝐑,
-    $Rings,
+    𝐑, $Rings,
     [{
       constructor = $Rings.ring,
       parameters = #(

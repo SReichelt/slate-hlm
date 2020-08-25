@@ -31,7 +31,10 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       )),
       definition = [%forall(
         #(s,t: %Element(S)),
-        %equiv(p[s = s, t = t], q[s = s, t = t])
+        %equiv(
+          p[s = s, t = t],
+          q[s = s, t = t]
+        )
       )],
       isomorphic = %true
     }

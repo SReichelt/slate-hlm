@@ -11,14 +11,12 @@
 $sum(a,b: %Element($Integers)): %ExplicitOperator {
   notation = $AdditionOperator(operands = [a, b]),
   definition = [%structuralCases(
-    b,
-    $Integers,
+    b, $Integers,
     [{
       constructor = $Integers.difference,
       parameters = #(n_b,m_b: %Element($../Natural/"Natural numbers")),
       value = %structuralCases(
-        a,
-        $Integers,
+        a, $Integers,
         [{
           constructor = $Integers.difference,
           parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),

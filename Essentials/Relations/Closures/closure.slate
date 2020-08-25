@@ -21,13 +21,11 @@ $closure(
       %and(
         $../../Properties/implies(
           S = $../../Sets/"Cartesian product"(S = S, T = T),
-          p = ≺,
-          q = ⊂
+          p = ≺, q = ⊂
         ),
         $../../Properties/"has property"(
           S = $../Relations(S = S, T = T),
-          p = p,
-          s = ⊂
+          p = p, s = ⊂
         )
       )
     )

@@ -33,7 +33,10 @@ $"starts with"(
           )),
           value = %forall(
             #(k: %Element($../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
-            %equals(a[k = k], b[k = k])
+            %equals(
+              a[k = k],
+              b[k = k]
+            )
           )
         }]
       )

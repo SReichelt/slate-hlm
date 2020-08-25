@@ -61,8 +61,7 @@ $sum(
                 ))
               ),
               value = $normalized(
-                𝐑 = 𝐑,
-                X = X,
+                𝐑 = 𝐑, X = X,
                 p = $sum(𝐑 = 𝐑, X = X, p = r, q = s),
                 a = $../sum(𝐑 = 𝐑, a = a, b = b)
               )

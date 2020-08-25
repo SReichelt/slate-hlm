@@ -7,8 +7,7 @@ $"Induction lemma"(
 ): %StandardTheorem {
   claim = %in(n, M),
   proofs = [{steps = #(_: %ProveByInduction(
-    n,
-    $"Natural numbers",
+    n, $"Natural numbers",
     [
       {
         constructor = $"Natural numbers".zero,

@@ -10,9 +10,7 @@ $"Surjectivity by codomain restriction"(
     X = A,
     Y = $Image(X = X, Y = Y, f = f, S = A),
     f = $"codomain restriction"(
-      X = X,
-      A = A,
-      Y = Y,
+      X = X, A = A, Y = Y,
       B = $Image(X = X, Y = Y, f = f, S = A),
       f = f
     )

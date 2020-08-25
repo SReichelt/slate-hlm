@@ -37,11 +37,9 @@ $product(
           ))
         ),
         value = $sum(
-          𝐑 = 𝐑,
-          X = X,
+          𝐑 = 𝐑, X = X,
           p = $normalized(
-            𝐑 = 𝐑,
-            X = X,
+            𝐑 = 𝐑, X = X,
             p = $product(𝐑 = 𝐑, X = X, p = r, q = q),
             a = $../zero(𝐑 = 𝐑)
           ),

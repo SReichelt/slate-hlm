@@ -32,11 +32,7 @@ $composition(
       _1 = {
         #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
         {𝐘 = $"object value"(
-          u = v,
-          v = w,
-          𝓒 = 𝓓,
-          𝓓 = 𝓔,
-          F = G,
+          u = v, v = w, 𝓒 = 𝓓, 𝓓 = 𝓔, F = G,
           𝐗 = $"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗)
         )}
       },
@@ -46,11 +42,7 @@ $composition(
           f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
         ),
         {g = $"morphism value"(
-          u = v,
-          v = w,
-          𝓒 = 𝓓,
-          𝓓 = 𝓔,
-          F = G,
+          u = v, v = w, 𝓒 = 𝓓, 𝓓 = 𝓔, F = G,
           𝐗 = $"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐀),
           𝐘 = $"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐁),
           f = $"morphism value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐀, 𝐘 = 𝐁, f = f)

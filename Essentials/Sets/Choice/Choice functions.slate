@@ -34,8 +34,7 @@ $"Choice functions"(S: %Set): %SetOperator {
             S = $../"Power set"(S = S),
             T = %enumeration($../"Power set"(S = S).subset(T = $../"Empty set"))
           ),
-          Y = S,
-          f = f,
+          Y = S, f = f,
           x = $../"Power set"(S = S).subset(T = T)
         ),
         T

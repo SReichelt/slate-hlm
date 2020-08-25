@@ -11,8 +11,7 @@
 $factorial(n: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $PostfixUnaryOperator(symbol = '!', operand = n, minParenLevel = 3),
   definition = [%structuralCases(
-    n,
-    $"Natural numbers",
+    n, $"Natural numbers",
     [
       {
         constructor = $"Natural numbers".zero,

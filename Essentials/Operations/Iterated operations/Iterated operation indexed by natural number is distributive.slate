@@ -11,30 +11,27 @@ $"Iterated operation indexed by natural number is distributive"(
 ): %StandardTheorem {
   claim = %equals(
     $"indexed by natural number"(
-      X = X,
-      ⨂ = ⨂,
-      n = n,
+      X = X, ⨂ = ⨂, n = n,
       _1 = {
         #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
-        {a = $operation(X = X, ⨂ = ⨂, x = a[i = i], y = b[i = i])}
+        {a = $operation(
+          X = X, ⨂ = ⨂,
+          x = a[i = i],
+          y = b[i = i]
+        )}
       }
     ),
     $operation(
-      X = X,
-      ⨂ = ⨂,
+      X = X, ⨂ = ⨂,
       x = $"indexed by natural number"(
-        X = X,
-        ⨂ = ⨂,
-        n = n,
+        X = X, ⨂ = ⨂, n = n,
         _1 = {
           #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
           {a = a[i = i]}
         }
       ),
       y = $"indexed by natural number"(
-        X = X,
-        ⨂ = ⨂,
-        n = n,
+        X = X, ⨂ = ⨂, n = n,
         _1 = {
           #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
           {a = b[i = i]}

@@ -17,8 +17,7 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
     n
   ),
   proofs = [{steps = #(_: %ProveByInduction(
-    n,
-    $"Natural numbers",
+    n, $"Natural numbers",
     [
       {
         constructor = $"Natural numbers".zero,

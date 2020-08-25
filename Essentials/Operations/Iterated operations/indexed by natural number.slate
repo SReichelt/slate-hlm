@@ -28,12 +28,9 @@ $"indexed by natural number"(
         constructor = $../../Numbers/Natural/"Natural numbers".successor,
         parameters = #(m: %Element($../../Numbers/Natural/"Natural numbers")),
         value = $operation(
-          X = X,
-          ⨂ = ⨂,
+          X = X, ⨂ = ⨂,
           x = $"indexed by natural number"(
-            X = X,
-            ⨂ = ⨂,
-            n = m,
+            X = X, ⨂ = ⨂, n = m,
             _1 = {
               #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = m))),
               {a = a[i = j]}

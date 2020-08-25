@@ -9,8 +9,7 @@ $inverse(
 ): %ExplicitOperator {
   notation = $Inverse(term = a),
   definition = [%structuralCases(
-    𝐆,
-    $Groups,
+    𝐆, $Groups,
     [{
       constructor = $Groups.group,
       parameters = #(

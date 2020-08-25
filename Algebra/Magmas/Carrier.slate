@@ -10,8 +10,7 @@ $Carrier(𝐌: %Element($Magmas)): %SetOperator {
     notation = $ElementParameter(variable = a, set = 𝐌)
   },
   definition = [%setStructuralCases(
-    𝐌,
-    $Magmas,
+    𝐌, $Magmas,
     [{
       constructor = $Magmas.magma,
       parameters = #(

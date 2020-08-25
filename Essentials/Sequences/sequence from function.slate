@@ -18,9 +18,7 @@ $"sequence from function"(
       #(n: %Element($../Numbers/Natural/"Natural numbers")),
       {a = $../Functions/value(
         X = $../Numbers/Natural/"Natural numbers",
-        Y = S,
-        f = f,
-        x = n
+        Y = S, f = f, x = n
       )}
   })]
 }

@@ -22,9 +22,7 @@ $"tuple from function"(
       #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
       {a = $../Functions/value(
         X = $../Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
-        Y = S,
-        f = f,
-        x = k
+        Y = S, f = f, x = k
       )}
   })]
 }

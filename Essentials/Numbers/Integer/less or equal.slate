@@ -10,14 +10,12 @@ $"less or equal"(a,b: %Element($Integers)): %Predicate {
   notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [
     %structural(
-      b,
-      $Integers,
+      b, $Integers,
       [{
         constructor = $Integers.difference,
         parameters = #(n_b,m_b: %Element($../Natural/"Natural numbers")),
         value = %structural(
-          a,
-          $Integers,
+          a, $Integers,
           [{
             constructor = $Integers.difference,
             parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),

@@ -23,9 +23,7 @@ $"column vector space"(
             {z = $../../../Algebra/Rings/Matrices/sum(
               𝐑 = 𝐅,
               m = $../../../Essentials/Numbers/Natural/number(value = 1),
-              n = n,
-              A = v,
-              B = w
+              n = n, A = v, B = w
             )}
         }),
         "0" = $../../../Algebra/Rings/Matrices/zero(
@@ -41,8 +39,7 @@ $"column vector space"(
             {y = $../../../Algebra/Rings/Matrices/"additive inverse"(
               𝐑 = 𝐅,
               m = $../../../Essentials/Numbers/Natural/number(value = 1),
-              n = n,
-              A = v
+              n = n, A = v
             )}
         }),
         ⊙ = $../../../Essentials/Operations/Operations(
@@ -57,9 +54,7 @@ $"column vector space"(
             {z = $../../../Algebra/Rings/Matrices/"product with left scalar"(
               𝐑 = 𝐅,
               m = $../../../Essentials/Numbers/Natural/number(value = 1),
-              n = n,
-              r = a,
-              A = v
+              n = n, r = a, A = v
             )}
         })
     ),

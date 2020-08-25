@@ -28,8 +28,7 @@ $"subset module"(
         ⊖: %Element($../../../../../Essentials/Functions/Functions(X = M, Y = M)),
         ⊙: %Element($../../../../../Essentials/Operations/Operations(
           X = $../../../Carrier(𝐑 = 𝐑),
-          Y = M,
-          Z = M
+          Y = M, Z = M
         )),
         _1: %Constraint($../"left module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
@@ -40,9 +39,7 @@ $"subset module"(
           ⊖ = $../../../../../Essentials/Functions/"codomain restriction"(X = M, A = S, Y = M, B = S, f = ⊖),
           ⊙ = $../../../../../Essentials/Operations/"left operation restriction"(
             X = $../../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            A = S,
-            ∗ = ⊙
+            Y = M, A = S, ∗ = ⊙
           )
       )
     }]

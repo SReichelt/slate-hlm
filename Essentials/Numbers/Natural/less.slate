@@ -32,8 +32,7 @@ $less(m,n: %Element($"Natural numbers")): %Predicate {
     %and(
       %not(%equals(m, n)),
       %structural(
-        m,
-        $"Natural numbers",
+        m, $"Natural numbers",
         [
           {
             constructor = $"Natural numbers".zero,
@@ -50,8 +49,7 @@ $less(m,n: %Element($"Natural numbers")): %Predicate {
       )
     ),
     %structural(
-      n,
-      $"Natural numbers",
+      n, $"Natural numbers",
       [
         {
           constructor = $"Natural numbers".zero,

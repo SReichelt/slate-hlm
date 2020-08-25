@@ -13,8 +13,7 @@ $"Iterated sum is greater or equal to each element"(
     m = a[i = j],
     n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
       X = $../"Natural numbers",
-      ⨂ = $"iterated sum",
-      I = I,
+      ⨂ = $"iterated sum", I = I,
       _2 = {
         #(i: %Element(I)),
         {a = a[i = i]}

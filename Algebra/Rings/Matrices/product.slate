@@ -55,7 +55,11 @@ $product(
                 n = m,
                 _1 = {
                   #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m))),
-                  {a = $../product(𝐑 = 𝐑, a = a[i = i, j = j], b = b[j = j, k = k])}
+                  {a = $../product(
+                    𝐑 = 𝐑,
+                    a = a[i = i, j = j],
+                    b = b[j = j, k = k]
+                  )}
                 }
               )}
           })

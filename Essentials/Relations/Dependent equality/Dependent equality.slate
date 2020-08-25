@@ -22,7 +22,10 @@ $"Dependent equality"(
         a,b: %Element(I),
         _3: %Constraint(%equals(a, b))
       ),
-      #(≡: %Element($../Relations(S = S[i = a], T = S[i = b])))
+      #(≡: %Element($../Relations(
+        S = S[i = a],
+        T = S[i = b]
+      )))
     ),
     _4: %Constraint(%forall(
       #(i: %Element(I)),
@@ -47,7 +50,10 @@ $"Dependent equality"(
             a,b: %Element(I),
             _3: %Constraint(%equals(a, b))
           ),
-          #(≡: %Element($../Relations(S = S[i = a], T = S[i = b])))
+          #(≡: %Element($../Relations(
+            S = S[i = a],
+            T = S[i = b]
+          )))
         ),
         _4: %Constraint(%forall(
           #(i: %Element(I)),
@@ -63,7 +69,10 @@ $"Dependent equality"(
             a,b: %Element(I),
             _6: %Constraint(%equals(a, b))
           ),
-          #("≡'": %Element($../Relations(S = S[i = a], T = S[i = b])))
+          #("≡'": %Element($../Relations(
+            S = S[i = a],
+            T = S[i = b]
+          )))
         ),
         _7: %Constraint(%forall(
           #(i: %Element(I)),
@@ -75,7 +84,10 @@ $"Dependent equality"(
       ),
       definition = [%forall(
         #(a,b: %Element(I)),
-        %equals(≡[a = a, b = b], "≡'"[a = a, b = b])
+        %equals(
+          ≡[a = a, b = b],
+          "≡'"[a = a, b = b]
+        )
       )],
       isomorphic = %true
     }

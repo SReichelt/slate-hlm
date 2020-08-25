@@ -15,8 +15,7 @@ $"Intersection is associative"(
       T = T
     ),
     $Intersection(
-      U = U,
-      S = R,
+      U = U, S = R,
       T = $Intersection(U = U, S = S, T = T)
     )
   )

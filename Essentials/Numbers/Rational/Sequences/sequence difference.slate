@@ -23,7 +23,10 @@ $"sequence difference"(𝐚,𝐛: %Element($../../../Sequences/"Infinite sequenc
             )),
             value = $../../../Sequences/"Infinite sequences"(S = $../"Rational numbers").sequence(_1 = {
                 #(n: %Element($../../Natural/"Natural numbers")),
-                {a = $../difference(a = a[n = n], b = b[n = n])}
+                {a = $../difference(
+                  a = a[n = n],
+                  b = b[n = n]
+                )}
             })
           }]
         )

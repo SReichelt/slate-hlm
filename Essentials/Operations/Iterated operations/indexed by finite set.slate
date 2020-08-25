@@ -28,16 +28,12 @@ $"indexed by finite set"(
       ),
       %equals(
         $"indexed by natural number"(
-          X = X,
-          ⨂ = ⨂,
-          n = n,
+          X = X, ⨂ = ⨂, n = n,
           _1 = {
             #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
             {a = a[i = $../../Functions/value(
               X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
-              Y = I,
-              f = f,
-              x = j
+              Y = I, f = f, x = j
             )]}
           }
         ),
@@ -54,16 +50,12 @@ $"indexed by finite set"(
       ),
       formula = %equals(
         $"indexed by natural number"(
-          X = X,
-          ⨂ = ⨂,
-          n = n,
+          X = X, ⨂ = ⨂, n = n,
           _1 = {
             #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
             {a = a[i = $../../Functions/value(
               X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
-              Y = I,
-              f = f,
-              x = j
+              Y = I, f = f, x = j
             )]}
           }
         ),

@@ -8,8 +8,7 @@ $"less or equal"(a,b: %Element($"Real numbers")): %Predicate {
   properties = {negation = $less(b = a, a = b)},
   notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [%structural(
-    b,
-    $"Real numbers",
+    b, $"Real numbers",
     [{
       constructor = $"Real numbers".class,
       parameters = #(
@@ -17,8 +16,7 @@ $"less or equal"(a,b: %Element($"Real numbers")): %Predicate {
         _2: %Constraint($../Rational/Sequences/cauchy(𝐚 = r_b))
       ),
       value = %structural(
-        a,
-        $"Real numbers",
+        a, $"Real numbers",
         [{
           constructor = $"Real numbers".class,
           parameters = #(
@@ -51,7 +49,10 @@ $"less or equal"(a,b: %Element($"Real numbers")): %Predicate {
                         #(m: %Element($../Natural/Subsets/"Segment (greater or equal)"(n = n))),
                         $../Rational/"less or equal"(
                           a = x[n = m],
-                          b = $../Rational/sum(a = y[n = m], b = ε)
+                          b = $../Rational/sum(
+                            a = y[n = m],
+                            b = ε
+                          )
                         )
                       )
                     )

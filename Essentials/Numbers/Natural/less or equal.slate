@@ -19,8 +19,7 @@ $"less or equal"(m,n: %Element($"Natural numbers")): %Predicate {
       )
     ),
     %structural(
-      m,
-      $"Natural numbers",
+      m, $"Natural numbers",
       [
         {
           constructor = $"Natural numbers".zero,
@@ -41,8 +40,7 @@ $"less or equal"(m,n: %Element($"Natural numbers")): %Predicate {
     %or(
       %equals(m, n),
       %structural(
-        n,
-        $"Natural numbers",
+        n, $"Natural numbers",
         [
           {
             constructor = $"Natural numbers".zero,

@@ -33,7 +33,10 @@ $"Generalized cartesian product"(
       )),
       definition = [%forall(
         #(j: %Element(I)),
-        %equals(s[j = j], t[j = j])
+        %equals(
+          s[j = j],
+          t[j = j]
+        )
       )],
       isomorphic = %true
     }

@@ -15,8 +15,7 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
     ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
     ⊙: %Element($../../../../Essentials/Operations/Operations(
       X = $../../Carrier(𝐑 = 𝐑),
-      Y = M,
-      Z = M
+      Y = M, Z = M
     )),
     _1: %Constraint($"left module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
   ): %Constructor {
@@ -35,8 +34,7 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
         ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
         ⊙: %Element($../../../../Essentials/Operations/Operations(
           X = $../../Carrier(𝐑 = 𝐑),
-          Y = M,
-          Z = M
+          Y = M, Z = M
         )),
         _1: %Constraint($"left module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
@@ -47,8 +45,7 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
         ∼: %Element($../../../../Essentials/Functions/Functions(X = N, Y = N)),
         ∗: %Element($../../../../Essentials/Operations/Operations(
           X = $../../Carrier(𝐑 = 𝐑),
-          Y = N,
-          Z = N
+          Y = N, Z = N
         )),
         _2: %Constraint($"left module"(𝐑 = 𝐑, M = N, ⊕ = ⋆, "0" = 𝟢, ⊖ = ∼, ⊙ = ∗))
       ),
@@ -60,11 +57,7 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
           $../../../Generic/Isomorphisms/"function condition"(X = M, Y = N, φ = φ, f = ⊖, g = ∼),
           $../../../Generic/Isomorphisms/"left operation condition"(
             S = $../../Carrier(𝐑 = 𝐑),
-            X = M,
-            Y = N,
-            φ = φ,
-            ∗ = ⊙,
-            ⋆ = ∗
+            X = M, Y = N, φ = φ, ∗ = ⊙, ⋆ = ∗
           )
         )
       )],

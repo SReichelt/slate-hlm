@@ -17,8 +17,7 @@ $"identity element"(
     article = 'an'
   ),
   definition = [%structural(
-    𝐌,
-    $Magmas,
+    𝐌, $Magmas,
     [{
       constructor = $Magmas.magma,
       parameters = #(

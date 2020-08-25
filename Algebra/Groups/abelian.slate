@@ -10,8 +10,7 @@
 $abelian(𝐆: %Element($Groups)): %Predicate {
   notation = $Property(operand = 𝐆, property = 'abelian'),
   definition = [%structural(
-    𝐆,
-    $Groups,
+    𝐆, $Groups,
     [{
       constructor = $Groups.group,
       parameters = #(

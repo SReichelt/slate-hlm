@@ -68,7 +68,11 @@ $"linear combination"(
                 I = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
                 _1 = {
                   #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
-                  {a = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = a[k = k], x = x[k = k])}
+                  {a = $../product(
+                    𝐑 = 𝐑, 𝐌 = 𝐌,
+                    a = a[k = k],
+                    x = x[k = k]
+                  )}
                 }
               )
             }]

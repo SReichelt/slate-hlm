@@ -10,8 +10,7 @@
 $product(m,n: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [m, n]),
   definition = [%structuralCases(
-    n,
-    $"Natural numbers",
+    n, $"Natural numbers",
     [
       {
         constructor = $"Natural numbers".zero,

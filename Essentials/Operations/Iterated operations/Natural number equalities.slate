@@ -11,17 +11,14 @@ $"Natural number equalities"(
 ): %StandardTheorem {
   claim = %equals(
     $"indexed by natural number"(
-      X = X,
-      ⨂ = ⨂,
-      n = n,
+      X = X, ⨂ = ⨂, n = n,
       _1 = {
         #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
         {a = a[i = i]}
       }
     ),
     $"indexed by integer"(
-      X = X,
-      ⨂ = ⨂,
+      X = X, ⨂ = ⨂,
       j = $../../Numbers/Natural/number(value = 0),
       k = $../../Numbers/Integer/difference(
         a = n,
@@ -39,8 +36,7 @@ $"Natural number equalities"(
       }
     ),
     $"indexed by finite set"(
-      X = X,
-      ⨂ = ⨂,
+      X = X, ⨂ = ⨂,
       I = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
       _2 = {
         #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),

@@ -12,8 +12,7 @@ $product(
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [a, b]),
   definition = [%structuralCases(
-    𝐑,
-    $Semirings,
+    𝐑, $Semirings,
     [{
       constructor = $Semirings.semiring,
       parameters = #(

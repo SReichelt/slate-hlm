@@ -32,8 +32,7 @@ $component(
       parameters = #(_1: %Binder(
         #(𝐘: %Element($../Objects(u = u, 𝓒 = 𝓒))),
         #(n: %Element($../Morphisms(
-          u = v,
-          𝓒 = 𝓓,
+          u = v, 𝓒 = 𝓓,
           𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐘),
           𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐘)
         )))

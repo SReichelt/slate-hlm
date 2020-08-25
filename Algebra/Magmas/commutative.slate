@@ -6,8 +6,7 @@
 $commutative(𝐌: %Element($Magmas)): %Predicate {
   notation = $Property(operand = 𝐌, property = 'commutative'),
   definition = [%structural(
-    𝐌,
-    $Magmas,
+    𝐌, $Magmas,
     [{
       constructor = $Magmas.magma,
       parameters = #(

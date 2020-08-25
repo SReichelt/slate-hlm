@@ -44,14 +44,12 @@ $Isomorphisms(𝐑,𝐒: %Element($../Rings)): %SetOperator {
               a = $../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑),
                 Y = $../Carrier(𝐑 = 𝐒),
-                f = f,
-                x = a
+                f = f, x = a
               ),
               b = $../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑),
                 Y = $../Carrier(𝐑 = 𝐒),
-                f = f,
-                x = b
+                f = f, x = b
               )
             )
           )
@@ -70,14 +68,12 @@ $Isomorphisms(𝐑,𝐒: %Element($../Rings)): %SetOperator {
               a = $../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑),
                 Y = $../Carrier(𝐑 = 𝐒),
-                f = f,
-                x = d
+                f = f, x = d
               ),
               b = $../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑),
                 Y = $../Carrier(𝐑 = 𝐒),
-                f = f,
-                x = e
+                f = f, x = e
               )
             )
           )

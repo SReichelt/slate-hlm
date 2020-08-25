@@ -15,8 +15,7 @@ $even(n: %Element($"Natural numbers")): %Predicate {
   ),
   definition = [
     %structural(
-      n,
-      $"Natural numbers",
+      n, $"Natural numbers",
       [
         {
           constructor = $"Natural numbers".zero,

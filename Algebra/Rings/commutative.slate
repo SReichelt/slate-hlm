@@ -3,8 +3,7 @@
 $commutative(𝐑: %Element($Rings)): %Predicate {
   notation = $Property(operand = 𝐑, property = 'commutative'),
   definition = [%structural(
-    𝐑,
-    $Rings,
+    𝐑, $Rings,
     [{
       constructor = $Rings.ring,
       parameters = #(

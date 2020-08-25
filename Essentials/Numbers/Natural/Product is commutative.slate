@@ -5,8 +5,7 @@
  */
 $"Product is commutative": %StandardTheorem {
   claim = $../../Operations/commutative(
-    X = $"Natural numbers",
-    Z = $"Natural numbers",
+    X = $"Natural numbers", Z = $"Natural numbers",
     ∗ = $../../Operations/Operations(X = $"Natural numbers", Y = $"Natural numbers", Z = $"Natural numbers").operation(_1 = {
         #(m,n: %Element($"Natural numbers")),
         {z = $product(m = m, n = n)}

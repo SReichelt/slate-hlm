@@ -26,8 +26,7 @@ $identity(
       {a = $../"kronecker delta"(
         𝐑 = 𝐑,
         S = $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n),
-        i = i,
-        j = j
+        i = i, j = j
       )}
   })]
 }

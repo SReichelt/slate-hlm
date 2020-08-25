@@ -23,8 +23,7 @@ $"Infranatural transformations"(
   $transformation(_1: %Binder(
     #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
     #(n: %Element($../Morphisms(
-      u = v,
-      𝓒 = 𝓓,
+      u = v, 𝓒 = 𝓓,
       𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
       𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗)
     )))
@@ -37,8 +36,7 @@ $"Infranatural transformations"(
       leftParameters = #(_1: %Binder(
         #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
         #(n: %Element($../Morphisms(
-          u = v,
-          𝓒 = 𝓓,
+          u = v, 𝓒 = 𝓓,
           𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
           𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗)
         )))
@@ -46,15 +44,17 @@ $"Infranatural transformations"(
       rightParameters = #(_2: %Binder(
         #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
         #(m: %Element($../Morphisms(
-          u = v,
-          𝓒 = 𝓓,
+          u = v, 𝓒 = 𝓓,
           𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
           𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗)
         )))
       )),
       definition = [%forall(
         #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
-        %equals(n[𝐗 = 𝐗], m[𝐗 = 𝐗])
+        %equals(
+          n[𝐗 = 𝐗],
+          m[𝐗 = 𝐗]
+        )
       )],
       isomorphic = %true
     }

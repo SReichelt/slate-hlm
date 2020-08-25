@@ -148,8 +148,7 @@ $"Euclids theorem": %StandardTheorem {
       _3: %UseExists(#(p: %Element($"Prime numbers"))),
       _4: %UseTheorem(
         $../"Divisibility criterion"(
-          a = p,
-          b = a,
+          a = p, b = a,
           _1 = {proof = {steps = #(_: %UseTheorem(
             $../"Iterated operators"/"Iterated product is a multiple of each element"(
               I = $"Prime numbers",

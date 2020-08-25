@@ -9,8 +9,7 @@ $difference(
 ): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),
   definition = [$sum(
-    𝐑 = 𝐑,
-    a = a,
+    𝐑 = 𝐑, a = a,
     b = $"additive inverse"(𝐑 = 𝐑, a = b)
   )]
 }

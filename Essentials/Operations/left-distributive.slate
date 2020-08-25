@@ -23,18 +23,11 @@ $"left-distributive"(
     ),
     %equals(
       $value(
-        X = X,
-        Y = Y,
-        Z = Y,
-        ∗ = ∗,
-        x = x,
+        X = X, Y = Y, Z = Y, ∗ = ∗, x = x,
         y = $value(X = Y, Y = Y, Z = Y, ∗ = ⋆, x = y, y = z)
       ),
       $value(
-        X = Y,
-        Y = Y,
-        Z = Y,
-        ∗ = ⋆,
+        X = Y, Y = Y, Z = Y, ∗ = ⋆,
         x = $value(X = X, Y = Y, Z = Y, ∗ = ∗, x = x, y = y),
         y = $value(X = X, Y = Y, Z = Y, ∗ = ∗, x = x, y = z)
       )

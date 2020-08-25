@@ -15,8 +15,7 @@ $"left module"(
   ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
   ⊙: %Element($../../../../Essentials/Operations/Operations(
     X = $../../Carrier(𝐑 = 𝐑),
-    Y = M,
-    Z = M
+    Y = M, Z = M
   ))
 ): %Predicate {
   notation = $Structure(
@@ -35,9 +34,7 @@ $"left module"(
       $../../../Groups/"abelian group"(G = M, ∗ = ⊕, e = "0", i = ⊖),
       $../../../../Essentials/Operations/"left-distributive"(
         X = $../../Carrier(𝐑 = 𝐑),
-        Y = M,
-        ∗ = ⊙,
-        ⋆ = ⊕
+        Y = M, ∗ = ⊙, ⋆ = ⊕
       ),
       %forall(
         #(
@@ -47,32 +44,19 @@ $"left module"(
         %equals(
           $../../../../Essentials/Operations/value(
             X = $../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            Z = M,
-            ∗ = ⊙,
+            Y = M, Z = M, ∗ = ⊙,
             x = $../../sum(𝐑 = 𝐑, a = a, b = b),
             y = x
           ),
           $../../../../Essentials/Operations/value(
-            X = M,
-            Y = M,
-            Z = M,
-            ∗ = ⊕,
+            X = M, Y = M, Z = M, ∗ = ⊕,
             x = $../../../../Essentials/Operations/value(
               X = $../../Carrier(𝐑 = 𝐑),
-              Y = M,
-              Z = M,
-              ∗ = ⊙,
-              x = a,
-              y = x
+              Y = M, Z = M, ∗ = ⊙, x = a, y = x
             ),
             y = $../../../../Essentials/Operations/value(
               X = $../../Carrier(𝐑 = 𝐑),
-              Y = M,
-              Z = M,
-              ∗ = ⊙,
-              x = b,
-              y = x
+              Y = M, Z = M, ∗ = ⊙, x = b, y = x
             )
           )
         )
@@ -82,9 +66,7 @@ $"left module"(
         %equals(
           $../../../../Essentials/Operations/value(
             X = $../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            Z = M,
-            ∗ = ⊙,
+            Y = M, Z = M, ∗ = ⊙,
             x = $../../zero(𝐑 = 𝐑),
             y = x
           ),
@@ -93,9 +75,7 @@ $"left module"(
       ),
       $../../../../Essentials/Operations/"right absorbing element"(
         X = $../../Carrier(𝐑 = 𝐑),
-        Y = M,
-        ∗ = ⊙,
-        z = "0"
+        Y = M, ∗ = ⊙, z = "0"
       ),
       %forall(
         #(
@@ -105,31 +85,20 @@ $"left module"(
         %equals(
           $../../../../Essentials/Operations/value(
             X = $../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            Z = M,
-            ∗ = ⊙,
+            Y = M, Z = M, ∗ = ⊙,
             x = $../../"additive inverse"(𝐑 = 𝐑, a = a),
             y = x
           ),
           $../../../../Essentials/Operations/value(
             X = $../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            Z = M,
-            ∗ = ⊙,
-            x = a,
+            Y = M, Z = M, ∗ = ⊙, x = a,
             y = $../../../../Essentials/Functions/value(X = M, Y = M, f = ⊖, x = x)
           ),
           $../../../../Essentials/Functions/value(
-            X = M,
-            Y = M,
-            f = ⊖,
+            X = M, Y = M, f = ⊖,
             x = $../../../../Essentials/Operations/value(
               X = $../../Carrier(𝐑 = 𝐑),
-              Y = M,
-              Z = M,
-              ∗ = ⊙,
-              x = a,
-              y = x
+              Y = M, Z = M, ∗ = ⊙, x = a, y = x
             )
           )
         )
@@ -142,33 +111,23 @@ $"left module"(
         %equals(
           $../../../../Essentials/Operations/value(
             X = $../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            Z = M,
-            ∗ = ⊙,
+            Y = M, Z = M, ∗ = ⊙,
             x = $../../product(𝐑 = 𝐑, a = a, b = b),
             y = x
           ),
           $../../../../Essentials/Operations/value(
             X = $../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            Z = M,
-            ∗ = ⊙,
-            x = a,
+            Y = M, Z = M, ∗ = ⊙, x = a,
             y = $../../../../Essentials/Operations/value(
               X = $../../Carrier(𝐑 = 𝐑),
-              Y = M,
-              Z = M,
-              ∗ = ⊙,
-              x = b,
-              y = x
+              Y = M, Z = M, ∗ = ⊙, x = b, y = x
             )
           )
         )
       ),
       $../../../../Essentials/Operations/"left identity element"(
         X = $../../Carrier(𝐑 = 𝐑),
-        Y = M,
-        ∗ = ⊙,
+        Y = M, ∗ = ⊙,
         e = $../../one(𝐑 = 𝐑)
       )
     ),
@@ -176,9 +135,7 @@ $"left module"(
       $../../../Groups/"abelian group"(G = M, ∗ = ⊕, e = "0", i = ⊖),
       $../../../../Essentials/Operations/"left-distributive"(
         X = $../../Carrier(𝐑 = 𝐑),
-        Y = M,
-        ∗ = ⊙,
-        ⋆ = ⊕
+        Y = M, ∗ = ⊙, ⋆ = ⊕
       ),
       %forall(
         #(
@@ -188,32 +145,19 @@ $"left module"(
         %equals(
           $../../../../Essentials/Operations/value(
             X = $../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            Z = M,
-            ∗ = ⊙,
+            Y = M, Z = M, ∗ = ⊙,
             x = $../../sum(𝐑 = 𝐑, a = a, b = b),
             y = x
           ),
           $../../../../Essentials/Operations/value(
-            X = M,
-            Y = M,
-            Z = M,
-            ∗ = ⊕,
+            X = M, Y = M, Z = M, ∗ = ⊕,
             x = $../../../../Essentials/Operations/value(
               X = $../../Carrier(𝐑 = 𝐑),
-              Y = M,
-              Z = M,
-              ∗ = ⊙,
-              x = a,
-              y = x
+              Y = M, Z = M, ∗ = ⊙, x = a, y = x
             ),
             y = $../../../../Essentials/Operations/value(
               X = $../../Carrier(𝐑 = 𝐑),
-              Y = M,
-              Z = M,
-              ∗ = ⊙,
-              x = b,
-              y = x
+              Y = M, Z = M, ∗ = ⊙, x = b, y = x
             )
           )
         )
@@ -226,33 +170,23 @@ $"left module"(
         %equals(
           $../../../../Essentials/Operations/value(
             X = $../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            Z = M,
-            ∗ = ⊙,
+            Y = M, Z = M, ∗ = ⊙,
             x = $../../product(𝐑 = 𝐑, a = a, b = b),
             y = x
           ),
           $../../../../Essentials/Operations/value(
             X = $../../Carrier(𝐑 = 𝐑),
-            Y = M,
-            Z = M,
-            ∗ = ⊙,
-            x = a,
+            Y = M, Z = M, ∗ = ⊙, x = a,
             y = $../../../../Essentials/Operations/value(
               X = $../../Carrier(𝐑 = 𝐑),
-              Y = M,
-              Z = M,
-              ∗ = ⊙,
-              x = b,
-              y = x
+              Y = M, Z = M, ∗ = ⊙, x = b, y = x
             )
           )
         )
       ),
       $../../../../Essentials/Operations/"left identity element"(
         X = $../../Carrier(𝐑 = 𝐑),
-        Y = M,
-        ∗ = ⊙,
+        Y = M, ∗ = ⊙,
         e = $../../one(𝐑 = 𝐑)
       )
     )

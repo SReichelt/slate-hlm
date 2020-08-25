@@ -14,8 +14,7 @@ $"Span of element"(
   notation = $Parens(body = x, style = '<>'),
   definition = [
     $Span(
-      𝐑 = 𝐑,
-      𝐌 = 𝐌,
+      𝐑 = 𝐑, 𝐌 = 𝐌,
       X = %enumeration(x)
     ),
     %extendedSubset(

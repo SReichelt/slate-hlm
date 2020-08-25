@@ -12,8 +12,7 @@ $"Iterated product multiplies"(
   claim = $../divisible(
     m = $../../../Operations/"Iterated operations"/"indexed by finite set"(
       X = $../"Natural numbers",
-      ⨂ = $"iterated product",
-      I = J,
+      ⨂ = $"iterated product", I = J,
       _2 = {
         #(i: %Element(J)),
         {a = a[i = i]}
@@ -21,8 +20,7 @@ $"Iterated product multiplies"(
     ),
     n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
       X = $../"Natural numbers",
-      ⨂ = $"iterated product",
-      I = I,
+      ⨂ = $"iterated product", I = I,
       _2 = {
         #(i: %Element(I)),
         {a = a[i = i]}

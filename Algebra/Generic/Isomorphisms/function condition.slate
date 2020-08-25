@@ -32,7 +32,10 @@ $"function condition"(
             value = %forall(
               #(x: %Element(X)),
               %equals(
-                $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = a[x = x]),
+                $../../../Essentials/Functions/value(
+                  X = X, Y = Y, f = φ,
+                  x = a[x = x]
+                ),
                 b[y = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x)]
               )
             )
@@ -44,15 +47,11 @@ $"function condition"(
       #(x: %Element(X)),
       %equals(
         $../../../Essentials/Functions/value(
-          X = X,
-          Y = Y,
-          f = φ,
+          X = X, Y = Y, f = φ,
           x = $../../../Essentials/Functions/value(X = X, Y = X, f = f, x = x)
         ),
         $../../../Essentials/Functions/value(
-          X = Y,
-          Y = Y,
-          f = g,
+          X = Y, Y = Y, f = g,
           x = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x)
         )
       )

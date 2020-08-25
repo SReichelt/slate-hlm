@@ -51,34 +51,28 @@ $Isomorphisms(
             Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
             f = f,
             x = $../sum(
-              𝐑 = 𝐑,
-              𝐌 = 𝐌,
+              𝐑 = 𝐑, 𝐌 = 𝐌,
               x = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, x = x, a = a),
               y = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, x = y, a = b)
             )
           ),
           $../sum(
-            𝐑 = 𝐑,
-            𝐌 = 𝐍,
+            𝐑 = 𝐑, 𝐌 = 𝐍,
             x = $../product(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍,
+              𝐑 = 𝐑, 𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
                 Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
-                f = f,
-                x = x
+                f = f, x = x
               ),
               a = a
             ),
             y = $../product(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍,
+              𝐑 = 𝐑, 𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
                 X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
                 Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
-                f = f,
-                x = y
+                f = f, x = y
               ),
               a = b
             )

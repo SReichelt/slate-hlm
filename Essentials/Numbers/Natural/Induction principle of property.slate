@@ -10,8 +10,7 @@
 $"Induction principle of property"(
   p: %Element($../../Properties/Properties(S = $"Natural numbers")),
   _1: %Constraint($../../Properties/"has property"(
-    S = $"Natural numbers",
-    p = p,
+    S = $"Natural numbers", p = p,
     s = $number(value = 0)
   )),
   _2: %Constraint(%forall(
@@ -20,8 +19,7 @@ $"Induction principle of property"(
       _3: %Constraint($../../Properties/"has property"(S = $"Natural numbers", p = p, s = m))
     ),
     $../../Properties/"has property"(
-      S = $"Natural numbers",
-      p = p,
+      S = $"Natural numbers", p = p,
       s = $sum(
         m = m,
         n = $number(value = 1)

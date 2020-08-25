@@ -13,8 +13,7 @@ $"iterated operation"(
 ): %ExplicitOperator {
   notation = $SubSup(body = '∏', sub = 𝐌),
   definition = [%structuralCases(
-    𝐌,
-    $Monoids,
+    𝐌, $Monoids,
     [{
       constructor = $Monoids.monoid,
       parameters = #(

@@ -29,8 +29,6 @@ $"right operation restriction"(
   definition = [$../Functions/"codomain restriction"(
     X = $../Sets/"Cartesian product"(S = X, T = Y),
     A = $../Sets/"Cartesian product"(S = A, T = Y),
-    Y = X,
-    B = A,
-    f = ∗
+    Y = X, B = A, f = ∗
   )]
 }

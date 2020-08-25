@@ -9,8 +9,7 @@
 $"binomial coefficient"(n,k: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $BinomialCoefficient(top = n, bottom = k),
   definition = [%structuralCases(
-    k,
-    $"Natural numbers",
+    k, $"Natural numbers",
     [
       {
         constructor = $"Natural numbers".zero,
@@ -21,8 +20,7 @@ $"binomial coefficient"(n,k: %Element($"Natural numbers")): %ExplicitOperator {
         constructor = $"Natural numbers".successor,
         parameters = #(x: %Element($"Natural numbers")),
         value = %structuralCases(
-          n,
-          $"Natural numbers",
+          n, $"Natural numbers",
           [
             {
               constructor = $"Natural numbers".zero,

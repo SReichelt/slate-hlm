@@ -53,7 +53,10 @@ $Relations(S,T: %Set(auto = %true)): %Construction {
           s: %Element(S),
           t: %Element(T)
         ),
-        %equiv(p[s = s, t = t], q[s = s, t = t])
+        %equiv(
+          p[s = s, t = t],
+          q[s = s, t = t]
+        )
       )],
       isomorphic = %true
     }

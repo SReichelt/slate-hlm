@@ -10,8 +10,7 @@ $"Generalized extension preserves surjectivity"(
   ),
   f: %Element($Functions(X = X, Y = Y)),
   _1: %Constraint($surjective(
-    X = A,
-    Y = B,
+    X = A, Y = B,
     f = $"generalized restriction"(X = X, A = A, B = B, Y = Y, f = f)
   ))
 ): %StandardTheorem {

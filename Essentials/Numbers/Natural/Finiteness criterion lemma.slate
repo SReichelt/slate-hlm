@@ -19,8 +19,7 @@ $"Finiteness criterion lemma"(
     )
   ),
   proofs = [{steps = #(_: %ProveByInduction(
-    k,
-    $"Natural numbers",
+    k, $"Natural numbers",
     [
       {
         constructor = $"Natural numbers".zero,
@@ -31,8 +30,7 @@ $"Finiteness criterion lemma"(
           ))),
           steps = #(_: %ProveExists({m = $../../Functions/value(
             X = $Subsets/"Segment (less or equal)"(n = k),
-            Y = M,
-            f = f,
+            Y = M, f = f,
             x = $number(value = 0)
           )}))
         },
@@ -55,37 +53,27 @@ $"Finiteness criterion lemma"(
               $"Finiteness criterion lemma"(
                 M = $../../Functions/Image(
                   X = $Subsets/"Segment (less or equal)"(n = k),
-                  Y = M,
-                  f = f,
-                  S = S
+                  Y = M, f = f, S = S
                 ),
                 k = x,
                 f = $../../Functions/"codomain restriction"(
                   X = $Subsets/"Segment (less or equal)"(n = k),
-                  Y = M,
-                  f = f,
-                  A = S,
+                  Y = M, f = f, A = S,
                   B = $../../Functions/Image(
                     X = $Subsets/"Segment (less or equal)"(n = k),
-                    Y = M,
-                    f = f,
-                    S = S
+                    Y = M, f = f, S = S
                   )
                 )
               ),
               result = %exists(
                 #(i: %Element($../../Functions/Image(
                   X = $Subsets/"Segment (less or equal)"(n = k),
-                  Y = M,
-                  f = f,
-                  S = S
+                  Y = M, f = f, S = S
                 ))),
                 formula = %forall(
                   #(j: %Element($../../Functions/Image(
                     X = $Subsets/"Segment (less or equal)"(n = k),
-                    Y = M,
-                    f = f,
-                    S = S
+                    Y = M, f = f, S = S
                   ))),
                   $"less or equal"(m = j, n = i)
                 )
@@ -93,35 +81,27 @@ $"Finiteness criterion lemma"(
             ),
             _: %UseExists(#(i: %Element($../../Functions/Image(
               X = $Subsets/"Segment (less or equal)"(n = k),
-              Y = M,
-              f = f,
-              S = S
+              Y = M, f = f, S = S
             )))),
             _: %ProveExists({m = %cases([
               {
                 formula = $less(
                   n = $../../Functions/value(
                     X = $Subsets/"Segment (less or equal)"(n = k),
-                    Y = M,
-                    f = f,
-                    x = k
+                    Y = M, f = f, x = k
                   ),
                   m = i
                 ),
                 value = $../../Functions/value(
                   X = $Subsets/"Segment (less or equal)"(n = k),
-                  Y = M,
-                  f = f,
-                  x = k
+                  Y = M, f = f, x = k
                 )
               },
               {
                 formula = $"less or equal"(
                   m = $../../Functions/value(
                     X = $Subsets/"Segment (less or equal)"(n = k),
-                    Y = M,
-                    f = f,
-                    x = k
+                    Y = M, f = f, x = k
                   ),
                   n = i
                 ),

@@ -28,8 +28,7 @@ $"p-element"(
       #(m: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
       formula = %equals(
         $../../"power to natural number"(
-          𝐆 = 𝐆,
-          a = g,
+          𝐆 = 𝐆, a = g,
           n = $../../../../Essentials/Numbers/Natural/power(m = p, n = m)
         ),
         $../../identity(𝐆 = 𝐆)
