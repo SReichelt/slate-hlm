@@ -3,7 +3,7 @@
 /**
  * We write:
  *
- * `$matrix(𝐑 = 𝐑, items = [[{"a_0,0"}, {"a_1,0"}, {"⋯"}, {"a_m-1,0"}],[{"a_0,1"}, {"a_1,1"}, {"⋯"}, {"a_m-1,1"}],[{"⋮"}, {"⋮"}, {" "}, {"⋮"}],[{"a_0,n-1"}, {"a_1,n-1"}, {"⋯"}, {"a_m-1,n-1"}]])` := `$Matrices(𝐑 = 𝐑, m = m, n = n).matrix(_1 = {#(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)), j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))), {a = {"a_i,j"}}})`
+ * `$matrix(𝐑 = 𝐑, items = [["a_0,0", "a_1,0", "⋯", "a_m-1,0"],["a_0,1", "a_1,1", "⋯", "a_m-1,1"],["⋮", "⋮", " ", "⋮"],["a_0,n-1", "a_1,n-1", "⋯", "a_m-1,n-1"]])` := `$Matrices(𝐑 = 𝐑, m = m, n = n).matrix(_1 = {#(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)), j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))), {a = "a_i,j"}})`
  */
 $matrix(
   𝐑: %Element(
