@@ -15,10 +15,10 @@
  */
 $"Equivalence classes"(
   S: %Set(auto = %true),
-  ∼: %Element($Endorelations(S = {S})),
+  ∼: %Element($Endorelations(S = S)),
   _1: %Constraint($equivalence(
-    S = {S},
-    ≺ = {∼}
+    S = S,
+    ≺ = ∼
   ))
 ): %Construction {
   $class(s: %Element(S)): %Constructor {
@@ -33,11 +33,11 @@ $"Equivalence classes"(
       leftParameters = #(s: %Element(S)),
       rightParameters = #(t: %Element(S)),
       definition = [$related(
-        S = {S},
-        T = {S},
-        ≺ = {∼},
-        s = {s},
-        t = {t}
+        S = S,
+        T = S,
+        ≺ = ∼,
+        s = s,
+        t = t
       )]
     }
   }

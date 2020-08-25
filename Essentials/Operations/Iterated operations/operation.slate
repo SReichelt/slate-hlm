@@ -3,7 +3,7 @@
 $operation(
   X: %Set(auto = %true),
   ⨂: %Element(
-    $"Iterated operations"(X = {X}),
+    $"Iterated operations"(X = X),
     auto = %true
   ),
   x,y: %Element(X)
@@ -14,25 +14,25 @@ $operation(
   ),
   definition = [%structuralCases(
     ⨂,
-    $"Iterated operations"(X = {X}),
+    $"Iterated operations"(X = X),
     [{
       constructor = $"Iterated operations".operation,
       parameters = #(
-        ∗: %Element($../"Inner operations"(X = {X})),
+        ∗: %Element($../"Inner operations"(X = X)),
         e: %Element(X),
         _1: %Constraint($../../../Algebra/Monoids/"commutative monoid"(
-          M = {X},
-          ∗ = {∗},
-          e = {e}
+          M = X,
+          ∗ = ∗,
+          e = e
         ))
       ),
       value = $../value(
-        X = {X},
-        Y = {X},
-        Z = {X},
-        ∗ = {∗},
-        x = {x},
-        y = {y}
+        X = X,
+        Y = X,
+        Z = X,
+        ∗ = ∗,
+        x = x,
+        y = y
       )
     }]
   )]

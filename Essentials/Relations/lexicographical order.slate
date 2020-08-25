@@ -11,34 +11,34 @@
  */
 $"lexicographical order"(
   S,T: %Set(auto = %true),
-  ⪯: %Element($Endorelations(S = {S})),
+  ⪯: %Element($Endorelations(S = S)),
   _1: %Constraint($"partial order"(
-    S = {S},
-    ⪯ = {⪯}
+    S = S,
+    ⪯ = ⪯
   )),
-  ⊑: %Element($Endorelations(S = {T})),
+  ⊑: %Element($Endorelations(S = T)),
   _2: %Constraint($"partial order"(
-    S = {T},
-    ⪯ = {⊑}
+    S = T,
+    ⪯ = ⊑
   ))
 ): %ExplicitOperator {
   notation = $Operator(
     symbol = '∠',
     operands = [⪯, ⊑]
   ),
-  definition = [$Endorelations(S = {$../Sets/"Cartesian product"(
-      S = {S},
-      T = {T}
-    )}).relation(_1 = {
+  definition = [$Endorelations(S = $../Sets/"Cartesian product"(
+      S = S,
+      T = T
+    )).relation(_1 = {
       #(a,b: %Element($../Sets/"Cartesian product"(
-        S = {S},
-        T = {T}
+        S = S,
+        T = T
       ))),
-      {p = {%structural(
+      {p = %structural(
         b,
         $../Sets/"Cartesian product"(
-          S = {S},
-          T = {T}
+          S = S,
+          T = T
         ),
         [{
           constructor = $../Sets/"Cartesian product".pair,
@@ -49,8 +49,8 @@ $"lexicographical order"(
           value = %structural(
             a,
             $../Sets/"Cartesian product"(
-              S = {S},
-              T = {T}
+              S = S,
+              T = T
             ),
             [{
               constructor = $../Sets/"Cartesian product".pair,
@@ -60,26 +60,26 @@ $"lexicographical order"(
               ),
               value = %and(
                 $related(
-                  S = {S},
-                  T = {S},
-                  ≺ = {⪯},
-                  s = {s},
-                  t = {"s'"}
+                  S = S,
+                  T = S,
+                  ≺ = ⪯,
+                  s = s,
+                  t = "s'"
                 ),
                 %or(
                   %not(%equals(s, "s'")),
                   $related(
-                    S = {T},
-                    T = {T},
-                    ≺ = {⊑},
-                    s = {t},
-                    t = {"t'"}
+                    S = T,
+                    T = T,
+                    ≺ = ⊑,
+                    s = t,
+                    t = "t'"
                   )
                 )
               )
             }]
           )
         }]
-      )}}
+      )}
   })]
 }

@@ -16,8 +16,8 @@ $"power to integer"(
       $../Natural/number(value = 0)
     )),
     $../Integer/"less or equal"(
-      b = {b},
-      a = {$../Natural/number(value = 0)}
+      b = b,
+      a = $../Natural/number(value = 0)
     )
   ))
 ): %ExplicitOperator {
@@ -28,25 +28,25 @@ $"power to integer"(
   definition = [%cases([
     {
       formula = $../Integer/"less or equal"(
-        b = {b},
-        a = {$../Natural/number(value = 0)}
+        b = b,
+        a = $../Natural/number(value = 0)
       ),
       value = $power(
-        a = {a},
-        n = {b}
+        a = a,
+        n = b
       )
     },
     {
       formula = $../Integer/less(
-        a = {b},
-        b = {$../Natural/number(value = 0)}
+        a = b,
+        b = $../Natural/number(value = 0)
       ),
       value = $quotient(
-        a = {$../Natural/number(value = 1)},
-        b = {$power(
-          a = {a},
-          n = {$../Integer/inverse(a = {b})}
-        )}
+        a = $../Natural/number(value = 1),
+        b = $power(
+          a = a,
+          n = $../Integer/inverse(a = b)
+        )
       )
     }
   ])]

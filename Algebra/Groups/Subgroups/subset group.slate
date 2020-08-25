@@ -5,10 +5,10 @@
  */
 $"subset group"(
   𝐆: %Element($../Groups),
-  S: %Subset($../Carrier(𝐆 = {𝐆})),
+  S: %Subset($../Carrier(𝐆 = 𝐆)),
   _1: %Constraint($"subgroup set"(
-    𝐆 = {𝐆},
-    S = {S}
+    𝐆 = 𝐆,
+    S = S
   ))
 ): %ExplicitOperator {
   notation = $SubSup(
@@ -25,34 +25,34 @@ $"subset group"(
       constructor = $../Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
         i: %Element($../../../Essentials/Functions/Functions(
-          X = {G},
-          Y = {G}
+          X = G,
+          Y = G
         )),
         _1: %Constraint($../group(
-          G = {G},
-          ∗ = {∗},
-          e = {e},
-          i = {i}
+          G = G,
+          ∗ = ∗,
+          e = e,
+          i = i
         ))
       ),
       value = $../Groups.group(
-        G = {S},
-        ∗ = {$../../../Essentials/Operations/"inner operation restriction"(
-          X = {G},
-          A = {S},
-          ∗ = {∗}
-        )},
-        e = {e},
-        i = {$../../../Essentials/Functions/"codomain restriction"(
-          X = {G},
-          A = {S},
-          Y = {G},
-          B = {S},
-          f = {i}
-        )}
+        G = S,
+        ∗ = $../../../Essentials/Operations/"inner operation restriction"(
+          X = G,
+          A = S,
+          ∗ = ∗
+        ),
+        e = e,
+        i = $../../../Essentials/Functions/"codomain restriction"(
+          X = G,
+          A = S,
+          Y = G,
+          B = S,
+          f = i
+        )
       )
     }]
   )]

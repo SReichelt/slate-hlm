@@ -11,12 +11,12 @@ $"Positive numbers": %SetOperator {
     sub = ['+']
   ),
   definition = [
-    $"Segment (greater)"(n = {$../number(value = 0)}),
+    $"Segment (greater)"(n = $../number(value = 0)),
     %subset(
       #(n: %Element($../"Natural numbers")),
       $../less(
-        n = {n},
-        m = {$../number(value = 0)}
+        n = n,
+        m = $../number(value = 0)
       )
     ),
     %subset(
@@ -27,16 +27,16 @@ $"Positive numbers": %SetOperator {
       ))
     ),
     $../../../Sets/"Relative complement"(
-      U = {$../"Natural numbers"},
-      S = {$../"Natural numbers"},
-      T = {%enumeration($../number(value = 0))}
+      U = $../"Natural numbers",
+      S = $../"Natural numbers",
+      T = %enumeration($../number(value = 0))
     ),
-    $"Segment (greater or equal)"(n = {$../number(value = 1)}),
+    $"Segment (greater or equal)"(n = $../number(value = 1)),
     %subset(
       #(n: %Element($../"Natural numbers")),
       $../"less or equal"(
-        n = {n},
-        m = {$../number(value = 1)}
+        n = n,
+        m = $../number(value = 1)
       )
     ),
     %subset(
@@ -45,8 +45,8 @@ $"Positive numbers": %SetOperator {
         #(m: %Element($../"Natural numbers")),
         formula = %equals(
           $../sum(
-            m = {m},
-            n = {$../number(value = 1)}
+            m = m,
+            n = $../number(value = 1)
           ),
           n
         )
@@ -58,8 +58,8 @@ $"Positive numbers": %SetOperator {
         #(m: %Element($../"Natural numbers")),
         formula = %equals(
           $../sum(
-            m = {m},
-            n = {$../number(value = 1)}
+            m = m,
+            n = $../number(value = 1)
           ),
           n
         )
@@ -68,8 +68,8 @@ $"Positive numbers": %SetOperator {
     %extendedSubset(
       #(m: %Element($../"Natural numbers")),
       $../sum(
-        m = {m},
-        n = {$../number(value = 1)}
+        m = m,
+        n = $../number(value = 1)
       )
     )
   ]

@@ -6,37 +6,37 @@
 $"real numbers": %ExplicitOperator {
   notation = 'ℝ',
   definition = [$../../Rings/Rings.ring(
-    R = {$../../../Essentials/Numbers/Real/"Real numbers"},
-    ⊕ = {$../../../Essentials/Operations/Operations(
-        X = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Z = {$../../../Essentials/Numbers/Real/"Real numbers"}
+    R = $../../../Essentials/Numbers/Real/"Real numbers",
+    ⊕ = $../../../Essentials/Operations/Operations(
+        X = $../../../Essentials/Numbers/Real/"Real numbers",
+        Y = $../../../Essentials/Numbers/Real/"Real numbers",
+        Z = $../../../Essentials/Numbers/Real/"Real numbers"
       ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
-        {z = {$../../../Essentials/Numbers/Real/sum(
-          a = {a},
-          b = {b}
-        )}}
-    })},
-    "0" = {$../../../Essentials/Numbers/Natural/number(value = 0)},
-    ⊖ = {$../../../Essentials/Functions/Functions(
-        X = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Y = {$../../../Essentials/Numbers/Real/"Real numbers"}
+        {z = $../../../Essentials/Numbers/Real/sum(
+          a = a,
+          b = b
+        )}
+    }),
+    "0" = $../../../Essentials/Numbers/Natural/number(value = 0),
+    ⊖ = $../../../Essentials/Functions/Functions(
+        X = $../../../Essentials/Numbers/Real/"Real numbers",
+        Y = $../../../Essentials/Numbers/Real/"Real numbers"
       ).function(_1 = {
         #(a: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
-        {y = {$../../../Essentials/Numbers/Real/inverse(a = {a})}}
-    })},
-    ⊙ = {$../../../Essentials/Operations/Operations(
-        X = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Y = {$../../../Essentials/Numbers/Real/"Real numbers"},
-        Z = {$../../../Essentials/Numbers/Real/"Real numbers"}
+        {y = $../../../Essentials/Numbers/Real/inverse(a = a)}
+    }),
+    ⊙ = $../../../Essentials/Operations/Operations(
+        X = $../../../Essentials/Numbers/Real/"Real numbers",
+        Y = $../../../Essentials/Numbers/Real/"Real numbers",
+        Z = $../../../Essentials/Numbers/Real/"Real numbers"
       ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
-        {z = {$../../../Essentials/Numbers/Real/product(
-          a = {a},
-          b = {b}
-        )}}
-    })},
-    "1" = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+        {z = $../../../Essentials/Numbers/Real/product(
+          a = a,
+          b = b
+        )}
+    }),
+    "1" = $../../../Essentials/Numbers/Natural/number(value = 1)
   )]
 }

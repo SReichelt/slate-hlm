@@ -8,7 +8,7 @@
  */
 $"sylow subgroup"(
   𝐆: %Element($../Groups),
-  H: %Subset($../Carrier(𝐆 = {𝐆})),
+  H: %Subset($../Carrier(𝐆 = 𝐆)),
   p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers")
 ): %Predicate {
   notation = $NounRelation(
@@ -29,15 +29,15 @@ $"sylow subgroup"(
     ]
   ),
   definition = [$../../../Essentials/Sets/"maximal subset"(
-    S = {$../Carrier(𝐆 = {𝐆})},
-    T = {H},
+    S = $../Carrier(𝐆 = 𝐆),
+    T = H,
     _1 = {
-      #(I: %Subset($../Carrier(𝐆 = {𝐆}))),
-      {p = {$../Order/"P-Groups"/"p-subgroup"(
-        𝐆 = {𝐆},
-        H = {I},
-        p = {p}
-      )}}
+      #(I: %Subset($../Carrier(𝐆 = 𝐆))),
+      {p = $../Order/"P-Groups"/"p-subgroup"(
+        𝐆 = 𝐆,
+        H = I,
+        p = p
+      )}
     }
   )]
 }

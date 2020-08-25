@@ -32,7 +32,7 @@ $Multisets(S: %Set): %Construction {
       )),
       definition = [%forall(
         #(s: %Element(S)),
-        %equals(m[s = {s}], "m'"[s = {s}])
+        %equals(m[s = s], "m'"[s = s])
       )],
       isomorphic = %true
     }

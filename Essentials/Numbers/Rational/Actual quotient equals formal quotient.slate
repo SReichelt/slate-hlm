@@ -9,12 +9,12 @@ $"Actual quotient equals formal quotient"(
 ): %StandardTheorem {
   claim = %equals(
     $"Rational numbers".quotient(
-      n = {n},
-      d = {d}
+      n = n,
+      d = d
     ),
     $quotient(
-      a = {n},
-      b = {d}
+      a = n,
+      b = d
     )
   )
 }

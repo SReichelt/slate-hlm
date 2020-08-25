@@ -2,7 +2,7 @@
 
 $"subsemiring set"(
   𝐑: %Element($../Semirings),
-  S: %Subset($../Carrier(𝐑 = {𝐑}))
+  S: %Subset($../Carrier(𝐑 = 𝐑))
 ): %Predicate {
   notation = $NounRelation(
     operands = [S, 𝐑],
@@ -14,30 +14,30 @@ $"subsemiring set"(
       #(a,b: %Element(S)),
       %in(
         $../sum(
-          𝐑 = {𝐑},
-          a = {a},
-          b = {b}
+          𝐑 = 𝐑,
+          a = a,
+          b = b
         ),
         S
       )
     ),
     %in(
-      $../zero(𝐑 = {𝐑}),
+      $../zero(𝐑 = 𝐑),
       S
     ),
     %forall(
       #(c,d: %Element(S)),
       %in(
         $../product(
-          𝐑 = {𝐑},
-          a = {c},
-          b = {d}
+          𝐑 = 𝐑,
+          a = c,
+          b = d
         ),
         S
       )
     ),
     %in(
-      $../one(𝐑 = {𝐑}),
+      $../one(𝐑 = 𝐑),
       S
     )
   )]

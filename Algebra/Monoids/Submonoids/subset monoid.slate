@@ -5,10 +5,10 @@
  */
 $"subset monoid"(
   𝐌: %Element($../Monoids),
-  S: %Subset($../Carrier(𝐌 = {𝐌})),
+  S: %Subset($../Carrier(𝐌 = 𝐌)),
   _1: %Constraint($"submonoid set"(
-    𝐌 = {𝐌},
-    S = {S}
+    𝐌 = 𝐌,
+    S = S
   ))
 ): %ExplicitOperator {
   notation = $SubSup(
@@ -25,22 +25,22 @@ $"subset monoid"(
       constructor = $../Monoids.monoid,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = {M})),
+        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = M)),
         e: %Element(M),
         _1: %Constraint($../monoid(
-          M = {M},
-          ∗ = {∗},
-          e = {e}
+          M = M,
+          ∗ = ∗,
+          e = e
         ))
       ),
       value = $../Monoids.monoid(
-        M = {S},
-        ∗ = {$../../../Essentials/Operations/"inner operation restriction"(
-          X = {M},
-          A = {S},
-          ∗ = {∗}
-        )},
-        e = {e}
+        M = S,
+        ∗ = $../../../Essentials/Operations/"inner operation restriction"(
+          X = M,
+          A = S,
+          ∗ = ∗
+        ),
+        e = e
       )
     }]
   )]

@@ -3,9 +3,9 @@
 $value(
   X,Y,Z: %Set(auto = %true),
   ∗: %Element($Operations(
-    X = {X},
-    Y = {Y},
-    Z = {Z}
+    X = X,
+    Y = Y,
+    Z = Z
   )),
   x: %Element(X),
   y: %Element(Y)
@@ -18,9 +18,9 @@ $value(
     %structuralCases(
       ∗,
       $Operations(
-        X = {X},
-        Y = {Y},
-        Z = {Z}
+        X = X,
+        Y = Y,
+        Z = Z
       ),
       [{
         constructor = $Operations.operation,
@@ -31,23 +31,23 @@ $value(
           ),
           #(c: %Element(Z))
         )),
-        value = c[a = {x}, b = {y}]
+        value = c[a = x, b = y]
       }]
     ),
     $../Functions/value(
-      X = {$../Sets/"Cartesian product"(
-        S = {X},
-        T = {Y}
-      )},
-      Y = {Z},
-      f = {∗},
-      x = {$../Sets/"Cartesian product"(
-          S = {X},
-          T = {Y}
+      X = $../Sets/"Cartesian product"(
+        S = X,
+        T = Y
+      ),
+      Y = Z,
+      f = ∗,
+      x = $../Sets/"Cartesian product"(
+          S = X,
+          T = Y
         ).pair(
-          s = {x},
-          t = {y}
-      )}
+          s = x,
+          t = y
+      )
     )
   ]
 }

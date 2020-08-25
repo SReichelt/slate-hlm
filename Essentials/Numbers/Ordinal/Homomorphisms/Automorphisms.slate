@@ -22,7 +22,7 @@ $Automorphisms(α: %Element($../"Ordinal numbers")): %SetOperator {
     pluralName = 'automorphisms'
   },
   definition = [$Isomorphisms(
-    α = {α},
-    β = {α}
+    α = α,
+    β = α
   )]
 }

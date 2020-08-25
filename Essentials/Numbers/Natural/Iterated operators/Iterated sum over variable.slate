@@ -3,17 +3,17 @@
 $"Iterated sum over variable"(n: %Element($../"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $../../../Operations/"Iterated operations"/"indexed by natural number"(
-      X = {$../"Natural numbers"},
-      ⨂ = {$"iterated sum"},
+      X = $../"Natural numbers",
+      ⨂ = $"iterated sum",
       _1 = {
-        #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
-        {a = {i}}
+        #(i: %Element($../Subsets/"Segment (less)"(n = n))),
+        {a = i}
       },
-      n = {n}
+      n = n
     ),
     $../"binomial coefficient"(
-      n = {n},
-      k = {$../number(value = 2)}
+      n = n,
+      k = $../number(value = 2)
     ),
     %cases([
       {
@@ -22,14 +22,14 @@ $"Iterated sum over variable"(n: %Element($../"Natural numbers")): %StandardTheo
           $../number(value = 0)
         )),
         value = $../quotient(
-          n = {$../product(
-            m = {n},
-            n = {$../difference(
-              n = {n},
-              m = {$../number(value = 1)}
-            )}
-          )},
-          m = {$../number(value = 2)}
+          n = $../product(
+            m = n,
+            n = $../difference(
+              n = n,
+              m = $../number(value = 1)
+            )
+          ),
+          m = $../number(value = 2)
         )
       },
       {

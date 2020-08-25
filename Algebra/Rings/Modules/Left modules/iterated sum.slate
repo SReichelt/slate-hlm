@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @example `$../../../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(X = {$Carrier(𝐑 = {𝐑}, 𝐌 = {𝐌})}, ⨂ = {$"iterated sum"(𝐑 = {𝐑}, 𝐌 = {𝐌})}, n = {n}, _1 = {#(i: %Element($../../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i = {i}]}}})`
+ * @example `$../../../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(X = $Carrier(𝐑 = 𝐑, 𝐌 = 𝐌), ⨂ = $"iterated sum"(𝐑 = 𝐑, 𝐌 = 𝐌), n = n, _1 = {#(i: %Element($../../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))), {a = {a[i = i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Summation
  *             * https://mathworld.wolfram.com/Sum.html
@@ -12,14 +12,14 @@ $"iterated sum"(
     $../../Rings,
     auto = %true
   ),
-  𝐌: %Element($"Left modules"(𝐑 = {𝐑}))
+  𝐌: %Element($"Left modules"(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $SubSup(
     body = '∑',
     sub = 𝐌
   ),
-  definition = [$../../../Groups/"iterated operation"(𝐆 = {$"additive group"(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌}
-  )})]
+  definition = [$../../../Groups/"iterated operation"(𝐆 = $"additive group"(
+    𝐑 = 𝐑,
+    𝐌 = 𝐌
+  ))]
 }

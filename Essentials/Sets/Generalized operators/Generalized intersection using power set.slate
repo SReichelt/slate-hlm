@@ -5,7 +5,7 @@
  */
 $"Generalized intersection using power set"(
   U: %Set(auto = %true),
-  S: %Subset($../"Power set"(S = {U}))
+  S: %Subset($../"Power set"(S = U))
 ): %SetOperator {
   notation = $PrefixUnaryOperator(
     symbol = '⋂',
@@ -14,17 +14,17 @@ $"Generalized intersection using power set"(
   definition = [$"Generalized intersection"(
     _1 = {
       #(i: %Element(S)),
-      {S = {%setStructuralCases(
+      {S = %setStructuralCases(
         i,
-        $../"Power set"(S = {U}),
+        $../"Power set"(S = U),
         [{
           constructor = $../"Power set".subset,
           parameters = #(T: %Subset(U)),
           value = T
         }]
-      )}}
+      )}
     },
-    U = {U},
-    I = {S}
+    U = U,
+    I = S
   )]
 }

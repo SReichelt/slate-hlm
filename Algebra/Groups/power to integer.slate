@@ -9,7 +9,7 @@ $"power to integer"(
     $Groups,
     auto = %true
   ),
-  a: %Element($Carrier(𝐆 = {𝐆})),
+  a: %Element($Carrier(𝐆 = 𝐆)),
   z: %Element($../../Essentials/Numbers/Integer/Integers)
 ): %ExplicitOperator {
   notation = $SubSup(
@@ -19,27 +19,27 @@ $"power to integer"(
   definition = [%cases([
     {
       formula = $../../Essentials/Numbers/Integer/"less or equal"(
-        b = {z},
-        a = {$../../Essentials/Numbers/Natural/number(value = 0)}
+        b = z,
+        a = $../../Essentials/Numbers/Natural/number(value = 0)
       ),
       value = $"power to natural number"(
-        𝐆 = {𝐆},
-        a = {a},
-        n = {z}
+        𝐆 = 𝐆,
+        a = a,
+        n = z
       )
     },
     {
       formula = $../../Essentials/Numbers/Integer/less(
-        a = {z},
-        b = {$../../Essentials/Numbers/Natural/number(value = 0)}
+        a = z,
+        b = $../../Essentials/Numbers/Natural/number(value = 0)
       ),
       value = $"power to natural number"(
-        𝐆 = {𝐆},
-        a = {$inverse(
-          𝐆 = {𝐆},
-          a = {a}
-        )},
-        n = {$../../Essentials/Numbers/Integer/inverse(a = {z})}
+        𝐆 = 𝐆,
+        a = $inverse(
+          𝐆 = 𝐆,
+          a = a
+        ),
+        n = $../../Essentials/Numbers/Integer/inverse(a = z)
       )
     }
   ])]

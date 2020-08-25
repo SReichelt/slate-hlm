@@ -2,7 +2,7 @@
 
 $"Induction lemma"(
   M: %Subset($"Natural numbers"),
-  _1: %Constraint($inductive(M = {M})),
+  _1: %Constraint($inductive(M = M)),
   n: %Element($"Natural numbers")
 ): %StandardTheorem {
   claim = %in(n, M),
@@ -27,8 +27,8 @@ $"Induction lemma"(
         value = {steps = #(
           _: %UseTheorem(
             $"Induction lemma"(
-              M = {M},
-              n = {x}
+              M = M,
+              n = x
             ),
             result = %in(x, M)
           ),
@@ -37,13 +37,13 @@ $"Induction lemma"(
             #(m: %Element(M)),
             %in(
               $sum(
-                m = {m},
-                n = {$number(value = 1)}
+                m = m,
+                n = $number(value = 1)
               ),
               M
             )
           )),
-          _: %UseForAll({m = {x}})
+          _: %UseForAll({m = x})
         )},
         rewrite = %true
       }

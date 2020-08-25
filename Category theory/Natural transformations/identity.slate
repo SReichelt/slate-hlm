@@ -10,19 +10,19 @@ $identity(
     auto = %true
   ),
   𝓒: %Element(
-    $../Categories(u = {u}),
+    $../Categories(u = u),
     auto = %true
   ),
   𝓓: %Element(
-    $../Categories(u = {v}),
+    $../Categories(u = v),
     auto = %true
   ),
   F: %Element(
     $../Functors/Functors(
-      u = {u},
-      v = {v},
-      𝓒 = {𝓒},
-      𝓓 = {𝓓}
+      u = u,
+      v = v,
+      𝓒 = 𝓒,
+      𝓓 = 𝓓
     ),
     auto = %true
   )
@@ -33,56 +33,56 @@ $identity(
   ),
   definition = [
     $"Infranatural transformations"(
-        u = {u},
-        v = {v},
-        𝓒 = {𝓒},
-        𝓓 = {𝓓},
-        F = {F},
-        G = {F}
+        u = u,
+        v = v,
+        𝓒 = 𝓒,
+        𝓓 = 𝓓,
+        F = F,
+        G = F
       ).transformation(_1 = {
         #(𝐗: %Element($../Objects(
-          u = {u},
-          𝓒 = {𝓒}
+          u = u,
+          𝓒 = 𝓒
         ))),
-        {n = {$../identity(
-          u = {v},
-          𝓒 = {𝓓},
-          𝐗 = {$../Functors/"object value"(
-            u = {u},
-            v = {v},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓},
-            F = {F},
-            𝐗 = {𝐗}
-          )}
-        )}}
+        {n = $../identity(
+          u = v,
+          𝓒 = 𝓓,
+          𝐗 = $../Functors/"object value"(
+            u = u,
+            v = v,
+            𝓒 = 𝓒,
+            𝓓 = 𝓓,
+            F = F,
+            𝐗 = 𝐗
+          )
+        )}
     }),
     $"Infranatural transformations"(
-        u = {u},
-        v = {v},
-        𝓒 = {𝓒},
-        𝓓 = {𝓓},
-        F = {F},
-        G = {F}
+        u = u,
+        v = v,
+        𝓒 = 𝓒,
+        𝓓 = 𝓓,
+        F = F,
+        G = F
       ).transformation(_1 = {
         #(𝐗: %Element($../Objects(
-          u = {u},
-          𝓒 = {𝓒}
+          u = u,
+          𝓒 = 𝓒
         ))),
-        {n = {$../Functors/"morphism value"(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓},
-          F = {F},
-          𝐗 = {𝐗},
-          𝐘 = {𝐗},
-          f = {$../identity(
-            u = {u},
-            𝓒 = {𝓒},
-            𝐗 = {𝐗}
-          )}
-        )}}
+        {n = $../Functors/"morphism value"(
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓,
+          F = F,
+          𝐗 = 𝐗,
+          𝐘 = 𝐗,
+          f = $../identity(
+            u = u,
+            𝓒 = 𝓒,
+            𝐗 = 𝐗
+          )
+        )}
     })
   ]
 }

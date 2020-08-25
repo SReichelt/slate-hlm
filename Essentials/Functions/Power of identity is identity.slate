@@ -6,10 +6,10 @@ $"Power of identity is identity"(
 ): %StandardTheorem {
   claim = %equals(
     $"power to integer"(
-      X = {X},
-      f = {$identity(X = {X})},
-      a = {a}
+      X = X,
+      f = $identity(X = X),
+      a = a
     ),
-    $identity(X = {X})
+    $identity(X = X)
   )
 }

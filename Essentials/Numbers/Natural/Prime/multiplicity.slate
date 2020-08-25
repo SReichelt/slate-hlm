@@ -22,74 +22,74 @@ $multiplicity(
       formula = %and(
         %equals(
           $../product(
-            m = {$../power(
-              m = {p},
-              n = {x}
-            )},
-            n = {m}
+            m = $../power(
+              m = p,
+              n = x
+            ),
+            n = m
           ),
           n
         ),
         %not($../divisible(
-          m = {p},
-          n = {m}
+          m = p,
+          n = m
         ))
       )
     ),
     %and(
       $../divisible(
-        m = {$../power(
-          m = {p},
-          n = {x}
-        )},
-        n = {n}
+        m = $../power(
+          m = p,
+          n = x
+        ),
+        n = n
       ),
       %not($../divisible(
-        m = {p},
-        n = {$../quotient(
-          n = {n},
-          m = {$../power(
-            m = {p},
-            n = {x}
-          )}
-        )}
+        m = p,
+        n = $../quotient(
+          n = n,
+          m = $../power(
+            m = p,
+            n = x
+          )
+        )
       ))
     ),
     %and(
       $../divisible(
-        m = {$../power(
-          m = {p},
-          n = {x}
-        )},
-        n = {n}
+        m = $../power(
+          m = p,
+          n = x
+        ),
+        n = n
       ),
       %not($../divisible(
-        m = {$../power(
-          m = {p},
-          n = {$../sum(
-            m = {x},
-            n = {$../number(value = 1)}
-          )}
-        )},
-        n = {n}
+        m = $../power(
+          m = p,
+          n = $../sum(
+            m = x,
+            n = $../number(value = 1)
+          )
+        ),
+        n = n
       ))
     ),
     %and(
       $../divisible(
-        m = {$../power(
-          m = {p},
-          n = {x}
-        )},
-        n = {n}
+        m = $../power(
+          m = p,
+          n = x
+        ),
+        n = n
       ),
       %not(%exists(
-        #(y: %Element($../Subsets/"Segment (greater)"(n = {x}))),
+        #(y: %Element($../Subsets/"Segment (greater)"(n = x))),
         formula = $../divisible(
-          m = {$../power(
-            m = {p},
-            n = {y}
-          )},
-          n = {n}
+          m = $../power(
+            m = p,
+            n = y
+          ),
+          n = n
         )
       ))
     )

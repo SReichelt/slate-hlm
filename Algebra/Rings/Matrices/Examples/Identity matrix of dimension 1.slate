@@ -3,12 +3,12 @@
 $"Identity matrix of dimension 1"(𝐑: %Element($../../Rings)): %StandardTheorem {
   claim = %equals(
     $../identity(
-      𝐑 = {𝐑},
-      n = {$../../../../Essentials/Numbers/Natural/number(value = 1)}
+      𝐑 = 𝐑,
+      n = $../../../../Essentials/Numbers/Natural/number(value = 1)
     ),
     $../matrix(
-      𝐑 = {𝐑},
-      items = [[{$../../one(𝐑 = {𝐑})}]]
+      𝐑 = 𝐑,
+      items = [[$../../one(𝐑 = 𝐑)]]
     )
   )
 }

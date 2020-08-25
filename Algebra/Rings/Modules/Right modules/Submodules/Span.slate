@@ -12,12 +12,12 @@ $Span(
     auto = %true
   ),
   𝐌: %Element(
-    $../"Right modules"(𝐑 = {𝐑}),
+    $../"Right modules"(𝐑 = 𝐑),
     auto = %true
   ),
   X: %Subset($../Carrier(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌
   ))
 ): %SetOperator {
   notation = $Parens(
@@ -25,37 +25,37 @@ $Span(
     style = '<>'
   ),
   definition = [$../../../../../Essentials/Sets/"Generalized operators"/"Generalized intersection using power set"(
-    U = {$../Carrier(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌}
-    )},
-    S = {%subset(
-      #(s: %Element($../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
-        𝐑 = {𝐑},
-        𝐌 = {𝐌}
-      )}))),
+    U = $../Carrier(
+      𝐑 = 𝐑,
+      𝐌 = 𝐌
+    ),
+    S = %subset(
+      #(s: %Element($../../../../../Essentials/Sets/"Power set"(S = $../Carrier(
+        𝐑 = 𝐑,
+        𝐌 = 𝐌
+      )))),
       %structural(
         s,
-        $../../../../../Essentials/Sets/"Power set"(S = {$../Carrier(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌}
-        )}),
+        $../../../../../Essentials/Sets/"Power set"(S = $../Carrier(
+          𝐑 = 𝐑,
+          𝐌 = 𝐌
+        )),
         [{
           constructor = $../../../../../Essentials/Sets/"Power set".subset,
           parameters = #(S: %Subset($../Carrier(
-            𝐑 = {𝐑},
-            𝐌 = {𝐌}
+            𝐑 = 𝐑,
+            𝐌 = 𝐌
           ))),
           value = %and(
             $"submodule set"(
-              𝐑 = {𝐑},
-              𝐌 = {𝐌},
-              S = {S}
+              𝐑 = 𝐑,
+              𝐌 = 𝐌,
+              S = S
             ),
             %sub(X, S)
           )
         }]
       )
-    )}
+    )
   )]
 }

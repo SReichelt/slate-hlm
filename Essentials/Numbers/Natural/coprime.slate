@@ -19,12 +19,12 @@ $coprime(m,n: %Element($"Natural numbers")): %Predicate {
       #(
         a: %Element($Subsets/"Positive numbers"),
         _1: %Constraint($divisible(
-          m = {a},
-          n = {m}
+          m = a,
+          n = m
         )),
         _2: %Constraint($divisible(
-          m = {a},
-          n = {n}
+          m = a,
+          n = n
         ))
       ),
       %equals(
@@ -33,31 +33,31 @@ $coprime(m,n: %Element($"Natural numbers")): %Predicate {
       )
     ),
     %not(%exists(
-      #(b: %Element($Subsets/"Segment (greater)"(n = {$number(value = 1)}))),
+      #(b: %Element($Subsets/"Segment (greater)"(n = $number(value = 1)))),
       formula = %and(
         $divisible(
-          m = {b},
-          n = {m}
+          m = b,
+          n = m
         ),
         $divisible(
-          m = {b},
-          n = {n}
+          m = b,
+          n = n
         )
       )
     )),
     %sub(
       $../../Sets/Intersection(
-        U = {$"Natural numbers"},
-        S = {$Divisors(n = {m})},
-        T = {$Divisors(n = {n})}
+        U = $"Natural numbers",
+        S = $Divisors(n = m),
+        T = $Divisors(n = n)
       ),
       %enumeration($number(value = 1))
     ),
     %setEquals(
       $../../Sets/Intersection(
-        U = {$"Natural numbers"},
-        S = {$Divisors(n = {m})},
-        T = {$Divisors(n = {n})}
+        U = $"Natural numbers",
+        S = $Divisors(n = m),
+        T = $Divisors(n = n)
       ),
       %enumeration($number(value = 1))
     ),
@@ -65,12 +65,12 @@ $coprime(m,n: %Element($"Natural numbers")): %Predicate {
       #(p: %Element($Prime/"Prime numbers")),
       formula = %and(
         $divisible(
-          m = {p},
-          n = {m}
+          m = p,
+          n = m
         ),
         $divisible(
-          m = {p},
-          n = {n}
+          m = p,
+          n = n
         )
       )
     ))

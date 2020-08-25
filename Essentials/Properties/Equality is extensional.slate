@@ -7,17 +7,17 @@ $"Equality is extensional"(
   conditions = [
     %equals(s, t),
     %forall(
-      #(p: %Element($Properties(S = {S}))),
+      #(p: %Element($Properties(S = S))),
       %equiv(
         $"has property"(
-          S = {S},
-          p = {p},
-          s = {s}
+          S = S,
+          p = p,
+          s = s
         ),
         $"has property"(
-          S = {S},
-          p = {p},
-          s = {t}
+          S = S,
+          p = p,
+          s = t
         )
       )
     )

@@ -8,7 +8,7 @@
  */
 $"total order"(
   S: %Set(auto = %true),
-  ⪯: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $NounProperty(
     operand = ⪯,
@@ -18,26 +18,26 @@ $"total order"(
   definition = [
     %and(
       $connex(
-        S = {S},
-        ≺ = {⪯}
+        S = S,
+        ≺ = ⪯
       ),
       $antisymmetric(
-        S = {S},
-        ⪯ = {⪯}
+        S = S,
+        ⪯ = ⪯
       ),
       $transitive(
-        S = {S},
-        ≺ = {⪯}
+        S = S,
+        ≺ = ⪯
       )
     ),
     %and(
       $"partial order"(
-        S = {S},
-        ⪯ = {⪯}
+        S = S,
+        ⪯ = ⪯
       ),
       $connex(
-        S = {S},
-        ≺ = {⪯}
+        S = S,
+        ≺ = ⪯
       )
     )
   ]

@@ -9,8 +9,8 @@ $"Segment (greater or equal)"(κ: %Element($../"Cardinal numbers")): %SetOperato
   definition = [%subset(
     #(μ: %Element($../"Cardinal numbers")),
     $../"less or equal"(
-      μ = {μ},
-      κ = {κ}
+      μ = μ,
+      κ = κ
     )
   )]
 }

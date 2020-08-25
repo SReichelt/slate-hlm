@@ -14,8 +14,8 @@ $aleph(α: %Element(%enumeration($../../Natural/number(value = 0)))): %ExplicitO
     sub = α
   ),
   definition = [
-    $../"Cardinal numbers".cardinality(S = {$../../Natural/"Natural numbers"}),
-    $../"Cardinal numbers".cardinality(S = {$../../Integer/Integers}),
-    $../"Cardinal numbers".cardinality(S = {$../../Rational/"Rational numbers"})
+    $../"Cardinal numbers".cardinality(S = $../../Natural/"Natural numbers"),
+    $../"Cardinal numbers".cardinality(S = $../../Integer/Integers),
+    $../"Cardinal numbers".cardinality(S = $../../Rational/"Rational numbers")
   ]
 }

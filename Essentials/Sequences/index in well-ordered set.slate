@@ -5,28 +5,28 @@
  */
 $"index in well-ordered set"(
   S: %Set,
-  ⪯: %Element($../Relations/Endorelations(S = {S})),
+  ⪯: %Element($../Relations/Endorelations(S = S)),
   _1: %Constraint($../Relations/"well-order"(
-    S = {S},
-    ⪯ = {⪯}
+    S = S,
+    ⪯ = ⪯
   )),
   α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(
-    S = {S},
-    ⪯ = {⪯}
+    S = S,
+    ⪯ = ⪯
   )),
   s: %Element(S),
   T: %SetDef(%subset(
     #(t: %Element($../Sets/"Relative complement"(
-      U = {S},
-      S = {S},
-      T = {%enumeration(s)}
+      U = S,
+      S = S,
+      T = %enumeration(s)
     ))),
     $../Relations/related(
-      S = {S},
-      T = {S},
-      ≺ = {⪯},
-      s = {t},
-      t = {s}
+      S = S,
+      T = S,
+      ≺ = ⪯,
+      s = t,
+      t = s
     )
   ))
 ): %ExplicitOperator {
@@ -38,11 +38,11 @@ $"index in well-ordered set"(
     arguments = [s]
   ),
   definition = [$../Numbers/Ordinal/"Ordinal numbers"."order type"(
-    S = {T},
-    ⪯ = {$../Relations/restriction(
-      S = {S},
-      ≺ = {⪯},
-      T = {T}
-    )}
+    S = T,
+    ⪯ = $../Relations/restriction(
+      S = S,
+      ≺ = ⪯,
+      T = T
+    )
   )]
 }

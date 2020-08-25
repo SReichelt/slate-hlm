@@ -13,7 +13,7 @@ $"automorphism group"(𝐆: %Element($../Groups)): %ExplicitOperator {
     arguments = [𝐆]
   ),
   definition = [$../Subgroups/"subset group"(
-    𝐆 = {$../Examples/"symmetric group"(X = {$../Carrier(𝐆 = {𝐆})})},
-    S = {$Automorphisms(𝐆 = {𝐆})}
+    𝐆 = $../Examples/"symmetric group"(X = $../Carrier(𝐆 = 𝐆)),
+    S = $Automorphisms(𝐆 = 𝐆)
   )]
 }

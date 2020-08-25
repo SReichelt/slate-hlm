@@ -6,7 +6,7 @@
  */
 $quotient(
   a: %Element($Integers),
-  b: %Element($Divisors(b = {a}))
+  b: %Element($Divisors(b = a))
 ): %ImplicitOperator {
   notation = $Fraction(
     numerator = a,
@@ -16,8 +16,8 @@ $quotient(
   definition = [%equals(
     a,
     $product(
-      a = {x},
-      b = {b}
+      a = x,
+      b = b
     )
   )]
 }

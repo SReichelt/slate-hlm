@@ -1,11 +1,11 @@
 %../../../../../logics/hlm%
 
-$"Coprime test"(m,n: %Element($Subsets/"Segment (greater)"(n = {$number(value = 1)}))): %StandardTheorem {
+$"Coprime test"(m,n: %Element($Subsets/"Segment (greater)"(n = $number(value = 1)))): %StandardTheorem {
   claim = %not($coprime(
-    m = {m},
-    n = {$product(
-      m = {m},
-      n = {n}
-    )}
+    m = m,
+    n = $product(
+      m = m,
+      n = n
+    )
   ))
 }

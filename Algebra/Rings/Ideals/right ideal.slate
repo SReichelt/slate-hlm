@@ -8,7 +8,7 @@
  */
 $"right ideal"(
   𝐑: %Element($../Rings),
-  I: %Subset($../Carrier(𝐑 = {𝐑}))
+  I: %Subset($../Carrier(𝐑 = 𝐑))
 ): %Predicate {
   notation = $NounRelation(
     operands = [I, 𝐑],
@@ -17,19 +17,19 @@ $"right ideal"(
   ),
   definition = [%and(
     $../../Groups/Subgroups/"subgroup set"(
-      𝐆 = {$../"additive group"(𝐑 = {𝐑})},
-      S = {I}
+      𝐆 = $../"additive group"(𝐑 = 𝐑),
+      S = I
     ),
     %forall(
       #(
         i: %Element(I),
-        r: %Element($../Carrier(𝐑 = {𝐑}))
+        r: %Element($../Carrier(𝐑 = 𝐑))
       ),
       %in(
         $../product(
-          𝐑 = {𝐑},
-          a = {i},
-          b = {r}
+          𝐑 = 𝐑,
+          a = i,
+          b = r
         ),
         I
       )

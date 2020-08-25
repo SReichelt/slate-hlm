@@ -5,7 +5,7 @@ $Bases(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Right modules"(𝐑 = {𝐑}))
+  𝐌: %Element($../"Right modules"(𝐑 = 𝐑))
 ): %SetOperator {
   notation = $Function(
     function = 'Ba',
@@ -18,13 +18,13 @@ $Bases(
   },
   definition = [%subset(
     #(𝒙: %Element($"Element sequences"(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌}
+      𝐑 = 𝐑,
+      𝐌 = 𝐌
     ))),
     $basis(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌},
-      𝒙 = {𝒙}
+      𝐑 = 𝐑,
+      𝐌 = 𝐌,
+      𝒙 = 𝒙
     )
   )]
 }

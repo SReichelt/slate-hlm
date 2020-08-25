@@ -11,7 +11,7 @@
 $Magmas: %Construction {
   $magma(
     M: %Set,
-    ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
+    ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
   ): %Constructor {
     notation = $Tuple(
       items = [M, ∗],
@@ -20,23 +20,23 @@ $Magmas: %Construction {
     equalityDefinition = {
       leftParameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
       rightParameters = #(
         N: %Set,
-        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = {N}))
+        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = N))
       ),
       definition = [%exists(
         #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = {M},
-          Y = {N}
+          X = M,
+          Y = N
         ))),
         formula = $../Generic/Isomorphisms/"inner operation condition"(
-          X = {M},
-          Y = {N},
-          φ = {φ},
-          ∗ = {∗},
-          ⋆ = {⋆}
+          X = M,
+          Y = N,
+          φ = φ,
+          ∗ = ∗,
+          ⋆ = ⋆
         )
       )],
       isomorphic = %true

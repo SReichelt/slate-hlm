@@ -8,9 +8,9 @@
 $"right identity element"(
   X,Y: %Set(auto = %true),
   ∗: %Element($Operations(
-    X = {X},
-    Y = {Y},
-    Z = {X}
+    X = X,
+    Y = Y,
+    Z = X
   )),
   e: %Element(Y)
 ): %Predicate {
@@ -24,12 +24,12 @@ $"right identity element"(
     #(a: %Element(X)),
     %equals(
       $value(
-        X = {X},
-        Y = {Y},
-        Z = {X},
-        ∗ = {∗},
-        x = {a},
-        y = {e}
+        X = X,
+        Y = Y,
+        Z = X,
+        ∗ = ∗,
+        x = a,
+        y = e
       ),
       a
     )

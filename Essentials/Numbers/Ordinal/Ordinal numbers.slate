@@ -10,10 +10,10 @@
 $"Ordinal numbers": %Construction {
   $"order type"(
     S: %Set,
-    ⪯: %Element($../../Relations/Endorelations(S = {S})),
+    ⪯: %Element($../../Relations/Endorelations(S = S)),
     _1: %Constraint($../../Relations/"well-order"(
-      S = {S},
-      ⪯ = {⪯}
+      S = S,
+      ⪯ = ⪯
     ))
   ): %Constructor {
     notation = $Tuple(
@@ -23,31 +23,31 @@ $"Ordinal numbers": %Construction {
     equalityDefinition = {
       leftParameters = #(
         S: %Set,
-        ⪯: %Element($../../Relations/Endorelations(S = {S})),
+        ⪯: %Element($../../Relations/Endorelations(S = S)),
         _1: %Constraint($../../Relations/"well-order"(
-          S = {S},
-          ⪯ = {⪯}
+          S = S,
+          ⪯ = ⪯
         ))
       ),
       rightParameters = #(
         T: %Set,
-        ⊑: %Element($../../Relations/Endorelations(S = {T})),
+        ⊑: %Element($../../Relations/Endorelations(S = T)),
         _1: %Constraint($../../Relations/"well-order"(
-          S = {T},
-          ⪯ = {⊑}
+          S = T,
+          ⪯ = ⊑
         ))
       ),
       definition = [%exists(
         #(φ: %Element($../../Functions/Bijections(
-          X = {S},
-          Y = {T}
+          X = S,
+          Y = T
         ))),
         formula = $../../../Algebra/Generic/Isomorphisms/"relation condition"(
-          X = {S},
-          Y = {T},
-          φ = {φ},
-          ≺ = {⪯},
-          ⊂ = {⊑}
+          X = S,
+          Y = T,
+          φ = φ,
+          ≺ = ⪯,
+          ⊂ = ⊑
         )
       )],
       isomorphic = %true
@@ -64,21 +64,21 @@ $"Ordinal numbers": %Construction {
   embedding = {
     parameter = #(n: %Element($../Natural/"Natural numbers")),
     target = $"Ordinal numbers"."order type"(
-      S = {$../Natural/Subsets/"Segment (less)"(n = {n})},
-      ⪯ = {$../../Relations/restriction(
-        S = {$../Natural/"Natural numbers"},
-        T = {$../Natural/Subsets/"Segment (less)"(n = {n})},
-        ≺ = {$../../Relations/Relations(
-            S = {$../Natural/"Natural numbers"},
-            T = {$../Natural/"Natural numbers"}
+      S = $../Natural/Subsets/"Segment (less)"(n = n),
+      ⪯ = $../../Relations/restriction(
+        S = $../Natural/"Natural numbers",
+        T = $../Natural/Subsets/"Segment (less)"(n = n),
+        ≺ = $../../Relations/Relations(
+            S = $../Natural/"Natural numbers",
+            T = $../Natural/"Natural numbers"
           ).relation(_1 = {
             #(m,n: %Element($../Natural/"Natural numbers")),
-            {p = {$../Natural/"less or equal"(
-              m = {m},
-              n = {n}
-            )}}
-        })}
-      )}
+            {p = $../Natural/"less or equal"(
+              m = m,
+              n = n
+            )}
+        })
+      )
     )
   }
 }

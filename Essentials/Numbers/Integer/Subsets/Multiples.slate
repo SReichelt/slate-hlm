@@ -10,8 +10,8 @@ $Multiples(n: %Element($../../Natural/"Natural numbers")): %SetOperator {
   definition = [%extendedSubset(
     #(z: %Element($../Integers)),
     $../product(
-      a = {n},
-      b = {z}
+      a = n,
+      b = z
     )
   )]
 }

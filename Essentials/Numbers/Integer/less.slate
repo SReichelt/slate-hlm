@@ -5,26 +5,26 @@
  */
 $less(a,b: %Element($Integers)): %Predicate {
   properties = {negation = $"less or equal"(
-    b = {a},
-    a = {b}
+    b = a,
+    a = b
   )},
   notation = $LessThanRelation(operands = [a, b]),
   definition = [
     %not($"less or equal"(
-      b = {a},
-      a = {b}
+      b = a,
+      a = b
     )),
     $"less or equal"(
-      a = {$sum(
-        a = {a},
-        b = {$../Natural/number(value = 1)}
-      )},
-      b = {b}
+      a = $sum(
+        a = a,
+        b = $../Natural/number(value = 1)
+      ),
+      b = b
     ),
     %and(
       $"less or equal"(
-        a = {a},
-        b = {b}
+        a = a,
+        b = b
       ),
       %not(%equals(a, b))
     )

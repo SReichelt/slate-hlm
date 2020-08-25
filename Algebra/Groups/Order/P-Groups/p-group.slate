@@ -22,11 +22,11 @@ $"p-group"(
     )
   ),
   definition = [%forall(
-    #(g: %Element($../../Carrier(𝐆 = {𝐆}))),
+    #(g: %Element($../../Carrier(𝐆 = 𝐆))),
     $"p-element"(
-      𝐆 = {𝐆},
-      g = {g},
-      p = {p}
+      𝐆 = 𝐆,
+      g = g,
+      p = p
     )
   )]
 }

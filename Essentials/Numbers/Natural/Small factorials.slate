@@ -5,16 +5,16 @@
  */
 $"Small factorials": %StandardTheorem {
   claim = $../../Sequences/"starts with"(
-    S = {$"Natural numbers"},
-    𝐚 = {$../../Sequences/"Infinite sequences"(S = {$"Natural numbers"}).sequence(_1 = {
+    S = $"Natural numbers",
+    𝐚 = $../../Sequences/"Infinite sequences"(S = $"Natural numbers").sequence(_1 = {
         #(n: %Element($"Natural numbers")),
-        {a = {$factorial(n = {n})}}
-    })},
-    n = {$number(value = 23)},
-    𝐛 = {$Sequences/"tuple of numbers"(items = [
+        {a = $factorial(n = n)}
+    }),
+    n = $number(value = 23),
+    𝐛 = $Sequences/"tuple of numbers"(items = [
       1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880,
       3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 121645100408832000,
       2432902008176640000, 51090942171709440000, 1124000727777607680000
-    ])}
+    ])
   )
 }

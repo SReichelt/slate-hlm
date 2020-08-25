@@ -2,7 +2,7 @@
 
 $"indexed by set with finite support"(
   X: %Set(auto = %true),
-  ⨂: %Element($"Iterated operations"(X = {X})),
+  ⨂: %Element($"Iterated operations"(X = X)),
   I: %Set,
   _1: %Binder(
     #(i: %Element(I)),
@@ -11,14 +11,14 @@ $"indexed by set with finite support"(
   J: %SetDef(%subset(
     #(i: %Element(I)),
     %not(%equals(
-      a[i = {i}],
+      a[i = i],
       $"identity element"(
-        X = {X},
-        ⨂ = {⨂}
+        X = X,
+        ⨂ = ⨂
       )
     ))
   )),
-  _2: %Constraint($../../Sets/finite(S = {J}))
+  _2: %Constraint($../../Sets/finite(S = J))
 ): %ExplicitOperator {
   notation = $LargeOperator(
     symbol = ⨂,
@@ -27,12 +27,12 @@ $"indexed by set with finite support"(
     maxParenLevel = 1
   ),
   definition = [$"indexed by finite set"(
-    X = {X},
-    ⨂ = {⨂},
-    I = {J},
+    X = X,
+    ⨂ = ⨂,
+    I = J,
     _2 = {
       #(j: %Element(J)),
-      {a = {a[i = {j}]}}
+      {a = a[i = j]}
     }
   )]
 }

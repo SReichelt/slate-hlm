@@ -7,8 +7,8 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
     α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
     𝐚: %Element($Tuples(
-      S = {S},
-      α = {α}
+      S = S,
+      α = α
     ))
   ): %Constructor {
     notation = $SubSup(
@@ -25,15 +25,15 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
       leftParameters = #(
         α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
         𝐚: %Element($Tuples(
-          S = {S},
-          α = {α}
+          S = S,
+          α = α
         ))
       ),
       rightParameters = #(
         β: %Element($../Numbers/Ordinal/"Ordinal numbers"),
         𝐛: %Element($Tuples(
-          S = {S},
-          α = {β}
+          S = S,
+          α = β
         ))
       ),
       definition = [%and(
@@ -43,21 +43,21 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
           %structuralCases(
             𝐛,
             $Tuples(
-              S = {S},
-              α = {β}
+              S = S,
+              α = β
             ),
             [{
               constructor = $Tuples.sequence,
               parameters = #(_1: %Binder(
-                #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {β}))),
+                #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = β))),
                 #(b: %Element(S))
               )),
               value = $Tuples(
-                  S = {S},
-                  α = {α}
+                  S = S,
+                  α = α
                 ).sequence(_1 = {
-                  #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
-                  {a = {b[k = {j}]}}
+                  #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+                  {a = b[k = j]}
               })
             }]
           )
@@ -78,22 +78,22 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
     nameOptional = %true
   },
   embedding = {
-    parameter = #(𝒂: %Element($"Finite sequences"(S = {S}))),
+    parameter = #(𝒂: %Element($"Finite sequences"(S = S))),
     target = %structuralCases(
       𝒂,
-      $"Finite sequences"(S = {S}),
+      $"Finite sequences"(S = S),
       [{
         constructor = $"Finite sequences".sequence,
         parameters = #(
           n: %Element($../Numbers/Natural/"Natural numbers"),
           𝐚: %Element($Tuples(
-            S = {S},
-            α = {n}
+            S = S,
+            α = n
           ))
         ),
-        value = $"Ordinal-indexed sequences"(S = {S}).sequence(
-            α = {n},
-            𝐚 = {𝐚}
+        value = $"Ordinal-indexed sequences"(S = S).sequence(
+            α = n,
+            𝐚 = 𝐚
         )
       }]
     )

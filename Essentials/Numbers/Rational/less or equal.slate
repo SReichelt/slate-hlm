@@ -7,8 +7,8 @@
  */
 $"less or equal"(a,b: %Element($"Rational numbers")): %Predicate {
   properties = {negation = $less(
-    b = {a},
-    a = {b}
+    b = a,
+    a = b
   )},
   notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [%structural(
@@ -30,14 +30,14 @@ $"less or equal"(a,b: %Element($"Rational numbers")): %Predicate {
             d_a: %Element($../Natural/Subsets/"Positive numbers")
           ),
           value = $../Integer/"less or equal"(
-            a = {$../Integer/product(
-              a = {n_a},
-              b = {d_b}
-            )},
-            b = {$../Integer/product(
-              a = {n_b},
-              b = {d_a}
-            )}
+            a = $../Integer/product(
+              a = n_a,
+              b = d_b
+            ),
+            b = $../Integer/product(
+              a = n_b,
+              b = d_a
+            )
           )
         }]
       )

@@ -27,15 +27,15 @@ $"Pointed sets": %Construction {
       ),
       definition = [%exists(
         #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = {S},
-          Y = {T}
+          X = S,
+          Y = T
         ))),
         formula = $../Generic/Isomorphisms/"element condition"(
-          X = {S},
-          Y = {T},
-          φ = {φ},
-          x = {s},
-          y = {t}
+          X = S,
+          Y = T,
+          φ = φ,
+          x = s,
+          y = t
         )
       )],
       isomorphic = %true

@@ -11,8 +11,8 @@
 $value(
   X,Y: %Set(auto = %true),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   )),
   x: %Element(X)
 ): %ExplicitOperator {
@@ -23,8 +23,8 @@ $value(
   definition = [%structuralCases(
     f,
     $Functions(
-      X = {X},
-      Y = {Y}
+      X = X,
+      Y = Y
     ),
     [{
       constructor = $Functions.function,
@@ -32,7 +32,7 @@ $value(
         #(z: %Element(X)),
         #(y: %Element(Y))
       )),
-      value = y[z = {x}]
+      value = y[z = x]
     }]
   )]
 }

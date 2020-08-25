@@ -9,20 +9,20 @@ $inverse(
     $Monoids,
     auto = %true
   ),
-  a: %Element($Carrier(𝐌 = {𝐌})),
+  a: %Element($Carrier(𝐌 = 𝐌)),
   _1: %Constraint($invertible(
-    𝐌 = {𝐌},
-    a = {a}
+    𝐌 = 𝐌,
+    a = a
   ))
 ): %ImplicitOperator {
   notation = $Inverse(term = a),
-  parameter = #(b: %Element($Carrier(𝐌 = {𝐌}))),
+  parameter = #(b: %Element($Carrier(𝐌 = 𝐌))),
   definition = [%equals(
     $operation(
-      𝐌 = {𝐌},
-      a = {a},
-      b = {b}
+      𝐌 = 𝐌,
+      a = a,
+      b = b
     ),
-    $identity(𝐌 = {𝐌})
+    $identity(𝐌 = 𝐌)
   )]
 }

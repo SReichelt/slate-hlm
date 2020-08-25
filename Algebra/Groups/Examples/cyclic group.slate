@@ -12,7 +12,7 @@ $"cyclic group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural number
     sub = n
   ),
   definition = [$../Quotients/"quotient group"(
-    𝐆 = {$integers},
-    S = {$../../../Essentials/Numbers/Integer/Subsets/Multiples(n = {n})}
+    𝐆 = $integers,
+    S = $../../../Essentials/Numbers/Integer/Subsets/Multiples(n = n)
   )]
 }

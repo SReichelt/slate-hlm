@@ -9,8 +9,8 @@ $"Segment (less)"(κ: %Element($../"Cardinal numbers")): %SetOperator {
   definition = [%subset(
     #(μ: %Element($../"Cardinal numbers")),
     $../less(
-      κ = {μ},
-      μ = {κ}
+      κ = μ,
+      μ = κ
     )
   )]
 }

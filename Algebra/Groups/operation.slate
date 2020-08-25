@@ -8,7 +8,7 @@ $operation(
     $Groups,
     auto = %true
   ),
-  a,b: %Element($Carrier(𝐆 = {𝐆}))
+  a,b: %Element($Carrier(𝐆 = 𝐆))
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(operands = [a, b]),
   definition = [%structuralCases(
@@ -18,26 +18,26 @@ $operation(
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(
-          X = {G},
-          Y = {G}
+          X = G,
+          Y = G
         )),
         _1: %Constraint($group(
-          G = {G},
-          ∗ = {∗},
-          e = {e},
-          i = {i}
+          G = G,
+          ∗ = ∗,
+          e = e,
+          i = i
         ))
       ),
       value = $../../Essentials/Operations/value(
-        X = {G},
-        Y = {G},
-        Z = {G},
-        ∗ = {∗},
-        x = {a},
-        y = {b}
+        X = G,
+        Y = G,
+        Z = G,
+        ∗ = ∗,
+        x = a,
+        y = b
       )
     }]
   )]

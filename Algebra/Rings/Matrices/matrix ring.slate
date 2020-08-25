@@ -18,104 +18,104 @@ $"matrix ring"(
     )
   ),
   definition = [$../Rings.ring(
-    R = {$Matrices(
-      𝐑 = {𝐑},
-      m = {n},
-      n = {n}
-    )},
-    ⊕ = {$../../../Essentials/Operations/Operations(
-        X = {$Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
-        )},
-        Y = {$Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
-        )},
-        Z = {$Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
-        )}
+    R = $Matrices(
+      𝐑 = 𝐑,
+      m = n,
+      n = n
+    ),
+    ⊕ = $../../../Essentials/Operations/Operations(
+        X = $Matrices(
+          𝐑 = 𝐑,
+          m = n,
+          n = n
+        ),
+        Y = $Matrices(
+          𝐑 = 𝐑,
+          m = n,
+          n = n
+        ),
+        Z = $Matrices(
+          𝐑 = 𝐑,
+          m = n,
+          n = n
+        )
       ).operation(_1 = {
         #(A,B: %Element($Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
+          𝐑 = 𝐑,
+          m = n,
+          n = n
         ))),
-        {z = {$sum(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n},
-          A = {A},
-          B = {B}
-        )}}
-    })},
-    "0" = {$zero(
-      𝐑 = {𝐑},
-      m = {n},
-      n = {n}
-    )},
-    ⊖ = {$../../../Essentials/Functions/Functions(
-        X = {$Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
-        )},
-        Y = {$Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
+        {z = $sum(
+          𝐑 = 𝐑,
+          m = n,
+          n = n,
+          A = A,
+          B = B
         )}
+    }),
+    "0" = $zero(
+      𝐑 = 𝐑,
+      m = n,
+      n = n
+    ),
+    ⊖ = $../../../Essentials/Functions/Functions(
+        X = $Matrices(
+          𝐑 = 𝐑,
+          m = n,
+          n = n
+        ),
+        Y = $Matrices(
+          𝐑 = 𝐑,
+          m = n,
+          n = n
+        )
       ).function(_1 = {
         #(A: %Element($Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
+          𝐑 = 𝐑,
+          m = n,
+          n = n
         ))),
-        {y = {$"additive inverse"(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n},
-          A = {A}
-        )}}
-    })},
-    ⊙ = {$../../../Essentials/Operations/Operations(
-        X = {$Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
-        )},
-        Y = {$Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
-        )},
-        Z = {$Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
+        {y = $"additive inverse"(
+          𝐑 = 𝐑,
+          m = n,
+          n = n,
+          A = A
         )}
+    }),
+    ⊙ = $../../../Essentials/Operations/Operations(
+        X = $Matrices(
+          𝐑 = 𝐑,
+          m = n,
+          n = n
+        ),
+        Y = $Matrices(
+          𝐑 = 𝐑,
+          m = n,
+          n = n
+        ),
+        Z = $Matrices(
+          𝐑 = 𝐑,
+          m = n,
+          n = n
+        )
       ).operation(_1 = {
         #(A,B: %Element($Matrices(
-          𝐑 = {𝐑},
-          m = {n},
-          n = {n}
+          𝐑 = 𝐑,
+          m = n,
+          n = n
         ))),
-        {z = {$product(
-          𝐑 = {𝐑},
-          l = {n},
-          m = {n},
-          n = {n},
-          A = {A},
-          B = {B}
-        )}}
-    })},
-    "1" = {$identity(
-      𝐑 = {𝐑},
-      n = {n}
-    )}
+        {z = $product(
+          𝐑 = 𝐑,
+          l = n,
+          m = n,
+          n = n,
+          A = A,
+          B = B
+        )}
+    }),
+    "1" = $identity(
+      𝐑 = 𝐑,
+      n = n
+    )
   )]
 }

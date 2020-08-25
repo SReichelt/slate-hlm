@@ -2,10 +2,10 @@
 
 $"subset magma"(
   𝐌: %Element($../Magmas),
-  S: %Subset($../Carrier(𝐌 = {𝐌})),
+  S: %Subset($../Carrier(𝐌 = 𝐌)),
   _1: %Constraint($"submagma set"(
-    𝐌 = {𝐌},
-    S = {S}
+    𝐌 = 𝐌,
+    S = S
   ))
 ): %ExplicitOperator {
   notation = $SubSup(
@@ -22,15 +22,15 @@ $"subset magma"(
       constructor = $../Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = M))
       ),
       value = $../Magmas.magma(
-        M = {S},
-        ∗ = {$../../../Essentials/Operations/"inner operation restriction"(
-          X = {M},
-          A = {S},
-          ∗ = {∗}
-        )}
+        M = S,
+        ∗ = $../../../Essentials/Operations/"inner operation restriction"(
+          X = M,
+          A = S,
+          ∗ = ∗
+        )
       )
     }]
   )]

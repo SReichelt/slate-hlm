@@ -6,23 +6,23 @@ $difference(
     auto = %true
   ),
   𝐌: %Element(
-    $"Left modules"(𝐑 = {𝐑}),
+    $"Left modules"(𝐑 = 𝐑),
     auto = %true
   ),
   x,y: %Element($Carrier(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌
   ))
 ): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [x, y]),
   definition = [$sum(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌},
-    x = {x},
-    y = {$"additive inverse"(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌},
-      x = {y}
-    )}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌,
+    x = x,
+    y = $"additive inverse"(
+      𝐑 = 𝐑,
+      𝐌 = 𝐌,
+      x = y
+    )
   )]
 }

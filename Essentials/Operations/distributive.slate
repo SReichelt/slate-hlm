@@ -8,7 +8,7 @@
  */
 $distributive(
   X: %Set(auto = %true),
-  ∗,⋆: %Element($"Inner operations"(X = {X}))
+  ∗,⋆: %Element($"Inner operations"(X = X))
 ): %Predicate {
   notation = $RelationalProperty(
     operands = [∗, ⋆],
@@ -17,16 +17,16 @@ $distributive(
   ),
   definition = [%and(
     $"left-distributive"(
-      X = {X},
-      Y = {X},
-      ∗ = {∗},
-      ⋆ = {⋆}
+      X = X,
+      Y = X,
+      ∗ = ∗,
+      ⋆ = ⋆
     ),
     $"right-distributive"(
-      X = {X},
-      Y = {X},
-      ∗ = {∗},
-      ⋆ = {⋆}
+      X = X,
+      Y = X,
+      ∗ = ∗,
+      ⋆ = ⋆
     )
   )]
 }

@@ -2,49 +2,49 @@
 
 $"Natural number equalities"(
   X: %Set(auto = %true),
-  ⨂: %Element($"Iterated operations"(X = {X})),
+  ⨂: %Element($"Iterated operations"(X = X)),
   n: %Element($../../Numbers/Natural/"Natural numbers"),
   _1: %Binder(
-    #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+    #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
     #(a: %Element(X))
   )
 ): %StandardTheorem {
   claim = %equals(
     $"indexed by natural number"(
-      X = {X},
-      ⨂ = {⨂},
-      n = {n},
+      X = X,
+      ⨂ = ⨂,
+      n = n,
       _1 = {
-        #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-        {a = {a[i = {i}]}}
+        #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+        {a = a[i = i]}
       }
     ),
     $"indexed by integer"(
-      X = {X},
-      ⨂ = {⨂},
-      j = {$../../Numbers/Natural/number(value = 0)},
-      k = {$../../Numbers/Integer/difference(
-        a = {n},
-        b = {$../../Numbers/Natural/number(value = 1)}
-      )},
+      X = X,
+      ⨂ = ⨂,
+      j = $../../Numbers/Natural/number(value = 0),
+      k = $../../Numbers/Integer/difference(
+        a = n,
+        b = $../../Numbers/Natural/number(value = 1)
+      ),
       _1 = {
         #(i: %Element($../../Numbers/Integer/Subsets/Interval(
-          a = {$../../Numbers/Natural/number(value = 0)},
-          b = {$../../Numbers/Integer/difference(
-            a = {n},
-            b = {$../../Numbers/Natural/number(value = 1)}
-          )}
+          a = $../../Numbers/Natural/number(value = 0),
+          b = $../../Numbers/Integer/difference(
+            a = n,
+            b = $../../Numbers/Natural/number(value = 1)
+          )
         ))),
-        {a = {a[i = {i}]}}
+        {a = a[i = i]}
       }
     ),
     $"indexed by finite set"(
-      X = {X},
-      ⨂ = {⨂},
-      I = {$../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
+      X = X,
+      ⨂ = ⨂,
+      I = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
       _2 = {
-        #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-        {a = {a[i = {i}]}}
+        #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+        {a = a[i = i]}
       }
     )
   )

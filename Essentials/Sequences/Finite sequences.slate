@@ -14,8 +14,8 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
     n: %Element($../Numbers/Natural/"Natural numbers"),
     𝐚: %Element($Tuples(
-      S = {S},
-      α = {n}
+      S = S,
+      α = n
     ))
   ): %Constructor {
     notation = $SubSup(
@@ -32,15 +32,15 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
       leftParameters = #(
         m: %Element($../Numbers/Natural/"Natural numbers"),
         𝐚: %Element($Tuples(
-          S = {S},
-          α = {m}
+          S = S,
+          α = m
         ))
       ),
       rightParameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
         𝐛: %Element($Tuples(
-          S = {S},
-          α = {n}
+          S = S,
+          α = n
         ))
       ),
       definition = [%and(
@@ -50,21 +50,21 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
           %structuralCases(
             𝐛,
             $Tuples(
-              S = {S},
-              α = {n}
+              S = S,
+              α = n
             ),
             [{
               constructor = $Tuples.sequence,
               parameters = #(_1: %Binder(
-                #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}))),
+                #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = n))),
                 #(b: %Element(S))
               )),
               value = $Tuples(
-                  S = {S},
-                  α = {m}
+                  S = S,
+                  α = m
                 ).sequence(_1 = {
-                  #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {m}))),
-                  {a = {b[k = {j}]}}
+                  #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = m))),
+                  {a = b[k = j]}
               })
             }]
           )

@@ -12,5 +12,5 @@ $identity(𝐑: %Element(
     body = 'id',
     sub = 𝐑
   ),
-  definition = [$../../../Essentials/Functions/identity(X = {$../Carrier(𝐑 = {𝐑})})]
+  definition = [$../../../Essentials/Functions/identity(X = $../Carrier(𝐑 = 𝐑))]
 }

@@ -21,26 +21,26 @@ $product(a,b: %Element($Integers)): %ExplicitOperator {
           constructor = $Integers.difference,
           parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),
           value = $Integers.difference(
-            n = {$../Natural/sum(
-              m = {$../Natural/product(
-                m = {n_a},
-                n = {n_b}
-              )},
-              n = {$../Natural/product(
-                m = {m_a},
-                n = {m_b}
-              )}
-            )},
-            m = {$../Natural/sum(
-              m = {$../Natural/product(
-                m = {n_a},
-                n = {m_b}
-              )},
-              n = {$../Natural/product(
-                m = {m_a},
-                n = {n_b}
-              )}
-            )}
+            n = $../Natural/sum(
+              m = $../Natural/product(
+                m = n_a,
+                n = n_b
+              ),
+              n = $../Natural/product(
+                m = m_a,
+                n = m_b
+              )
+            ),
+            m = $../Natural/sum(
+              m = $../Natural/product(
+                m = n_a,
+                n = m_b
+              ),
+              n = $../Natural/product(
+                m = m_a,
+                n = n_b
+              )
+            )
           )
         }]
       )

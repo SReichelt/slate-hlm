@@ -9,8 +9,8 @@
  */
 $"less or equal"(m,n: %Element($"Natural numbers")): %Predicate {
   properties = {negation = $less(
-    n = {m},
-    m = {n}
+    n = m,
+    m = n
   )},
   notation = $LessOrEqualRelation(operands = [m, n]),
   definition = [
@@ -18,8 +18,8 @@ $"less or equal"(m,n: %Element($"Natural numbers")): %Predicate {
       #(x: %Element($"Natural numbers")),
       formula = %equals(
         $sum(
-          m = {m},
-          n = {x}
+          m = m,
+          n = x
         ),
         n
       )
@@ -38,8 +38,8 @@ $"less or equal"(m,n: %Element($"Natural numbers")): %Predicate {
           parameters = #(y: %Element($"Natural numbers")),
           value = %and(
             $"less or equal"(
-              m = {y},
-              n = {n}
+              m = y,
+              n = n
             ),
             %not(%equals(y, n))
           ),
@@ -62,8 +62,8 @@ $"less or equal"(m,n: %Element($"Natural numbers")): %Predicate {
             constructor = $"Natural numbers".successor,
             parameters = #(z: %Element($"Natural numbers")),
             value = $"less or equal"(
-              m = {m},
-              n = {z}
+              m = m,
+              n = z
             ),
             rewrite = %true
           }

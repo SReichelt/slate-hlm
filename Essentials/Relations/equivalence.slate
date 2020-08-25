@@ -10,7 +10,7 @@
  */
 $equivalence(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S}))
+  ≺: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $NounProperty(
     singular = 'equivalence relation',
@@ -20,12 +20,12 @@ $equivalence(
   ),
   definition = [%and(
     $preorder(
-      S = {S},
-      ⪯ = {≺}
+      S = S,
+      ⪯ = ≺
     ),
     $symmetric(
-      S = {S},
-      ≺ = {≺}
+      S = S,
+      ≺ = ≺
     )
   )]
 }

@@ -17,8 +17,8 @@ $inverse(a: %Element($"Rational numbers")): %ExplicitOperator {
         d_a: %Element($../Natural/Subsets/"Positive numbers")
       ),
       value = $"Rational numbers".quotient(
-        n = {$../Integer/inverse(a = {n_a})},
-        d = {d_a}
+        n = $../Integer/inverse(a = n_a),
+        d = d_a
       )
     }]
   )]

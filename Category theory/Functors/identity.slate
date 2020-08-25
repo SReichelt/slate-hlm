@@ -11,7 +11,7 @@ $identity(
     auto = %true
   ),
   𝓒: %Element(
-    $../Categories(u = {u}),
+    $../Categories(u = u),
     auto = %true
   )
 ): %ExplicitOperator {
@@ -20,32 +20,32 @@ $identity(
     sub = 𝓒
   ),
   definition = [$Functors(
-      u = {u},
-      v = {u},
-      𝓒 = {𝓒},
-      𝓓 = {𝓒}
+      u = u,
+      v = u,
+      𝓒 = 𝓒,
+      𝓓 = 𝓒
     ).functor(
       _1 = {
         #(𝐗: %Element($../Objects(
-          u = {u},
-          𝓒 = {𝓒}
+          u = u,
+          𝓒 = 𝓒
         ))),
-        {𝐘 = {𝐗}}
+        {𝐘 = 𝐗}
       },
       _2 = {
         #(
           𝐀,𝐁: %Element($../Objects(
-            u = {u},
-            𝓒 = {𝓒}
+            u = u,
+            𝓒 = 𝓒
           )),
           f: %Element($../Morphisms(
-            u = {u},
-            𝓒 = {𝓒},
-            𝐗 = {𝐀},
-            𝐘 = {𝐁}
+            u = u,
+            𝓒 = 𝓒,
+            𝐗 = 𝐀,
+            𝐘 = 𝐁
           ))
         ),
-        {g = {f}}
+        {g = f}
       }
   )]
 }

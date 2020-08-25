@@ -21,8 +21,8 @@ $rational(a: %Element($"Real numbers")): %Predicate {
       formula = %equals(
         a,
         $quotient(
-          a = {c},
-          b = {b}
+          a = c,
+          b = b
         )
       )
     ),
@@ -31,15 +31,15 @@ $rational(a: %Element($"Real numbers")): %Predicate {
         d: %Element($../Integer/Subsets/"Positive numbers"),
         e: %Element($../Integer/Integers),
         _1: %Constraint($../Integer/coprime(
-          a = {d},
-          b = {e}
+          a = d,
+          b = e
         ))
       ),
       formula = %equals(
         a,
         $quotient(
-          a = {e},
-          b = {d}
+          a = e,
+          b = d
         )
       )
     )

@@ -5,15 +5,15 @@ $difference(
     $Rings,
     auto = %true
   ),
-  a,b: %Element($Carrier(𝐑 = {𝐑}))
+  a,b: %Element($Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),
   definition = [$sum(
-    𝐑 = {𝐑},
-    a = {a},
-    b = {$"additive inverse"(
-      𝐑 = {𝐑},
-      a = {b}
-    )}
+    𝐑 = 𝐑,
+    a = a,
+    b = $"additive inverse"(
+      𝐑 = 𝐑,
+      a = b
+    )
   )]
 }

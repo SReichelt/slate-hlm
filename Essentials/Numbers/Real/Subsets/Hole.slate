@@ -12,9 +12,9 @@ $Hole(a: %Element($../"Real numbers")): %SetOperator {
       %not(%equals(b, a))
     ),
     $../../../Sets/Union(
-      U = {$../"Real numbers"},
-      S = {$"Segment (less)"(a = {a})},
-      T = {$"Segment (greater)"(a = {a})}
+      U = $../"Real numbers",
+      S = $"Segment (less)"(a = a),
+      T = $"Segment (greater)"(a = a)
     )
   ]
 }

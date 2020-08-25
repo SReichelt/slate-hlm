@@ -10,17 +10,17 @@
 $Groups: %Construction {
   $group(
     G: %Set,
-    ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
+    ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
     e: %Element(G),
     i: %Element($../../Essentials/Functions/Functions(
-      X = {G},
-      Y = {G}
+      X = G,
+      Y = G
     )),
     _1: %Constraint($group(
-      G = {G},
-      ∗ = {∗},
-      e = {e},
-      i = {i}
+      G = G,
+      ∗ = ∗,
+      e = e,
+      i = i
     ))
   ): %Constructor {
     notation = $Tuple(
@@ -30,60 +30,60 @@ $Groups: %Construction {
     equalityDefinition = {
       leftParameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(
-          X = {G},
-          Y = {G}
+          X = G,
+          Y = G
         )),
         _1: %Constraint($group(
-          G = {G},
-          ∗ = {∗},
-          e = {e},
-          i = {i}
+          G = G,
+          ∗ = ∗,
+          e = e,
+          i = i
         ))
       ),
       rightParameters = #(
         H: %Set,
-        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = {H})),
+        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = H)),
         f: %Element(H),
         j: %Element($../../Essentials/Functions/Functions(
-          X = {H},
-          Y = {H}
+          X = H,
+          Y = H
         )),
         _2: %Constraint($group(
-          G = {H},
-          ∗ = {⋆},
-          e = {f},
-          i = {j}
+          G = H,
+          ∗ = ⋆,
+          e = f,
+          i = j
         ))
       ),
       definition = [%exists(
         #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = {G},
-          Y = {H}
+          X = G,
+          Y = H
         ))),
         formula = %and(
           $../Generic/Isomorphisms/"inner operation condition"(
-            X = {G},
-            Y = {H},
-            φ = {φ},
-            ∗ = {∗},
-            ⋆ = {⋆}
+            X = G,
+            Y = H,
+            φ = φ,
+            ∗ = ∗,
+            ⋆ = ⋆
           ),
           $../Generic/Isomorphisms/"element condition"(
-            X = {G},
-            Y = {H},
-            φ = {φ},
-            x = {e},
-            y = {f}
+            X = G,
+            Y = H,
+            φ = φ,
+            x = e,
+            y = f
           ),
           $../Generic/Isomorphisms/"function condition"(
-            X = {G},
-            Y = {H},
-            φ = {φ},
-            f = {i},
-            g = {j}
+            X = G,
+            Y = H,
+            φ = φ,
+            f = i,
+            g = j
           )
         )
       )],

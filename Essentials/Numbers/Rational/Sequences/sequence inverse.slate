@@ -1,19 +1,19 @@
 %../../../../../../logics/hlm%
 
-$"sequence inverse"(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}))): %ExplicitOperator {
+$"sequence inverse"(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = $../"Rational numbers"))): %ExplicitOperator {
   notation = $NegationOperator(operand = 𝐚),
   definition = [%structuralCases(
     𝐚,
-    $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
+    $../../../Sequences/"Infinite sequences"(S = $../"Rational numbers"),
     [{
       constructor = $../../../Sequences/"Infinite sequences".sequence,
       parameters = #(_1: %Binder(
         #(n: %Element($../../Natural/"Natural numbers")),
         #(a: %Element($../"Rational numbers"))
       )),
-      value = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(_1 = {
+      value = $../../../Sequences/"Infinite sequences"(S = $../"Rational numbers").sequence(_1 = {
           #(n: %Element($../../Natural/"Natural numbers")),
-          {a = {$../inverse(a = {a[n = {n}]})}}
+          {a = $../inverse(a = a[n = n])}
       })
     }]
   )]

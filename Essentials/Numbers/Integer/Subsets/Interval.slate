@@ -10,12 +10,12 @@ $Interval(a,b: %Element($../Integers)): %SetOperator {
     #(c: %Element($../Integers)),
     %and(
       $../"less or equal"(
-        a = {a},
-        b = {c}
+        a = a,
+        b = c
       ),
       $../"less or equal"(
-        a = {%associative(c)},
-        b = {b}
+        a = %associative(c),
+        b = b
       )
     )
   )]

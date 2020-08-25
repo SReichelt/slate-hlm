@@ -11,11 +11,11 @@ $limit(
     #(n: %Element($../../Natural/"Natural numbers")),
     #(a: %Element($../"Rational numbers"))
   ),
-  𝐚: %Def($../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(_1 = {
+  𝐚: %Def($../../../Sequences/"Infinite sequences"(S = $../"Rational numbers").sequence(_1 = {
       #(m: %Element($../../Natural/"Natural numbers")),
-      {a = {a[n = {m}]}}
+      {a = a[n = m]}
   })),
-  _1: %Constraint($convergent(𝐚 = {𝐚}))
+  _1: %Constraint($convergent(𝐚 = 𝐚))
 ): %ImplicitOperator {
   notation = $OverUnderOperator(
     symbol = 'lim',
@@ -29,7 +29,7 @@ $limit(
   ),
   parameter = #(l: %Element($../"Rational numbers")),
   definition = [$converges(
-    𝐚 = {𝐚},
-    l = {l}
+    𝐚 = 𝐚,
+    l = l
   )]
 }

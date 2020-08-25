@@ -9,7 +9,7 @@
  */
 $"Cantors theorem"(S: %Set): %StandardTheorem {
   claim = $less(
-    μ = {$"Cardinal numbers".cardinality(S = {$../../Sets/"Power set"(S = {S})})},
-    κ = {$"Cardinal numbers".cardinality(S = {S})}
+    μ = $"Cardinal numbers".cardinality(S = $../../Sets/"Power set"(S = S)),
+    κ = $"Cardinal numbers".cardinality(S = S)
   )
 }

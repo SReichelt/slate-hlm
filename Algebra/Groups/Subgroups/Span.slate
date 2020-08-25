@@ -11,31 +11,31 @@ $Span(
     $../Groups,
     auto = %true
   ),
-  X: %Subset($../Carrier(𝐆 = {𝐆}))
+  X: %Subset($../Carrier(𝐆 = 𝐆))
 ): %SetOperator {
   notation = $Parens(
     body = X,
     style = '<>'
   ),
   definition = [$../../../Essentials/Sets/"Generalized operators"/"Generalized intersection using power set"(
-    U = {$../Carrier(𝐆 = {𝐆})},
-    S = {%subset(
-      #(s: %Element($../../../Essentials/Sets/"Power set"(S = {$../Carrier(𝐆 = {𝐆})}))),
+    U = $../Carrier(𝐆 = 𝐆),
+    S = %subset(
+      #(s: %Element($../../../Essentials/Sets/"Power set"(S = $../Carrier(𝐆 = 𝐆)))),
       %structural(
         s,
-        $../../../Essentials/Sets/"Power set"(S = {$../Carrier(𝐆 = {𝐆})}),
+        $../../../Essentials/Sets/"Power set"(S = $../Carrier(𝐆 = 𝐆)),
         [{
           constructor = $../../../Essentials/Sets/"Power set".subset,
-          parameters = #(S: %Subset($../Carrier(𝐆 = {𝐆}))),
+          parameters = #(S: %Subset($../Carrier(𝐆 = 𝐆))),
           value = %and(
             $"subgroup set"(
-              𝐆 = {𝐆},
-              S = {S}
+              𝐆 = 𝐆,
+              S = S
             ),
             %sub(X, S)
           )
         }]
       )
-    )}
+    )
   )]
 }

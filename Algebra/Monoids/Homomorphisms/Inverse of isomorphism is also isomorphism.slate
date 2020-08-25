@@ -3,19 +3,19 @@
 $"Inverse of isomorphism is also isomorphism"(
   𝐌,𝐍: %Element($../Monoids),
   φ: %Element($Isomorphisms(
-    𝐌 = {𝐌},
-    𝐍 = {𝐍}
+    𝐌 = 𝐌,
+    𝐍 = 𝐍
   ))
 ): %StandardTheorem {
   claim = %in(
     $../../../Essentials/Functions/inverse(
-      X = {$../Carrier(𝐌 = {𝐌})},
-      Y = {$../Carrier(𝐌 = {𝐍})},
-      f = {φ}
+      X = $../Carrier(𝐌 = 𝐌),
+      Y = $../Carrier(𝐌 = 𝐍),
+      f = φ
     ),
     $Isomorphisms(
-      𝐌 = {𝐍},
-      𝐍 = {𝐌}
+      𝐌 = 𝐍,
+      𝐍 = 𝐌
     )
   )
 }

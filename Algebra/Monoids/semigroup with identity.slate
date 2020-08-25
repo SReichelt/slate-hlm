@@ -3,10 +3,10 @@
 $"semigroup with identity"(
   𝐒: %Element($../Semigroups/Semigroups),
   _1: %Constraint(%exists(
-    #(e: %Element($../Magmas/Carrier(𝐌 = {𝐒}))),
+    #(e: %Element($../Magmas/Carrier(𝐌 = 𝐒))),
     formula = $../Magmas/"identity element"(
-      𝐌 = {𝐒},
-      e = {e}
+      𝐌 = 𝐒,
+      e = e
     )
   ))
 ): %ExplicitOperator {
@@ -21,12 +21,12 @@ $"semigroup with identity"(
       constructor = $../Magmas/Magmas.magma,
       parameters = #(
         S: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {S}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = S))
       ),
       value = $Monoids.monoid(
-        M = {S},
-        ∗ = {∗},
-        e = {$../Magmas/identity(𝐌 = {𝐒})}
+        M = S,
+        ∗ = ∗,
+        e = $../Magmas/identity(𝐌 = 𝐒)
       )
     }]
   )]

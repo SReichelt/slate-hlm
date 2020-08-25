@@ -8,7 +8,7 @@
  */
 $quotient(
   n: %Element($"Natural numbers"),
-  m: %Element($Divisors(n = {n}))
+  m: %Element($Divisors(n = n))
 ): %ImplicitOperator {
   notation = $Fraction(
     numerator = n,
@@ -18,8 +18,8 @@ $quotient(
   definition = [%equals(
     n,
     $product(
-      m = {x},
-      n = {m}
+      m = x,
+      n = m
     )
   )]
 }

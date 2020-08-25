@@ -11,14 +11,14 @@ $substitution(
     $../Variables,
     auto = %true
   ),
-  _1: %Constraint($../../Essentials/Sets/finite(S = {V})),
-  T: %Element($Terms(V = {V})),
+  _1: %Constraint($../../Essentials/Sets/finite(S = V)),
+  T: %Element($Terms(V = V)),
   x: %Element(V),
-  R: %Element($Terms(V = {$../../Essentials/Sets/"Relative complement"(
-    U = {V},
-    S = {V},
-    T = {%enumeration(x)}
-  )}))
+  R: %Element($Terms(V = $../../Essentials/Sets/"Relative complement"(
+    U = V,
+    S = V,
+    T = %enumeration(x)
+  )))
 ): %ExplicitOperator {
   notation = $LambdaSubstitution(
     term = T,
@@ -27,7 +27,7 @@ $substitution(
   ),
   definition = [%structuralCases(
     T,
-    $Terms(V = {V}),
+    $Terms(V = V),
     [
       {
         constructor = $Terms.variable,
@@ -39,7 +39,7 @@ $substitution(
           },
           {
             formula = %not(%equals(x, y)),
-            value = $Terms(V = {V}).variable(x = {y})
+            value = $Terms(V = V).variable(x = y)
           }
         ])
       },
@@ -47,68 +47,68 @@ $substitution(
         constructor = $Terms.abstraction,
         parameters = #(
           _2: %Binder(
-            #(y: %Element($../"Fresh variables"(V = {V}))),
-            #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
-              U = {$../Variables},
-              S = {V},
-              T = {%enumeration(y)}
-            )})))
+            #(y: %Element($../"Fresh variables"(V = V))),
+            #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
+              U = $../Variables,
+              S = V,
+              T = %enumeration(y)
+            ))))
           ),
           _3: %Constraint(%forall(
-            #(y,z: %Element($../"Fresh variables"(V = {V}))),
+            #(y,z: %Element($../"Fresh variables"(V = V))),
             %equals(
               $substitution(
-                V = {$Terms(V = {$../../Essentials/Sets/Union(
-                  U = {$../Variables},
-                  S = {V},
-                  T = {%enumeration(y)}
-                )})},
-                T = {M[y = {y}]},
-                x = {y},
-                R = {z}
+                V = $Terms(V = $../../Essentials/Sets/Union(
+                  U = $../Variables,
+                  S = V,
+                  T = %enumeration(y)
+                )),
+                T = M[y = y],
+                x = y,
+                R = z
               ),
-              M[y = {z}]
+              M[y = z]
             )
           ))
         ),
-        value = $Terms(V = {$../../Essentials/Sets/"Relative complement"(
-            U = {V},
-            S = {V},
-            T = {%enumeration(x)}
-          )}).abstraction(_2 = {
-            #(z: %Element($../"Fresh variables"(V = {$../../Essentials/Sets/"Relative complement"(
-              U = {V},
-              S = {V},
-              T = {%enumeration(x)}
-            )}))),
-            {M = {$substitution(
-              V = {$../"Fresh variables"(V = {V})},
-              T = {M[y = {z}]},
-              x = {x},
-              R = {R}
-            )}}
+        value = $Terms(V = $../../Essentials/Sets/"Relative complement"(
+            U = V,
+            S = V,
+            T = %enumeration(x)
+          )).abstraction(_2 = {
+            #(z: %Element($../"Fresh variables"(V = $../../Essentials/Sets/"Relative complement"(
+              U = V,
+              S = V,
+              T = %enumeration(x)
+            )))),
+            {M = $substitution(
+              V = $../"Fresh variables"(V = V),
+              T = M[y = z],
+              x = x,
+              R = R
+            )}
         })
       },
       {
         constructor = $Terms.application,
-        parameters = #(M,N: %Element($Terms(V = {V}))),
-        value = $Terms(V = {$../../Essentials/Sets/"Relative complement"(
-            U = {V},
-            S = {V},
-            T = {%enumeration(x)}
-          )}).application(
-            M = {$substitution(
-              V = {V},
-              T = {M},
-              x = {x},
-              R = {R}
-            )},
-            N = {$substitution(
-              V = {V},
-              T = {N},
-              x = {x},
-              R = {R}
-            )}
+        parameters = #(M,N: %Element($Terms(V = V))),
+        value = $Terms(V = $../../Essentials/Sets/"Relative complement"(
+            U = V,
+            S = V,
+            T = %enumeration(x)
+          )).application(
+            M = $substitution(
+              V = V,
+              T = M,
+              x = x,
+              R = R
+            ),
+            N = $substitution(
+              V = V,
+              T = N,
+              x = x,
+              R = R
+            )
         )
       }
     ]

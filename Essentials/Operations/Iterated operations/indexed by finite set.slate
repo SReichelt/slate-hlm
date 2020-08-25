@@ -2,9 +2,9 @@
 
 $"indexed by finite set"(
   X: %Set(auto = %true),
-  ⨂: %Element($"Iterated operations"(X = {X})),
+  ⨂: %Element($"Iterated operations"(X = X)),
   I: %Set,
-  _1: %Constraint($../../Sets/finite(S = {I})),
+  _1: %Constraint($../../Sets/finite(S = I)),
   _2: %Binder(
     #(i: %Element(I)),
     #(a: %Element(X))
@@ -22,23 +22,23 @@ $"indexed by finite set"(
       #(
         n: %Element($../../Numbers/Natural/"Natural numbers"),
         f: %Element($../../Functions/Bijections(
-          X = {$../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
-          Y = {I}
+          X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
+          Y = I
         ))
       ),
       %equals(
         $"indexed by natural number"(
-          X = {X},
-          ⨂ = {⨂},
-          n = {n},
+          X = X,
+          ⨂ = ⨂,
+          n = n,
           _1 = {
-            #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-            {a = {a[i = {$../../Functions/value(
-              X = {$../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
-              Y = {I},
-              f = {f},
-              x = {j}
-            )}]}}
+            #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+            {a = a[i = $../../Functions/value(
+              X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
+              Y = I,
+              f = f,
+              x = j
+            )]}
           }
         ),
         x
@@ -48,23 +48,23 @@ $"indexed by finite set"(
       #(
         n: %Element($../../Numbers/Natural/"Natural numbers"),
         f: %Element($../../Functions/Bijections(
-          X = {$../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
-          Y = {I}
+          X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
+          Y = I
         ))
       ),
       formula = %equals(
         $"indexed by natural number"(
-          X = {X},
-          ⨂ = {⨂},
-          n = {n},
+          X = X,
+          ⨂ = ⨂,
+          n = n,
           _1 = {
-            #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-            {a = {a[i = {$../../Functions/value(
-              X = {$../../Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
-              Y = {I},
-              f = {f},
-              x = {j}
-            )}]}}
+            #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+            {a = a[i = $../../Functions/value(
+              X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
+              Y = I,
+              f = f,
+              x = j
+            )]}
           }
         ),
         x

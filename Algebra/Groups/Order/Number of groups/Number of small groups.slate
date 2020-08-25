@@ -7,19 +7,19 @@
  */
 $"Number of small groups": %StandardTheorem {
   claim = $../../../../Essentials/Sequences/"starts with"(
-    S = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
-    𝐚 = {$../../../../Essentials/Sequences/"sequence from function"(
-      S = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
-      f = {$../../../../Essentials/Functions/Functions(
-          X = {$../../../../Essentials/Numbers/Natural/"Natural numbers"},
-          Y = {$../../../../Essentials/Numbers/Natural/"Natural numbers"}
+    S = $../../../../Essentials/Numbers/Natural/"Natural numbers",
+    𝐚 = $../../../../Essentials/Sequences/"sequence from function"(
+      S = $../../../../Essentials/Numbers/Natural/"Natural numbers",
+      f = $../../../../Essentials/Functions/Functions(
+          X = $../../../../Essentials/Numbers/Natural/"Natural numbers",
+          Y = $../../../../Essentials/Numbers/Natural/"Natural numbers"
         ).function(_1 = {
           #(n: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
-          {y = {$"number of groups with order"(n = {n})}}
-      })}
-    )},
-    n = {$../../../../Essentials/Numbers/Natural/number(value = 2048)},
-    𝐛 = {$../../../../Essentials/Numbers/Natural/Sequences/"tuple of numbers"(items = [
+          {y = $"number of groups with order"(n = n)}
+      })
+    ),
+    n = $../../../../Essentials/Numbers/Natural/number(value = 2048),
+    𝐛 = $../../../../Essentials/Numbers/Natural/Sequences/"tuple of numbers"(items = [
       0, 1, 1, 1, 2, 1, 2, 1, 5, 2,
       2, 1, 5, 1, 2, 1, 14, 1, 5, 1,
       5, 2, 2, 1, 15, 2, 2, 5, 4, 1,
@@ -225,6 +225,6 @@ $"Number of small groups": %StandardTheorem {
       20, 1, 6, 2, 46, 63, 2, 1, 88, 1,
       12, 1, 42, 1, 10, 2, 5, 5, 2, 1,
       175, 2, 2, 2, 11, 1, 12, 1
-    ])}
+    ])
   )
 }

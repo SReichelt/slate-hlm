@@ -9,8 +9,8 @@ $inverse(a: %Element($"Complex numbers")): %ExplicitOperator {
       constructor = $"Complex numbers".complex,
       parameters = #(r_a,i_a: %Element($../Real/"Real numbers")),
       value = $"Complex numbers".complex(
-        r = {$../Real/inverse(a = {r_a})},
-        i = {$../Real/inverse(a = {i_a})}
+        r = $../Real/inverse(a = r_a),
+        i = $../Real/inverse(a = i_a)
       )
     }]
   )]

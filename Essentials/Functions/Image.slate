@@ -8,8 +8,8 @@
 $Image(
   X,Y: %Set(auto = %true),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   )),
   S: %Subset(X)
 ): %SetOperator {
@@ -20,10 +20,10 @@ $Image(
   definition = [%extendedSubset(
     #(x: %Element(S)),
     $value(
-      X = {X},
-      Y = {Y},
-      f = {f},
-      x = {x}
+      X = X,
+      Y = Y,
+      f = f,
+      x = x
     )
   )]
 }

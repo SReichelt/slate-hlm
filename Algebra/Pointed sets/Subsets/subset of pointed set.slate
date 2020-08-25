@@ -2,7 +2,7 @@
 
 $"subset of pointed set"(
   𝐒: %Element($../"Pointed sets"),
-  S: %Subset($../Carrier(𝐒 = {𝐒}))
+  S: %Subset($../Carrier(𝐒 = 𝐒))
 ): %Predicate {
   notation = $NounRelation(
     operands = [S, 𝐒],
@@ -10,7 +10,7 @@ $"subset of pointed set"(
     plural = 'pointed subsets'
   ),
   definition = [%in(
-    $../"base point"(𝐒 = {𝐒}),
+    $../"base point"(𝐒 = 𝐒),
     S
   )]
 }

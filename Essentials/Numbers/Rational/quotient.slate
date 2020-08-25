@@ -19,8 +19,8 @@ $quotient(
   definition = [%equals(
     a,
     $product(
-      a = {x},
-      b = {b}
+      a = x,
+      b = b
     )
   )]
 }

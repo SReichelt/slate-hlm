@@ -14,22 +14,22 @@ $value(
     auto = %true
   ),
   p: %Element($Polynomials(
-    𝐑 = {𝐑},
-    X = {X}
+    𝐑 = 𝐑,
+    X = X
   )),
-  a: %Element($../Carrier(𝐑 = {𝐑})),
+  a: %Element($../Carrier(𝐑 = 𝐑)),
   _1: %Constraint(%forall(
-    #(r: %Element($../Carrier(𝐑 = {𝐑}))),
+    #(r: %Element($../Carrier(𝐑 = 𝐑))),
     %equals(
       $../product(
-        𝐑 = {𝐑},
-        a = {a},
-        b = {r}
+        𝐑 = 𝐑,
+        a = a,
+        b = r
       ),
       $../product(
-        𝐑 = {𝐑},
-        a = {r},
-        b = {a}
+        𝐑 = 𝐑,
+        a = r,
+        b = a
       )
     )
   ))
@@ -41,49 +41,49 @@ $value(
   definition = [%structuralCases(
     p,
     $Polynomials(
-      𝐑 = {𝐑},
-      X = {X}
+      𝐑 = 𝐑,
+      X = X
     ),
     [
       {
         constructor = $Polynomials.zero,
-        value = $../zero(𝐑 = {𝐑})
+        value = $../zero(𝐑 = 𝐑)
       },
       {
         constructor = $Polynomials.term,
         parameters = #(
           q: %Element($Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+            𝐑 = 𝐑,
+            X = X
           )),
-          b: %Element($../Carrier(𝐑 = {𝐑})),
+          b: %Element($../Carrier(𝐑 = 𝐑)),
           _1: %Constraint(%or(
             %not(%equals(
               q,
               $Polynomials(
-                  𝐑 = {𝐑},
-                  X = {X}
+                  𝐑 = 𝐑,
+                  X = X
                 ).zero
             )),
             %not(%equals(
               b,
-              $../zero(𝐑 = {𝐑})
+              $../zero(𝐑 = 𝐑)
             ))
           ))
         ),
         value = $../sum(
-          𝐑 = {𝐑},
-          a = {$../product(
-            𝐑 = {𝐑},
-            a = {$value(
-              𝐑 = {𝐑},
-              X = {X},
-              p = {q},
-              a = {a}
-            )},
-            b = {a}
-          )},
-          b = {b}
+          𝐑 = 𝐑,
+          a = $../product(
+            𝐑 = 𝐑,
+            a = $value(
+              𝐑 = 𝐑,
+              X = X,
+              p = q,
+              a = a
+            ),
+            b = a
+          ),
+          b = b
         )
       }
     ]

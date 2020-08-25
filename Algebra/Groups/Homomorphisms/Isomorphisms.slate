@@ -18,47 +18,47 @@ $Isomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(
-        𝐆 = {𝐆},
-        𝐇 = {𝐇}
+        𝐆 = 𝐆,
+        𝐇 = 𝐇
       ))),
       $../../../Essentials/Functions/bijective(
-        X = {$../Carrier(𝐆 = {𝐆})},
-        Y = {$../Carrier(𝐆 = {𝐇})},
-        f = {φ}
+        X = $../Carrier(𝐆 = 𝐆),
+        Y = $../Carrier(𝐆 = 𝐇),
+        f = φ
       )
     ),
     %subset(
       #(f: %Element($../../../Essentials/Functions/Bijections(
-        X = {$../Carrier(𝐆 = {𝐆})},
-        Y = {$../Carrier(𝐆 = {𝐇})}
+        X = $../Carrier(𝐆 = 𝐆),
+        Y = $../Carrier(𝐆 = 𝐇)
       ))),
       %forall(
-        #(a,b: %Element($../Carrier(𝐆 = {𝐆}))),
+        #(a,b: %Element($../Carrier(𝐆 = 𝐆))),
         %equals(
           $../../../Essentials/Functions/value(
-            X = {$../Carrier(𝐆 = {𝐆})},
-            Y = {$../Carrier(𝐆 = {𝐇})},
-            f = {f},
-            x = {$../operation(
-              𝐆 = {𝐆},
-              a = {a},
-              b = {b}
-            )}
+            X = $../Carrier(𝐆 = 𝐆),
+            Y = $../Carrier(𝐆 = 𝐇),
+            f = f,
+            x = $../operation(
+              𝐆 = 𝐆,
+              a = a,
+              b = b
+            )
           ),
           $../operation(
-            𝐆 = {𝐇},
-            a = {$../../../Essentials/Functions/value(
-              X = {$../Carrier(𝐆 = {𝐆})},
-              Y = {$../Carrier(𝐆 = {𝐇})},
-              f = {f},
-              x = {a}
-            )},
-            b = {$../../../Essentials/Functions/value(
-              X = {$../Carrier(𝐆 = {𝐆})},
-              Y = {$../Carrier(𝐆 = {𝐇})},
-              f = {f},
-              x = {b}
-            )}
+            𝐆 = 𝐇,
+            a = $../../../Essentials/Functions/value(
+              X = $../Carrier(𝐆 = 𝐆),
+              Y = $../Carrier(𝐆 = 𝐇),
+              f = f,
+              x = a
+            ),
+            b = $../../../Essentials/Functions/value(
+              X = $../Carrier(𝐆 = 𝐆),
+              Y = $../Carrier(𝐆 = 𝐇),
+              f = f,
+              x = b
+            )
           )
         )
       )

@@ -2,17 +2,17 @@
 
 $"indexed by finite multiset"(
   X: %Set(auto = %true),
-  ⨂: %Element($"Iterated operations"(X = {X})),
+  ⨂: %Element($"Iterated operations"(X = X)),
   S: %Set(auto = %true),
-  𝑰: %Element($../../Sets/Multisets/Multisets(S = {S})),
+  𝑰: %Element($../../Sets/Multisets/Multisets(S = S)),
   _1: %Constraint($../../Sets/Multisets/finite(
-    S = {S},
-    𝑻 = {𝑰}
+    S = S,
+    𝑻 = 𝑰
   )),
   _2: %Binder(
     #(i: %Element($../../Sets/Multisets/Set(
-      S = {S},
-      𝑻 = {𝑰}
+      S = S,
+      𝑻 = 𝑰
     ))),
     #(a: %Element(X))
   )
@@ -25,22 +25,22 @@ $"indexed by finite multiset"(
   ),
   definition = [
     $"indexed by finite set"(
-      X = {X},
-      ⨂ = {⨂},
-      I = {$../../Sets/Multisets/Elements(
-        S = {S},
-        𝑻 = {𝑰}
-      )},
+      X = X,
+      ⨂ = ⨂,
+      I = $../../Sets/Multisets/Elements(
+        S = S,
+        𝑻 = 𝑰
+      ),
       _2 = {
         #(j: %Element($../../Sets/Multisets/Elements(
-          S = {S},
-          𝑻 = {𝑰}
+          S = S,
+          𝑻 = 𝑰
         ))),
-        {a = {%structuralCases(
+        {a = %structuralCases(
           j,
           $../../Sets/"Cartesian product"(
-            S = {S},
-            T = {$../../Numbers/Natural/"Natural numbers"}
+            S = S,
+            T = $../../Numbers/Natural/"Natural numbers"
           ),
           [{
             constructor = $../../Sets/"Cartesian product".pair,
@@ -48,65 +48,65 @@ $"indexed by finite multiset"(
               t: %Element(S),
               n: %Element($../../Numbers/Natural/"Natural numbers")
             ),
-            value = a[i = {t}]
+            value = a[i = t]
           }]
-        )}}
+        )}
       }
     ),
     $"indexed by finite set"(
-      X = {X},
-      ⨂ = {⨂},
-      I = {$../../Sets/Multisets/Set(
-        S = {S},
-        𝑻 = {𝑰}
-      )},
+      X = X,
+      ⨂ = ⨂,
+      I = $../../Sets/Multisets/Set(
+        S = S,
+        𝑻 = 𝑰
+      ),
       _2 = {
         #(j: %Element($../../Sets/Multisets/Set(
-          S = {S},
-          𝑻 = {𝑰}
+          S = S,
+          𝑻 = 𝑰
         ))),
-        {a = {$"indexed by natural number"(
-          X = {X},
-          ⨂ = {⨂},
-          n = {$../../Sets/Multisets/multiplicity(
-            S = {S},
-            𝑻 = {𝑰},
-            t = {j}
-          )},
+        {a = $"indexed by natural number"(
+          X = X,
+          ⨂ = ⨂,
+          n = $../../Sets/Multisets/multiplicity(
+            S = S,
+            𝑻 = 𝑰,
+            t = j
+          ),
           _1 = {
-            #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {$../../Sets/Multisets/multiplicity(
-              S = {S},
-              𝑻 = {𝑰},
-              t = {j}
-            )}))),
-            {a = {a[i = {j}]}}
+            #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $../../Sets/Multisets/multiplicity(
+              S = S,
+              𝑻 = 𝑰,
+              t = j
+            )))),
+            {a = a[i = j]}
           }
-        )}}
+        )}
       }
     ),
     $"indexed by set with finite support"(
-      X = {X},
-      ⨂ = {⨂},
-      I = {S},
+      X = X,
+      ⨂ = ⨂,
+      I = S,
       _1 = {
         #(j: %Element(S)),
-        {a = {$"indexed by natural number"(
-          X = {X},
-          ⨂ = {⨂},
-          n = {$../../Sets/Multisets/multiplicity(
-            S = {S},
-            𝑻 = {𝑰},
-            t = {j}
-          )},
+        {a = $"indexed by natural number"(
+          X = X,
+          ⨂ = ⨂,
+          n = $../../Sets/Multisets/multiplicity(
+            S = S,
+            𝑻 = 𝑰,
+            t = j
+          ),
           _1 = {
-            #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {$../../Sets/Multisets/multiplicity(
-              S = {S},
-              𝑻 = {𝑰},
-              t = {j}
-            )}))),
-            {a = {a[i = {j}]}}
+            #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $../../Sets/Multisets/multiplicity(
+              S = S,
+              𝑻 = 𝑰,
+              t = j
+            )))),
+            {a = a[i = j]}
           }
-        )}}
+        )}
       }
     )
   ]

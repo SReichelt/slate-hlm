@@ -9,11 +9,11 @@
  */
 $group(
   G: %Set,
-  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
+  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
   e: %Element(G),
   i: %Element($../../Essentials/Functions/Functions(
-    X = {G},
-    Y = {G}
+    X = G,
+    Y = G
   ))
 ): %Predicate {
   notation = $Structure(
@@ -23,38 +23,38 @@ $group(
   ),
   definition = [%and(
     $../Monoids/monoid(
-      M = {G},
-      ∗ = {∗},
-      e = {e}
+      M = G,
+      ∗ = ∗,
+      e = e
     ),
     %forall(
       #(a: %Element(G)),
       %equals(
         $../../Essentials/Operations/value(
-          X = {G},
-          Y = {G},
-          Z = {G},
-          ∗ = {∗},
-          x = {a},
-          y = {$../../Essentials/Functions/value(
-            X = {G},
-            Y = {G},
-            f = {i},
-            x = {a}
-          )}
+          X = G,
+          Y = G,
+          Z = G,
+          ∗ = ∗,
+          x = a,
+          y = $../../Essentials/Functions/value(
+            X = G,
+            Y = G,
+            f = i,
+            x = a
+          )
         ),
         $../../Essentials/Operations/value(
-          X = {G},
-          Y = {G},
-          Z = {G},
-          ∗ = {∗},
-          x = {$../../Essentials/Functions/value(
-            X = {G},
-            Y = {G},
-            f = {i},
-            x = {a}
-          )},
-          y = {a}
+          X = G,
+          Y = G,
+          Z = G,
+          ∗ = ∗,
+          x = $../../Essentials/Functions/value(
+            X = G,
+            Y = G,
+            f = i,
+            x = a
+          ),
+          y = a
         ),
         e
       )

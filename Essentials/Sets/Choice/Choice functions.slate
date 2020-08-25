@@ -15,28 +15,28 @@ $"Choice functions"(S: %Set): %SetOperator {
   },
   definition = [%subset(
     #(f: %Element($../../Functions/Functions(
-      X = {$../"Relative complement"(
-        U = {$../"Power set"(S = {S})},
-        S = {$../"Power set"(S = {S})},
-        T = {%enumeration($../"Power set"(S = {S}).subset(T = {$../"Empty set"}))}
-      )},
-      Y = {S}
+      X = $../"Relative complement"(
+        U = $../"Power set"(S = S),
+        S = $../"Power set"(S = S),
+        T = %enumeration($../"Power set"(S = S).subset(T = $../"Empty set"))
+      ),
+      Y = S
     ))),
     %forall(
       #(
         T: %Subset(S),
-        _1: %Constraint(%not($../empty(S = {T})))
+        _1: %Constraint(%not($../empty(S = T)))
       ),
       %in(
         $../../Functions/value(
-          X = {$../"Relative complement"(
-            U = {$../"Power set"(S = {S})},
-            S = {$../"Power set"(S = {S})},
-            T = {%enumeration($../"Power set"(S = {S}).subset(T = {$../"Empty set"}))}
-          )},
-          Y = {S},
-          f = {f},
-          x = {$../"Power set"(S = {S}).subset(T = {T})}
+          X = $../"Relative complement"(
+            U = $../"Power set"(S = S),
+            S = $../"Power set"(S = S),
+            T = %enumeration($../"Power set"(S = S).subset(T = $../"Empty set"))
+          ),
+          Y = S,
+          f = f,
+          x = $../"Power set"(S = S).subset(T = T)
         ),
         T
       )

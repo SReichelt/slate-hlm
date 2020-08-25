@@ -9,15 +9,15 @@
  */
 $"Lagranges theorem"(
   𝐆: %Element($../Groups),
-  _1: %Constraint($finite(𝐆 = {𝐆})),
-  S: %Subset($../Carrier(𝐆 = {𝐆})),
+  _1: %Constraint($finite(𝐆 = 𝐆)),
+  S: %Subset($../Carrier(𝐆 = 𝐆)),
   _2: %Constraint($../Subgroups/"subgroup set"(
-    𝐆 = {𝐆},
-    S = {S}
+    𝐆 = 𝐆,
+    S = S
   ))
 ): %StandardTheorem {
   claim = $../../../Essentials/Numbers/Natural/divisible(
-    m = {$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S})},
-    n = {$"group order"(𝐆 = {𝐆})}
+    m = $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
+    n = $"group order"(𝐆 = 𝐆)
   )
 }

@@ -10,22 +10,22 @@ $"Intersection is associative"(
 ): %StandardTheorem {
   claim = %setEquals(
     $Intersection(
-      U = {U},
-      S = {$Intersection(
-        U = {U},
-        S = {R},
-        T = {S}
-      )},
-      T = {T}
+      U = U,
+      S = $Intersection(
+        U = U,
+        S = R,
+        T = S
+      ),
+      T = T
     ),
     $Intersection(
-      U = {U},
-      S = {R},
-      T = {$Intersection(
-        U = {U},
-        S = {S},
-        T = {T}
-      )}
+      U = U,
+      S = R,
+      T = $Intersection(
+        U = U,
+        S = S,
+        T = T
+      )
     )
   )
 }

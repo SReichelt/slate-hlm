@@ -6,13 +6,13 @@
 $"mapping value"(
   S,T: %Set(auto = %true),
   ≺: %Element($Relations(
-    S = {S},
-    T = {T}
+    S = S,
+    T = T
   )),
   _1: %Constraint($mapping(
-    S = {S},
-    T = {T},
-    ≺ = {≺}
+    S = S,
+    T = T,
+    ≺ = ≺
   )),
   s: %Element(S)
 ): %ImplicitOperator {
@@ -22,10 +22,10 @@ $"mapping value"(
   ),
   parameter = #(t: %Element(T)),
   definition = [$related(
-    S = {S},
-    T = {T},
-    ≺ = {≺},
-    s = {s},
-    t = {t}
+    S = S,
+    T = T,
+    ≺ = ≺,
+    s = s,
+    t = t
   )]
 }

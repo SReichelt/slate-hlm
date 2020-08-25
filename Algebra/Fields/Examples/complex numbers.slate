@@ -6,37 +6,37 @@
 $"complex numbers": %ExplicitOperator {
   notation = 'ℂ',
   definition = [$../../Rings/Rings.ring(
-    R = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
-    ⊕ = {$../../../Essentials/Operations/Operations(
-        X = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
-        Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
-        Z = {$../../../Essentials/Numbers/Complex/"Complex numbers"}
+    R = $../../../Essentials/Numbers/Complex/"Complex numbers",
+    ⊕ = $../../../Essentials/Operations/Operations(
+        X = $../../../Essentials/Numbers/Complex/"Complex numbers",
+        Y = $../../../Essentials/Numbers/Complex/"Complex numbers",
+        Z = $../../../Essentials/Numbers/Complex/"Complex numbers"
       ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
-        {z = {$../../../Essentials/Numbers/Complex/sum(
-          a = {a},
-          b = {b}
-        )}}
-    })},
-    "0" = {$../../../Essentials/Numbers/Natural/number(value = 0)},
-    ⊖ = {$../../../Essentials/Functions/Functions(
-        X = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
-        Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"}
+        {z = $../../../Essentials/Numbers/Complex/sum(
+          a = a,
+          b = b
+        )}
+    }),
+    "0" = $../../../Essentials/Numbers/Natural/number(value = 0),
+    ⊖ = $../../../Essentials/Functions/Functions(
+        X = $../../../Essentials/Numbers/Complex/"Complex numbers",
+        Y = $../../../Essentials/Numbers/Complex/"Complex numbers"
       ).function(_1 = {
         #(a: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
-        {y = {$../../../Essentials/Numbers/Complex/inverse(a = {a})}}
-    })},
-    ⊙ = {$../../../Essentials/Operations/Operations(
-        X = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
-        Y = {$../../../Essentials/Numbers/Complex/"Complex numbers"},
-        Z = {$../../../Essentials/Numbers/Complex/"Complex numbers"}
+        {y = $../../../Essentials/Numbers/Complex/inverse(a = a)}
+    }),
+    ⊙ = $../../../Essentials/Operations/Operations(
+        X = $../../../Essentials/Numbers/Complex/"Complex numbers",
+        Y = $../../../Essentials/Numbers/Complex/"Complex numbers",
+        Z = $../../../Essentials/Numbers/Complex/"Complex numbers"
       ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
-        {z = {$../../../Essentials/Numbers/Complex/product(
-          a = {a},
-          b = {b}
-        )}}
-    })},
-    "1" = {$../../../Essentials/Numbers/Natural/number(value = 1)}
+        {z = $../../../Essentials/Numbers/Complex/product(
+          a = a,
+          b = b
+        )}
+    }),
+    "1" = $../../../Essentials/Numbers/Natural/number(value = 1)
   )]
 }

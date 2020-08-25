@@ -12,8 +12,8 @@ $root(
   definition = [%equals(
     a,
     $power(
-      a = {r},
-      n = {n}
+      a = r,
+      n = n
     )
   )]
 }

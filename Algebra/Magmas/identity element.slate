@@ -8,7 +8,7 @@
  */
 $"identity element"(
   𝐌: %Element($Magmas),
-  e: %Element($Carrier(𝐌 = {𝐌}))
+  e: %Element($Carrier(𝐌 = 𝐌))
 ): %Predicate {
   notation = $NounRelation(
     operands = [e, 𝐌],
@@ -23,12 +23,12 @@ $"identity element"(
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
       value = $../../Essentials/Operations/"identity element"(
-        X = {M},
-        ∗ = {∗},
-        e = {e}
+        X = M,
+        ∗ = ∗,
+        e = e
       )
     }]
   )]

@@ -11,53 +11,53 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
     body = '𝐌𝐨𝐧',
     sub = u
   ),
-  definition = [$../Categories(u = {u}).category(
-      O = {$../../Algebra/Monoids/Monoids},
+  definition = [$../Categories(u = u).category(
+      O = $../../Algebra/Monoids/Monoids,
       _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Monoids/Monoids)),
-        {M = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-          𝐌 = {𝐀},
-          𝐍 = {𝐁}
-        )}}
+        {M = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(
+          𝐌 = 𝐀,
+          𝐍 = 𝐁
+        )}
       },
       _2 = {
         #(𝐂: %Element($../../Algebra/Monoids/Monoids)),
-        {i = {$../../Algebra/Monoids/Homomorphisms/identity(𝐌 = {𝐂})}}
+        {i = $../../Algebra/Monoids/Homomorphisms/identity(𝐌 = 𝐂)}
       },
       _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Monoids/Monoids)),
-        {∘ = {$../../Essentials/Operations/Operations(
-            X = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-              𝐌 = {𝐄},
-              𝐍 = {𝐅}
-            )},
-            Y = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-              𝐌 = {𝐃},
-              𝐍 = {𝐄}
-            )},
-            Z = {$../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-              𝐌 = {𝐃},
-              𝐍 = {𝐅}
-            )}
+        {∘ = $../../Essentials/Operations/Operations(
+            X = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(
+              𝐌 = 𝐄,
+              𝐍 = 𝐅
+            ),
+            Y = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(
+              𝐌 = 𝐃,
+              𝐍 = 𝐄
+            ),
+            Z = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(
+              𝐌 = 𝐃,
+              𝐍 = 𝐅
+            )
           ).operation(_1 = {
             #(
               ψ: %Element($../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-                𝐌 = {𝐄},
-                𝐍 = {𝐅}
+                𝐌 = 𝐄,
+                𝐍 = 𝐅
               )),
               φ: %Element($../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-                𝐌 = {𝐃},
-                𝐍 = {𝐄}
+                𝐌 = 𝐃,
+                𝐍 = 𝐄
               ))
             ),
-            {z = {$../../Essentials/Functions/composition(
-              X = {$../../Algebra/Monoids/Carrier(𝐌 = {𝐃})},
-              Y = {$../../Algebra/Monoids/Carrier(𝐌 = {𝐄})},
-              Z = {$../../Algebra/Monoids/Carrier(𝐌 = {𝐅})},
-              f = {φ},
-              g = {ψ}
-            )}}
-        })}}
+            {z = $../../Essentials/Functions/composition(
+              X = $../../Algebra/Monoids/Carrier(𝐌 = 𝐃),
+              Y = $../../Algebra/Monoids/Carrier(𝐌 = 𝐄),
+              Z = $../../Algebra/Monoids/Carrier(𝐌 = 𝐅),
+              f = φ,
+              g = ψ
+            )}
+        })}
       }
   )]
 }

@@ -19,5 +19,5 @@ $"Vector spaces"(𝐅: %Element($../../Algebra/Fields/Fields)): %SetOperator {
     singularName = ['vector space', ' over ', 𝐅],
     pluralName = ['vector spaces', ' over ', 𝐅]
   },
-  definition = [$../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = {𝐅})]
+  definition = [$../../Algebra/Rings/Modules/"Left modules"/"Left modules"(𝐑 = 𝐅)]
 }

@@ -19,7 +19,7 @@ $Tuples(
   α: %Element($../Numbers/Ordinal/"Ordinal numbers")
 ): %Construction {
   $sequence(_1: %Binder(
-    #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+    #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
     #(a: %Element(S))
   )): %Constructor {
     notation = $SubSup(
@@ -31,16 +31,16 @@ $Tuples(
     ),
     equalityDefinition = {
       leftParameters = #(_1: %Binder(
-        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
         #(a: %Element(S))
       )),
       rightParameters = #(_2: %Binder(
-        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
         #(b: %Element(S))
       )),
       definition = [%forall(
-        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
-        %equals(a[k = {k}], b[k = {k}])
+        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+        %equals(a[k = k], b[k = k])
       )],
       isomorphic = %true
     }

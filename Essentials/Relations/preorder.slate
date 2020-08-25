@@ -10,7 +10,7 @@
  */
 $preorder(
   S: %Set(auto = %true),
-  ⪯: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $NounProperty(
     operand = ⪯,
@@ -19,12 +19,12 @@ $preorder(
   ),
   definition = [%and(
     $reflexive(
-      S = {S},
-      ⪯ = {⪯}
+      S = S,
+      ⪯ = ⪯
     ),
     $transitive(
-      S = {S},
-      ≺ = {⪯}
+      S = S,
+      ≺ = ⪯
     )
   )]
 }

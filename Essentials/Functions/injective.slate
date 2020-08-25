@@ -10,8 +10,8 @@
 $injective(
   X,Y: %Set(auto = %true),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   ))
 ): %Predicate {
   notation = $Property(
@@ -24,16 +24,16 @@ $injective(
         a,b: %Element(X),
         _1: %Constraint(%equals(
           $value(
-            X = {X},
-            Y = {Y},
-            f = {f},
-            x = {a}
+            X = X,
+            Y = Y,
+            f = f,
+            x = a
           ),
           $value(
-            X = {X},
-            Y = {Y},
-            f = {f},
-            x = {b}
+            X = X,
+            Y = Y,
+            f = f,
+            x = b
           )
         ))
       ),
@@ -43,50 +43,50 @@ $injective(
       #(
         c: %Element(Y),
         d,e: %Element($Preimage(
-          X = {X},
-          Y = {Y},
-          f = {f},
-          S = {%enumeration(c)}
+          X = X,
+          Y = Y,
+          f = f,
+          S = %enumeration(c)
         ))
       ),
       %equals(d, e)
     ),
     %forall(
       #(y: %Element($Image(
-        X = {X},
-        Y = {Y},
-        f = {f},
-        S = {X}
+        X = X,
+        Y = Y,
+        f = f,
+        S = X
       ))),
       %existsUnique(
         #(x: %Element(X)),
         formula = %equals(
           $value(
-            X = {X},
-            Y = {Y},
-            f = {f},
-            x = {x}
+            X = X,
+            Y = Y,
+            f = f,
+            x = x
           ),
           y
         )
       )
     ),
     %or(
-      $../Sets/empty(S = {X}),
+      $../Sets/empty(S = X),
       %exists(
         #(g: %Element($Functions(
-          X = {Y},
-          Y = {X}
+          X = Y,
+          Y = X
         ))),
         formula = %equals(
           $composition(
-            X = {X},
-            Y = {Y},
-            Z = {X},
-            f = {f},
-            g = {g}
+            X = X,
+            Y = Y,
+            Z = X,
+            f = f,
+            g = g
           ),
-          $identity(X = {X})
+          $identity(X = X)
         )
       )
     )

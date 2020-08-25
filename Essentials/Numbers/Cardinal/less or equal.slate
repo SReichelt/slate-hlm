@@ -9,19 +9,19 @@ $"less or equal"(κ,μ: %Element($"Cardinal numbers")): %Predicate {
   definition = [
     %exists(
       #(φ: %Element($Homomorphisms/Homomorphisms(
-        κ = {κ},
-        μ = {μ}
+        κ = κ,
+        μ = μ
       ))),
       formula = $../../Functions/injective(
-        X = {$Carrier(κ = {κ})},
-        Y = {$Carrier(κ = {μ})},
-        f = {φ}
+        X = $Carrier(κ = κ),
+        Y = $Carrier(κ = μ),
+        f = φ
       )
     ),
     %exists(
-      #(S: %Subset($Carrier(κ = {μ}))),
+      #(S: %Subset($Carrier(κ = μ))),
       formula = %equals(
-        $"Cardinal numbers".cardinality(S = {S}),
+        $"Cardinal numbers".cardinality(S = S),
         κ
       )
     )

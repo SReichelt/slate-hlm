@@ -7,12 +7,12 @@ $"Nonpositive numbers": %SetOperator {
     sup = '−'
   ),
   definition = [
-    $"Segment (less or equal)"(a = {$../../Natural/number(value = 0)}),
+    $"Segment (less or equal)"(a = $../../Natural/number(value = 0)),
     %subset(
       #(a: %Element($../"Real numbers")),
       $../"less or equal"(
-        a = {a},
-        b = {$../../Natural/number(value = 0)}
+        a = a,
+        b = $../../Natural/number(value = 0)
       )
     )
   ]

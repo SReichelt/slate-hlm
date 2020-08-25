@@ -10,9 +10,9 @@ $"Intersection is subset of argument"(
 ): %StandardTheorem {
   claim = %sub(
     $Intersection(
-      U = {U},
-      S = {S},
-      T = {T}
+      U = U,
+      S = S,
+      T = T
     ),
     S
   )

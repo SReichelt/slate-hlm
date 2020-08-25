@@ -9,7 +9,7 @@
  */
 $monoid(
   M: %Set,
-  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M})),
+  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
   e: %Element(M)
 ): %Predicate {
   notation = $Structure(
@@ -20,26 +20,26 @@ $monoid(
   definition = [
     %and(
       $../Semigroups/semigroup(
-        M = {M},
-        ∗ = {∗}
+        M = M,
+        ∗ = ∗
       ),
       $../Magmas/"identity element"(
-        𝐌 = {$../Magmas/Magmas.magma(
-          M = {M},
-          ∗ = {∗}
-        )},
-        e = {e}
+        𝐌 = $../Magmas/Magmas.magma(
+          M = M,
+          ∗ = ∗
+        ),
+        e = e
       )
     ),
     %and(
       $../../Essentials/Operations/associative(
-        X = {M},
-        ∗ = {∗}
+        X = M,
+        ∗ = ∗
       ),
       $../../Essentials/Operations/"identity element"(
-        X = {M},
-        ∗ = {∗},
-        e = {e}
+        X = M,
+        ∗ = ∗,
+        e = e
       )
     )
   ]

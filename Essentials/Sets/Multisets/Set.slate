@@ -2,7 +2,7 @@
 
 $Set(
   S: %Set(auto = %true),
-  𝑻: %Element($Multisets(S = {S}))
+  𝑻: %Element($Multisets(S = S))
 ): %SetOperator {
   notation = $Function(
     function = 'Set',
@@ -19,9 +19,9 @@ $Set(
     #(s: %Element(S)),
     %not(%equals(
       $multiplicity(
-        S = {S},
-        𝑻 = {𝑻},
-        t = {s}
+        S = S,
+        𝑻 = 𝑻,
+        t = s
       ),
       $../../Numbers/Natural/number(value = 0)
     ))

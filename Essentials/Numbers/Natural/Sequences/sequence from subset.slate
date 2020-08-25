@@ -6,8 +6,8 @@
 $"sequence from subset"(
   M: %Subset($../"Natural numbers"),
   α: %Def($../../Ordinal/"Ordered subsets"/"subset ordinal"(
-    α = {$../../Ordinal/Examples/omega},
-    S = {M}
+    α = $../../Ordinal/Examples/omega,
+    S = M
   ))
 ): %ExplicitOperator {
   notation = $Function(
@@ -16,34 +16,34 @@ $"sequence from subset"(
   ),
   definition = [
     $../../../Sequences/"sequence from well-ordered set"(
-      S = {M},
-      ⪯ = {$../../../Relations/restriction(
-        S = {$../"Natural numbers"},
-        ≺ = {$../../../Relations/Relations(
-            S = {$../"Natural numbers"},
-            T = {$../"Natural numbers"}
+      S = M,
+      ⪯ = $../../../Relations/restriction(
+        S = $../"Natural numbers",
+        ≺ = $../../../Relations/Relations(
+            S = $../"Natural numbers",
+            T = $../"Natural numbers"
           ).relation(_1 = {
             #(m,n: %Element($../"Natural numbers")),
-            {p = {$../"less or equal"(
-              m = {m},
-              n = {n}
-            )}}
-        })},
-        T = {M}
-      )}
+            {p = $../"less or equal"(
+              m = m,
+              n = n
+            )}
+        }),
+        T = M
+      )
     ),
-    $../../../Sequences/"Ordinal-indexed sequences"(S = {M}).sequence(
-        α = {α},
-        𝐚 = {$../../../Sequences/Tuples(
-            S = {M},
-            α = {α}
+    $../../../Sequences/"Ordinal-indexed sequences"(S = M).sequence(
+        α = α,
+        𝐚 = $../../../Sequences/Tuples(
+            S = M,
+            α = α
           ).sequence(_1 = {
-            #(n: %Element($../../Ordinal/Subsets/"Segment (less)"(α = {α}))),
-            {a = {$"indexed element"(
-              M = {M},
-              n = {n}
-            )}}
-        })}
+            #(n: %Element($../../Ordinal/Subsets/"Segment (less)"(α = α))),
+            {a = $"indexed element"(
+              M = M,
+              n = n
+            )}
+        })
     )
   ]
 }

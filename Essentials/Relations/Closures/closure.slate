@@ -8,13 +8,13 @@
 $closure(
   S,T: %Set(auto = %true),
   ≺: %Element($../Relations(
-    S = {S},
-    T = {T}
+    S = S,
+    T = T
   )),
-  p: %Element($../../Properties/Properties(S = {$../Relations(
-    S = {S},
-    T = {T}
-  )}))
+  p: %Element($../../Properties/Properties(S = $../Relations(
+    S = S,
+    T = T
+  )))
 ): %ExplicitOperator {
   notation = $Function(
     function = $SubSup(
@@ -24,33 +24,33 @@ $closure(
     arguments = [≺]
   ),
   definition = [$../../Properties/"generalized conjunction"(
-    S = {$../../Sets/"Cartesian product"(
-      S = {S},
-      T = {T}
-    )},
-    P = {%subset(
+    S = $../../Sets/"Cartesian product"(
+      S = S,
+      T = T
+    ),
+    P = %subset(
       #(⊂: %Element($../Relations(
-        S = {S},
-        T = {T}
+        S = S,
+        T = T
       ))),
       %and(
         $../../Properties/implies(
-          S = {$../../Sets/"Cartesian product"(
-            S = {S},
-            T = {T}
-          )},
-          p = {≺},
-          q = {⊂}
+          S = $../../Sets/"Cartesian product"(
+            S = S,
+            T = T
+          ),
+          p = ≺,
+          q = ⊂
         ),
         $../../Properties/"has property"(
-          S = {$../Relations(
-            S = {S},
-            T = {T}
-          )},
-          p = {p},
-          s = {⊂}
+          S = $../Relations(
+            S = S,
+            T = T
+          ),
+          p = p,
+          s = ⊂
         )
       )
-    )}
+    )
   )]
 }

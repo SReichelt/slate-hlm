@@ -12,7 +12,7 @@ $monomial(
     $../../../"Formal systems"/Variables,
     auto = %true
   ),
-  a: %Element($../Carrier(𝐑 = {𝐑})),
+  a: %Element($../Carrier(𝐑 = 𝐑)),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
   notation = $Operator(
@@ -39,15 +39,15 @@ $monomial(
         constructor = $../../../Essentials/Numbers/Natural/"Natural numbers".successor,
         parameters = #(m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
         value = $normalized(
-          𝐑 = {𝐑},
-          X = {X},
-          p = {$monomial(
-            𝐑 = {𝐑},
-            X = {X},
-            a = {a},
-            n = {m}
-          )},
-          a = {$../zero(𝐑 = {𝐑})}
+          𝐑 = 𝐑,
+          X = X,
+          p = $monomial(
+            𝐑 = 𝐑,
+            X = X,
+            a = a,
+            n = m
+          ),
+          a = $../zero(𝐑 = 𝐑)
         ),
         rewrite = %true
       }

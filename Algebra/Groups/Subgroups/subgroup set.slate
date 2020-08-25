@@ -9,7 +9,7 @@
  */
 $"subgroup set"(
   𝐆: %Element($../Groups),
-  S: %Subset($../Carrier(𝐆 = {𝐆}))
+  S: %Subset($../Carrier(𝐆 = 𝐆))
 ): %Predicate {
   notation = $NounRelation(
     operands = [S, 𝐆],
@@ -21,23 +21,23 @@ $"subgroup set"(
       #(a,b: %Element(S)),
       %in(
         $../operation(
-          𝐆 = {𝐆},
-          a = {a},
-          b = {b}
+          𝐆 = 𝐆,
+          a = a,
+          b = b
         ),
         S
       )
     ),
     %in(
-      $../identity(𝐆 = {𝐆}),
+      $../identity(𝐆 = 𝐆),
       S
     ),
     %forall(
       #(c: %Element(S)),
       %in(
         $../inverse(
-          𝐆 = {𝐆},
-          a = {c}
+          𝐆 = 𝐆,
+          a = c
         ),
         S
       )

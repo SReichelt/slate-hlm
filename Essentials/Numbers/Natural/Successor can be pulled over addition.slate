@@ -8,13 +8,13 @@
 $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $sum(
-      m = {$"Natural numbers".successor(n = {m})},
-      n = {n}
+      m = $"Natural numbers".successor(n = m),
+      n = n
     ),
-    $"Natural numbers".successor(n = {$sum(
-      m = {m},
-      n = {n}
-    )})
+    $"Natural numbers".successor(n = $sum(
+      m = m,
+      n = n
+    ))
   ),
   proofs = [{steps = #(_: %ProveByInduction(
     n,
@@ -24,8 +24,8 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
         constructor = $"Natural numbers".zero,
         value = {
           goal = %equals(
-            $"Natural numbers".successor(n = {m}),
-            $"Natural numbers".successor(n = {m})
+            $"Natural numbers".successor(n = m),
+            $"Natural numbers".successor(n = m)
           ),
           steps = #()
         }
@@ -35,53 +35,53 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
         parameters = #(x: %Element($"Natural numbers")),
         value = {
           goal = %equals(
-            $"Natural numbers".successor(n = {$sum(
-              m = {$"Natural numbers".successor(n = {m})},
-              n = {x}
-            )}),
-            $"Natural numbers".successor(n = {$"Natural numbers".successor(n = {$sum(
-              m = {m},
-              n = {x}
-            )})})
+            $"Natural numbers".successor(n = $sum(
+              m = $"Natural numbers".successor(n = m),
+              n = x
+            )),
+            $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(
+              m = m,
+              n = x
+            )))
           ),
           steps = #(
             _: %State(%equals(
-              $"Natural numbers".successor(n = {$"Natural numbers".successor(n = {$sum(
-                m = {m},
-                n = {x}
-              )})}),
-              $"Natural numbers".successor(n = {$"Natural numbers".successor(n = {$sum(
-                m = {m},
-                n = {x}
-              )})})
+              $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(
+                m = m,
+                n = x
+              ))),
+              $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(
+                m = m,
+                n = x
+              )))
             )),
             _: %Substitute(
               #(_: %UseTheorem(
                 $"Successor can be pulled over addition"(
-                  m = {m},
-                  n = {x}
+                  m = m,
+                  n = x
                 ),
                 result = %equals(
                   $sum(
-                    m = {$"Natural numbers".successor(n = {m})},
-                    n = {x}
+                    m = $"Natural numbers".successor(n = m),
+                    n = x
                   ),
-                  $"Natural numbers".successor(n = {$sum(
-                    m = {m},
-                    n = {x}
-                  )})
+                  $"Natural numbers".successor(n = $sum(
+                    m = m,
+                    n = x
+                  ))
                 )
               )),
               1,
               %equals(
-                $"Natural numbers".successor(n = {$sum(
-                  m = {$"Natural numbers".successor(n = {m})},
-                  n = {x}
-                )}),
-                $"Natural numbers".successor(n = {$"Natural numbers".successor(n = {$sum(
-                  m = {m},
-                  n = {x}
-                )})})
+                $"Natural numbers".successor(n = $sum(
+                  m = $"Natural numbers".successor(n = m),
+                  n = x
+                )),
+                $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(
+                  m = m,
+                  n = x
+                )))
               )
             )
           )

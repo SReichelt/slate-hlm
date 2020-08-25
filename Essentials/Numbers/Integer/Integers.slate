@@ -29,19 +29,19 @@ $Integers: %Construction {
       rightParameters = #("n'","m'": %Element($../Natural/"Natural numbers")),
       definition = [%equals(
         $../Natural/sum(
-          m = {n},
-          n = {"m'"}
+          m = n,
+          n = "m'"
         ),
         $../Natural/sum(
-          m = {"n'"},
-          n = {m}
+          m = "n'",
+          n = m
         )
       )]
     },
     rewrite = {
       value = $difference(
-        a = {n},
-        b = {m}
+        a = n,
+        b = m
       ),
       theorem = $"Actual difference equals formal difference"
     }
@@ -51,20 +51,20 @@ $Integers: %Construction {
   embedding = {
     parameter = #(x: %Element($../Natural/"Natural numbers")),
     target = $Integers.difference(
-      n = {x},
-      m = {$../Natural/number(value = 0)}
+      n = x,
+      m = $../Natural/number(value = 0)
     ),
     wellDefinednessProof = {
       parameters = #(
         x,y: %Element($../Natural/"Natural numbers"),
         _1: %Constraint(%equals(
           $Integers.difference(
-            n = {x},
-            m = {$../Natural/number(value = 0)}
+            n = x,
+            m = $../Natural/number(value = 0)
           ),
           $Integers.difference(
-            n = {y},
-            m = {$../Natural/number(value = 0)}
+            n = y,
+            m = $../Natural/number(value = 0)
           )
         ))
       ),
@@ -73,12 +73,12 @@ $Integers: %Construction {
         _: %Consider(_1),
         _: %UseDef(result = %equals(
           $../Natural/sum(
-            m = {x},
-            n = {$../Natural/number(value = 0)}
+            m = x,
+            n = $../Natural/number(value = 0)
           ),
           $../Natural/sum(
-            m = {y},
-            n = {$../Natural/number(value = 0)}
+            m = y,
+            n = $../Natural/number(value = 0)
           )
         )),
         _: %UnfoldDef(%equals(x, y))

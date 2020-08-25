@@ -6,7 +6,7 @@ $countable(α: %Element($"Ordinal numbers")): %Predicate {
     property = %neg('countable', 'uncountable')
   ),
   definition = [
-    $../Cardinal/countable(κ = {$cardinality(α = {α})}),
-    $../../Sets/countable(S = {$Carrier(α = {α})})
+    $../Cardinal/countable(κ = $cardinality(α = α)),
+    $../../Sets/countable(S = $Carrier(α = α))
   ]
 }

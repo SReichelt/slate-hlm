@@ -5,12 +5,12 @@ $"Multiplication by a positive number is injective"(
   c: %Element($Subsets/"Positive numbers"),
   _1: %Constraint(%equals(
     $product(
-      m = {a},
-      n = {c}
+      m = a,
+      n = c
     ),
     $product(
-      m = {b},
-      n = {c}
+      m = b,
+      n = c
     )
   ))
 ): %StandardTheorem {

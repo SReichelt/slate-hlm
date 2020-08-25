@@ -10,18 +10,18 @@ $"Segment (greater)"(a: %Element($../Integers)): %SetOperator {
     %subset(
       #(b: %Element($../Integers)),
       $../less(
-        b = {b},
-        a = {a}
+        b = b,
+        a = a
       )
     ),
     $../../../Sets/"Relative complement"(
-      U = {$../Integers},
-      S = {$../Integers},
-      T = {$"Segment (less or equal)"(a = {a})}
+      U = $../Integers,
+      S = $../Integers,
+      T = $"Segment (less or equal)"(a = a)
     ),
-    $"Segment (greater or equal)"(a = {$../sum(
-      a = {a},
-      b = {$../../Natural/number(value = 1)}
-    )})
+    $"Segment (greater or equal)"(a = $../sum(
+      a = a,
+      b = $../../Natural/number(value = 1)
+    ))
   ]
 }

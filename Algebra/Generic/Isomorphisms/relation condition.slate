@@ -3,11 +3,11 @@
 $"relation condition"(
   X,Y: %Set(auto = %true),
   φ: %Element($../../../Essentials/Functions/Bijections(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   )),
-  ≺: %Element($../../../Essentials/Relations/Endorelations(S = {X})),
-  ⊂: %Element($../../../Essentials/Relations/Endorelations(S = {Y}))
+  ≺: %Element($../../../Essentials/Relations/Endorelations(S = X)),
+  ⊂: %Element($../../../Essentials/Relations/Endorelations(S = Y))
 ): %Predicate {
   notation = $SpecificIsomorphismRelation(
     operands = [≺, ⊂],
@@ -16,7 +16,7 @@ $"relation condition"(
   definition = [
     %structural(
       ≺,
-      $../../../Essentials/Relations/Endorelations(S = {X}),
+      $../../../Essentials/Relations/Endorelations(S = X),
       [{
         constructor = $../../../Essentials/Relations/Endorelations.relation,
         parameters = #(_2: %Binder(
@@ -25,7 +25,7 @@ $"relation condition"(
         )),
         value = %structural(
           ⊂,
-          $../../../Essentials/Relations/Endorelations(S = {Y}),
+          $../../../Essentials/Relations/Endorelations(S = Y),
           [{
             constructor = $../../../Essentials/Relations/Endorelations.relation,
             parameters = #(_1: %Binder(
@@ -34,17 +34,17 @@ $"relation condition"(
             )),
             value = %forall(
               #(x_1,x_2: %Element(X)),
-              %equiv(p[x_1 = {x_1}, x_2 = {x_2}], q[y_1 = {$../../../Essentials/Functions/value(
-                    X = {X},
-                    Y = {Y},
-                    f = {φ},
-                    x = {x_1}
-                  )}, y_2 = {$../../../Essentials/Functions/value(
-                    X = {X},
-                    Y = {Y},
-                    f = {φ},
-                    x = {x_2}
-              )}])
+              %equiv(p[x_1 = x_1, x_2 = x_2], q[y_1 = $../../../Essentials/Functions/value(
+                    X = X,
+                    Y = Y,
+                    f = φ,
+                    x = x_1
+                  ), y_2 = $../../../Essentials/Functions/value(
+                    X = X,
+                    Y = Y,
+                    f = φ,
+                    x = x_2
+              )])
             )
           }]
         )
@@ -54,28 +54,28 @@ $"relation condition"(
       #(x_1,x_2: %Element(X)),
       %equiv(
         $../../../Essentials/Relations/related(
-          S = {X},
-          T = {X},
-          ≺ = {≺},
-          s = {x_1},
-          t = {x_2}
+          S = X,
+          T = X,
+          ≺ = ≺,
+          s = x_1,
+          t = x_2
         ),
         $../../../Essentials/Relations/related(
-          S = {Y},
-          T = {Y},
-          ≺ = {⊂},
-          s = {$../../../Essentials/Functions/value(
-            X = {X},
-            Y = {Y},
-            f = {φ},
-            x = {x_1}
-          )},
-          t = {$../../../Essentials/Functions/value(
-            X = {X},
-            Y = {Y},
-            f = {φ},
-            x = {x_2}
-          )}
+          S = Y,
+          T = Y,
+          ≺ = ⊂,
+          s = $../../../Essentials/Functions/value(
+            X = X,
+            Y = Y,
+            f = φ,
+            x = x_1
+          ),
+          t = $../../../Essentials/Functions/value(
+            X = X,
+            Y = Y,
+            f = φ,
+            x = x_2
+          )
         )
       )
     )

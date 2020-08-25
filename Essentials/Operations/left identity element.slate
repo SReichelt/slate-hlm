@@ -8,9 +8,9 @@
 $"left identity element"(
   X,Y: %Set(auto = %true),
   ∗: %Element($Operations(
-    X = {X},
-    Y = {Y},
-    Z = {Y}
+    X = X,
+    Y = Y,
+    Z = Y
   )),
   e: %Element(X)
 ): %Predicate {
@@ -24,12 +24,12 @@ $"left identity element"(
     #(a: %Element(Y)),
     %equals(
       $value(
-        X = {X},
-        Y = {Y},
-        Z = {Y},
-        ∗ = {∗},
-        x = {e},
-        y = {a}
+        X = X,
+        Y = Y,
+        Z = Y,
+        ∗ = ∗,
+        x = e,
+        y = a
       ),
       a
     )

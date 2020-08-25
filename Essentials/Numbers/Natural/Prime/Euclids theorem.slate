@@ -7,73 +7,73 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.exists_infinite_primes
  */
 $"Euclids theorem": %StandardTheorem {
-  claim = %not($../../../Sets/finite(S = {$"Prime numbers"})),
+  claim = %not($../../../Sets/finite(S = $"Prime numbers")),
   proofs = [{steps = #(_: %ProveNeg({
-    parameters = #(_: %Constraint($../../../Sets/finite(S = {$"Prime numbers"}))),
+    parameters = #(_: %Constraint($../../../Sets/finite(S = $"Prime numbers"))),
     steps = #(
       a: %Def($../../../Operations/"Iterated operations"/"indexed by finite set"(
-        X = {$../"Natural numbers"},
-        ⨂ = {$../"Iterated operators"/"iterated product"},
-        I = {$"Prime numbers"},
+        X = $../"Natural numbers",
+        ⨂ = $../"Iterated operators"/"iterated product",
+        I = $"Prime numbers",
         _2 = {
           #(p: %Element($"Prime numbers")),
-          {a = {p}}
+          {a = p}
         }
       )),
       _1: %State(
         $../"less or equal"(
-          n = {a},
-          m = {$../number(value = 1)}
+          n = a,
+          m = $../number(value = 1)
         ),
         proof = {steps = #(
           _: %UseTheorem(
             $../"Iterated operators"/"Iterated product of positive numbers grows"(
-              I = {$"Prime numbers"},
+              I = $"Prime numbers",
               _2 = {
                 #(p: %Element($"Prime numbers")),
-                {a = {p}}
+                {a = p}
               },
-              J = {$../../../Sets/"Empty set"}
+              J = $../../../Sets/"Empty set"
             ),
             result = $../"less or equal"(
-              m = {$../../../Operations/"Iterated operations"/"indexed by finite set"(
-                X = {$../"Natural numbers"},
-                ⨂ = {$../"Iterated operators"/"iterated product"},
-                I = {$../../../Sets/"Empty set"},
+              m = $../../../Operations/"Iterated operations"/"indexed by finite set"(
+                X = $../"Natural numbers",
+                ⨂ = $../"Iterated operators"/"iterated product",
+                I = $../../../Sets/"Empty set",
                 _2 = {
                   #(x: %Element($../../../Sets/"Empty set")),
-                  {a = {x}}
+                  {a = x}
                 }
-              )},
-              n = {$../../../Operations/"Iterated operations"/"indexed by finite set"(
-                X = {$../"Natural numbers"},
-                ⨂ = {$../"Iterated operators"/"iterated product"},
-                I = {$"Prime numbers"},
+              ),
+              n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
+                X = $../"Natural numbers",
+                ⨂ = $../"Iterated operators"/"iterated product",
+                I = $"Prime numbers",
                 _2 = {
                   #(p: %Element($"Prime numbers")),
-                  {a = {p}}
+                  {a = p}
                 }
-              )}
+              )
             )
           ),
           _: %Substitute(
             #(_: %UseTheorem(
               $../../../Operations/"Iterated operations"/"Operation on empty set"(
-                X = {$../"Natural numbers"},
-                ⨂ = {$../"Iterated operators"/"iterated product"},
+                X = $../"Natural numbers",
+                ⨂ = $../"Iterated operators"/"iterated product",
                 _1 = {
                   #(x: %Element($../../../Sets/"Empty set")),
-                  {a = {x}}
+                  {a = x}
                 }
               ),
               result = %equals(
                 $../../../Operations/"Iterated operations"/"indexed by finite set"(
-                  X = {$../"Natural numbers"},
-                  ⨂ = {$../"Iterated operators"/"iterated product"},
-                  I = {$../../../Sets/"Empty set"},
+                  X = $../"Natural numbers",
+                  ⨂ = $../"Iterated operators"/"iterated product",
+                  I = $../../../Sets/"Empty set",
                   _2 = {
                     #(x: %Element($../../../Sets/"Empty set")),
-                    {a = {x}}
+                    {a = x}
                   }
                 ),
                 $../number(value = 1)
@@ -81,53 +81,53 @@ $"Euclids theorem": %StandardTheorem {
             )),
             0,
             $../"less or equal"(
-              m = {$../number(value = 1)},
-              n = {$../../../Operations/"Iterated operations"/"indexed by finite set"(
-                X = {$../"Natural numbers"},
-                ⨂ = {$../"Iterated operators"/"iterated product"},
-                I = {$"Prime numbers"},
+              m = $../number(value = 1),
+              n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
+                X = $../"Natural numbers",
+                ⨂ = $../"Iterated operators"/"iterated product",
+                I = $"Prime numbers",
                 _2 = {
                   #(p: %Element($"Prime numbers")),
-                  {a = {p}}
+                  {a = p}
                 }
-              )}
+              )
             )
           )
         )}
       ),
       _2: %UseTheorem(
         $../"Less or equal and less combine to less"(
-          a = {$../number(value = 1)},
-          b = {a},
-          c = {$../sum(
-            m = {a},
-            n = {$../number(value = 1)}
-          )},
+          a = $../number(value = 1),
+          b = a,
+          c = $../sum(
+            m = a,
+            n = $../number(value = 1)
+          ),
           _1 = {proof = {steps = #(_: %Consider(_1))}},
           _2 = {proof = {steps = #(_: %UseTheorem(
-            $../"Successor is always greater"(n = {a}),
+            $../"Successor is always greater"(n = a),
             result = $../less(
-              n = {$../sum(
-                m = {a},
-                n = {$../number(value = 1)}
-              )},
-              m = {a}
+              n = $../sum(
+                m = a,
+                n = $../number(value = 1)
+              ),
+              m = a
             )
           ))}}
         ),
         result = $../less(
-          n = {$../sum(
-            m = {a},
-            n = {$../number(value = 1)}
-          )},
-          m = {$../number(value = 1)}
+          n = $../sum(
+            m = a,
+            n = $../number(value = 1)
+          ),
+          m = $../number(value = 1)
         )
       ),
       _: %UseTheorem(
         $"Every number greater than one has a prime factor"(n = {
           $../sum(
-            m = {a},
-            n = {$../number(value = 1)}
+            m = a,
+            n = $../number(value = 1)
           ),
           elementProof = {steps = #(
             _: %Consider(_2),
@@ -137,56 +137,56 @@ $"Euclids theorem": %StandardTheorem {
         result = %exists(
           #(p: %Element($"Prime numbers")),
           formula = $../divisible(
-            m = {p},
-            n = {$../sum(
-              m = {a},
-              n = {$../number(value = 1)}
-            )}
+            m = p,
+            n = $../sum(
+              m = a,
+              n = $../number(value = 1)
+            )
           )
         )
       ),
       _3: %UseExists(#(p: %Element($"Prime numbers"))),
       _4: %UseTheorem(
         $../"Divisibility criterion"(
-          a = {p},
-          b = {a},
+          a = p,
+          b = a,
           _1 = {proof = {steps = #(_: %UseTheorem(
             $../"Iterated operators"/"Iterated product is a multiple of each element"(
-              I = {$"Prime numbers"},
+              I = $"Prime numbers",
               _2 = {
                 #(p: %Element($"Prime numbers")),
-                {a = {p}}
+                {a = p}
               },
-              j = {p}
+              j = p
             ),
             result = $../divisible(
-              m = {p},
-              n = {a}
+              m = p,
+              n = a
             )
           ))}},
-          c = {$../number(value = 1)}
+          c = $../number(value = 1)
         ),
         input = #(_: %Consider(_3)),
         result = $../divisible(
-          m = {p},
-          n = {$../number(value = 1)}
+          m = p,
+          n = $../number(value = 1)
         )
       ),
       _: %UseTheorem(
         $../"Divisors are less or equal"(
-          m = {p},
-          n = {$../number(value = 1)},
+          m = p,
+          n = $../number(value = 1),
           _1 = {proof = {steps = #(_: %Consider(_4))}}
         ),
         result = $../"less or equal"(
-          m = {p},
-          n = {$../number(value = 1)}
+          m = p,
+          n = $../number(value = 1)
         )
       ),
       _: %Consider(p),
       _: %UseDef(result = $../less(
-        n = {p},
-        m = {$../number(value = 1)}
+        n = p,
+        m = $../number(value = 1)
       ))
     )
   }))}]

@@ -14,25 +14,25 @@
 $"Fundamental theorem of arithmetic"(n: %Element($../Subsets/"Positive numbers")): %StandardTheorem {
   claim = %existsUnique(
     #(
-      𝑷: %Element($../../../Sets/Multisets/Multisets(S = {$"Prime numbers"})),
+      𝑷: %Element($../../../Sets/Multisets/Multisets(S = $"Prime numbers")),
       _1: %Constraint($../../../Sets/Multisets/finite(
-        S = {$"Prime numbers"},
-        𝑻 = {𝑷}
+        S = $"Prime numbers",
+        𝑻 = 𝑷
       ))
     ),
     formula = %equals(
       n,
       $../../../Operations/"Iterated operations"/"indexed by finite multiset"(
-        X = {$../"Natural numbers"},
-        ⨂ = {$../"Iterated operators"/"iterated product"},
-        S = {$"Prime numbers"},
-        𝑰 = {𝑷},
+        X = $../"Natural numbers",
+        ⨂ = $../"Iterated operators"/"iterated product",
+        S = $"Prime numbers",
+        𝑰 = 𝑷,
         _2 = {
           #(p: %Element($../../../Sets/Multisets/Set(
-            S = {$"Prime numbers"},
-            𝑻 = {𝑷}
+            S = $"Prime numbers",
+            𝑻 = 𝑷
           ))),
-          {a = {p}}
+          {a = p}
         }
       )
     )

@@ -12,10 +12,10 @@ $identity(X: %Set(auto = %true)): %ExplicitOperator {
     sub = X
   ),
   definition = [$Functions(
-      X = {X},
-      Y = {X}
+      X = X,
+      Y = X
     ).function(_1 = {
       #(x: %Element(X)),
-      {y = {x}}
+      {y = x}
   })]
 }

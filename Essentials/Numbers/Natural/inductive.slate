@@ -21,8 +21,8 @@ $inductive(M: %Subset($"Natural numbers")): %Predicate {
       #(m: %Element(M)),
       %in(
         $sum(
-          m = {m},
-          n = {$number(value = 1)}
+          m = m,
+          n = $number(value = 1)
         ),
         M
       )

@@ -10,12 +10,12 @@
 $Monoids: %Construction {
   $monoid(
     M: %Set,
-    ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M})),
+    ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
     e: %Element(M),
     _1: %Constraint($monoid(
-      M = {M},
-      ∗ = {∗},
-      e = {e}
+      M = M,
+      ∗ = ∗,
+      e = e
     ))
   ): %Constructor {
     notation = $Tuple(
@@ -25,43 +25,43 @@ $Monoids: %Construction {
     equalityDefinition = {
       leftParameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
         e: %Element(M),
         _1: %Constraint($monoid(
-          M = {M},
-          ∗ = {∗},
-          e = {e}
+          M = M,
+          ∗ = ∗,
+          e = e
         ))
       ),
       rightParameters = #(
         N: %Set,
-        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = {N})),
+        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = N)),
         f: %Element(N),
         _2: %Constraint($monoid(
-          M = {N},
-          ∗ = {⋆},
-          e = {f}
+          M = N,
+          ∗ = ⋆,
+          e = f
         ))
       ),
       definition = [%exists(
         #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = {M},
-          Y = {N}
+          X = M,
+          Y = N
         ))),
         formula = %and(
           $../Generic/Isomorphisms/"inner operation condition"(
-            X = {M},
-            Y = {N},
-            φ = {φ},
-            ∗ = {∗},
-            ⋆ = {⋆}
+            X = M,
+            Y = N,
+            φ = φ,
+            ∗ = ∗,
+            ⋆ = ⋆
           ),
           $../Generic/Isomorphisms/"element condition"(
-            X = {M},
-            Y = {N},
-            φ = {φ},
-            x = {e},
-            y = {f}
+            X = M,
+            Y = N,
+            φ = φ,
+            x = e,
+            y = f
           )
         )
       )],

@@ -10,13 +10,13 @@ $"Segment (less or equal)"(a: %Element($../Integers)): %SetOperator {
     %subset(
       #(b: %Element($../Integers)),
       $../"less or equal"(
-        a = {b},
-        b = {a}
+        a = b,
+        b = a
       )
     ),
-    $"Segment (less)"(a = {$../sum(
-      a = {a},
-      b = {$../../Natural/number(value = 1)}
-    )})
+    $"Segment (less)"(a = $../sum(
+      a = a,
+      b = $../../Natural/number(value = 1)
+    ))
   ]
 }

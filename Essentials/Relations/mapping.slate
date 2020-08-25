@@ -10,8 +10,8 @@
 $mapping(
   S,T: %Set(auto = %true),
   ≺: %Element($Relations(
-    S = {S},
-    T = {T}
+    S = S,
+    T = T
   ))
 ): %Predicate {
   notation = $NounProperty(
@@ -24,11 +24,11 @@ $mapping(
     %existsUnique(
       #(t: %Element(T)),
       formula = $related(
-        S = {S},
-        T = {T},
-        s = {s},
-        ≺ = {≺},
-        t = {t}
+        S = S,
+        T = T,
+        s = s,
+        ≺ = ≺,
+        t = t
       )
     )
   )]

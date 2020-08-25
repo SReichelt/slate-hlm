@@ -2,7 +2,7 @@
 
 $"free on set"(
   𝐌: %Element($../Magmas),
-  S: %Subset($../Carrier(𝐌 = {𝐌}))
+  S: %Subset($../Carrier(𝐌 = 𝐌))
 ): %Predicate {
   notation = $Property(
     operand = 𝐌,
@@ -11,27 +11,27 @@ $"free on set"(
   definition = [
     %equals(
       𝐌,
-      $"free magma"(S = {S})
+      $"free magma"(S = S)
     ),
     %forall(
       #(
         𝐍: %Element($../Magmas),
         f: %Element($../../../Essentials/Functions/Functions(
-          X = {S},
-          Y = {$../Carrier(𝐌 = {𝐍})}
+          X = S,
+          Y = $../Carrier(𝐌 = 𝐍)
         ))
       ),
       %existsUnique(
         #(φ: %Element($../Homomorphisms/Homomorphisms(
-          𝐌 = {𝐌},
-          𝐍 = {𝐍}
+          𝐌 = 𝐌,
+          𝐍 = 𝐍
         ))),
         formula = %equals(
           $../../../Essentials/Functions/restriction(
-            X = {$../Carrier(𝐌 = {𝐌})},
-            Y = {$../Carrier(𝐌 = {𝐍})},
-            A = {S},
-            f = {φ}
+            X = $../Carrier(𝐌 = 𝐌),
+            Y = $../Carrier(𝐌 = 𝐍),
+            A = S,
+            f = φ
           ),
           f
         )

@@ -2,7 +2,7 @@
 
 $restriction(
   S: %Set(auto = %true),
-  p: %Element($Properties(S = {S})),
+  p: %Element($Properties(S = S)),
   T: %Subset(S)
 ): %ExplicitOperator {
   notation = $PostfixUnaryOperator(
@@ -13,12 +13,12 @@ $restriction(
     operand = p,
     minParenLevel = 3
   ),
-  definition = [$Properties(S = {T}).property(_1 = {
+  definition = [$Properties(S = T).property(_1 = {
       #(t: %Element(T)),
-      {p = {$"has property"(
-        S = {S},
-        p = {p},
-        s = {t}
-      )}}
+      {p = $"has property"(
+        S = S,
+        p = p,
+        s = t
+      )}
   })]
 }

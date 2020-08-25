@@ -12,16 +12,16 @@ $zero(𝐑: %Element($Semirings)): %ExplicitOperator {
       constructor = $Semirings.semiring,
       parameters = #(
         R: %Set,
-        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
+        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
+        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
         _1: %Constraint($semiring(
-          R = {R},
-          ⊕ = {⊕},
-          "0" = {"0"},
-          ⊙ = {⊙},
-          "1" = {"1"}
+          R = R,
+          ⊕ = ⊕,
+          "0" = "0",
+          ⊙ = ⊙,
+          "1" = "1"
         ))
       ),
       value = "0"

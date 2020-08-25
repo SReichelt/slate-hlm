@@ -7,7 +7,7 @@
  */
 $minimum(
   M: %Subset($"Natural numbers"),
-  _1: %Constraint(%not($../../Sets/empty(S = {M})))
+  _1: %Constraint(%not($../../Sets/empty(S = M)))
 ): %ImplicitOperator {
   notation = $Function(
     function = 'min',
@@ -18,16 +18,16 @@ $minimum(
     %forall(
       #(n: %Element(M)),
       $"less or equal"(
-        m = {m},
-        n = {n}
+        m = m,
+        n = n
       )
     ),
     %forall(
       #(
         l: %Element(M),
         _2: %Constraint($"less or equal"(
-          m = {l},
-          n = {m}
+          m = l,
+          n = m
         ))
       ),
       %equals(l, m)
@@ -35,8 +35,8 @@ $minimum(
     %not(%exists(
       #(k: %Element(M)),
       formula = $less(
-        m = {k},
-        n = {m}
+        m = k,
+        n = m
       )
     ))
   ]

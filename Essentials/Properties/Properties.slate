@@ -38,7 +38,7 @@ $Properties(S: %Set(auto = %true)): %Construction {
       )),
       definition = [%forall(
         #(s: %Element(S)),
-        %equiv(p[s = {s}], q[s = {s}])
+        %equiv(p[s = s], q[s = s])
       )],
       isomorphic = %true
     }

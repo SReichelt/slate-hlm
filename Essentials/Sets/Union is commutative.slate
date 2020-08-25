@@ -10,14 +10,14 @@ $"Union is commutative"(
 ): %StandardTheorem {
   claim = %setEquals(
     $Union(
-      U = {U},
-      S = {S},
-      T = {T}
+      U = U,
+      S = S,
+      T = T
     ),
     $Union(
-      U = {U},
-      S = {T},
-      T = {S}
+      U = U,
+      S = T,
+      T = S
     )
   )
 }

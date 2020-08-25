@@ -5,7 +5,7 @@ $zero(
     $../../Rings,
     auto = %true
   ),
-  𝐌: %Element($"Right modules"(𝐑 = {𝐑}))
+  𝐌: %Element($"Right modules"(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $SubSup(
     body = '0',
@@ -13,29 +13,29 @@ $zero(
   ),
   definition = [%structuralCases(
     𝐌,
-    $"Right modules"(𝐑 = {𝐑}),
+    $"Right modules"(𝐑 = 𝐑),
     [{
       constructor = $"Right modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = {M})),
+        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
         "0": %Element(M),
         ⊖: %Element($../../../../Essentials/Functions/Functions(
-          X = {M},
-          Y = {M}
+          X = M,
+          Y = M
         )),
         ⊙: %Element($../../../../Essentials/Operations/Operations(
-          X = {M},
-          Y = {$../../Carrier(𝐑 = {𝐑})},
-          Z = {M}
+          X = M,
+          Y = $../../Carrier(𝐑 = 𝐑),
+          Z = M
         )),
         _1: %Constraint($"right module"(
-          𝐑 = {𝐑},
-          M = {M},
-          ⊕ = {⊕},
-          "0" = {"0"},
-          ⊖ = {⊖},
-          ⊙ = {⊙}
+          𝐑 = 𝐑,
+          M = M,
+          ⊕ = ⊕,
+          "0" = "0",
+          ⊖ = ⊖,
+          ⊙ = ⊙
         ))
       ),
       value = "0"

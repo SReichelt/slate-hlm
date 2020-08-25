@@ -2,12 +2,12 @@
 
 $"indexed by integer"(
   X: %Set(auto = %true),
-  ⨂: %Element($"Iterated operations"(X = {X})),
+  ⨂: %Element($"Iterated operations"(X = X)),
   j,k: %Element($../../Numbers/Integer/Integers),
   _1: %Binder(
     #(i: %Element($../../Numbers/Integer/Subsets/Interval(
-      a = {j},
-      b = {k}
+      a = j,
+      b = k
     ))),
     #(a: %Element(X))
   )
@@ -20,27 +20,27 @@ $"indexed by integer"(
     maxParenLevel = 1
   ),
   definition = [$"indexed by natural number"(
-    X = {X},
-    ⨂ = {⨂},
-    n = {$../../Numbers/Integer/sum(
-      a = {%associative($../../Numbers/Integer/difference(
-        a = {k},
-        b = {j}
-      ))},
-      b = {$../../Numbers/Natural/number(value = 1)}
-    )},
+    X = X,
+    ⨂ = ⨂,
+    n = $../../Numbers/Integer/sum(
+      a = %associative($../../Numbers/Integer/difference(
+        a = k,
+        b = j
+      )),
+      b = $../../Numbers/Natural/number(value = 1)
+    ),
     _1 = {
-      #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {$../../Numbers/Integer/sum(
-        a = {%associative($../../Numbers/Integer/difference(
-          a = {k},
-          b = {j}
-        ))},
-        b = {$../../Numbers/Natural/number(value = 1)}
-      )}))),
-      {a = {a[i = {$../../Numbers/Integer/sum(
-        a = {i},
-        b = {j}
-      )}]}}
+      #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $../../Numbers/Integer/sum(
+        a = %associative($../../Numbers/Integer/difference(
+          a = k,
+          b = j
+        )),
+        b = $../../Numbers/Natural/number(value = 1)
+      )))),
+      {a = a[i = $../../Numbers/Integer/sum(
+        a = i,
+        b = j
+      )]}
     }
   )]
 }

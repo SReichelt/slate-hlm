@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @example `$../../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(X = {$../Carrier(𝐑 = {𝐑})}, ⨂ = {$"iterated sum"(𝐑 = {𝐑})}, n = {n}, _1 = {#(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i = {i}]}}})`
+ * @example `$../../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(X = $../Carrier(𝐑 = 𝐑), ⨂ = $"iterated sum"(𝐑 = 𝐑), n = n, _1 = {#(i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))), {a = {a[i = i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Summation
  *             * https://mathworld.wolfram.com/Sum.html
@@ -12,5 +12,5 @@ $"iterated sum"(𝐑: %Element($../Semirings)): %ExplicitOperator {
     body = '∑',
     sub = 𝐑
   ),
-  definition = [$../../Monoids/"iterated operation"(𝐌 = {$../"additive monoid"(𝐑 = {𝐑})})]
+  definition = [$../../Monoids/"iterated operation"(𝐌 = $../"additive monoid"(𝐑 = 𝐑))]
 }

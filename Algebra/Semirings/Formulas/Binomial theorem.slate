@@ -9,52 +9,52 @@
  */
 $"Binomial theorem"(
   𝐑: %Element($../Semirings),
-  a,b: %Element($../Carrier(𝐑 = {𝐑})),
+  a,b: %Element($../Carrier(𝐑 = 𝐑)),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %StandardTheorem {
   claim = %equals(
     $../"power to natural number"(
-      𝐑 = {𝐑},
-      a = {$../sum(
-        𝐑 = {𝐑},
-        a = {a},
-        b = {b}
-      )},
-      n = {n}
+      𝐑 = 𝐑,
+      a = $../sum(
+        𝐑 = 𝐑,
+        a = a,
+        b = b
+      ),
+      n = n
     ),
     $../../../Essentials/Operations/"Iterated operations"/"indexed by integer"(
-      X = {$../Carrier(𝐑 = {𝐑})},
-      ⨂ = {$../"Iterated operations"/"iterated sum"(𝐑 = {𝐑})},
-      j = {$../../../Essentials/Numbers/Natural/number(value = 0)},
-      k = {n},
+      X = $../Carrier(𝐑 = 𝐑),
+      ⨂ = $../"Iterated operations"/"iterated sum"(𝐑 = 𝐑),
+      j = $../../../Essentials/Numbers/Natural/number(value = 0),
+      k = n,
       _1 = {
         #(k: %Element($../../../Essentials/Numbers/Integer/Subsets/Interval(
-          a = {$../../../Essentials/Numbers/Natural/number(value = 0)},
-          b = {n}
+          a = $../../../Essentials/Numbers/Natural/number(value = 0),
+          b = n
         ))),
-        {a = {$../"product with natural number"(
-          𝐑 = {𝐑},
-          n = {$../../../Essentials/Numbers/Natural/"binomial coefficient"(
-            n = {n},
-            k = {k}
-          )},
-          a = {%associative($../product(
-            𝐑 = {𝐑},
-            a = {$../"power to natural number"(
-              𝐑 = {𝐑},
-              a = {a},
-              n = {$../../../Essentials/Numbers/Natural/difference(
-                n = {n},
-                m = {k}
-              )}
-            )},
-            b = {$../"power to natural number"(
-              𝐑 = {𝐑},
-              a = {b},
-              n = {k}
-            )}
-          ))}
-        )}}
+        {a = $../"product with natural number"(
+          𝐑 = 𝐑,
+          n = $../../../Essentials/Numbers/Natural/"binomial coefficient"(
+            n = n,
+            k = k
+          ),
+          a = %associative($../product(
+            𝐑 = 𝐑,
+            a = $../"power to natural number"(
+              𝐑 = 𝐑,
+              a = a,
+              n = $../../../Essentials/Numbers/Natural/difference(
+                n = n,
+                m = k
+              )
+            ),
+            b = $../"power to natural number"(
+              𝐑 = 𝐑,
+              a = b,
+              n = k
+            )
+          ))
+        )}
       }
     )
   )

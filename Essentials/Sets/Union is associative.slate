@@ -10,22 +10,22 @@ $"Union is associative"(
 ): %StandardTheorem {
   claim = %setEquals(
     $Union(
-      U = {U},
-      S = {$Union(
-        U = {U},
-        S = {R},
-        T = {S}
-      )},
-      T = {T}
+      U = U,
+      S = $Union(
+        U = U,
+        S = R,
+        T = S
+      ),
+      T = T
     ),
     $Union(
-      U = {U},
-      S = {R},
-      T = {$Union(
-        U = {U},
-        S = {S},
-        T = {T}
-      )}
+      U = U,
+      S = R,
+      T = $Union(
+        U = U,
+        S = S,
+        T = T
+      )
     )
   )
 }

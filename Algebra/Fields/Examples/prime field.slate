@@ -13,7 +13,7 @@ $"prime field"(p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime num
     sub = p
   ),
   definition = [$../../Rings/Quotients/"quotient ring"(
-    𝐑 = {$../../Rings/Examples/integers},
-    I = {$../../../Essentials/Numbers/Integer/Subsets/Multiples(n = {p})}
+    𝐑 = $../../Rings/Examples/integers,
+    I = $../../../Essentials/Numbers/Integer/Subsets/Multiples(n = p)
   )]
 }

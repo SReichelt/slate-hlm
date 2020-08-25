@@ -2,7 +2,7 @@
 
 $restriction(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S})),
+  ≺: %Element($Endorelations(S = S)),
   T: %Subset(S)
 ): %ExplicitOperator {
   notation = $PostfixUnaryOperator(
@@ -14,14 +14,14 @@ $restriction(
     minParenLevel = 3
   ),
   definition = [$../Properties/restriction(
-    S = {$../Sets/"Cartesian product"(
-      S = {S},
-      T = {S}
-    )},
-    p = {≺},
-    T = {$../Sets/"Cartesian product"(
-      S = {T},
-      T = {T}
-    )}
+    S = $../Sets/"Cartesian product"(
+      S = S,
+      T = S
+    ),
+    p = ≺,
+    T = $../Sets/"Cartesian product"(
+      S = T,
+      T = T
+    )
   )]
 }

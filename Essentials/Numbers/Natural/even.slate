@@ -26,14 +26,14 @@ $even(n: %Element($"Natural numbers")): %Predicate {
         {
           constructor = $"Natural numbers".successor,
           parameters = #(x: %Element($"Natural numbers")),
-          value = %not($even(n = {x})),
+          value = %not($even(n = x)),
           rewrite = %true
         }
       ]
     ),
     $divisible(
-      m = {$number(value = 2)},
-      n = {n}
+      m = $number(value = 2),
+      n = n
     )
   ]
 }

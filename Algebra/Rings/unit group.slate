@@ -20,41 +20,41 @@ $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
       constructor = $Rings.ring,
       parameters = #(
         R: %Set,
-        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
+        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "0": %Element(R),
         ⊖: %Element($../../Essentials/Functions/Functions(
-          X = {R},
-          Y = {R}
+          X = R,
+          Y = R
         )),
-        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
+        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
         _1: %Constraint($ring(
-          R = {R},
-          ⊕ = {⊕},
-          "0" = {"0"},
-          ⊖ = {⊖},
-          ⊙ = {⊙},
-          "1" = {"1"}
+          R = R,
+          ⊕ = ⊕,
+          "0" = "0",
+          ⊖ = ⊖,
+          ⊙ = ⊙,
+          "1" = "1"
         ))
       ),
       value = $../Groups/Groups.group(
-        G = {$Units(𝐑 = {𝐑})},
-        ∗ = {$../../Essentials/Operations/"inner operation restriction"(
-          X = {R},
-          A = {$Units(𝐑 = {𝐑})},
-          ∗ = {⊙}
-        )},
-        e = {"1"},
-        i = {$../../Essentials/Functions/Functions(
-            X = {$Units(𝐑 = {𝐑})},
-            Y = {$Units(𝐑 = {𝐑})}
+        G = $Units(𝐑 = 𝐑),
+        ∗ = $../../Essentials/Operations/"inner operation restriction"(
+          X = R,
+          A = $Units(𝐑 = 𝐑),
+          ∗ = ⊙
+        ),
+        e = "1",
+        i = $../../Essentials/Functions/Functions(
+            X = $Units(𝐑 = 𝐑),
+            Y = $Units(𝐑 = 𝐑)
           ).function(_1 = {
-            #(a: %Element($Units(𝐑 = {𝐑}))),
-            {y = {$"multiplicative inverse"(
-              𝐑 = {𝐑},
-              a = {a}
-            )}}
-        })}
+            #(a: %Element($Units(𝐑 = 𝐑))),
+            {y = $"multiplicative inverse"(
+              𝐑 = 𝐑,
+              a = a
+            )}
+        })
       )
     }]
   )]

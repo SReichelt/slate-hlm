@@ -9,33 +9,33 @@ $"product with integer"(
     auto = %true
   ),
   z: %Element($../../Essentials/Numbers/Integer/Integers),
-  a: %Element($Carrier(𝐑 = {𝐑}))
+  a: %Element($Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [z, a]),
   definition = [%cases([
     {
       formula = $../../Essentials/Numbers/Integer/"less or equal"(
-        b = {z},
-        a = {$../../Essentials/Numbers/Natural/number(value = 0)}
+        b = z,
+        a = $../../Essentials/Numbers/Natural/number(value = 0)
       ),
       value = $"product with natural number"(
-        𝐑 = {𝐑},
-        n = {z},
-        a = {a}
+        𝐑 = 𝐑,
+        n = z,
+        a = a
       )
     },
     {
       formula = $../../Essentials/Numbers/Integer/less(
-        a = {z},
-        b = {$../../Essentials/Numbers/Natural/number(value = 0)}
+        a = z,
+        b = $../../Essentials/Numbers/Natural/number(value = 0)
       ),
       value = $"product with natural number"(
-        𝐑 = {𝐑},
-        n = {$../../Essentials/Numbers/Integer/inverse(a = {z})},
-        a = {$"additive inverse"(
-          𝐑 = {𝐑},
-          a = {a}
-        )}
+        𝐑 = 𝐑,
+        n = $../../Essentials/Numbers/Integer/inverse(a = z),
+        a = $"additive inverse"(
+          𝐑 = 𝐑,
+          a = a
+        )
       )
     }
   ])]

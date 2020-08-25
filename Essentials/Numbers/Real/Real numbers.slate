@@ -10,8 +10,8 @@
  */
 $"Real numbers": %Construction {
   $class(
-    r: %Element($../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"})),
-    _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = {r}))
+    r: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
+    _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = r))
   ): %Constructor {
     notation = $Parens(
       body = r,
@@ -19,19 +19,19 @@ $"Real numbers": %Construction {
     ),
     equalityDefinition = {
       leftParameters = #(
-        r: %Element($../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"})),
-        _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = {r}))
+        r: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
+        _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = r))
       ),
       rightParameters = #(
-        "r'": %Element($../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"})),
-        _2: %Constraint($../Rational/Sequences/cauchy(𝐚 = {"r'"}))
+        "r'": %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
+        _2: %Constraint($../Rational/Sequences/cauchy(𝐚 = "r'"))
       ),
       definition = [$../Rational/Sequences/converges(
-        𝐚 = {$../Rational/Sequences/"sequence difference"(
-          𝐚 = {r},
-          𝐛 = {"r'"}
-        )},
-        l = {$../Natural/number(value = 0)}
+        𝐚 = $../Rational/Sequences/"sequence difference"(
+          𝐚 = r,
+          𝐛 = "r'"
+        ),
+        l = $../Natural/number(value = 0)
       )]
     }
   }
@@ -39,9 +39,9 @@ $"Real numbers": %Construction {
   notation = 'ℝ',
   embedding = {
     parameter = #(x: %Element($../Rational/"Rational numbers")),
-    target = $"Real numbers".class(r = {$../../Sequences/"Infinite sequences"(S = {$../Rational/"Rational numbers"}).sequence(_1 = {
+    target = $"Real numbers".class(r = $../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers").sequence(_1 = {
         #(k: %Element($../Natural/"Natural numbers")),
-        {a = {x}}
-    })})
+        {a = x}
+    }))
   }
 }

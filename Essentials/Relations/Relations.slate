@@ -56,7 +56,7 @@ $Relations(S,T: %Set(auto = %true)): %Construction {
           s: %Element(S),
           t: %Element(T)
         ),
-        %equiv(p[s = {s}, t = {t}], q[s = {s}, t = {t}])
+        %equiv(p[s = s, t = t], q[s = s, t = t])
       )],
       isomorphic = %true
     }
@@ -73,32 +73,32 @@ $Relations(S,T: %Set(auto = %true)): %Construction {
     nameOptional = %true
   },
   embedding = {
-    parameter = #(r: %Element($../Properties/Properties(S = {$../Sets/"Cartesian product"(
-      S = {S},
-      T = {T}
-    )}))),
+    parameter = #(r: %Element($../Properties/Properties(S = $../Sets/"Cartesian product"(
+      S = S,
+      T = T
+    )))),
     target = $Relations(
-        S = {S},
-        T = {T}
+        S = S,
+        T = T
       ).relation(_1 = {
         #(
           s: %Element(S),
           t: %Element(T)
         ),
-        {p = {$../Properties/"has property"(
-          S = {$../Sets/"Cartesian product"(
-            S = {S},
-            T = {T}
-          )},
-          p = {r},
-          s = {$../Sets/"Cartesian product"(
-              S = {S},
-              T = {T}
+        {p = $../Properties/"has property"(
+          S = $../Sets/"Cartesian product"(
+            S = S,
+            T = T
+          ),
+          p = r,
+          s = $../Sets/"Cartesian product"(
+              S = S,
+              T = T
             ).pair(
-              s = {s},
-              t = {t}
-          )}
-        )}}
+              s = s,
+              t = t
+          )
+        )}
     }),
     full = %true
   }

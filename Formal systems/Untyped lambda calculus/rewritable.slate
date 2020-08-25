@@ -8,9 +8,9 @@ $rewritable(
     $../Variables,
     auto = %true
   ),
-  _1: %Constraint($../../Essentials/Sets/finite(S = {V})),
-  ℜ: %Subset($../"Rewriting rules"(T = {$Terms(V = {V})})),
-  L,R: %Element($Terms(V = {V}))
+  _1: %Constraint($../../Essentials/Sets/finite(S = V)),
+  ℜ: %Subset($../"Rewriting rules"(T = $Terms(V = V))),
+  L,R: %Element($Terms(V = V))
 ): %Predicate {
   notation = $Relation(
     symbol = $SubSup(
@@ -21,15 +21,15 @@ $rewritable(
   ),
   definition = [%or(
     %in(
-      $../"Rewriting rules"(T = {$Terms(V = {V})}).rule(
-          l = {L},
-          r = {R}
+      $../"Rewriting rules"(T = $Terms(V = V)).rule(
+          l = L,
+          r = R
       ),
       ℜ
     ),
     %structural(
       R,
-      $Terms(V = {V}),
+      $Terms(V = V),
       [
         {
           constructor = $Terms.variable,
@@ -40,33 +40,33 @@ $rewritable(
           constructor = $Terms.abstraction,
           parameters = #(
             _4: %Binder(
-              #(z: %Element($../"Fresh variables"(V = {V}))),
-              #(N: %Element($Terms(V = {$../../Essentials/Sets/Union(
-                U = {$../Variables},
-                S = {V},
-                T = {%enumeration(z)}
-              )})))
+              #(z: %Element($../"Fresh variables"(V = V))),
+              #(N: %Element($Terms(V = $../../Essentials/Sets/Union(
+                U = $../Variables,
+                S = V,
+                T = %enumeration(z)
+              ))))
             ),
             _5: %Constraint(%forall(
-              #(a,b: %Element($../"Fresh variables"(V = {V}))),
+              #(a,b: %Element($../"Fresh variables"(V = V))),
               %equals(
                 $substitution(
-                  V = {$Terms(V = {$../../Essentials/Sets/Union(
-                    U = {$../Variables},
-                    S = {V},
-                    T = {%enumeration(a)}
-                  )})},
-                  T = {N[z = {a}]},
-                  x = {a},
-                  R = {b}
+                  V = $Terms(V = $../../Essentials/Sets/Union(
+                    U = $../Variables,
+                    S = V,
+                    T = %enumeration(a)
+                  )),
+                  T = N[z = a],
+                  x = a,
+                  R = b
                 ),
-                N[z = {b}]
+                N[z = b]
               )
             ))
           ),
           value = %structural(
             L,
-            $Terms(V = {V}),
+            $Terms(V = V),
             [
               {
                 constructor = $Terms.variable,
@@ -77,47 +77,47 @@ $rewritable(
                 constructor = $Terms.abstraction,
                 parameters = #(
                   _2: %Binder(
-                    #(y: %Element($../"Fresh variables"(V = {V}))),
-                    #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
-                      U = {$../Variables},
-                      S = {V},
-                      T = {%enumeration(y)}
-                    )})))
+                    #(y: %Element($../"Fresh variables"(V = V))),
+                    #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
+                      U = $../Variables,
+                      S = V,
+                      T = %enumeration(y)
+                    ))))
                   ),
                   _3: %Constraint(%forall(
-                    #(a,b: %Element($../"Fresh variables"(V = {V}))),
+                    #(a,b: %Element($../"Fresh variables"(V = V))),
                     %equals(
                       $substitution(
-                        V = {$Terms(V = {$../../Essentials/Sets/Union(
-                          U = {$../Variables},
-                          S = {V},
-                          T = {%enumeration(a)}
-                        )})},
-                        T = {M[y = {a}]},
-                        x = {a},
-                        R = {b}
+                        V = $Terms(V = $../../Essentials/Sets/Union(
+                          U = $../Variables,
+                          S = V,
+                          T = %enumeration(a)
+                        )),
+                        T = M[y = a],
+                        x = a,
+                        R = b
                       ),
-                      M[y = {b}]
+                      M[y = b]
                     )
                   ))
                 ),
                 value = %forall(
-                  #(v: %Element($../"Fresh variables"(V = {V}))),
+                  #(v: %Element($../"Fresh variables"(V = V))),
                   $rewritable(
-                    V = {$../../Essentials/Sets/Union(
-                      U = {$../Variables},
-                      S = {V},
-                      T = {%enumeration(v)}
-                    )},
-                    ℜ = {ℜ},
-                    L = {M[y = {v}]},
-                    R = {N[z = {v}]}
+                    V = $../../Essentials/Sets/Union(
+                      U = $../Variables,
+                      S = V,
+                      T = %enumeration(v)
+                    ),
+                    ℜ = ℜ,
+                    L = M[y = v],
+                    R = N[z = v]
                   )
                 )
               },
               {
                 constructor = $Terms.application,
-                parameters = #(M,N: %Element($Terms(V = {V}))),
+                parameters = #(M,N: %Element($Terms(V = V))),
                 value = %or
               }
             ]
@@ -125,10 +125,10 @@ $rewritable(
         },
         {
           constructor = $Terms.application,
-          parameters = #(O,P: %Element($Terms(V = {V}))),
+          parameters = #(O,P: %Element($Terms(V = V))),
           value = %structural(
             L,
-            $Terms(V = {V}),
+            $Terms(V = V),
             [
               {
                 constructor = $Terms.variable,
@@ -139,27 +139,27 @@ $rewritable(
                 constructor = $Terms.abstraction,
                 parameters = #(
                   _2: %Binder(
-                    #(y: %Element($../"Fresh variables"(V = {V}))),
-                    #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
-                      U = {$../Variables},
-                      S = {V},
-                      T = {%enumeration(y)}
-                    )})))
+                    #(y: %Element($../"Fresh variables"(V = V))),
+                    #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
+                      U = $../Variables,
+                      S = V,
+                      T = %enumeration(y)
+                    ))))
                   ),
                   _3: %Constraint(%forall(
-                    #(a,b: %Element($../"Fresh variables"(V = {V}))),
+                    #(a,b: %Element($../"Fresh variables"(V = V))),
                     %equals(
                       $substitution(
-                        V = {$Terms(V = {$../../Essentials/Sets/Union(
-                          U = {$../Variables},
-                          S = {V},
-                          T = {%enumeration(a)}
-                        )})},
-                        T = {M[y = {a}]},
-                        x = {a},
-                        R = {b}
+                        V = $Terms(V = $../../Essentials/Sets/Union(
+                          U = $../Variables,
+                          S = V,
+                          T = %enumeration(a)
+                        )),
+                        T = M[y = a],
+                        x = a,
+                        R = b
                       ),
-                      M[y = {b}]
+                      M[y = b]
                     )
                   ))
                 ),
@@ -167,24 +167,24 @@ $rewritable(
               },
               {
                 constructor = $Terms.application,
-                parameters = #(M,N: %Element($Terms(V = {V}))),
+                parameters = #(M,N: %Element($Terms(V = V))),
                 value = %or(
                   %and(
                     $rewritable(
-                      V = {V},
-                      ℜ = {ℜ},
-                      L = {M},
-                      R = {O}
+                      V = V,
+                      ℜ = ℜ,
+                      L = M,
+                      R = O
                     ),
                     %equals(N, P)
                   ),
                   %and(
                     %equals(M, O),
                     $rewritable(
-                      V = {V},
-                      ℜ = {ℜ},
-                      L = {N},
-                      R = {P}
+                      V = V,
+                      ℜ = ℜ,
+                      L = N,
+                      R = P
                     )
                   )
                 )

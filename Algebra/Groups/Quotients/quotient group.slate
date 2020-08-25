@@ -9,49 +9,49 @@
  */
 $"quotient group"(
   𝐆: %Element($../Groups),
-  S: %Subset($../Carrier(𝐆 = {𝐆})),
+  S: %Subset($../Carrier(𝐆 = 𝐆)),
   _1: %Constraint($../Subgroups/"normal subgroup set"(
-    𝐆 = {𝐆},
-    S = {S}
+    𝐆 = 𝐆,
+    S = S
   )),
-  ∼: %Def($../../../Essentials/Relations/Endorelations(S = {$../Carrier(𝐆 = {𝐆})}).relation(_1 = {
-      #(g,h: %Element($../Carrier(𝐆 = {𝐆}))),
-      {p = {%exists(
+  ∼: %Def($../../../Essentials/Relations/Endorelations(S = $../Carrier(𝐆 = 𝐆)).relation(_1 = {
+      #(g,h: %Element($../Carrier(𝐆 = 𝐆))),
+      {p = %exists(
         #(s: %Element(S)),
         formula = %equals(
           $../operation(
-            𝐆 = {𝐆},
-            a = {g},
-            b = {s}
+            𝐆 = 𝐆,
+            a = g,
+            b = s
           ),
           h
         )
-      )}}
+      )}
   })),
   Q: %SetDef($../../../Essentials/Relations/"Equivalence classes"(
-    S = {$../Carrier(𝐆 = {𝐆})},
-    ∼ = {∼}
+    S = $../Carrier(𝐆 = 𝐆),
+    ∼ = ∼
   ))
 ): %ExplicitOperator {
   notation = $DivisionOperator(operands = [𝐆, S]),
   definition = [$../Groups.group(
-    G = {Q},
-    ∗ = {$../../../Essentials/Functions/Functions(
-        X = {$../../../Essentials/Sets/"Cartesian product"(
-          S = {Q},
-          T = {Q}
-        )},
-        Y = {Q}
+    G = Q,
+    ∗ = $../../../Essentials/Functions/Functions(
+        X = $../../../Essentials/Sets/"Cartesian product"(
+          S = Q,
+          T = Q
+        ),
+        Y = Q
       ).function(_1 = {
         #(x: %Element($../../../Essentials/Sets/"Cartesian product"(
-          S = {Q},
-          T = {Q}
+          S = Q,
+          T = Q
         ))),
-        {y = {%structuralCases(
+        {y = %structuralCases(
           x,
           $../../../Essentials/Sets/"Cartesian product"(
-            S = {Q},
-            T = {Q}
+            S = Q,
+            T = Q
           ),
           [{
             constructor = $../../../Essentials/Sets/"Cartesian product".pair,
@@ -62,63 +62,63 @@ $"quotient group"(
             value = %structuralCases(
               t,
               $../../../Essentials/Relations/"Equivalence classes"(
-                S = {$../Carrier(𝐆 = {𝐆})},
-                ∼ = {∼}
+                S = $../Carrier(𝐆 = 𝐆),
+                ∼ = ∼
               ),
               [{
                 constructor = $../../../Essentials/Relations/"Equivalence classes".class,
-                parameters = #(g: %Element($../Carrier(𝐆 = {𝐆}))),
+                parameters = #(g: %Element($../Carrier(𝐆 = 𝐆))),
                 value = %structuralCases(
                   u,
                   $../../../Essentials/Relations/"Equivalence classes"(
-                    S = {$../Carrier(𝐆 = {𝐆})},
-                    ∼ = {∼}
+                    S = $../Carrier(𝐆 = 𝐆),
+                    ∼ = ∼
                   ),
                   [{
                     constructor = $../../../Essentials/Relations/"Equivalence classes".class,
-                    parameters = #(h: %Element($../Carrier(𝐆 = {𝐆}))),
+                    parameters = #(h: %Element($../Carrier(𝐆 = 𝐆))),
                     value = $../../../Essentials/Relations/"Equivalence classes"(
-                        S = {$../Carrier(𝐆 = {𝐆})},
-                        ∼ = {∼}
-                      ).class(s = {$../operation(
-                        𝐆 = {𝐆},
-                        a = {g},
-                        b = {h}
-                    )})
+                        S = $../Carrier(𝐆 = 𝐆),
+                        ∼ = ∼
+                      ).class(s = $../operation(
+                        𝐆 = 𝐆,
+                        a = g,
+                        b = h
+                    ))
                   }]
                 )
               }]
             )
           }]
-        )}}
-    })},
-    e = {$../../../Essentials/Relations/"Equivalence classes"(
-        S = {$../Carrier(𝐆 = {𝐆})},
-        ∼ = {∼}
-      ).class(s = {$../identity(𝐆 = {𝐆})})},
-    i = {$../../../Essentials/Functions/Functions(
-        X = {Q},
-        Y = {Q}
+        )}
+    }),
+    e = $../../../Essentials/Relations/"Equivalence classes"(
+        S = $../Carrier(𝐆 = 𝐆),
+        ∼ = ∼
+      ).class(s = $../identity(𝐆 = 𝐆)),
+    i = $../../../Essentials/Functions/Functions(
+        X = Q,
+        Y = Q
       ).function(_1 = {
         #(t: %Element(Q)),
-        {y = {%structuralCases(
+        {y = %structuralCases(
           t,
           $../../../Essentials/Relations/"Equivalence classes"(
-            S = {$../Carrier(𝐆 = {𝐆})},
-            ∼ = {∼}
+            S = $../Carrier(𝐆 = 𝐆),
+            ∼ = ∼
           ),
           [{
             constructor = $../../../Essentials/Relations/"Equivalence classes".class,
-            parameters = #(g: %Element($../Carrier(𝐆 = {𝐆}))),
+            parameters = #(g: %Element($../Carrier(𝐆 = 𝐆))),
             value = $../../../Essentials/Relations/"Equivalence classes"(
-                S = {$../Carrier(𝐆 = {𝐆})},
-                ∼ = {∼}
-              ).class(s = {$../inverse(
-                𝐆 = {𝐆},
-                a = {g}
-            )})
+                S = $../Carrier(𝐆 = 𝐆),
+                ∼ = ∼
+              ).class(s = $../inverse(
+                𝐆 = 𝐆,
+                a = g
+            ))
           }]
-        )}}
-    })}
+        )}
+    })
   )]
 }

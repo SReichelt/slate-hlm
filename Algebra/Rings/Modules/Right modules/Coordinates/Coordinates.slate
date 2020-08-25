@@ -3,7 +3,7 @@
 /**
  * @remarks This defines the set of valid coordinate sequences corresponding to a given element sequence `𝒙`. This set only depends on the length of `𝒙`. A coordinate sequence is a sequence of ring elements that has the same length and finite support.
  *
- *          For an element sequence `𝒙` and a corresponding coordinate sequence  `𝐚`, we can define a linear combination `$"linear combination"(𝐑 = {𝐑}, 𝐌 = {𝐌}, 𝒙 = {𝒙}, 𝐚 = {𝐚})`.
+ *          For an element sequence `𝒙` and a corresponding coordinate sequence  `𝐚`, we can define a linear combination `$"linear combination"(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙, 𝐚 = 𝐚)`.
  */
 $Coordinates(
   𝐑: %Element(
@@ -11,19 +11,19 @@ $Coordinates(
     auto = %true
   ),
   𝐌: %Element(
-    $../"Right modules"(𝐑 = {𝐑}),
+    $../"Right modules"(𝐑 = 𝐑),
     auto = %true
   ),
   𝒙: %Element($"Element sequences"(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌
   )),
   α: %Def($../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-    S = {$../Carrier(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌}
-    )},
-    𝒂 = {𝒙}
+    S = $../Carrier(
+      𝐑 = 𝐑,
+      𝐌 = 𝐌
+    ),
+    𝒂 = 𝒙
   ))
 ): %SetOperator {
   notation = $SubSup(
@@ -37,34 +37,34 @@ $Coordinates(
   },
   definition = [%subset(
     #(𝐚: %Element($../../../../../Essentials/Sequences/Tuples(
-      S = {$../../../Carrier(𝐑 = {𝐑})},
-      α = {α}
+      S = $../../../Carrier(𝐑 = 𝐑),
+      α = α
     ))),
     %structural(
       𝐚,
       $../../../../../Essentials/Sequences/Tuples(
-        S = {$../../../Carrier(𝐑 = {𝐑})},
-        α = {α}
+        S = $../../../Carrier(𝐑 = 𝐑),
+        α = α
       ),
       [{
         constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
         parameters = #(_1: %Binder(
-          #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
-          #(a: %Element($../../../Carrier(𝐑 = {𝐑})))
+          #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+          #(a: %Element($../../../Carrier(𝐑 = 𝐑)))
         )),
         value = %exists(
-          #(S: %Subset($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+          #(S: %Subset($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
           formula = %and(
-            $../../../../../Essentials/Sets/finite(S = {S}),
+            $../../../../../Essentials/Sets/finite(S = S),
             %forall(
               #(j: %Element($../../../../../Essentials/Sets/"Relative complement"(
-                U = {$../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
-                S = {$../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
-                T = {S}
+                U = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
+                S = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
+                T = S
               ))),
               %equals(
-                a[k = {j}],
-                $../../../zero(𝐑 = {𝐑})
+                a[k = j],
+                $../../../zero(𝐑 = 𝐑)
               )
             )
           )

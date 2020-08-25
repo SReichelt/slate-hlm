@@ -6,8 +6,8 @@
 $"element condition"(
   X,Y: %Set(auto = %true),
   φ: %Element($../../../Essentials/Functions/Bijections(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   )),
   x: %Element(X),
   y: %Element(Y)
@@ -18,10 +18,10 @@ $"element condition"(
   ),
   definition = [%equals(
     $../../../Essentials/Functions/value(
-      X = {X},
-      Y = {Y},
-      f = {φ},
-      x = {x}
+      X = X,
+      Y = Y,
+      f = φ,
+      x = x
     ),
     y
   )]

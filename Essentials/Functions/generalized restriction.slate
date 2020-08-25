@@ -14,8 +14,8 @@ $"generalized restriction"(
     auto = %true
   ),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   ))
 ): %ExplicitOperator {
   notation = $PostfixUnaryOperator(
@@ -28,15 +28,15 @@ $"generalized restriction"(
     minParenLevel = 3
   ),
   definition = [$Functions(
-      X = {A},
-      Y = {B}
+      X = A,
+      Y = B
     ).function(_1 = {
       #(x: %Element(A)),
-      {y = {$value(
-        X = {X},
-        Y = {Y},
-        f = {f},
-        x = {x}
-      )}}
+      {y = $value(
+        X = X,
+        Y = Y,
+        f = f,
+        x = x
+      )}
   })]
 }

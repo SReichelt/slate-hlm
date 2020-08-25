@@ -6,7 +6,7 @@
 $"square root"(a: %Element($Subsets/"Nonnegative numbers")): %ExplicitOperator {
   notation = $Radical(radicand = a),
   definition = [$root(
-    a = {a},
-    n = {$../Natural/number(value = 2)}
+    a = a,
+    n = $../Natural/number(value = 2)
   )]
 }

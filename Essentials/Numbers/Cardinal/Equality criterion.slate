@@ -12,18 +12,18 @@ $"Equality criterion"(κ,μ: %Element($"Cardinal numbers")): %EquivalenceTheorem
   conditions = [
     %and(
       $"less or equal"(
-        κ = {κ},
-        μ = {μ}
+        κ = κ,
+        μ = μ
       ),
       $"less or equal"(
-        κ = {μ},
-        μ = {κ}
+        κ = μ,
+        μ = κ
       )
     ),
-    %not($../../Sets/empty(S = {$Homomorphisms/Isomorphisms(
-      κ = {κ},
-      μ = {μ}
-    )})),
+    %not($../../Sets/empty(S = $Homomorphisms/Isomorphisms(
+      κ = κ,
+      μ = μ
+    ))),
     %equals(κ, μ)
   ]
 }

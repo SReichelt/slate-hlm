@@ -10,15 +10,15 @@ $divisible(
       #(x: %Element($Integers)),
       formula = %equals(
         $product(
-          a = {a},
-          b = {x}
+          a = a,
+          b = x
         ),
         b
       )
     ),
     $../Natural/divisible(
-      m = {$absolute(a = {a})},
-      n = {$absolute(a = {b})}
+      m = $absolute(a = a),
+      n = $absolute(a = b)
     )
   ]
 }

@@ -10,7 +10,7 @@
  */
 $antisymmetric(
   S: %Set(auto = %true),
-  ⪯: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $Property(
     operand = ⪯,
@@ -20,18 +20,18 @@ $antisymmetric(
     #(
       s,t: %Element(S),
       _1: %Constraint($related(
-        S = {S},
-        T = {S},
-        s = {s},
-        ≺ = {⪯},
-        t = {t}
+        S = S,
+        T = S,
+        s = s,
+        ≺ = ⪯,
+        t = t
       )),
       _2: %Constraint($related(
-        S = {S},
-        T = {S},
-        s = {t},
-        ≺ = {⪯},
-        t = {s}
+        S = S,
+        T = S,
+        s = t,
+        ≺ = ⪯,
+        t = s
       ))
     ),
     %equals(s, t)

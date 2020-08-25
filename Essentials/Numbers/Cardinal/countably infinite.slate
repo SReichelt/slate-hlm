@@ -7,12 +7,12 @@ $"countably infinite"(κ: %Element($"Cardinal numbers")): %Predicate {
   ),
   definition = [
     %and(
-      $countable(κ = {κ}),
-      %not($finite(κ = {κ}))
+      $countable(κ = κ),
+      %not($finite(κ = κ))
     ),
     %equals(
       κ,
-      $Examples/aleph(α = {$../Natural/number(value = 0)})
+      $Examples/aleph(α = $../Natural/number(value = 0))
     )
   ]
 }

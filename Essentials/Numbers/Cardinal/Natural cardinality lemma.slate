@@ -6,8 +6,8 @@
 $"Natural cardinality lemma"(
   m,n: %Element($../Natural/"Natural numbers"),
   f: %Element($../../Functions/Bijections(
-    X = {$../Natural/Subsets/"Segment (less)"(n = {m})},
-    Y = {$../Natural/Subsets/"Segment (less)"(n = {n})}
+    X = $../Natural/Subsets/"Segment (less)"(n = m),
+    Y = $../Natural/Subsets/"Segment (less)"(n = n)
   ))
 ): %StandardTheorem {
   claim = %equals(m, n)

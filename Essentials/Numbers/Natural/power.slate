@@ -25,11 +25,11 @@ $power(m,n: %Element($"Natural numbers")): %ExplicitOperator {
         constructor = $"Natural numbers".successor,
         parameters = #(x: %Element($"Natural numbers")),
         value = $product(
-          m = {$power(
-            m = {m},
-            n = {x}
-          )},
-          n = {m}
+          m = $power(
+            m = m,
+            n = x
+          ),
+          n = m
         ),
         rewrite = %true
       }

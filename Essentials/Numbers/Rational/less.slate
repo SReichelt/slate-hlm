@@ -6,19 +6,19 @@
  */
 $less(a,b: %Element($"Rational numbers")): %Predicate {
   properties = {negation = $"less or equal"(
-    b = {a},
-    a = {b}
+    b = a,
+    a = b
   )},
   notation = $LessThanRelation(operands = [a, b]),
   definition = [
     %not($"less or equal"(
-      b = {a},
-      a = {b}
+      b = a,
+      a = b
     )),
     %and(
       $"less or equal"(
-        a = {a},
-        b = {b}
+        a = a,
+        b = b
       ),
       %not(%equals(a, b))
     )

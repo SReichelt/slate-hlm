@@ -10,8 +10,8 @@ $"tuple from function"(
     auto = %true
   ),
   f: %Element($../Functions/Functions(
-    X = {$../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
-    Y = {S}
+    X = $../Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
+    Y = S
   ))
 ): %ExplicitOperator {
   notation = $Function(
@@ -19,15 +19,15 @@ $"tuple from function"(
     arguments = [f]
   ),
   definition = [$Tuples(
-      S = {S},
-      α = {α}
+      S = S,
+      α = α
     ).sequence(_1 = {
-      #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
-      {a = {$../Functions/value(
-        X = {$../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
-        Y = {S},
-        f = {f},
-        x = {k}
-      )}}
+      #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+      {a = $../Functions/value(
+        X = $../Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
+        Y = S,
+        f = f,
+        x = k
+      )}
   })]
 }

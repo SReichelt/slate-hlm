@@ -10,41 +10,41 @@ $"additive inverse"(
     auto = %true
   ),
   A: %Element($Matrices(
-    𝐑 = {𝐑},
-    m = {m},
-    n = {n}
+    𝐑 = 𝐑,
+    m = m,
+    n = n
   ))
 ): %ExplicitOperator {
   notation = $NegationOperator(operand = A),
   definition = [%structuralCases(
     A,
     $Matrices(
-      𝐑 = {𝐑},
-      m = {m},
-      n = {n}
+      𝐑 = 𝐑,
+      m = m,
+      n = n
     ),
     [{
       constructor = $Matrices.matrix,
       parameters = #(_1: %Binder(
         #(
-          i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
-          j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+          i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
+          j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
         ),
-        #(a: %Element($../Carrier(𝐑 = {𝐑})))
+        #(a: %Element($../Carrier(𝐑 = 𝐑)))
       )),
       value = $Matrices(
-          𝐑 = {𝐑},
-          m = {m},
-          n = {n}
+          𝐑 = 𝐑,
+          m = m,
+          n = n
         ).matrix(_1 = {
           #(
-            i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
-            j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+            i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
+            j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
           ),
-          {a = {$../"additive inverse"(
-            𝐑 = {𝐑},
-            a = {a[i = {i}, j = {j}]}
-          )}}
+          {a = $../"additive inverse"(
+            𝐑 = 𝐑,
+            a = a[i = i, j = j]
+          )}
       })
     }]
   )]

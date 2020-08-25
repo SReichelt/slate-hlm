@@ -11,7 +11,7 @@ $"Span of element"(
     $../Groups,
     auto = %true
   ),
-  g: %Element($../Carrier(𝐆 = {𝐆}))
+  g: %Element($../Carrier(𝐆 = 𝐆))
 ): %SetOperator {
   notation = $Parens(
     body = g,
@@ -19,15 +19,15 @@ $"Span of element"(
   ),
   definition = [
     $Span(
-      𝐆 = {𝐆},
-      X = {%enumeration(g)}
+      𝐆 = 𝐆,
+      X = %enumeration(g)
     ),
     %extendedSubset(
       #(z: %Element($../../../Essentials/Numbers/Integer/Integers)),
       $../"power to integer"(
-        𝐆 = {𝐆},
-        a = {g},
-        z = {z}
+        𝐆 = 𝐆,
+        a = g,
+        z = z
       )
     )
   ]

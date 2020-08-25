@@ -5,23 +5,23 @@ $"Restriction preserves injectivity"(
   A: %Subset(X),
   Y: %Set(auto = %true),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   )),
   _1: %Constraint($injective(
-    X = {X},
-    Y = {Y},
-    f = {f}
+    X = X,
+    Y = Y,
+    f = f
   ))
 ): %StandardTheorem {
   claim = $injective(
-    X = {A},
-    Y = {Y},
-    f = {$restriction(
-      X = {X},
-      A = {A},
-      Y = {Y},
-      f = {f}
-    )}
+    X = A,
+    Y = Y,
+    f = $restriction(
+      X = X,
+      A = A,
+      Y = Y,
+      f = f
+    )
   )
 }

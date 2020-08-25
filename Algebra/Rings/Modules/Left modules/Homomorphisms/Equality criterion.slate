@@ -8,14 +8,14 @@ $"Equality criterion"(
     $../../../Rings,
     auto = %true
   ),
-  𝐌,𝐍: %Element($../"Left modules"(𝐑 = {𝐑}))
+  𝐌,𝐍: %Element($../"Left modules"(𝐑 = 𝐑))
 ): %EquivalenceTheorem {
   conditions = [
-    %not($../../../../../Essentials/Sets/empty(S = {$Isomorphisms(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌},
-      𝐍 = {𝐍}
-    )})),
+    %not($../../../../../Essentials/Sets/empty(S = $Isomorphisms(
+      𝐑 = 𝐑,
+      𝐌 = 𝐌,
+      𝐍 = 𝐍
+    ))),
     %equals(𝐌, 𝐍)
   ]
 }

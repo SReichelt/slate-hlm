@@ -11,12 +11,12 @@
 $composition(
   X,Y,Z: %Set(auto = %true),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   )),
   g: %Element($Functions(
-    X = {Y},
-    Y = {Z}
+    X = Y,
+    Y = Z
   ))
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(
@@ -24,20 +24,20 @@ $composition(
     operands = [g, f]
   ),
   definition = [$Functions(
-      X = {X},
-      Y = {Z}
+      X = X,
+      Y = Z
     ).function(_1 = {
       #(x: %Element(X)),
-      {y = {$value(
-        X = {Y},
-        Y = {Z},
-        f = {g},
-        x = {$value(
-          X = {X},
-          Y = {Y},
-          f = {f},
-          x = {x}
-        )}
-      )}}
+      {y = $value(
+        X = Y,
+        Y = Z,
+        f = g,
+        x = $value(
+          X = X,
+          Y = Y,
+          f = f,
+          x = x
+        )
+      )}
   })]
 }

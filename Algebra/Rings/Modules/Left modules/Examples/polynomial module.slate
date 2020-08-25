@@ -14,84 +14,84 @@ $"polynomial module"(
     arguments = [X],
     style = '[]'
   ),
-  definition = [$../"Left modules"(𝐑 = {𝐑}).module(
-      M = {$../../../Polynomials/Polynomials(
-        𝐑 = {𝐑},
-        X = {X}
-      )},
-      ⊕ = {$../../../../../Essentials/Operations/Operations(
-          X = {$../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          )},
-          Y = {$../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          )},
-          Z = {$../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          )}
+  definition = [$../"Left modules"(𝐑 = 𝐑).module(
+      M = $../../../Polynomials/Polynomials(
+        𝐑 = 𝐑,
+        X = X
+      ),
+      ⊕ = $../../../../../Essentials/Operations/Operations(
+          X = $../../../Polynomials/Polynomials(
+            𝐑 = 𝐑,
+            X = X
+          ),
+          Y = $../../../Polynomials/Polynomials(
+            𝐑 = 𝐑,
+            X = X
+          ),
+          Z = $../../../Polynomials/Polynomials(
+            𝐑 = 𝐑,
+            X = X
+          )
         ).operation(_1 = {
           #(p,q: %Element($../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+            𝐑 = 𝐑,
+            X = X
           ))),
-          {z = {$../../../Polynomials/sum(
-            𝐑 = {𝐑},
-            X = {X},
-            p = {p},
-            q = {q}
-          )}}
-      })},
-      "0" = {$../../../Polynomials/Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
-        ).zero},
-      ⊖ = {$../../../../../Essentials/Functions/Functions(
-          X = {$../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          )},
-          Y = {$../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+          {z = $../../../Polynomials/sum(
+            𝐑 = 𝐑,
+            X = X,
+            p = p,
+            q = q
           )}
+      }),
+      "0" = $../../../Polynomials/Polynomials(
+          𝐑 = 𝐑,
+          X = X
+        ).zero,
+      ⊖ = $../../../../../Essentials/Functions/Functions(
+          X = $../../../Polynomials/Polynomials(
+            𝐑 = 𝐑,
+            X = X
+          ),
+          Y = $../../../Polynomials/Polynomials(
+            𝐑 = 𝐑,
+            X = X
+          )
         ).function(_1 = {
           #(p: %Element($../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+            𝐑 = 𝐑,
+            X = X
           ))),
-          {y = {$../../../Polynomials/"additive inverse"(
-            𝐑 = {𝐑},
-            X = {X},
-            p = {p}
-          )}}
-      })},
-      ⊙ = {$../../../../../Essentials/Operations/Operations(
-          X = {$../../../Carrier(𝐑 = {𝐑})},
-          Y = {$../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
-          )},
-          Z = {$../../../Polynomials/Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+          {y = $../../../Polynomials/"additive inverse"(
+            𝐑 = 𝐑,
+            X = X,
+            p = p
           )}
+      }),
+      ⊙ = $../../../../../Essentials/Operations/Operations(
+          X = $../../../Carrier(𝐑 = 𝐑),
+          Y = $../../../Polynomials/Polynomials(
+            𝐑 = 𝐑,
+            X = X
+          ),
+          Z = $../../../Polynomials/Polynomials(
+            𝐑 = 𝐑,
+            X = X
+          )
         ).operation(_1 = {
           #(
-            a: %Element($../../../Carrier(𝐑 = {𝐑})),
+            a: %Element($../../../Carrier(𝐑 = 𝐑)),
             p: %Element($../../../Polynomials/Polynomials(
-              𝐑 = {𝐑},
-              X = {X}
+              𝐑 = 𝐑,
+              X = X
             ))
           ),
-          {z = {$../../../Polynomials/"product with left scalar"(
-            𝐑 = {𝐑},
-            X = {X},
-            a = {a},
-            p = {p}
-          )}}
-      })}
+          {z = $../../../Polynomials/"product with left scalar"(
+            𝐑 = 𝐑,
+            X = X,
+            a = a,
+            p = p
+          )}
+      })
   )]
 }

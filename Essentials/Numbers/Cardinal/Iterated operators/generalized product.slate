@@ -15,11 +15,11 @@ $"generalized product"(
     operand = κ,
     under = $ElementRelation(operands = [i, I])
   ),
-  definition = [$../"Cardinal numbers".cardinality(S = {$../../../Sets/"Generalized operators"/"Generalized cartesian product"(
-    I = {I},
+  definition = [$../"Cardinal numbers".cardinality(S = $../../../Sets/"Generalized operators"/"Generalized cartesian product"(
+    I = I,
     _1 = {
       #(j: %Element(I)),
-      {S = {$../Carrier(κ = {κ[i = {j}]})}}
+      {S = $../Carrier(κ = κ[i = j])}
     }
-  )})]
+  ))]
 }

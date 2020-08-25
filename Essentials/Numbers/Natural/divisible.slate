@@ -18,8 +18,8 @@ $divisible(
       #(x: %Element($"Natural numbers")),
       formula = %equals(
         $product(
-          m = {m},
-          n = {x}
+          m = m,
+          n = x
         ),
         n
       )
@@ -28,8 +28,8 @@ $divisible(
       #(x: %Element($"Natural numbers")),
       formula = %equals(
         $product(
-          m = {m},
-          n = {x}
+          m = m,
+          n = x
         ),
         n
       )

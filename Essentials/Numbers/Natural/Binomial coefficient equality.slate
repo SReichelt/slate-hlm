@@ -9,22 +9,22 @@
  */
 $"Binomial coefficient equality"(
   n: %Element($"Natural numbers"),
-  k: %Element($Subsets/"Segment (less or equal)"(n = {n}))
+  k: %Element($Subsets/"Segment (less or equal)"(n = n))
 ): %StandardTheorem {
   claim = %equals(
     $"binomial coefficient"(
-      n = {n},
-      k = {k}
+      n = n,
+      k = k
     ),
     $quotient(
-      n = {$factorial(n = {n})},
-      m = {$product(
-        m = {$factorial(n = {k})},
-        n = {$factorial(n = {$difference(
-          n = {n},
-          m = {k}
-        )})}
-      )}
+      n = $factorial(n = n),
+      m = $product(
+        m = $factorial(n = k),
+        n = $factorial(n = $difference(
+          n = n,
+          m = k
+        ))
+      )
     )
   )
 }

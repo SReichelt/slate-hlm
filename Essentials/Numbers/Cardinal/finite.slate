@@ -17,15 +17,15 @@ $finite(κ: %Element($"Cardinal numbers")): %Predicate {
     %exists(
       #(y: %Element($../Natural/"Natural numbers")),
       formula = $"less or equal"(
-        κ = {κ},
-        μ = {y}
+        κ = κ,
+        μ = y
       )
     ),
     %exists(
       #(z: %Element($../Natural/"Natural numbers")),
       formula = $less(
-        κ = {κ},
-        μ = {z}
+        κ = κ,
+        μ = z
       )
     )
   ]

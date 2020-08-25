@@ -5,16 +5,16 @@ $"multiplicative inverse"(
     $Rings,
     auto = %true
   ),
-  a: %Element($Units(𝐑 = {𝐑}))
+  a: %Element($Units(𝐑 = 𝐑))
 ): %ImplicitOperator {
   notation = $Inverse(term = a),
-  parameter = #(b: %Element($Units(𝐑 = {𝐑}))),
+  parameter = #(b: %Element($Units(𝐑 = 𝐑))),
   definition = [%equals(
     $product(
-      𝐑 = {𝐑},
-      a = {a},
-      b = {b}
+      𝐑 = 𝐑,
+      a = a,
+      b = b
     ),
-    $one(𝐑 = {𝐑})
+    $one(𝐑 = 𝐑)
   )]
 }

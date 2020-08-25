@@ -10,12 +10,12 @@ $"Nonnegative numbers": %SetOperator {
     sup = '+'
   ),
   definition = [
-    $"Segment (greater or equal)"(a = {$../../Natural/number(value = 0)}),
+    $"Segment (greater or equal)"(a = $../../Natural/number(value = 0)),
     %subset(
       #(a: %Element($../Integers)),
       $../"less or equal"(
-        b = {a},
-        a = {$../../Natural/number(value = 0)}
+        b = a,
+        a = $../../Natural/number(value = 0)
       )
     ),
     $../../Natural/"Natural numbers"

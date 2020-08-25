@@ -13,40 +13,40 @@ $"Generalized disjoint union"(
     #(S: %Set(auto = %true))
   ),
   ≃: %Element($../../Relations/"Dependent equality"/"Dependent equality"(
-    I = {I},
+    I = I,
     _1 = {
       #(i: %Element(I)),
-      {S = {S[i = {i}]}}
+      {S = S[i = i]}
     }
   ))
 ): %Construction {
   $"dependent pair"(
     j: %Element(I),
-    s: %Element(S[i = {j}])
+    s: %Element(S[i = j])
   ): %Constructor {
     notation = $Tuple(items = [j, s]),
     equalityDefinition = {
       leftParameters = #(
         j: %Element(I),
-        s: %Element(S[i = {j}])
+        s: %Element(S[i = j])
       ),
       rightParameters = #(
         k: %Element(I),
-        t: %Element(S[i = {k}])
+        t: %Element(S[i = k])
       ),
       definition = [%and(
         %equals(j, k),
         $../../Relations/"Dependent equality"/"dependently equal"(
-          I = {I},
+          I = I,
           _1 = {
             #(k: %Element(I)),
-            {S = {S[i = {k}]}}
+            {S = S[i = k]}
           },
-          ≃ = {≃},
-          a = {j},
-          b = {k},
-          s = {s},
-          t = {t}
+          ≃ = ≃,
+          a = j,
+          b = k,
+          s = s,
+          t = t
         )
       )],
       isomorphic = %true

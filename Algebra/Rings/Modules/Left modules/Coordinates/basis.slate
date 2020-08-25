@@ -12,12 +12,12 @@ $basis(
     auto = %true
   ),
   𝐌: %Element(
-    $../"Left modules"(𝐑 = {𝐑}),
+    $../"Left modules"(𝐑 = 𝐑),
     auto = %true
   ),
   𝒙: %Element($"Element sequences"(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌
   ))
 ): %Predicate {
   notation = $NounProperty(
@@ -28,39 +28,39 @@ $basis(
   definition = [
     %and(
       %not($"linearly dependent"(
-        𝐑 = {𝐑},
-        𝐌 = {𝐌},
-        𝒙 = {𝒙}
+        𝐑 = 𝐑,
+        𝐌 = 𝐌,
+        𝒙 = 𝒙
       )),
       %setEquals(
         $Span(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌},
-          𝒙 = {𝒙}
+          𝐑 = 𝐑,
+          𝐌 = 𝐌,
+          𝒙 = 𝒙
         ),
         $../Carrier(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌}
+          𝐑 = 𝐑,
+          𝐌 = 𝐌
         )
       )
     ),
     %forall(
       #(m: %Element($../Carrier(
-        𝐑 = {𝐑},
-        𝐌 = {𝐌}
+        𝐑 = 𝐑,
+        𝐌 = 𝐌
       ))),
       %existsUnique(
         #(𝐚: %Element($Coordinates(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌},
-          𝒙 = {𝒙}
+          𝐑 = 𝐑,
+          𝐌 = 𝐌,
+          𝒙 = 𝒙
         ))),
         formula = %equals(
           $"linear combination"(
-            𝐑 = {𝐑},
-            𝐌 = {𝐌},
-            𝒙 = {𝒙},
-            𝐚 = {𝐚}
+            𝐑 = 𝐑,
+            𝐌 = 𝐌,
+            𝒙 = 𝒙,
+            𝐚 = 𝐚
           ),
           m
         )

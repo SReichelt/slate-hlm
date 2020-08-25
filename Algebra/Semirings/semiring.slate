@@ -9,9 +9,9 @@
  */
 $semiring(
   R: %Set,
-  ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
+  ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
   "0": %Element(R),
-  ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = {R})),
+  ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
   "1": %Element(R)
 ): %Predicate {
   notation = $Structure(
@@ -21,24 +21,24 @@ $semiring(
   ),
   definition = [%and(
     $../Monoids/"commutative monoid"(
-      M = {R},
-      ∗ = {⊕},
-      e = {"0"}
+      M = R,
+      ∗ = ⊕,
+      e = "0"
     ),
     $../Monoids/monoid(
-      M = {R},
-      ∗ = {⊙},
-      e = {"1"}
+      M = R,
+      ∗ = ⊙,
+      e = "1"
     ),
     $../../Essentials/Operations/distributive(
-      X = {R},
-      ∗ = {⊙},
-      ⋆ = {⊕}
+      X = R,
+      ∗ = ⊙,
+      ⋆ = ⊕
     ),
     $../../Essentials/Operations/"absorbing element"(
-      X = {R},
-      ∗ = {⊙},
-      z = {"0"}
+      X = R,
+      ∗ = ⊙,
+      z = "0"
     )
   )]
 }

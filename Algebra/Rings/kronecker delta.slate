@@ -18,11 +18,11 @@ $"kronecker delta"(
   definition = [%cases([
     {
       formula = %equals(i, j),
-      value = $one(𝐑 = {𝐑})
+      value = $one(𝐑 = 𝐑)
     },
     {
       formula = %not(%equals(i, j)),
-      value = $zero(𝐑 = {𝐑})
+      value = $zero(𝐑 = 𝐑)
     }
   ])]
 }

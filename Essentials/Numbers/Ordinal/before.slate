@@ -8,7 +8,7 @@ $before(
     $"Ordinal numbers",
     auto = %true
   ),
-  a,b: %Element($Carrier(α = {α}))
+  a,b: %Element($Carrier(α = α))
 ): %Predicate {
   notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [%structural(
@@ -18,18 +18,18 @@ $before(
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
         A: %Set,
-        ⪯: %Element($../../Relations/Endorelations(S = {A})),
+        ⪯: %Element($../../Relations/Endorelations(S = A)),
         _1: %Constraint($../../Relations/"well-order"(
-          S = {A},
-          ⪯ = {⪯}
+          S = A,
+          ⪯ = ⪯
         ))
       ),
       value = $../../Relations/related(
-        S = {A},
-        T = {A},
-        s = {a},
-        t = {b},
-        ≺ = {⪯}
+        S = A,
+        T = A,
+        s = a,
+        t = b,
+        ≺ = ⪯
       )
     }]
   )]

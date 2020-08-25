@@ -11,8 +11,8 @@
 $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $sum(
-      m = {$"Natural numbers".zero},
-      n = {n}
+      m = $"Natural numbers".zero,
+      n = n
     ),
     n
   ),
@@ -35,35 +35,35 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
         parameters = #(x: %Element($"Natural numbers")),
         value = {
           goal = %equals(
-            $"Natural numbers".successor(n = {$sum(
-              m = {$"Natural numbers".zero},
-              n = {x}
-            )}),
-            $"Natural numbers".successor(n = {x})
+            $"Natural numbers".successor(n = $sum(
+              m = $"Natural numbers".zero,
+              n = x
+            )),
+            $"Natural numbers".successor(n = x)
           ),
           steps = #(
             _: %State(%equals(
-              $"Natural numbers".successor(n = {x}),
-              $"Natural numbers".successor(n = {x})
+              $"Natural numbers".successor(n = x),
+              $"Natural numbers".successor(n = x)
             )),
             _: %Substitute(
               #(_: %UseTheorem(
-                $"Left-addition of zero is neutral"(n = {x}),
+                $"Left-addition of zero is neutral"(n = x),
                 result = %equals(
                   $sum(
-                    m = {$"Natural numbers".zero},
-                    n = {x}
+                    m = $"Natural numbers".zero,
+                    n = x
                   ),
                   x
                 )
               )),
               1,
               %equals(
-                $"Natural numbers".successor(n = {$sum(
-                  m = {$"Natural numbers".zero},
-                  n = {x}
-                )}),
-                $"Natural numbers".successor(n = {x})
+                $"Natural numbers".successor(n = $sum(
+                  m = $"Natural numbers".zero,
+                  n = x
+                )),
+                $"Natural numbers".successor(n = x)
               )
             )
           )

@@ -11,12 +11,12 @@ $"hom-functor"(
     auto = %true
   ),
   𝓒: %Element(
-    $../Categories(u = {u}),
+    $../Categories(u = u),
     auto = %true
   ),
   𝐀: %Element($../Objects(
-    u = {u},
-    𝓒 = {𝓒}
+    u = u,
+    𝓒 = 𝓒
   ))
 ): %ExplicitOperator {
   notation = $Function(
@@ -27,66 +27,66 @@ $"hom-functor"(
     arguments = [𝐀, '−']
   ),
   definition = [$../Functors/Functors(
-      u = {u},
-      v = {v},
-      𝓒 = {𝓒},
-      𝓓 = {$../"Concrete categories"/cardinals(u = {v})}
+      u = u,
+      v = v,
+      𝓒 = 𝓒,
+      𝓓 = $../"Concrete categories"/cardinals(u = v)
     ).functor(
       _1 = {
         #(𝐗: %Element($../Objects(
-          u = {u},
-          𝓒 = {𝓒}
+          u = u,
+          𝓒 = 𝓒
         ))),
-        {𝐘 = {$../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Morphisms(
-          u = {u},
-          𝓒 = {𝓒},
-          𝐗 = {𝐀},
-          𝐘 = {𝐗}
-        )})}}
+        {𝐘 = $../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Morphisms(
+          u = u,
+          𝓒 = 𝓒,
+          𝐗 = 𝐀,
+          𝐘 = 𝐗
+        ))}
       },
       _2 = {
         #(
           𝐘,𝐙: %Element($../Objects(
-            u = {u},
-            𝓒 = {𝓒}
+            u = u,
+            𝓒 = 𝓒
           )),
           f: %Element($../Morphisms(
-            u = {u},
-            𝓒 = {𝓒},
-            𝐗 = {𝐘},
-            𝐘 = {𝐙}
+            u = u,
+            𝓒 = 𝓒,
+            𝐗 = 𝐘,
+            𝐘 = 𝐙
           ))
         ),
-        {g = {$../../Essentials/Functions/Functions(
-            X = {$../Morphisms(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐀},
-              𝐘 = {𝐘}
-            )},
-            Y = {$../Morphisms(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐀},
-              𝐘 = {𝐙}
-            )}
+        {g = $../../Essentials/Functions/Functions(
+            X = $../Morphisms(
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐀,
+              𝐘 = 𝐘
+            ),
+            Y = $../Morphisms(
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐀,
+              𝐘 = 𝐙
+            )
           ).function(_1 = {
             #(g: %Element($../Morphisms(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐀},
-              𝐘 = {𝐘}
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐀,
+              𝐘 = 𝐘
             ))),
-            {y = {$../composition(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐀},
-              𝐘 = {𝐘},
-              𝐙 = {𝐙},
-              f = {g},
-              g = {f}
-            )}}
-        })}}
+            {y = $../composition(
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐀,
+              𝐘 = 𝐘,
+              𝐙 = 𝐙,
+              f = g,
+              g = f
+            )}
+        })}
       }
   )]
 }

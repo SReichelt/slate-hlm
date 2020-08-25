@@ -5,7 +5,7 @@
  */
 $"free magma"(
   S: %Set,
-  T: %SetDef($"Binary trees"(S = {S}))
+  T: %SetDef($"Binary trees"(S = S))
 ): %ExplicitOperator {
   notation = $Function(
     function = $SubSup(
@@ -15,23 +15,23 @@ $"free magma"(
     arguments = [S]
   ),
   definition = [$../Magmas.magma(
-    M = {T},
-    ∗ = {$../../../Essentials/Functions/Functions(
-        X = {$../../../Essentials/Sets/"Cartesian product"(
-          S = {T},
-          T = {T}
-        )},
-        Y = {T}
+    M = T,
+    ∗ = $../../../Essentials/Functions/Functions(
+        X = $../../../Essentials/Sets/"Cartesian product"(
+          S = T,
+          T = T
+        ),
+        Y = T
       ).function(_1 = {
         #(x: %Element($../../../Essentials/Sets/"Cartesian product"(
-          S = {T},
-          T = {T}
+          S = T,
+          T = T
         ))),
-        {y = {%structuralCases(
+        {y = %structuralCases(
           x,
           $../../../Essentials/Sets/"Cartesian product"(
-            S = {T},
-            T = {T}
+            S = T,
+            T = T
           ),
           [{
             constructor = $../../../Essentials/Sets/"Cartesian product".pair,
@@ -39,12 +39,12 @@ $"free magma"(
               a: %Element(T),
               b: %Element(T)
             ),
-            value = $"Binary trees"(S = {S}).join(
-                a = {a},
-                b = {b}
+            value = $"Binary trees"(S = S).join(
+                a = a,
+                b = b
             )
           }]
-        )}}
-    })}
+        )}
+    })
   )]
 }

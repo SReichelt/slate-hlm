@@ -9,33 +9,33 @@ $component(
     auto = %true
   ),
   𝓒: %Element(
-    $../Categories(u = {u}),
+    $../Categories(u = u),
     auto = %true
   ),
   𝓓: %Element(
-    $../Categories(u = {v}),
+    $../Categories(u = v),
     auto = %true
   ),
   F,G: %Element(
     $../Functors/Functors(
-      u = {u},
-      v = {v},
-      𝓒 = {𝓒},
-      𝓓 = {𝓓}
+      u = u,
+      v = v,
+      𝓒 = 𝓒,
+      𝓓 = 𝓓
     ),
     auto = %true
   ),
   η: %Element($"Infranatural transformations"(
-    u = {u},
-    v = {v},
-    𝓒 = {𝓒},
-    𝓓 = {𝓓},
-    F = {F},
-    G = {G}
+    u = u,
+    v = v,
+    𝓒 = 𝓒,
+    𝓓 = 𝓓,
+    F = F,
+    G = G
   )),
   𝐗: %Element($../Objects(
-    u = {u},
-    𝓒 = {𝓒}
+    u = u,
+    𝓒 = 𝓒
   ))
 ): %ExplicitOperator {
   notation = $SubSup(
@@ -45,42 +45,42 @@ $component(
   definition = [%structuralCases(
     η,
     $"Infranatural transformations"(
-      u = {u},
-      v = {v},
-      𝓒 = {𝓒},
-      𝓓 = {𝓓},
-      F = {F},
-      G = {G}
+      u = u,
+      v = v,
+      𝓒 = 𝓒,
+      𝓓 = 𝓓,
+      F = F,
+      G = G
     ),
     [{
       constructor = $"Infranatural transformations".transformation,
       parameters = #(_1: %Binder(
         #(𝐘: %Element($../Objects(
-          u = {u},
-          𝓒 = {𝓒}
+          u = u,
+          𝓒 = 𝓒
         ))),
         #(n: %Element($../Morphisms(
-          u = {v},
-          𝓒 = {𝓓},
-          𝐗 = {$../Functors/"object value"(
-            u = {u},
-            v = {v},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓},
-            F = {F},
-            𝐗 = {𝐘}
-          )},
-          𝐘 = {$../Functors/"object value"(
-            u = {u},
-            v = {v},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓},
-            F = {G},
-            𝐗 = {𝐘}
-          )}
+          u = v,
+          𝓒 = 𝓓,
+          𝐗 = $../Functors/"object value"(
+            u = u,
+            v = v,
+            𝓒 = 𝓒,
+            𝓓 = 𝓓,
+            F = F,
+            𝐗 = 𝐘
+          ),
+          𝐘 = $../Functors/"object value"(
+            u = u,
+            v = v,
+            𝓒 = 𝓒,
+            𝓓 = 𝓓,
+            F = G,
+            𝐗 = 𝐘
+          )
         )))
       )),
-      value = n[𝐘 = {𝐗}]
+      value = n[𝐘 = 𝐗]
     }]
   )]
 }

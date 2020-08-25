@@ -13,98 +13,98 @@ $"linear combination"(
     auto = %true
   ),
   𝐌: %Element(
-    $../"Left modules"(𝐑 = {𝐑}),
+    $../"Left modules"(𝐑 = 𝐑),
     auto = %true
   ),
   𝒙: %Element($"Element sequences"(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌
   )),
   𝐚: %Element($Coordinates(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌},
-    𝒙 = {𝒙}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌,
+    𝒙 = 𝒙
   ))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [𝐚, 𝒙]),
   definition = [%structuralCases(
     𝐚,
     $../../../../../Essentials/Sequences/Tuples(
-      S = {$../../../Carrier(𝐑 = {𝐑})},
-      α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-        S = {$../Carrier(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌}
-        )},
-        𝒂 = {𝒙}
-      )}
+      S = $../../../Carrier(𝐑 = 𝐑),
+      α = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
+        S = $../Carrier(
+          𝐑 = 𝐑,
+          𝐌 = 𝐌
+        ),
+        𝒂 = 𝒙
+      )
     ),
     [{
       constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
       parameters = #(_1: %Binder(
-        #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {$../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-          S = {$../Carrier(
-            𝐑 = {𝐑},
-            𝐌 = {𝐌}
-          )},
-          𝒂 = {𝒙}
-        )}))),
-        #(a: %Element($../../../Carrier(𝐑 = {𝐑})))
+        #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
+          S = $../Carrier(
+            𝐑 = 𝐑,
+            𝐌 = 𝐌
+          ),
+          𝒂 = 𝒙
+        )))),
+        #(a: %Element($../../../Carrier(𝐑 = 𝐑)))
       )),
       value = %structuralCases(
         𝒙,
-        $../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = {$../Carrier(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌}
-        )}),
+        $../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = $../Carrier(
+          𝐑 = 𝐑,
+          𝐌 = 𝐌
+        )),
         [{
           constructor = $../../../../../Essentials/Sequences/"Ordinal-indexed sequences".sequence,
           parameters = #(
             α: %Element($../../../../../Essentials/Numbers/Ordinal/"Ordinal numbers"),
             m: %Element($../../../../../Essentials/Sequences/Tuples(
-              S = {$../Carrier(
-                𝐑 = {𝐑},
-                𝐌 = {𝐌}
-              )},
-              α = {α}
+              S = $../Carrier(
+                𝐑 = 𝐑,
+                𝐌 = 𝐌
+              ),
+              α = α
             ))
           ),
           value = %structuralCases(
             m,
             $../../../../../Essentials/Sequences/Tuples(
-              S = {$../Carrier(
-                𝐑 = {𝐑},
-                𝐌 = {𝐌}
-              )},
-              α = {α}
+              S = $../Carrier(
+                𝐑 = 𝐑,
+                𝐌 = 𝐌
+              ),
+              α = α
             ),
             [{
               constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
               parameters = #(_2: %Binder(
-                #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
+                #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
                 #(x: %Element($../Carrier(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐌}
+                  𝐑 = 𝐑,
+                  𝐌 = 𝐌
                 )))
               )),
               value = $../../../../../Essentials/Operations/"Iterated operations"/"indexed by set with finite support"(
-                X = {$../Carrier(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐌}
-                )},
-                ⨂ = {$../"iterated sum"(
-                  𝐑 = {𝐑},
-                  𝐌 = {𝐌}
-                )},
-                I = {$../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α})},
+                X = $../Carrier(
+                  𝐑 = 𝐑,
+                  𝐌 = 𝐌
+                ),
+                ⨂ = $../"iterated sum"(
+                  𝐑 = 𝐑,
+                  𝐌 = 𝐌
+                ),
+                I = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
                 _1 = {
-                  #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))),
-                  {a = {$../product(
-                    𝐑 = {𝐑},
-                    𝐌 = {𝐌},
-                    a = {a[k = {k}]},
-                    x = {x[k = {k}]}
-                  )}}
+                  #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+                  {a = $../product(
+                    𝐑 = 𝐑,
+                    𝐌 = 𝐌,
+                    a = a[k = k],
+                    x = x[k = k]
+                  )}
                 }
               )
             }]

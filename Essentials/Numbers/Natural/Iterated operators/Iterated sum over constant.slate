@@ -3,17 +3,17 @@
 $"Iterated sum over constant"(n,a: %Element($../"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $../../../Operations/"Iterated operations"/"indexed by natural number"(
-      X = {$../"Natural numbers"},
-      ⨂ = {$"iterated sum"},
+      X = $../"Natural numbers",
+      ⨂ = $"iterated sum",
       _1 = {
-        #(i: %Element($../Subsets/"Segment (less)"(n = {n}))),
-        {a = {a}}
+        #(i: %Element($../Subsets/"Segment (less)"(n = n))),
+        {a = a}
       },
-      n = {n}
+      n = n
     ),
     $../product(
-      m = {n},
-      n = {a}
+      m = n,
+      n = a
     )
   )
 }

@@ -6,21 +6,21 @@
 $"sequence from function"(
   S: %Set(auto = %true),
   f: %Element($../Functions/Functions(
-    X = {$../Numbers/Natural/"Natural numbers"},
-    Y = {S}
+    X = $../Numbers/Natural/"Natural numbers",
+    Y = S
   ))
 ): %ExplicitOperator {
   notation = $Function(
     function = 'seq',
     arguments = [f]
   ),
-  definition = [$"Infinite sequences"(S = {S}).sequence(_1 = {
+  definition = [$"Infinite sequences"(S = S).sequence(_1 = {
       #(n: %Element($../Numbers/Natural/"Natural numbers")),
-      {a = {$../Functions/value(
-        X = {$../Numbers/Natural/"Natural numbers"},
-        Y = {S},
-        f = {f},
-        x = {n}
-      )}}
+      {a = $../Functions/value(
+        X = $../Numbers/Natural/"Natural numbers",
+        Y = S,
+        f = f,
+        x = n
+      )}
   })]
 }

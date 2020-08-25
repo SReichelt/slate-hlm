@@ -36,17 +36,17 @@ $"binomial coefficient"(n,k: %Element($"Natural numbers")): %ExplicitOperator {
               constructor = $"Natural numbers".successor,
               parameters = #(m: %Element($"Natural numbers")),
               value = $sum(
-                m = {$"binomial coefficient"(
-                  n = {m},
-                  k = {x}
-                )},
-                n = {$"binomial coefficient"(
-                  n = {m},
-                  k = {$sum(
-                    m = {x},
-                    n = {$number(value = 1)}
-                  )}
-                )}
+                m = $"binomial coefficient"(
+                  n = m,
+                  k = x
+                ),
+                n = $"binomial coefficient"(
+                  n = m,
+                  k = $sum(
+                    m = x,
+                    n = $number(value = 1)
+                  )
+                )
               ),
               rewrite = %true
             }

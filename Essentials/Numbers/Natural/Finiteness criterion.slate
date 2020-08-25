@@ -2,46 +2,46 @@
 
 $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
   conditions = [
-    $../../Sets/finite(S = {M}),
+    $../../Sets/finite(S = M),
     %or(
-      $../../Sets/empty(S = {M}),
+      $../../Sets/empty(S = M),
       %exists(
         #(m: %Element(M)),
         formula = $../../Relations/"greatest element"(
-          S = {$"Natural numbers"},
-          ⪯ = {$../../Relations/Relations(
-              S = {$"Natural numbers"},
-              T = {$"Natural numbers"}
+          S = $"Natural numbers",
+          ⪯ = $../../Relations/Relations(
+              S = $"Natural numbers",
+              T = $"Natural numbers"
             ).relation(_1 = {
               #(m,n: %Element($"Natural numbers")),
-              {p = {$"less or equal"(
-                m = {m},
-                n = {n}
-              )}}
-          })},
-          T = {M},
-          t = {m}
+              {p = $"less or equal"(
+                m = m,
+                n = n
+              )}
+          }),
+          T = M,
+          t = m
         )
       )
     ),
     %or(
-      $../../Sets/empty(S = {M}),
+      $../../Sets/empty(S = M),
       %existsUnique(
         #(m: %Element(M)),
         formula = $../../Relations/"greatest element"(
-          S = {$"Natural numbers"},
-          ⪯ = {$../../Relations/Relations(
-              S = {$"Natural numbers"},
-              T = {$"Natural numbers"}
+          S = $"Natural numbers",
+          ⪯ = $../../Relations/Relations(
+              S = $"Natural numbers",
+              T = $"Natural numbers"
             ).relation(_1 = {
               #(m,n: %Element($"Natural numbers")),
-              {p = {$"less or equal"(
-                m = {m},
-                n = {n}
-              )}}
-          })},
-          T = {M},
-          t = {m}
+              {p = $"less or equal"(
+                m = m,
+                n = n
+              )}
+          }),
+          T = M,
+          t = m
         )
       )
     ),
@@ -49,14 +49,14 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
       #(a: %Element($"Natural numbers")),
       formula = %sub(
         M,
-        $Subsets/"Segment (less or equal)"(n = {a})
+        $Subsets/"Segment (less or equal)"(n = a)
       )
     ),
     %exists(
       #(b: %Element($"Natural numbers")),
       formula = %sub(
         M,
-        $Subsets/"Segment (less)"(n = {b})
+        $Subsets/"Segment (less)"(n = b)
       )
     )
   ],
@@ -64,25 +64,25 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
     {
       from = 1,
       to = 2,
-      parameters = #(@: %Constraint($../../Sets/finite(S = {M}))),
+      parameters = #(@: %Constraint($../../Sets/finite(S = M))),
       goal = %or(
-        $../../Sets/empty(S = {M}),
+        $../../Sets/empty(S = M),
         %exists(
           #(m: %Element(M)),
           formula = $../../Relations/"greatest element"(
-            S = {$"Natural numbers"},
-            ⪯ = {$../../Relations/Relations(
-                S = {$"Natural numbers"},
-                T = {$"Natural numbers"}
+            S = $"Natural numbers",
+            ⪯ = $../../Relations/Relations(
+                S = $"Natural numbers",
+                T = $"Natural numbers"
               ).relation(_1 = {
                 #(m,n: %Element($"Natural numbers")),
-                {p = {$"less or equal"(
-                  m = {m},
-                  n = {n}
-                )}}
-            })},
-            T = {M},
-            t = {m}
+                {p = $"less or equal"(
+                  m = m,
+                  n = n
+                )}
+            }),
+            T = M,
+            t = m
           )
         )
       ),
@@ -90,15 +90,15 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         _: %UseDef(result = %exists(#(
           l: %Element($"Natural numbers"),
           f: %Element($../../Functions/Bijections(
-            X = {$Subsets/"Segment (less)"(n = {l})},
-            Y = {M}
+            X = $Subsets/"Segment (less)"(n = l),
+            Y = M
           ))
         ))),
         _: %UseExists(#(
           l: %Element($"Natural numbers"),
           f: %Element($../../Functions/Bijections(
-            X = {$Subsets/"Segment (less)"(n = {l})},
-            Y = {M}
+            X = $Subsets/"Segment (less)"(n = l),
+            Y = M
           ))
         )),
         _: %State(
@@ -108,7 +108,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
             [
               {
                 constructor = $"Natural numbers".zero,
-                value = $../../Sets/empty(S = {M}),
+                value = $../../Sets/empty(S = M),
                 rewrite = %true
               },
               {
@@ -119,8 +119,8 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                   formula = %forall(
                     #(j: %Element(M)),
                     $"less or equal"(
-                      m = {j},
-                      n = {i}
+                      m = j,
+                      n = i
                     )
                   )
                 ),
@@ -134,7 +134,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                 l,
                 $number(value = 0)
               ))),
-              goal = $../../Sets/empty(S = {M}),
+              goal = $../../Sets/empty(S = M),
               steps = #(_: %ProveDef(proof = {
                 goal = %not(%exists(#(c: %Element(M)))),
                 steps = #(_: %ProveNeg({
@@ -142,42 +142,42 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                   steps = #(
                     _: %Consider(f),
                     _: %UseDef(result = $../../Functions/bijective(
-                      X = {$Subsets/"Segment (less)"(n = {l})},
-                      Y = {M},
-                      f = {f}
+                      X = $Subsets/"Segment (less)"(n = l),
+                      Y = M,
+                      f = f
                     )),
                     _: %UseDef(result = $../../Functions/surjective(
-                      X = {$Subsets/"Segment (less)"(n = {l})},
-                      Y = {M},
-                      f = {f}
+                      X = $Subsets/"Segment (less)"(n = l),
+                      Y = M,
+                      f = f
                     )),
                     _: %UseDef(result = %forall(
                       #(t: %Element(M)),
                       %exists(
-                        #(s: %Element($Subsets/"Segment (less)"(n = {$number(value = 0)}))),
+                        #(s: %Element($Subsets/"Segment (less)"(n = $number(value = 0)))),
                         formula = %equals(
                           $../../Functions/value(
-                            X = {$Subsets/"Segment (less)"(n = {l})},
-                            Y = {M},
-                            f = {f},
-                            x = {s}
+                            X = $Subsets/"Segment (less)"(n = l),
+                            Y = M,
+                            f = f,
+                            x = s
                           ),
                           t
                         )
                       )
                     )),
-                    _: %UseForAll({t = {c}}),
-                    _: %UseExists(#(s: %Element($Subsets/"Segment (less)"(n = {$number(value = 0)})))),
+                    _: %UseForAll({t = c}),
+                    _: %UseExists(#(s: %Element($Subsets/"Segment (less)"(n = $number(value = 0))))),
                     _: %Consider(s),
                     _: %UseDef(result = $less(
-                      m = {s},
-                      n = {$number(value = 0)}
+                      m = s,
+                      n = $number(value = 0)
                     )),
                     _: %UseTheorem(
-                      $"Zero is the smallest number"(n = {s}),
+                      $"Zero is the smallest number"(n = s),
                       result = $"less or equal"(
-                        n = {s},
-                        m = {$number(value = 0)}
+                        n = s,
+                        m = $number(value = 0)
                       )
                     )
                   )
@@ -190,8 +190,8 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                 _: %Constraint(%equals(
                   l,
                   $sum(
-                    m = {k},
-                    n = {$number(value = 1)}
+                    m = k,
+                    n = $number(value = 1)
                   )
                 ))
               ),
@@ -200,24 +200,24 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                 formula = %forall(
                   #(j: %Element(M)),
                   $"less or equal"(
-                    m = {j},
-                    n = {i}
+                    m = j,
+                    n = i
                   )
                 )
               ),
               steps = #(_: %UseTheorem(
                 $"Finiteness criterion lemma"(
-                  M = {M},
-                  k = {k},
-                  f = {f}
+                  M = M,
+                  k = k,
+                  f = f
                 ),
                 result = %exists(
                   #(y: %Element(M)),
                   formula = %forall(
                     #(z: %Element(M)),
                     $"less or equal"(
-                      m = {z},
-                      n = {y}
+                      m = z,
+                      n = y
                     )
                   )
                 )
@@ -231,23 +231,23 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
       from = 2,
       to = 4,
       parameters = #(@: %Constraint(%or(
-        $../../Sets/empty(S = {M}),
+        $../../Sets/empty(S = M),
         %exists(
           #(m: %Element(M)),
           formula = $../../Relations/"greatest element"(
-            S = {$"Natural numbers"},
-            ⪯ = {$../../Relations/Relations(
-                S = {$"Natural numbers"},
-                T = {$"Natural numbers"}
+            S = $"Natural numbers",
+            ⪯ = $../../Relations/Relations(
+                S = $"Natural numbers",
+                T = $"Natural numbers"
               ).relation(_1 = {
                 #(m,n: %Element($"Natural numbers")),
-                {p = {$"less or equal"(
-                  m = {m},
-                  n = {n}
-                )}}
-            })},
-            T = {M},
-            t = {m}
+                {p = $"less or equal"(
+                  m = m,
+                  n = n
+                )}
+            }),
+            T = M,
+            t = m
           )
         )
       ))),
@@ -255,29 +255,29 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         #(a: %Element($"Natural numbers")),
         formula = %sub(
           M,
-          $Subsets/"Segment (less or equal)"(n = {a})
+          $Subsets/"Segment (less or equal)"(n = a)
         )
       ),
       steps = #(_: %UseCases(caseProofs = [{
-        parameters = #(_: %Constraint($../../Sets/empty(S = {M}))),
+        parameters = #(_: %Constraint($../../Sets/empty(S = M))),
         steps = #(
           _1: %UseDef(result = %setEquals(
             M,
             $../../Sets/"Empty set"
           )),
           _: %ProveExists(
-            {a = {$number(value = 0)}},
+            {a = $number(value = 0)},
             proof = {
               goal = %sub(
                 M,
-                $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
+                $Subsets/"Segment (less or equal)"(n = $number(value = 0))
               ),
               steps = #(
                 _: %UseTheorem(
-                  $../../Sets/"Empty set is subset of any set"(S = {$Subsets/"Segment (less or equal)"(n = {$number(value = 0)})}),
+                  $../../Sets/"Empty set is subset of any set"(S = $Subsets/"Segment (less or equal)"(n = $number(value = 0))),
                   result = %sub(
                     $../../Sets/"Empty set",
-                    $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
+                    $Subsets/"Segment (less or equal)"(n = $number(value = 0))
                   )
                 ),
                 _: %Substitute(
@@ -285,7 +285,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                   0,
                   %sub(
                     M,
-                    $Subsets/"Segment (less or equal)"(n = {$number(value = 0)})
+                    $Subsets/"Segment (less or equal)"(n = $number(value = 0))
                   )
                 )
               )
@@ -301,29 +301,29 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         a: %Element($"Natural numbers"),
         _1: %Constraint(%sub(
           M,
-          $Subsets/"Segment (less or equal)"(n = {a})
+          $Subsets/"Segment (less or equal)"(n = a)
         ))
       ),
       goal = %exists(
         #(b: %Element($"Natural numbers")),
         formula = %sub(
           M,
-          $Subsets/"Segment (less)"(n = {b})
+          $Subsets/"Segment (less)"(n = b)
         )
       ),
       steps = #(
         _: %Consider(_1),
         _: %UnfoldDef(%sub(
           M,
-          $Subsets/"Segment (less)"(n = {$sum(
-            m = {a},
-            n = {$number(value = 1)}
-          )})
+          $Subsets/"Segment (less)"(n = $sum(
+            m = a,
+            n = $number(value = 1)
+          ))
         )),
-        _: %ProveExists({b = {$sum(
-          m = {a},
-          n = {$number(value = 1)}
-        )}})
+        _: %ProveExists({b = $sum(
+          m = a,
+          n = $number(value = 1)
+        )})
       )
     },
     {
@@ -333,21 +333,21 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         b: %Element($"Natural numbers"),
         _1: %Constraint(%sub(
           M,
-          $Subsets/"Segment (less)"(n = {b})
+          $Subsets/"Segment (less)"(n = b)
         ))
       ),
-      goal = $../../Sets/finite(S = {M}),
+      goal = $../../Sets/finite(S = M),
       steps = #(
         _: %UseTheorem(
-          $Subsets/"Initial segments are finite"(n = {b}),
-          result = $../../Sets/finite(S = {$Subsets/"Segment (less)"(n = {b})})
+          $Subsets/"Initial segments are finite"(n = b),
+          result = $../../Sets/finite(S = $Subsets/"Segment (less)"(n = b))
         ),
         _: %UseTheorem(
           $../../Sets/"Subsets of finite sets are finite"(
-            S = {$Subsets/"Segment (less)"(n = {b})},
-            T = {M}
+            S = $Subsets/"Segment (less)"(n = b),
+            T = M
           ),
-          result = $../../Sets/finite(S = {M})
+          result = $../../Sets/finite(S = M)
         )
       )
     }

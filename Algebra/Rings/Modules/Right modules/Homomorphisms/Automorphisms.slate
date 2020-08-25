@@ -11,7 +11,7 @@ $Automorphisms(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Right modules"(𝐑 = {𝐑}))
+  𝐌: %Element($../"Right modules"(𝐑 = 𝐑))
 ): %SetOperator {
   notation = $Function(
     function = 'Aut',
@@ -28,8 +28,8 @@ $Automorphisms(
     pluralName = 'automorphisms'
   },
   definition = [$Isomorphisms(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌},
-    𝐍 = {𝐌}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌,
+    𝐍 = 𝐌
   )]
 }

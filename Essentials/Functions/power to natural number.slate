@@ -7,8 +7,8 @@
 $"power to natural number"(
   X: %Set(auto = %true),
   f: %Element($Functions(
-    X = {X},
-    Y = {X}
+    X = X,
+    Y = X
   )),
   n: %Element($../Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
@@ -22,22 +22,22 @@ $"power to natural number"(
     [
       {
         constructor = $../Numbers/Natural/"Natural numbers".zero,
-        value = $identity(X = {X}),
+        value = $identity(X = X),
         rewrite = %true
       },
       {
         constructor = $../Numbers/Natural/"Natural numbers".successor,
         parameters = #(x: %Element($../Numbers/Natural/"Natural numbers")),
         value = $composition(
-          X = {X},
-          Y = {X},
-          Z = {X},
-          f = {$"power to natural number"(
-            X = {X},
-            f = {f},
-            n = {x}
-          )},
-          g = {f}
+          X = X,
+          Y = X,
+          Z = X,
+          f = $"power to natural number"(
+            X = X,
+            f = f,
+            n = x
+          ),
+          g = f
         ),
         rewrite = %true
       }

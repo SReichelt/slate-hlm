@@ -9,5 +9,5 @@ $"number of groups with order"(n: %Element($../../../../Essentials/Numbers/Natur
     function = 'gnu',
     arguments = [n]
   ),
-  definition = [$../../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$"Groups with order"(κ = {n})})]
+  definition = [$../../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = $"Groups with order"(κ = n))]
 }

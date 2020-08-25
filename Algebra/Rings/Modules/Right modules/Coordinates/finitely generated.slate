@@ -10,7 +10,7 @@ $"finitely generated"(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Right modules"(𝐑 = {𝐑}))
+  𝐌: %Element($../"Right modules"(𝐑 = 𝐑))
 ): %Predicate {
   notation = $Property(
     operand = 𝐌,
@@ -18,26 +18,26 @@ $"finitely generated"(
   ),
   definition = [%exists(
     #(𝒙: %Element($"Element sequences"(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌}
+      𝐑 = 𝐑,
+      𝐌 = 𝐌
     ))),
     formula = %and(
       $../../../../../Essentials/Sequences/finite(
-        S = {$../Carrier(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌}
-        )},
-        𝒂 = {𝒙}
+        S = $../Carrier(
+          𝐑 = 𝐑,
+          𝐌 = 𝐌
+        ),
+        𝒂 = 𝒙
       ),
       %setEquals(
         $Span(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌},
-          𝒙 = {𝒙}
+          𝐑 = 𝐑,
+          𝐌 = 𝐌,
+          𝒙 = 𝒙
         ),
         $../Carrier(
-          𝐑 = {𝐑},
-          𝐌 = {𝐌}
+          𝐑 = 𝐑,
+          𝐌 = 𝐌
         )
       )
     )

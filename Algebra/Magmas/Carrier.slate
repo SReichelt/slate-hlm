@@ -22,7 +22,7 @@ $Carrier(𝐌: %Element($Magmas)): %SetOperator {
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
       value = M
     }]

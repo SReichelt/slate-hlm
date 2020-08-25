@@ -6,12 +6,12 @@
  */
 $"Iterated operations"(X: %Set(auto = %true)): %Construction {
   $operation(
-    ∗: %Element($../"Inner operations"(X = {X})),
+    ∗: %Element($../"Inner operations"(X = X)),
     e: %Element(X),
     _1: %Constraint($../../../Algebra/Monoids/"commutative monoid"(
-      M = {X},
-      ∗ = {∗},
-      e = {e}
+      M = X,
+      ∗ = ∗,
+      e = e
     ))
   ): %Constructor {
     notation = $Parens(
@@ -26,21 +26,21 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
     ),
     equalityDefinition = {
       leftParameters = #(
-        ∗: %Element($../"Inner operations"(X = {X})),
+        ∗: %Element($../"Inner operations"(X = X)),
         e: %Element(X),
         _1: %Constraint($../../../Algebra/Monoids/"commutative monoid"(
-          M = {X},
-          ∗ = {∗},
-          e = {e}
+          M = X,
+          ∗ = ∗,
+          e = e
         ))
       ),
       rightParameters = #(
-        ⋆: %Element($../"Inner operations"(X = {X})),
+        ⋆: %Element($../"Inner operations"(X = X)),
         f: %Element(X),
         _2: %Constraint($../../../Algebra/Monoids/"commutative monoid"(
-          M = {X},
-          ∗ = {⋆},
-          e = {f}
+          M = X,
+          ∗ = ⋆,
+          e = f
         ))
       ),
       definition = [%and(

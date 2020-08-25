@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = {$../"Cardinal numbers"}, ⨂ = {$"iterated sum"}, n = {n}, _1 = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = {n}))), {a = {a[i = {i}]}}})`
+ * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = $../"Cardinal numbers", ⨂ = $"iterated sum", n = n, _1 = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = n))), {a = {a[i = i]}}})`
  *
  * @references * https://en.wikipedia.org/wiki/Summation
  *             * https://mathworld.wolfram.com/Sum.html
@@ -9,18 +9,18 @@
  */
 $"iterated sum": %ExplicitOperator {
   notation = '∑',
-  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = {$../"Cardinal numbers"}).operation(
-      ∗ = {$../../../Operations/Operations(
-          X = {$../"Cardinal numbers"},
-          Y = {$../"Cardinal numbers"},
-          Z = {$../"Cardinal numbers"}
+  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = $../"Cardinal numbers").operation(
+      ∗ = $../../../Operations/Operations(
+          X = $../"Cardinal numbers",
+          Y = $../"Cardinal numbers",
+          Z = $../"Cardinal numbers"
         ).operation(_1 = {
           #(κ,μ: %Element($../"Cardinal numbers")),
-          {z = {$../sum(
-            κ = {κ},
-            μ = {μ}
-          )}}
-      })},
-      e = {$../../Natural/number(value = 0)}
+          {z = $../sum(
+            κ = κ,
+            μ = μ
+          )}
+      }),
+      e = $../../Natural/number(value = 0)
   )]
 }

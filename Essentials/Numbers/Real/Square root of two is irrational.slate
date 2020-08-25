@@ -4,21 +4,21 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/data/real/irrational.html#irr_sqrt_two
  */
 $"Square root of two is irrational": %StandardTheorem {
-  claim = %not($rational(a = {$"square root"(a = {$../Natural/number(value = 2)})})),
+  claim = %not($rational(a = $"square root"(a = $../Natural/number(value = 2)))),
   proofs = [{steps = #(
     _: %UseTheorem(
       $../Natural/Prime/"Two is prime",
-      result = $../Natural/Prime/prime(n = {$../Natural/number(value = 2)})
+      result = $../Natural/Prime/prime(n = $../Natural/number(value = 2))
     ),
     _: %UseTheorem(
       $"Roots of primes are irrational"(
-        p = {$../Natural/number(value = 2)},
-        n = {$../Natural/number(value = 2)}
+        p = $../Natural/number(value = 2),
+        n = $../Natural/number(value = 2)
       ),
-      result = %not($rational(a = {$root(
-        a = {$../Natural/number(value = 2)},
-        n = {$../Natural/number(value = 2)}
-      )}))
+      result = %not($rational(a = $root(
+        a = $../Natural/number(value = 2),
+        n = $../Natural/number(value = 2)
+      )))
     )
   )}]
 }

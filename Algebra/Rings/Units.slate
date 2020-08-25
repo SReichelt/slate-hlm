@@ -9,10 +9,10 @@ $Units(𝐑: %Element($Rings)): %SetOperator {
     sup = '×'
   ),
   definition = [%subset(
-    #(a: %Element($Carrier(𝐑 = {𝐑}))),
+    #(a: %Element($Carrier(𝐑 = 𝐑))),
     $unit(
-      𝐑 = {𝐑},
-      a = {a}
+      𝐑 = 𝐑,
+      a = a
     )
   )]
 }

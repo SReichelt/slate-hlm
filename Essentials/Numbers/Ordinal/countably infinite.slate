@@ -7,10 +7,10 @@ $"countably infinite"(α: %Element($"Ordinal numbers")): %Predicate {
   ),
   definition = [
     %and(
-      $countable(α = {α}),
-      %not($finite(α = {α}))
+      $countable(α = α),
+      %not($finite(α = α))
     ),
-    $../Cardinal/"countably infinite"(κ = {$cardinality(α = {α})}),
-    $../../Sets/"countably infinite"(S = {$Carrier(α = {α})})
+    $../Cardinal/"countably infinite"(κ = $cardinality(α = α)),
+    $../../Sets/"countably infinite"(S = $Carrier(α = α))
   ]
 }

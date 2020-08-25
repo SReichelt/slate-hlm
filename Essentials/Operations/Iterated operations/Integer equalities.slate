@@ -2,43 +2,43 @@
 
 $"Integer equalities"(
   X: %Set(auto = %true),
-  ⨂: %Element($"Iterated operations"(X = {X})),
+  ⨂: %Element($"Iterated operations"(X = X)),
   j,k: %Element($../../Numbers/Integer/Integers),
   _1: %Binder(
     #(i: %Element($../../Numbers/Integer/Subsets/Interval(
-      a = {j},
-      b = {k}
+      a = j,
+      b = k
     ))),
     #(a: %Element(X))
   )
 ): %StandardTheorem {
   claim = %equals(
     $"indexed by integer"(
-      X = {X},
-      ⨂ = {⨂},
-      j = {j},
-      k = {k},
+      X = X,
+      ⨂ = ⨂,
+      j = j,
+      k = k,
       _1 = {
         #(i: %Element($../../Numbers/Integer/Subsets/Interval(
-          a = {j},
-          b = {k}
+          a = j,
+          b = k
         ))),
-        {a = {a[i = {i}]}}
+        {a = a[i = i]}
       }
     ),
     $"indexed by finite set"(
-      X = {X},
-      ⨂ = {⨂},
-      I = {$../../Numbers/Integer/Subsets/Interval(
-        a = {j},
-        b = {k}
-      )},
+      X = X,
+      ⨂ = ⨂,
+      I = $../../Numbers/Integer/Subsets/Interval(
+        a = j,
+        b = k
+      ),
       _2 = {
         #(i: %Element($../../Numbers/Integer/Subsets/Interval(
-          a = {j},
-          b = {k}
+          a = j,
+          b = k
         ))),
-        {a = {a[i = {i}]}}
+        {a = a[i = i]}
       }
     )
   )

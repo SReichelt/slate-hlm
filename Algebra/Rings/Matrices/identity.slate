@@ -22,16 +22,16 @@ $identity(
     )
   ),
   definition = [$Matrices(
-      𝐑 = {𝐑},
-      m = {n},
-      n = {n}
+      𝐑 = 𝐑,
+      m = n,
+      n = n
     ).matrix(_1 = {
-      #(i,j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-      {a = {$../"kronecker delta"(
-        𝐑 = {𝐑},
-        S = {$../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n})},
-        i = {i},
-        j = {j}
-      )}}
+      #(i,j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+      {a = $../"kronecker delta"(
+        𝐑 = 𝐑,
+        S = $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n),
+        i = i,
+        j = j
+      )}
   })]
 }

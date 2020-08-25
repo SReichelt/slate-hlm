@@ -7,7 +7,7 @@
  */
 $"identity element"(
   X: %Set(auto = %true),
-  ∗: %Element($"Inner operations"(X = {X})),
+  ∗: %Element($"Inner operations"(X = X)),
   e: %Element(X)
 ): %Predicate {
   notation = $NounRelation(
@@ -20,36 +20,36 @@ $"identity element"(
   definition = [
     %and(
       $"left identity element"(
-        X = {X},
-        Y = {X},
-        ∗ = {∗},
-        e = {e}
+        X = X,
+        Y = X,
+        ∗ = ∗,
+        e = e
       ),
       $"right identity element"(
-        X = {X},
-        Y = {X},
-        ∗ = {∗},
-        e = {e}
+        X = X,
+        Y = X,
+        ∗ = ∗,
+        e = e
       )
     ),
     %forall(
       #(a: %Element(X)),
       %equals(
         $value(
-          X = {X},
-          Y = {X},
-          Z = {X},
-          ∗ = {∗},
-          x = {a},
-          y = {e}
+          X = X,
+          Y = X,
+          Z = X,
+          ∗ = ∗,
+          x = a,
+          y = e
         ),
         $value(
-          X = {X},
-          Y = {X},
-          Z = {X},
-          ∗ = {∗},
-          x = {e},
-          y = {a}
+          X = X,
+          Y = X,
+          Z = X,
+          ∗ = ∗,
+          x = e,
+          y = a
         ),
         a
       )

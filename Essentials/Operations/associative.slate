@@ -8,7 +8,7 @@
  */
 $associative(
   X: %Set(auto = %true),
-  ∗: %Element($"Inner operations"(X = {X}))
+  ∗: %Element($"Inner operations"(X = X))
 ): %Predicate {
   notation = $Property(
     operand = ∗,
@@ -18,34 +18,34 @@ $associative(
     #(x,y,z: %Element(X)),
     %equals(
       $value(
-        X = {X},
-        Y = {X},
-        Z = {X},
-        ∗ = {∗},
-        x = {$value(
-          X = {X},
-          Y = {X},
-          Z = {X},
-          ∗ = {∗},
-          x = {x},
-          y = {y}
-        )},
-        y = {z}
+        X = X,
+        Y = X,
+        Z = X,
+        ∗ = ∗,
+        x = $value(
+          X = X,
+          Y = X,
+          Z = X,
+          ∗ = ∗,
+          x = x,
+          y = y
+        ),
+        y = z
       ),
       $value(
-        X = {X},
-        Y = {X},
-        Z = {X},
-        ∗ = {∗},
-        x = {x},
-        y = {$value(
-          X = {X},
-          Y = {X},
-          Z = {X},
-          ∗ = {∗},
-          x = {y},
-          y = {z}
-        )}
+        X = X,
+        Y = X,
+        Z = X,
+        ∗ = ∗,
+        x = x,
+        y = $value(
+          X = X,
+          Y = X,
+          Z = X,
+          ∗ = ∗,
+          x = y,
+          y = z
+        )
       )
     )
   )]

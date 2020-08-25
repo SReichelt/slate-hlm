@@ -7,7 +7,7 @@
  */
 $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
   conditions = [
-    $inductive(M = {M}),
+    $inductive(M = M),
     %setEquals(
       M,
       $"Natural numbers"
@@ -16,7 +16,7 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
   equivalenceProofs = [{
     from = 1,
     to = 2,
-    parameters = #(@: %Constraint($inductive(M = {M}))),
+    parameters = #(@: %Constraint($inductive(M = M))),
     goal = %setEquals(
       M,
       $"Natural numbers"
@@ -33,8 +33,8 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
           parameters = #(n: %Element($"Natural numbers")),
           steps = #(_: %UseTheorem(
             $"Induction lemma"(
-              M = {M},
-              n = {n}
+              M = M,
+              n = n
             ),
             result = %in(n, M)
           ))

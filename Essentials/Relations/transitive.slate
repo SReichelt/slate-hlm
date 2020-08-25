@@ -10,7 +10,7 @@
  */
 $transitive(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S}))
+  ≺: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $Property(
     operand = ≺,
@@ -20,26 +20,26 @@ $transitive(
     #(
       s,t,u: %Element(S),
       _1: %Constraint($related(
-        S = {S},
-        T = {S},
-        s = {s},
-        ≺ = {≺},
-        t = {t}
+        S = S,
+        T = S,
+        s = s,
+        ≺ = ≺,
+        t = t
       )),
       _2: %Constraint($related(
-        S = {S},
-        T = {S},
-        s = {t},
-        ≺ = {≺},
-        t = {u}
+        S = S,
+        T = S,
+        s = t,
+        ≺ = ≺,
+        t = u
       ))
     ),
     $related(
-      S = {S},
-      T = {S},
-      s = {s},
-      ≺ = {≺},
-      t = {u}
+      S = S,
+      T = S,
+      s = s,
+      ≺ = ≺,
+      t = u
     )
   )]
 }

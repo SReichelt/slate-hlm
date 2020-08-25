@@ -9,7 +9,7 @@
  */
 $ideal(
   𝐑: %Element($../Rings),
-  I: %Subset($../Carrier(𝐑 = {𝐑}))
+  I: %Subset($../Carrier(𝐑 = 𝐑))
 ): %Predicate {
   notation = $NounRelation(
     operands = [I, 𝐑],
@@ -20,28 +20,28 @@ $ideal(
   definition = [
     %and(
       $"left ideal"(
-        𝐑 = {𝐑},
-        I = {I}
+        𝐑 = 𝐑,
+        I = I
       ),
       $"right ideal"(
-        𝐑 = {𝐑},
-        I = {I}
+        𝐑 = 𝐑,
+        I = I
       )
     ),
     %exists(
       #(
         𝐒: %Element($../Rings),
         φ: %Element($../Homomorphisms/Homomorphisms(
-          𝐑 = {𝐑},
-          𝐒 = {𝐒}
+          𝐑 = 𝐑,
+          𝐒 = 𝐒
         ))
       ),
       formula = %setEquals(
         I,
         $../Homomorphisms/Kernel(
-          𝐑 = {𝐑},
-          𝐒 = {𝐒},
-          φ = {φ}
+          𝐑 = 𝐑,
+          𝐒 = 𝐒,
+          φ = φ
         )
       )
     )

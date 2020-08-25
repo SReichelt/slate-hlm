@@ -28,28 +28,28 @@ $difference(a,b: %Element($"Rational numbers")): %ExplicitOperator {
               d_a: %Element($../Natural/Subsets/"Positive numbers")
             ),
             value = $"Rational numbers".quotient(
-              n = {$../Integer/difference(
-                a = {$../Integer/product(
-                  a = {n_a},
-                  b = {d_b}
-                )},
-                b = {$../Integer/product(
-                  a = {n_b},
-                  b = {d_a}
-                )}
-              )},
-              d = {$../Natural/product(
-                m = {d_a},
-                n = {d_b}
-              )}
+              n = $../Integer/difference(
+                a = $../Integer/product(
+                  a = n_a,
+                  b = d_b
+                ),
+                b = $../Integer/product(
+                  a = n_b,
+                  b = d_a
+                )
+              ),
+              d = $../Natural/product(
+                m = d_a,
+                n = d_b
+              )
             )
           }]
         )
       }]
     ),
     $sum(
-      a = {a},
-      b = {$inverse(a = {b})}
+      a = a,
+      b = $inverse(a = b)
     )
   ]
 }

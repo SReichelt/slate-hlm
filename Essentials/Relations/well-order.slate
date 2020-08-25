@@ -8,7 +8,7 @@
  */
 $"well-order"(
   S: %Set(auto = %true),
-  ⪯: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $NounProperty(
     operand = ⪯,
@@ -17,21 +17,21 @@ $"well-order"(
   ),
   definition = [%and(
     $"total order"(
-      S = {S},
-      ⪯ = {⪯}
+      S = S,
+      ⪯ = ⪯
     ),
     %forall(
       #(
         T: %Subset(S),
-        _1: %Constraint(%not($../Sets/empty(S = {T})))
+        _1: %Constraint(%not($../Sets/empty(S = T)))
       ),
       %exists(
         #(t: %Element(T)),
         formula = $"least element"(
-          S = {S},
-          ⪯ = {⪯},
-          T = {T},
-          t = {t}
+          S = S,
+          ⪯ = ⪯,
+          T = T,
+          t = t
         )
       )
     )

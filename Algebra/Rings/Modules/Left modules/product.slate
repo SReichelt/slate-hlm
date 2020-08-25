@@ -6,50 +6,50 @@ $product(
     auto = %true
   ),
   𝐌: %Element(
-    $"Left modules"(𝐑 = {𝐑}),
+    $"Left modules"(𝐑 = 𝐑),
     auto = %true
   ),
-  a: %Element($../../Carrier(𝐑 = {𝐑})),
+  a: %Element($../../Carrier(𝐑 = 𝐑)),
   x: %Element($Carrier(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌
   ))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [a, x]),
   definition = [%structuralCases(
     𝐌,
-    $"Left modules"(𝐑 = {𝐑}),
+    $"Left modules"(𝐑 = 𝐑),
     [{
       constructor = $"Left modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = {M})),
+        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
         "0": %Element(M),
         ⊖: %Element($../../../../Essentials/Functions/Functions(
-          X = {M},
-          Y = {M}
+          X = M,
+          Y = M
         )),
         ⊙: %Element($../../../../Essentials/Operations/Operations(
-          X = {$../../Carrier(𝐑 = {𝐑})},
-          Y = {M},
-          Z = {M}
+          X = $../../Carrier(𝐑 = 𝐑),
+          Y = M,
+          Z = M
         )),
         _1: %Constraint($"left module"(
-          𝐑 = {𝐑},
-          M = {M},
-          ⊕ = {⊕},
-          "0" = {"0"},
-          ⊖ = {⊖},
-          ⊙ = {⊙}
+          𝐑 = 𝐑,
+          M = M,
+          ⊕ = ⊕,
+          "0" = "0",
+          ⊖ = ⊖,
+          ⊙ = ⊙
         ))
       ),
       value = $../../../../Essentials/Operations/value(
-        X = {$../../Carrier(𝐑 = {𝐑})},
-        Y = {M},
-        Z = {M},
-        ∗ = {⊙},
-        x = {a},
-        y = {x}
+        X = $../../Carrier(𝐑 = 𝐑),
+        Y = M,
+        Z = M,
+        ∗ = ⊙,
+        x = a,
+        y = x
       )
     }]
   )]

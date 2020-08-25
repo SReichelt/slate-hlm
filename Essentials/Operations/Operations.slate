@@ -65,7 +65,7 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
           x: %Element(X),
           y: %Element(Y)
         ),
-        %equals(z[x = {x}, y = {y}], "z'"[x = {x}, y = {y}])
+        %equals(z[x = x, y = y], "z'"[x = x, y = y])
       )],
       isomorphic = %true
     }
@@ -93,36 +93,36 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
   },
   embedding = {
     parameter = #(f: %Element($../Functions/Functions(
-      X = {$../Sets/"Cartesian product"(
-        S = {X},
-        T = {Y}
-      )},
-      Y = {Z}
+      X = $../Sets/"Cartesian product"(
+        S = X,
+        T = Y
+      ),
+      Y = Z
     ))),
     target = $Operations(
-        X = {X},
-        Y = {Y},
-        Z = {Z}
+        X = X,
+        Y = Y,
+        Z = Z
       ).operation(_1 = {
         #(
           x: %Element(X),
           y: %Element(Y)
         ),
-        {z = {$../Functions/value(
-          X = {$../Sets/"Cartesian product"(
-            S = {X},
-            T = {Y}
-          )},
-          Y = {Z},
-          f = {f},
-          x = {$../Sets/"Cartesian product"(
-              S = {X},
-              T = {Y}
+        {z = $../Functions/value(
+          X = $../Sets/"Cartesian product"(
+            S = X,
+            T = Y
+          ),
+          Y = Z,
+          f = f,
+          x = $../Sets/"Cartesian product"(
+              S = X,
+              T = Y
             ).pair(
-              s = {x},
-              t = {y}
-          )}
-        )}}
+              s = x,
+              t = y
+          )
+        )}
     }),
     full = %true
   }

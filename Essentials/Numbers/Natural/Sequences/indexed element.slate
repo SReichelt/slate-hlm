@@ -7,10 +7,10 @@ $"indexed element"(
   M: %Subset($../"Natural numbers"),
   n: %Element($../"Natural numbers"),
   _1: %Constraint($../../Cardinal/less(
-    κ = {n},
-    μ = {$../../Cardinal/"Cardinal numbers".cardinality(S = {M})}
+    κ = n,
+    μ = $../../Cardinal/"Cardinal numbers".cardinality(S = M)
   )),
-  m: %Def($../minimum(M = {M}))
+  m: %Def($../minimum(M = M))
 ): %ExplicitOperator {
   notation = $Function(
     function = M,
@@ -30,12 +30,12 @@ $"indexed element"(
         constructor = $../"Natural numbers".successor,
         parameters = #(x: %Element($../"Natural numbers")),
         value = $"indexed element"(
-          M = {$../../../Sets/"Relative complement"(
-            U = {M},
-            S = {M},
-            T = {%enumeration(m)}
-          )},
-          n = {x}
+          M = $../../../Sets/"Relative complement"(
+            U = M,
+            S = M,
+            T = %enumeration(m)
+          ),
+          n = x
         ),
         rewrite = %true
       }

@@ -7,12 +7,12 @@ $"Addition of a fixed number is injective"(
   a,b,c: %Element($"Natural numbers"),
   _1: %Constraint(%equals(
     $sum(
-      m = {a},
-      n = {c}
+      m = a,
+      n = c
     ),
     $sum(
-      m = {b},
-      n = {c}
+      m = b,
+      n = c
     )
   ))
 ): %StandardTheorem {

@@ -10,28 +10,28 @@ $composition(
     auto = %true
   ),
   𝓒: %Element(
-    $../Categories(u = {u}),
+    $../Categories(u = u),
     auto = %true
   ),
   𝓓: %Element(
-    $../Categories(u = {v}),
+    $../Categories(u = v),
     auto = %true
   ),
   𝓔: %Element(
-    $../Categories(u = {w}),
+    $../Categories(u = w),
     auto = %true
   ),
   F: %Element($Functors(
-    u = {u},
-    v = {v},
-    𝓒 = {𝓒},
-    𝓓 = {𝓓}
+    u = u,
+    v = v,
+    𝓒 = 𝓒,
+    𝓓 = 𝓓
   )),
   G: %Element($Functors(
-    u = {v},
-    v = {w},
-    𝓒 = {𝓓},
-    𝓓 = {𝓔}
+    u = v,
+    v = w,
+    𝓒 = 𝓓,
+    𝓓 = 𝓔
   ))
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(
@@ -39,78 +39,78 @@ $composition(
     operands = [G, F]
   ),
   definition = [$Functors(
-      u = {u},
-      v = {w},
-      𝓒 = {𝓒},
-      𝓓 = {𝓔}
+      u = u,
+      v = w,
+      𝓒 = 𝓒,
+      𝓓 = 𝓔
     ).functor(
       _1 = {
         #(𝐗: %Element($../Objects(
-          u = {u},
-          𝓒 = {𝓒}
+          u = u,
+          𝓒 = 𝓒
         ))),
-        {𝐘 = {$"object value"(
-          u = {v},
-          v = {w},
-          𝓒 = {𝓓},
-          𝓓 = {𝓔},
-          F = {G},
-          𝐗 = {$"object value"(
-            u = {u},
-            v = {v},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓},
-            F = {F},
-            𝐗 = {𝐗}
-          )}
-        )}}
+        {𝐘 = $"object value"(
+          u = v,
+          v = w,
+          𝓒 = 𝓓,
+          𝓓 = 𝓔,
+          F = G,
+          𝐗 = $"object value"(
+            u = u,
+            v = v,
+            𝓒 = 𝓒,
+            𝓓 = 𝓓,
+            F = F,
+            𝐗 = 𝐗
+          )
+        )}
       },
       _2 = {
         #(
           𝐀,𝐁: %Element($../Objects(
-            u = {u},
-            𝓒 = {𝓒}
+            u = u,
+            𝓒 = 𝓒
           )),
           f: %Element($../Morphisms(
-            u = {u},
-            𝓒 = {𝓒},
-            𝐗 = {𝐀},
-            𝐘 = {𝐁}
+            u = u,
+            𝓒 = 𝓒,
+            𝐗 = 𝐀,
+            𝐘 = 𝐁
           ))
         ),
-        {g = {$"morphism value"(
-          u = {v},
-          v = {w},
-          𝓒 = {𝓓},
-          𝓓 = {𝓔},
-          F = {G},
-          𝐗 = {$"object value"(
-            u = {u},
-            v = {v},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓},
-            F = {F},
-            𝐗 = {𝐀}
-          )},
-          𝐘 = {$"object value"(
-            u = {u},
-            v = {v},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓},
-            F = {F},
-            𝐗 = {𝐁}
-          )},
-          f = {$"morphism value"(
-            u = {u},
-            v = {v},
-            𝓒 = {𝓒},
-            𝓓 = {𝓓},
-            F = {F},
-            𝐗 = {𝐀},
-            𝐘 = {𝐁},
-            f = {f}
-          )}
-        )}}
+        {g = $"morphism value"(
+          u = v,
+          v = w,
+          𝓒 = 𝓓,
+          𝓓 = 𝓔,
+          F = G,
+          𝐗 = $"object value"(
+            u = u,
+            v = v,
+            𝓒 = 𝓒,
+            𝓓 = 𝓓,
+            F = F,
+            𝐗 = 𝐀
+          ),
+          𝐘 = $"object value"(
+            u = u,
+            v = v,
+            𝓒 = 𝓒,
+            𝓓 = 𝓓,
+            F = F,
+            𝐗 = 𝐁
+          ),
+          f = $"morphism value"(
+            u = u,
+            v = v,
+            𝓒 = 𝓒,
+            𝓓 = 𝓓,
+            F = F,
+            𝐗 = 𝐀,
+            𝐘 = 𝐁,
+            f = f
+          )
+        )}
       }
   )]
 }

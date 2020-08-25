@@ -13,8 +13,8 @@ $"Segment (less)"(n: %Element($../"Natural numbers")): %SetOperator {
   definition = [%subset(
     #(m: %Element($../"Natural numbers")),
     $../less(
-      m = {m},
-      n = {n}
+      m = m,
+      n = n
     )
   )]
 }

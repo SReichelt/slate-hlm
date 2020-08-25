@@ -9,8 +9,8 @@ $"Segment (greater or equal)"(α: %Element($../"Ordinal numbers")): %SetOperator
   definition = [%subset(
     #(β: %Element($../"Ordinal numbers")),
     $../"less or equal"(
-      β = {β},
-      α = {α}
+      β = β,
+      α = α
     )
   )]
 }

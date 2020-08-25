@@ -43,8 +43,8 @@ $"Natural numbers": %Construction {
     },
     rewrite = {
       value = $sum(
-        m = {n},
-        n = {$number(value = 1)}
+        m = n,
+        n = $number(value = 1)
       ),
       theorem = $"Addition of one yields successor"
     }

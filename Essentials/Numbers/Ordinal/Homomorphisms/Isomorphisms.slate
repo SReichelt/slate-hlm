@@ -24,42 +24,42 @@ $Isomorphisms(α,β: %Element($../"Ordinal numbers")): %SetOperator {
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(
-        α = {α},
-        β = {β}
+        α = α,
+        β = β
       ))),
       $../../../Functions/bijective(
-        X = {$../Carrier(α = {α})},
-        Y = {$../Carrier(α = {β})},
-        f = {φ}
+        X = $../Carrier(α = α),
+        Y = $../Carrier(α = β),
+        f = φ
       )
     ),
     %subset(
       #(f: %Element($../../../Functions/Bijections(
-        X = {$../Carrier(α = {α})},
-        Y = {$../Carrier(α = {β})}
+        X = $../Carrier(α = α),
+        Y = $../Carrier(α = β)
       ))),
       %forall(
-        #(a,b: %Element($../Carrier(α = {α}))),
+        #(a,b: %Element($../Carrier(α = α))),
         %equiv(
           $../before(
-            α = {α},
-            a = {a},
-            b = {b}
+            α = α,
+            a = a,
+            b = b
           ),
           $../before(
-            α = {β},
-            a = {$../../../Functions/value(
-              X = {$../Carrier(α = {α})},
-              Y = {$../Carrier(α = {β})},
-              f = {f},
-              x = {a}
-            )},
-            b = {$../../../Functions/value(
-              X = {$../Carrier(α = {α})},
-              Y = {$../Carrier(α = {β})},
-              f = {f},
-              x = {b}
-            )}
+            α = β,
+            a = $../../../Functions/value(
+              X = $../Carrier(α = α),
+              Y = $../Carrier(α = β),
+              f = f,
+              x = a
+            ),
+            b = $../../../Functions/value(
+              X = $../Carrier(α = α),
+              Y = $../Carrier(α = β),
+              f = f,
+              x = b
+            )
           )
         )
       )

@@ -5,26 +5,26 @@
  */
 $disjunction(
   S: %Set(auto = %true),
-  p,q: %Element($Properties(S = {S}))
+  p,q: %Element($Properties(S = S))
 ): %ExplicitOperator {
   notation = $Operator(
     symbol = '∨',
     operands = [p, q],
     space = ' '
   ),
-  definition = [$Properties(S = {S}).property(_1 = {
+  definition = [$Properties(S = S).property(_1 = {
       #(s: %Element(S)),
-      {p = {%or(
+      {p = %or(
         $"has property"(
-          S = {S},
-          p = {p},
-          s = {s}
+          S = S,
+          p = p,
+          s = s
         ),
         $"has property"(
-          S = {S},
-          p = {q},
-          s = {s}
+          S = S,
+          p = q,
+          s = s
         )
-      )}}
+      )}
   })]
 }

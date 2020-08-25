@@ -3,17 +3,17 @@
 $"normal subgroup"(𝐆,𝐇: %Element($../Groups)): %Predicate {
   notation = $NormalSubgroupRelation(operands = [𝐆, 𝐇]),
   definition = [%exists(
-    #(S: %Subset($../Carrier(𝐆 = {𝐇}))),
+    #(S: %Subset($../Carrier(𝐆 = 𝐇))),
     formula = %and(
       $"normal subgroup set"(
-        𝐆 = {𝐇},
-        S = {S}
+        𝐆 = 𝐇,
+        S = S
       ),
       %equals(
         𝐆,
         $"subset group"(
-          𝐆 = {𝐇},
-          S = {S}
+          𝐆 = 𝐇,
+          S = S
         )
       )
     )

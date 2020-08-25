@@ -18,7 +18,7 @@ $"automorphism group"(α: %Element($../"Ordinal numbers")): %ExplicitOperator {
     arguments = [α]
   ),
   definition = [$../../../../Algebra/Groups/Subgroups/"subset group"(
-    𝐆 = {$../../../../Algebra/Groups/Examples/"symmetric group"(X = {$../Carrier(α = {α})})},
-    S = {$Automorphisms(α = {α})}
+    𝐆 = $../../../../Algebra/Groups/Examples/"symmetric group"(X = $../Carrier(α = α)),
+    S = $Automorphisms(α = α)
   )]
 }

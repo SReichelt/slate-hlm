@@ -34,7 +34,7 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
       )),
       definition = [%forall(
         #(s,t: %Element(S)),
-        %equiv(p[s = {s}, t = {t}], q[s = {s}, t = {t}])
+        %equiv(p[s = s, t = t], q[s = s, t = t])
       )],
       isomorphic = %true
     }
@@ -52,18 +52,18 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
   },
   embedding = {
     parameter = #(≺: %Element($Relations(
-      S = {S},
-      T = {S}
+      S = S,
+      T = S
     ))),
-    target = $Endorelations(S = {S}).relation(_1 = {
+    target = $Endorelations(S = S).relation(_1 = {
         #(s,t: %Element(S)),
-        {p = {$related(
-          S = {S},
-          T = {S},
-          ≺ = {≺},
-          s = {s},
-          t = {t}
-        )}}
+        {p = $related(
+          S = S,
+          T = S,
+          ≺ = ≺,
+          s = s,
+          t = t
+        )}
     }),
     full = %true
   }

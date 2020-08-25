@@ -10,14 +10,14 @@ $"Intersection is commutative"(
 ): %StandardTheorem {
   claim = %setEquals(
     $Intersection(
-      U = {U},
-      S = {S},
-      T = {T}
+      U = U,
+      S = S,
+      T = T
     ),
     $Intersection(
-      U = {U},
-      S = {T},
-      T = {S}
+      U = U,
+      S = T,
+      T = S
     )
   )
 }

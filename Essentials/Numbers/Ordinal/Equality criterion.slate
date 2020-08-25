@@ -7,18 +7,18 @@ $"Equality criterion"(α,β: %Element($"Ordinal numbers")): %EquivalenceTheorem 
   conditions = [
     %and(
       $"less or equal"(
-        α = {α},
-        β = {β}
+        α = α,
+        β = β
       ),
       $"less or equal"(
-        α = {β},
-        β = {α}
+        α = β,
+        β = α
       )
     ),
-    %not($../../Sets/empty(S = {$Homomorphisms/Isomorphisms(
-      α = {α},
-      β = {β}
-    )})),
+    %not($../../Sets/empty(S = $Homomorphisms/Isomorphisms(
+      α = α,
+      β = β
+    ))),
     %equals(α, β)
   ]
 }

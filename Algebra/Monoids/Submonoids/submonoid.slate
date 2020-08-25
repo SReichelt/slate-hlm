@@ -5,27 +5,27 @@ $submonoid(𝐌,𝐍: %Element($../Monoids)): %Predicate {
   definition = [
     %exists(
       #(φ: %Element($../Homomorphisms/Homomorphisms(
-        𝐌 = {𝐌},
-        𝐍 = {𝐍}
+        𝐌 = 𝐌,
+        𝐍 = 𝐍
       ))),
       formula = $../../../Essentials/Functions/injective(
-        X = {$../Carrier(𝐌 = {𝐌})},
-        Y = {$../Carrier(𝐌 = {𝐍})},
-        f = {φ}
+        X = $../Carrier(𝐌 = 𝐌),
+        Y = $../Carrier(𝐌 = 𝐍),
+        f = φ
       )
     ),
     %exists(
-      #(S: %Subset($../Carrier(𝐌 = {𝐍}))),
+      #(S: %Subset($../Carrier(𝐌 = 𝐍))),
       formula = %and(
         $"submonoid set"(
-          𝐌 = {𝐍},
-          S = {S}
+          𝐌 = 𝐍,
+          S = S
         ),
         %equals(
           𝐌,
           $"subset monoid"(
-            𝐌 = {𝐍},
-            S = {S}
+            𝐌 = 𝐍,
+            S = S
           )
         )
       )

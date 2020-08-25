@@ -21,17 +21,17 @@ $Homomorphisms(𝐒,𝐓: %Element($../"Pointed sets")): %SetOperator {
   },
   definition = [%subset(
     #(f: %Element($../../../Essentials/Functions/Functions(
-      X = {$../Carrier(𝐒 = {𝐒})},
-      Y = {$../Carrier(𝐒 = {𝐓})}
+      X = $../Carrier(𝐒 = 𝐒),
+      Y = $../Carrier(𝐒 = 𝐓)
     ))),
     %equals(
       $../../../Essentials/Functions/value(
-        X = {$../Carrier(𝐒 = {𝐒})},
-        Y = {$../Carrier(𝐒 = {𝐓})},
-        f = {f},
-        x = {$../"base point"(𝐒 = {𝐒})}
+        X = $../Carrier(𝐒 = 𝐒),
+        Y = $../Carrier(𝐒 = 𝐓),
+        f = f,
+        x = $../"base point"(𝐒 = 𝐒)
       ),
-      $../"base point"(𝐒 = {𝐓})
+      $../"base point"(𝐒 = 𝐓)
     )
   )]
 }

@@ -6,7 +6,7 @@ $"Nonzero numbers": %SetOperator {
     sub = '±'
   ),
   definition = [
-    $Hole(a = {$../../Natural/number(value = 0)}),
+    $Hole(a = $../../Natural/number(value = 0)),
     %subset(
       #(a: %Element($../Integers)),
       %not(%equals(
@@ -15,9 +15,9 @@ $"Nonzero numbers": %SetOperator {
       ))
     ),
     $../../../Sets/Union(
-      U = {$../Integers},
-      S = {$"Negative numbers"},
-      T = {$"Positive numbers"}
+      U = $../Integers,
+      S = $"Negative numbers",
+      T = $"Positive numbers"
     )
   ]
 }

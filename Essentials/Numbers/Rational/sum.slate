@@ -27,20 +27,20 @@ $sum(a,b: %Element($"Rational numbers")): %ExplicitOperator {
             d_a: %Element($../Natural/Subsets/"Positive numbers")
           ),
           value = $"Rational numbers".quotient(
-            n = {$../Integer/sum(
-              a = {$../Integer/product(
-                a = {n_a},
-                b = {d_b}
-              )},
-              b = {$../Integer/product(
-                a = {n_b},
-                b = {d_a}
-              )}
-            )},
-            d = {$../Natural/product(
-              m = {d_a},
-              n = {d_b}
-            )}
+            n = $../Integer/sum(
+              a = $../Integer/product(
+                a = n_a,
+                b = d_b
+              ),
+              b = $../Integer/product(
+                a = n_b,
+                b = d_a
+              )
+            ),
+            d = $../Natural/product(
+              m = d_a,
+              n = d_b
+            )
           )
         }]
       )

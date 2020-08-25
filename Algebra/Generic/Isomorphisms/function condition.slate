@@ -3,16 +3,16 @@
 $"function condition"(
   X,Y: %Set(auto = %true),
   φ: %Element($../../../Essentials/Functions/Bijections(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   )),
   f: %Element($../../../Essentials/Functions/Functions(
-    X = {X},
-    Y = {X}
+    X = X,
+    Y = X
   )),
   g: %Element($../../../Essentials/Functions/Functions(
-    X = {Y},
-    Y = {Y}
+    X = Y,
+    Y = Y
   ))
 ): %Predicate {
   notation = $SpecificIsomorphismRelation(
@@ -23,8 +23,8 @@ $"function condition"(
     %structural(
       g,
       $../../../Essentials/Functions/Functions(
-        X = {Y},
-        Y = {Y}
+        X = Y,
+        Y = Y
       ),
       [{
         constructor = $../../../Essentials/Functions/Functions.function,
@@ -35,8 +35,8 @@ $"function condition"(
         value = %structural(
           f,
           $../../../Essentials/Functions/Functions(
-            X = {X},
-            Y = {X}
+            X = X,
+            Y = X
           ),
           [{
             constructor = $../../../Essentials/Functions/Functions.function,
@@ -48,17 +48,17 @@ $"function condition"(
               #(x: %Element(X)),
               %equals(
                 $../../../Essentials/Functions/value(
-                  X = {X},
-                  Y = {Y},
-                  f = {φ},
-                  x = {a[x = {x}]}
+                  X = X,
+                  Y = Y,
+                  f = φ,
+                  x = a[x = x]
                 ),
-                b[y = {$../../../Essentials/Functions/value(
-                  X = {X},
-                  Y = {Y},
-                  f = {φ},
-                  x = {x}
-                )}]
+                b[y = $../../../Essentials/Functions/value(
+                  X = X,
+                  Y = Y,
+                  f = φ,
+                  x = x
+                )]
               )
             )
           }]
@@ -69,43 +69,43 @@ $"function condition"(
       #(x: %Element(X)),
       %equals(
         $../../../Essentials/Functions/value(
-          X = {X},
-          Y = {Y},
-          f = {φ},
-          x = {$../../../Essentials/Functions/value(
-            X = {X},
-            Y = {X},
-            f = {f},
-            x = {x}
-          )}
+          X = X,
+          Y = Y,
+          f = φ,
+          x = $../../../Essentials/Functions/value(
+            X = X,
+            Y = X,
+            f = f,
+            x = x
+          )
         ),
         $../../../Essentials/Functions/value(
-          X = {Y},
-          Y = {Y},
-          f = {g},
-          x = {$../../../Essentials/Functions/value(
-            X = {X},
-            Y = {Y},
-            f = {φ},
-            x = {x}
-          )}
+          X = Y,
+          Y = Y,
+          f = g,
+          x = $../../../Essentials/Functions/value(
+            X = X,
+            Y = Y,
+            f = φ,
+            x = x
+          )
         )
       )
     ),
     %equals(
       $../../../Essentials/Functions/composition(
-        X = {X},
-        Y = {X},
-        Z = {Y},
-        g = {φ},
-        f = {f}
+        X = X,
+        Y = X,
+        Z = Y,
+        g = φ,
+        f = f
       ),
       $../../../Essentials/Functions/composition(
-        X = {X},
-        Y = {Y},
-        Z = {Y},
-        g = {g},
-        f = {φ}
+        X = X,
+        Y = Y,
+        Z = Y,
+        g = g,
+        f = φ
       )
     )
   ]

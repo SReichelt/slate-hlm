@@ -6,7 +6,7 @@ $"Nonzero numbers": %SetOperator {
     sup = '×'
   ),
   definition = [
-    $Hole(a = {$../../Natural/number(value = 0)}),
+    $Hole(a = $../../Natural/number(value = 0)),
     %subset(
       #(a: %Element($../"Complex numbers")),
       %not(%equals(

@@ -6,12 +6,12 @@ $"Negative numbers": %SetOperator {
     sub = '−'
   ),
   definition = [
-    $"Segment (less)"(a = {$../../Natural/number(value = 0)}),
+    $"Segment (less)"(a = $../../Natural/number(value = 0)),
     %subset(
       #(a: %Element($../"Rational numbers")),
       $../less(
-        a = {a},
-        b = {$../../Natural/number(value = 0)}
+        a = a,
+        b = $../../Natural/number(value = 0)
       )
     )
   ]

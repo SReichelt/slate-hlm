@@ -6,7 +6,7 @@
  */
 $"absorbing element"(
   X: %Set(auto = %true),
-  ∗: %Element($"Inner operations"(X = {X})),
+  ∗: %Element($"Inner operations"(X = X)),
   z: %Element(X)
 ): %Predicate {
   notation = $NounRelation(
@@ -19,36 +19,36 @@ $"absorbing element"(
   definition = [
     %and(
       $"left absorbing element"(
-        X = {X},
-        Y = {X},
-        ∗ = {∗},
-        z = {z}
+        X = X,
+        Y = X,
+        ∗ = ∗,
+        z = z
       ),
       $"right absorbing element"(
-        X = {X},
-        Y = {X},
-        ∗ = {∗},
-        z = {z}
+        X = X,
+        Y = X,
+        ∗ = ∗,
+        z = z
       )
     ),
     %forall(
       #(a: %Element(X)),
       %equals(
         $value(
-          X = {X},
-          Y = {X},
-          Z = {X},
-          ∗ = {∗},
-          x = {a},
-          y = {z}
+          X = X,
+          Y = X,
+          Z = X,
+          ∗ = ∗,
+          x = a,
+          y = z
         ),
         $value(
-          X = {X},
-          Y = {X},
-          Z = {X},
-          ∗ = {∗},
-          x = {z},
-          y = {a}
+          X = X,
+          Y = X,
+          Z = X,
+          ∗ = ∗,
+          x = z,
+          y = a
         ),
         z
       )

@@ -28,21 +28,21 @@ $"bounded cardinality"(
         parameters = #(x: %Element($../"Natural numbers")),
         value = %cases([
           {
-            formula = %not($../../../Sets/empty(S = {M})),
+            formula = %not($../../../Sets/empty(S = M)),
             value = $../sum(
-              m = {$"bounded cardinality"(
-                M = {$../../../Sets/"Relative complement"(
-                  U = {M},
-                  S = {M},
-                  T = {%enumeration($../minimum(M = {M}))}
-                )},
-                n = {x}
-              )},
-              n = {$../number(value = 1)}
+              m = $"bounded cardinality"(
+                M = $../../../Sets/"Relative complement"(
+                  U = M,
+                  S = M,
+                  T = %enumeration($../minimum(M = M))
+                ),
+                n = x
+              ),
+              n = $../number(value = 1)
             )
           },
           {
-            formula = $../../../Sets/empty(S = {M}),
+            formula = $../../../Sets/empty(S = M),
             value = $../number(value = 0)
           }
         ]),

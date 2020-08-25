@@ -11,5 +11,5 @@ $"group order"(𝐆: %Element($../Groups)): %ExplicitOperator {
     body = 𝐆,
     style = '||'
   ),
-  definition = [$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Carrier(𝐆 = {𝐆})})]
+  definition = [$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Carrier(𝐆 = 𝐆))]
 }

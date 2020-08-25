@@ -33,21 +33,21 @@ $Polynomials(
 
   $term(
     p: %Element($Polynomials(
-      𝐑 = {𝐑},
-      X = {X}
+      𝐑 = 𝐑,
+      X = X
     )),
-    a: %Element($../Carrier(𝐑 = {𝐑})),
+    a: %Element($../Carrier(𝐑 = 𝐑)),
     _1: %Constraint(%or(
       %not(%equals(
         p,
         $Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+            𝐑 = 𝐑,
+            X = X
           ).zero
       )),
       %not(%equals(
         a,
-        $../zero(𝐑 = {𝐑})
+        $../zero(𝐑 = 𝐑)
       ))
     ))
   ): %Constructor {
@@ -70,41 +70,41 @@ $Polynomials(
     equalityDefinition = {
       leftParameters = #(
         p: %Element($Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
+          𝐑 = 𝐑,
+          X = X
         )),
-        a: %Element($../Carrier(𝐑 = {𝐑})),
+        a: %Element($../Carrier(𝐑 = 𝐑)),
         _1: %Constraint(%or(
           %not(%equals(
             p,
             $Polynomials(
-                𝐑 = {𝐑},
-                X = {X}
+                𝐑 = 𝐑,
+                X = X
               ).zero
           )),
           %not(%equals(
             a,
-            $../zero(𝐑 = {𝐑})
+            $../zero(𝐑 = 𝐑)
           ))
         ))
       ),
       rightParameters = #(
         q: %Element($Polynomials(
-          𝐑 = {𝐑},
-          X = {X}
+          𝐑 = 𝐑,
+          X = X
         )),
-        b: %Element($../Carrier(𝐑 = {𝐑})),
+        b: %Element($../Carrier(𝐑 = 𝐑)),
         _2: %Constraint(%or(
           %not(%equals(
             q,
             $Polynomials(
-                𝐑 = {𝐑},
-                X = {X}
+                𝐑 = 𝐑,
+                X = X
               ).zero
           )),
           %not(%equals(
             b,
-            $../zero(𝐑 = {𝐑})
+            $../zero(𝐑 = 𝐑)
           ))
         ))
       ),
@@ -122,32 +122,32 @@ $Polynomials(
     style = '[]'
   ),
   embedding = {
-    parameter = #(a: %Element($../Carrier(𝐑 = {𝐑}))),
+    parameter = #(a: %Element($../Carrier(𝐑 = 𝐑))),
     target = %cases([
       {
         formula = %equals(
           a,
-          $../zero(𝐑 = {𝐑})
+          $../zero(𝐑 = 𝐑)
         ),
         value = $Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+            𝐑 = 𝐑,
+            X = X
           ).zero
       },
       {
         formula = %not(%equals(
           a,
-          $../zero(𝐑 = {𝐑})
+          $../zero(𝐑 = 𝐑)
         )),
         value = $Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+            𝐑 = 𝐑,
+            X = X
           ).term(
-            p = {$Polynomials(
-                𝐑 = {𝐑},
-                X = {X}
-              ).zero},
-            a = {a}
+            p = $Polynomials(
+                𝐑 = 𝐑,
+                X = X
+              ).zero,
+            a = a
         )
       }
     ])

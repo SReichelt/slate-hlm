@@ -5,7 +5,7 @@
  */
 $"has property"(
   S: %Set(auto = %true),
-  p: %Element($Properties(S = {S})),
+  p: %Element($Properties(S = S)),
   s: %Element(S)
 ): %Predicate {
   notation = $TextualRelation(
@@ -14,14 +14,14 @@ $"has property"(
   ),
   definition = [%structural(
     p,
-    $Properties(S = {S}),
+    $Properties(S = S),
     [{
       constructor = $Properties.property,
       parameters = #(_1: %Binder(
         #(t: %Element(S)),
         #(p: %Prop)
       )),
-      value = p[t = {s}]
+      value = p[t = s]
     }]
   )]
 }

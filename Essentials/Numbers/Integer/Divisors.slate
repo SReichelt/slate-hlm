@@ -11,8 +11,8 @@ $Divisors(b: %Element($Integers)): %SetOperator {
   definition = [%subset(
     #(a: %Element($Subsets/"Nonzero numbers")),
     $divisible(
-      a = {a},
-      b = {b}
+      a = a,
+      b = b
     )
   )]
 }

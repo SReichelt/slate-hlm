@@ -9,12 +9,12 @@ $"Positive numbers": %SetOperator {
     sub = '+'
   ),
   definition = [
-    $"Segment (greater)"(a = {$../../Natural/number(value = 0)}),
+    $"Segment (greater)"(a = $../../Natural/number(value = 0)),
     %subset(
       #(a: %Element($../Integers)),
       $../less(
-        b = {a},
-        a = {$../../Natural/number(value = 0)}
+        b = a,
+        a = $../../Natural/number(value = 0)
       )
     ),
     $../../Natural/Subsets/"Positive numbers"

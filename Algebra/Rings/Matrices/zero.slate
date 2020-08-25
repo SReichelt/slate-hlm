@@ -15,14 +15,14 @@ $zero(
     )
   ),
   definition = [$Matrices(
-      𝐑 = {𝐑},
-      m = {m},
-      n = {n}
+      𝐑 = 𝐑,
+      m = m,
+      n = n
     ).matrix(_1 = {
       #(
-        i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {m})),
-        j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = {n}))
+        i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
+        j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
       ),
-      {a = {$../zero(𝐑 = {𝐑})}}
+      {a = $../zero(𝐑 = 𝐑)}
   })]
 }

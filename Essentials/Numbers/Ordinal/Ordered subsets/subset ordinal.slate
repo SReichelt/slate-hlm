@@ -2,7 +2,7 @@
 
 $"subset ordinal"(
   α: %Element($../"Ordinal numbers"),
-  S: %Subset($../Carrier(α = {α}))
+  S: %Subset($../Carrier(α = α))
 ): %ExplicitOperator {
   notation = $SubSup(
     body = $Parens(
@@ -18,19 +18,19 @@ $"subset ordinal"(
       constructor = $../"Ordinal numbers"."order type",
       parameters = #(
         A: %Set,
-        ⪯: %Element($../../../Relations/Endorelations(S = {A})),
+        ⪯: %Element($../../../Relations/Endorelations(S = A)),
         _1: %Constraint($../../../Relations/"well-order"(
-          S = {A},
-          ⪯ = {⪯}
+          S = A,
+          ⪯ = ⪯
         ))
       ),
       value = $../"Ordinal numbers"."order type"(
-        S = {S},
-        ⪯ = {$../../../Relations/restriction(
-          S = {A},
-          ≺ = {⪯},
-          T = {S}
-        )}
+        S = S,
+        ⪯ = $../../../Relations/restriction(
+          S = A,
+          ≺ = ⪯,
+          T = S
+        )
       )
     }]
   )]

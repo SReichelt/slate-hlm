@@ -7,18 +7,18 @@ $"dependently equal"(
     #(S: %Set(auto = %true))
   ),
   ≃: %Element($"Dependent equality"(
-    I = {I},
+    I = I,
     _1 = {
       #(i: %Element(I)),
-      {S = {S[i = {i}]}}
+      {S = S[i = i]}
     }
   )),
   a,b: %Element(
     I,
     auto = %true
   ),
-  s: %Element(S[i = {a}]),
-  t: %Element(S[i = {b}])
+  s: %Element(S[i = a]),
+  t: %Element(S[i = b])
 ): %Predicate {
   notation = $Relation(
     symbol = ≃,
@@ -27,10 +27,10 @@ $"dependently equal"(
   definition = [%structural(
     ≃,
     $"Dependent equality"(
-      I = {I},
+      I = I,
       _1 = {
         #(i: %Element(I)),
-        {S = {S[i = {i}]}}
+        {S = S[i = i]}
       }
     ),
     [{
@@ -42,24 +42,24 @@ $"dependently equal"(
             _3: %Constraint(%equals(j, k))
           ),
           #(≡: %Element($../Relations(
-            S = {S[i = {j}]},
-            T = {S[i = {k}]}
+            S = S[i = j],
+            T = S[i = k]
           )))
         ),
         _4: %Constraint(%forall(
           #(i: %Element(I)),
           %equals(
-            ≡[j = {i}, k = {i}],
-            $../equality(S = {S[i = {i}]})
+            ≡[j = i, k = i],
+            $../equality(S = S[i = i])
           )
         ))
       ),
       value = $../related(
-        S = {S[i = {a}]},
-        T = {S[i = {b}]},
-        ≺ = {≡[j = {a}, k = {b}]},
-        s = {s},
-        t = {t}
+        S = S[i = a],
+        T = S[i = b],
+        ≺ = ≡[j = a, k = b],
+        s = s,
+        t = t
       )
     }]
   )]

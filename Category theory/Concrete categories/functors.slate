@@ -11,120 +11,120 @@ $functors(
     $../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
-  𝓒: %Element($../Categories(u = {u})),
-  𝓓: %Element($../Categories(u = {v}))
+  𝓒: %Element($../Categories(u = u)),
+  𝓓: %Element($../Categories(u = v))
 ): %ExplicitOperator {
   notation = $Function(
     function = '𝐅𝐮𝐧',
     arguments = [𝓒, 𝓓]
   ),
-  definition = [$../Categories(u = {$../../Essentials/Numbers/Natural/sum(
-      m = {$../../Essentials/Numbers/Natural/"maximum of two numbers"(
-        m = {u},
-        n = {v}
-      )},
-      n = {$../../Essentials/Numbers/Natural/number(value = 1)}
-    )}).category(
-      O = {$../Functors/Functors(
-        u = {u},
-        v = {v},
-        𝓒 = {𝓒},
-        𝓓 = {𝓓}
-      )},
+  definition = [$../Categories(u = $../../Essentials/Numbers/Natural/sum(
+      m = $../../Essentials/Numbers/Natural/"maximum of two numbers"(
+        m = u,
+        n = v
+      ),
+      n = $../../Essentials/Numbers/Natural/number(value = 1)
+    )).category(
+      O = $../Functors/Functors(
+        u = u,
+        v = v,
+        𝓒 = 𝓒,
+        𝓓 = 𝓓
+      ),
       _1 = {
         #(A,B: %Element($../Functors/Functors(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓}
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓
         ))),
-        {M = {$../"Natural transformations"/"Natural transformations"(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓},
-          F = {A},
-          G = {B}
-        )}}
+        {M = $../"Natural transformations"/"Natural transformations"(
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓,
+          F = A,
+          G = B
+        )}
       },
       _2 = {
         #(C: %Element($../Functors/Functors(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓}
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓
         ))),
-        {i = {$../"Natural transformations"/identity(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓},
-          F = {C}
-        )}}
+        {i = $../"Natural transformations"/identity(
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓,
+          F = C
+        )}
       },
       _3 = {
         #(D,E,F: %Element($../Functors/Functors(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓}
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓
         ))),
-        {∘ = {$../../Essentials/Operations/Operations(
-            X = {$../"Natural transformations"/"Natural transformations"(
-              u = {u},
-              v = {v},
-              𝓒 = {𝓒},
-              𝓓 = {𝓓},
-              F = {E},
-              G = {F}
-            )},
-            Y = {$../"Natural transformations"/"Natural transformations"(
-              u = {u},
-              v = {v},
-              𝓒 = {𝓒},
-              𝓓 = {𝓓},
-              F = {D},
-              G = {E}
-            )},
-            Z = {$../"Natural transformations"/"Natural transformations"(
-              u = {u},
-              v = {v},
-              𝓒 = {𝓒},
-              𝓓 = {𝓓},
-              F = {D},
-              G = {F}
-            )}
+        {∘ = $../../Essentials/Operations/Operations(
+            X = $../"Natural transformations"/"Natural transformations"(
+              u = u,
+              v = v,
+              𝓒 = 𝓒,
+              𝓓 = 𝓓,
+              F = E,
+              G = F
+            ),
+            Y = $../"Natural transformations"/"Natural transformations"(
+              u = u,
+              v = v,
+              𝓒 = 𝓒,
+              𝓓 = 𝓓,
+              F = D,
+              G = E
+            ),
+            Z = $../"Natural transformations"/"Natural transformations"(
+              u = u,
+              v = v,
+              𝓒 = 𝓒,
+              𝓓 = 𝓓,
+              F = D,
+              G = F
+            )
           ).operation(_1 = {
             #(
               ε: %Element($../"Natural transformations"/"Natural transformations"(
-                u = {u},
-                v = {v},
-                𝓒 = {𝓒},
-                𝓓 = {𝓓},
-                F = {E},
-                G = {F}
+                u = u,
+                v = v,
+                𝓒 = 𝓒,
+                𝓓 = 𝓓,
+                F = E,
+                G = F
               )),
               η: %Element($../"Natural transformations"/"Natural transformations"(
-                u = {u},
-                v = {v},
-                𝓒 = {𝓒},
-                𝓓 = {𝓓},
-                F = {D},
-                G = {E}
+                u = u,
+                v = v,
+                𝓒 = 𝓒,
+                𝓓 = 𝓓,
+                F = D,
+                G = E
               ))
             ),
-            {z = {$../"Natural transformations"/"vertical composition"(
-              u = {u},
-              v = {v},
-              𝓒 = {𝓒},
-              𝓓 = {𝓓},
-              F = {D},
-              G = {E},
-              H = {F},
-              η = {η},
-              ε = {ε}
-            )}}
-        })}}
+            {z = $../"Natural transformations"/"vertical composition"(
+              u = u,
+              v = v,
+              𝓒 = 𝓒,
+              𝓓 = 𝓓,
+              F = D,
+              G = E,
+              H = F,
+              η = η,
+              ε = ε
+            )}
+        })}
       }
   )]
 }

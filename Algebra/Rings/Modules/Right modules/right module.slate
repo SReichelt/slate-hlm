@@ -9,16 +9,16 @@
 $"right module"(
   𝐑: %Element($../../Rings),
   M: %Set,
-  ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = {M})),
+  ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
   "0": %Element(M),
   ⊖: %Element($../../../../Essentials/Functions/Functions(
-    X = {M},
-    Y = {M}
+    X = M,
+    Y = M
   )),
   ⊙: %Element($../../../../Essentials/Operations/Operations(
-    X = {M},
-    Y = {$../../Carrier(𝐑 = {𝐑})},
-    Z = {M}
+    X = M,
+    Y = $../../Carrier(𝐑 = 𝐑),
+    Z = M
   ))
 ): %Predicate {
   notation = $Structure(
@@ -41,56 +41,56 @@ $"right module"(
   definition = [
     %and(
       $../../../Groups/"abelian group"(
-        G = {M},
-        ∗ = {⊕},
-        e = {"0"},
-        i = {⊖}
+        G = M,
+        ∗ = ⊕,
+        e = "0",
+        i = ⊖
       ),
       $../../../../Essentials/Operations/"right-distributive"(
-        X = {$../../Carrier(𝐑 = {𝐑})},
-        Y = {M},
-        ∗ = {⊙},
-        ⋆ = {⊕}
+        X = $../../Carrier(𝐑 = 𝐑),
+        Y = M,
+        ∗ = ⊙,
+        ⋆ = ⊕
       ),
       %forall(
         #(
           x: %Element(M),
-          a,b: %Element($../../Carrier(𝐑 = {𝐑}))
+          a,b: %Element($../../Carrier(𝐑 = 𝐑))
         ),
         %equals(
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {$../../Carrier(𝐑 = {𝐑})},
-            Z = {M},
-            ∗ = {⊙},
-            x = {x},
-            y = {$../../sum(
-              𝐑 = {𝐑},
-              a = {a},
-              b = {b}
-            )}
+            X = M,
+            Y = $../../Carrier(𝐑 = 𝐑),
+            Z = M,
+            ∗ = ⊙,
+            x = x,
+            y = $../../sum(
+              𝐑 = 𝐑,
+              a = a,
+              b = b
+            )
           ),
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {M},
-            Z = {M},
-            ∗ = {⊕},
-            x = {$../../../../Essentials/Operations/value(
-              X = {M},
-              Y = {$../../Carrier(𝐑 = {𝐑})},
-              Z = {M},
-              ∗ = {⊙},
-              x = {x},
-              y = {a}
-            )},
-            y = {$../../../../Essentials/Operations/value(
-              X = {M},
-              Y = {$../../Carrier(𝐑 = {𝐑})},
-              Z = {M},
-              ∗ = {⊙},
-              x = {x},
-              y = {b}
-            )}
+            X = M,
+            Y = M,
+            Z = M,
+            ∗ = ⊕,
+            x = $../../../../Essentials/Operations/value(
+              X = M,
+              Y = $../../Carrier(𝐑 = 𝐑),
+              Z = M,
+              ∗ = ⊙,
+              x = x,
+              y = a
+            ),
+            y = $../../../../Essentials/Operations/value(
+              X = M,
+              Y = $../../Carrier(𝐑 = 𝐑),
+              Z = M,
+              ∗ = ⊙,
+              x = x,
+              y = b
+            )
           )
         )
       ),
@@ -98,204 +98,204 @@ $"right module"(
         #(x: %Element(M)),
         %equals(
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {$../../Carrier(𝐑 = {𝐑})},
-            Z = {M},
-            ∗ = {⊙},
-            x = {x},
-            y = {$../../zero(𝐑 = {𝐑})}
+            X = M,
+            Y = $../../Carrier(𝐑 = 𝐑),
+            Z = M,
+            ∗ = ⊙,
+            x = x,
+            y = $../../zero(𝐑 = 𝐑)
           ),
           "0"
         )
       ),
       $../../../../Essentials/Operations/"left absorbing element"(
-        X = {M},
-        Y = {$../../Carrier(𝐑 = {𝐑})},
-        ∗ = {⊙},
-        z = {"0"}
+        X = M,
+        Y = $../../Carrier(𝐑 = 𝐑),
+        ∗ = ⊙,
+        z = "0"
       ),
       %forall(
         #(
-          a: %Element($../../Carrier(𝐑 = {𝐑})),
+          a: %Element($../../Carrier(𝐑 = 𝐑)),
           x: %Element(M)
         ),
         %equals(
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {$../../Carrier(𝐑 = {𝐑})},
-            Z = {M},
-            ∗ = {⊙},
-            x = {x},
-            y = {$../../"additive inverse"(
-              𝐑 = {𝐑},
-              a = {a}
-            )}
+            X = M,
+            Y = $../../Carrier(𝐑 = 𝐑),
+            Z = M,
+            ∗ = ⊙,
+            x = x,
+            y = $../../"additive inverse"(
+              𝐑 = 𝐑,
+              a = a
+            )
           ),
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {$../../Carrier(𝐑 = {𝐑})},
-            Z = {M},
-            ∗ = {⊙},
-            x = {$../../../../Essentials/Functions/value(
-              X = {M},
-              Y = {M},
-              f = {⊖},
-              x = {x}
-            )},
-            y = {a}
+            X = M,
+            Y = $../../Carrier(𝐑 = 𝐑),
+            Z = M,
+            ∗ = ⊙,
+            x = $../../../../Essentials/Functions/value(
+              X = M,
+              Y = M,
+              f = ⊖,
+              x = x
+            ),
+            y = a
           ),
           $../../../../Essentials/Functions/value(
-            X = {M},
-            Y = {M},
-            f = {⊖},
-            x = {$../../../../Essentials/Operations/value(
-              X = {M},
-              Y = {$../../Carrier(𝐑 = {𝐑})},
-              Z = {M},
-              ∗ = {⊙},
-              x = {x},
-              y = {a}
-            )}
+            X = M,
+            Y = M,
+            f = ⊖,
+            x = $../../../../Essentials/Operations/value(
+              X = M,
+              Y = $../../Carrier(𝐑 = 𝐑),
+              Z = M,
+              ∗ = ⊙,
+              x = x,
+              y = a
+            )
           )
         )
       ),
       %forall(
         #(
           x: %Element(M),
-          a,b: %Element($../../Carrier(𝐑 = {𝐑}))
+          a,b: %Element($../../Carrier(𝐑 = 𝐑))
         ),
         %equals(
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {$../../Carrier(𝐑 = {𝐑})},
-            Z = {M},
-            ∗ = {⊙},
-            x = {x},
-            y = {$../../product(
-              𝐑 = {𝐑},
-              a = {a},
-              b = {b}
-            )}
+            X = M,
+            Y = $../../Carrier(𝐑 = 𝐑),
+            Z = M,
+            ∗ = ⊙,
+            x = x,
+            y = $../../product(
+              𝐑 = 𝐑,
+              a = a,
+              b = b
+            )
           ),
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {$../../Carrier(𝐑 = {𝐑})},
-            Z = {M},
-            ∗ = {⊙},
-            x = {$../../../../Essentials/Operations/value(
-              X = {M},
-              Y = {$../../Carrier(𝐑 = {𝐑})},
-              Z = {M},
-              ∗ = {⊙},
-              x = {x},
-              y = {a}
-            )},
-            y = {b}
+            X = M,
+            Y = $../../Carrier(𝐑 = 𝐑),
+            Z = M,
+            ∗ = ⊙,
+            x = $../../../../Essentials/Operations/value(
+              X = M,
+              Y = $../../Carrier(𝐑 = 𝐑),
+              Z = M,
+              ∗ = ⊙,
+              x = x,
+              y = a
+            ),
+            y = b
           )
         )
       ),
       $../../../../Essentials/Operations/"right identity element"(
-        X = {M},
-        Y = {$../../Carrier(𝐑 = {𝐑})},
-        ∗ = {⊙},
-        e = {$../../one(𝐑 = {𝐑})}
+        X = M,
+        Y = $../../Carrier(𝐑 = 𝐑),
+        ∗ = ⊙,
+        e = $../../one(𝐑 = 𝐑)
       )
     ),
     %and(
       $../../../Groups/"abelian group"(
-        G = {M},
-        ∗ = {⊕},
-        e = {"0"},
-        i = {⊖}
+        G = M,
+        ∗ = ⊕,
+        e = "0",
+        i = ⊖
       ),
       $../../../../Essentials/Operations/"right-distributive"(
-        X = {$../../Carrier(𝐑 = {𝐑})},
-        Y = {M},
-        ∗ = {⊙},
-        ⋆ = {⊕}
+        X = $../../Carrier(𝐑 = 𝐑),
+        Y = M,
+        ∗ = ⊙,
+        ⋆ = ⊕
       ),
       %forall(
         #(
           x: %Element(M),
-          a,b: %Element($../../Carrier(𝐑 = {𝐑}))
+          a,b: %Element($../../Carrier(𝐑 = 𝐑))
         ),
         %equals(
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {$../../Carrier(𝐑 = {𝐑})},
-            Z = {M},
-            ∗ = {⊙},
-            x = {x},
-            y = {$../../sum(
-              𝐑 = {𝐑},
-              a = {a},
-              b = {b}
-            )}
+            X = M,
+            Y = $../../Carrier(𝐑 = 𝐑),
+            Z = M,
+            ∗ = ⊙,
+            x = x,
+            y = $../../sum(
+              𝐑 = 𝐑,
+              a = a,
+              b = b
+            )
           ),
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {M},
-            Z = {M},
-            ∗ = {⊕},
-            x = {$../../../../Essentials/Operations/value(
-              X = {M},
-              Y = {$../../Carrier(𝐑 = {𝐑})},
-              Z = {M},
-              ∗ = {⊙},
-              x = {x},
-              y = {a}
-            )},
-            y = {$../../../../Essentials/Operations/value(
-              X = {M},
-              Y = {$../../Carrier(𝐑 = {𝐑})},
-              Z = {M},
-              ∗ = {⊙},
-              x = {x},
-              y = {b}
-            )}
+            X = M,
+            Y = M,
+            Z = M,
+            ∗ = ⊕,
+            x = $../../../../Essentials/Operations/value(
+              X = M,
+              Y = $../../Carrier(𝐑 = 𝐑),
+              Z = M,
+              ∗ = ⊙,
+              x = x,
+              y = a
+            ),
+            y = $../../../../Essentials/Operations/value(
+              X = M,
+              Y = $../../Carrier(𝐑 = 𝐑),
+              Z = M,
+              ∗ = ⊙,
+              x = x,
+              y = b
+            )
           )
         )
       ),
       %forall(
         #(
           x: %Element(M),
-          a,b: %Element($../../Carrier(𝐑 = {𝐑}))
+          a,b: %Element($../../Carrier(𝐑 = 𝐑))
         ),
         %equals(
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {$../../Carrier(𝐑 = {𝐑})},
-            Z = {M},
-            ∗ = {⊙},
-            x = {x},
-            y = {$../../product(
-              𝐑 = {𝐑},
-              a = {a},
-              b = {b}
-            )}
+            X = M,
+            Y = $../../Carrier(𝐑 = 𝐑),
+            Z = M,
+            ∗ = ⊙,
+            x = x,
+            y = $../../product(
+              𝐑 = 𝐑,
+              a = a,
+              b = b
+            )
           ),
           $../../../../Essentials/Operations/value(
-            X = {M},
-            Y = {$../../Carrier(𝐑 = {𝐑})},
-            Z = {M},
-            ∗ = {⊙},
-            x = {$../../../../Essentials/Operations/value(
-              X = {M},
-              Y = {$../../Carrier(𝐑 = {𝐑})},
-              Z = {M},
-              ∗ = {⊙},
-              x = {x},
-              y = {a}
-            )},
-            y = {b}
+            X = M,
+            Y = $../../Carrier(𝐑 = 𝐑),
+            Z = M,
+            ∗ = ⊙,
+            x = $../../../../Essentials/Operations/value(
+              X = M,
+              Y = $../../Carrier(𝐑 = 𝐑),
+              Z = M,
+              ∗ = ⊙,
+              x = x,
+              y = a
+            ),
+            y = b
           )
         )
       ),
       $../../../../Essentials/Operations/"right identity element"(
-        X = {M},
-        Y = {$../../Carrier(𝐑 = {𝐑})},
-        ∗ = {⊙},
-        e = {$../../one(𝐑 = {𝐑})}
+        X = M,
+        Y = $../../Carrier(𝐑 = 𝐑),
+        ∗ = ⊙,
+        e = $../../one(𝐑 = 𝐑)
       )
     )
   ]

@@ -6,8 +6,8 @@ $Kernel(
     auto = %true
   ),
   φ: %Element($Homomorphisms(
-    𝐑 = {𝐑},
-    𝐒 = {𝐒}
+    𝐑 = 𝐑,
+    𝐒 = 𝐒
   ))
 ): %SetOperator {
   notation = $Function(
@@ -15,9 +15,9 @@ $Kernel(
     arguments = [φ]
   ),
   definition = [$../../../Essentials/Functions/Preimage(
-    X = {$../Carrier(𝐑 = {𝐑})},
-    Y = {$../Carrier(𝐑 = {𝐒})},
-    f = {φ},
-    S = {%enumeration($../zero(𝐑 = {𝐒}))}
+    X = $../Carrier(𝐑 = 𝐑),
+    Y = $../Carrier(𝐑 = 𝐒),
+    f = φ,
+    S = %enumeration($../zero(𝐑 = 𝐒))
   )]
 }

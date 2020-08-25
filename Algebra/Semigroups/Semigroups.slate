@@ -24,18 +24,18 @@ $Semigroups: %SetOperator {
           constructor = $../Magmas/Magmas.magma,
           parameters = #(
             M: %Set,
-            ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
+            ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
           ),
           value = $semigroup(
-            M = {M},
-            ∗ = {∗}
+            M = M,
+            ∗ = ∗
           )
         }]
       )
     ),
     %subset(
       #(𝐒: %Element($../Magmas/Magmas)),
-      $../Magmas/associative(𝐌 = {𝐒})
+      $../Magmas/associative(𝐌 = 𝐒)
     )
   ]
 }

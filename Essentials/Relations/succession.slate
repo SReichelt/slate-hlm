@@ -8,34 +8,34 @@
  */
 $succession(
   S,T: %Set(auto = %true),
-  ⪯: %Element($Endorelations(S = {S})),
+  ⪯: %Element($Endorelations(S = S)),
   _1: %Constraint($"partial order"(
-    S = {S},
-    ⪯ = {⪯}
+    S = S,
+    ⪯ = ⪯
   )),
-  ⊑: %Element($Endorelations(S = {T})),
+  ⊑: %Element($Endorelations(S = T)),
   _2: %Constraint($"partial order"(
-    S = {T},
-    ⪯ = {⊑}
+    S = T,
+    ⪯ = ⊑
   ))
 ): %ExplicitOperator {
   notation = $Operator(
     symbol = '≪',
     operands = [⪯, ⊑]
   ),
-  definition = [$Endorelations(S = {$../Sets/"Disjoint union"(
-      S = {S},
-      T = {T}
-    )}).relation(_1 = {
+  definition = [$Endorelations(S = $../Sets/"Disjoint union"(
+      S = S,
+      T = T
+    )).relation(_1 = {
       #(a,b: %Element($../Sets/"Disjoint union"(
-        S = {S},
-        T = {T}
+        S = S,
+        T = T
       ))),
-      {p = {%structural(
+      {p = %structural(
         b,
         $../Sets/"Disjoint union"(
-          S = {S},
-          T = {T}
+          S = S,
+          T = T
         ),
         [
           {
@@ -44,19 +44,19 @@ $succession(
             value = %structural(
               a,
               $../Sets/"Disjoint union"(
-                S = {S},
-                T = {T}
+                S = S,
+                T = T
               ),
               [
                 {
                   constructor = $../Sets/"Disjoint union".left,
                   parameters = #(s_a: %Element(S)),
                   value = $related(
-                    S = {S},
-                    T = {S},
-                    ≺ = {⪯},
-                    s = {s_a},
-                    t = {s_b}
+                    S = S,
+                    T = S,
+                    ≺ = ⪯,
+                    s = s_a,
+                    t = s_b
                   )
                 },
                 {
@@ -73,8 +73,8 @@ $succession(
             value = %structural(
               a,
               $../Sets/"Disjoint union"(
-                S = {S},
-                T = {T}
+                S = S,
+                T = T
               ),
               [
                 {
@@ -86,17 +86,17 @@ $succession(
                   constructor = $../Sets/"Disjoint union".right,
                   parameters = #(t_a: %Element(T)),
                   value = $related(
-                    S = {T},
-                    T = {T},
-                    ≺ = {⊑},
-                    s = {t_a},
-                    t = {t_b}
+                    S = T,
+                    T = T,
+                    ≺ = ⊑,
+                    s = t_a,
+                    t = t_b
                   )
                 }
               ]
             )
           }
         ]
-      )}}
+      )}
   })]
 }

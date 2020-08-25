@@ -10,7 +10,7 @@
  */
 $reflexive(
   S: %Set(auto = %true),
-  ⪯: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $Property(
     operand = ⪯,
@@ -19,11 +19,11 @@ $reflexive(
   definition = [%forall(
     #(s: %Element(S)),
     $related(
-      S = {S},
-      T = {S},
-      s = {s},
-      ≺ = {⪯},
-      t = {s}
+      S = S,
+      T = S,
+      s = s,
+      ≺ = ⪯,
+      t = s
     )
   )]
 }

@@ -2,8 +2,8 @@
 
 $"starts with finite sequence"(
   S: %Set(auto = %true),
-  𝐚: %Element($"Infinite sequences"(S = {S})),
-  𝒃: %Element($"Finite sequences"(S = {S}))
+  𝐚: %Element($"Infinite sequences"(S = S)),
+  𝒃: %Element($"Finite sequences"(S = S))
 ): %Predicate {
   notation = $TextualRelation(
     verb = 'starts with',
@@ -11,21 +11,21 @@ $"starts with finite sequence"(
   ),
   definition = [%structural(
     𝒃,
-    $"Finite sequences"(S = {S}),
+    $"Finite sequences"(S = S),
     [{
       constructor = $"Finite sequences".sequence,
       parameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
         𝐛: %Element($Tuples(
-          S = {S},
-          α = {n}
+          S = S,
+          α = n
         ))
       ),
       value = $"starts with"(
-        S = {S},
-        𝐚 = {𝐚},
-        n = {n},
-        𝐛 = {𝐛}
+        S = S,
+        𝐚 = 𝐚,
+        n = n,
+        𝐛 = 𝐛
       )
     }]
   )]

@@ -6,15 +6,15 @@
 $"Actual linear combination equals formal linear combination"(r,i: %Element($../Real/"Real numbers")): %StandardTheorem {
   claim = %equals(
     $"Complex numbers".complex(
-      r = {r},
-      i = {i}
+      r = r,
+      i = i
     ),
     $sum(
-      a = {r},
-      b = {$product(
-        a = {i},
-        b = {$"imaginary unit"}
-      )}
+      a = r,
+      b = $product(
+        a = i,
+        b = $"imaginary unit"
+      )
     )
   )
 }

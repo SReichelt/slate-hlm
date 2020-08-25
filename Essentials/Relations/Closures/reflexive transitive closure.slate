@@ -8,7 +8,7 @@
  */
 $"reflexive transitive closure"(
   S: %Set(auto = %true),
-  ≺: %Element($../Endorelations(S = {S}))
+  ≺: %Element($../Endorelations(S = S))
 ): %ExplicitOperator {
   notation = $SubSup(
     body = ≺,
@@ -16,36 +16,36 @@ $"reflexive transitive closure"(
   ),
   definition = [
     $closure(
-      S = {S},
-      T = {S},
-      ≺ = {≺},
-      p = {$../../Properties/Properties(S = {$../Relations(
-          S = {S},
-          T = {S}
-        )}).property(_1 = {
+      S = S,
+      T = S,
+      ≺ = ≺,
+      p = $../../Properties/Properties(S = $../Relations(
+          S = S,
+          T = S
+        )).property(_1 = {
           #(≺: %Element($../Relations(
-            S = {S},
-            T = {S}
+            S = S,
+            T = S
           ))),
-          {p = {$../preorder(
-            S = {S},
-            ⪯ = {≺}
-          )}}
-      })}
+          {p = $../preorder(
+            S = S,
+            ⪯ = ≺
+          )}
+      })
     ),
     $"reflexive closure"(
-      S = {S},
-      ≺ = {$"transitive closure"(
-        S = {S},
-        ≺ = {≺}
-      )}
+      S = S,
+      ≺ = $"transitive closure"(
+        S = S,
+        ≺ = ≺
+      )
     ),
     $"transitive closure"(
-      S = {S},
-      ≺ = {$"reflexive closure"(
-        S = {S},
-        ≺ = {≺}
-      )}
+      S = S,
+      ≺ = $"reflexive closure"(
+        S = S,
+        ≺ = ≺
+      )
     )
   ]
 }

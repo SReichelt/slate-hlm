@@ -2,24 +2,24 @@
 
 $finite(
   S: %Set(auto = %true),
-  𝑻: %Element($Multisets(S = {S}))
+  𝑻: %Element($Multisets(S = S))
 ): %Predicate {
   notation = $Property(
     operand = 𝑻,
     property = %neg('finite', 'infinite')
   ),
   definition = [
-    $../../Numbers/Cardinal/finite(κ = {$cardinality(
-      S = {S},
-      𝑻 = {𝑻}
-    )}),
-    $../finite(S = {$Elements(
-      S = {S},
-      𝑻 = {𝑻}
-    )}),
-    $../finite(S = {$Set(
-      S = {S},
-      𝑻 = {𝑻}
-    )})
+    $../../Numbers/Cardinal/finite(κ = $cardinality(
+      S = S,
+      𝑻 = 𝑻
+    )),
+    $../finite(S = $Elements(
+      S = S,
+      𝑻 = 𝑻
+    )),
+    $../finite(S = $Set(
+      S = S,
+      𝑻 = 𝑻
+    ))
   ]
 }

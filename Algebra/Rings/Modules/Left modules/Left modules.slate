@@ -10,24 +10,24 @@
 $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
   $module(
     M: %Set,
-    ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = {M})),
+    ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
     "0": %Element(M),
     ⊖: %Element($../../../../Essentials/Functions/Functions(
-      X = {M},
-      Y = {M}
+      X = M,
+      Y = M
     )),
     ⊙: %Element($../../../../Essentials/Operations/Operations(
-      X = {$../../Carrier(𝐑 = {𝐑})},
-      Y = {M},
-      Z = {M}
+      X = $../../Carrier(𝐑 = 𝐑),
+      Y = M,
+      Z = M
     )),
     _1: %Constraint($"left module"(
-      𝐑 = {𝐑},
-      M = {M},
-      ⊕ = {⊕},
-      "0" = {"0"},
-      ⊖ = {⊖},
-      ⊙ = {⊙}
+      𝐑 = 𝐑,
+      M = M,
+      ⊕ = ⊕,
+      "0" = "0",
+      ⊖ = ⊖,
+      ⊙ = ⊙
     ))
   ): %Constructor {
     notation = $SubSup(
@@ -40,82 +40,82 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
     equalityDefinition = {
       leftParameters = #(
         M: %Set,
-        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = {M})),
+        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
         "0": %Element(M),
         ⊖: %Element($../../../../Essentials/Functions/Functions(
-          X = {M},
-          Y = {M}
+          X = M,
+          Y = M
         )),
         ⊙: %Element($../../../../Essentials/Operations/Operations(
-          X = {$../../Carrier(𝐑 = {𝐑})},
-          Y = {M},
-          Z = {M}
+          X = $../../Carrier(𝐑 = 𝐑),
+          Y = M,
+          Z = M
         )),
         _1: %Constraint($"left module"(
-          𝐑 = {𝐑},
-          M = {M},
-          ⊕ = {⊕},
-          "0" = {"0"},
-          ⊖ = {⊖},
-          ⊙ = {⊙}
+          𝐑 = 𝐑,
+          M = M,
+          ⊕ = ⊕,
+          "0" = "0",
+          ⊖ = ⊖,
+          ⊙ = ⊙
         ))
       ),
       rightParameters = #(
         N: %Set,
-        ⋆: %Element($../../../../Essentials/Operations/"Inner operations"(X = {N})),
+        ⋆: %Element($../../../../Essentials/Operations/"Inner operations"(X = N)),
         𝟢: %Element(N),
         ∼: %Element($../../../../Essentials/Functions/Functions(
-          X = {N},
-          Y = {N}
+          X = N,
+          Y = N
         )),
         ∗: %Element($../../../../Essentials/Operations/Operations(
-          X = {$../../Carrier(𝐑 = {𝐑})},
-          Y = {N},
-          Z = {N}
+          X = $../../Carrier(𝐑 = 𝐑),
+          Y = N,
+          Z = N
         )),
         _2: %Constraint($"left module"(
-          𝐑 = {𝐑},
-          M = {N},
-          ⊕ = {⋆},
-          "0" = {𝟢},
-          ⊖ = {∼},
-          ⊙ = {∗}
+          𝐑 = 𝐑,
+          M = N,
+          ⊕ = ⋆,
+          "0" = 𝟢,
+          ⊖ = ∼,
+          ⊙ = ∗
         ))
       ),
       definition = [%exists(
         #(φ: %Element($../../../../Essentials/Functions/Bijections(
-          X = {M},
-          Y = {N}
+          X = M,
+          Y = N
         ))),
         formula = %and(
           $../../../Generic/Isomorphisms/"inner operation condition"(
-            X = {M},
-            Y = {N},
-            φ = {φ},
-            ∗ = {⊕},
-            ⋆ = {⋆}
+            X = M,
+            Y = N,
+            φ = φ,
+            ∗ = ⊕,
+            ⋆ = ⋆
           ),
           $../../../Generic/Isomorphisms/"element condition"(
-            X = {M},
-            Y = {N},
-            φ = {φ},
-            x = {"0"},
-            y = {𝟢}
+            X = M,
+            Y = N,
+            φ = φ,
+            x = "0",
+            y = 𝟢
           ),
           $../../../Generic/Isomorphisms/"function condition"(
-            X = {M},
-            Y = {N},
-            φ = {φ},
-            f = {⊖},
-            g = {∼}
+            X = M,
+            Y = N,
+            φ = φ,
+            f = ⊖,
+            g = ∼
           ),
           $../../../Generic/Isomorphisms/"left operation condition"(
-            S = {$../../Carrier(𝐑 = {𝐑})},
-            X = {M},
-            Y = {N},
-            φ = {φ},
-            ∗ = {⊙},
-            ⋆ = {∗}
+            S = $../../Carrier(𝐑 = 𝐑),
+            X = M,
+            Y = N,
+            φ = φ,
+            ∗ = ⊙,
+            ⋆ = ∗
           )
         )
       )],

@@ -5,18 +5,18 @@
  */
 $"Product is commutative": %StandardTheorem {
   claim = $../../Operations/commutative(
-    X = {$Integers},
-    Z = {$Integers},
-    ∗ = {$../../Operations/Operations(
-        X = {$Integers},
-        Y = {$Integers},
-        Z = {$Integers}
+    X = $Integers,
+    Z = $Integers,
+    ∗ = $../../Operations/Operations(
+        X = $Integers,
+        Y = $Integers,
+        Z = $Integers
       ).operation(_1 = {
         #(a,b: %Element($Integers)),
-        {z = {$product(
-          a = {a},
-          b = {b}
-        )}}
-    })}
+        {z = $product(
+          a = a,
+          b = b
+        )}
+    })
   )
 }

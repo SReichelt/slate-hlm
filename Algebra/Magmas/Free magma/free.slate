@@ -6,10 +6,10 @@ $free(𝐌: %Element($../Magmas)): %Predicate {
     property = 'free'
   ),
   definition = [%exists(
-    #(S: %Subset($../Carrier(𝐌 = {𝐌}))),
+    #(S: %Subset($../Carrier(𝐌 = 𝐌))),
     formula = $"free on set"(
-      𝐌 = {𝐌},
-      S = {S}
+      𝐌 = 𝐌,
+      S = S
     )
   )]
 }

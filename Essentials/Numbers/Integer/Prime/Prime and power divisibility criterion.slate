@@ -7,25 +7,25 @@ $"Prime and power divisibility criterion"(
 ): %EquivalenceTheorem {
   conditions = [
     $../divisible(
-      a = {p},
-      b = {a}
+      a = p,
+      b = a
     ),
     $../divisible(
-      a = {p},
-      b = {$../power(
-        a = {a},
-        n = {n}
-      )}
+      a = p,
+      b = $../power(
+        a = a,
+        n = n
+      )
     ),
     $../divisible(
-      a = {$../power(
-        a = {p},
-        n = {n}
-      )},
-      b = {$../power(
-        a = {a},
-        n = {n}
-      )}
+      a = $../power(
+        a = p,
+        n = n
+      ),
+      b = $../power(
+        a = a,
+        n = n
+      )
     )
   ]
 }

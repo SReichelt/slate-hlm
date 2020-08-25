@@ -5,16 +5,16 @@
  */
 $"indexed element in well-ordered set"(
   S: %Set,
-  ⪯: %Element($../Relations/Endorelations(S = {S})),
+  ⪯: %Element($../Relations/Endorelations(S = S)),
   _1: %Constraint($../Relations/"well-order"(
-    S = {S},
-    ⪯ = {⪯}
+    S = S,
+    ⪯ = ⪯
   )),
   α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(
-    S = {S},
-    ⪯ = {⪯}
+    S = S,
+    ⪯ = ⪯
   )),
-  β: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {α}))
+  β: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))
 ): %ImplicitOperator {
   notation = $Function(
     function = $SubSup(
@@ -27,9 +27,9 @@ $"indexed element in well-ordered set"(
   parameter = #(s: %Element(S)),
   definition = [%equals(
     $"index in well-ordered set"(
-      S = {S},
-      ⪯ = {⪯},
-      s = {s}
+      S = S,
+      ⪯ = ⪯,
+      s = s
     ),
     β
   )]

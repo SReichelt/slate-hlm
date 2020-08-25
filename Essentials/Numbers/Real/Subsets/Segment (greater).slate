@@ -10,14 +10,14 @@ $"Segment (greater)"(a: %Element($../"Real numbers")): %SetOperator {
     %subset(
       #(b: %Element($../"Real numbers")),
       $../less(
-        b = {b},
-        a = {a}
+        b = b,
+        a = a
       )
     ),
     $../../../Sets/"Relative complement"(
-      U = {$../"Real numbers"},
-      S = {$../"Real numbers"},
-      T = {$"Segment (less or equal)"(a = {a})}
+      U = $../"Real numbers",
+      S = $../"Real numbers",
+      T = $"Segment (less or equal)"(a = a)
     )
   ]
 }

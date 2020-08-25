@@ -26,11 +26,11 @@ $power(
         constructor = $../Natural/"Natural numbers".successor,
         parameters = #(x: %Element($../Natural/"Natural numbers")),
         value = $product(
-          a = {$power(
-            a = {a},
-            n = {x}
-          )},
-          b = {a}
+          a = $power(
+            a = a,
+            n = x
+          ),
+          b = a
         ),
         rewrite = %true
       }

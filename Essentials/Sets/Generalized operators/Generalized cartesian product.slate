@@ -16,7 +16,7 @@ $"Generalized cartesian product"(
 ): %Construction {
   $product(_2: %Binder(
     #(j: %Element(I)),
-    #(s: %Element(S[i = {j}]))
+    #(s: %Element(S[i = j]))
   )): %Constructor {
     notation = $SubSup(
       body = $Parens(
@@ -28,15 +28,15 @@ $"Generalized cartesian product"(
     equalityDefinition = {
       leftParameters = #(_2: %Binder(
         #(j: %Element(I)),
-        #(s: %Element(S[i = {j}]))
+        #(s: %Element(S[i = j]))
       )),
       rightParameters = #(_3: %Binder(
         #(j: %Element(I)),
-        #(t: %Element(S[i = {j}]))
+        #(t: %Element(S[i = j]))
       )),
       definition = [%forall(
         #(j: %Element(I)),
-        %equals(s[j = {j}], t[j = {j}])
+        %equals(s[j = j], t[j = j])
       )],
       isomorphic = %true
     }

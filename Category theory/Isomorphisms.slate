@@ -12,12 +12,12 @@ $Isomorphisms(
     auto = %true
   ),
   𝓒: %Element(
-    $Categories(u = {u}),
+    $Categories(u = u),
     auto = %true
   ),
   𝐗,𝐘: %Element($Objects(
-    u = {u},
-    𝓒 = {𝓒}
+    u = u,
+    𝓒 = 𝓒
   ))
 ): %SetOperator {
   notation = $Function(
@@ -38,49 +38,49 @@ $Isomorphisms(
   definition = [
     %subset(
       #(f: %Element($Morphisms(
-        u = {u},
-        𝓒 = {𝓒},
-        𝐗 = {𝐗},
-        𝐘 = {𝐘}
+        u = u,
+        𝓒 = 𝓒,
+        𝐗 = 𝐗,
+        𝐘 = 𝐘
       ))),
       %exists(
         #(g: %Element($Morphisms(
-          u = {u},
-          𝓒 = {𝓒},
-          𝐗 = {𝐘},
-          𝐘 = {𝐗}
+          u = u,
+          𝓒 = 𝓒,
+          𝐗 = 𝐘,
+          𝐘 = 𝐗
         ))),
         formula = %and(
           %equals(
             $composition(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐗},
-              𝐘 = {𝐘},
-              𝐙 = {𝐗},
-              f = {f},
-              g = {g}
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐗,
+              𝐘 = 𝐘,
+              𝐙 = 𝐗,
+              f = f,
+              g = g
             ),
             $identity(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐗}
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐗
             )
           ),
           %equals(
             $composition(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐘},
-              𝐘 = {𝐗},
-              𝐙 = {𝐘},
-              f = {g},
-              g = {f}
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐘,
+              𝐘 = 𝐗,
+              𝐙 = 𝐘,
+              f = g,
+              g = f
             ),
             $identity(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐘}
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐘
             )
           )
         )
@@ -88,49 +88,49 @@ $Isomorphisms(
     ),
     %subset(
       #(f: %Element($Morphisms(
-        u = {u},
-        𝓒 = {𝓒},
-        𝐗 = {𝐗},
-        𝐘 = {𝐘}
+        u = u,
+        𝓒 = 𝓒,
+        𝐗 = 𝐗,
+        𝐘 = 𝐘
       ))),
       %existsUnique(
         #(g: %Element($Morphisms(
-          u = {u},
-          𝓒 = {𝓒},
-          𝐗 = {𝐘},
-          𝐘 = {𝐗}
+          u = u,
+          𝓒 = 𝓒,
+          𝐗 = 𝐘,
+          𝐘 = 𝐗
         ))),
         formula = %and(
           %equals(
             $composition(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐗},
-              𝐘 = {𝐘},
-              𝐙 = {𝐗},
-              f = {f},
-              g = {g}
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐗,
+              𝐘 = 𝐘,
+              𝐙 = 𝐗,
+              f = f,
+              g = g
             ),
             $identity(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐗}
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐗
             )
           ),
           %equals(
             $composition(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐘},
-              𝐘 = {𝐗},
-              𝐙 = {𝐘},
-              f = {g},
-              g = {f}
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐘,
+              𝐘 = 𝐗,
+              𝐙 = 𝐘,
+              f = g,
+              g = f
             ),
             $identity(
-              u = {u},
-              𝓒 = {𝓒},
-              𝐗 = {𝐘}
+              u = u,
+              𝓒 = 𝓒,
+              𝐗 = 𝐘
             )
           )
         )

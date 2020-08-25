@@ -6,5 +6,5 @@ $choice(S: %Set): %Predicate {
     singular = 'choice function',
     plural = 'choice functions'
   ),
-  definition = [%not($../empty(S = {$"Choice functions"(S = {S})}))]
+  definition = [%not($../empty(S = $"Choice functions"(S = S)))]
 }

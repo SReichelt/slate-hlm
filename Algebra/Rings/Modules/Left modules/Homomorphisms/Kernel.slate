@@ -13,13 +13,13 @@ $Kernel(
     auto = %true
   ),
   𝐌,𝐍: %Element(
-    $../"Left modules"(𝐑 = {𝐑}),
+    $../"Left modules"(𝐑 = 𝐑),
     auto = %true
   ),
   φ: %Element($Homomorphisms(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌},
-    𝐍 = {𝐍}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌,
+    𝐍 = 𝐍
   ))
 ): %SetOperator {
   notation = $Function(
@@ -27,18 +27,18 @@ $Kernel(
     arguments = [φ]
   ),
   definition = [$../../../../../Essentials/Functions/Preimage(
-    X = {$../Carrier(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌}
-    )},
-    Y = {$../Carrier(
-      𝐑 = {𝐑},
-      𝐌 = {𝐍}
-    )},
-    f = {φ},
-    S = {%enumeration($../zero(
-      𝐑 = {𝐑},
-      𝐌 = {𝐍}
-    ))}
+    X = $../Carrier(
+      𝐑 = 𝐑,
+      𝐌 = 𝐌
+    ),
+    Y = $../Carrier(
+      𝐑 = 𝐑,
+      𝐌 = 𝐍
+    ),
+    f = φ,
+    S = %enumeration($../zero(
+      𝐑 = 𝐑,
+      𝐌 = 𝐍
+    ))
   )]
 }

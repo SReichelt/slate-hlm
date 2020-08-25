@@ -5,7 +5,7 @@
  */
 $"greatest element"(
   S: %Set(auto = %true),
-  ⪯: %Element($Endorelations(S = {S})),
+  ⪯: %Element($Endorelations(S = S)),
   T: %Subset(S),
   t: %Element(T)
 ): %Predicate {
@@ -28,20 +28,20 @@ $"greatest element"(
   ),
   definition = [
     $"upper bound"(
-      S = {S},
-      ≺ = {⪯},
-      T = {T},
-      s = {t}
+      S = S,
+      ≺ = ⪯,
+      T = T,
+      s = t
     ),
     $"least element"(
-      S = {S},
-      T = {T},
-      ⪯ = {$converse(
-        S = {S},
-        T = {S},
-        ≺ = {⪯}
-      )},
-      t = {t}
+      S = S,
+      T = T,
+      ⪯ = $converse(
+        S = S,
+        T = S,
+        ≺ = ⪯
+      ),
+      t = t
     )
   ]
 }

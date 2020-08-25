@@ -27,8 +27,8 @@ $factorial(n: %Element($"Natural numbers")): %ExplicitOperator {
         constructor = $"Natural numbers".successor,
         parameters = #(x: %Element($"Natural numbers")),
         value = $product(
-          m = {$factorial(n = {x})},
-          n = {n}
+          m = $factorial(n = x),
+          n = n
         ),
         rewrite = %true
       }

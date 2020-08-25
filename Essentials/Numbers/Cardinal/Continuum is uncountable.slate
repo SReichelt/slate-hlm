@@ -6,5 +6,5 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/cardinality.html#cardinal.not_countable_real
  */
 $"Continuum is uncountable": %StandardTheorem {
-  claim = %not($countable(κ = {$Examples/continuum}))
+  claim = %not($countable(κ = $Examples/continuum))
 }

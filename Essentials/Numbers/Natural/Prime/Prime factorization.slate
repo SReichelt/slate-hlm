@@ -15,31 +15,31 @@ $"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTh
   claim = %equals(
     n,
     $../../../Operations/"Iterated operations"/"indexed by set with finite support"(
-      X = {$../"Natural numbers"},
-      ⨂ = {$../"Iterated operators"/"iterated product"},
-      I = {$"Prime numbers"},
+      X = $../"Natural numbers",
+      ⨂ = $../"Iterated operators"/"iterated product",
+      I = $"Prime numbers",
       _1 = {
         #(p: %Element($"Prime numbers")),
-        {a = {$../power(
-          m = {p},
-          n = {$multiplicity(
-            n = {n},
-            p = {p}
-          )}
-        )}}
+        {a = $../power(
+          m = p,
+          n = $multiplicity(
+            n = n,
+            p = p
+          )
+        )}
       }
     ),
     $../../../Operations/"Iterated operations"/"indexed by finite multiset"(
-      X = {$../"Natural numbers"},
-      ⨂ = {$../"Iterated operators"/"iterated product"},
-      S = {$"Prime numbers"},
-      𝑰 = {$"prime factors"(n = {n})},
+      X = $../"Natural numbers",
+      ⨂ = $../"Iterated operators"/"iterated product",
+      S = $"Prime numbers",
+      𝑰 = $"prime factors"(n = n),
       _2 = {
         #(p: %Element($../../../Sets/Multisets/Set(
-          S = {$"Prime numbers"},
-          𝑻 = {$"prime factors"(n = {n})}
+          S = $"Prime numbers",
+          𝑻 = $"prime factors"(n = n)
         ))),
-        {a = {p}}
+        {a = p}
       }
     )
   )

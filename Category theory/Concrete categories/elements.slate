@@ -1,7 +1,7 @@
 %../../../../logics/hlm%
 
 /**
- * @remarks This is one possible formalization of the discrete category obtained from elements of `S`. We simply define morphisms to be elements of `S` as well, such that `%setEquals($../Morphisms(u = {u}, 𝓒 = {$elements(u = {u}, S = {S})}, 𝐗 = {a}, 𝐘 = {a}), %enumeration($../identity(u = {u}, 𝓒 = {$elements(u = {u}, S = {S})}, 𝐗 = {a})), %enumeration(a))`, and `%setEquals($../Morphisms(u = {u}, 𝓒 = {$elements(u = {u}, S = {S})}, 𝐗 = {a}, 𝐘 = {b}), $../../Essentials/Sets/"Empty set")` if `%not(%equals(a, b))`.
+ * @remarks This is one possible formalization of the discrete category obtained from elements of `S`. We simply define morphisms to be elements of `S` as well, such that `%setEquals($../Morphisms(u = u, 𝓒 = $elements(u = u, S = S), 𝐗 = a, 𝐘 = a), %enumeration($../identity(u = u, 𝓒 = $elements(u = u, S = S), 𝐗 = a)), %enumeration(a))`, and `%setEquals($../Morphisms(u = u, 𝓒 = $elements(u = u, S = S), 𝐗 = a, 𝐘 = b), $../../Essentials/Sets/"Empty set")` if `%not(%equals(a, b))`.
  *
  *          (Note that the existence of `x` in the definition of morphism composition implies that `%equals(d, e, f)`.)
  *
@@ -21,55 +21,55 @@ $elements(
     ),
     arguments = [S]
   ),
-  definition = [$../Categories(u = {u}).category(
-      O = {S},
+  definition = [$../Categories(u = u).category(
+      O = S,
       _1 = {
         #(a,b: %Element(S)),
-        {M = {$../../Essentials/Sets/Intersection(
-          U = {S},
-          S = {%enumeration(a)},
-          T = {%enumeration(b)}
-        )}}
+        {M = $../../Essentials/Sets/Intersection(
+          U = S,
+          S = %enumeration(a),
+          T = %enumeration(b)
+        )}
       },
       _2 = {
         #(c: %Element(S)),
-        {i = {c}}
+        {i = c}
       },
       _3 = {
         #(d,e,f: %Element(S)),
-        {∘ = {$../../Essentials/Functions/Functions(
-            X = {$../../Essentials/Sets/"Cartesian product"(
-              S = {$../../Essentials/Sets/Intersection(
-                U = {S},
-                S = {%enumeration(e)},
-                T = {%enumeration(f)}
-              )},
-              T = {$../../Essentials/Sets/Intersection(
-                U = {S},
-                S = {%enumeration(d)},
-                T = {%enumeration(e)}
-              )}
-            )},
-            Y = {$../../Essentials/Sets/Intersection(
-              U = {S},
-              S = {%enumeration(d)},
-              T = {%enumeration(f)}
-            )}
+        {∘ = $../../Essentials/Functions/Functions(
+            X = $../../Essentials/Sets/"Cartesian product"(
+              S = $../../Essentials/Sets/Intersection(
+                U = S,
+                S = %enumeration(e),
+                T = %enumeration(f)
+              ),
+              T = $../../Essentials/Sets/Intersection(
+                U = S,
+                S = %enumeration(d),
+                T = %enumeration(e)
+              )
+            ),
+            Y = $../../Essentials/Sets/Intersection(
+              U = S,
+              S = %enumeration(d),
+              T = %enumeration(f)
+            )
           ).function(_1 = {
             #(x: %Element($../../Essentials/Sets/"Cartesian product"(
-              S = {$../../Essentials/Sets/Intersection(
-                U = {S},
-                S = {%enumeration(e)},
-                T = {%enumeration(f)}
-              )},
-              T = {$../../Essentials/Sets/Intersection(
-                U = {S},
-                S = {%enumeration(d)},
-                T = {%enumeration(e)}
-              )}
+              S = $../../Essentials/Sets/Intersection(
+                U = S,
+                S = %enumeration(e),
+                T = %enumeration(f)
+              ),
+              T = $../../Essentials/Sets/Intersection(
+                U = S,
+                S = %enumeration(d),
+                T = %enumeration(e)
+              )
             ))),
-            {y = {e}}
-        })}}
+            {y = e}
+        })}
       }
   )]
 }

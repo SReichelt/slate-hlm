@@ -3,7 +3,7 @@
 /**
  * We write:
  *
- * `$tuple(S = {S}, items = [{a_0}, {a_1}, {"..."}, {"a_n-1"}])` := `$Tuples(S = {S}, α = {n}).sequence(_1 = {#(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}))), {a = {a_k}}})`
+ * `$tuple(S = S, items = [{a_0}, {a_1}, {"..."}, {"a_n-1"}])` := `$Tuples(S = S, α = n).sequence(_1 = {#(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = n))), {a = {a_k}}})`
  */
 $tuple(
   S: %Set,
@@ -15,7 +15,7 @@ $tuple(
   ),
   variables = #(length: %Nat),
   references = {Tuples = $Tuples(
-    S = {S},
-    α = {$../Numbers/Natural/number(value = length)}
+    S = S,
+    α = $../Numbers/Natural/number(value = length)
   )}
 }

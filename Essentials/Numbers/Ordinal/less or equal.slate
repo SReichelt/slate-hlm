@@ -8,22 +8,22 @@ $"less or equal"(α,β: %Element($"Ordinal numbers")): %Predicate {
   definition = [
     %exists(
       #(φ: %Element($Homomorphisms/Homomorphisms(
-        α = {α},
-        β = {β}
+        α = α,
+        β = β
       ))),
       formula = $../../Functions/injective(
-        X = {$Carrier(α = {α})},
-        Y = {$Carrier(α = {β})},
-        f = {φ}
+        X = $Carrier(α = α),
+        Y = $Carrier(α = β),
+        f = φ
       )
     ),
     %exists(
-      #(S: %Subset($Carrier(α = {β}))),
+      #(S: %Subset($Carrier(α = β))),
       formula = %equals(
         α,
         $"Ordered subsets"/"subset ordinal"(
-          α = {β},
-          S = {S}
+          α = β,
+          S = S
         )
       )
     )

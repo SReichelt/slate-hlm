@@ -12,16 +12,16 @@ $"element order"(
     $../Groups,
     auto = %true
   ),
-  g: %Element($../Carrier(𝐆 = {𝐆})),
+  g: %Element($../Carrier(𝐆 = 𝐆)),
   S: %SetDef(%subset(
     #(n: %Element($../../../Essentials/Numbers/Natural/Subsets/"Positive numbers")),
     %equals(
       $../"power to natural number"(
-        𝐆 = {𝐆},
-        a = {g},
-        n = {n}
+        𝐆 = 𝐆,
+        a = g,
+        n = n
       ),
-      $../identity(𝐆 = {𝐆})
+      $../identity(𝐆 = 𝐆)
     )
   ))
 ): %ExplicitOperator {
@@ -30,18 +30,18 @@ $"element order"(
     style = '||'
   ),
   definition = [
-    $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {$../Subgroups/"Span of element"(
-      𝐆 = {𝐆},
-      g = {g}
-    )}),
+    $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Subgroups/"Span of element"(
+      𝐆 = 𝐆,
+      g = g
+    )),
     %cases([
       {
-        formula = %not($../../../Essentials/Sets/empty(S = {S})),
-        value = $../../../Essentials/Numbers/Natural/minimum(M = {S})
+        formula = %not($../../../Essentials/Sets/empty(S = S)),
+        value = $../../../Essentials/Numbers/Natural/minimum(M = S)
       },
       {
-        formula = $../../../Essentials/Sets/empty(S = {S}),
-        value = $../../../Essentials/Numbers/Cardinal/Examples/aleph(α = {$../../../Essentials/Numbers/Natural/number(value = 0)})
+        formula = $../../../Essentials/Sets/empty(S = S),
+        value = $../../../Essentials/Numbers/Cardinal/Examples/aleph(α = $../../../Essentials/Numbers/Natural/number(value = 0))
       }
     ])
   ]

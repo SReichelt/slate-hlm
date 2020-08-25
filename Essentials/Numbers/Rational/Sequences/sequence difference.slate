@@ -1,11 +1,11 @@
 %../../../../../../logics/hlm%
 
-$"sequence difference"(𝐚,𝐛: %Element($../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}))): %ExplicitOperator {
+$"sequence difference"(𝐚,𝐛: %Element($../../../Sequences/"Infinite sequences"(S = $../"Rational numbers"))): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [𝐚, 𝐛]),
   definition = [
     %structuralCases(
       𝐛,
-      $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
+      $../../../Sequences/"Infinite sequences"(S = $../"Rational numbers"),
       [{
         constructor = $../../../Sequences/"Infinite sequences".sequence,
         parameters = #(_2: %Binder(
@@ -14,27 +14,27 @@ $"sequence difference"(𝐚,𝐛: %Element($../../../Sequences/"Infinite sequenc
         )),
         value = %structuralCases(
           𝐚,
-          $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}),
+          $../../../Sequences/"Infinite sequences"(S = $../"Rational numbers"),
           [{
             constructor = $../../../Sequences/"Infinite sequences".sequence,
             parameters = #(_1: %Binder(
               #(n: %Element($../../Natural/"Natural numbers")),
               #(a: %Element($../"Rational numbers"))
             )),
-            value = $../../../Sequences/"Infinite sequences"(S = {$../"Rational numbers"}).sequence(_1 = {
+            value = $../../../Sequences/"Infinite sequences"(S = $../"Rational numbers").sequence(_1 = {
                 #(n: %Element($../../Natural/"Natural numbers")),
-                {a = {$../difference(
-                  a = {a[n = {n}]},
-                  b = {b[n = {n}]}
-                )}}
+                {a = $../difference(
+                  a = a[n = n],
+                  b = b[n = n]
+                )}
             })
           }]
         )
       }]
     ),
     $"sequence sum"(
-      𝐚 = {𝐚},
-      𝐛 = {$"sequence inverse"(𝐚 = {𝐛})}
+      𝐚 = 𝐚,
+      𝐛 = $"sequence inverse"(𝐚 = 𝐛)
     )
   ]
 }

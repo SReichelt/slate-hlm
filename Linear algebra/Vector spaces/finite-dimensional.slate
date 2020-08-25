@@ -11,7 +11,7 @@ $"finite-dimensional"(
     $../../Algebra/Fields/Fields,
     auto = %true
   ),
-  𝐕: %Element($"Vector spaces"(𝐅 = {𝐅}))
+  𝐕: %Element($"Vector spaces"(𝐅 = 𝐅))
 ): %Predicate {
   notation = $Property(
     operand = 𝐕,
@@ -20,20 +20,20 @@ $"finite-dimensional"(
   definition = [
     %exists(
       #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
-        𝐑 = {𝐅},
-        𝐌 = {𝐕}
+        𝐑 = 𝐅,
+        𝐌 = 𝐕
       ))),
       formula = $../../Essentials/Sequences/finite(
-        S = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
-          𝐑 = {𝐅},
-          𝐌 = {𝐕}
-        )},
-        𝒂 = {𝒙}
+        S = $../../Algebra/Rings/Modules/"Left modules"/Carrier(
+          𝐑 = 𝐅,
+          𝐌 = 𝐕
+        ),
+        𝒂 = 𝒙
       )
     ),
     $../../Algebra/Rings/Modules/"Left modules"/Coordinates/"finitely generated"(
-      𝐑 = {𝐅},
-      𝐌 = {𝐕}
+      𝐑 = 𝐅,
+      𝐌 = 𝐕
     )
   ]
 }

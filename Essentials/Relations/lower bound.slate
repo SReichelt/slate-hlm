@@ -2,7 +2,7 @@
 
 $"lower bound"(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S})),
+  ≺: %Element($Endorelations(S = S)),
   T: %Subset(S),
   s: %Element(S)
 ): %Predicate {
@@ -26,11 +26,11 @@ $"lower bound"(
   definition = [%forall(
     #(t: %Element(T)),
     $related(
-      S = {S},
-      T = {S},
-      ≺ = {≺},
-      s = {s},
-      t = {t}
+      S = S,
+      T = S,
+      ≺ = ≺,
+      s = s,
+      t = t
     )
   )]
 }

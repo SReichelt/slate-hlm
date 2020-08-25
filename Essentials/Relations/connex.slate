@@ -8,7 +8,7 @@
  */
 $connex(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S}))
+  ≺: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $Property(
     operand = ≺,
@@ -18,18 +18,18 @@ $connex(
     #(s,t: %Element(S)),
     %or(
       $related(
-        S = {S},
-        T = {S},
-        s = {s},
-        ≺ = {≺},
-        t = {t}
+        S = S,
+        T = S,
+        s = s,
+        ≺ = ≺,
+        t = t
       ),
       $related(
-        S = {S},
-        T = {S},
-        s = {t},
-        ≺ = {≺},
-        t = {s}
+        S = S,
+        T = S,
+        s = t,
+        ≺ = ≺,
+        t = s
       )
     )
   )]

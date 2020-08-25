@@ -24,15 +24,15 @@ $"Binary trees"(S: %Set(
     }
   }
 
-  $join(a,b: %Element($"Binary trees"(S = {S}))): %Constructor {
+  $join(a,b: %Element($"Binary trees"(S = S))): %Constructor {
     notation = $Operator(
       symbol = '^',
       operands = [a, b],
       space = ''
     ),
     equalityDefinition = {
-      leftParameters = #(a,b: %Element($"Binary trees"(S = {S}))),
-      rightParameters = #("a'","b'": %Element($"Binary trees"(S = {S}))),
+      leftParameters = #(a,b: %Element($"Binary trees"(S = S))),
+      rightParameters = #("a'","b'": %Element($"Binary trees"(S = S))),
       definition = [%and(
         %equals(a, "a'"),
         %equals(b, "b'")
@@ -47,6 +47,6 @@ $"Binary trees"(S: %Set(
   ),
   embedding = {
     parameter = #(x: %Element(S)),
-    target = $"Binary trees"(S = {S}).leaf(s = {x})
+    target = $"Binary trees"(S = S).leaf(s = x)
   }
 }

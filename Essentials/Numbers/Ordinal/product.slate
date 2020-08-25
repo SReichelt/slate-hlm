@@ -15,10 +15,10 @@ $product(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
         B: %Set,
-        ⊑: %Element($../../Relations/Endorelations(S = {B})),
+        ⊑: %Element($../../Relations/Endorelations(S = B)),
         _1: %Constraint($../../Relations/"well-order"(
-          S = {B},
-          ⪯ = {⊑}
+          S = B,
+          ⪯ = ⊑
         ))
       ),
       value = %structuralCases(
@@ -28,23 +28,23 @@ $product(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
           constructor = $"Ordinal numbers"."order type",
           parameters = #(
             A: %Set,
-            ⪯: %Element($../../Relations/Endorelations(S = {A})),
+            ⪯: %Element($../../Relations/Endorelations(S = A)),
             _1: %Constraint($../../Relations/"well-order"(
-              S = {A},
-              ⪯ = {⪯}
+              S = A,
+              ⪯ = ⪯
             ))
           ),
           value = $"Ordinal numbers"."order type"(
-            S = {$../../Sets/"Cartesian product"(
-              S = {A},
-              T = {B}
-            )},
-            ⪯ = {$../../Relations/"lexicographical order"(
-              S = {A},
-              T = {B},
-              ⪯ = {⪯},
-              ⊑ = {⊑}
-            )}
+            S = $../../Sets/"Cartesian product"(
+              S = A,
+              T = B
+            ),
+            ⪯ = $../../Relations/"lexicographical order"(
+              S = A,
+              T = B,
+              ⪯ = ⪯,
+              ⊑ = ⊑
+            )
           )
         }]
       )

@@ -3,8 +3,8 @@
 $related(
   S,T: %Set(auto = %true),
   ≺: %Element($Relations(
-    S = {S},
-    T = {T}
+    S = S,
+    T = T
   )),
   s: %Element(S),
   t: %Element(T)
@@ -16,8 +16,8 @@ $related(
   definition = [%structural(
     ≺,
     $Relations(
-      S = {S},
-      T = {T}
+      S = S,
+      T = T
     ),
     [{
       constructor = $Relations.relation,
@@ -28,7 +28,7 @@ $related(
         ),
         #(p: %Prop)
       )),
-      value = p[u = {s}, v = {t}]
+      value = p[u = s, v = t]
     }]
   )]
 }

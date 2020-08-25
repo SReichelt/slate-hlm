@@ -16,7 +16,7 @@ $"Groups with order"(κ: %Element($../../../../Essentials/Numbers/Cardinal/"Card
   definition = [%subset(
     #(𝐆: %Element($../../Groups)),
     %equals(
-      $../"group order"(𝐆 = {𝐆}),
+      $../"group order"(𝐆 = 𝐆),
       κ
     )
   )]

@@ -8,7 +8,7 @@ $operation(
     $Magmas,
     auto = %true
   ),
-  a,b: %Element($Carrier(𝐌 = {𝐌}))
+  a,b: %Element($Carrier(𝐌 = 𝐌))
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(operands = [a, b]),
   definition = [%structuralCases(
@@ -18,15 +18,15 @@ $operation(
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
       value = $../../Essentials/Operations/value(
-        X = {M},
-        Y = {M},
-        Z = {M},
-        ∗ = {∗},
-        x = {a},
-        y = {b}
+        X = M,
+        Y = M,
+        Z = M,
+        ∗ = ∗,
+        x = a,
+        y = b
       )
     }]
   )]

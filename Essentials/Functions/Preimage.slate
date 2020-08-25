@@ -6,8 +6,8 @@
 $Preimage(
   X,Y: %Set(auto = %true),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   )),
   S: %Subset(Y)
 ): %SetOperator {
@@ -19,10 +19,10 @@ $Preimage(
     #(x: %Element(X)),
     %in(
       $value(
-        X = {X},
-        Y = {Y},
-        f = {f},
-        x = {x}
+        X = X,
+        Y = Y,
+        f = f,
+        x = x
       ),
       S
     )

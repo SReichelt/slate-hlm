@@ -14,8 +14,8 @@ $Vectors(
     sup = n
   ),
   definition = [$Matrices(
-    𝐑 = {𝐑},
-    m = {$../../../Essentials/Numbers/Natural/number(value = 1)},
-    n = {n}
+    𝐑 = 𝐑,
+    m = $../../../Essentials/Numbers/Natural/number(value = 1),
+    n = n
   )]
 }

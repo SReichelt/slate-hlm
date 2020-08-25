@@ -6,7 +6,7 @@
  */
 $"absorbing element"(
   𝐌: %Element($Magmas),
-  z: %Element($Carrier(𝐌 = {𝐌}))
+  z: %Element($Carrier(𝐌 = 𝐌))
 ): %Predicate {
   notation = $NounRelation(
     operands = [z, 𝐌],
@@ -21,12 +21,12 @@ $"absorbing element"(
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
       value = $../../Essentials/Operations/"absorbing element"(
-        X = {M},
-        ∗ = {∗},
-        z = {z}
+        X = M,
+        ∗ = ∗,
+        z = z
       )
     }]
   )]

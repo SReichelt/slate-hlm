@@ -10,67 +10,67 @@ $product(
     auto = %true
   ),
   p,q: %Element($Polynomials(
-    𝐑 = {𝐑},
-    X = {X}
+    𝐑 = 𝐑,
+    X = X
   ))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [p, q]),
   definition = [%structuralCases(
     p,
     $Polynomials(
-      𝐑 = {𝐑},
-      X = {X}
+      𝐑 = 𝐑,
+      X = X
     ),
     [
       {
         constructor = $Polynomials.zero,
         value = $Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+            𝐑 = 𝐑,
+            X = X
           ).zero
       },
       {
         constructor = $Polynomials.term,
         parameters = #(
           r: %Element($Polynomials(
-            𝐑 = {𝐑},
-            X = {X}
+            𝐑 = 𝐑,
+            X = X
           )),
-          a: %Element($../Carrier(𝐑 = {𝐑})),
+          a: %Element($../Carrier(𝐑 = 𝐑)),
           _1: %Constraint(%or(
             %not(%equals(
               r,
               $Polynomials(
-                  𝐑 = {𝐑},
-                  X = {X}
+                  𝐑 = 𝐑,
+                  X = X
                 ).zero
             )),
             %not(%equals(
               a,
-              $../zero(𝐑 = {𝐑})
+              $../zero(𝐑 = 𝐑)
             ))
           ))
         ),
         value = $sum(
-          𝐑 = {𝐑},
-          X = {X},
-          p = {$normalized(
-            𝐑 = {𝐑},
-            X = {X},
-            p = {$product(
-              𝐑 = {𝐑},
-              X = {X},
-              p = {r},
-              q = {q}
-            )},
-            a = {$../zero(𝐑 = {𝐑})}
-          )},
-          q = {$"product with left scalar"(
-            𝐑 = {𝐑},
-            X = {X},
-            a = {a},
-            p = {q}
-          )}
+          𝐑 = 𝐑,
+          X = X,
+          p = $normalized(
+            𝐑 = 𝐑,
+            X = X,
+            p = $product(
+              𝐑 = 𝐑,
+              X = X,
+              p = r,
+              q = q
+            ),
+            a = $../zero(𝐑 = 𝐑)
+          ),
+          q = $"product with left scalar"(
+            𝐑 = 𝐑,
+            X = X,
+            a = a,
+            p = q
+          )
         )
       }
     ]

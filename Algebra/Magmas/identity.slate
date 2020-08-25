@@ -6,10 +6,10 @@
 $identity(
   𝐌: %Element($Magmas),
   _1: %Constraint(%exists(
-    #(e: %Element($Carrier(𝐌 = {𝐌}))),
+    #(e: %Element($Carrier(𝐌 = 𝐌))),
     formula = $"identity element"(
-      𝐌 = {𝐌},
-      e = {e}
+      𝐌 = 𝐌,
+      e = e
     )
   ))
 ): %ImplicitOperator {
@@ -17,9 +17,9 @@ $identity(
     body = '1',
     sub = 𝐌
   ),
-  parameter = #(m: %Element($Carrier(𝐌 = {𝐌}))),
+  parameter = #(m: %Element($Carrier(𝐌 = 𝐌))),
   definition = [$"identity element"(
-    𝐌 = {𝐌},
-    e = {m}
+    𝐌 = 𝐌,
+    e = m
   )]
 }

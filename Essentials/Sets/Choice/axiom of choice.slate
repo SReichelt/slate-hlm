@@ -28,6 +28,6 @@ $"axiom of choice": %Predicate {
   notation = 'AC',
   definition = [%forall(
     #(S: %Set),
-    $choice(S = {S})
+    $choice(S = S)
   )]
 }

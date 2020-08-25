@@ -22,10 +22,10 @@ $Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
         A: %Set,
-        ⪯: %Element($../../Relations/Endorelations(S = {A})),
+        ⪯: %Element($../../Relations/Endorelations(S = A)),
         _1: %Constraint($../../Relations/"well-order"(
-          S = {A},
-          ⪯ = {⪯}
+          S = A,
+          ⪯ = ⪯
         ))
       ),
       value = A

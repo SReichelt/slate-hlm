@@ -4,9 +4,9 @@ $"right operation restriction"(
   X,Y: %Set(auto = %true),
   A: %Subset(X),
   ∗: %Element($Operations(
-    X = {X},
-    Y = {Y},
-    Z = {X}
+    X = X,
+    Y = Y,
+    Z = X
   )),
   _1: %Constraint(%forall(
     #(
@@ -15,12 +15,12 @@ $"right operation restriction"(
     ),
     %in(
       $value(
-        X = {X},
-        Y = {Y},
-        Z = {X},
-        ∗ = {∗},
-        x = {x},
-        y = {y}
+        X = X,
+        Y = Y,
+        Z = X,
+        ∗ = ∗,
+        x = x,
+        y = y
       ),
       A
     )
@@ -38,16 +38,16 @@ $"right operation restriction"(
     minParenLevel = 3
   ),
   definition = [$../Functions/"codomain restriction"(
-    X = {$../Sets/"Cartesian product"(
-      S = {X},
-      T = {Y}
-    )},
-    A = {$../Sets/"Cartesian product"(
-      S = {A},
-      T = {Y}
-    )},
-    Y = {X},
-    B = {A},
-    f = {∗}
+    X = $../Sets/"Cartesian product"(
+      S = X,
+      T = Y
+    ),
+    A = $../Sets/"Cartesian product"(
+      S = A,
+      T = Y
+    ),
+    Y = X,
+    B = A,
+    f = ∗
   )]
 }

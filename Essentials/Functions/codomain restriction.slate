@@ -11,15 +11,15 @@ $"codomain restriction"(
   Y: %Set(auto = %true),
   B: %Subset(Y),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   )),
   _1: %Constraint(%sub(
     $Image(
-      X = {X},
-      Y = {Y},
-      f = {f},
-      S = {A}
+      X = X,
+      Y = Y,
+      f = f,
+      S = A
     ),
     B
   ))
@@ -34,15 +34,15 @@ $"codomain restriction"(
     minParenLevel = 3
   ),
   definition = [$Functions(
-      X = {A},
-      Y = {B}
+      X = A,
+      Y = B
     ).function(_1 = {
       #(x: %Element(A)),
-      {y = {$value(
-        X = {X},
-        Y = {Y},
-        f = {f},
-        x = {x}
-      )}}
+      {y = $value(
+        X = X,
+        Y = Y,
+        f = f,
+        x = x
+      )}
   })]
 }

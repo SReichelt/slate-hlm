@@ -9,7 +9,7 @@
  */
 $"partial order"(
   S: %Set(auto = %true),
-  ⪯: %Element($Endorelations(S = {S}))
+  ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $NounProperty(
     operand = ⪯,
@@ -19,26 +19,26 @@ $"partial order"(
   definition = [
     %and(
       $reflexive(
-        S = {S},
-        ⪯ = {⪯}
+        S = S,
+        ⪯ = ⪯
       ),
       $antisymmetric(
-        S = {S},
-        ⪯ = {⪯}
+        S = S,
+        ⪯ = ⪯
       ),
       $transitive(
-        S = {S},
-        ≺ = {⪯}
+        S = S,
+        ≺ = ⪯
       )
     ),
     %and(
       $preorder(
-        S = {S},
-        ⪯ = {⪯}
+        S = S,
+        ⪯ = ⪯
       ),
       $antisymmetric(
-        S = {S},
-        ⪯ = {⪯}
+        S = S,
+        ⪯ = ⪯
       )
     )
   ]

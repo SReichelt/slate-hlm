@@ -27,18 +27,18 @@ $Isomorphisms(κ,μ: %Element($../"Cardinal numbers")): %SetOperator {
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(
-        κ = {κ},
-        μ = {μ}
+        κ = κ,
+        μ = μ
       ))),
       $../../../Functions/bijective(
-        X = {$../Carrier(κ = {κ})},
-        Y = {$../Carrier(κ = {μ})},
-        f = {φ}
+        X = $../Carrier(κ = κ),
+        Y = $../Carrier(κ = μ),
+        f = φ
       )
     ),
     $../../../Functions/Bijections(
-      X = {$../Carrier(κ = {κ})},
-      Y = {$../Carrier(κ = {μ})}
+      X = $../Carrier(κ = κ),
+      Y = $../Carrier(κ = μ)
     )
   ]
 }

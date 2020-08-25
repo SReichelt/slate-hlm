@@ -12,10 +12,10 @@ $dimension(
     $../../Algebra/Fields/Fields,
     auto = %true
   ),
-  𝐕: %Element($"Vector spaces"(𝐅 = {𝐅})),
+  𝐕: %Element($"Vector spaces"(𝐅 = 𝐅)),
   _1: %Constraint($"finite-dimensional"(
-    𝐅 = {𝐅},
-    𝐕 = {𝐕}
+    𝐅 = 𝐅,
+    𝐕 = 𝐕
   ))
 ): %ImplicitOperator {
   notation = $Function(
@@ -26,32 +26,32 @@ $dimension(
   definition = [
     %forall(
       #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
-        𝐑 = {𝐅},
-        𝐌 = {𝐕}
+        𝐑 = 𝐅,
+        𝐌 = 𝐕
       ))),
       %equals(
         $../../Essentials/Sequences/"ordinal-indexed sequence length"(
-          S = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
-            𝐑 = {𝐅},
-            𝐌 = {𝐕}
-          )},
-          𝒂 = {𝒙}
+          S = $../../Algebra/Rings/Modules/"Left modules"/Carrier(
+            𝐑 = 𝐅,
+            𝐌 = 𝐕
+          ),
+          𝒂 = 𝒙
         ),
         n
       )
     ),
     %exists(
       #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(
-        𝐑 = {𝐅},
-        𝐌 = {𝐕}
+        𝐑 = 𝐅,
+        𝐌 = 𝐕
       ))),
       formula = %equals(
         $../../Essentials/Sequences/"ordinal-indexed sequence length"(
-          S = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
-            𝐑 = {𝐅},
-            𝐌 = {𝐕}
-          )},
-          𝒂 = {𝒙}
+          S = $../../Algebra/Rings/Modules/"Left modules"/Carrier(
+            𝐑 = 𝐅,
+            𝐌 = 𝐕
+          ),
+          𝒂 = 𝒙
         ),
         n
       )
@@ -59,30 +59,30 @@ $dimension(
     %forall(
       #(
         𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/"Element sequences"(
-          𝐑 = {𝐅},
-          𝐌 = {𝐕}
+          𝐑 = 𝐅,
+          𝐌 = 𝐕
         )),
         _1: %Constraint(%setEquals(
           $../../Algebra/Rings/Modules/"Left modules"/Coordinates/Span(
-            𝐑 = {𝐅},
-            𝐌 = {𝐕},
-            𝒙 = {𝒙}
+            𝐑 = 𝐅,
+            𝐌 = 𝐕,
+            𝒙 = 𝒙
           ),
           $../../Algebra/Rings/Modules/"Left modules"/Carrier(
-            𝐑 = {𝐅},
-            𝐌 = {𝐕}
+            𝐑 = 𝐅,
+            𝐌 = 𝐕
           )
         ))
       ),
       $../../Essentials/Numbers/Ordinal/"less or equal"(
-        β = {$../../Essentials/Sequences/"ordinal-indexed sequence length"(
-          S = {$../../Algebra/Rings/Modules/"Left modules"/Carrier(
-            𝐑 = {𝐅},
-            𝐌 = {𝐕}
-          )},
-          𝒂 = {𝒙}
-        )},
-        α = {n}
+        β = $../../Essentials/Sequences/"ordinal-indexed sequence length"(
+          S = $../../Algebra/Rings/Modules/"Left modules"/Carrier(
+            𝐑 = 𝐅,
+            𝐌 = 𝐕
+          ),
+          𝒂 = 𝒙
+        ),
+        α = n
       )
     )
   ]

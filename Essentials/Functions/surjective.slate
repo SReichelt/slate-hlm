@@ -10,8 +10,8 @@
 $surjective(
   X,Y: %Set(auto = %true),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   ))
 ): %Predicate {
   notation = $Property(
@@ -25,10 +25,10 @@ $surjective(
         #(x: %Element(X)),
         formula = %equals(
           $value(
-            X = {X},
-            Y = {Y},
-            f = {f},
-            x = {x}
+            X = X,
+            Y = Y,
+            f = f,
+            x = x
           ),
           y
         )
@@ -37,18 +37,18 @@ $surjective(
     %sub(
       Y,
       $Image(
-        X = {X},
-        Y = {Y},
-        f = {f},
-        S = {X}
+        X = X,
+        Y = Y,
+        f = f,
+        S = X
       )
     ),
     %setEquals(
       $Image(
-        X = {X},
-        Y = {Y},
-        f = {f},
-        S = {X}
+        X = X,
+        Y = Y,
+        f = f,
+        S = X
       ),
       Y
     )

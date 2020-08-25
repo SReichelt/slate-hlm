@@ -5,5 +5,5 @@ $cardinality(α: %Element($"Ordinal numbers")): %ExplicitOperator {
     body = α,
     style = '||'
   ),
-  definition = [$../Cardinal/"Cardinal numbers".cardinality(S = {$Carrier(α = {α})})]
+  definition = [$../Cardinal/"Cardinal numbers".cardinality(S = $Carrier(α = α))]
 }

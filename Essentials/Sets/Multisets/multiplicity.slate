@@ -2,7 +2,7 @@
 
 $multiplicity(
   S: %Set(auto = %true),
-  𝑻: %Element($Multisets(S = {S})),
+  𝑻: %Element($Multisets(S = S)),
   t: %Element(S)
 ): %ExplicitOperator {
   notation = $Function(
@@ -14,14 +14,14 @@ $multiplicity(
   ),
   definition = [%structuralCases(
     𝑻,
-    $Multisets(S = {S}),
+    $Multisets(S = S),
     [{
       constructor = $Multisets.multiset,
       parameters = #(_1: %Binder(
         #(s: %Element(S)),
         #(m: %Element($../../Numbers/Natural/"Natural numbers"))
       )),
-      value = m[s = {t}]
+      value = m[s = t]
     }]
   )]
 }

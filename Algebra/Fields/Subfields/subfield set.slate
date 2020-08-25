@@ -9,7 +9,7 @@
  */
 $"subfield set"(
   𝐅: %Element($../Fields),
-  S: %Subset($../../Rings/Carrier(𝐑 = {𝐅}))
+  S: %Subset($../../Rings/Carrier(𝐑 = 𝐅))
 ): %Predicate {
   notation = $NounRelation(
     operands = [S, 𝐅],
@@ -18,19 +18,19 @@ $"subfield set"(
   ),
   definition = [%and(
     $../../Rings/Subrings/"subring set"(
-      𝐑 = {𝐅},
-      S = {S}
+      𝐑 = 𝐅,
+      S = S
     ),
     %forall(
       #(a: %Element($../../../Essentials/Sets/"Relative complement"(
-        U = {S},
-        S = {S},
-        T = {%enumeration($../../Rings/zero(𝐑 = {𝐅}))}
+        U = S,
+        S = S,
+        T = %enumeration($../../Rings/zero(𝐑 = 𝐅))
       ))),
       %in(
         $../../Rings/"multiplicative inverse"(
-          𝐑 = {𝐅},
-          a = {a}
+          𝐑 = 𝐅,
+          a = a
         ),
         S
       )

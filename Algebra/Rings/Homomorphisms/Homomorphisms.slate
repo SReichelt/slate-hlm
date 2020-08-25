@@ -24,187 +24,187 @@ $Homomorphisms(𝐑,𝐒: %Element($../Rings)): %SetOperator {
   definition = [
     %subset(
       #(f: %Element($../../../Essentials/Functions/Functions(
-        X = {$../Carrier(𝐑 = {𝐑})},
-        Y = {$../Carrier(𝐑 = {𝐒})}
+        X = $../Carrier(𝐑 = 𝐑),
+        Y = $../Carrier(𝐑 = 𝐒)
       ))),
       %and(
         %forall(
-          #(a,b: %Element($../Carrier(𝐑 = {𝐑}))),
+          #(a,b: %Element($../Carrier(𝐑 = 𝐑))),
           %equals(
             $../../../Essentials/Functions/value(
-              X = {$../Carrier(𝐑 = {𝐑})},
-              Y = {$../Carrier(𝐑 = {𝐒})},
-              f = {f},
-              x = {$../sum(
-                𝐑 = {𝐑},
-                a = {a},
-                b = {b}
-              )}
+              X = $../Carrier(𝐑 = 𝐑),
+              Y = $../Carrier(𝐑 = 𝐒),
+              f = f,
+              x = $../sum(
+                𝐑 = 𝐑,
+                a = a,
+                b = b
+              )
             ),
             $../sum(
-              𝐑 = {𝐒},
-              a = {$../../../Essentials/Functions/value(
-                X = {$../Carrier(𝐑 = {𝐑})},
-                Y = {$../Carrier(𝐑 = {𝐒})},
-                f = {f},
-                x = {a}
-              )},
-              b = {$../../../Essentials/Functions/value(
-                X = {$../Carrier(𝐑 = {𝐑})},
-                Y = {$../Carrier(𝐑 = {𝐒})},
-                f = {f},
-                x = {b}
-              )}
+              𝐑 = 𝐒,
+              a = $../../../Essentials/Functions/value(
+                X = $../Carrier(𝐑 = 𝐑),
+                Y = $../Carrier(𝐑 = 𝐒),
+                f = f,
+                x = a
+              ),
+              b = $../../../Essentials/Functions/value(
+                X = $../Carrier(𝐑 = 𝐑),
+                Y = $../Carrier(𝐑 = 𝐒),
+                f = f,
+                x = b
+              )
             )
           )
         ),
         %equals(
           $../../../Essentials/Functions/value(
-            X = {$../Carrier(𝐑 = {𝐑})},
-            Y = {$../Carrier(𝐑 = {𝐒})},
-            f = {f},
-            x = {$../zero(𝐑 = {𝐑})}
+            X = $../Carrier(𝐑 = 𝐑),
+            Y = $../Carrier(𝐑 = 𝐒),
+            f = f,
+            x = $../zero(𝐑 = 𝐑)
           ),
-          $../zero(𝐑 = {𝐒})
+          $../zero(𝐑 = 𝐒)
         ),
         %forall(
-          #(c: %Element($../Carrier(𝐑 = {𝐑}))),
+          #(c: %Element($../Carrier(𝐑 = 𝐑))),
           %equals(
             $../../../Essentials/Functions/value(
-              X = {$../Carrier(𝐑 = {𝐑})},
-              Y = {$../Carrier(𝐑 = {𝐒})},
-              f = {f},
-              x = {$../"additive inverse"(
-                𝐑 = {𝐑},
-                a = {c}
-              )}
+              X = $../Carrier(𝐑 = 𝐑),
+              Y = $../Carrier(𝐑 = 𝐒),
+              f = f,
+              x = $../"additive inverse"(
+                𝐑 = 𝐑,
+                a = c
+              )
             ),
             $../"additive inverse"(
-              𝐑 = {𝐒},
-              a = {$../../../Essentials/Functions/value(
-                X = {$../Carrier(𝐑 = {𝐑})},
-                Y = {$../Carrier(𝐑 = {𝐒})},
-                f = {f},
-                x = {c}
-              )}
+              𝐑 = 𝐒,
+              a = $../../../Essentials/Functions/value(
+                X = $../Carrier(𝐑 = 𝐑),
+                Y = $../Carrier(𝐑 = 𝐒),
+                f = f,
+                x = c
+              )
             )
           )
         ),
         %forall(
-          #(d,e: %Element($../Carrier(𝐑 = {𝐑}))),
+          #(d,e: %Element($../Carrier(𝐑 = 𝐑))),
           %equals(
             $../../../Essentials/Functions/value(
-              X = {$../Carrier(𝐑 = {𝐑})},
-              Y = {$../Carrier(𝐑 = {𝐒})},
-              f = {f},
-              x = {$../product(
-                𝐑 = {𝐑},
-                a = {d},
-                b = {e}
-              )}
+              X = $../Carrier(𝐑 = 𝐑),
+              Y = $../Carrier(𝐑 = 𝐒),
+              f = f,
+              x = $../product(
+                𝐑 = 𝐑,
+                a = d,
+                b = e
+              )
             ),
             $../product(
-              𝐑 = {𝐒},
-              a = {$../../../Essentials/Functions/value(
-                X = {$../Carrier(𝐑 = {𝐑})},
-                Y = {$../Carrier(𝐑 = {𝐒})},
-                f = {f},
-                x = {d}
-              )},
-              b = {$../../../Essentials/Functions/value(
-                X = {$../Carrier(𝐑 = {𝐑})},
-                Y = {$../Carrier(𝐑 = {𝐒})},
-                f = {f},
-                x = {e}
-              )}
+              𝐑 = 𝐒,
+              a = $../../../Essentials/Functions/value(
+                X = $../Carrier(𝐑 = 𝐑),
+                Y = $../Carrier(𝐑 = 𝐒),
+                f = f,
+                x = d
+              ),
+              b = $../../../Essentials/Functions/value(
+                X = $../Carrier(𝐑 = 𝐑),
+                Y = $../Carrier(𝐑 = 𝐒),
+                f = f,
+                x = e
+              )
             )
           )
         ),
         %equals(
           $../../../Essentials/Functions/value(
-            X = {$../Carrier(𝐑 = {𝐑})},
-            Y = {$../Carrier(𝐑 = {𝐒})},
-            f = {f},
-            x = {$../one(𝐑 = {𝐑})}
+            X = $../Carrier(𝐑 = 𝐑),
+            Y = $../Carrier(𝐑 = 𝐒),
+            f = f,
+            x = $../one(𝐑 = 𝐑)
           ),
-          $../one(𝐑 = {𝐒})
+          $../one(𝐑 = 𝐒)
         )
       )
     ),
     %subset(
       #(f: %Element($../../../Essentials/Functions/Functions(
-        X = {$../Carrier(𝐑 = {𝐑})},
-        Y = {$../Carrier(𝐑 = {𝐒})}
+        X = $../Carrier(𝐑 = 𝐑),
+        Y = $../Carrier(𝐑 = 𝐒)
       ))),
       %and(
         %forall(
-          #(a,b: %Element($../Carrier(𝐑 = {𝐑}))),
+          #(a,b: %Element($../Carrier(𝐑 = 𝐑))),
           %equals(
             $../../../Essentials/Functions/value(
-              X = {$../Carrier(𝐑 = {𝐑})},
-              Y = {$../Carrier(𝐑 = {𝐒})},
-              f = {f},
-              x = {$../sum(
-                𝐑 = {𝐑},
-                a = {a},
-                b = {b}
-              )}
+              X = $../Carrier(𝐑 = 𝐑),
+              Y = $../Carrier(𝐑 = 𝐒),
+              f = f,
+              x = $../sum(
+                𝐑 = 𝐑,
+                a = a,
+                b = b
+              )
             ),
             $../sum(
-              𝐑 = {𝐒},
-              a = {$../../../Essentials/Functions/value(
-                X = {$../Carrier(𝐑 = {𝐑})},
-                Y = {$../Carrier(𝐑 = {𝐒})},
-                f = {f},
-                x = {a}
-              )},
-              b = {$../../../Essentials/Functions/value(
-                X = {$../Carrier(𝐑 = {𝐑})},
-                Y = {$../Carrier(𝐑 = {𝐒})},
-                f = {f},
-                x = {b}
-              )}
+              𝐑 = 𝐒,
+              a = $../../../Essentials/Functions/value(
+                X = $../Carrier(𝐑 = 𝐑),
+                Y = $../Carrier(𝐑 = 𝐒),
+                f = f,
+                x = a
+              ),
+              b = $../../../Essentials/Functions/value(
+                X = $../Carrier(𝐑 = 𝐑),
+                Y = $../Carrier(𝐑 = 𝐒),
+                f = f,
+                x = b
+              )
             )
           )
         ),
         %forall(
-          #(d,e: %Element($../Carrier(𝐑 = {𝐑}))),
+          #(d,e: %Element($../Carrier(𝐑 = 𝐑))),
           %equals(
             $../../../Essentials/Functions/value(
-              X = {$../Carrier(𝐑 = {𝐑})},
-              Y = {$../Carrier(𝐑 = {𝐒})},
-              f = {f},
-              x = {$../product(
-                𝐑 = {𝐑},
-                a = {d},
-                b = {e}
-              )}
+              X = $../Carrier(𝐑 = 𝐑),
+              Y = $../Carrier(𝐑 = 𝐒),
+              f = f,
+              x = $../product(
+                𝐑 = 𝐑,
+                a = d,
+                b = e
+              )
             ),
             $../product(
-              𝐑 = {𝐒},
-              a = {$../../../Essentials/Functions/value(
-                X = {$../Carrier(𝐑 = {𝐑})},
-                Y = {$../Carrier(𝐑 = {𝐒})},
-                f = {f},
-                x = {d}
-              )},
-              b = {$../../../Essentials/Functions/value(
-                X = {$../Carrier(𝐑 = {𝐑})},
-                Y = {$../Carrier(𝐑 = {𝐒})},
-                f = {f},
-                x = {e}
-              )}
+              𝐑 = 𝐒,
+              a = $../../../Essentials/Functions/value(
+                X = $../Carrier(𝐑 = 𝐑),
+                Y = $../Carrier(𝐑 = 𝐒),
+                f = f,
+                x = d
+              ),
+              b = $../../../Essentials/Functions/value(
+                X = $../Carrier(𝐑 = 𝐑),
+                Y = $../Carrier(𝐑 = 𝐒),
+                f = f,
+                x = e
+              )
             )
           )
         ),
         %equals(
           $../../../Essentials/Functions/value(
-            X = {$../Carrier(𝐑 = {𝐑})},
-            Y = {$../Carrier(𝐑 = {𝐒})},
-            f = {f},
-            x = {$../one(𝐑 = {𝐑})}
+            X = $../Carrier(𝐑 = 𝐑),
+            Y = $../Carrier(𝐑 = 𝐒),
+            f = f,
+            x = $../one(𝐑 = 𝐑)
           ),
-          $../one(𝐑 = {𝐒})
+          $../one(𝐑 = 𝐒)
         )
       )
     )

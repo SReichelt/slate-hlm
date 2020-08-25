@@ -11,20 +11,20 @@ $"automorphism group"(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Left modules"(𝐑 = {𝐑}))
+  𝐌: %Element($../"Left modules"(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $Function(
     function = 'Aut',
     arguments = [𝐌]
   ),
   definition = [$../../../../Groups/Subgroups/"subset group"(
-    𝐆 = {$../../../../Groups/Examples/"symmetric group"(X = {$../Carrier(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌}
-    )})},
-    S = {$Automorphisms(
-      𝐑 = {𝐑},
-      𝐌 = {𝐌}
-    )}
+    𝐆 = $../../../../Groups/Examples/"symmetric group"(X = $../Carrier(
+      𝐑 = 𝐑,
+      𝐌 = 𝐌
+    )),
+    S = $Automorphisms(
+      𝐑 = 𝐑,
+      𝐌 = 𝐌
+    )
   )]
 }

@@ -5,5 +5,5 @@ $identity(α: %Element($../"Ordinal numbers")): %ExplicitOperator {
     body = 'id',
     sub = α
   ),
-  definition = [$../../../Functions/identity(X = {$../Carrier(α = {α})})]
+  definition = [$../../../Functions/identity(X = $../Carrier(α = α))]
 }

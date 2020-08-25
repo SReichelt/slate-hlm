@@ -2,7 +2,7 @@
 
 $"Iterated sum grows"(
   I: %Set,
-  _1: %Constraint($../../../Sets/finite(S = {I})),
+  _1: %Constraint($../../../Sets/finite(S = I)),
   _2: %Binder(
     #(i: %Element(I)),
     #(a: %Element($../"Natural numbers"))
@@ -10,23 +10,23 @@ $"Iterated sum grows"(
   J: %Subset(I)
 ): %StandardTheorem {
   claim = $../"less or equal"(
-    m = {$../../../Operations/"Iterated operations"/"indexed by finite set"(
-      X = {$../"Natural numbers"},
-      ⨂ = {$"iterated sum"},
-      I = {J},
+    m = $../../../Operations/"Iterated operations"/"indexed by finite set"(
+      X = $../"Natural numbers",
+      ⨂ = $"iterated sum",
+      I = J,
       _2 = {
         #(i: %Element(J)),
-        {a = {a[i = {i}]}}
+        {a = a[i = i]}
       }
-    )},
-    n = {$../../../Operations/"Iterated operations"/"indexed by finite set"(
-      X = {$../"Natural numbers"},
-      ⨂ = {$"iterated sum"},
-      I = {I},
+    ),
+    n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
+      X = $../"Natural numbers",
+      ⨂ = $"iterated sum",
+      I = I,
       _2 = {
         #(i: %Element(I)),
-        {a = {a[i = {i}]}}
+        {a = a[i = i]}
       }
-    )}
+    )
   )
 }

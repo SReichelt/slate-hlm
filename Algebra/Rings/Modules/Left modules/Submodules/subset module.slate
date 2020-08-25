@@ -8,15 +8,15 @@ $"subset module"(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Left modules"(𝐑 = {𝐑})),
+  𝐌: %Element($../"Left modules"(𝐑 = 𝐑)),
   S: %Subset($../Carrier(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌
   )),
   _1: %Constraint($"submodule set"(
-    𝐑 = {𝐑},
-    𝐌 = {𝐌},
-    S = {S}
+    𝐑 = 𝐑,
+    𝐌 = 𝐌,
+    S = S
   ))
 ): %ExplicitOperator {
   notation = $SubSup(
@@ -28,52 +28,52 @@ $"subset module"(
   ),
   definition = [%structuralCases(
     𝐌,
-    $../"Left modules"(𝐑 = {𝐑}),
+    $../"Left modules"(𝐑 = 𝐑),
     [{
       constructor = $../"Left modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../../Essentials/Operations/"Inner operations"(X = {M})),
+        ⊕: %Element($../../../../../Essentials/Operations/"Inner operations"(X = M)),
         "0": %Element(M),
         ⊖: %Element($../../../../../Essentials/Functions/Functions(
-          X = {M},
-          Y = {M}
+          X = M,
+          Y = M
         )),
         ⊙: %Element($../../../../../Essentials/Operations/Operations(
-          X = {$../../../Carrier(𝐑 = {𝐑})},
-          Y = {M},
-          Z = {M}
+          X = $../../../Carrier(𝐑 = 𝐑),
+          Y = M,
+          Z = M
         )),
         _1: %Constraint($../"left module"(
-          𝐑 = {𝐑},
-          M = {M},
-          ⊕ = {⊕},
-          "0" = {"0"},
-          ⊖ = {⊖},
-          ⊙ = {⊙}
+          𝐑 = 𝐑,
+          M = M,
+          ⊕ = ⊕,
+          "0" = "0",
+          ⊖ = ⊖,
+          ⊙ = ⊙
         ))
       ),
-      value = $../"Left modules"(𝐑 = {𝐑}).module(
-          M = {S},
-          ⊕ = {$../../../../../Essentials/Operations/"inner operation restriction"(
-            X = {M},
-            A = {S},
-            ∗ = {⊕}
-          )},
-          "0" = {"0"},
-          ⊖ = {$../../../../../Essentials/Functions/"codomain restriction"(
-            X = {M},
-            A = {S},
-            Y = {M},
-            B = {S},
-            f = {⊖}
-          )},
-          ⊙ = {$../../../../../Essentials/Operations/"left operation restriction"(
-            X = {$../../../Carrier(𝐑 = {𝐑})},
-            Y = {M},
-            A = {S},
-            ∗ = {⊙}
-          )}
+      value = $../"Left modules"(𝐑 = 𝐑).module(
+          M = S,
+          ⊕ = $../../../../../Essentials/Operations/"inner operation restriction"(
+            X = M,
+            A = S,
+            ∗ = ⊕
+          ),
+          "0" = "0",
+          ⊖ = $../../../../../Essentials/Functions/"codomain restriction"(
+            X = M,
+            A = S,
+            Y = M,
+            B = S,
+            f = ⊖
+          ),
+          ⊙ = $../../../../../Essentials/Operations/"left operation restriction"(
+            X = $../../../Carrier(𝐑 = 𝐑),
+            Y = M,
+            A = S,
+            ∗ = ⊙
+          )
       )
     }]
   )]

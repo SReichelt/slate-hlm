@@ -11,8 +11,8 @@ $restriction(
   A: %Subset(X),
   Y: %Set(auto = %true),
   f: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   ))
 ): %ExplicitOperator {
   notation = $PostfixUnaryOperator(
@@ -24,10 +24,10 @@ $restriction(
     minParenLevel = 3
   ),
   definition = [$"generalized restriction"(
-    X = {X},
-    Y = {Y},
-    A = {A},
-    B = {Y},
-    f = {f}
+    X = X,
+    Y = Y,
+    A = A,
+    B = Y,
+    f = f
   )]
 }

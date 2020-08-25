@@ -8,7 +8,7 @@ $"p-element"(
     $../../Groups,
     auto = %true
   ),
-  g: %Element($../../Carrier(𝐆 = {𝐆})),
+  g: %Element($../../Carrier(𝐆 = 𝐆)),
   p: %Element($../../../../Essentials/Numbers/Natural/Prime/"Prime numbers")
 ): %Predicate {
   notation = $NounProperty(
@@ -27,12 +27,12 @@ $"p-element"(
       #(n: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
       formula = %equals(
         $../"element order"(
-          𝐆 = {𝐆},
-          g = {g}
+          𝐆 = 𝐆,
+          g = g
         ),
         $../../../../Essentials/Numbers/Natural/power(
-          m = {p},
-          n = {n}
+          m = p,
+          n = n
         )
       )
     ),
@@ -40,14 +40,14 @@ $"p-element"(
       #(m: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
       formula = %equals(
         $../../"power to natural number"(
-          𝐆 = {𝐆},
-          a = {g},
-          n = {$../../../../Essentials/Numbers/Natural/power(
-            m = {p},
-            n = {m}
-          )}
+          𝐆 = 𝐆,
+          a = g,
+          n = $../../../../Essentials/Numbers/Natural/power(
+            m = p,
+            n = m
+          )
         ),
-        $../../identity(𝐆 = {𝐆})
+        $../../identity(𝐆 = 𝐆)
       )
     )
   ]

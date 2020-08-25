@@ -3,16 +3,16 @@
 $"Less or equal and less combine to less"(
   a,b,c: %Element($"Natural numbers"),
   _1: %Constraint($"less or equal"(
-    m = {a},
-    n = {b}
+    m = a,
+    n = b
   )),
   _2: %Constraint($less(
-    m = {%associative(b)},
-    n = {c}
+    m = %associative(b),
+    n = c
   ))
 ): %StandardTheorem {
   claim = $less(
-    m = {a},
-    n = {c}
+    m = a,
+    n = c
   )
 }

@@ -10,7 +10,7 @@
  */
 $symmetric(
   S: %Set(auto = %true),
-  ≺: %Element($Endorelations(S = {S}))
+  ≺: %Element($Endorelations(S = S))
 ): %Predicate {
   notation = $Property(
     operand = ≺,
@@ -21,27 +21,27 @@ $symmetric(
       #(
         s,t: %Element(S),
         _1: %Constraint($related(
-          S = {S},
-          T = {S},
-          s = {s},
-          ≺ = {≺},
-          t = {t}
+          S = S,
+          T = S,
+          s = s,
+          ≺ = ≺,
+          t = t
         ))
       ),
       $related(
-        S = {S},
-        T = {S},
-        s = {t},
-        ≺ = {≺},
-        t = {s}
+        S = S,
+        T = S,
+        s = t,
+        ≺ = ≺,
+        t = s
       )
     ),
     %equals(
       ≺,
       $converse(
-        S = {S},
-        T = {S},
-        ≺ = {≺}
+        S = S,
+        T = S,
+        ≺ = ≺
       )
     )
   ]

@@ -3,19 +3,19 @@
 $"Inverse of isomorphism is also isomorphism"(
   𝐑,𝐒: %Element($../Rings),
   φ: %Element($Isomorphisms(
-    𝐑 = {𝐑},
-    𝐒 = {𝐒}
+    𝐑 = 𝐑,
+    𝐒 = 𝐒
   ))
 ): %StandardTheorem {
   claim = %in(
     $../../../Essentials/Functions/inverse(
-      X = {$../Carrier(𝐑 = {𝐑})},
-      Y = {$../Carrier(𝐑 = {𝐒})},
-      f = {φ}
+      X = $../Carrier(𝐑 = 𝐑),
+      Y = $../Carrier(𝐑 = 𝐒),
+      f = φ
     ),
     $Isomorphisms(
-      𝐑 = {𝐒},
-      𝐒 = {𝐑}
+      𝐑 = 𝐒,
+      𝐒 = 𝐑
     )
   )
 }

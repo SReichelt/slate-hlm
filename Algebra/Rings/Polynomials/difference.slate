@@ -10,19 +10,19 @@ $difference(
     auto = %true
   ),
   p,q: %Element($Polynomials(
-    𝐑 = {𝐑},
-    X = {X}
+    𝐑 = 𝐑,
+    X = X
   ))
 ): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [p, q]),
   definition = [$sum(
-    𝐑 = {𝐑},
-    X = {X},
-    p = {p},
-    q = {$"additive inverse"(
-      𝐑 = {𝐑},
-      X = {X},
-      p = {q}
-    )}
+    𝐑 = 𝐑,
+    X = X,
+    p = p,
+    q = $"additive inverse"(
+      𝐑 = 𝐑,
+      X = X,
+      p = q
+    )
   )]
 }

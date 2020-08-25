@@ -15,12 +15,12 @@ $commutative(𝐌: %Element($Magmas)): %Predicate {
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {M}))
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
       value = $../../Essentials/Operations/commutative(
-        X = {M},
-        Z = {M},
-        ∗ = {∗}
+        X = M,
+        Z = M,
+        ∗ = ∗
       )
     }]
   )]

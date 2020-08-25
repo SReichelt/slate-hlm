@@ -1,7 +1,7 @@
 %../../../../../../logics/hlm%
 
 /**
- * @remarks Note that this definition presupposes that `$../less(n = {n}, m = {$../number(value = 1)})`. Otherwise, not all equivalences would hold.
+ * @remarks Note that this definition presupposes that `$../less(n = n, m = $../number(value = 1))`. Otherwise, not all equivalences would hold.
  *
  *          In particular, this makes it impossible to ask whether 1 is prime. However, it is rarely necessary to ask whether a given number is prime without knowing that it is greater than 1. For definitions and theorems involving the set `$"Prime numbers"` of prime numbers, no such explicit exclusion of 1 is necessary.
  *
@@ -14,7 +14,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.prime
  *             * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.dvd_prime
  */
-$prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))): %Predicate {
+$prime(n: %Element($../Subsets/"Segment (greater)"(n = $../number(value = 1)))): %Predicate {
   notation = $Property(
     property = %neg('prime', 'composite'),
     operand = n
@@ -24,8 +24,8 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))
       #(
         m: %Element($../Subsets/"Positive numbers"),
         _1: %Constraint($../divisible(
-          m = {m},
-          n = {n}
+          m = m,
+          n = n
         ))
       ),
       %or(
@@ -38,30 +38,30 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))
     ),
     %forall(
       #(
-        l: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)})),
+        l: %Element($../Subsets/"Segment (greater)"(n = $../number(value = 1))),
         _2: %Constraint($../divisible(
-          m = {l},
-          n = {n}
+          m = l,
+          n = n
         ))
       ),
       %equals(l, n)
     ),
     %sub(
-      $../Divisors(n = {n}),
+      $../Divisors(n = n),
       %enumeration(
         $../number(value = 1),
         n
       )
     ),
     %setEquals(
-      $../Divisors(n = {n}),
+      $../Divisors(n = n),
       %enumeration(
         $../number(value = 1),
         n
       )
     ),
     %equals(
-      $../../Cardinal/"Cardinal numbers".cardinality(S = {$../Divisors(n = {n})}),
+      $../../Cardinal/"Cardinal numbers".cardinality(S = $../Divisors(n = n)),
       $../number(value = 2)
     ),
     %forall(
@@ -70,8 +70,8 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))
         _3: %Constraint(%equals(
           n,
           $../product(
-            m = {a},
-            n = {b}
+            m = a,
+            n = b
           )
         ))
       ),
@@ -93,12 +93,12 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))
       )
     ),
     %not(%exists(
-      #(c,d: %Element($../Subsets/"Segment (less)"(n = {n}))),
+      #(c,d: %Element($../Subsets/"Segment (less)"(n = n))),
       formula = %equals(
         n,
         $../product(
-          m = {c},
-          n = {d}
+          m = c,
+          n = d
         )
       )
     )),
@@ -106,21 +106,21 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = {$../number(value = 1)}))
       #(
         e,f: %Element($../"Natural numbers"),
         _5: %Constraint($../divisible(
-          m = {n},
-          n = {$../product(
-            m = {e},
-            n = {f}
-          )}
+          m = n,
+          n = $../product(
+            m = e,
+            n = f
+          )
         ))
       ),
       %or(
         $../divisible(
-          m = {n},
-          n = {e}
+          m = n,
+          n = e
         ),
         $../divisible(
-          m = {n},
-          n = {f}
+          m = n,
+          n = f
         )
       )
     )

@@ -2,14 +2,14 @@
 
 $"starts with"(
   S: %Set(auto = %true),
-  𝐚: %Element($"Infinite sequences"(S = {S})),
+  𝐚: %Element($"Infinite sequences"(S = S)),
   n: %Element(
     $../Numbers/Natural/"Natural numbers",
     auto = %true
   ),
   𝐛: %Element($Tuples(
-    S = {S},
-    α = {n}
+    S = S,
+    α = n
   ))
 ): %Predicate {
   notation = $TextualRelation(
@@ -19,18 +19,18 @@ $"starts with"(
   definition = [%structural(
     𝐛,
     $Tuples(
-      S = {S},
-      α = {n}
+      S = S,
+      α = n
     ),
     [{
       constructor = $Tuples.sequence,
       parameters = #(_2: %Binder(
-        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}))),
+        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = n))),
         #(b: %Element(S))
       )),
       value = %structural(
         𝐚,
-        $"Infinite sequences"(S = {S}),
+        $"Infinite sequences"(S = S),
         [{
           constructor = $"Infinite sequences".sequence,
           parameters = #(_1: %Binder(
@@ -38,8 +38,8 @@ $"starts with"(
             #(a: %Element(S))
           )),
           value = %forall(
-            #(k: %Element($../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-            %equals(a[k = {k}], b[k = {k}])
+            #(k: %Element($../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+            %equals(a[k = k], b[k = k])
           )
         }]
       )

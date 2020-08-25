@@ -27,8 +27,8 @@ $"Cardinal numbers": %Construction {
       leftParameters = #(S: %Set),
       rightParameters = #(T: %Set),
       definition = [%exists(#(f: %Element($../../Functions/Bijections(
-        X = {S},
-        Y = {T}
+        X = S,
+        Y = T
       ))))],
       isomorphic = %true
     }
@@ -43,31 +43,31 @@ $"Cardinal numbers": %Construction {
   },
   embedding = {
     parameter = #(n: %Element($../Natural/"Natural numbers")),
-    target = $"Cardinal numbers".cardinality(S = {$../Natural/Subsets/"Segment (less)"(n = {n})}),
+    target = $"Cardinal numbers".cardinality(S = $../Natural/Subsets/"Segment (less)"(n = n)),
     wellDefinednessProof = {
       parameters = #(
         m,n: %Element($../Natural/"Natural numbers"),
         _1: %Constraint(%equals(
-          $"Cardinal numbers".cardinality(S = {$../Natural/Subsets/"Segment (less)"(n = {m})}),
-          $"Cardinal numbers".cardinality(S = {$../Natural/Subsets/"Segment (less)"(n = {n})})
+          $"Cardinal numbers".cardinality(S = $../Natural/Subsets/"Segment (less)"(n = m)),
+          $"Cardinal numbers".cardinality(S = $../Natural/Subsets/"Segment (less)"(n = n))
         ))
       ),
       goal = %equals(m, n),
       steps = #(
         _: %Consider(_1),
         _: %UseDef(result = %exists(#(f: %Element($../../Functions/Bijections(
-          X = {$../Natural/Subsets/"Segment (less)"(n = {m})},
-          Y = {$../Natural/Subsets/"Segment (less)"(n = {n})}
+          X = $../Natural/Subsets/"Segment (less)"(n = m),
+          Y = $../Natural/Subsets/"Segment (less)"(n = n)
         ))))),
         _: %UseExists(#(f: %Element($../../Functions/Bijections(
-          X = {$../Natural/Subsets/"Segment (less)"(n = {m})},
-          Y = {$../Natural/Subsets/"Segment (less)"(n = {n})}
+          X = $../Natural/Subsets/"Segment (less)"(n = m),
+          Y = $../Natural/Subsets/"Segment (less)"(n = n)
         )))),
         _: %UseTheorem(
           $"Natural cardinality lemma"(
-            m = {m},
-            n = {n},
-            f = {f}
+            m = m,
+            n = n,
+            f = f
           ),
           result = %equals(m, n)
         )

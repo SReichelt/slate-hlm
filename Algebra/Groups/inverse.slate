@@ -5,7 +5,7 @@ $inverse(
     $Groups,
     auto = %true
   ),
-  a: %Element($Carrier(𝐆 = {𝐆}))
+  a: %Element($Carrier(𝐆 = 𝐆))
 ): %ExplicitOperator {
   notation = $Inverse(term = a),
   definition = [%structuralCases(
@@ -15,24 +15,24 @@ $inverse(
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = {G})),
+        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(
-          X = {G},
-          Y = {G}
+          X = G,
+          Y = G
         )),
         _1: %Constraint($group(
-          G = {G},
-          ∗ = {∗},
-          e = {e},
-          i = {i}
+          G = G,
+          ∗ = ∗,
+          e = e,
+          i = i
         ))
       ),
       value = $../../Essentials/Functions/value(
-        X = {G},
-        Y = {G},
-        f = {i},
-        x = {a}
+        X = G,
+        Y = G,
+        f = i,
+        x = a
       )
     }]
   )]

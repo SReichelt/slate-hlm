@@ -11,7 +11,7 @@ $Terms(
     $../Variables,
     auto = %true
   ),
-  _1: %Constraint($../../Essentials/Sets/finite(S = {V}))
+  _1: %Constraint($../../Essentials/Sets/finite(S = V))
 ): %Construction {
   $variable(x: %Element(V)): %Constructor {
     notation = $Parens(
@@ -28,27 +28,27 @@ $Terms(
 
   $abstraction(
     _2: %Binder(
-      #(x: %Element($../"Fresh variables"(V = {V}))),
-      #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
-        U = {$../Variables},
-        S = {V},
-        T = {%enumeration(x)}
-      )})))
+      #(x: %Element($../"Fresh variables"(V = V))),
+      #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
+        U = $../Variables,
+        S = V,
+        T = %enumeration(x)
+      ))))
     ),
     _3: %Constraint(%forall(
-      #(x,y: %Element($../"Fresh variables"(V = {V}))),
+      #(x,y: %Element($../"Fresh variables"(V = V))),
       %equals(
         $substitution(
-          V = {$Terms(V = {$../../Essentials/Sets/Union(
-            U = {$../Variables},
-            S = {V},
-            T = {%enumeration(x)}
-          )})},
-          T = {M[x = {x}]},
-          x = {x},
-          R = {y}
+          V = $Terms(V = $../../Essentials/Sets/Union(
+            U = $../Variables,
+            S = V,
+            T = %enumeration(x)
+          )),
+          T = M[x = x],
+          x = x,
+          R = y
         ),
-        M[x = {y}]
+        M[x = y]
       )
     ))
   ): %Constructor {
@@ -59,78 +59,78 @@ $Terms(
     equalityDefinition = {
       leftParameters = #(
         _2: %Binder(
-          #(x: %Element($../"Fresh variables"(V = {V}))),
-          #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
-            U = {$../Variables},
-            S = {V},
-            T = {%enumeration(x)}
-          )})))
+          #(x: %Element($../"Fresh variables"(V = V))),
+          #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
+            U = $../Variables,
+            S = V,
+            T = %enumeration(x)
+          ))))
         ),
         _3: %Constraint(%forall(
-          #(x,y: %Element($../"Fresh variables"(V = {V}))),
+          #(x,y: %Element($../"Fresh variables"(V = V))),
           %equals(
             $substitution(
-              V = {$Terms(V = {$../../Essentials/Sets/Union(
-                U = {$../Variables},
-                S = {V},
-                T = {%enumeration(x)}
-              )})},
-              T = {M[x = {x}]},
-              x = {x},
-              R = {y}
+              V = $Terms(V = $../../Essentials/Sets/Union(
+                U = $../Variables,
+                S = V,
+                T = %enumeration(x)
+              )),
+              T = M[x = x],
+              x = x,
+              R = y
             ),
-            M[x = {y}]
+            M[x = y]
           )
         ))
       ),
       rightParameters = #(
         _4: %Binder(
-          #(x: %Element($../"Fresh variables"(V = {V}))),
-          #("M'": %Element($Terms(V = {$../../Essentials/Sets/Union(
-            U = {$../Variables},
-            S = {V},
-            T = {%enumeration(x)}
-          )})))
+          #(x: %Element($../"Fresh variables"(V = V))),
+          #("M'": %Element($Terms(V = $../../Essentials/Sets/Union(
+            U = $../Variables,
+            S = V,
+            T = %enumeration(x)
+          ))))
         ),
         _5: %Constraint(%forall(
-          #(x,y: %Element($../"Fresh variables"(V = {V}))),
+          #(x,y: %Element($../"Fresh variables"(V = V))),
           %equals(
             $substitution(
-              V = {$Terms(V = {$../../Essentials/Sets/Union(
-                U = {$../Variables},
-                S = {V},
-                T = {%enumeration(x)}
-              )})},
-              T = {"M'"[x = {x}]},
-              x = {x},
-              R = {y}
+              V = $Terms(V = $../../Essentials/Sets/Union(
+                U = $../Variables,
+                S = V,
+                T = %enumeration(x)
+              )),
+              T = "M'"[x = x],
+              x = x,
+              R = y
             ),
-            "M'"[x = {y}]
+            "M'"[x = y]
           )
         ))
       ),
       definition = [
         %forall(
-          #(x: %Element($../"Fresh variables"(V = {V}))),
-          %equals(M[x = {x}], "M'"[x = {x}])
+          #(x: %Element($../"Fresh variables"(V = V))),
+          %equals(M[x = x], "M'"[x = x])
         ),
         %exists(
-          #(x: %Element($../"Fresh variables"(V = {V}))),
-          formula = %equals(M[x = {x}], "M'"[x = {x}])
+          #(x: %Element($../"Fresh variables"(V = V))),
+          formula = %equals(M[x = x], "M'"[x = x])
         )
       ],
       isomorphic = %true
     }
   }
 
-  $application(M,N: %Element($Terms(V = {V}))): %Constructor {
+  $application(M,N: %Element($Terms(V = V))): %Constructor {
     notation = $LambdaApplication(
       function = M,
       argument = N
     ),
     equalityDefinition = {
-      leftParameters = #(M,N: %Element($Terms(V = {V}))),
-      rightParameters = #("M'","N'": %Element($Terms(V = {V}))),
+      leftParameters = #(M,N: %Element($Terms(V = V))),
+      rightParameters = #("M'","N'": %Element($Terms(V = V))),
       definition = [%and(
         %equals(M, "M'"),
         %equals(N, "N'")
@@ -145,6 +145,6 @@ $Terms(
   ),
   embedding = {
     parameter = #(x: %Element(V)),
-    target = $Terms(V = {V}).variable(x = {x})
+    target = $Terms(V = V).variable(x = x)
   }
 }

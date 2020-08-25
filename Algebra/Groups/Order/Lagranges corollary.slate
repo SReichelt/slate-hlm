@@ -7,14 +7,14 @@
  */
 $"Lagranges corollary"(
   𝐆: %Element($../Groups),
-  _1: %Constraint($finite(𝐆 = {𝐆})),
-  g: %Element($../Carrier(𝐆 = {𝐆}))
+  _1: %Constraint($finite(𝐆 = 𝐆)),
+  g: %Element($../Carrier(𝐆 = 𝐆))
 ): %StandardTheorem {
   claim = $../../../Essentials/Numbers/Natural/divisible(
-    m = {$"element order"(
-      𝐆 = {𝐆},
-      g = {g}
-    )},
-    n = {$"group order"(𝐆 = {𝐆})}
+    m = $"element order"(
+      𝐆 = 𝐆,
+      g = g
+    ),
+    n = $"group order"(𝐆 = 𝐆)
   )
 }

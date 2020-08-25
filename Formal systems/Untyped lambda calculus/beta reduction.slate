@@ -6,7 +6,7 @@
  */
 $"beta reduction"(
   V: %Subset($../Variables),
-  _1: %Constraint($../../Essentials/Sets/finite(S = {V}))
+  _1: %Constraint($../../Essentials/Sets/finite(S = V))
 ): %SetOperator {
   notation = $SubSup(
     body = 'β',
@@ -15,34 +15,34 @@ $"beta reduction"(
   definition = [%extendedSubset(
     #(
       _2: %Binder(
-        #(x: %Element($../"Fresh variables"(V = {V}))),
-        #(M: %Element($Terms(V = {$../../Essentials/Sets/Union(
-          U = {$../Variables},
-          S = {V},
-          T = {%enumeration(x)}
-        )})))
+        #(x: %Element($../"Fresh variables"(V = V))),
+        #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
+          U = $../Variables,
+          S = V,
+          T = %enumeration(x)
+        ))))
       ),
-      N: %Element($Terms(V = {V})),
-      y: %Element($../"Fresh variables"(V = {V}))
+      N: %Element($Terms(V = V)),
+      y: %Element($../"Fresh variables"(V = V))
     ),
-    $../"Rewriting rules"(T = {$Terms(V = {V})}).rule(
-        l = {$Terms(V = {V}).application(
-            M = {$Terms(V = {V}).abstraction(_2 = {
-                #(z: %Element($../"Fresh variables"(V = {V}))),
-                {M = {M[x = {z}]}}
-            })},
-            N = {N}
-        )},
-        r = {$substitution(
-          V = {$../../Essentials/Sets/Union(
-            U = {$../Variables},
-            S = {V},
-            T = {%enumeration(y)}
-          )},
-          T = {M[x = {y}]},
-          x = {y},
-          R = {N}
-        )}
+    $../"Rewriting rules"(T = $Terms(V = V)).rule(
+        l = $Terms(V = V).application(
+            M = $Terms(V = V).abstraction(_2 = {
+                #(z: %Element($../"Fresh variables"(V = V))),
+                {M = M[x = z]}
+            }),
+            N = N
+        ),
+        r = $substitution(
+          V = $../../Essentials/Sets/Union(
+            U = $../Variables,
+            S = V,
+            T = %enumeration(y)
+          ),
+          T = M[x = y],
+          x = y,
+          R = N
+        )
     )
   )]
 }

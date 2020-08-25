@@ -23,7 +23,7 @@ $"Generalized intersection"(
     #(x: %Element(U)),
     %forall(
       #(j: %Element(I)),
-      %in(x, S[i = {j}])
+      %in(x, S[i = j])
     )
   )]
 }

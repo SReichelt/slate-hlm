@@ -21,7 +21,7 @@ $empty(S: %Set): %Predicate {
     ),
     %not(%exists(#(x: %Element(S)))),
     %equals(
-      $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = {S}),
+      $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
       $../Numbers/Natural/number(value = 0)
     )
   ],
@@ -64,7 +64,7 @@ $empty(S: %Set): %Predicate {
               $"Empty set"
             )
           )),
-          _: %UseForAll({s = {x}}),
+          _: %UseForAll({s = x}),
           _: %UseDef(result = %or)
         )
       }))
@@ -97,7 +97,7 @@ $empty(S: %Set): %Predicate {
               ),
               steps = #(_: %State(
                 %exists(#(x: %Element(S))),
-                proof = {steps = #(_: %ProveExists({x = {a}}))}
+                proof = {steps = #(_: %ProveExists({x = a}))}
               ))
             }))
           }))
@@ -106,7 +106,7 @@ $empty(S: %Set): %Predicate {
           from = 2,
           to = 1,
           steps = #(_: %UseTheorem(
-            $"Empty set is subset of any set"(S = {S}),
+            $"Empty set is subset of any set"(S = S),
             result = %sub(
               $"Empty set",
               S

@@ -8,25 +8,25 @@
  */
 $"First Sylow theorem"(
   𝐆: %Element($../Groups),
-  _1: %Constraint($../Order/finite(𝐆 = {𝐆})),
+  _1: %Constraint($../Order/finite(𝐆 = 𝐆)),
   p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers")
 ): %StandardTheorem {
   claim = %exists(
-    #(H: %Subset($../Carrier(𝐆 = {𝐆}))),
+    #(H: %Subset($../Carrier(𝐆 = 𝐆))),
     formula = %and(
       $"sylow subgroup"(
-        𝐆 = {𝐆},
-        H = {H},
-        p = {p}
+        𝐆 = 𝐆,
+        H = H,
+        p = p
       ),
       %equals(
-        $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = {H}),
+        $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = H),
         $../../../Essentials/Numbers/Natural/power(
-          m = {p},
-          n = {$../../../Essentials/Numbers/Natural/Prime/multiplicity(
-            n = {$../Order/"group order"(𝐆 = {𝐆})},
-            p = {p}
-          )}
+          m = p,
+          n = $../../../Essentials/Numbers/Natural/Prime/multiplicity(
+            n = $../Order/"group order"(𝐆 = 𝐆),
+            p = p
+          )
         )
       )
     )

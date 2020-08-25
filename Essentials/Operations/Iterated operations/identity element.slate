@@ -2,7 +2,7 @@
 
 $"identity element"(
   X: %Set(auto = %true),
-  ⨂: %Element($"Iterated operations"(X = {X}))
+  ⨂: %Element($"Iterated operations"(X = X))
 ): %ExplicitOperator {
   notation = $SubSup(
     body = 'e',
@@ -10,16 +10,16 @@ $"identity element"(
   ),
   definition = [%structuralCases(
     ⨂,
-    $"Iterated operations"(X = {X}),
+    $"Iterated operations"(X = X),
     [{
       constructor = $"Iterated operations".operation,
       parameters = #(
-        ∗: %Element($../"Inner operations"(X = {X})),
+        ∗: %Element($../"Inner operations"(X = X)),
         e: %Element(X),
         _1: %Constraint($../../../Algebra/Monoids/"commutative monoid"(
-          M = {X},
-          ∗ = {∗},
-          e = {e}
+          M = X,
+          ∗ = ∗,
+          e = e
         ))
       ),
       value = e

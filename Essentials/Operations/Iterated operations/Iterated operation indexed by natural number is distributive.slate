@@ -2,49 +2,49 @@
 
 $"Iterated operation indexed by natural number is distributive"(
   X: %Set(auto = %true),
-  ⨂: %Element($"Iterated operations"(X = {X})),
+  ⨂: %Element($"Iterated operations"(X = X)),
   n: %Element($../../Numbers/Natural/"Natural numbers"),
   _1: %Binder(
-    #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
+    #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
     #(a,b: %Element(X))
   )
 ): %StandardTheorem {
   claim = %equals(
     $"indexed by natural number"(
-      X = {X},
-      ⨂ = {⨂},
-      n = {n},
+      X = X,
+      ⨂ = ⨂,
+      n = n,
       _1 = {
-        #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-        {a = {$operation(
-          X = {X},
-          ⨂ = {⨂},
-          x = {a[i = {i}]},
-          y = {b[i = {i}]}
-        )}}
+        #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+        {a = $operation(
+          X = X,
+          ⨂ = ⨂,
+          x = a[i = i],
+          y = b[i = i]
+        )}
       }
     ),
     $operation(
-      X = {X},
-      ⨂ = {⨂},
-      x = {$"indexed by natural number"(
-        X = {X},
-        ⨂ = {⨂},
-        n = {n},
+      X = X,
+      ⨂ = ⨂,
+      x = $"indexed by natural number"(
+        X = X,
+        ⨂ = ⨂,
+        n = n,
         _1 = {
-          #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-          {a = {a[i = {i}]}}
+          #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+          {a = a[i = i]}
         }
-      )},
-      y = {$"indexed by natural number"(
-        X = {X},
-        ⨂ = {⨂},
-        n = {n},
+      ),
+      y = $"indexed by natural number"(
+        X = X,
+        ⨂ = ⨂,
+        n = n,
         _1 = {
-          #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = {n}))),
-          {a = {b[i = {i}]}}
+          #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+          {a = b[i = i]}
         }
-      )}
+      )
     )
   )
 }

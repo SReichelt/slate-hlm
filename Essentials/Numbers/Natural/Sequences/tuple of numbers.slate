@@ -11,8 +11,8 @@ $"tuple of numbers"(items: %Nat[]): %MacroOperator {
   variables = #(length: %Nat),
   references = {
     Tuples = $../../../Sequences/Tuples(
-      S = {$../"Natural numbers"},
-      α = {$../number(value = length)}
+      S = $../"Natural numbers",
+      α = $../number(value = length)
     ),
     tuple = $../../../Sequences/tuple
   }

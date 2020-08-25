@@ -9,7 +9,7 @@
  */
 $"submonoid set"(
   𝐌: %Element($../Monoids),
-  S: %Subset($../Carrier(𝐌 = {𝐌}))
+  S: %Subset($../Carrier(𝐌 = 𝐌))
 ): %Predicate {
   notation = $NounRelation(
     operands = [S, 𝐌],
@@ -21,15 +21,15 @@ $"submonoid set"(
       #(a,b: %Element(S)),
       %in(
         $../operation(
-          𝐌 = {𝐌},
-          a = {a},
-          b = {b}
+          𝐌 = 𝐌,
+          a = a,
+          b = b
         ),
         S
       )
     ),
     %in(
-      $../identity(𝐌 = {𝐌}),
+      $../identity(𝐌 = 𝐌),
       S
     )
   )]

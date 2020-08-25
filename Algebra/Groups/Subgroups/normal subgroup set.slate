@@ -9,7 +9,7 @@
  */
 $"normal subgroup set"(
   𝐆: %Element($../Groups),
-  S: %Subset($../Carrier(𝐆 = {𝐆}))
+  S: %Subset($../Carrier(𝐆 = 𝐆))
 ): %Predicate {
   notation = $NounRelation(
     operands = [S, 𝐆],
@@ -19,26 +19,26 @@ $"normal subgroup set"(
   definition = [
     %and(
       $"subgroup set"(
-        𝐆 = {𝐆},
-        S = {S}
+        𝐆 = 𝐆,
+        S = S
       ),
       %forall(
         #(
           s: %Element(S),
-          g: %Element($../Carrier(𝐆 = {𝐆}))
+          g: %Element($../Carrier(𝐆 = 𝐆))
         ),
         %in(
           $../operation(
-            𝐆 = {𝐆},
-            a = {%associative($../operation(
-              𝐆 = {𝐆},
-              a = {g},
-              b = {s}
-            ))},
-            b = {$../inverse(
-              𝐆 = {𝐆},
-              a = {g}
-            )}
+            𝐆 = 𝐆,
+            a = %associative($../operation(
+              𝐆 = 𝐆,
+              a = g,
+              b = s
+            )),
+            b = $../inverse(
+              𝐆 = 𝐆,
+              a = g
+            )
           ),
           S
         )
@@ -46,26 +46,26 @@ $"normal subgroup set"(
     ),
     %and(
       $"subgroup set"(
-        𝐆 = {𝐆},
-        S = {S}
+        𝐆 = 𝐆,
+        S = S
       ),
       %forall(
         #(
           s: %Element(S),
-          h: %Element($../Carrier(𝐆 = {𝐆}))
+          h: %Element($../Carrier(𝐆 = 𝐆))
         ),
         %in(
           $../operation(
-            𝐆 = {𝐆},
-            a = {$../inverse(
-              𝐆 = {𝐆},
-              a = {h}
-            )},
-            b = {%associative($../operation(
-              𝐆 = {𝐆},
-              a = {s},
-              b = {h}
-            ))}
+            𝐆 = 𝐆,
+            a = $../inverse(
+              𝐆 = 𝐆,
+              a = h
+            ),
+            b = %associative($../operation(
+              𝐆 = 𝐆,
+              a = s,
+              b = h
+            ))
           ),
           S
         )
@@ -75,16 +75,16 @@ $"normal subgroup set"(
       #(
         𝐇: %Element($../Groups),
         φ: %Element($../Homomorphisms/Homomorphisms(
-          𝐆 = {𝐆},
-          𝐇 = {𝐇}
+          𝐆 = 𝐆,
+          𝐇 = 𝐇
         ))
       ),
       formula = %setEquals(
         S,
         $../Homomorphisms/Kernel(
-          𝐆 = {𝐆},
-          𝐇 = {𝐇},
-          φ = {φ}
+          𝐆 = 𝐆,
+          𝐇 = 𝐇,
+          φ = φ
         )
       )
     )

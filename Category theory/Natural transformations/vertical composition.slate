@@ -10,37 +10,37 @@ $"vertical composition"(
     auto = %true
   ),
   𝓒: %Element(
-    $../Categories(u = {u}),
+    $../Categories(u = u),
     auto = %true
   ),
   𝓓: %Element(
-    $../Categories(u = {v}),
+    $../Categories(u = v),
     auto = %true
   ),
   F,G,H: %Element(
     $../Functors/Functors(
-      u = {u},
-      v = {v},
-      𝓒 = {𝓒},
-      𝓓 = {𝓓}
+      u = u,
+      v = v,
+      𝓒 = 𝓒,
+      𝓓 = 𝓓
     ),
     auto = %true
   ),
   η: %Element($"Infranatural transformations"(
-    u = {u},
-    v = {v},
-    𝓒 = {𝓒},
-    𝓓 = {𝓓},
-    F = {F},
-    G = {G}
+    u = u,
+    v = v,
+    𝓒 = 𝓒,
+    𝓓 = 𝓓,
+    F = F,
+    G = G
   )),
   ε: %Element($"Infranatural transformations"(
-    u = {u},
-    v = {v},
-    𝓒 = {𝓒},
-    𝓓 = {𝓓},
-    F = {G},
-    G = {H}
+    u = u,
+    v = v,
+    𝓒 = 𝓒,
+    𝓓 = 𝓓,
+    F = G,
+    G = H
   ))
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(
@@ -48,64 +48,64 @@ $"vertical composition"(
     operands = [ε, η]
   ),
   definition = [$"Infranatural transformations"(
-      u = {u},
-      v = {v},
-      𝓒 = {𝓒},
-      𝓓 = {𝓓},
-      F = {F},
-      G = {H}
+      u = u,
+      v = v,
+      𝓒 = 𝓒,
+      𝓓 = 𝓓,
+      F = F,
+      G = H
     ).transformation(_1 = {
       #(𝐗: %Element($../Objects(
-        u = {u},
-        𝓒 = {𝓒}
+        u = u,
+        𝓒 = 𝓒
       ))),
-      {n = {$../composition(
-        u = {v},
-        𝓒 = {𝓓},
-        𝐗 = {$../Functors/"object value"(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓},
-          F = {F},
-          𝐗 = {𝐗}
-        )},
-        𝐘 = {$../Functors/"object value"(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓},
-          F = {G},
-          𝐗 = {𝐗}
-        )},
-        𝐙 = {$../Functors/"object value"(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓},
-          F = {H},
-          𝐗 = {𝐗}
-        )},
-        f = {$component(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓},
-          F = {F},
-          G = {G},
-          η = {η},
-          𝐗 = {𝐗}
-        )},
-        g = {$component(
-          u = {u},
-          v = {v},
-          𝓒 = {𝓒},
-          𝓓 = {𝓓},
-          F = {G},
-          G = {H},
-          η = {ε},
-          𝐗 = {𝐗}
-        )}
-      )}}
+      {n = $../composition(
+        u = v,
+        𝓒 = 𝓓,
+        𝐗 = $../Functors/"object value"(
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓,
+          F = F,
+          𝐗 = 𝐗
+        ),
+        𝐘 = $../Functors/"object value"(
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓,
+          F = G,
+          𝐗 = 𝐗
+        ),
+        𝐙 = $../Functors/"object value"(
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓,
+          F = H,
+          𝐗 = 𝐗
+        ),
+        f = $component(
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓,
+          F = F,
+          G = G,
+          η = η,
+          𝐗 = 𝐗
+        ),
+        g = $component(
+          u = u,
+          v = v,
+          𝓒 = 𝓒,
+          𝓓 = 𝓓,
+          F = G,
+          G = H,
+          η = ε,
+          𝐗 = 𝐗
+        )
+      )}
   })]
 }

@@ -6,12 +6,12 @@
 $"cartesian product"(
   V,W,X,Y: %Set(auto = %true),
   f: %Element($Functions(
-    X = {V},
-    Y = {W}
+    X = V,
+    Y = W
   )),
   g: %Element($Functions(
-    X = {X},
-    Y = {Y}
+    X = X,
+    Y = Y
   ))
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(
@@ -19,24 +19,24 @@ $"cartesian product"(
     operands = [f, g]
   ),
   definition = [$Functions(
-      X = {$../Sets/"Cartesian product"(
-        S = {V},
-        T = {X}
-      )},
-      Y = {$../Sets/"Cartesian product"(
-        S = {W},
-        T = {Y}
-      )}
+      X = $../Sets/"Cartesian product"(
+        S = V,
+        T = X
+      ),
+      Y = $../Sets/"Cartesian product"(
+        S = W,
+        T = Y
+      )
     ).function(_1 = {
       #(z: %Element($../Sets/"Cartesian product"(
-        S = {V},
-        T = {X}
+        S = V,
+        T = X
       ))),
-      {y = {%structuralCases(
+      {y = %structuralCases(
         z,
         $../Sets/"Cartesian product"(
-          S = {V},
-          T = {X}
+          S = V,
+          T = X
         ),
         [{
           constructor = $../Sets/"Cartesian product".pair,
@@ -45,23 +45,23 @@ $"cartesian product"(
             x: %Element(X)
           ),
           value = $../Sets/"Cartesian product"(
-              S = {W},
-              T = {Y}
+              S = W,
+              T = Y
             ).pair(
-              s = {$value(
-                X = {V},
-                Y = {W},
-                f = {f},
-                x = {v}
-              )},
-              t = {$value(
-                X = {X},
-                Y = {Y},
-                f = {g},
-                x = {x}
-              )}
+              s = $value(
+                X = V,
+                Y = W,
+                f = f,
+                x = v
+              ),
+              t = $value(
+                X = X,
+                Y = Y,
+                f = g,
+                x = x
+              )
           )
         }]
-      )}}
+      )}
   })]
 }
