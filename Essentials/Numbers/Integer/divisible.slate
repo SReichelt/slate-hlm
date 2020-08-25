@@ -9,10 +9,7 @@ $divisible(
     %exists(
       #(x: %Element($Integers)),
       formula = %equals(
-        $product(
-          a = a,
-          b = x
-        ),
+        $product(a = a, b = x),
         b
       )
     ),

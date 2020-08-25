@@ -23,10 +23,7 @@ $Tuples(
     #(a: %Element(S))
   )): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = a,
-        style = '()'
-      ),
+      body = $Parens(body = a, style = '()'),
       sub = $LessThanRelation(operands = [k, α])
     ),
     equalityDefinition = {
@@ -46,25 +43,16 @@ $Tuples(
     }
   }
 
-  notation = $SubSup(
-    body = S,
-    sup = α
-  ),
+  notation = $SubSup(body = S, sup = α),
   definitionNotation = {
     parameter = #(𝐚: %Expr),
     singularName = [
-      $DependentWord(
-        word = 'tuple',
-        argument = α
-      ),
+      $DependentWord(word = 'tuple', argument = α),
       ' on ',
       S
     ],
     pluralName = [
-      $DependentWord(
-        word = 'tuples',
-        argument = α
-      ),
+      $DependentWord(word = 'tuples', argument = α),
       ' on ',
       S
     ],

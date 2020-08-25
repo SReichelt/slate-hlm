@@ -14,11 +14,7 @@ $"First Sylow theorem"(
   claim = %exists(
     #(H: %Subset($../Carrier(𝐆 = 𝐆))),
     formula = %and(
-      $"sylow subgroup"(
-        𝐆 = 𝐆,
-        H = H,
-        p = p
-      ),
+      $"sylow subgroup"(𝐆 = 𝐆, H = H, p = p),
       %equals(
         $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = H),
         $../../../Essentials/Numbers/Natural/power(

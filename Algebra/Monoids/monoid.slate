@@ -19,28 +19,15 @@ $monoid(
   ),
   definition = [
     %and(
-      $../Semigroups/semigroup(
-        M = M,
-        ∗ = ∗
-      ),
+      $../Semigroups/semigroup(M = M, ∗ = ∗),
       $../Magmas/"identity element"(
-        𝐌 = $../Magmas/Magmas.magma(
-          M = M,
-          ∗ = ∗
-        ),
+        𝐌 = $../Magmas/Magmas.magma(M = M, ∗ = ∗),
         e = e
       )
     ),
     %and(
-      $../../Essentials/Operations/associative(
-        X = M,
-        ∗ = ∗
-      ),
-      $../../Essentials/Operations/"identity element"(
-        X = M,
-        ∗ = ∗,
-        e = e
-      )
+      $../../Essentials/Operations/associative(X = M, ∗ = ∗),
+      $../../Essentials/Operations/"identity element"(X = M, ∗ = ∗, e = e)
     )
   ]
 }

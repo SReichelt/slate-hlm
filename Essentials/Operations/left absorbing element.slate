@@ -6,11 +6,7 @@
  */
 $"left absorbing element"(
   X,Y: %Set(auto = %true),
-  ∗: %Element($Operations(
-    X = X,
-    Y = Y,
-    Z = X
-  )),
+  ∗: %Element($Operations(X = X, Y = Y, Z = X)),
   z: %Element(X)
 ): %Predicate {
   notation = $NounRelation(
@@ -22,14 +18,7 @@ $"left absorbing element"(
   definition = [%forall(
     #(a: %Element(Y)),
     %equals(
-      $value(
-        X = X,
-        Y = Y,
-        Z = X,
-        ∗ = ∗,
-        x = z,
-        y = a
-      ),
+      $value(X = X, Y = Y, Z = X, ∗ = ∗, x = z, y = a),
       z
     )
   )]

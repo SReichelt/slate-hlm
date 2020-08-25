@@ -11,21 +11,13 @@ $"Intersection is associative"(
   claim = %setEquals(
     $Intersection(
       U = U,
-      S = $Intersection(
-        U = U,
-        S = R,
-        T = S
-      ),
+      S = $Intersection(U = U, S = R, T = S),
       T = T
     ),
     $Intersection(
       U = U,
       S = R,
-      T = $Intersection(
-        U = U,
-        S = S,
-        T = T
-      )
+      T = $Intersection(U = U, S = S, T = T)
     )
   )
 }

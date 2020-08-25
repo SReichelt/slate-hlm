@@ -7,10 +7,7 @@ $"less or equal"(α,β: %Element($"Ordinal numbers")): %Predicate {
   notation = $LessOrEqualRelation(operands = [α, β]),
   definition = [
     %exists(
-      #(φ: %Element($Homomorphisms/Homomorphisms(
-        α = α,
-        β = β
-      ))),
+      #(φ: %Element($Homomorphisms/Homomorphisms(α = α, β = β))),
       formula = $../../Functions/injective(
         X = $Carrier(α = α),
         Y = $Carrier(α = β),
@@ -21,10 +18,7 @@ $"less or equal"(α,β: %Element($"Ordinal numbers")): %Predicate {
       #(S: %Subset($Carrier(α = β))),
       formula = %equals(
         α,
-        $"Ordered subsets"/"subset ordinal"(
-          α = β,
-          S = S
-        )
+        $"Ordered subsets"/"subset ordinal"(α = β, S = S)
       )
     )
   ]

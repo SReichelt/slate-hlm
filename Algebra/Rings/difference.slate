@@ -11,9 +11,6 @@ $difference(
   definition = [$sum(
     𝐑 = 𝐑,
     a = a,
-    b = $"additive inverse"(
-      𝐑 = 𝐑,
-      a = b
-    )
+    b = $"additive inverse"(𝐑 = 𝐑, a = b)
   )]
 }

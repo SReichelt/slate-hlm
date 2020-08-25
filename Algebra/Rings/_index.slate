@@ -15,14 +15,8 @@ $Rings: %Section {
     %item($one),
     %item($commutative),
     %item($"multiplicative monoid"),
-    %subsection(
-      $Homomorphisms,
-      'Homomorphisms'
-    ),
-    %subsection(
-      $Subrings,
-      'Subrings'
-    ),
+    %subsection($Homomorphisms, 'Homomorphisms'),
+    %subsection($Subrings, 'Subrings'),
     %item($unit),
     %item($Units),
     %item($"multiplicative inverse"),
@@ -30,37 +24,13 @@ $Rings: %Section {
     %item($"product with natural number"),
     %item($"product with integer"),
     %item($"power to natural number"),
-    %subsection(
-      $Ideals,
-      'Ideals'
-    ),
-    %subsection(
-      $Quotients,
-      'Quotient rings'
-    ),
-    %subsection(
-      $Examples,
-      'Examples'
-    ),
-    %subsection(
-      $"Iterated operations",
-      'Iterated operations'
-    ),
-    %subsection(
-      $Polynomials,
-      'Polynomials'
-    ),
-    %item(
-      $"kronecker delta",
-      title = 'Kronecker delta'
-    ),
-    %subsection(
-      $Matrices,
-      'Matrices'
-    ),
-    %subsection(
-      $Modules,
-      'Modules'
-    )
+    %subsection($Ideals, 'Ideals'),
+    %subsection($Quotients, 'Quotient rings'),
+    %subsection($Examples, 'Examples'),
+    %subsection($"Iterated operations", 'Iterated operations'),
+    %subsection($Polynomials, 'Polynomials'),
+    %item($"kronecker delta", title = 'Kronecker delta'),
+    %subsection($Matrices, 'Matrices'),
+    %subsection($Modules, 'Modules')
   ]
 }

@@ -18,10 +18,7 @@ $"normal subgroup set"(
   ),
   definition = [
     %and(
-      $"subgroup set"(
-        𝐆 = 𝐆,
-        S = S
-      ),
+      $"subgroup set"(𝐆 = 𝐆, S = S),
       %forall(
         #(
           s: %Element(S),
@@ -30,25 +27,15 @@ $"normal subgroup set"(
         %in(
           $../operation(
             𝐆 = 𝐆,
-            a = %associative($../operation(
-              𝐆 = 𝐆,
-              a = g,
-              b = s
-            )),
-            b = $../inverse(
-              𝐆 = 𝐆,
-              a = g
-            )
+            a = %associative($../operation(𝐆 = 𝐆, a = g, b = s)),
+            b = $../inverse(𝐆 = 𝐆, a = g)
           ),
           S
         )
       )
     ),
     %and(
-      $"subgroup set"(
-        𝐆 = 𝐆,
-        S = S
-      ),
+      $"subgroup set"(𝐆 = 𝐆, S = S),
       %forall(
         #(
           s: %Element(S),
@@ -57,15 +44,8 @@ $"normal subgroup set"(
         %in(
           $../operation(
             𝐆 = 𝐆,
-            a = $../inverse(
-              𝐆 = 𝐆,
-              a = h
-            ),
-            b = %associative($../operation(
-              𝐆 = 𝐆,
-              a = s,
-              b = h
-            ))
+            a = $../inverse(𝐆 = 𝐆, a = h),
+            b = %associative($../operation(𝐆 = 𝐆, a = s, b = h))
           ),
           S
         )
@@ -74,18 +54,11 @@ $"normal subgroup set"(
     %exists(
       #(
         𝐇: %Element($../Groups),
-        φ: %Element($../Homomorphisms/Homomorphisms(
-          𝐆 = 𝐆,
-          𝐇 = 𝐇
-        ))
+        φ: %Element($../Homomorphisms/Homomorphisms(𝐆 = 𝐆, 𝐇 = 𝐇))
       ),
       formula = %setEquals(
         S,
-        $../Homomorphisms/Kernel(
-          𝐆 = 𝐆,
-          𝐇 = 𝐇,
-          φ = φ
-        )
+        $../Homomorphisms/Kernel(𝐆 = 𝐆, 𝐇 = 𝐇, φ = φ)
       )
     )
   ]

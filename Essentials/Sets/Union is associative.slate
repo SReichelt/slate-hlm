@@ -11,21 +11,13 @@ $"Union is associative"(
   claim = %setEquals(
     $Union(
       U = U,
-      S = $Union(
-        U = U,
-        S = R,
-        T = S
-      ),
+      S = $Union(U = U, S = R, T = S),
       T = T
     ),
     $Union(
       U = U,
       S = R,
-      T = $Union(
-        U = U,
-        S = S,
-        T = T
-      )
+      T = $Union(U = U, S = S, T = T)
     )
   )
 }

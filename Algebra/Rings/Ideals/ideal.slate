@@ -19,30 +19,17 @@ $ideal(
   ),
   definition = [
     %and(
-      $"left ideal"(
-        𝐑 = 𝐑,
-        I = I
-      ),
-      $"right ideal"(
-        𝐑 = 𝐑,
-        I = I
-      )
+      $"left ideal"(𝐑 = 𝐑, I = I),
+      $"right ideal"(𝐑 = 𝐑, I = I)
     ),
     %exists(
       #(
         𝐒: %Element($../Rings),
-        φ: %Element($../Homomorphisms/Homomorphisms(
-          𝐑 = 𝐑,
-          𝐒 = 𝐒
-        ))
+        φ: %Element($../Homomorphisms/Homomorphisms(𝐑 = 𝐑, 𝐒 = 𝐒))
       ),
       formula = %setEquals(
         I,
-        $../Homomorphisms/Kernel(
-          𝐑 = 𝐑,
-          𝐒 = 𝐒,
-          φ = φ
-        )
+        $../Homomorphisms/Kernel(𝐑 = 𝐑, 𝐒 = 𝐒, φ = φ)
       )
     )
   ]

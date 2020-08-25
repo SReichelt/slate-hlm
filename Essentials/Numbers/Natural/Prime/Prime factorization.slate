@@ -22,10 +22,7 @@ $"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTh
         #(p: %Element($"Prime numbers")),
         {a = $../power(
           m = p,
-          n = $multiplicity(
-            n = n,
-            p = p
-          )
+          n = $multiplicity(n = n, p = p)
         )}
       }
     ),

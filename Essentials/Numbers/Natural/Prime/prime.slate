@@ -23,10 +23,7 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = $../number(value = 1)))):
     %forall(
       #(
         m: %Element($../Subsets/"Positive numbers"),
-        _1: %Constraint($../divisible(
-          m = m,
-          n = n
-        ))
+        _1: %Constraint($../divisible(m = m, n = n))
       ),
       %or(
         %equals(
@@ -39,10 +36,7 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = $../number(value = 1)))):
     %forall(
       #(
         l: %Element($../Subsets/"Segment (greater)"(n = $../number(value = 1))),
-        _2: %Constraint($../divisible(
-          m = l,
-          n = n
-        ))
+        _2: %Constraint($../divisible(m = l, n = n))
       ),
       %equals(l, n)
     ),
@@ -69,10 +63,7 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = $../number(value = 1)))):
         a,b: %Element($../"Natural numbers"),
         _3: %Constraint(%equals(
           n,
-          $../product(
-            m = a,
-            n = b
-          )
+          $../product(m = a, n = b)
         ))
       ),
       %or(
@@ -96,10 +87,7 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = $../number(value = 1)))):
       #(c,d: %Element($../Subsets/"Segment (less)"(n = n))),
       formula = %equals(
         n,
-        $../product(
-          m = c,
-          n = d
-        )
+        $../product(m = c, n = d)
       )
     )),
     %forall(
@@ -107,21 +95,12 @@ $prime(n: %Element($../Subsets/"Segment (greater)"(n = $../number(value = 1)))):
         e,f: %Element($../"Natural numbers"),
         _5: %Constraint($../divisible(
           m = n,
-          n = $../product(
-            m = e,
-            n = f
-          )
+          n = $../product(m = e, n = f)
         ))
       ),
       %or(
-        $../divisible(
-          m = n,
-          n = e
-        ),
-        $../divisible(
-          m = n,
-          n = f
-        )
+        $../divisible(m = n, n = e),
+        $../divisible(m = n, n = f)
       )
     )
   ]

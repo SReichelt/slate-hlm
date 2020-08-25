@@ -4,16 +4,10 @@ $"semigroup with identity"(
   𝐒: %Element($../Semigroups/Semigroups),
   _1: %Constraint(%exists(
     #(e: %Element($../Magmas/Carrier(𝐌 = 𝐒))),
-    formula = $../Magmas/"identity element"(
-      𝐌 = 𝐒,
-      e = e
-    )
+    formula = $../Magmas/"identity element"(𝐌 = 𝐒, e = e)
   ))
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = 𝐒,
-    sub = '𝓜𝓸𝓷'
-  ),
+  notation = $SubSup(body = 𝐒, sub = '𝓜𝓸𝓷'),
   definition = [%structuralCases(
     𝐒,
     $../Magmas/Magmas,

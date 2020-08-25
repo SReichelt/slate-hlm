@@ -9,47 +9,26 @@
  */
 $surjective(
   X,Y: %Set(auto = %true),
-  f: %Element($Functions(
-    X = X,
-    Y = Y
-  ))
+  f: %Element($Functions(X = X, Y = Y))
 ): %Predicate {
-  notation = $Property(
-    operand = f,
-    property = 'surjective'
-  ),
+  notation = $Property(operand = f, property = 'surjective'),
   definition = [
     %forall(
       #(y: %Element(Y)),
       %exists(
         #(x: %Element(X)),
         formula = %equals(
-          $value(
-            X = X,
-            Y = Y,
-            f = f,
-            x = x
-          ),
+          $value(X = X, Y = Y, f = f, x = x),
           y
         )
       )
     ),
     %sub(
       Y,
-      $Image(
-        X = X,
-        Y = Y,
-        f = f,
-        S = X
-      )
+      $Image(X = X, Y = Y, f = f, S = X)
     ),
     %setEquals(
-      $Image(
-        X = X,
-        Y = Y,
-        f = f,
-        S = X
-      ),
+      $Image(X = X, Y = Y, f = f, S = X),
       Y
     )
   ]

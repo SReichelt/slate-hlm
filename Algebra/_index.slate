@@ -3,41 +3,14 @@
 $Algebra: %Section {
   logic = 'hlm',
   items = [
-    %subsection(
-      $Generic,
-      'Generic definitions'
-    ),
-    %subsection(
-      $"Pointed sets",
-      'Pointed sets'
-    ),
-    %subsection(
-      $Magmas,
-      'Magmas'
-    ),
-    %subsection(
-      $Semigroups,
-      'Semigroups'
-    ),
-    %subsection(
-      $Monoids,
-      'Monoids'
-    ),
-    %subsection(
-      $Groups,
-      'Groups'
-    ),
-    %subsection(
-      $Semirings,
-      'Semirings'
-    ),
-    %subsection(
-      $Rings,
-      'Rings'
-    ),
-    %subsection(
-      $Fields,
-      'Fields'
-    )
+    %subsection($Generic, 'Generic definitions'),
+    %subsection($"Pointed sets", 'Pointed sets'),
+    %subsection($Magmas, 'Magmas'),
+    %subsection($Semigroups, 'Semigroups'),
+    %subsection($Monoids, 'Monoids'),
+    %subsection($Groups, 'Groups'),
+    %subsection($Semirings, 'Semirings'),
+    %subsection($Rings, 'Rings'),
+    %subsection($Fields, 'Fields')
   ]
 }

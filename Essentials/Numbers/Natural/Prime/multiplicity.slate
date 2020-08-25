@@ -22,45 +22,30 @@ $multiplicity(
       formula = %and(
         %equals(
           $../product(
-            m = $../power(
-              m = p,
-              n = x
-            ),
+            m = $../power(m = p, n = x),
             n = m
           ),
           n
         ),
-        %not($../divisible(
-          m = p,
-          n = m
-        ))
+        %not($../divisible(m = p, n = m))
       )
     ),
     %and(
       $../divisible(
-        m = $../power(
-          m = p,
-          n = x
-        ),
+        m = $../power(m = p, n = x),
         n = n
       ),
       %not($../divisible(
         m = p,
         n = $../quotient(
           n = n,
-          m = $../power(
-            m = p,
-            n = x
-          )
+          m = $../power(m = p, n = x)
         )
       ))
     ),
     %and(
       $../divisible(
-        m = $../power(
-          m = p,
-          n = x
-        ),
+        m = $../power(m = p, n = x),
         n = n
       ),
       %not($../divisible(
@@ -76,19 +61,13 @@ $multiplicity(
     ),
     %and(
       $../divisible(
-        m = $../power(
-          m = p,
-          n = x
-        ),
+        m = $../power(m = p, n = x),
         n = n
       ),
       %not(%exists(
         #(y: %Element($../Subsets/"Segment (greater)"(n = x))),
         formula = $../divisible(
-          m = $../power(
-            m = p,
-            n = y
-          ),
+          m = $../power(m = p, n = y),
           n = n
         )
       ))

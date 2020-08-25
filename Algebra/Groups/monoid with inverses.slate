@@ -4,16 +4,10 @@ $"monoid with inverses"(
   𝐌: %Element($../Monoids/Monoids),
   _1: %Constraint(%forall(
     #(a: %Element($../Monoids/Carrier(𝐌 = 𝐌))),
-    $../Monoids/invertible(
-      𝐌 = 𝐌,
-      a = a
-    )
+    $../Monoids/invertible(𝐌 = 𝐌, a = a)
   ))
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = 𝐌,
-    sub = '𝓖𝓻𝓹'
-  ),
+  notation = $SubSup(body = 𝐌, sub = '𝓖𝓻𝓹'),
   definition = [%structuralCases(
     𝐌,
     $../Monoids/Monoids,
@@ -23,25 +17,15 @@ $"monoid with inverses"(
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
         e: %Element(M),
-        _1: %Constraint($../Monoids/monoid(
-          M = M,
-          ∗ = ∗,
-          e = e
-        ))
+        _1: %Constraint($../Monoids/monoid(M = M, ∗ = ∗, e = e))
       ),
       value = $Groups.group(
         G = M,
         ∗ = ∗,
         e = e,
-        i = $../../Essentials/Functions/Functions(
-            X = M,
-            Y = M
-          ).function(_1 = {
+        i = $../../Essentials/Functions/Functions(X = M, Y = M).function(_1 = {
             #(a: %Element(M)),
-            {y = $../Monoids/inverse(
-              𝐌 = 𝐌,
-              a = a
-            )}
+            {y = $../Monoids/inverse(𝐌 = 𝐌, a = a)}
         })
       )
     }]

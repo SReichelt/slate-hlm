@@ -15,10 +15,7 @@ $"Power set"(S: %Set(
   embedSubsets = %true
 )): %Construction {
   $subset(T: %Subset(S)): %Constructor {
-    notation = $Parens(
-      body = T,
-      style = '()'
-    ),
+    notation = $Parens(body = T, style = '()'),
     equalityDefinition = {
       leftParameters = #(T: %Subset(S)),
       rightParameters = #("T'": %Subset(S)),

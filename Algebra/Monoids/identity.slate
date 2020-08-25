@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $identity(𝐌: %Element($Monoids)): %ExplicitOperator {
-  notation = $SubSup(
-    body = 'e',
-    sub = 𝐌
-  ),
+  notation = $SubSup(body = 'e', sub = 𝐌),
   definition = [%structuralCases(
     𝐌,
     $Monoids,
@@ -14,11 +11,7 @@ $identity(𝐌: %Element($Monoids)): %ExplicitOperator {
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
         e: %Element(M),
-        _1: %Constraint($monoid(
-          M = M,
-          ∗ = ∗,
-          e = e
-        ))
+        _1: %Constraint($monoid(M = M, ∗ = ∗, e = e))
       ),
       value = e
     }]

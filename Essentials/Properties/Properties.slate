@@ -12,19 +12,13 @@ $Properties(S: %Set(auto = %true)): %Construction {
     #(p: %Prop)
   )): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = p,
-        style = '[]'
-      ),
+      body = $Parens(body = p, style = '[]'),
       sub = $ElementRelation(operands = [s, S])
     ),
     abbreviations = [{
       parameters = #(property: %Expr),
       originalParameter = p,
-      originalParameterValue = $Property(
-        operand = s,
-        property = property
-      ),
+      originalParameterValue = $Property(operand = s, property = property),
       abbreviation = property
     }],
     equalityDefinition = {

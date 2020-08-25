@@ -8,18 +8,12 @@
  *             * https://proofwiki.org/wiki/Category:Category_of_Pointed_Sets
  */
 $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = $SubSup(
-    body = '𝐏𝐭𝐒𝐞𝐭',
-    sub = u
-  ),
+  notation = $SubSup(body = '𝐏𝐭𝐒𝐞𝐭', sub = u),
   definition = [$../Categories(u = u).category(
       O = $../../Algebra/"Pointed sets"/"Pointed sets",
       _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
-        {M = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
-          𝐒 = 𝐀,
-          𝐓 = 𝐁
-        )}
+        {M = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐀, 𝐓 = 𝐁)}
       },
       _2 = {
         #(𝐂: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
@@ -28,28 +22,13 @@ $"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
       _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
         {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
-              𝐒 = 𝐄,
-              𝐓 = 𝐅
-            ),
-            Y = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
-              𝐒 = 𝐃,
-              𝐓 = 𝐄
-            ),
-            Z = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
-              𝐒 = 𝐃,
-              𝐓 = 𝐅
-            )
+            X = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐄, 𝐓 = 𝐅),
+            Y = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐃, 𝐓 = 𝐄),
+            Z = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐃, 𝐓 = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
-                𝐒 = 𝐄,
-                𝐓 = 𝐅
-              )),
-              φ: %Element($../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(
-                𝐒 = 𝐃,
-                𝐓 = 𝐄
-              ))
+              ψ: %Element($../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐄, 𝐓 = 𝐅)),
+              φ: %Element($../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐃, 𝐓 = 𝐄))
             ),
             {z = $../../Essentials/Functions/composition(
               X = $../../Algebra/"Pointed sets"/Carrier(𝐒 = 𝐃),

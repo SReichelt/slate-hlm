@@ -17,10 +17,7 @@ $"subfield set"(
     plural = 'subfields'
   ),
   definition = [%and(
-    $../../Rings/Subrings/"subring set"(
-      𝐑 = 𝐅,
-      S = S
-    ),
+    $../../Rings/Subrings/"subring set"(𝐑 = 𝐅, S = S),
     %forall(
       #(a: %Element($../../../Essentials/Sets/"Relative complement"(
         U = S,
@@ -28,10 +25,7 @@ $"subfield set"(
         T = %enumeration($../../Rings/zero(𝐑 = 𝐅))
       ))),
       %in(
-        $../../Rings/"multiplicative inverse"(
-          𝐑 = 𝐅,
-          a = a
-        ),
+        $../../Rings/"multiplicative inverse"(𝐑 = 𝐅, a = a),
         S
       )
     )

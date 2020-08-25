@@ -10,35 +10,16 @@ $"total order"(
   S: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
-  notation = $NounProperty(
-    operand = ⪯,
-    singular = 'total order',
-    plural = 'total orders'
-  ),
+  notation = $NounProperty(operand = ⪯, singular = 'total order', plural = 'total orders'),
   definition = [
     %and(
-      $connex(
-        S = S,
-        ≺ = ⪯
-      ),
-      $antisymmetric(
-        S = S,
-        ⪯ = ⪯
-      ),
-      $transitive(
-        S = S,
-        ≺ = ⪯
-      )
+      $connex(S = S, ≺ = ⪯),
+      $antisymmetric(S = S, ⪯ = ⪯),
+      $transitive(S = S, ≺ = ⪯)
     ),
     %and(
-      $"partial order"(
-        S = S,
-        ⪯ = ⪯
-      ),
-      $connex(
-        S = S,
-        ≺ = ⪯
-      )
+      $"partial order"(S = S, ⪯ = ⪯),
+      $connex(S = S, ≺ = ⪯)
     )
   ]
 }

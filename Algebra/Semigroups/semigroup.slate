@@ -16,8 +16,5 @@ $semigroup(
     singular = 'semigroup',
     plural = 'semigroups'
   ),
-  definition = [$../../Essentials/Operations/associative(
-    X = M,
-    ∗ = ∗
-  )]
+  definition = [$../../Essentials/Operations/associative(X = M, ∗ = ∗)]
 }

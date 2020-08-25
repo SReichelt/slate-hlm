@@ -7,18 +7,12 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/category/Mon/basic.html#Mon
  */
 $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = $SubSup(
-    body = '𝐌𝐨𝐧',
-    sub = u
-  ),
+  notation = $SubSup(body = '𝐌𝐨𝐧', sub = u),
   definition = [$../Categories(u = u).category(
       O = $../../Algebra/Monoids/Monoids,
       _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Monoids/Monoids)),
-        {M = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-          𝐌 = 𝐀,
-          𝐍 = 𝐁
-        )}
+        {M = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(𝐌 = 𝐀, 𝐍 = 𝐁)}
       },
       _2 = {
         #(𝐂: %Element($../../Algebra/Monoids/Monoids)),
@@ -27,28 +21,13 @@ $monoids(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Exp
       _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Monoids/Monoids)),
         {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-              𝐌 = 𝐄,
-              𝐍 = 𝐅
-            ),
-            Y = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-              𝐌 = 𝐃,
-              𝐍 = 𝐄
-            ),
-            Z = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-              𝐌 = 𝐃,
-              𝐍 = 𝐅
-            )
+            X = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(𝐌 = 𝐄, 𝐍 = 𝐅),
+            Y = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(𝐌 = 𝐃, 𝐍 = 𝐄),
+            Z = $../../Algebra/Monoids/Homomorphisms/Homomorphisms(𝐌 = 𝐃, 𝐍 = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-                𝐌 = 𝐄,
-                𝐍 = 𝐅
-              )),
-              φ: %Element($../../Algebra/Monoids/Homomorphisms/Homomorphisms(
-                𝐌 = 𝐃,
-                𝐍 = 𝐄
-              ))
+              ψ: %Element($../../Algebra/Monoids/Homomorphisms/Homomorphisms(𝐌 = 𝐄, 𝐍 = 𝐅)),
+              φ: %Element($../../Algebra/Monoids/Homomorphisms/Homomorphisms(𝐌 = 𝐃, 𝐍 = 𝐄))
             ),
             {z = $../../Essentials/Functions/composition(
               X = $../../Algebra/Monoids/Carrier(𝐌 = 𝐃),

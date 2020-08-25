@@ -12,14 +12,8 @@ $substitution: %ExplicitOperator {
           {M = $../Terms(V = %enumeration(x, y)).abstraction(_2 = {
               #(z: %Element($../../"Fresh variables"(V = %enumeration(x, y)))),
               {M = $../Terms(V = %enumeration(x, y, z)).application(
-                  M = $../Terms(V = %enumeration(x, y, z)).application(
-                      M = x,
-                      N = z
-                  ),
-                  N = $../Terms(V = %enumeration(x, y, z)).application(
-                      M = y,
-                      N = z
-                  )
+                  M = $../Terms(V = %enumeration(x, y, z)).application(M = x, N = z),
+                  N = $../Terms(V = %enumeration(x, y, z)).application(M = y, N = z)
               )}
           })}
       })}

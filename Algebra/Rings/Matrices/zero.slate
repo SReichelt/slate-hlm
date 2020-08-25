@@ -14,11 +14,7 @@ $zero(
       )
     )
   ),
-  definition = [$Matrices(
-      𝐑 = 𝐑,
-      m = m,
-      n = n
-    ).matrix(_1 = {
+  definition = [$Matrices(𝐑 = 𝐑, m = m, n = n).matrix(_1 = {
       #(
         i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
         j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))

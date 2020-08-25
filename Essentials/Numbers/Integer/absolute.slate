@@ -8,10 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.nat_abs
  */
 $absolute(a: %Element($Integers)): %ExplicitOperator {
-  notation = $Parens(
-    style = '||',
-    body = a
-  ),
+  notation = $Parens(style = '||', body = a),
   definition = [%cases([
     {
       formula = $"less or equal"(

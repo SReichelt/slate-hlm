@@ -3,23 +3,14 @@
 $"Divisibility criterion"(
   a: %Element($Subsets/"Positive numbers"),
   b: %Element($"Natural numbers"),
-  _1: %Constraint($divisible(
-    m = a,
-    n = b
-  )),
+  _1: %Constraint($divisible(m = a, n = b)),
   c: %Element($"Natural numbers")
 ): %EquivalenceTheorem {
   conditions = [
+    $divisible(m = a, n = c),
     $divisible(
       m = a,
-      n = c
-    ),
-    $divisible(
-      m = a,
-      n = $sum(
-        m = b,
-        n = c
-      )
+      n = $sum(m = b, n = c)
     )
   ]
 }

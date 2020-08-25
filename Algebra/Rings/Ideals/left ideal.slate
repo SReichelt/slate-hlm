@@ -26,11 +26,7 @@ $"left ideal"(
         r: %Element($../Carrier(𝐑 = 𝐑))
       ),
       %in(
-        $../product(
-          𝐑 = 𝐑,
-          a = r,
-          b = i
-        ),
+        $../product(𝐑 = 𝐑, a = r, b = i),
         I
       )
     )

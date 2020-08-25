@@ -27,9 +27,5 @@ $Automorphisms(
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },
-  definition = [$Isomorphisms(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌,
-    𝐍 = 𝐌
-  )]
+  definition = [$Isomorphisms(𝐑 = 𝐑, 𝐌 = 𝐌, 𝐍 = 𝐌)]
 }

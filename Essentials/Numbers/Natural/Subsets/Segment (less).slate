@@ -5,16 +5,9 @@
  *             * https://proofwiki.org/wiki/Definition:Initial_Segment_of_Natural_Numbers/Zero-Based
  */
 $"Segment (less)"(n: %Element($../"Natural numbers")): %SetOperator {
-  notation = $Segment(
-    set = 'ℕ',
-    symbol = '<',
-    limit = n
-  ),
+  notation = $Segment(set = 'ℕ', symbol = '<', limit = n),
   definition = [%subset(
     #(m: %Element($../"Natural numbers")),
-    $../less(
-      m = m,
-      n = n
-    )
+    $../less(m = m, n = n)
   )]
 }

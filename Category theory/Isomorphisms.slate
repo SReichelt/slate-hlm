@@ -15,10 +15,7 @@ $Isomorphisms(
     $Categories(u = u),
     auto = %true
   ),
-  𝐗,𝐘: %Element($Objects(
-    u = u,
-    𝓒 = 𝓒
-  ))
+  𝐗,𝐘: %Element($Objects(u = u, 𝓒 = 𝓒))
 ): %SetOperator {
   notation = $Function(
     function = 'Iso',
@@ -37,101 +34,33 @@ $Isomorphisms(
   },
   definition = [
     %subset(
-      #(f: %Element($Morphisms(
-        u = u,
-        𝓒 = 𝓒,
-        𝐗 = 𝐗,
-        𝐘 = 𝐘
-      ))),
+      #(f: %Element($Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗, 𝐘 = 𝐘))),
       %exists(
-        #(g: %Element($Morphisms(
-          u = u,
-          𝓒 = 𝓒,
-          𝐗 = 𝐘,
-          𝐘 = 𝐗
-        ))),
+        #(g: %Element($Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐘, 𝐘 = 𝐗))),
         formula = %and(
           %equals(
-            $composition(
-              u = u,
-              𝓒 = 𝓒,
-              𝐗 = 𝐗,
-              𝐘 = 𝐘,
-              𝐙 = 𝐗,
-              f = f,
-              g = g
-            ),
-            $identity(
-              u = u,
-              𝓒 = 𝓒,
-              𝐗 = 𝐗
-            )
+            $composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗, 𝐘 = 𝐘, 𝐙 = 𝐗, f = f, g = g),
+            $identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗)
           ),
           %equals(
-            $composition(
-              u = u,
-              𝓒 = 𝓒,
-              𝐗 = 𝐘,
-              𝐘 = 𝐗,
-              𝐙 = 𝐘,
-              f = g,
-              g = f
-            ),
-            $identity(
-              u = u,
-              𝓒 = 𝓒,
-              𝐗 = 𝐘
-            )
+            $composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐘, 𝐘 = 𝐗, 𝐙 = 𝐘, f = g, g = f),
+            $identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐘)
           )
         )
       )
     ),
     %subset(
-      #(f: %Element($Morphisms(
-        u = u,
-        𝓒 = 𝓒,
-        𝐗 = 𝐗,
-        𝐘 = 𝐘
-      ))),
+      #(f: %Element($Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗, 𝐘 = 𝐘))),
       %existsUnique(
-        #(g: %Element($Morphisms(
-          u = u,
-          𝓒 = 𝓒,
-          𝐗 = 𝐘,
-          𝐘 = 𝐗
-        ))),
+        #(g: %Element($Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐘, 𝐘 = 𝐗))),
         formula = %and(
           %equals(
-            $composition(
-              u = u,
-              𝓒 = 𝓒,
-              𝐗 = 𝐗,
-              𝐘 = 𝐘,
-              𝐙 = 𝐗,
-              f = f,
-              g = g
-            ),
-            $identity(
-              u = u,
-              𝓒 = 𝓒,
-              𝐗 = 𝐗
-            )
+            $composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗, 𝐘 = 𝐘, 𝐙 = 𝐗, f = f, g = g),
+            $identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗)
           ),
           %equals(
-            $composition(
-              u = u,
-              𝓒 = 𝓒,
-              𝐗 = 𝐘,
-              𝐘 = 𝐗,
-              𝐙 = 𝐘,
-              f = g,
-              g = f
-            ),
-            $identity(
-              u = u,
-              𝓒 = 𝓒,
-              𝐗 = 𝐘
-            )
+            $composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐘, 𝐘 = 𝐗, 𝐙 = 𝐘, f = g, g = f),
+            $identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐘)
           )
         )
       )

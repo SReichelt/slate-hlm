@@ -9,23 +9,14 @@ $Rational: %Section {
     %item($difference),
     %item($"less or equal"),
     %item($less),
-    %subsection(
-      $Subsets,
-      'Subsets'
-    ),
+    %subsection($Subsets, 'Subsets'),
     %item($absolute),
     %item($product),
     %item($quotient),
     %item($"Actual quotient equals formal quotient"),
     %item($power),
     %item($"power to integer"),
-    %subsection(
-      $"Iterated operators",
-      'Iterated operators'
-    ),
-    %subsection(
-      $Sequences,
-      'Sequences'
-    )
+    %subsection($"Iterated operators", 'Iterated operators'),
+    %subsection($Sequences, 'Sequences')
   ]
 }

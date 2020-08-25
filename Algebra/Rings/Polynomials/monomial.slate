@@ -19,10 +19,7 @@ $monomial(
     symbol = '',
     operands = [
       a,
-      $SubSup(
-        body = X,
-        sup = n
-      )
+      $SubSup(body = X, sup = n)
     ],
     space = ''
   ),
@@ -41,12 +38,7 @@ $monomial(
         value = $normalized(
           𝐑 = 𝐑,
           X = X,
-          p = $monomial(
-            𝐑 = 𝐑,
-            X = X,
-            a = a,
-            n = m
-          ),
+          p = $monomial(𝐑 = 𝐑, X = X, a = a, n = m),
           a = $../zero(𝐑 = 𝐑)
         ),
         rewrite = %true

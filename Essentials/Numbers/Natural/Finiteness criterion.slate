@@ -9,15 +9,9 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         #(m: %Element(M)),
         formula = $../../Relations/"greatest element"(
           S = $"Natural numbers",
-          ⪯ = $../../Relations/Relations(
-              S = $"Natural numbers",
-              T = $"Natural numbers"
-            ).relation(_1 = {
+          ⪯ = $../../Relations/Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
               #(m,n: %Element($"Natural numbers")),
-              {p = $"less or equal"(
-                m = m,
-                n = n
-              )}
+              {p = $"less or equal"(m = m, n = n)}
           }),
           T = M,
           t = m
@@ -30,15 +24,9 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         #(m: %Element(M)),
         formula = $../../Relations/"greatest element"(
           S = $"Natural numbers",
-          ⪯ = $../../Relations/Relations(
-              S = $"Natural numbers",
-              T = $"Natural numbers"
-            ).relation(_1 = {
+          ⪯ = $../../Relations/Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
               #(m,n: %Element($"Natural numbers")),
-              {p = $"less or equal"(
-                m = m,
-                n = n
-              )}
+              {p = $"less or equal"(m = m, n = n)}
           }),
           T = M,
           t = m
@@ -71,15 +59,9 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
           #(m: %Element(M)),
           formula = $../../Relations/"greatest element"(
             S = $"Natural numbers",
-            ⪯ = $../../Relations/Relations(
-                S = $"Natural numbers",
-                T = $"Natural numbers"
-              ).relation(_1 = {
+            ⪯ = $../../Relations/Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
                 #(m,n: %Element($"Natural numbers")),
-                {p = $"less or equal"(
-                  m = m,
-                  n = n
-                )}
+                {p = $"less or equal"(m = m, n = n)}
             }),
             T = M,
             t = m
@@ -118,10 +100,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                   #(i: %Element(M)),
                   formula = %forall(
                     #(j: %Element(M)),
-                    $"less or equal"(
-                      m = j,
-                      n = i
-                    )
+                    $"less or equal"(m = j, n = i)
                   )
                 ),
                 rewrite = %true
@@ -199,26 +178,16 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                 #(i: %Element(M)),
                 formula = %forall(
                   #(j: %Element(M)),
-                  $"less or equal"(
-                    m = j,
-                    n = i
-                  )
+                  $"less or equal"(m = j, n = i)
                 )
               ),
               steps = #(_: %UseTheorem(
-                $"Finiteness criterion lemma"(
-                  M = M,
-                  k = k,
-                  f = f
-                ),
+                $"Finiteness criterion lemma"(M = M, k = k, f = f),
                 result = %exists(
                   #(y: %Element(M)),
                   formula = %forall(
                     #(z: %Element(M)),
-                    $"less or equal"(
-                      m = z,
-                      n = y
-                    )
+                    $"less or equal"(m = z, n = y)
                   )
                 )
               ))
@@ -236,15 +205,9 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
           #(m: %Element(M)),
           formula = $../../Relations/"greatest element"(
             S = $"Natural numbers",
-            ⪯ = $../../Relations/Relations(
-                S = $"Natural numbers",
-                T = $"Natural numbers"
-              ).relation(_1 = {
+            ⪯ = $../../Relations/Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
                 #(m,n: %Element($"Natural numbers")),
-                {p = $"less or equal"(
-                  m = m,
-                  n = n
-                )}
+                {p = $"less or equal"(m = m, n = n)}
             }),
             T = M,
             t = m

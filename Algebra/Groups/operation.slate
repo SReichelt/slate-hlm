@@ -20,25 +20,10 @@ $operation(
         G: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../Essentials/Functions/Functions(
-          X = G,
-          Y = G
-        )),
-        _1: %Constraint($group(
-          G = G,
-          ∗ = ∗,
-          e = e,
-          i = i
-        ))
+        i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
+        _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
-      value = $../../Essentials/Operations/value(
-        X = G,
-        Y = G,
-        Z = G,
-        ∗ = ∗,
-        x = a,
-        y = b
-      )
+      value = $../../Essentials/Operations/value(X = G, Y = G, Z = G, ∗ = ∗, x = a, y = b)
     }]
   )]
 }

@@ -2,10 +2,7 @@
 
 $"Inverse of isomorphism is also isomorphism"(
   𝐌,𝐍: %Element($../Magmas),
-  φ: %Element($Isomorphisms(
-    𝐌 = 𝐌,
-    𝐍 = 𝐍
-  ))
+  φ: %Element($Isomorphisms(𝐌 = 𝐌, 𝐍 = 𝐍))
 ): %StandardTheorem {
   claim = %in(
     $../../../Essentials/Functions/inverse(
@@ -13,9 +10,6 @@ $"Inverse of isomorphism is also isomorphism"(
       Y = $../Carrier(𝐌 = 𝐍),
       f = φ
     ),
-    $Isomorphisms(
-      𝐌 = 𝐍,
-      𝐍 = 𝐌
-    )
+    $Isomorphisms(𝐌 = 𝐍, 𝐍 = 𝐌)
   )
 }

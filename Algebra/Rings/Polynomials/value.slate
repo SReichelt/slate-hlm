@@ -13,24 +13,13 @@ $value(
     $../../../"Formal systems"/Variables,
     auto = %true
   ),
-  p: %Element($Polynomials(
-    𝐑 = 𝐑,
-    X = X
-  )),
+  p: %Element($Polynomials(𝐑 = 𝐑, X = X)),
   a: %Element($../Carrier(𝐑 = 𝐑)),
   _1: %Constraint(%forall(
     #(r: %Element($../Carrier(𝐑 = 𝐑))),
     %equals(
-      $../product(
-        𝐑 = 𝐑,
-        a = a,
-        b = r
-      ),
-      $../product(
-        𝐑 = 𝐑,
-        a = r,
-        b = a
-      )
+      $../product(𝐑 = 𝐑, a = a, b = r),
+      $../product(𝐑 = 𝐑, a = r, b = a)
     )
   ))
 ): %ExplicitOperator {
@@ -40,10 +29,7 @@ $value(
   ),
   definition = [%structuralCases(
     p,
-    $Polynomials(
-      𝐑 = 𝐑,
-      X = X
-    ),
+    $Polynomials(𝐑 = 𝐑, X = X),
     [
       {
         constructor = $Polynomials.zero,
@@ -52,18 +38,12 @@ $value(
       {
         constructor = $Polynomials.term,
         parameters = #(
-          q: %Element($Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          )),
+          q: %Element($Polynomials(𝐑 = 𝐑, X = X)),
           b: %Element($../Carrier(𝐑 = 𝐑)),
           _1: %Constraint(%or(
             %not(%equals(
               q,
-              $Polynomials(
-                  𝐑 = 𝐑,
-                  X = X
-                ).zero
+              $Polynomials(𝐑 = 𝐑, X = X).zero
             )),
             %not(%equals(
               b,
@@ -75,12 +55,7 @@ $value(
           𝐑 = 𝐑,
           a = $../product(
             𝐑 = 𝐑,
-            a = $value(
-              𝐑 = 𝐑,
-              X = X,
-              p = q,
-              a = a
-            ),
+            a = $value(𝐑 = 𝐑, X = X, p = q, a = a),
             b = a
           ),
           b = b

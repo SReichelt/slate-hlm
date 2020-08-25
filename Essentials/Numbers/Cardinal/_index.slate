@@ -3,56 +3,27 @@
 $Cardinal: %Section {
   logic = 'hlm',
   items = [
-    %item(
-      $"Natural cardinality lemma",
-      type = 'lemma'
-    ),
+    %item($"Natural cardinality lemma", type = 'lemma'),
     %item($"Cardinal numbers"),
     %item($Carrier),
-    %subsection(
-      $Homomorphisms,
-      'Homomorphisms'
-    ),
+    %subsection($Homomorphisms, 'Homomorphisms'),
     %item($"less or equal"),
     %item($less),
-    %subsection(
-      $Subsets,
-      'Subsets'
-    ),
-    %item(
-      $"Equality criterion",
-      type = 'theorem',
-      title = 'Schröder-Bernstein'
-    ),
+    %subsection($Subsets, 'Subsets'),
+    %item($"Equality criterion", type = 'theorem', title = 'Schröder-Bernstein'),
     %item($"Less or equal is a partial order"),
     %item($"AC is equivalent to total order"),
     %item($sum),
     %item($product),
     %item($power),
     %item($"Cardinality of power set"),
-    %subsection(
-      $Examples,
-      'Examples'
-    ),
+    %subsection($Examples, 'Examples'),
     %item($finite),
     %item($countable),
     %item($"countably infinite"),
-    %item(
-      $"Cantors theorem",
-      type = 'theorem',
-      title = 'Cantor\'s theorem'
-    ),
-    %item(
-      $"Cantors theorem generalized",
-      type = 'corollary'
-    ),
-    %item(
-      $"Continuum is uncountable",
-      type = 'corollary'
-    ),
-    %subsection(
-      $"Iterated operators",
-      'Iterated operators'
-    )
+    %item($"Cantors theorem", type = 'theorem', title = 'Cantor\'s theorem'),
+    %item($"Cantors theorem generalized", type = 'corollary'),
+    %item($"Continuum is uncountable", type = 'corollary'),
+    %subsection($"Iterated operators", 'Iterated operators')
   ]
 }

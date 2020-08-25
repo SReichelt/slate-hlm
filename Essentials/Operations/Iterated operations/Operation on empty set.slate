@@ -18,9 +18,6 @@ $"Operation on empty set"(
         {a = a[i = i]}
       }
     ),
-    $"identity element"(
-      X = X,
-      ⨂ = ⨂
-    )
+    $"identity element"(X = X, ⨂ = ⨂)
   )
 }

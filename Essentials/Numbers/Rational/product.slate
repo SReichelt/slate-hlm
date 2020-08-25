@@ -27,14 +27,8 @@ $product(a,b: %Element($"Rational numbers")): %ExplicitOperator {
             d_a: %Element($../Natural/Subsets/"Positive numbers")
           ),
           value = $"Rational numbers".quotient(
-            n = $../Integer/product(
-              a = n_a,
-              b = n_b
-            ),
-            d = $../Natural/product(
-              m = d_a,
-              n = d_b
-            )
+            n = $../Integer/product(a = n_a, b = n_b),
+            d = $../Natural/product(m = d_a, n = d_b)
           )
         }]
       )

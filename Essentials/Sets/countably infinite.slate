@@ -7,10 +7,7 @@
  *             * https://ncatlab.org/nlab/show/countable+set (called "denumerable" here)
  */
 $"countably infinite"(S: %Set): %Predicate {
-  notation = $Property(
-    operand = S,
-    property = 'countably infinite'
-  ),
+  notation = $Property(operand = S, property = 'countably infinite'),
   definition = [
     $../Numbers/Cardinal/"countably infinite"(κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)),
     %and(

@@ -14,10 +14,7 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
     #(p: %Prop)
   )): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = p,
-        style = '[]'
-      ),
+      body = $Parens(body = p, style = '[]'),
       sub = $ElementRelation(operands = [
         $Group(items = [s, t]),
         S
@@ -51,19 +48,10 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
     nameOptional = %true
   },
   embedding = {
-    parameter = #(≺: %Element($Relations(
-      S = S,
-      T = S
-    ))),
+    parameter = #(≺: %Element($Relations(S = S, T = S))),
     target = $Endorelations(S = S).relation(_1 = {
         #(s,t: %Element(S)),
-        {p = $related(
-          S = S,
-          T = S,
-          ≺ = ≺,
-          s = s,
-          t = t
-        )}
+        {p = $related(S = S, T = S, ≺ = ≺, s = s, t = t)}
     }),
     full = %true
   }

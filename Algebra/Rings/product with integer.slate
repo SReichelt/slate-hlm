@@ -18,11 +18,7 @@ $"product with integer"(
         b = z,
         a = $../../Essentials/Numbers/Natural/number(value = 0)
       ),
-      value = $"product with natural number"(
-        𝐑 = 𝐑,
-        n = z,
-        a = a
-      )
+      value = $"product with natural number"(𝐑 = 𝐑, n = z, a = a)
     },
     {
       formula = $../../Essentials/Numbers/Integer/less(
@@ -32,10 +28,7 @@ $"product with integer"(
       value = $"product with natural number"(
         𝐑 = 𝐑,
         n = $../../Essentials/Numbers/Integer/inverse(a = z),
-        a = $"additive inverse"(
-          𝐑 = 𝐑,
-          a = a
-        )
+        a = $"additive inverse"(𝐑 = 𝐑, a = a)
       )
     }
   ])]

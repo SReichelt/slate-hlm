@@ -12,10 +12,7 @@ $ring(
   R: %Set,
   ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
   "0": %Element(R),
-  ⊖: %Element($../../Essentials/Functions/Functions(
-    X = R,
-    Y = R
-  )),
+  ⊖: %Element($../../Essentials/Functions/Functions(X = R, Y = R)),
   ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
   "1": %Element(R)
 ): %Predicate {
@@ -26,27 +23,10 @@ $ring(
   ),
   definition = [
     %and(
-      $../Groups/"abelian group"(
-        G = R,
-        ∗ = ⊕,
-        e = "0",
-        i = ⊖
-      ),
-      $../Monoids/monoid(
-        M = R,
-        ∗ = ⊙,
-        e = "1"
-      ),
-      $../../Essentials/Operations/distributive(
-        X = R,
-        ∗ = ⊙,
-        ⋆ = ⊕
-      ),
-      $../../Essentials/Operations/"absorbing element"(
-        X = R,
-        ∗ = ⊙,
-        z = "0"
-      ),
+      $../Groups/"abelian group"(G = R, ∗ = ⊕, e = "0", i = ⊖),
+      $../Monoids/monoid(M = R, ∗ = ⊙, e = "1"),
+      $../../Essentials/Operations/distributive(X = R, ∗ = ⊙, ⋆ = ⊕),
+      $../../Essentials/Operations/"absorbing element"(X = R, ∗ = ⊙, z = "0"),
       %forall(
         #(a,b: %Element(R)),
         %equals(
@@ -56,68 +36,32 @@ $ring(
             Z = R,
             ∗ = ⊙,
             x = a,
-            y = $../../Essentials/Functions/value(
-              X = R,
-              Y = R,
-              f = ⊖,
-              x = b
-            )
+            y = $../../Essentials/Functions/value(X = R, Y = R, f = ⊖, x = b)
           ),
           $../../Essentials/Operations/value(
             X = R,
             Y = R,
             Z = R,
             ∗ = ⊙,
-            x = $../../Essentials/Functions/value(
-              X = R,
-              Y = R,
-              f = ⊖,
-              x = a
-            ),
+            x = $../../Essentials/Functions/value(X = R, Y = R, f = ⊖, x = a),
             y = b
           ),
           $../../Essentials/Functions/value(
             X = R,
             Y = R,
             f = ⊖,
-            x = $../../Essentials/Operations/value(
-              X = R,
-              Y = R,
-              Z = R,
-              ∗ = ⊙,
-              x = a,
-              y = b
-            )
+            x = $../../Essentials/Operations/value(X = R, Y = R, Z = R, ∗ = ⊙, x = a, y = b)
           )
         )
       )
     ),
     %and(
-      $../Groups/"abelian group"(
-        G = R,
-        ∗ = ⊕,
-        e = "0",
-        i = ⊖
-      ),
-      $../Monoids/monoid(
-        M = R,
-        ∗ = ⊙,
-        e = "1"
-      ),
-      $../../Essentials/Operations/distributive(
-        X = R,
-        ∗ = ⊙,
-        ⋆ = ⊕
-      )
+      $../Groups/"abelian group"(G = R, ∗ = ⊕, e = "0", i = ⊖),
+      $../Monoids/monoid(M = R, ∗ = ⊙, e = "1"),
+      $../../Essentials/Operations/distributive(X = R, ∗ = ⊙, ⋆ = ⊕)
     ),
     %and(
-      $../Semirings/semiring(
-        R = R,
-        ⊕ = ⊕,
-        "0" = "0",
-        ⊙ = ⊙,
-        "1" = "1"
-      ),
+      $../Semirings/semiring(R = R, ⊕ = ⊕, "0" = "0", ⊙ = ⊙, "1" = "1"),
       %forall(
         #(a: %Element(R)),
         %equals(
@@ -127,24 +71,14 @@ $ring(
             Z = R,
             ∗ = ⊕,
             x = a,
-            y = $../../Essentials/Functions/value(
-              X = R,
-              Y = R,
-              f = ⊖,
-              x = a
-            )
+            y = $../../Essentials/Functions/value(X = R, Y = R, f = ⊖, x = a)
           ),
           $../../Essentials/Operations/value(
             X = R,
             Y = R,
             Z = R,
             ∗ = ⊕,
-            x = $../../Essentials/Functions/value(
-              X = R,
-              Y = R,
-              f = ⊖,
-              x = a
-            ),
+            x = $../../Essentials/Functions/value(X = R, Y = R, f = ⊖, x = a),
             y = a
           ),
           "0"

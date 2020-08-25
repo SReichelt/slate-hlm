@@ -19,10 +19,7 @@ $"Generalized cartesian product"(
     #(s: %Element(S[i = j]))
   )): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = s,
-        style = '()'
-      ),
+      body = $Parens(body = s, style = '()'),
       sub = $ElementRelation(operands = [j, I])
     ),
     equalityDefinition = {

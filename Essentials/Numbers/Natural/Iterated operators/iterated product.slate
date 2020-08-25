@@ -16,10 +16,7 @@ $"iterated product": %ExplicitOperator {
           Z = $../"Natural numbers"
         ).operation(_1 = {
           #(m,n: %Element($../"Natural numbers")),
-          {z = $../product(
-            m = m,
-            n = n
-          )}
+          {z = $../product(m = m, n = n)}
       }),
       e = $../number(value = 1)
   )]

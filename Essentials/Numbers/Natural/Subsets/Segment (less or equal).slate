@@ -1,18 +1,11 @@
 %../../../../../../logics/hlm%
 
 $"Segment (less or equal)"(n: %Element($../"Natural numbers")): %SetOperator {
-  notation = $Segment(
-    set = 'ℕ',
-    symbol = '≤',
-    limit = n
-  ),
+  notation = $Segment(set = 'ℕ', symbol = '≤', limit = n),
   definition = [
     %subset(
       #(m: %Element($../"Natural numbers")),
-      $../"less or equal"(
-        m = m,
-        n = n
-      )
+      $../"less or equal"(m = m, n = n)
     ),
     $"Segment (less)"(n = $../sum(
       m = n,

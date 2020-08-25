@@ -1,9 +1,6 @@
 %../../../../../../logics/hlm%
 
 $identity(α: %Element($../"Ordinal numbers")): %ExplicitOperator {
-  notation = $SubSup(
-    body = 'id',
-    sub = α
-  ),
+  notation = $SubSup(body = 'id', sub = α),
   definition = [$../../../Functions/identity(X = $../Carrier(α = α))]
 }

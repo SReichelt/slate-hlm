@@ -9,42 +9,27 @@ $"product with right scalar"(
     $../../../"Formal systems"/Variables,
     auto = %true
   ),
-  p: %Element($Polynomials(
-    𝐑 = 𝐑,
-    X = X
-  )),
+  p: %Element($Polynomials(𝐑 = 𝐑, X = X)),
   a: %Element($../Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [p, a]),
   definition = [%structuralCases(
     p,
-    $Polynomials(
-      𝐑 = 𝐑,
-      X = X
-    ),
+    $Polynomials(𝐑 = 𝐑, X = X),
     [
       {
         constructor = $Polynomials.zero,
-        value = $Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          ).zero
+        value = $Polynomials(𝐑 = 𝐑, X = X).zero
       },
       {
         constructor = $Polynomials.term,
         parameters = #(
-          q: %Element($Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          )),
+          q: %Element($Polynomials(𝐑 = 𝐑, X = X)),
           b: %Element($../Carrier(𝐑 = 𝐑)),
           _1: %Constraint(%or(
             %not(%equals(
               q,
-              $Polynomials(
-                  𝐑 = 𝐑,
-                  X = X
-                ).zero
+              $Polynomials(𝐑 = 𝐑, X = X).zero
             )),
             %not(%equals(
               b,
@@ -55,17 +40,8 @@ $"product with right scalar"(
         value = $normalized(
           𝐑 = 𝐑,
           X = X,
-          p = $"product with right scalar"(
-            𝐑 = 𝐑,
-            X = X,
-            p = q,
-            a = a
-          ),
-          a = $../product(
-            𝐑 = 𝐑,
-            a = b,
-            b = a
-          )
+          p = $"product with right scalar"(𝐑 = 𝐑, X = X, p = q, a = a),
+          a = $../product(𝐑 = 𝐑, a = b, b = a)
         )
       }
     ]

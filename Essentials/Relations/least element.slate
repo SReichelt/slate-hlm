@@ -11,25 +11,14 @@ $"least element"(
 ): %Predicate {
   notation = $NounRelation(
     singular = [
-      $DependentWord(
-        word = 'least',
-        argument = ⪯
-      ),
+      $DependentWord(word = 'least', argument = ⪯),
       ' element'
     ],
     plural = [
-      $DependentWord(
-        word = 'least',
-        argument = ⪯
-      ),
+      $DependentWord(word = 'least', argument = ⪯),
       ' elements'
     ],
     operands = [t, T]
   ),
-  definition = [$"lower bound"(
-    S = S,
-    ≺ = ⪯,
-    T = T,
-    s = t
-  )]
+  definition = [$"lower bound"(S = S, ≺ = ⪯, T = T, s = t)]
 }

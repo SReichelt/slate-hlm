@@ -16,25 +16,13 @@ $product(
     $../../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
-  A: %Element($Matrices(
-    𝐑 = 𝐑,
-    m = l,
-    n = m
-  )),
-  B: %Element($Matrices(
-    𝐑 = 𝐑,
-    m = m,
-    n = n
-  ))
+  A: %Element($Matrices(𝐑 = 𝐑, m = l, n = m)),
+  B: %Element($Matrices(𝐑 = 𝐑, m = m, n = n))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [A, B]),
   definition = [%structuralCases(
     B,
-    $Matrices(
-      𝐑 = 𝐑,
-      m = m,
-      n = n
-    ),
+    $Matrices(𝐑 = 𝐑, m = m, n = n),
     [{
       constructor = $Matrices.matrix,
       parameters = #(_2: %Binder(
@@ -46,11 +34,7 @@ $product(
       )),
       value = %structuralCases(
         A,
-        $Matrices(
-          𝐑 = 𝐑,
-          m = l,
-          n = m
-        ),
+        $Matrices(𝐑 = 𝐑, m = l, n = m),
         [{
           constructor = $Matrices.matrix,
           parameters = #(_1: %Binder(
@@ -60,11 +44,7 @@ $product(
             ),
             #(a: %Element($../Carrier(𝐑 = 𝐑)))
           )),
-          value = $Matrices(
-              𝐑 = 𝐑,
-              m = l,
-              n = n
-            ).matrix(_1 = {
+          value = $Matrices(𝐑 = 𝐑, m = l, n = n).matrix(_1 = {
               #(
                 i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = l)),
                 k: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
@@ -75,11 +55,7 @@ $product(
                 n = m,
                 _1 = {
                   #(j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m))),
-                  {a = $../product(
-                    𝐑 = 𝐑,
-                    a = a[i = i, j = j],
-                    b = b[j = j, k = k]
-                  )}
+                  {a = $../product(𝐑 = 𝐑, a = a[i = i, j = j], b = b[j = j, k = k])}
                 }
               )}
           })

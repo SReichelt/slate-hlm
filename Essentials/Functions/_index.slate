@@ -19,27 +19,15 @@ $Functions: %Section {
     %item($surjective),
     %item($bijective),
     %item($"Generalized restriction preserves injectivity"),
-    %item(
-      $"Restriction preserves injectivity",
-      type = 'corollary'
-    ),
+    %item($"Restriction preserves injectivity", type = 'corollary'),
     %item($"Generalized extension preserves surjectivity"),
-    %item(
-      $"Extension preserves surjectivity",
-      type = 'corollary'
-    ),
+    %item($"Extension preserves surjectivity", type = 'corollary'),
     %item($"Surjectivity by codomain restriction"),
     %item($Bijections),
     %item($inverse),
     %item($"Inverse of inverse yields original"),
-    %item(
-      $"Application of function and inverse is neutral",
-      type = 'corollary'
-    ),
-    %item(
-      $"Application of function after inverse is neutral",
-      type = 'corollary'
-    ),
+    %item($"Application of function and inverse is neutral", type = 'corollary'),
+    %item($"Application of function after inverse is neutral", type = 'corollary'),
     %item($"power to natural number"),
     %item($"power to integer"),
     %item($"Power of identity is identity")

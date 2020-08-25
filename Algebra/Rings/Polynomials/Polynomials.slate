@@ -32,18 +32,12 @@ $Polynomials(
   }
 
   $term(
-    p: %Element($Polynomials(
-      𝐑 = 𝐑,
-      X = X
-    )),
+    p: %Element($Polynomials(𝐑 = 𝐑, X = X)),
     a: %Element($../Carrier(𝐑 = 𝐑)),
     _1: %Constraint(%or(
       %not(%equals(
         p,
-        $Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          ).zero
+        $Polynomials(𝐑 = 𝐑, X = X).zero
       )),
       %not(%equals(
         a,
@@ -69,18 +63,12 @@ $Polynomials(
     ),
     equalityDefinition = {
       leftParameters = #(
-        p: %Element($Polynomials(
-          𝐑 = 𝐑,
-          X = X
-        )),
+        p: %Element($Polynomials(𝐑 = 𝐑, X = X)),
         a: %Element($../Carrier(𝐑 = 𝐑)),
         _1: %Constraint(%or(
           %not(%equals(
             p,
-            $Polynomials(
-                𝐑 = 𝐑,
-                X = X
-              ).zero
+            $Polynomials(𝐑 = 𝐑, X = X).zero
           )),
           %not(%equals(
             a,
@@ -89,18 +77,12 @@ $Polynomials(
         ))
       ),
       rightParameters = #(
-        q: %Element($Polynomials(
-          𝐑 = 𝐑,
-          X = X
-        )),
+        q: %Element($Polynomials(𝐑 = 𝐑, X = X)),
         b: %Element($../Carrier(𝐑 = 𝐑)),
         _2: %Constraint(%or(
           %not(%equals(
             q,
-            $Polynomials(
-                𝐑 = 𝐑,
-                X = X
-              ).zero
+            $Polynomials(𝐑 = 𝐑, X = X).zero
           )),
           %not(%equals(
             b,
@@ -129,24 +111,15 @@ $Polynomials(
           a,
           $../zero(𝐑 = 𝐑)
         ),
-        value = $Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          ).zero
+        value = $Polynomials(𝐑 = 𝐑, X = X).zero
       },
       {
         formula = %not(%equals(
           a,
           $../zero(𝐑 = 𝐑)
         )),
-        value = $Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          ).term(
-            p = $Polynomials(
-                𝐑 = 𝐑,
-                X = X
-              ).zero,
+        value = $Polynomials(𝐑 = 𝐑, X = X).term(
+            p = $Polynomials(𝐑 = 𝐑, X = X).zero,
             a = a
         )
       }

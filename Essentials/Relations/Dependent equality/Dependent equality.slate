@@ -22,10 +22,7 @@ $"Dependent equality"(
         a,b: %Element(I),
         _3: %Constraint(%equals(a, b))
       ),
-      #(≡: %Element($../Relations(
-        S = S[i = a],
-        T = S[i = b]
-      )))
+      #(≡: %Element($../Relations(S = S[i = a], T = S[i = b])))
     ),
     _4: %Constraint(%forall(
       #(i: %Element(I)),
@@ -36,20 +33,11 @@ $"Dependent equality"(
     ))
   ): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = ≡,
-        style = '()'
-      ),
+      body = $Parens(body = ≡, style = '()'),
       sub = $EqualityRelation(operands = [a, b]),
       sup = $SubSup(
-        body = $Parens(
-          body = S,
-          style = '()'
-        ),
-        sub = $ElementParameter(
-          variable = i,
-          set = I
-        )
+        body = $Parens(body = S, style = '()'),
+        sub = $ElementParameter(variable = i, set = I)
       )
     ),
     equalityDefinition = {
@@ -59,10 +47,7 @@ $"Dependent equality"(
             a,b: %Element(I),
             _3: %Constraint(%equals(a, b))
           ),
-          #(≡: %Element($../Relations(
-            S = S[i = a],
-            T = S[i = b]
-          )))
+          #(≡: %Element($../Relations(S = S[i = a], T = S[i = b])))
         ),
         _4: %Constraint(%forall(
           #(i: %Element(I)),
@@ -78,10 +63,7 @@ $"Dependent equality"(
             a,b: %Element(I),
             _6: %Constraint(%equals(a, b))
           ),
-          #("≡'": %Element($../Relations(
-            S = S[i = a],
-            T = S[i = b]
-          )))
+          #("≡'": %Element($../Relations(S = S[i = a], T = S[i = b])))
         ),
         _7: %Constraint(%forall(
           #(i: %Element(I)),
@@ -102,14 +84,8 @@ $"Dependent equality"(
   notation = $Function(
     function = '𝓓𝓮𝓹𝓔𝓺',
     arguments = [$SubSup(
-      body = $Parens(
-        body = S,
-        style = '()'
-      ),
-      sub = $ElementParameter(
-        variable = i,
-        set = I
-      )
+      body = $Parens(body = S, style = '()'),
+      sub = $ElementParameter(variable = i, set = I)
     )]
   ),
   definitionNotation = {
@@ -120,10 +96,7 @@ $"Dependent equality"(
       S,
       ' ',
       $Parens(
-        body = $ElementParameter(
-          variable = i,
-          set = I
-        ),
+        body = $ElementParameter(variable = i, set = I),
         style = '()'
       )
     ],
@@ -133,10 +106,7 @@ $"Dependent equality"(
       S,
       ' ',
       $Parens(
-        body = $ElementParameter(
-          variable = i,
-          set = I
-        ),
+        body = $ElementParameter(variable = i, set = I),
         style = '()'
       )
     ]

@@ -6,16 +6,10 @@
 $"subset ring"(
   𝐑: %Element($../Rings),
   S: %Subset($../Carrier(𝐑 = 𝐑)),
-  _1: %Constraint($"subring set"(
-    𝐑 = 𝐑,
-    S = S
-  ))
+  _1: %Constraint($"subring set"(𝐑 = 𝐑, S = S))
 ): %ExplicitOperator {
   notation = $SubSup(
-    body = $Parens(
-      body = S,
-      style = '[]'
-    ),
+    body = $Parens(body = S, style = '[]'),
     sub = 𝐑
   ),
   definition = [%structuralCases(
@@ -27,41 +21,17 @@ $"subset ring"(
         R: %Set,
         ⊕: %Element($../../../Essentials/Operations/"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊖: %Element($../../../Essentials/Functions/Functions(
-          X = R,
-          Y = R
-        )),
+        ⊖: %Element($../../../Essentials/Functions/Functions(X = R, Y = R)),
         ⊙: %Element($../../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($../ring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($../ring(R = R, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙, "1" = "1"))
       ),
       value = $../Rings.ring(
         R = S,
-        ⊕ = $../../../Essentials/Operations/"inner operation restriction"(
-          X = R,
-          A = S,
-          ∗ = ⊕
-        ),
+        ⊕ = $../../../Essentials/Operations/"inner operation restriction"(X = R, A = S, ∗ = ⊕),
         "0" = "0",
-        ⊖ = $../../../Essentials/Functions/"codomain restriction"(
-          X = R,
-          A = S,
-          Y = R,
-          B = S,
-          f = ⊖
-        ),
-        ⊙ = $../../../Essentials/Operations/"inner operation restriction"(
-          X = R,
-          A = S,
-          ∗ = ⊙
-        ),
+        ⊖ = $../../../Essentials/Functions/"codomain restriction"(X = R, A = S, Y = R, B = S, f = ⊖),
+        ⊙ = $../../../Essentials/Operations/"inner operation restriction"(X = R, A = S, ∗ = ⊙),
         "1" = "1"
       )
     }]

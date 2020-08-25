@@ -7,9 +7,6 @@
  *             * https://ncatlab.org/nlab/show/order+of+a+group
  */
 $"group order"(𝐆: %Element($../Groups)): %ExplicitOperator {
-  notation = $Parens(
-    body = 𝐆,
-    style = '||'
-  ),
+  notation = $Parens(body = 𝐆, style = '||'),
   definition = [$../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Carrier(𝐆 = 𝐆))]
 }

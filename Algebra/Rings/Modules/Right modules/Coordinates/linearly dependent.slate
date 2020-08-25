@@ -15,10 +15,7 @@ $"linearly dependent"(
     $../"Right modules"(𝐑 = 𝐑),
     auto = %true
   ),
-  𝒙: %Element($"Element sequences"(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  ))
+  𝒙: %Element($"Element sequences"(𝐑 = 𝐑, 𝐌 = 𝐌))
 ): %Predicate {
   notation = $Property(
     operand = 𝒙,
@@ -26,47 +23,25 @@ $"linearly dependent"(
   ),
   definition = [%exists(
     #(𝐚: %Element($../../../../../Essentials/Sets/"Relative complement"(
-      U = $Coordinates(
-        𝐑 = 𝐑,
-        𝐌 = 𝐌,
-        𝒙 = 𝒙
-      ),
-      S = $Coordinates(
-        𝐑 = 𝐑,
-        𝐌 = 𝐌,
-        𝒙 = 𝒙
-      ),
+      U = $Coordinates(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙),
+      S = $Coordinates(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙),
       T = %enumeration($../../../../../Essentials/Sequences/Tuples(
           S = $../../../Carrier(𝐑 = 𝐑),
           α = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-            S = $../Carrier(
-              𝐑 = 𝐑,
-              𝐌 = 𝐌
-            ),
+            S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
             𝒂 = 𝒙
           )
         ).sequence(_1 = {
           #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-            S = $../Carrier(
-              𝐑 = 𝐑,
-              𝐌 = 𝐌
-            ),
+            S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
             𝒂 = 𝒙
           )))),
           {a = $../../../zero(𝐑 = 𝐑)}
       }))
     ))),
     formula = %equals(
-      $"linear combination"(
-        𝐑 = 𝐑,
-        𝐌 = 𝐌,
-        𝒙 = 𝒙,
-        𝐚 = 𝐚
-      ),
-      $../zero(
-        𝐑 = 𝐑,
-        𝐌 = 𝐌
-      )
+      $"linear combination"(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙, 𝐚 = 𝐚),
+      $../zero(𝐑 = 𝐑, 𝐌 = 𝐌)
     )
   )]
 }

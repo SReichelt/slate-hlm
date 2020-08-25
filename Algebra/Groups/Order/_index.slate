@@ -5,23 +5,10 @@ $Order: %Section {
   items = [
     %item($"group order"),
     %item($finite),
-    %subsection(
-      $"Number of groups",
-      'Number of groups'
-    ),
+    %subsection($"Number of groups", 'Number of groups'),
     %item($"element order"),
-    %item(
-      $"Lagranges theorem",
-      type = 'theorem',
-      title = 'Lagrange\'s theorem'
-    ),
-    %item(
-      $"Lagranges corollary",
-      type = 'corollary'
-    ),
-    %subsection(
-      $"P-Groups",
-      'p-groups'
-    )
+    %item($"Lagranges theorem", type = 'theorem', title = 'Lagrange\'s theorem'),
+    %item($"Lagranges corollary", type = 'corollary'),
+    %subsection($"P-Groups", 'p-groups')
   ]
 }

@@ -8,10 +8,7 @@ $power(
   a: %Element($Integers),
   n: %Element($../Natural/"Natural numbers")
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = a,
-    sup = n
-  ),
+  notation = $SubSup(body = a, sup = n),
   definition = [%structuralCases(
     n,
     $../Natural/"Natural numbers",
@@ -25,10 +22,7 @@ $power(
         constructor = $../Natural/"Natural numbers".successor,
         parameters = #(x: %Element($../Natural/"Natural numbers")),
         value = $product(
-          a = $power(
-            a = a,
-            n = x
-          ),
+          a = $power(a = a, n = x),
           b = a
         ),
         rewrite = %true

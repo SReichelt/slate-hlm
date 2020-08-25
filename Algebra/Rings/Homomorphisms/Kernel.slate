@@ -5,10 +5,7 @@ $Kernel(
     $../Rings,
     auto = %true
   ),
-  φ: %Element($Homomorphisms(
-    𝐑 = 𝐑,
-    𝐒 = 𝐒
-  ))
+  φ: %Element($Homomorphisms(𝐑 = 𝐑, 𝐒 = 𝐒))
 ): %SetOperator {
   notation = $Function(
     function = 'Ker',

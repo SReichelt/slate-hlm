@@ -7,10 +7,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/cardinal.html#cardinal.power_def
  */
 $power(κ,μ: %Element($"Cardinal numbers")): %ExplicitOperator {
-  notation = $SubSup(
-    body = κ,
-    sup = μ
-  ),
+  notation = $SubSup(body = κ, sup = μ),
   definition = [%structuralCases(
     μ,
     $"Cardinal numbers",
@@ -23,10 +20,7 @@ $power(κ,μ: %Element($"Cardinal numbers")): %ExplicitOperator {
         [{
           constructor = $"Cardinal numbers".cardinality,
           parameters = #(K: %Set),
-          value = $"Cardinal numbers".cardinality(S = $../../Functions/Functions(
-            X = J,
-            Y = K
-          ))
+          value = $"Cardinal numbers".cardinality(S = $../../Functions/Functions(X = J, Y = K))
         }]
       )
     }]

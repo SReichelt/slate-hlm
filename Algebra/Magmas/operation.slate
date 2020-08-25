@@ -20,14 +20,7 @@ $operation(
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
-      value = $../../Essentials/Operations/value(
-        X = M,
-        Y = M,
-        Z = M,
-        ∗ = ∗,
-        x = a,
-        y = b
-      )
+      value = $../../Essentials/Operations/value(X = M, Y = M, Z = M, ∗ = ∗, x = a, y = b)
     }]
   )]
 }

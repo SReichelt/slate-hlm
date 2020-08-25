@@ -6,14 +6,8 @@
 $"index in well-ordered set"(
   S: %Set,
   ⪯: %Element($../Relations/Endorelations(S = S)),
-  _1: %Constraint($../Relations/"well-order"(
-    S = S,
-    ⪯ = ⪯
-  )),
-  α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(
-    S = S,
-    ⪯ = ⪯
-  )),
+  _1: %Constraint($../Relations/"well-order"(S = S, ⪯ = ⪯)),
+  α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(S = S, ⪯ = ⪯)),
   s: %Element(S),
   T: %SetDef(%subset(
     #(t: %Element($../Sets/"Relative complement"(
@@ -21,28 +15,15 @@ $"index in well-ordered set"(
       S = S,
       T = %enumeration(s)
     ))),
-    $../Relations/related(
-      S = S,
-      T = S,
-      ≺ = ⪯,
-      s = t,
-      t = s
-    )
+    $../Relations/related(S = S, T = S, ≺ = ⪯, s = t, t = s)
   ))
 ): %ExplicitOperator {
   notation = $Function(
-    function = $SubSup(
-      body = 'idx',
-      sub = ⪯
-    ),
+    function = $SubSup(body = 'idx', sub = ⪯),
     arguments = [s]
   ),
   definition = [$../Numbers/Ordinal/"Ordinal numbers"."order type"(
     S = T,
-    ⪯ = $../Relations/restriction(
-      S = S,
-      ≺ = ⪯,
-      T = T
-    )
+    ⪯ = $../Relations/restriction(S = S, ≺ = ⪯, T = T)
   )]
 }

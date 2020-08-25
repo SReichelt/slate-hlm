@@ -5,10 +5,7 @@
  */
 $"Equality criterion"(𝐌,𝐍: %Element($../Magmas)): %EquivalenceTheorem {
   conditions = [
-    %not($../../../Essentials/Sets/empty(S = $Isomorphisms(
-      𝐌 = 𝐌,
-      𝐍 = 𝐍
-    ))),
+    %not($../../../Essentials/Sets/empty(S = $Isomorphisms(𝐌 = 𝐌, 𝐍 = 𝐍))),
     %equals(𝐌, 𝐍)
   ]
 }

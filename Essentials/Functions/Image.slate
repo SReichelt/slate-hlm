@@ -7,10 +7,7 @@
  */
 $Image(
   X,Y: %Set(auto = %true),
-  f: %Element($Functions(
-    X = X,
-    Y = Y
-  )),
+  f: %Element($Functions(X = X, Y = Y)),
   S: %Subset(X)
 ): %SetOperator {
   notation = $Function(
@@ -19,11 +16,6 @@ $Image(
   ),
   definition = [%extendedSubset(
     #(x: %Element(S)),
-    $value(
-      X = X,
-      Y = Y,
-      f = f,
-      x = x
-    )
+    $value(X = X, Y = Y, f = f, x = x)
   )]
 }

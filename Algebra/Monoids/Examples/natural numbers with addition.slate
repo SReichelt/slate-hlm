@@ -14,10 +14,7 @@ $"natural numbers with addition": %ExplicitOperator {
         Z = $../../../Essentials/Numbers/Natural/"Natural numbers"
       ).operation(_1 = {
         #(m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-        {z = $../../../Essentials/Numbers/Natural/sum(
-          m = m,
-          n = n
-        )}
+        {z = $../../../Essentials/Numbers/Natural/sum(m = m, n = n)}
     }),
     e = $../../../Essentials/Numbers/Natural/number(value = 0)
   )]

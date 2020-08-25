@@ -5,21 +5,12 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.has_lt
  */
 $less(a,b: %Element($"Real numbers")): %Predicate {
-  properties = {negation = $"less or equal"(
-    b = a,
-    a = b
-  )},
+  properties = {negation = $"less or equal"(b = a, a = b)},
   notation = $LessThanRelation(operands = [a, b]),
   definition = [
-    %not($"less or equal"(
-      b = a,
-      a = b
-    )),
+    %not($"less or equal"(b = a, a = b)),
     %and(
-      $"less or equal"(
-        a = a,
-        b = b
-      ),
+      $"less or equal"(a = a, b = b),
       %not(%equals(a, b))
     )
   ]

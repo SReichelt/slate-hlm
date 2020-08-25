@@ -14,10 +14,7 @@ $integers: %ExplicitOperator {
         Z = $../../../Essentials/Numbers/Integer/Integers
       ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Integer/Integers)),
-        {z = $../../../Essentials/Numbers/Integer/sum(
-          a = a,
-          b = b
-        )}
+        {z = $../../../Essentials/Numbers/Integer/sum(a = a, b = b)}
     }),
     e = $../../../Essentials/Numbers/Natural/number(value = 0),
     i = $../../../Essentials/Functions/Functions(

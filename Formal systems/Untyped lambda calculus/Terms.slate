@@ -14,10 +14,7 @@ $Terms(
   _1: %Constraint($../../Essentials/Sets/finite(S = V))
 ): %Construction {
   $variable(x: %Element(V)): %Constructor {
-    notation = $Parens(
-      body = x,
-      style = '()'
-    ),
+    notation = $Parens(body = x, style = '()'),
     equalityDefinition = {
       leftParameters = #(x: %Element(V)),
       rightParameters = #(y: %Element(V)),
@@ -52,10 +49,7 @@ $Terms(
       )
     ))
   ): %Constructor {
-    notation = $LambdaAbstraction(
-      variable = x,
-      term = M
-    ),
+    notation = $LambdaAbstraction(variable = x, term = M),
     equalityDefinition = {
       leftParameters = #(
         _2: %Binder(
@@ -124,10 +118,7 @@ $Terms(
   }
 
   $application(M,N: %Element($Terms(V = V))): %Constructor {
-    notation = $LambdaApplication(
-      function = M,
-      argument = N
-    ),
+    notation = $LambdaApplication(function = M, argument = N),
     equalityDefinition = {
       leftParameters = #(M,N: %Element($Terms(V = V))),
       rightParameters = #("M'","N'": %Element($Terms(V = V))),
@@ -139,10 +130,7 @@ $Terms(
     }
   }
 
-  notation = $SubSup(
-    body = '𝓣',
-    sub = V
-  ),
+  notation = $SubSup(body = '𝓣', sub = V),
   embedding = {
     parameter = #(x: %Element(V)),
     target = $Terms(V = V).variable(x = x)

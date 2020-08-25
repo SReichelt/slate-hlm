@@ -11,23 +11,13 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
     M: %Set,
     ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
     "0": %Element(M),
-    ⊖: %Element($../../../../Essentials/Functions/Functions(
-      X = M,
-      Y = M
-    )),
+    ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
     ⊙: %Element($../../../../Essentials/Operations/Operations(
       X = M,
       Y = $../../Carrier(𝐑 = 𝐑),
       Z = M
     )),
-    _1: %Constraint($"right module"(
-      𝐑 = 𝐑,
-      M = M,
-      ⊕ = ⊕,
-      "0" = "0",
-      ⊖ = ⊖,
-      ⊙ = ⊙
-    ))
+    _1: %Constraint($"right module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
   ): %Constructor {
     notation = $SubSup(
       body = $Tuple(
@@ -41,73 +31,32 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
         M: %Set,
         ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
         "0": %Element(M),
-        ⊖: %Element($../../../../Essentials/Functions/Functions(
-          X = M,
-          Y = M
-        )),
+        ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
         ⊙: %Element($../../../../Essentials/Operations/Operations(
           X = M,
           Y = $../../Carrier(𝐑 = 𝐑),
           Z = M
         )),
-        _1: %Constraint($"right module"(
-          𝐑 = 𝐑,
-          M = M,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙
-        ))
+        _1: %Constraint($"right module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
       rightParameters = #(
         N: %Set,
         ⋆: %Element($../../../../Essentials/Operations/"Inner operations"(X = N)),
         𝟢: %Element(N),
-        ∼: %Element($../../../../Essentials/Functions/Functions(
-          X = N,
-          Y = N
-        )),
+        ∼: %Element($../../../../Essentials/Functions/Functions(X = N, Y = N)),
         ∗: %Element($../../../../Essentials/Operations/Operations(
           X = N,
           Y = $../../Carrier(𝐑 = 𝐑),
           Z = N
         )),
-        _2: %Constraint($"right module"(
-          𝐑 = 𝐑,
-          M = N,
-          ⊕ = ⋆,
-          "0" = 𝟢,
-          ⊖ = ∼,
-          ⊙ = ∗
-        ))
+        _2: %Constraint($"right module"(𝐑 = 𝐑, M = N, ⊕ = ⋆, "0" = 𝟢, ⊖ = ∼, ⊙ = ∗))
       ),
       definition = [%exists(
-        #(φ: %Element($../../../../Essentials/Functions/Bijections(
-          X = M,
-          Y = N
-        ))),
+        #(φ: %Element($../../../../Essentials/Functions/Bijections(X = M, Y = N))),
         formula = %and(
-          $../../../Generic/Isomorphisms/"inner operation condition"(
-            X = M,
-            Y = N,
-            φ = φ,
-            ∗ = ⊕,
-            ⋆ = ⋆
-          ),
-          $../../../Generic/Isomorphisms/"element condition"(
-            X = M,
-            Y = N,
-            φ = φ,
-            x = "0",
-            y = 𝟢
-          ),
-          $../../../Generic/Isomorphisms/"function condition"(
-            X = M,
-            Y = N,
-            φ = φ,
-            f = ⊖,
-            g = ∼
-          ),
+          $../../../Generic/Isomorphisms/"inner operation condition"(X = M, Y = N, φ = φ, ∗ = ⊕, ⋆ = ⋆),
+          $../../../Generic/Isomorphisms/"element condition"(X = M, Y = N, φ = φ, x = "0", y = 𝟢),
+          $../../../Generic/Isomorphisms/"function condition"(X = M, Y = N, φ = φ, f = ⊖, g = ∼),
           $../../../Generic/Isomorphisms/"right operation condition"(
             S = $../../Carrier(𝐑 = 𝐑),
             X = M,
@@ -130,17 +79,11 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
     parameter = #(𝐌: %Expr),
     singularName = [[
       'right ',
-      $DependentWord(
-        word = 'module',
-        argument = 𝐑
-      )
+      $DependentWord(word = 'module', argument = 𝐑)
     ]],
     pluralName = [[
       'right ',
-      $DependentWord(
-        word = 'modules',
-        argument = 𝐑
-      )
+      $DependentWord(word = 'modules', argument = 𝐑)
     ]]
   }
 }

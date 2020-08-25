@@ -8,10 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/cau_seq.html#is_cau_seq
  */
 $cauchy(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = $../"Rational numbers"))): %Predicate {
-  notation = $Property(
-    operand = 𝐚,
-    property = 'Cauchy'
-  ),
+  notation = $Property(operand = 𝐚, property = 'Cauchy'),
   definition = [%structural(
     𝐚,
     $../../../Sequences/"Infinite sequences"(S = $../"Rational numbers"),
@@ -28,10 +25,7 @@ $cauchy(𝐚: %Element($../../../Sequences/"Infinite sequences"(S = $../"Rationa
           formula = %forall(
             #(l,m: %Element($../../Natural/Subsets/"Segment (greater or equal)"(n = n))),
             $../less(
-              a = $../absolute(a = $../difference(
-                a = a[n = l],
-                b = a[n = m]
-              )),
+              a = $../absolute(a = $../difference(a = a[n = l], b = a[n = m])),
               b = ε
             )
           )

@@ -5,13 +5,7 @@
  */
 $"Actual difference equals formal difference"(n,m: %Element($../Natural/"Natural numbers")): %StandardTheorem {
   claim = %equals(
-    $Integers.difference(
-      n = n,
-      m = m
-    ),
-    $difference(
-      a = n,
-      b = m
-    )
+    $Integers.difference(n = n, m = m),
+    $difference(a = n, b = m)
   )
 }

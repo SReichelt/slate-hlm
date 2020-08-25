@@ -7,10 +7,7 @@
  */
 $equality(S: %Set): %ExplicitOperator {
   notation = $Parens(
-    body = $SubSup(
-      body = '=',
-      sub = S
-    ),
+    body = $SubSup(body = '=', sub = S),
     style = '()'
   ),
   definition = [$Endorelations(S = S).relation(_1 = {

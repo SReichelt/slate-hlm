@@ -9,27 +9,14 @@
  */
 $mapping(
   S,T: %Set(auto = %true),
-  ≺: %Element($Relations(
-    S = S,
-    T = T
-  ))
+  ≺: %Element($Relations(S = S, T = T))
 ): %Predicate {
-  notation = $NounProperty(
-    operand = ≺,
-    singular = 'mapping',
-    plural = 'mappings'
-  ),
+  notation = $NounProperty(operand = ≺, singular = 'mapping', plural = 'mappings'),
   definition = [%forall(
     #(s: %Element(S)),
     %existsUnique(
       #(t: %Element(T)),
-      formula = $related(
-        S = S,
-        T = T,
-        s = s,
-        ≺ = ≺,
-        t = t
-      )
+      formula = $related(S = S, T = T, s = s, ≺ = ≺, t = t)
     )
   )]
 }

@@ -4,16 +4,10 @@
  * @remarks This definition retrieves a representative carrier set from a group (which is actually an equivalence class of groups), and enables typical abuse of notation.
  */
 $Carrier(𝐆: %Element($Groups)): %SetOperator {
-  notation = $Parens(
-    body = 𝐆,
-    style = '()'
-  ),
+  notation = $Parens(body = 𝐆, style = '()'),
   definitionNotation = {
     parameter = #(a: %Expr),
-    notation = $ElementParameter(
-      variable = a,
-      set = 𝐆
-    )
+    notation = $ElementParameter(variable = a, set = 𝐆)
   },
   definition = [%setStructuralCases(
     𝐆,
@@ -24,16 +18,8 @@ $Carrier(𝐆: %Element($Groups)): %SetOperator {
         G: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../Essentials/Functions/Functions(
-          X = G,
-          Y = G
-        )),
-        _1: %Constraint($group(
-          G = G,
-          ∗ = ∗,
-          e = e,
-          i = i
-        ))
+        i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
+        _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
       value = G
     }]

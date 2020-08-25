@@ -1,16 +1,9 @@
 %../../../../../../logics/hlm%
 
 $"Segment (greater or equal)"(κ: %Element($../"Cardinal numbers")): %SetOperator {
-  notation = $Segment(
-    set = '𝓒𝓻𝓭',
-    symbol = '≥',
-    limit = κ
-  ),
+  notation = $Segment(set = '𝓒𝓻𝓭', symbol = '≥', limit = κ),
   definition = [%subset(
     #(μ: %Element($../"Cardinal numbers")),
-    $../"less or equal"(
-      μ = μ,
-      κ = κ
-    )
+    $../"less or equal"(μ = μ, κ = κ)
   )]
 }

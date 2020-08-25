@@ -10,19 +10,12 @@ $inverse(
     auto = %true
   ),
   a: %Element($Carrier(𝐌 = 𝐌)),
-  _1: %Constraint($invertible(
-    𝐌 = 𝐌,
-    a = a
-  ))
+  _1: %Constraint($invertible(𝐌 = 𝐌, a = a))
 ): %ImplicitOperator {
   notation = $Inverse(term = a),
   parameter = #(b: %Element($Carrier(𝐌 = 𝐌))),
   definition = [%equals(
-    $operation(
-      𝐌 = 𝐌,
-      a = a,
-      b = b
-    ),
+    $operation(𝐌 = 𝐌, a = a, b = b),
     $identity(𝐌 = 𝐌)
   )]
 }

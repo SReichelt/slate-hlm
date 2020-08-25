@@ -18,57 +18,22 @@ $identity(
     auto = %true
   ),
   F: %Element(
-    $../Functors/Functors(
-      u = u,
-      v = v,
-      𝓒 = 𝓒,
-      𝓓 = 𝓓
-    ),
+    $../Functors/Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓),
     auto = %true
   )
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = 'id',
-    sub = F
-  ),
+  notation = $SubSup(body = 'id', sub = F),
   definition = [
-    $"Infranatural transformations"(
-        u = u,
-        v = v,
-        𝓒 = 𝓒,
-        𝓓 = 𝓓,
-        F = F,
-        G = F
-      ).transformation(_1 = {
-        #(𝐗: %Element($../Objects(
-          u = u,
-          𝓒 = 𝓒
-        ))),
+    $"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = F).transformation(_1 = {
+        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
         {n = $../identity(
           u = v,
           𝓒 = 𝓓,
-          𝐗 = $../Functors/"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            𝐗 = 𝐗
-          )
+          𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗)
         )}
     }),
-    $"Infranatural transformations"(
-        u = u,
-        v = v,
-        𝓒 = 𝓒,
-        𝓓 = 𝓓,
-        F = F,
-        G = F
-      ).transformation(_1 = {
-        #(𝐗: %Element($../Objects(
-          u = u,
-          𝓒 = 𝓒
-        ))),
+    $"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = F).transformation(_1 = {
+        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
         {n = $../Functors/"morphism value"(
           u = u,
           v = v,
@@ -77,11 +42,7 @@ $identity(
           F = F,
           𝐗 = 𝐗,
           𝐘 = 𝐗,
-          f = $../identity(
-            u = u,
-            𝓒 = 𝓒,
-            𝐗 = 𝐗
-          )
+          f = $../identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗)
         )}
     })
   ]

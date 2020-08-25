@@ -10,16 +10,9 @@ $"well-order"(
   S: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
-  notation = $NounProperty(
-    operand = ⪯,
-    singular = 'well-order',
-    plural = 'well-orders'
-  ),
+  notation = $NounProperty(operand = ⪯, singular = 'well-order', plural = 'well-orders'),
   definition = [%and(
-    $"total order"(
-      S = S,
-      ⪯ = ⪯
-    ),
+    $"total order"(S = S, ⪯ = ⪯),
     %forall(
       #(
         T: %Subset(S),
@@ -27,12 +20,7 @@ $"well-order"(
       ),
       %exists(
         #(t: %Element(T)),
-        formula = $"least element"(
-          S = S,
-          ⪯ = ⪯,
-          T = T,
-          t = t
-        )
+        formula = $"least element"(S = S, ⪯ = ⪯, T = T, t = t)
       )
     )
   )]

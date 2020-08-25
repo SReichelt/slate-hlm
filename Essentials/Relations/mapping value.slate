@@ -5,15 +5,8 @@
  */
 $"mapping value"(
   S,T: %Set(auto = %true),
-  ≺: %Element($Relations(
-    S = S,
-    T = T
-  )),
-  _1: %Constraint($mapping(
-    S = S,
-    T = T,
-    ≺ = ≺
-  )),
+  ≺: %Element($Relations(S = S, T = T)),
+  _1: %Constraint($mapping(S = S, T = T, ≺ = ≺)),
   s: %Element(S)
 ): %ImplicitOperator {
   notation = $Function(
@@ -21,11 +14,5 @@ $"mapping value"(
     arguments = [s]
   ),
   parameter = #(t: %Element(T)),
-  definition = [$related(
-    S = S,
-    T = T,
-    ≺ = ≺,
-    s = s,
-    t = t
-  )]
+  definition = [$related(S = S, T = T, ≺ = ≺, s = s, t = t)]
 }

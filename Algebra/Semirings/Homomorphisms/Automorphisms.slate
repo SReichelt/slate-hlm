@@ -22,8 +22,5 @@ $Automorphisms(𝐑: %Element($../Semirings)): %SetOperator {
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },
-  definition = [$Isomorphisms(
-    𝐑 = 𝐑,
-    𝐒 = 𝐑
-  )]
+  definition = [$Isomorphisms(𝐑 = 𝐑, 𝐒 = 𝐑)]
 }

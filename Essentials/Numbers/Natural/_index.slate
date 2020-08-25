@@ -4,21 +4,12 @@ $Natural: %Section {
   logic = 'hlm',
   items = [
     %item($"Natural numbers"),
-    %item(
-      $number,
-      title = 'Positional notation'
-    ),
+    %item($number, title = 'Positional notation'),
     %item($sum),
     %item($"Addition of one yields successor"),
     %item($"Sum is associative"),
-    %item(
-      $"Left-addition of zero is neutral",
-      type = 'lemma'
-    ),
-    %item(
-      $"Successor can be pulled over addition",
-      type = 'lemma'
-    ),
+    %item($"Left-addition of zero is neutral", type = 'lemma'),
+    %item($"Successor can be pulled over addition", type = 'lemma'),
     %item($"Sum is commutative"),
     %item($"less or equal"),
     %item($less),
@@ -28,14 +19,8 @@ $Natural: %Section {
     %item($"Zero is the smallest number"),
     %item($"Zero is the only number less than or equal to zero"),
     %item($"Successor is always greater"),
-    %subsection(
-      $Subsets,
-      'Subsets'
-    ),
-    %item(
-      $"Finiteness criterion lemma",
-      type = 'lemma'
-    ),
+    %subsection($Subsets, 'Subsets'),
+    %item($"Finiteness criterion lemma", type = 'lemma'),
     %item($"Finiteness criterion"),
     %item($"Addition of a fixed number is injective"),
     %item($difference),
@@ -53,45 +38,21 @@ $Natural: %Section {
     %item($quotient),
     %item($power),
     %item($inductive),
-    %item(
-      $"Induction lemma",
-      type = 'lemma'
-    ),
-    %item(
-      $"Induction principle",
-      type = 'theorem',
-      title = 'Induction principle'
-    ),
-    %item(
-      $"Induction principle of property",
-      type = 'corollary',
-      title = 'Induction principle (property-based)'
-    ),
-    %item(
-      $"Well-ordering principle",
-      type = 'theorem',
-      title = 'Well-ordering principle'
-    ),
+    %item($"Induction lemma", type = 'lemma'),
+    %item($"Induction principle", type = 'theorem', title = 'Induction principle'),
+    %item($"Induction principle of property", type = 'corollary', title = 'Induction principle (property-based)'),
+    %item($"Well-ordering principle", type = 'theorem', title = 'Well-ordering principle'),
     %item($minimum),
     %item($"minimum of two numbers"),
     %item($maximum),
     %item($"maximum of two numbers"),
-    %subsection(
-      $Sequences,
-      'Sequences'
-    ),
+    %subsection($Sequences, 'Sequences'),
     %item($factorial),
     %item($"Small factorials"),
     %item($"binomial coefficient"),
     %item($"Binomial coefficient equality"),
-    %subsection(
-      $"Iterated operators",
-      'Iterated operators'
-    ),
-    %subsection(
-      $Prime,
-      'Prime numbers'
-    ),
+    %subsection($"Iterated operators", 'Iterated operators'),
+    %subsection($Prime, 'Prime numbers'),
     %item($coprime),
     %item($"Coprime test")
   ]

@@ -7,10 +7,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/nat/basic.html#nat.choose
  */
 $"binomial coefficient"(n,k: %Element($"Natural numbers")): %ExplicitOperator {
-  notation = $BinomialCoefficient(
-    top = n,
-    bottom = k
-  ),
+  notation = $BinomialCoefficient(top = n, bottom = k),
   definition = [%structuralCases(
     k,
     $"Natural numbers",
@@ -36,10 +33,7 @@ $"binomial coefficient"(n,k: %Element($"Natural numbers")): %ExplicitOperator {
               constructor = $"Natural numbers".successor,
               parameters = #(m: %Element($"Natural numbers")),
               value = $sum(
-                m = $"binomial coefficient"(
-                  n = m,
-                  k = x
-                ),
+                m = $"binomial coefficient"(n = m, k = x),
                 n = $"binomial coefficient"(
                   n = m,
                   k = $sum(

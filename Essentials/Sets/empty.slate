@@ -11,14 +11,8 @@ $empty(S: %Set): %Predicate {
     property = %neg('empty', 'nonempty')
   ),
   definition = [
-    %setEquals(
-      S,
-      $"Empty set"
-    ),
-    %sub(
-      S,
-      $"Empty set"
-    ),
+    %setEquals(S, $"Empty set"),
+    %sub(S, $"Empty set"),
     %not(%exists(#(x: %Element(S)))),
     %equals(
       $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
@@ -29,29 +23,17 @@ $empty(S: %Set): %Predicate {
     {
       from = 1,
       to = 2,
-      parameters = #(@: %Constraint(%setEquals(
-        S,
-        $"Empty set"
-      ))),
-      goal = %sub(
-        S,
-        $"Empty set"
-      ),
+      parameters = #(@: %Constraint(%setEquals(S, $"Empty set"))),
+      goal = %sub(S, $"Empty set"),
       steps = #(
         _: %Consider(@),
-        _: %UseDef(result = %sub(
-          S,
-          $"Empty set"
-        ))
+        _: %UseDef(result = %sub(S, $"Empty set"))
       )
     },
     {
       from = 2,
       to = 3,
-      parameters = #(@: %Constraint(%sub(
-        S,
-        $"Empty set"
-      ))),
+      parameters = #(@: %Constraint(%sub(S, $"Empty set"))),
       goal = %not(%exists(#(x: %Element(S)))),
       steps = #(_: %ProveNeg({
         parameters = #(x: %Element(S)),
@@ -59,10 +41,7 @@ $empty(S: %Set): %Predicate {
           _: %Consider(@),
           _: %UseDef(result = %forall(
             #(s: %Element(S)),
-            %in(
-              s,
-              $"Empty set"
-            )
+            %in(s, $"Empty set")
           )),
           _: %UseForAll({s = x}),
           _: %UseDef(result = %or)
@@ -73,10 +52,7 @@ $empty(S: %Set): %Predicate {
       from = 3,
       to = 1,
       parameters = #(@: %Constraint(%not(%exists(#(x: %Element(S)))))),
-      goal = %setEquals(
-        S,
-        $"Empty set"
-      ),
+      goal = %setEquals(S, $"Empty set"),
       steps = #(_: %ProveEquivalence([
         {
           from = 1,
@@ -84,17 +60,11 @@ $empty(S: %Set): %Predicate {
           steps = #(_: %ProveDef(proof = {
             goal = %forall(
               #(a: %Element(S)),
-              %in(
-                a,
-                $"Empty set"
-              )
+              %in(a, $"Empty set")
             ),
             steps = #(_: %ProveForAll({
               parameters = #(a: %Element(S)),
-              goal = %in(
-                a,
-                $"Empty set"
-              ),
+              goal = %in(a, $"Empty set"),
               steps = #(_: %State(
                 %exists(#(x: %Element(S))),
                 proof = {steps = #(_: %ProveExists({x = a}))}
@@ -107,10 +77,7 @@ $empty(S: %Set): %Predicate {
           to = 1,
           steps = #(_: %UseTheorem(
             $"Empty set is subset of any set"(S = S),
-            result = %sub(
-              $"Empty set",
-              S
-            )
+            result = %sub($"Empty set", S)
           ))
         }
       ]))

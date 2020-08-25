@@ -14,30 +14,12 @@ $Groups: %Section {
     %item($"abelian group"),
     %item($"power to natural number"),
     %item($"power to integer"),
-    %subsection(
-      $Homomorphisms,
-      'Homomorphisms'
-    ),
-    %subsection(
-      $Subgroups,
-      'Subgroups'
-    ),
-    %subsection(
-      $Quotients,
-      'Quotient groups'
-    ),
-    %subsection(
-      $Examples,
-      'Examples'
-    ),
+    %subsection($Homomorphisms, 'Homomorphisms'),
+    %subsection($Subgroups, 'Subgroups'),
+    %subsection($Quotients, 'Quotient groups'),
+    %subsection($Examples, 'Examples'),
     %item($"iterated operation"),
-    %subsection(
-      $Order,
-      'Order'
-    ),
-    %subsection(
-      $Sylow,
-      'Sylow theorems'
-    )
+    %subsection($Order, 'Order'),
+    %subsection($Sylow, 'Sylow theorems')
   ]
 }

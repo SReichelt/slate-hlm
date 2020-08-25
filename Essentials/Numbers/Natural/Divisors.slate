@@ -7,17 +7,11 @@
  */
 $Divisors(n: %Element($"Natural numbers")): %SetOperator {
   notation = $Function(
-    function = $SubSup(
-      body = 'Div',
-      sub = 'ℕ'
-    ),
+    function = $SubSup(body = 'Div', sub = 'ℕ'),
     arguments = [n]
   ),
   definition = [%subset(
     #(m: %Element($Subsets/"Positive numbers")),
-    $divisible(
-      m = m,
-      n = n
-    )
+    $divisible(m = m, n = n)
   )]
 }

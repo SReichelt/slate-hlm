@@ -4,10 +4,7 @@ $"pointed subset"(𝐒,𝐓: %Element($../"Pointed sets")): %Predicate {
   notation = $SubObjectRelation(operands = [𝐒, 𝐓]),
   definition = [
     %exists(
-      #(φ: %Element($../Homomorphisms/Homomorphisms(
-        𝐒 = 𝐒,
-        𝐓 = 𝐓
-      ))),
+      #(φ: %Element($../Homomorphisms/Homomorphisms(𝐒 = 𝐒, 𝐓 = 𝐓))),
       formula = $../../../Essentials/Functions/injective(
         X = $../Carrier(𝐒 = 𝐒),
         Y = $../Carrier(𝐒 = 𝐓),
@@ -17,16 +14,10 @@ $"pointed subset"(𝐒,𝐓: %Element($../"Pointed sets")): %Predicate {
     %exists(
       #(S: %Subset($../Carrier(𝐒 = 𝐓))),
       formula = %and(
-        $"subset of pointed set"(
-          𝐒 = 𝐓,
-          S = S
-        ),
+        $"subset of pointed set"(𝐒 = 𝐓, S = S),
         %equals(
           𝐒,
-          $"subset as pointed set"(
-            𝐒 = 𝐓,
-            S = S
-          )
+          $"subset as pointed set"(𝐒 = 𝐓, S = S)
         )
       )
     )

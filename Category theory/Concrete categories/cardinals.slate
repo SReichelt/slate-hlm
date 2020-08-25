@@ -9,18 +9,12 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/types.html#category_theory.types
  */
 $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = $SubSup(
-    body = '𝐒𝐞𝐭',
-    sub = u
-  ),
+  notation = $SubSup(body = '𝐒𝐞𝐭', sub = u),
   definition = [$../Categories(u = u).category(
       O = $../../Essentials/Numbers/Cardinal/"Cardinal numbers",
       _1 = {
         #(𝐀,𝐁: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-        {M = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-          κ = 𝐀,
-          μ = 𝐁
-        )}
+        {M = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐀, μ = 𝐁)}
       },
       _2 = {
         #(𝐂: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
@@ -29,28 +23,13 @@ $cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %E
       _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
         {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-              κ = 𝐄,
-              μ = 𝐅
-            ),
-            Y = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-              κ = 𝐃,
-              μ = 𝐄
-            ),
-            Z = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-              κ = 𝐃,
-              μ = 𝐅
-            )
+            X = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐄, μ = 𝐅),
+            Y = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐃, μ = 𝐄),
+            Z = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐃, μ = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                κ = 𝐄,
-                μ = 𝐅
-              )),
-              φ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(
-                κ = 𝐃,
-                μ = 𝐄
-              ))
+              ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐄, μ = 𝐅)),
+              φ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐃, μ = 𝐄))
             ),
             {z = $../../Essentials/Functions/composition(
               X = $../../Essentials/Numbers/Cardinal/Carrier(κ = 𝐃),

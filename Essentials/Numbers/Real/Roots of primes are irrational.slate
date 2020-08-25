@@ -9,78 +9,44 @@ $"Roots of primes are irrational"(
   p: %Element($../Natural/Prime/"Prime numbers"),
   n: %Element($../Natural/Subsets/"Segment (greater)"(n = $../Natural/number(value = 1)))
 ): %StandardTheorem {
-  claim = %not($rational(a = $root(
-    a = p,
-    n = n
-  ))),
+  claim = %not($rational(a = $root(a = p, n = n))),
   proofs = [{steps = #(_: %ProveNeg({
-    parameters = #(_: %Constraint($rational(a = $root(
-      a = p,
-      n = n
-    )))),
+    parameters = #(_: %Constraint($rational(a = $root(a = p, n = n)))),
     steps = #(
       _: %UseDef(result = %exists(
         #(
           a: %Element($../Integer/Subsets/"Positive numbers"),
           b: %Element($../Integer/Integers),
-          _1: %Constraint($../Integer/coprime(
-            a = a,
-            b = b
-          ))
+          _1: %Constraint($../Integer/coprime(a = a, b = b))
         ),
         formula = %equals(
-          $root(
-            a = p,
-            n = n
-          ),
-          $quotient(
-            a = b,
-            b = a
-          )
+          $root(a = p, n = n),
+          $quotient(a = b, b = a)
         )
       )),
       _: %UseExists(#(
         a: %Element($../Integer/Subsets/"Positive numbers"),
         b: %Element($../Integer/Integers),
-        _1: %Constraint($../Integer/coprime(
-          a = a,
-          b = b
-        ))
+        _1: %Constraint($../Integer/coprime(a = a, b = b))
       )),
       _: %UseDef(result = %equals(
         p,
         $power(
-          a = $quotient(
-            a = b,
-            b = a
-          ),
+          a = $quotient(a = b, b = a),
           n = n
         )
       )),
       _: %Substitute(
         #(_: %UseTheorem(
-          $"Power base quotient law"(
-            b = b,
-            a = a,
-            n = n
-          ),
+          $"Power base quotient law"(b = b, a = a, n = n),
           result = %equals(
             $power(
-              a = $quotient(
-                a = b,
-                b = a
-              ),
+              a = $quotient(a = b, b = a),
               n = n
             ),
             $quotient(
-              a = $power(
-                a = b,
-                n = n
-              ),
-              b = $power(
-                a = a,
-                n = n
-              )
+              a = $power(a = b, n = n),
+              b = $power(a = a, n = n)
             )
           )
         )),
@@ -88,90 +54,50 @@ $"Roots of primes are irrational"(
         %equals(
           p,
           $quotient(
-            a = $power(
-              a = b,
-              n = n
-            ),
-            b = $power(
-              a = a,
-              n = n
-            )
+            a = $power(a = b, n = n),
+            b = $power(a = a, n = n)
           )
         )
       ),
       _2: %UseDef(result = %equals(
         $../Integer/product(
           a = p,
-          b = $../Integer/power(
-            a = a,
-            n = n
-          )
+          b = $../Integer/power(a = a, n = n)
         ),
-        $../Integer/power(
-          a = b,
-          n = n
-        )
+        $../Integer/power(a = b, n = n)
       )),
       _7: %State(
         $../Integer/divisible(
           a = p,
-          b = $../Integer/power(
-            a = b,
-            n = n
-          )
+          b = $../Integer/power(a = b, n = n)
         ),
         proof = {steps = #(_: %ProveDef(proof = {
           goal = %exists(
             #(x: %Element($../Integer/Integers)),
             formula = %equals(
-              $../Integer/product(
-                a = p,
-                b = x
-              ),
-              $../Integer/power(
-                a = b,
-                n = n
-              )
+              $../Integer/product(a = p, b = x),
+              $../Integer/power(a = b, n = n)
             )
           ),
-          steps = #(_: %ProveExists({x = $../Integer/power(
-            a = a,
-            n = n
-          )}))
+          steps = #(_: %ProveExists({x = $../Integer/power(a = a, n = n)}))
         }))}
       ),
       _4: %UseTheorem(
-        $../Integer/Prime/"Prime and power divisibility criterion"(
-          p = p,
-          a = b,
-          n = n
-        ),
+        $../Integer/Prime/"Prime and power divisibility criterion"(p = p, a = b, n = n),
         input = #(_: %Consider(_7)),
-        result = $../Integer/divisible(
-          a = p,
-          b = b
-        )
+        result = $../Integer/divisible(a = p, b = b)
       ),
       _8: %State(
         $../Integer/divisible(
           a = p,
-          b = $../Integer/power(
-            a = a,
-            n = n
-          )
+          b = $../Integer/power(a = a, n = n)
         ),
         proof = {steps = #(_: %ProveDef(proof = {
           goal = %exists(
             #(y: %Element($../Integer/Integers)),
             formula = %equals(
-              $../Integer/product(
-                a = p,
-                b = y
-              ),
-              $../Integer/power(
-                a = a,
-                n = n
-              )
+              $../Integer/product(a = p, b = y),
+              $../Integer/power(a = a, n = n)
             )
           ),
           steps = #(
@@ -179,10 +105,7 @@ $"Roots of primes are irrational"(
             _: %UseDef(result = %exists(
               #(z: %Element($../Integer/Integers)),
               formula = %equals(
-                $../Integer/product(
-                  a = p,
-                  b = z
-                ),
+                $../Integer/product(a = p, b = z),
                 b
               )
             )),
@@ -202,10 +125,7 @@ $"Roots of primes are irrational"(
             _: %ProveExists(
               {y = $../Integer/product(
                 a = %associative($../Integer/product(
-                  a = $../Integer/power(
-                    a = b,
-                    n = m
-                  ),
+                  a = $../Integer/power(a = b, n = m),
                   b = z
                 )),
                 b = z
@@ -218,10 +138,7 @@ $"Roots of primes are irrational"(
                   %equals(
                     $../Integer/product(
                       a = p,
-                      b = $../Integer/power(
-                        a = a,
-                        n = n
-                      )
+                      b = $../Integer/power(a = a, n = n)
                     ),
                     $../Integer/power(
                       a = b,
@@ -235,17 +152,11 @@ $"Roots of primes are irrational"(
                 _: %UnfoldDef(%equals(
                   $../Integer/product(
                     a = p,
-                    b = $../Integer/power(
-                      a = a,
-                      n = n
-                    )
+                    b = $../Integer/power(a = a, n = n)
                   ),
                   $../Integer/product(
                     a = %associative($../Integer/product(
-                      a = $../Integer/power(
-                        a = b,
-                        n = m
-                      ),
+                      a = $../Integer/power(a = b, n = m),
                       b = b
                     )),
                     b = b
@@ -257,26 +168,14 @@ $"Roots of primes are irrational"(
                   %equals(
                     $../Integer/product(
                       a = p,
-                      b = $../Integer/power(
-                        a = a,
-                        n = n
-                      )
+                      b = $../Integer/power(a = a, n = n)
                     ),
                     $../Integer/product(
                       a = %associative($../Integer/product(
-                        a = $../Integer/power(
-                          a = b,
-                          n = m
-                        ),
-                        b = %associative($../Integer/product(
-                          a = p,
-                          b = z
-                        ))
+                        a = $../Integer/power(a = b, n = m),
+                        b = %associative($../Integer/product(a = p, b = z))
                       )),
-                      b = %associative($../Integer/product(
-                        a = p,
-                        b = z
-                      ))
+                      b = %associative($../Integer/product(a = p, b = z))
                     )
                   )
                 ),
@@ -284,41 +183,23 @@ $"Roots of primes are irrational"(
                   $../Integer/"Multiplication of a nonzero number is injective"(
                     a = $../Integer/product(
                       a = %associative($../Integer/product(
-                        a = $../Integer/power(
-                          a = b,
-                          n = m
-                        ),
+                        a = $../Integer/power(a = b, n = m),
                         b = z
                       )),
-                      b = %associative($../Integer/product(
-                        a = p,
-                        b = z
-                      ))
+                      b = %associative($../Integer/product(a = p, b = z))
                     ),
-                    b = $../Integer/power(
-                      a = a,
-                      n = n
-                    ),
+                    b = $../Integer/power(a = a, n = n),
                     c = p,
                     _1 = {proof = {steps = #(_: %Consider(_6))}}
                   ),
                   result = %equals(
-                    $../Integer/power(
-                      a = a,
-                      n = n
-                    ),
+                    $../Integer/power(a = a, n = n),
                     $../Integer/product(
                       a = %associative($../Integer/product(
-                        a = $../Integer/power(
-                          a = b,
-                          n = m
-                        ),
+                        a = $../Integer/power(a = b, n = m),
                         b = z
                       )),
-                      b = %associative($../Integer/product(
-                        a = p,
-                        b = z
-                      ))
+                      b = %associative($../Integer/product(a = p, b = z))
                     )
                   )
                 )
@@ -328,34 +209,18 @@ $"Roots of primes are irrational"(
         }))}
       ),
       _: %UseTheorem(
-        $../Integer/Prime/"Prime and power divisibility criterion"(
-          p = p,
-          a = a,
-          n = n
-        ),
+        $../Integer/Prime/"Prime and power divisibility criterion"(p = p, a = a, n = n),
         input = #(_: %Consider(_8)),
-        result = $../Integer/divisible(
-          a = p,
-          b = a
-        )
+        result = $../Integer/divisible(a = p, b = a)
       ),
       _: %State(
-        %not($../Integer/coprime(
-          a = a,
-          b = b
-        )),
+        %not($../Integer/coprime(a = a, b = b)),
         proof = {steps = #(_: %ProveDef(proof = {
           goal = %exists(
             #(q: %Element($../Natural/Prime/"Prime numbers")),
             formula = %and(
-              $../Integer/divisible(
-                a = q,
-                b = a
-              ),
-              $../Integer/divisible(
-                a = q,
-                b = b
-              )
+              $../Integer/divisible(a = q, b = a),
+              $../Integer/divisible(a = q, b = b)
             )
           ),
           steps = #(_: %ProveExists({q = p}))

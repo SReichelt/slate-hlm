@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $zero(𝐑: %Element($Semirings)): %ExplicitOperator {
-  notation = $SubSup(
-    body = '0',
-    sub = 𝐑
-  ),
+  notation = $SubSup(body = '0', sub = 𝐑),
   definition = [%structuralCases(
     𝐑,
     $Semirings,
@@ -16,13 +13,7 @@ $zero(𝐑: %Element($Semirings)): %ExplicitOperator {
         "0": %Element(R),
         ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($semiring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($semiring(R = R, ⊕ = ⊕, "0" = "0", ⊙ = ⊙, "1" = "1"))
       ),
       value = "0"
     }]

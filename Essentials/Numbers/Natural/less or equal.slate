@@ -8,19 +8,13 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.le
  */
 $"less or equal"(m,n: %Element($"Natural numbers")): %Predicate {
-  properties = {negation = $less(
-    n = m,
-    m = n
-  )},
+  properties = {negation = $less(n = m, m = n)},
   notation = $LessOrEqualRelation(operands = [m, n]),
   definition = [
     %exists(
       #(x: %Element($"Natural numbers")),
       formula = %equals(
-        $sum(
-          m = m,
-          n = x
-        ),
+        $sum(m = m, n = x),
         n
       )
     ),
@@ -37,10 +31,7 @@ $"less or equal"(m,n: %Element($"Natural numbers")): %Predicate {
           constructor = $"Natural numbers".successor,
           parameters = #(y: %Element($"Natural numbers")),
           value = %and(
-            $"less or equal"(
-              m = y,
-              n = n
-            ),
+            $"less or equal"(m = y, n = n),
             %not(%equals(y, n))
           ),
           rewrite = %true
@@ -61,10 +52,7 @@ $"less or equal"(m,n: %Element($"Natural numbers")): %Predicate {
           {
             constructor = $"Natural numbers".successor,
             parameters = #(z: %Element($"Natural numbers")),
-            value = $"less or equal"(
-              m = m,
-              n = z
-            ),
+            value = $"less or equal"(m = m, n = z),
             rewrite = %true
           }
         ]

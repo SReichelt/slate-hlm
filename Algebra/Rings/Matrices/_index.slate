@@ -5,10 +5,7 @@ $Matrices: %Section {
   items = [
     %item($Matrices),
     %item($Vectors),
-    %item(
-      $matrix,
-      title = 'Matrix notation'
-    ),
+    %item($matrix, title = 'Matrix notation'),
     %item($sum),
     %item($zero),
     %item($"additive inverse"),
@@ -18,9 +15,6 @@ $Matrices: %Section {
     %item($"product with right scalar"),
     %item($identity),
     %item($"matrix ring"),
-    %subsection(
-      $Examples,
-      'Examples'
-    )
+    %subsection($Examples, 'Examples')
   ]
 }

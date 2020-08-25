@@ -11,10 +11,7 @@ $"abelian group"(
   G: %Set,
   ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
   e: %Element(G),
-  i: %Element($../../Essentials/Functions/Functions(
-    X = G,
-    Y = G
-  ))
+  i: %Element($../../Essentials/Functions/Functions(X = G, Y = G))
 ): %Predicate {
   notation = $Structure(
     items = [G, ∗, e, i],
@@ -24,31 +21,12 @@ $"abelian group"(
   ),
   definition = [
     %and(
-      $group(
-        G = G,
-        ∗ = ∗,
-        e = e,
-        i = i
-      ),
-      $abelian(𝐆 = $Groups.group(
-        G = G,
-        ∗ = ∗,
-        e = e,
-        i = i
-      ))
+      $group(G = G, ∗ = ∗, e = e, i = i),
+      $abelian(𝐆 = $Groups.group(G = G, ∗ = ∗, e = e, i = i))
     ),
     %and(
-      $group(
-        G = G,
-        ∗ = ∗,
-        e = e,
-        i = i
-      ),
-      $../../Essentials/Operations/commutative(
-        X = G,
-        Z = G,
-        ∗ = ∗
-      )
+      $group(G = G, ∗ = ∗, e = e, i = i),
+      $../../Essentials/Operations/commutative(X = G, Z = G, ∗ = ∗)
     )
   ]
 }

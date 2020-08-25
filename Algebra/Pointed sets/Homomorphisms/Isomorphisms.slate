@@ -22,10 +22,7 @@ $Isomorphisms(𝐒,𝐓: %Element($../"Pointed sets")): %SetOperator {
   },
   definition = [
     %subset(
-      #(φ: %Element($Homomorphisms(
-        𝐒 = 𝐒,
-        𝐓 = 𝐓
-      ))),
+      #(φ: %Element($Homomorphisms(𝐒 = 𝐒, 𝐓 = 𝐓))),
       $../../../Essentials/Functions/bijective(
         X = $../Carrier(𝐒 = 𝐒),
         Y = $../Carrier(𝐒 = 𝐓),

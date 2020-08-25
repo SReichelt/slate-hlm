@@ -17,10 +17,7 @@ $Isomorphisms(𝐑,𝐒: %Element($../Rings)): %SetOperator {
   },
   definition = [
     %subset(
-      #(φ: %Element($Homomorphisms(
-        𝐑 = 𝐑,
-        𝐒 = 𝐒
-      ))),
+      #(φ: %Element($Homomorphisms(𝐑 = 𝐑, 𝐒 = 𝐒))),
       $../../../Essentials/Functions/bijective(
         X = $../Carrier(𝐑 = 𝐑),
         Y = $../Carrier(𝐑 = 𝐒),
@@ -40,11 +37,7 @@ $Isomorphisms(𝐑,𝐒: %Element($../Rings)): %SetOperator {
               X = $../Carrier(𝐑 = 𝐑),
               Y = $../Carrier(𝐑 = 𝐒),
               f = f,
-              x = $../sum(
-                𝐑 = 𝐑,
-                a = a,
-                b = b
-              )
+              x = $../sum(𝐑 = 𝐑, a = a, b = b)
             ),
             $../sum(
               𝐑 = 𝐒,
@@ -70,11 +63,7 @@ $Isomorphisms(𝐑,𝐒: %Element($../Rings)): %SetOperator {
               X = $../Carrier(𝐑 = 𝐑),
               Y = $../Carrier(𝐑 = 𝐒),
               f = f,
-              x = $../product(
-                𝐑 = 𝐑,
-                a = d,
-                b = e
-              )
+              x = $../product(𝐑 = 𝐑, a = d, b = e)
             ),
             $../product(
               𝐑 = 𝐒,

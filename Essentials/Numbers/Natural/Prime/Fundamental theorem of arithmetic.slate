@@ -15,10 +15,7 @@ $"Fundamental theorem of arithmetic"(n: %Element($../Subsets/"Positive numbers")
   claim = %existsUnique(
     #(
       𝑷: %Element($../../../Sets/Multisets/Multisets(S = $"Prime numbers")),
-      _1: %Constraint($../../../Sets/Multisets/finite(
-        S = $"Prime numbers",
-        𝑻 = 𝑷
-      ))
+      _1: %Constraint($../../../Sets/Multisets/finite(S = $"Prime numbers", 𝑻 = 𝑷))
     ),
     formula = %equals(
       n,
@@ -28,10 +25,7 @@ $"Fundamental theorem of arithmetic"(n: %Element($../Subsets/"Positive numbers")
         S = $"Prime numbers",
         𝑰 = 𝑷,
         _2 = {
-          #(p: %Element($../../../Sets/Multisets/Set(
-            S = $"Prime numbers",
-            𝑻 = 𝑷
-          ))),
+          #(p: %Element($../../../Sets/Multisets/Set(S = $"Prime numbers", 𝑻 = 𝑷))),
           {a = p}
         }
       )

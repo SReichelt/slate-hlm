@@ -4,11 +4,7 @@
  * @remarks Due to the embedding of `$../../Natural/"Natural numbers"` into `$../Integers`, this is just an alias for `$../../Natural/"Natural numbers"`.
  */
 $"Nonnegative numbers": %SetOperator {
-  notation = $SubSup(
-    body = 'ℤ',
-    sub = '0',
-    sup = '+'
-  ),
+  notation = $SubSup(body = 'ℤ', sub = '0', sup = '+'),
   definition = [
     $"Segment (greater or equal)"(a = $../../Natural/number(value = 0)),
     %subset(

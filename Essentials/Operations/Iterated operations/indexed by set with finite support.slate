@@ -12,10 +12,7 @@ $"indexed by set with finite support"(
     #(i: %Element(I)),
     %not(%equals(
       a[i = i],
-      $"identity element"(
-        X = X,
-        ⨂ = ⨂
-      )
+      $"identity element"(X = X, ⨂ = ⨂)
     ))
   )),
   _2: %Constraint($../../Sets/finite(S = J))

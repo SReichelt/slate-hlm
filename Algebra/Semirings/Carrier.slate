@@ -4,16 +4,10 @@
  * @remarks This definition retrieves a representative carrier set from a semiring (which is actually an equivalence class of semirings), and enables typical abuse of notation.
  */
 $Carrier(𝐑: %Element($Semirings)): %SetOperator {
-  notation = $Parens(
-    body = 𝐑,
-    style = '()'
-  ),
+  notation = $Parens(body = 𝐑, style = '()'),
   definitionNotation = {
     parameter = #(a: %Expr),
-    notation = $ElementParameter(
-      variable = a,
-      set = 𝐑
-    )
+    notation = $ElementParameter(variable = a, set = 𝐑)
   },
   definition = [%setStructuralCases(
     𝐑,
@@ -26,13 +20,7 @@ $Carrier(𝐑: %Element($Semirings)): %SetOperator {
         "0": %Element(R),
         ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($semiring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($semiring(R = R, ⊕ = ⊕, "0" = "0", ⊙ = ⊙, "1" = "1"))
       ),
       value = R
     }]

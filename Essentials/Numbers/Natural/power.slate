@@ -8,10 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.pow
  */
 $power(m,n: %Element($"Natural numbers")): %ExplicitOperator {
-  notation = $SubSup(
-    body = m,
-    sup = n
-  ),
+  notation = $SubSup(body = m, sup = n),
   definition = [%structuralCases(
     n,
     $"Natural numbers",
@@ -25,10 +22,7 @@ $power(m,n: %Element($"Natural numbers")): %ExplicitOperator {
         constructor = $"Natural numbers".successor,
         parameters = #(x: %Element($"Natural numbers")),
         value = $product(
-          m = $power(
-            m = m,
-            n = x
-          ),
+          m = $power(m = m, n = x),
           n = m
         ),
         rewrite = %true

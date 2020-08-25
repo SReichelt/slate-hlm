@@ -16,29 +16,17 @@
 $"Equivalence classes"(
   S: %Set(auto = %true),
   ∼: %Element($Endorelations(S = S)),
-  _1: %Constraint($equivalence(
-    S = S,
-    ≺ = ∼
-  ))
+  _1: %Constraint($equivalence(S = S, ≺ = ∼))
 ): %Construction {
   $class(s: %Element(S)): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = s,
-        style = '[]'
-      ),
+      body = $Parens(body = s, style = '[]'),
       sub = ∼
     ),
     equalityDefinition = {
       leftParameters = #(s: %Element(S)),
       rightParameters = #(t: %Element(S)),
-      definition = [$related(
-        S = S,
-        T = S,
-        ≺ = ∼,
-        s = s,
-        t = t
-      )]
+      definition = [$related(S = S, T = S, ≺ = ∼, s = s, t = t)]
     }
   }
 

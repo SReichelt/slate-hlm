@@ -14,14 +14,8 @@ $Complex: %Section {
     %item($"Product is associative"),
     %item($"Product is commutative"),
     %item($"Actual linear combination equals formal linear combination"),
-    %subsection(
-      $Subsets,
-      'Subsets'
-    ),
+    %subsection($Subsets, 'Subsets'),
     %item($quotient),
-    %subsection(
-      $"Iterated operators",
-      'Iterated operators'
-    )
+    %subsection($"Iterated operators", 'Iterated operators')
   ]
 }

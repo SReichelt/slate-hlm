@@ -8,10 +8,7 @@ $"less or equal"(κ,μ: %Element($"Cardinal numbers")): %Predicate {
   notation = $LessOrEqualRelation(operands = [κ, μ]),
   definition = [
     %exists(
-      #(φ: %Element($Homomorphisms/Homomorphisms(
-        κ = κ,
-        μ = μ
-      ))),
+      #(φ: %Element($Homomorphisms/Homomorphisms(κ = κ, μ = μ))),
       formula = $../../Functions/injective(
         X = $Carrier(κ = κ),
         Y = $Carrier(κ = μ),

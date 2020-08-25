@@ -4,10 +4,7 @@
  * @references * https://ncatlab.org/nlab/show/associative+magma
  */
 $associative(𝐌: %Element($Magmas)): %Predicate {
-  notation = $Property(
-    operand = 𝐌,
-    property = 'associative'
-  ),
+  notation = $Property(operand = 𝐌, property = 'associative'),
   definition = [%structural(
     𝐌,
     $Magmas,
@@ -17,10 +14,7 @@ $associative(𝐌: %Element($Magmas)): %Predicate {
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
-      value = $../../Essentials/Operations/associative(
-        X = M,
-        ∗ = ∗
-      )
+      value = $../../Essentials/Operations/associative(X = M, ∗ = ∗)
     }]
   )]
 }

@@ -10,10 +10,7 @@ $associative(
   X: %Set(auto = %true),
   ∗: %Element($"Inner operations"(X = X))
 ): %Predicate {
-  notation = $Property(
-    operand = ∗,
-    property = 'associative'
-  ),
+  notation = $Property(operand = ∗, property = 'associative'),
   definition = [%forall(
     #(x,y,z: %Element(X)),
     %equals(
@@ -22,14 +19,7 @@ $associative(
         Y = X,
         Z = X,
         ∗ = ∗,
-        x = $value(
-          X = X,
-          Y = X,
-          Z = X,
-          ∗ = ∗,
-          x = x,
-          y = y
-        ),
+        x = $value(X = X, Y = X, Z = X, ∗ = ∗, x = x, y = y),
         y = z
       ),
       $value(
@@ -38,14 +28,7 @@ $associative(
         Z = X,
         ∗ = ∗,
         x = x,
-        y = $value(
-          X = X,
-          Y = X,
-          Z = X,
-          ∗ = ∗,
-          x = y,
-          y = z
-        )
+        y = $value(X = X, Y = X, Z = X, ∗ = ∗, x = y, y = z)
       )
     )
   )]

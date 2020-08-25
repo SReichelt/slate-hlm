@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $one(𝐑: %Element($Rings)): %ExplicitOperator {
-  notation = $SubSup(
-    body = '1',
-    sub = 𝐑
-  ),
+  notation = $SubSup(body = '1', sub = 𝐑),
   definition = [%structuralCases(
     𝐑,
     $Rings,
@@ -14,20 +11,10 @@ $one(𝐑: %Element($Rings)): %ExplicitOperator {
         R: %Set,
         ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊖: %Element($../../Essentials/Functions/Functions(
-          X = R,
-          Y = R
-        )),
+        ⊖: %Element($../../Essentials/Functions/Functions(X = R, Y = R)),
         ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($ring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($ring(R = R, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙, "1" = "1"))
       ),
       value = "1"
     }]

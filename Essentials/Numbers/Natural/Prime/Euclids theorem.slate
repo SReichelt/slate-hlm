@@ -159,10 +159,7 @@ $"Euclids theorem": %StandardTheorem {
               },
               j = p
             ),
-            result = $../divisible(
-              m = p,
-              n = a
-            )
+            result = $../divisible(m = p, n = a)
           ))}},
           c = $../number(value = 1)
         ),

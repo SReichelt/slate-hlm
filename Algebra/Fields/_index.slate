@@ -5,17 +5,8 @@ $Fields: %Section {
   items = [
     %item($Fields),
     %item($quotient),
-    %subsection(
-      $Subfields,
-      'Subfields'
-    ),
-    %subsection(
-      $Examples,
-      'Examples'
-    ),
-    %subsection(
-      $"Prime fields",
-      'Prime fields'
-    )
+    %subsection($Subfields, 'Subfields'),
+    %subsection($Examples, 'Examples'),
+    %subsection($"Prime fields", 'Prime fields')
   ]
 }

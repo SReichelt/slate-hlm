@@ -5,10 +5,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.le
  */
 $"less or equal"(a,b: %Element($"Real numbers")): %Predicate {
-  properties = {negation = $less(
-    b = a,
-    a = b
-  )},
+  properties = {negation = $less(b = a, a = b)},
   notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [%structural(
     b,
@@ -54,10 +51,7 @@ $"less or equal"(a,b: %Element($"Real numbers")): %Predicate {
                         #(m: %Element($../Natural/Subsets/"Segment (greater or equal)"(n = n))),
                         $../Rational/"less or equal"(
                           a = x[n = m],
-                          b = $../Rational/sum(
-                            a = y[n = m],
-                            b = ε
-                          )
+                          b = $../Rational/sum(a = y[n = m], b = ε)
                         )
                       )
                     )

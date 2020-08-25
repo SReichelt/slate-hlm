@@ -7,10 +7,7 @@ $zero(
   ),
   𝐌: %Element($"Left modules"(𝐑 = 𝐑))
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = '0',
-    sub = 𝐌
-  ),
+  notation = $SubSup(body = '0', sub = 𝐌),
   definition = [%structuralCases(
     𝐌,
     $"Left modules"(𝐑 = 𝐑),
@@ -20,23 +17,13 @@ $zero(
         M: %Set,
         ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
         "0": %Element(M),
-        ⊖: %Element($../../../../Essentials/Functions/Functions(
-          X = M,
-          Y = M
-        )),
+        ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
         ⊙: %Element($../../../../Essentials/Operations/Operations(
           X = $../../Carrier(𝐑 = 𝐑),
           Y = M,
           Z = M
         )),
-        _1: %Constraint($"left module"(
-          𝐑 = 𝐑,
-          M = M,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙
-        ))
+        _1: %Constraint($"left module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
       value = "0"
     }]

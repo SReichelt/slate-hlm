@@ -13,22 +13,9 @@ $"morphism value"(
     $../Categories(u = v),
     auto = %true
   ),
-  F: %Element($Functors(
-    u = u,
-    v = v,
-    𝓒 = 𝓒,
-    𝓓 = 𝓓
-  )),
-  𝐗,𝐘: %Element($../Objects(
-    u = u,
-    𝓒 = 𝓒
-  )),
-  f: %Element($../Morphisms(
-    u = u,
-    𝓒 = 𝓒,
-    𝐗 = 𝐗,
-    𝐘 = 𝐘
-  ))
+  F: %Element($Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓)),
+  𝐗,𝐘: %Element($../Objects(u = u, 𝓒 = 𝓒)),
+  f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗, 𝐘 = 𝐘))
 ): %ExplicitOperator {
   notation = $Function(
     function = F,
@@ -37,101 +24,37 @@ $"morphism value"(
   definition = [%asElementOf(
     %structuralCases(
       F,
-      $Functors(
-        u = u,
-        v = v,
-        𝓒 = 𝓒,
-        𝓓 = 𝓓
-      ),
+      $Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓),
       [{
         constructor = $Functors.functor,
         parameters = #(
           _1: %Binder(
-            #(𝐀: %Element($../Objects(
-              u = u,
-              𝓒 = 𝓒
-            ))),
-            #(𝐃: %Element($../Objects(
-              u = v,
-              𝓒 = 𝓓
-            )))
+            #(𝐀: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+            #(𝐃: %Element($../Objects(u = v, 𝓒 = 𝓓)))
           ),
           _2: %Binder(
             #(
-              𝐁,𝐂: %Element($../Objects(
-                u = u,
-                𝓒 = 𝓒
-              )),
-              g: %Element($../Morphisms(
-                u = u,
-                𝓒 = 𝓒,
-                𝐗 = 𝐁,
-                𝐘 = 𝐂
-              ))
+              𝐁,𝐂: %Element($../Objects(u = u, 𝓒 = 𝓒)),
+              g: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐁, 𝐘 = 𝐂))
             ),
-            #(h: %Element($../Morphisms(
-              u = v,
-              𝓒 = 𝓓,
-              𝐗 = 𝐃[𝐀 = 𝐁],
-              𝐘 = 𝐃[𝐀 = 𝐂]
-            )))
+            #(h: %Element($../Morphisms(u = v, 𝓒 = 𝓓, 𝐗 = 𝐃[𝐀 = 𝐁], 𝐘 = 𝐃[𝐀 = 𝐂])))
           ),
           _3: %Constraint(%forall(
-            #(𝐀: %Element($../Objects(
-              u = u,
-              𝓒 = 𝓒
-            ))),
+            #(𝐀: %Element($../Objects(u = u, 𝓒 = 𝓒))),
             %equals(
-              h[𝐁 = 𝐀, 𝐂 = 𝐀, g = $../identity(
-                  u = u,
-                  𝓒 = 𝓒,
-                  𝐗 = 𝐀
-              )],
-              $../identity(
-                u = v,
-                𝓒 = 𝓓,
-                𝐗 = 𝐃[𝐀 = 𝐀]
-              )
+              h[𝐁 = 𝐀, 𝐂 = 𝐀, g = $../identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀)],
+              $../identity(u = v, 𝓒 = 𝓓, 𝐗 = 𝐃[𝐀 = 𝐀])
             )
           )),
           _4: %Constraint(%forall(
             #(
-              𝐀,𝐁,𝐂: %Element($../Objects(
-                u = u,
-                𝓒 = 𝓒
-              )),
-              d: %Element($../Morphisms(
-                u = u,
-                𝓒 = 𝓒,
-                𝐗 = 𝐀,
-                𝐘 = 𝐁
-              )),
-              e: %Element($../Morphisms(
-                u = u,
-                𝓒 = 𝓒,
-                𝐗 = 𝐁,
-                𝐘 = 𝐂
-              ))
+              𝐀,𝐁,𝐂: %Element($../Objects(u = u, 𝓒 = 𝓒)),
+              d: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁)),
+              e: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐁, 𝐘 = 𝐂))
             ),
             %equals(
-              h[𝐁 = 𝐀, 𝐂 = 𝐂, g = $../composition(
-                  u = u,
-                  𝓒 = 𝓒,
-                  𝐗 = 𝐀,
-                  𝐘 = 𝐁,
-                  𝐙 = 𝐂,
-                  g = e,
-                  f = d
-              )],
-              $../composition(
-                u = v,
-                𝓒 = 𝓓,
-                𝐗 = 𝐃[𝐀 = 𝐀],
-                𝐘 = 𝐃[𝐀 = 𝐁],
-                𝐙 = 𝐃[𝐀 = 𝐂],
-                g = h[𝐁 = 𝐁, 𝐂 = 𝐂, g = e],
-                f = h[𝐁 = 𝐀, 𝐂 = 𝐁, g = d]
-              )
+              h[𝐁 = 𝐀, 𝐂 = 𝐂, g = $../composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁, 𝐙 = 𝐂, g = e, f = d)],
+              $../composition(u = v, 𝓒 = 𝓓, 𝐗 = 𝐃[𝐀 = 𝐀], 𝐘 = 𝐃[𝐀 = 𝐁], 𝐙 = 𝐃[𝐀 = 𝐂], g = h[𝐁 = 𝐁, 𝐂 = 𝐂, g = e], f = h[𝐁 = 𝐀, 𝐂 = 𝐁, g = d])
             )
           ))
         ),
@@ -141,22 +64,8 @@ $"morphism value"(
     $../Morphisms(
       u = v,
       𝓒 = 𝓓,
-      𝐗 = $"object value"(
-        u = u,
-        v = v,
-        𝓒 = 𝓒,
-        𝓓 = 𝓓,
-        F = F,
-        𝐗 = 𝐗
-      ),
-      𝐘 = $"object value"(
-        u = u,
-        v = v,
-        𝓒 = 𝓒,
-        𝓓 = 𝓓,
-        F = F,
-        𝐗 = 𝐘
-      )
+      𝐗 = $"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
+      𝐘 = $"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐘)
     )
   )]
 }

@@ -7,10 +7,7 @@
  */
 $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
   notation = $Parens(
-    body = $SubSup(
-      body = 𝐑,
-      sup = '×'
-    ),
+    body = $SubSup(body = 𝐑, sup = '×'),
     style = '[]'
   ),
   definition = [%structuralCases(
@@ -22,20 +19,10 @@ $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
         R: %Set,
         ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊖: %Element($../../Essentials/Functions/Functions(
-          X = R,
-          Y = R
-        )),
+        ⊖: %Element($../../Essentials/Functions/Functions(X = R, Y = R)),
         ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($ring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($ring(R = R, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙, "1" = "1"))
       ),
       value = $../Groups/Groups.group(
         G = $Units(𝐑 = 𝐑),
@@ -50,10 +37,7 @@ $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
             Y = $Units(𝐑 = 𝐑)
           ).function(_1 = {
             #(a: %Element($Units(𝐑 = 𝐑))),
-            {y = $"multiplicative inverse"(
-              𝐑 = 𝐑,
-              a = a
-            )}
+            {y = $"multiplicative inverse"(𝐑 = 𝐑, a = a)}
         })
       )
     }]

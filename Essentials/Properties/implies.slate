@@ -17,16 +17,8 @@ $implies(
   definition = [%forall(
     #(
       s: %Element(S),
-      _1: %Constraint($"has property"(
-        S = S,
-        p = p,
-        s = s
-      ))
+      _1: %Constraint($"has property"(S = S, p = p, s = s))
     ),
-    $"has property"(
-      S = S,
-      p = q,
-      s = s
-    )
+    $"has property"(S = S, p = q, s = s)
   )]
 }

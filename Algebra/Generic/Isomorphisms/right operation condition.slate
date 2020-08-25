@@ -2,20 +2,9 @@
 
 $"right operation condition"(
   S,X,Y: %Set(auto = %true),
-  φ: %Element($../../../Essentials/Functions/Bijections(
-    X = X,
-    Y = Y
-  )),
-  ∗: %Element($../../../Essentials/Operations/Operations(
-    X = X,
-    Y = S,
-    Z = X
-  )),
-  ⋆: %Element($../../../Essentials/Operations/Operations(
-    X = Y,
-    Y = S,
-    Z = Y
-  ))
+  φ: %Element($../../../Essentials/Functions/Bijections(X = X, Y = Y)),
+  ∗: %Element($../../../Essentials/Operations/Operations(X = X, Y = S, Z = X)),
+  ⋆: %Element($../../../Essentials/Operations/Operations(X = Y, Y = S, Z = Y))
 ): %Predicate {
   notation = $SpecificIsomorphismRelation(
     operands = [∗, ⋆],
@@ -24,11 +13,7 @@ $"right operation condition"(
   definition = [
     %structural(
       ⋆,
-      $../../../Essentials/Operations/Operations(
-        X = Y,
-        Y = S,
-        Z = Y
-      ),
+      $../../../Essentials/Operations/Operations(X = Y, Y = S, Z = Y),
       [{
         constructor = $../../../Essentials/Operations/Operations.operation,
         parameters = #(_2: %Binder(
@@ -40,11 +25,7 @@ $"right operation condition"(
         )),
         value = %structural(
           ∗,
-          $../../../Essentials/Operations/Operations(
-            X = X,
-            Y = S,
-            Z = X
-          ),
+          $../../../Essentials/Operations/Operations(X = X, Y = S, Z = X),
           [{
             constructor = $../../../Essentials/Operations/Operations.operation,
             parameters = #(_1: %Binder(
@@ -60,18 +41,8 @@ $"right operation condition"(
                 s: %Element(S)
               ),
               %equals(
-                $../../../Essentials/Functions/value(
-                  X = X,
-                  Y = Y,
-                  f = φ,
-                  x = a[x = x, s = s]
-                ),
-                b[y = $../../../Essentials/Functions/value(
-                    X = X,
-                    Y = Y,
-                    f = φ,
-                    x = x
-                  ), s = s]
+                $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = a[x = x, s = s]),
+                b[y = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x), s = s]
               )
             )
           }]
@@ -88,50 +59,29 @@ $"right operation condition"(
           X = X,
           Y = Y,
           f = φ,
-          x = $../../../Essentials/Operations/value(
-            X = X,
-            Y = S,
-            Z = X,
-            ∗ = ∗,
-            x = x,
-            y = s
-          )
+          x = $../../../Essentials/Operations/value(X = X, Y = S, Z = X, ∗ = ∗, x = x, y = s)
         ),
         $../../../Essentials/Operations/value(
           X = Y,
           Y = S,
           Z = Y,
           ∗ = ⋆,
-          x = $../../../Essentials/Functions/value(
-            X = X,
-            Y = Y,
-            f = φ,
-            x = x
-          ),
+          x = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x),
           y = s
         )
       )
     ),
     %equals(
       $../../../Essentials/Functions/composition(
-        X = $../../../Essentials/Sets/"Cartesian product"(
-          S = X,
-          T = S
-        ),
+        X = $../../../Essentials/Sets/"Cartesian product"(S = X, T = S),
         Y = X,
         Z = Y,
         g = φ,
         f = ∗
       ),
       $../../../Essentials/Functions/composition(
-        X = $../../../Essentials/Sets/"Cartesian product"(
-          S = X,
-          T = S
-        ),
-        Y = $../../../Essentials/Sets/"Cartesian product"(
-          S = Y,
-          T = S
-        ),
+        X = $../../../Essentials/Sets/"Cartesian product"(S = X, T = S),
+        Y = $../../../Essentials/Sets/"Cartesian product"(S = Y, T = S),
         Z = Y,
         g = ⋆,
         f = $../../../Essentials/Functions/"cartesian product"(

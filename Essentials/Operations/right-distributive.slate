@@ -8,11 +8,7 @@
  */
 $"right-distributive"(
   X,Y: %Set(auto = %true),
-  ∗: %Element($Operations(
-    X = Y,
-    Y = X,
-    Z = Y
-  )),
+  ∗: %Element($Operations(X = Y, Y = X, Z = Y)),
   ⋆: %Element($"Inner operations"(X = Y))
 ): %Predicate {
   notation = $RelationalProperty(
@@ -31,14 +27,7 @@ $"right-distributive"(
         Y = X,
         Z = Y,
         ∗ = ∗,
-        x = $value(
-          X = Y,
-          Y = Y,
-          Z = Y,
-          ∗ = ⋆,
-          x = y,
-          y = z
-        ),
+        x = $value(X = Y, Y = Y, Z = Y, ∗ = ⋆, x = y, y = z),
         y = x
       ),
       $value(
@@ -46,22 +35,8 @@ $"right-distributive"(
         Y = Y,
         Z = Y,
         ∗ = ⋆,
-        x = $value(
-          X = Y,
-          Y = X,
-          Z = Y,
-          ∗ = ∗,
-          x = y,
-          y = x
-        ),
-        y = $value(
-          X = Y,
-          Y = X,
-          Z = Y,
-          ∗ = ∗,
-          x = z,
-          y = x
-        )
+        x = $value(X = Y, Y = X, Z = Y, ∗ = ∗, x = y, y = x),
+        y = $value(X = Y, Y = X, Z = Y, ∗ = ∗, x = z, y = x)
       )
     )
   )]

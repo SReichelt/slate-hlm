@@ -2,17 +2,11 @@
 
 $Divisors(b: %Element($Integers)): %SetOperator {
   notation = $Function(
-    function = $SubSup(
-      body = 'Div',
-      sub = 'ℤ'
-    ),
+    function = $SubSup(body = 'Div', sub = 'ℤ'),
     arguments = [b]
   ),
   definition = [%subset(
     #(a: %Element($Subsets/"Nonzero numbers")),
-    $divisible(
-      a = a,
-      b = b
-    )
+    $divisible(a = a, b = b)
   )]
 }

@@ -13,11 +13,7 @@ $"subsemiring set"(
     %forall(
       #(a,b: %Element(S)),
       %in(
-        $../sum(
-          𝐑 = 𝐑,
-          a = a,
-          b = b
-        ),
+        $../sum(𝐑 = 𝐑, a = a, b = b),
         S
       )
     ),
@@ -28,11 +24,7 @@ $"subsemiring set"(
     %forall(
       #(c,d: %Element(S)),
       %in(
-        $../product(
-          𝐑 = 𝐑,
-          a = c,
-          b = d
-        ),
+        $../product(𝐑 = 𝐑, a = c, b = d),
         S
       )
     ),

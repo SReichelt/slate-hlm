@@ -20,27 +20,18 @@ $rational(a: %Element($"Real numbers")): %Predicate {
       ),
       formula = %equals(
         a,
-        $quotient(
-          a = c,
-          b = b
-        )
+        $quotient(a = c, b = b)
       )
     ),
     %existsUnique(
       #(
         d: %Element($../Integer/Subsets/"Positive numbers"),
         e: %Element($../Integer/Integers),
-        _1: %Constraint($../Integer/coprime(
-          a = d,
-          b = e
-        ))
+        _1: %Constraint($../Integer/coprime(a = d, b = e))
       ),
       formula = %equals(
         a,
-        $quotient(
-          a = e,
-          b = d
-        )
+        $quotient(a = e, b = d)
       )
     )
   ]

@@ -11,9 +11,6 @@ $"Iterated sum over constant"(n,a: %Element($../"Natural numbers")): %StandardTh
       },
       n = n
     ),
-    $../product(
-      m = n,
-      n = a
-    )
+    $../product(m = n, n = a)
   )
 }

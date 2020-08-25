@@ -5,10 +5,7 @@
  */
 $Preimage(
   X,Y: %Set(auto = %true),
-  f: %Element($Functions(
-    X = X,
-    Y = Y
-  )),
+  f: %Element($Functions(X = X, Y = Y)),
   S: %Subset(Y)
 ): %SetOperator {
   notation = $Function(
@@ -18,12 +15,7 @@ $Preimage(
   definition = [%subset(
     #(x: %Element(X)),
     %in(
-      $value(
-        X = X,
-        Y = Y,
-        f = f,
-        x = x
-      ),
+      $value(X = X, Y = Y, f = f, x = x),
       S
     )
   )]

@@ -19,17 +19,11 @@
  */
 $"Cardinal numbers": %Construction {
   $cardinality(S: %Set): %Constructor {
-    notation = $Parens(
-      body = S,
-      style = '||'
-    ),
+    notation = $Parens(body = S, style = '||'),
     equalityDefinition = {
       leftParameters = #(S: %Set),
       rightParameters = #(T: %Set),
-      definition = [%exists(#(f: %Element($../../Functions/Bijections(
-        X = S,
-        Y = T
-      ))))],
+      definition = [%exists(#(f: %Element($../../Functions/Bijections(X = S, Y = T))))],
       isomorphic = %true
     }
   }
@@ -64,11 +58,7 @@ $"Cardinal numbers": %Construction {
           Y = $../Natural/Subsets/"Segment (less)"(n = n)
         )))),
         _: %UseTheorem(
-          $"Natural cardinality lemma"(
-            m = m,
-            n = n,
-            f = f
-          ),
+          $"Natural cardinality lemma"(m = m, n = n, f = f),
           result = %equals(m, n)
         )
       )

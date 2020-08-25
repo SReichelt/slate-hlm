@@ -2,8 +2,5 @@
 
 $"Linear algebra": %Section {
   logic = 'hlm',
-  items = [%subsection(
-    $"Vector spaces",
-    'Vector spaces'
-  )]
+  items = [%subsection($"Vector spaces", 'Vector spaces')]
 }

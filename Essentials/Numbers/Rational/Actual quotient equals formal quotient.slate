@@ -8,13 +8,7 @@ $"Actual quotient equals formal quotient"(
   d: %Element($../Natural/Subsets/"Positive numbers")
 ): %StandardTheorem {
   claim = %equals(
-    $"Rational numbers".quotient(
-      n = n,
-      d = d
-    ),
-    $quotient(
-      a = n,
-      b = d
-    )
+    $"Rational numbers".quotient(n = n, d = d),
+    $quotient(a = n, b = d)
   )
 }

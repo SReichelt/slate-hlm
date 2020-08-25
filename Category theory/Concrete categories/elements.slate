@@ -15,10 +15,7 @@ $elements(
   S: %Set
 ): %ExplicitOperator {
   notation = $Function(
-    function = $SubSup(
-      body = '𝐃𝐢𝐬',
-      sub = u
-    ),
+    function = $SubSup(body = '𝐃𝐢𝐬', sub = u),
     arguments = [S]
   ),
   definition = [$../Categories(u = u).category(

@@ -14,22 +14,13 @@ $Coordinates(
     $../"Right modules"(𝐑 = 𝐑),
     auto = %true
   ),
-  𝒙: %Element($"Element sequences"(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  )),
+  𝒙: %Element($"Element sequences"(𝐑 = 𝐑, 𝐌 = 𝐌)),
   α: %Def($../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-    S = $../Carrier(
-      𝐑 = 𝐑,
-      𝐌 = 𝐌
-    ),
+    S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
     𝒂 = 𝒙
   ))
 ): %SetOperator {
-  notation = $SubSup(
-    body = 'Coord',
-    sub = 𝒙
-  ),
+  notation = $SubSup(body = 'Coord', sub = 𝒙),
   definitionNotation = {
     parameter = #(𝐚: %Expr),
     singularName = ['coordinate sequence', ' for ', 𝒙],

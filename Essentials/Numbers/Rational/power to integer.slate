@@ -21,20 +21,14 @@ $"power to integer"(
     )
   ))
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = a,
-    sup = b
-  ),
+  notation = $SubSup(body = a, sup = b),
   definition = [%cases([
     {
       formula = $../Integer/"less or equal"(
         b = b,
         a = $../Natural/number(value = 0)
       ),
-      value = $power(
-        a = a,
-        n = b
-      )
+      value = $power(a = a, n = b)
     },
     {
       formula = $../Integer/less(

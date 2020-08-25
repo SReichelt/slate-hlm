@@ -26,17 +26,8 @@ $"Pointed sets": %Construction {
         t: %Element(T)
       ),
       definition = [%exists(
-        #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = S,
-          Y = T
-        ))),
-        formula = $../Generic/Isomorphisms/"element condition"(
-          X = S,
-          Y = T,
-          φ = φ,
-          x = s,
-          y = t
-        )
+        #(φ: %Element($../../Essentials/Functions/Bijections(X = S, Y = T))),
+        formula = $../Generic/Isomorphisms/"element condition"(X = S, Y = T, φ = φ, x = s, y = t)
       )],
       isomorphic = %true
     }

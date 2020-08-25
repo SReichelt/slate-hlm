@@ -6,35 +6,20 @@
 $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
     α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-    𝐚: %Element($Tuples(
-      S = S,
-      α = α
-    ))
+    𝐚: %Element($Tuples(S = S, α = α))
   ): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = 𝐚,
-        style = '()'
-      ),
-      sub = $SubSup(
-        body = S,
-        sup = α
-      )
+      body = $Parens(body = 𝐚, style = '()'),
+      sub = $SubSup(body = S, sup = α)
     ),
     equalityDefinition = {
       leftParameters = #(
         α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-        𝐚: %Element($Tuples(
-          S = S,
-          α = α
-        ))
+        𝐚: %Element($Tuples(S = S, α = α))
       ),
       rightParameters = #(
         β: %Element($../Numbers/Ordinal/"Ordinal numbers"),
-        𝐛: %Element($Tuples(
-          S = S,
-          α = β
-        ))
+        𝐛: %Element($Tuples(S = S, α = β))
       ),
       definition = [%and(
         %equals(α, β),
@@ -42,20 +27,14 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
           𝐚,
           %structuralCases(
             𝐛,
-            $Tuples(
-              S = S,
-              α = β
-            ),
+            $Tuples(S = S, α = β),
             [{
               constructor = $Tuples.sequence,
               parameters = #(_1: %Binder(
                 #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = β))),
                 #(b: %Element(S))
               )),
-              value = $Tuples(
-                  S = S,
-                  α = α
-                ).sequence(_1 = {
+              value = $Tuples(S = S, α = α).sequence(_1 = {
                   #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
                   {a = b[k = j]}
               })
@@ -67,10 +46,7 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  notation = $SubSup(
-    body = S,
-    sup = '⋆'
-  ),
+  notation = $SubSup(body = S, sup = '⋆'),
   definitionNotation = {
     parameter = #(𝒂: %Expr),
     singularName = ['ordinal-indexed sequence', ' on ', S],
@@ -86,15 +62,9 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
         constructor = $"Finite sequences".sequence,
         parameters = #(
           n: %Element($../Numbers/Natural/"Natural numbers"),
-          𝐚: %Element($Tuples(
-            S = S,
-            α = n
-          ))
+          𝐚: %Element($Tuples(S = S, α = n))
         ),
-        value = $"Ordinal-indexed sequences"(S = S).sequence(
-            α = n,
-            𝐚 = 𝐚
-        )
+        value = $"Ordinal-indexed sequences"(S = S).sequence(α = n, 𝐚 = 𝐚)
       }]
     )
   }

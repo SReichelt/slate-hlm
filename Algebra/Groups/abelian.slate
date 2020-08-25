@@ -8,10 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/basic.html#comm_group
  */
 $abelian(𝐆: %Element($Groups)): %Predicate {
-  notation = $Property(
-    operand = 𝐆,
-    property = 'abelian'
-  ),
+  notation = $Property(operand = 𝐆, property = 'abelian'),
   definition = [%structural(
     𝐆,
     $Groups,
@@ -21,22 +18,10 @@ $abelian(𝐆: %Element($Groups)): %Predicate {
         G: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../Essentials/Functions/Functions(
-          X = G,
-          Y = G
-        )),
-        _1: %Constraint($group(
-          G = G,
-          ∗ = ∗,
-          e = e,
-          i = i
-        ))
+        i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
+        _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
-      value = $../../Essentials/Operations/commutative(
-        X = G,
-        Z = G,
-        ∗ = ∗
-      )
+      value = $../../Essentials/Operations/commutative(X = G, Z = G, ∗ = ∗)
     }]
   )]
 }

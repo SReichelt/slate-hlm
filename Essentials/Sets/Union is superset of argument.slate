@@ -9,10 +9,6 @@ $"Union is superset of argument"(
 ): %StandardTheorem {
   claim = %sub(
     S,
-    $Union(
-      U = U,
-      S = S,
-      T = T
-    )
+    $Union(U = U, S = S, T = T)
   )
 }

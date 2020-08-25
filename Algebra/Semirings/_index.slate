@@ -12,27 +12,12 @@ $Semirings: %Section {
     %item($product),
     %item($one),
     %item($"multiplicative monoid"),
-    %subsection(
-      $Homomorphisms,
-      'Homomorphisms'
-    ),
-    %subsection(
-      $Subsemirings,
-      'Subsemirings'
-    ),
+    %subsection($Homomorphisms, 'Homomorphisms'),
+    %subsection($Subsemirings, 'Subsemirings'),
     %item($"product with natural number"),
     %item($"power to natural number"),
-    %subsection(
-      $Examples,
-      'Examples'
-    ),
-    %subsection(
-      $"Iterated operations",
-      'Iterated operations'
-    ),
-    %subsection(
-      $Formulas,
-      'Formulas'
-    )
+    %subsection($Examples, 'Examples'),
+    %subsection($"Iterated operations", 'Iterated operations'),
+    %subsection($Formulas, 'Formulas')
   ]
 }

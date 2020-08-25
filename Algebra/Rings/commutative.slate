@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $commutative(𝐑: %Element($Rings)): %Predicate {
-  notation = $Property(
-    operand = 𝐑,
-    property = 'commutative'
-  ),
+  notation = $Property(operand = 𝐑, property = 'commutative'),
   definition = [%structural(
     𝐑,
     $Rings,
@@ -14,26 +11,12 @@ $commutative(𝐑: %Element($Rings)): %Predicate {
         R: %Set,
         ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊖: %Element($../../Essentials/Functions/Functions(
-          X = R,
-          Y = R
-        )),
+        ⊖: %Element($../../Essentials/Functions/Functions(X = R, Y = R)),
         ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($ring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($ring(R = R, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙, "1" = "1"))
       ),
-      value = $../../Essentials/Operations/commutative(
-        X = R,
-        Z = R,
-        ∗ = ⊙
-      )
+      value = $../../Essentials/Operations/commutative(X = R, Z = R, ∗ = ⊙)
     }]
   )]
 }

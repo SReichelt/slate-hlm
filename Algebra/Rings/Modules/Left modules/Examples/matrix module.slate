@@ -15,98 +15,33 @@ $"matrix module"(
     )
   ),
   definition = [$../"Left modules"(𝐑 = 𝐑).module(
-      M = $../../../Matrices/Matrices(
-        𝐑 = 𝐑,
-        m = m,
-        n = n
-      ),
+      M = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
       ⊕ = $../../../../../Essentials/Operations/Operations(
-          X = $../../../Matrices/Matrices(
-            𝐑 = 𝐑,
-            m = m,
-            n = n
-          ),
-          Y = $../../../Matrices/Matrices(
-            𝐑 = 𝐑,
-            m = m,
-            n = n
-          ),
-          Z = $../../../Matrices/Matrices(
-            𝐑 = 𝐑,
-            m = m,
-            n = n
-          )
+          X = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
+          Y = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
+          Z = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n)
         ).operation(_1 = {
-          #(A,B: %Element($../../../Matrices/Matrices(
-            𝐑 = 𝐑,
-            m = m,
-            n = n
-          ))),
-          {z = $../../../Matrices/sum(
-            𝐑 = 𝐑,
-            m = m,
-            n = n,
-            A = A,
-            B = B
-          )}
+          #(A,B: %Element($../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n))),
+          {z = $../../../Matrices/sum(𝐑 = 𝐑, m = m, n = n, A = A, B = B)}
       }),
-      "0" = $../../../Matrices/zero(
-        𝐑 = 𝐑,
-        m = m,
-        n = n
-      ),
+      "0" = $../../../Matrices/zero(𝐑 = 𝐑, m = m, n = n),
       ⊖ = $../../../../../Essentials/Functions/Functions(
-          X = $../../../Matrices/Matrices(
-            𝐑 = 𝐑,
-            m = m,
-            n = n
-          ),
-          Y = $../../../Matrices/Matrices(
-            𝐑 = 𝐑,
-            m = m,
-            n = n
-          )
+          X = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
+          Y = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n)
         ).function(_1 = {
-          #(A: %Element($../../../Matrices/Matrices(
-            𝐑 = 𝐑,
-            m = m,
-            n = n
-          ))),
-          {y = $../../../Matrices/"additive inverse"(
-            𝐑 = 𝐑,
-            m = m,
-            n = n,
-            A = A
-          )}
+          #(A: %Element($../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n))),
+          {y = $../../../Matrices/"additive inverse"(𝐑 = 𝐑, m = m, n = n, A = A)}
       }),
       ⊙ = $../../../../../Essentials/Operations/Operations(
           X = $../../../Carrier(𝐑 = 𝐑),
-          Y = $../../../Matrices/Matrices(
-            𝐑 = 𝐑,
-            m = m,
-            n = n
-          ),
-          Z = $../../../Matrices/Matrices(
-            𝐑 = 𝐑,
-            m = m,
-            n = n
-          )
+          Y = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
+          Z = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n)
         ).operation(_1 = {
           #(
             r: %Element($../../../Carrier(𝐑 = 𝐑)),
-            A: %Element($../../../Matrices/Matrices(
-              𝐑 = 𝐑,
-              m = m,
-              n = n
-            ))
+            A: %Element($../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n))
           ),
-          {z = $../../../Matrices/"product with left scalar"(
-            𝐑 = 𝐑,
-            m = m,
-            n = n,
-            r = r,
-            A = A
-          )}
+          {z = $../../../Matrices/"product with left scalar"(𝐑 = 𝐑, m = m, n = n, r = r, A = A)}
       })
   )]
 }

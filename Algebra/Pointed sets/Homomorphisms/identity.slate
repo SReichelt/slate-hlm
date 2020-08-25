@@ -4,9 +4,6 @@ $identity(𝐒: %Element(
   $../"Pointed sets",
   auto = %true
 )): %ExplicitOperator {
-  notation = $SubSup(
-    body = 'id',
-    sub = 𝐒
-  ),
+  notation = $SubSup(body = 'id', sub = 𝐒),
   definition = [$../../../Essentials/Functions/identity(X = $../Carrier(𝐒 = 𝐒))]
 }

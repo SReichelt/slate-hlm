@@ -12,33 +12,17 @@ $"finitely generated"(
   ),
   𝐌: %Element($../"Left modules"(𝐑 = 𝐑))
 ): %Predicate {
-  notation = $Property(
-    operand = 𝐌,
-    property = 'finitely generated'
-  ),
+  notation = $Property(operand = 𝐌, property = 'finitely generated'),
   definition = [%exists(
-    #(𝒙: %Element($"Element sequences"(
-      𝐑 = 𝐑,
-      𝐌 = 𝐌
-    ))),
+    #(𝒙: %Element($"Element sequences"(𝐑 = 𝐑, 𝐌 = 𝐌))),
     formula = %and(
       $../../../../../Essentials/Sequences/finite(
-        S = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌
-        ),
+        S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
         𝒂 = 𝒙
       ),
       %setEquals(
-        $Span(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌,
-          𝒙 = 𝒙
-        ),
-        $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌
-        )
+        $Span(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙),
+        $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)
       )
     )
   )]

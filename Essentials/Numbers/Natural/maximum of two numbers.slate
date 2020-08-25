@@ -14,17 +14,11 @@ $"maximum of two numbers"(m,n: %Element($"Natural numbers")): %ExplicitOperator 
     $maximum(M = %enumeration(m, n)),
     %cases([
       {
-        formula = $"less or equal"(
-          n = m,
-          m = n
-        ),
+        formula = $"less or equal"(n = m, m = n),
         value = m
       },
       {
-        formula = $less(
-          m = m,
-          n = n
-        ),
+        formula = $less(m = m, n = n),
         value = n
       }
     ]),
@@ -53,10 +47,7 @@ $"maximum of two numbers"(m,n: %Element($"Natural numbers")): %ExplicitOperator 
                 constructor = $"Natural numbers".successor,
                 parameters = #(x: %Element($"Natural numbers")),
                 value = $sum(
-                  m = $"maximum of two numbers"(
-                    m = x,
-                    n = y
-                  ),
+                  m = $"maximum of two numbers"(m = x, n = y),
                   n = $number(value = 1)
                 ),
                 rewrite = %true

@@ -6,10 +6,7 @@
 $less(κ,μ: %Element($"Cardinal numbers")): %Predicate {
   notation = $LessThanRelation(operands = [κ, μ]),
   definition = [%and(
-    $"less or equal"(
-      κ = κ,
-      μ = μ
-    ),
+    $"less or equal"(κ = κ, μ = μ),
     %not(%equals(κ, μ))
   )]
 }

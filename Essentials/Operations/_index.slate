@@ -5,10 +5,7 @@ $Operations: %Section {
   items = [
     %item($Operations),
     %item($value),
-    %item(
-      $"Inner operations",
-      title = 'Inner operations'
-    ),
+    %item($"Inner operations", title = 'Inner operations'),
     %item($associative),
     %item($commutative),
     %item($"left identity element"),
@@ -23,9 +20,6 @@ $Operations: %Section {
     %item($"left operation restriction"),
     %item($"right operation restriction"),
     %item($"inner operation restriction"),
-    %subsection(
-      $"Iterated operations",
-      'Iterated operations'
-    )
+    %subsection($"Iterated operations", 'Iterated operations')
   ]
 }

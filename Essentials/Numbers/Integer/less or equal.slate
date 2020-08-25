@@ -6,10 +6,7 @@
  * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.leb
  */
 $"less or equal"(a,b: %Element($Integers)): %Predicate {
-  properties = {negation = $less(
-    b = a,
-    a = b
-  )},
+  properties = {negation = $less(b = a, a = b)},
   notation = $LessOrEqualRelation(operands = [a, b]),
   definition = [
     %structural(
@@ -25,14 +22,8 @@ $"less or equal"(a,b: %Element($Integers)): %Predicate {
             constructor = $Integers.difference,
             parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),
             value = $../Natural/"less or equal"(
-              m = $../Natural/sum(
-                m = n_a,
-                n = m_b
-              ),
-              n = $../Natural/sum(
-                m = n_b,
-                n = m_a
-              )
+              m = $../Natural/sum(m = n_a, n = m_b),
+              n = $../Natural/sum(m = n_b, n = m_a)
             )
           }]
         )
@@ -41,10 +32,7 @@ $"less or equal"(a,b: %Element($Integers)): %Predicate {
     %exists(
       #(x: %Element($../Natural/"Natural numbers")),
       formula = %equals(
-        $sum(
-          a = a,
-          b = x
-        ),
+        $sum(a = a, b = x),
         b
       )
     )

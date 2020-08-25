@@ -17,10 +17,7 @@ $Multisets(S: %Set): %Construction {
     #(s: %Element(S)),
     #(m: %Element($../../Numbers/Natural/"Natural numbers"))
   )): %Constructor {
-    notation = $Set(body = $SubSup(
-      body = s,
-      sup = m
-    )),
+    notation = $Set(body = $SubSup(body = s, sup = m)),
     equalityDefinition = {
       leftParameters = #(_1: %Binder(
         #(s: %Element(S)),
@@ -44,13 +41,7 @@ $Multisets(S: %Set): %Construction {
   ),
   definitionNotation = {
     parameter = #(𝑻: %Expr),
-    singularName = $DependentWord(
-      word = 'multiset',
-      argument = S
-    ),
-    pluralName = $DependentWord(
-      word = 'multisets',
-      argument = S
-    )
+    singularName = $DependentWord(word = 'multiset', argument = S),
+    pluralName = $DependentWord(word = 'multisets', argument = S)
   }
 }

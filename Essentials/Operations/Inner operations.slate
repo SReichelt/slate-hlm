@@ -26,9 +26,5 @@ $"Inner operations"(X: %Set(auto = %true)): %SetOperator {
     pluralName = ['operations', ' on ', X],
     nameOptional = %true
   },
-  definition = [$Operations(
-    X = X,
-    Y = X,
-    Z = X
-  )]
+  definition = [$Operations(X = X, Y = X, Z = X)]
 }

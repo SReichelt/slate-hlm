@@ -3,15 +3,9 @@
 $"Less or equal is a partial order": %StandardTheorem {
   claim = $../../Relations/"partial order"(
     S = $"Cardinal numbers",
-    ⪯ = $../../Relations/Relations(
-        S = $"Cardinal numbers",
-        T = $"Cardinal numbers"
-      ).relation(_1 = {
+    ⪯ = $../../Relations/Relations(S = $"Cardinal numbers", T = $"Cardinal numbers").relation(_1 = {
         #(κ,μ: %Element($"Cardinal numbers")),
-        {p = $"less or equal"(
-          κ = κ,
-          μ = μ
-        )}
+        {p = $"less or equal"(κ = κ, μ = μ)}
     })
   )
 }

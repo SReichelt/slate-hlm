@@ -6,13 +6,7 @@ $"Pointed sets": %Section {
     %item($"Pointed sets"),
     %item($Carrier),
     %item($"base point"),
-    %subsection(
-      $Homomorphisms,
-      'Homomorphisms'
-    ),
-    %subsection(
-      $Subsets,
-      'Subsets'
-    )
+    %subsection($Homomorphisms, 'Homomorphisms'),
+    %subsection($Subsets, 'Subsets')
   ]
 }

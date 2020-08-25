@@ -13,21 +13,9 @@ $"Left modules": %Section {
     %item($"additive group"),
     %item($product),
     %item($"iterated sum"),
-    %subsection(
-      $Homomorphisms,
-      'Homomorphisms'
-    ),
-    %subsection(
-      $Submodules,
-      'Submodules'
-    ),
-    %subsection(
-      $Coordinates,
-      'Coordinates'
-    ),
-    %subsection(
-      $Examples,
-      'Examples'
-    )
+    %subsection($Homomorphisms, 'Homomorphisms'),
+    %subsection($Submodules, 'Submodules'),
+    %subsection($Coordinates, 'Coordinates'),
+    %subsection($Examples, 'Examples')
   ]
 }

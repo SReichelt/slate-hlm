@@ -23,11 +23,7 @@ $"absorbing element"(
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
-      value = $../../Essentials/Operations/"absorbing element"(
-        X = M,
-        ∗ = ∗,
-        z = z
-      )
+      value = $../../Essentials/Operations/"absorbing element"(X = M, ∗ = ∗, z = z)
     }]
   )]
 }

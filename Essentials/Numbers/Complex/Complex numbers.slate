@@ -39,10 +39,7 @@ $"Complex numbers": %Construction {
     rewrite = {
       value = $sum(
         a = r,
-        b = $product(
-          a = i,
-          b = $"imaginary unit"
-        )
+        b = $product(a = i, b = $"imaginary unit")
       ),
       theorem = $"Actual linear combination equals formal linear combination"
     }

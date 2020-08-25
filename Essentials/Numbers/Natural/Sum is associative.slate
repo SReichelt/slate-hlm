@@ -8,16 +8,9 @@
 $"Sum is associative": %StandardTheorem {
   claim = $../../Operations/associative(
     X = $"Natural numbers",
-    ∗ = $../../Operations/Operations(
-        X = $"Natural numbers",
-        Y = $"Natural numbers",
-        Z = $"Natural numbers"
-      ).operation(_1 = {
+    ∗ = $../../Operations/Operations(X = $"Natural numbers", Y = $"Natural numbers", Z = $"Natural numbers").operation(_1 = {
         #(m,n: %Element($"Natural numbers")),
-        {z = $sum(
-          m = m,
-          n = n
-        )}
+        {z = $sum(m = m, n = n)}
     })
   )
 }

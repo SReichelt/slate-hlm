@@ -18,10 +18,7 @@ $Relations(S,T: %Set(auto = %true)): %Construction {
     #(p: %Prop)
   )): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = p,
-        style = '[]'
-      ),
+      body = $Parens(body = p, style = '[]'),
       sub = $Group(items = [
         $ElementRelation(operands = [s, S]),
         $ElementRelation(operands = [t, T])
@@ -73,31 +70,16 @@ $Relations(S,T: %Set(auto = %true)): %Construction {
     nameOptional = %true
   },
   embedding = {
-    parameter = #(r: %Element($../Properties/Properties(S = $../Sets/"Cartesian product"(
-      S = S,
-      T = T
-    )))),
-    target = $Relations(
-        S = S,
-        T = T
-      ).relation(_1 = {
+    parameter = #(r: %Element($../Properties/Properties(S = $../Sets/"Cartesian product"(S = S, T = T)))),
+    target = $Relations(S = S, T = T).relation(_1 = {
         #(
           s: %Element(S),
           t: %Element(T)
         ),
         {p = $../Properties/"has property"(
-          S = $../Sets/"Cartesian product"(
-            S = S,
-            T = T
-          ),
+          S = $../Sets/"Cartesian product"(S = S, T = T),
           p = r,
-          s = $../Sets/"Cartesian product"(
-              S = S,
-              T = T
-            ).pair(
-              s = s,
-              t = t
-          )
+          s = $../Sets/"Cartesian product"(S = S, T = T).pair(s = s, t = t)
         )}
     }),
     full = %true

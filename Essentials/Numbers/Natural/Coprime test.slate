@@ -3,9 +3,6 @@
 $"Coprime test"(m,n: %Element($Subsets/"Segment (greater)"(n = $number(value = 1)))): %StandardTheorem {
   claim = %not($coprime(
     m = m,
-    n = $product(
-      m = m,
-      n = n
-    )
+    n = $product(m = m, n = n)
   ))
 }

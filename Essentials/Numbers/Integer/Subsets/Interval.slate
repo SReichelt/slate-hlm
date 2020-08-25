@@ -1,18 +1,11 @@
 %../../../../../../logics/hlm%
 
 $Interval(a,b: %Element($../Integers)): %SetOperator {
-  notation = $Enumeration(items = [
-    a,
-    $BottomEllipsis,
-    b
-  ]),
+  notation = $Enumeration(items = [a, $BottomEllipsis, b]),
   definition = [%subset(
     #(c: %Element($../Integers)),
     %and(
-      $../"less or equal"(
-        a = a,
-        b = c
-      ),
+      $../"less or equal"(a = a, b = c),
       $../"less or equal"(
         a = %associative(c),
         b = b

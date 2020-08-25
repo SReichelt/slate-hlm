@@ -11,18 +11,9 @@ $Monoids: %Section {
     %item($identity),
     %item($commutative),
     %item($"commutative monoid"),
-    %subsection(
-      $Homomorphisms,
-      'Homomorphisms'
-    ),
-    %subsection(
-      $Submonoids,
-      'Submonoids'
-    ),
-    %subsection(
-      $Examples,
-      'Examples'
-    ),
+    %subsection($Homomorphisms, 'Homomorphisms'),
+    %subsection($Submonoids, 'Submonoids'),
+    %subsection($Examples, 'Examples'),
     %item($invertible),
     %item($inverse),
     %item($"power to natural number"),

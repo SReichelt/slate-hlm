@@ -12,18 +12,12 @@ $"Binomial coefficient equality"(
   k: %Element($Subsets/"Segment (less or equal)"(n = n))
 ): %StandardTheorem {
   claim = %equals(
-    $"binomial coefficient"(
-      n = n,
-      k = k
-    ),
+    $"binomial coefficient"(n = n, k = k),
     $quotient(
       n = $factorial(n = n),
       m = $product(
         m = $factorial(n = k),
-        n = $factorial(n = $difference(
-          n = n,
-          m = k
-        ))
+        n = $factorial(n = $difference(n = n, m = k))
       )
     )
   )

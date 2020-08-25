@@ -15,16 +15,8 @@ $conjunction(
   definition = [$Properties(S = S).property(_1 = {
       #(s: %Element(S)),
       {p = %and(
-        $"has property"(
-          S = S,
-          p = p,
-          s = s
-        ),
-        $"has property"(
-          S = S,
-          p = q,
-          s = s
-        )
+        $"has property"(S = S, p = p, s = s),
+        $"has property"(S = S, p = q, s = s)
       )}
   })]
 }

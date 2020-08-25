@@ -10,41 +10,20 @@ $submodule(
   notation = $SubObjectRelation(operands = [𝐌, 𝐍]),
   definition = [
     %exists(
-      #(φ: %Element($../Homomorphisms/Homomorphisms(
-        𝐑 = 𝐑,
-        𝐌 = 𝐌,
-        𝐍 = 𝐍
-      ))),
+      #(φ: %Element($../Homomorphisms/Homomorphisms(𝐑 = 𝐑, 𝐌 = 𝐌, 𝐍 = 𝐍))),
       formula = $../../../../../Essentials/Functions/injective(
-        X = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌
-        ),
-        Y = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐍
-        ),
+        X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+        Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
         f = φ
       )
     ),
     %exists(
-      #(S: %Subset($../Carrier(
-        𝐑 = 𝐑,
-        𝐌 = 𝐍
-      ))),
+      #(S: %Subset($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍))),
       formula = %and(
-        $"submodule set"(
-          𝐑 = 𝐑,
-          𝐌 = 𝐍,
-          S = S
-        ),
+        $"submodule set"(𝐑 = 𝐑, 𝐌 = 𝐍, S = S),
         %equals(
           𝐌,
-          $"subset module"(
-            𝐑 = 𝐑,
-            𝐌 = 𝐍,
-            S = S
-          )
+          $"subset module"(𝐑 = 𝐑, 𝐌 = 𝐍, S = S)
         )
       )
     )

@@ -22,10 +22,7 @@ $"sequence product"(𝐚,𝐛: %Element($../../../Sequences/"Infinite sequences"
           )),
           value = $../../../Sequences/"Infinite sequences"(S = $../"Rational numbers").sequence(_1 = {
               #(n: %Element($../../Natural/"Natural numbers")),
-              {a = $../product(
-                a = a[n = n],
-                b = b[n = n]
-              )}
+              {a = $../product(a = a[n = n], b = b[n = n])}
           })
         }]
       )

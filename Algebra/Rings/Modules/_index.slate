@@ -3,13 +3,7 @@
 $Modules: %Section {
   logic = 'hlm',
   items = [
-    %subsection(
-      $"Left modules",
-      'Left modules'
-    ),
-    %subsection(
-      $"Right modules",
-      'Right modules'
-    )
+    %subsection($"Left modules", 'Left modules'),
+    %subsection($"Right modules", 'Right modules')
   ]
 }

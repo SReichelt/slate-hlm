@@ -7,26 +7,14 @@ $"reflexive symmetric transitive closure"(
   S: %Set(auto = %true),
   ≺: %Element($../Endorelations(S = S))
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = ≺,
-    sup = '≡'
-  ),
+  notation = $SubSup(body = ≺, sup = '≡'),
   definition = [$closure(
     S = S,
     T = S,
     ≺ = ≺,
-    p = $../../Properties/Properties(S = $../Relations(
-        S = S,
-        T = S
-      )).property(_1 = {
-        #(≺: %Element($../Relations(
-          S = S,
-          T = S
-        ))),
-        {p = $../equivalence(
-          S = S,
-          ≺ = ≺
-        )}
+    p = $../../Properties/Properties(S = $../Relations(S = S, T = S)).property(_1 = {
+        #(≺: %Element($../Relations(S = S, T = S))),
+        {p = $../equivalence(S = S, ≺ = ≺)}
     })
   )]
 }

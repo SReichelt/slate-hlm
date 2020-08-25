@@ -19,24 +19,12 @@ $product(a,b: %Element($"Complex numbers")): %ExplicitOperator {
           parameters = #(r_a,i_a: %Element($../Real/"Real numbers")),
           value = $"Complex numbers".complex(
             r = $../Real/difference(
-              a = $../Real/product(
-                a = r_a,
-                b = r_b
-              ),
-              b = $../Real/product(
-                a = i_a,
-                b = i_b
-              )
+              a = $../Real/product(a = r_a, b = r_b),
+              b = $../Real/product(a = i_a, b = i_b)
             ),
             i = $../Real/sum(
-              a = $../Real/product(
-                a = r_a,
-                b = i_b
-              ),
-              b = $../Real/product(
-                a = i_a,
-                b = r_b
-              )
+              a = $../Real/product(a = r_a, b = i_b),
+              b = $../Real/product(a = i_a, b = r_b)
             )
           )
         }]

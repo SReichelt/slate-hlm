@@ -7,46 +7,25 @@
  */
 $closure(
   S,T: %Set(auto = %true),
-  ≺: %Element($../Relations(
-    S = S,
-    T = T
-  )),
-  p: %Element($../../Properties/Properties(S = $../Relations(
-    S = S,
-    T = T
-  )))
+  ≺: %Element($../Relations(S = S, T = T)),
+  p: %Element($../../Properties/Properties(S = $../Relations(S = S, T = T)))
 ): %ExplicitOperator {
   notation = $Function(
-    function = $SubSup(
-      body = 'cl',
-      sub = p
-    ),
+    function = $SubSup(body = 'cl', sub = p),
     arguments = [≺]
   ),
   definition = [$../../Properties/"generalized conjunction"(
-    S = $../../Sets/"Cartesian product"(
-      S = S,
-      T = T
-    ),
+    S = $../../Sets/"Cartesian product"(S = S, T = T),
     P = %subset(
-      #(⊂: %Element($../Relations(
-        S = S,
-        T = T
-      ))),
+      #(⊂: %Element($../Relations(S = S, T = T))),
       %and(
         $../../Properties/implies(
-          S = $../../Sets/"Cartesian product"(
-            S = S,
-            T = T
-          ),
+          S = $../../Sets/"Cartesian product"(S = S, T = T),
           p = ≺,
           q = ⊂
         ),
         $../../Properties/"has property"(
-          S = $../Relations(
-            S = S,
-            T = T
-          ),
+          S = $../Relations(S = S, T = T),
           p = p,
           s = ⊂
         )

@@ -11,16 +11,10 @@ $quotient(
   a: %Element($"Rational numbers"),
   b: %Element($Subsets/"Nonzero numbers")
 ): %ImplicitOperator {
-  notation = $Fraction(
-    numerator = a,
-    denominator = b
-  ),
+  notation = $Fraction(numerator = a, denominator = b),
   parameter = #(x: %Element($"Rational numbers")),
   definition = [%equals(
     a,
-    $product(
-      a = x,
-      b = b
-    )
+    $product(a = x, b = b)
   )]
 }

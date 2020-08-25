@@ -10,16 +10,10 @@ $quotient(
   n: %Element($"Natural numbers"),
   m: %Element($Divisors(n = n))
 ): %ImplicitOperator {
-  notation = $Fraction(
-    numerator = n,
-    denominator = m
-  ),
+  notation = $Fraction(numerator = n, denominator = m),
   parameter = #(x: %Element($"Natural numbers")),
   definition = [%equals(
     n,
-    $product(
-      m = x,
-      n = m
-    )
+    $product(m = x, n = m)
   )]
 }

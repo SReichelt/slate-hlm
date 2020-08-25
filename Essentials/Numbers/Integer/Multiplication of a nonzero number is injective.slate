@@ -4,14 +4,8 @@ $"Multiplication of a nonzero number is injective"(
   a,b: %Element($Integers),
   c: %Element($Subsets/"Nonzero numbers"),
   _1: %Constraint(%equals(
-    $product(
-      a = a,
-      b = c
-    ),
-    $product(
-      a = b,
-      b = c
-    )
+    $product(a = a, b = c),
+    $product(a = b, b = c)
   ))
 ): %StandardTheorem {
   claim = %equals(a, b)

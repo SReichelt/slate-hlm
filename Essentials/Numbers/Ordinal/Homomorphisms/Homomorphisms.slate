@@ -27,11 +27,7 @@ $Homomorphisms(α,β: %Element($../"Ordinal numbers")): %SetOperator {
     %forall(
       #(a,b: %Element($../Carrier(α = α))),
       %equiv(
-        $../before(
-          α = α,
-          a = a,
-          b = b
-        ),
+        $../before(α = α, a = a, b = b),
         $../before(
           α = β,
           a = $../../../Functions/value(

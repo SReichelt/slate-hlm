@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $identity(𝐆: %Element($Groups)): %ExplicitOperator {
-  notation = $SubSup(
-    body = 'e',
-    sub = 𝐆
-  ),
+  notation = $SubSup(body = 'e', sub = 𝐆),
   definition = [%structuralCases(
     𝐆,
     $Groups,
@@ -14,16 +11,8 @@ $identity(𝐆: %Element($Groups)): %ExplicitOperator {
         G: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../Essentials/Functions/Functions(
-          X = G,
-          Y = G
-        )),
-        _1: %Constraint($group(
-          G = G,
-          ∗ = ∗,
-          e = e,
-          i = i
-        ))
+        i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
+        _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
       value = e
     }]

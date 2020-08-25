@@ -12,10 +12,7 @@ $inverse(a: %Element($Integers)): %ExplicitOperator {
     [{
       constructor = $Integers.difference,
       parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),
-      value = $Integers.difference(
-        n = m_a,
-        m = n_a
-      )
+      value = $Integers.difference(n = m_a, m = n_a)
     }]
   )]
 }

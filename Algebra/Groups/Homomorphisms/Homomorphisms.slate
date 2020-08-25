@@ -35,11 +35,7 @@ $Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
               X = $../Carrier(𝐆 = 𝐆),
               Y = $../Carrier(𝐆 = 𝐇),
               f = f,
-              x = $../operation(
-                𝐆 = 𝐆,
-                a = a,
-                b = b
-              )
+              x = $../operation(𝐆 = 𝐆, a = a, b = b)
             ),
             $../operation(
               𝐆 = 𝐇,
@@ -74,10 +70,7 @@ $Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
               X = $../Carrier(𝐆 = 𝐆),
               Y = $../Carrier(𝐆 = 𝐇),
               f = f,
-              x = $../inverse(
-                𝐆 = 𝐆,
-                a = c
-              )
+              x = $../inverse(𝐆 = 𝐆, a = c)
             ),
             $../inverse(
               𝐆 = 𝐇,
@@ -104,11 +97,7 @@ $Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
             X = $../Carrier(𝐆 = 𝐆),
             Y = $../Carrier(𝐆 = 𝐇),
             f = f,
-            x = $../operation(
-              𝐆 = 𝐆,
-              a = a,
-              b = b
-            )
+            x = $../operation(𝐆 = 𝐆, a = a, b = b)
           ),
           $../operation(
             𝐆 = 𝐇,

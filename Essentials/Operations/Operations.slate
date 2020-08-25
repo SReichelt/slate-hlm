@@ -93,35 +93,19 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
   },
   embedding = {
     parameter = #(f: %Element($../Functions/Functions(
-      X = $../Sets/"Cartesian product"(
-        S = X,
-        T = Y
-      ),
+      X = $../Sets/"Cartesian product"(S = X, T = Y),
       Y = Z
     ))),
-    target = $Operations(
-        X = X,
-        Y = Y,
-        Z = Z
-      ).operation(_1 = {
+    target = $Operations(X = X, Y = Y, Z = Z).operation(_1 = {
         #(
           x: %Element(X),
           y: %Element(Y)
         ),
         {z = $../Functions/value(
-          X = $../Sets/"Cartesian product"(
-            S = X,
-            T = Y
-          ),
+          X = $../Sets/"Cartesian product"(S = X, T = Y),
           Y = Z,
           f = f,
-          x = $../Sets/"Cartesian product"(
-              S = X,
-              T = Y
-            ).pair(
-              s = x,
-              t = y
-          )
+          x = $../Sets/"Cartesian product"(S = X, T = Y).pair(s = x, t = y)
         )}
     }),
     full = %true

@@ -15,10 +15,7 @@ $"Finiteness criterion lemma"(
     #(m: %Element(M)),
     formula = %forall(
       #(n: %Element(M)),
-      $"less or equal"(
-        m = n,
-        n = m
-      )
+      $"less or equal"(m = n, n = m)
     )
   ),
   proofs = [{steps = #(_: %ProveByInduction(
@@ -90,10 +87,7 @@ $"Finiteness criterion lemma"(
                     f = f,
                     S = S
                   ))),
-                  $"less or equal"(
-                    m = j,
-                    n = i
-                  )
+                  $"less or equal"(m = j, n = i)
                 )
               )
             ),

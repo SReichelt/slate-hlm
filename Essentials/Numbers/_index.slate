@@ -3,33 +3,12 @@
 $Numbers: %Section {
   logic = 'hlm',
   items = [
-    %subsection(
-      $Natural,
-      'Natural numbers'
-    ),
-    %subsection(
-      $Cardinal,
-      'Cardinal numbers'
-    ),
-    %subsection(
-      $Ordinal,
-      'Ordinal numbers'
-    ),
-    %subsection(
-      $Integer,
-      'Integers'
-    ),
-    %subsection(
-      $Rational,
-      'Rational numbers'
-    ),
-    %subsection(
-      $Real,
-      'Real numbers'
-    ),
-    %subsection(
-      $Complex,
-      'Complex numbers'
-    )
+    %subsection($Natural, 'Natural numbers'),
+    %subsection($Cardinal, 'Cardinal numbers'),
+    %subsection($Ordinal, 'Ordinal numbers'),
+    %subsection($Integer, 'Integers'),
+    %subsection($Rational, 'Rational numbers'),
+    %subsection($Real, 'Real numbers'),
+    %subsection($Complex, 'Complex numbers')
   ]
 }

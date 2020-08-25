@@ -19,38 +19,14 @@ $"identity element"(
   ),
   definition = [
     %and(
-      $"left identity element"(
-        X = X,
-        Y = X,
-        ∗ = ∗,
-        e = e
-      ),
-      $"right identity element"(
-        X = X,
-        Y = X,
-        ∗ = ∗,
-        e = e
-      )
+      $"left identity element"(X = X, Y = X, ∗ = ∗, e = e),
+      $"right identity element"(X = X, Y = X, ∗ = ∗, e = e)
     ),
     %forall(
       #(a: %Element(X)),
       %equals(
-        $value(
-          X = X,
-          Y = X,
-          Z = X,
-          ∗ = ∗,
-          x = a,
-          y = e
-        ),
-        $value(
-          X = X,
-          Y = X,
-          Z = X,
-          ∗ = ∗,
-          x = e,
-          y = a
-        ),
+        $value(X = X, Y = X, Z = X, ∗ = ∗, x = a, y = e),
+        $value(X = X, Y = X, Z = X, ∗ = ∗, x = e, y = a),
         a
       )
     )

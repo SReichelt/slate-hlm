@@ -17,11 +17,7 @@ $"Induction principle of property"(
   _2: %Constraint(%forall(
     #(
       m: %Element($"Natural numbers"),
-      _3: %Constraint($../../Properties/"has property"(
-        S = $"Natural numbers",
-        p = p,
-        s = m
-      ))
+      _3: %Constraint($../../Properties/"has property"(S = $"Natural numbers", p = p, s = m))
     ),
     $../../Properties/"has property"(
       S = $"Natural numbers",
@@ -35,10 +31,6 @@ $"Induction principle of property"(
 ): %StandardTheorem {
   claim = %forall(
     #(n: %Element($"Natural numbers")),
-    $../../Properties/"has property"(
-      S = $"Natural numbers",
-      p = p,
-      s = n
-    )
+    $../../Properties/"has property"(S = $"Natural numbers", p = p, s = n)
   )
 }

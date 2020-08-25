@@ -13,30 +13,15 @@ $"generalized restriction"(
     B,
     auto = %true
   ),
-  f: %Element($Functions(
-    X = X,
-    Y = Y
-  ))
+  f: %Element($Functions(X = X, Y = Y))
 ): %ExplicitOperator {
   notation = $PostfixUnaryOperator(
-    symbol = $SubSup(
-      body = '∣',
-      sub = A,
-      sup = B
-    ),
+    symbol = $SubSup(body = '∣', sub = A, sup = B),
     operand = f,
     minParenLevel = 3
   ),
-  definition = [$Functions(
-      X = A,
-      Y = B
-    ).function(_1 = {
+  definition = [$Functions(X = A, Y = B).function(_1 = {
       #(x: %Element(A)),
-      {y = $value(
-        X = X,
-        Y = Y,
-        f = f,
-        x = x
-      )}
+      {y = $value(X = X, Y = Y, f = f, x = x)}
   })]
 }

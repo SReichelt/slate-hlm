@@ -20,11 +20,7 @@ $"subgroup set"(
     %forall(
       #(a,b: %Element(S)),
       %in(
-        $../operation(
-          𝐆 = 𝐆,
-          a = a,
-          b = b
-        ),
+        $../operation(𝐆 = 𝐆, a = a, b = b),
         S
       )
     ),
@@ -35,10 +31,7 @@ $"subgroup set"(
     %forall(
       #(c: %Element(S)),
       %in(
-        $../inverse(
-          𝐆 = 𝐆,
-          a = c
-        ),
+        $../inverse(𝐆 = 𝐆, a = c),
         S
       )
     )

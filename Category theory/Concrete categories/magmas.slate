@@ -6,18 +6,12 @@
  * @references * https://en.wikipedia.org/wiki/Category_of_magmas
  */
 $magmas(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = $SubSup(
-    body = '𝐌𝐚𝐠',
-    sub = u
-  ),
+  notation = $SubSup(body = '𝐌𝐚𝐠', sub = u),
   definition = [$../Categories(u = u).category(
       O = $../../Algebra/Magmas/Magmas,
       _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Magmas/Magmas)),
-        {M = $../../Algebra/Magmas/Homomorphisms/Homomorphisms(
-          𝐌 = 𝐀,
-          𝐍 = 𝐁
-        )}
+        {M = $../../Algebra/Magmas/Homomorphisms/Homomorphisms(𝐌 = 𝐀, 𝐍 = 𝐁)}
       },
       _2 = {
         #(𝐂: %Element($../../Algebra/Magmas/Magmas)),
@@ -26,28 +20,13 @@ $magmas(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expl
       _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Magmas/Magmas)),
         {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Algebra/Magmas/Homomorphisms/Homomorphisms(
-              𝐌 = 𝐄,
-              𝐍 = 𝐅
-            ),
-            Y = $../../Algebra/Magmas/Homomorphisms/Homomorphisms(
-              𝐌 = 𝐃,
-              𝐍 = 𝐄
-            ),
-            Z = $../../Algebra/Magmas/Homomorphisms/Homomorphisms(
-              𝐌 = 𝐃,
-              𝐍 = 𝐅
-            )
+            X = $../../Algebra/Magmas/Homomorphisms/Homomorphisms(𝐌 = 𝐄, 𝐍 = 𝐅),
+            Y = $../../Algebra/Magmas/Homomorphisms/Homomorphisms(𝐌 = 𝐃, 𝐍 = 𝐄),
+            Z = $../../Algebra/Magmas/Homomorphisms/Homomorphisms(𝐌 = 𝐃, 𝐍 = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Algebra/Magmas/Homomorphisms/Homomorphisms(
-                𝐌 = 𝐄,
-                𝐍 = 𝐅
-              )),
-              φ: %Element($../../Algebra/Magmas/Homomorphisms/Homomorphisms(
-                𝐌 = 𝐃,
-                𝐍 = 𝐄
-              ))
+              ψ: %Element($../../Algebra/Magmas/Homomorphisms/Homomorphisms(𝐌 = 𝐄, 𝐍 = 𝐅)),
+              φ: %Element($../../Algebra/Magmas/Homomorphisms/Homomorphisms(𝐌 = 𝐃, 𝐍 = 𝐄))
             ),
             {z = $../../Essentials/Functions/composition(
               X = $../../Algebra/Magmas/Carrier(𝐌 = 𝐃),

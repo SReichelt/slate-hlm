@@ -10,41 +10,26 @@ $"product with left scalar"(
     auto = %true
   ),
   a: %Element($../Carrier(𝐑 = 𝐑)),
-  p: %Element($Polynomials(
-    𝐑 = 𝐑,
-    X = X
-  ))
+  p: %Element($Polynomials(𝐑 = 𝐑, X = X))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [a, p]),
   definition = [%structuralCases(
     p,
-    $Polynomials(
-      𝐑 = 𝐑,
-      X = X
-    ),
+    $Polynomials(𝐑 = 𝐑, X = X),
     [
       {
         constructor = $Polynomials.zero,
-        value = $Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          ).zero
+        value = $Polynomials(𝐑 = 𝐑, X = X).zero
       },
       {
         constructor = $Polynomials.term,
         parameters = #(
-          q: %Element($Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          )),
+          q: %Element($Polynomials(𝐑 = 𝐑, X = X)),
           b: %Element($../Carrier(𝐑 = 𝐑)),
           _1: %Constraint(%or(
             %not(%equals(
               q,
-              $Polynomials(
-                  𝐑 = 𝐑,
-                  X = X
-                ).zero
+              $Polynomials(𝐑 = 𝐑, X = X).zero
             )),
             %not(%equals(
               b,
@@ -55,17 +40,8 @@ $"product with left scalar"(
         value = $normalized(
           𝐑 = 𝐑,
           X = X,
-          p = $"product with left scalar"(
-            𝐑 = 𝐑,
-            X = X,
-            a = a,
-            p = q
-          ),
-          a = $../product(
-            𝐑 = 𝐑,
-            a = a,
-            b = b
-          )
+          p = $"product with left scalar"(𝐑 = 𝐑, X = X, a = a, p = q),
+          a = $../product(𝐑 = 𝐑, a = a, b = b)
         )
       }
     ]

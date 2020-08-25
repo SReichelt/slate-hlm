@@ -27,17 +27,8 @@ $Magmas: %Construction {
         ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = N))
       ),
       definition = [%exists(
-        #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = M,
-          Y = N
-        ))),
-        formula = $../Generic/Isomorphisms/"inner operation condition"(
-          X = M,
-          Y = N,
-          φ = φ,
-          ∗ = ∗,
-          ⋆ = ⋆
-        )
+        #(φ: %Element($../../Essentials/Functions/Bijections(X = M, Y = N))),
+        formula = $../Generic/Isomorphisms/"inner operation condition"(X = M, Y = N, φ = φ, ∗ = ∗, ⋆ = ⋆)
       )],
       isomorphic = %true
     }

@@ -12,10 +12,7 @@ $Kernel(
     $../Groups,
     auto = %true
   ),
-  φ: %Element($Homomorphisms(
-    𝐆 = 𝐆,
-    𝐇 = 𝐇
-  ))
+  φ: %Element($Homomorphisms(𝐆 = 𝐆, 𝐇 = 𝐇))
 ): %SetOperator {
   notation = $Function(
     function = 'Ker',

@@ -4,16 +4,10 @@
  * @remarks This definition retrieves a representative carrier set from a monoid (which is actually an equivalence class of monoids), and enables typical abuse of notation.
  */
 $Carrier(𝐌: %Element($Monoids)): %SetOperator {
-  notation = $Parens(
-    body = 𝐌,
-    style = '()'
-  ),
+  notation = $Parens(body = 𝐌, style = '()'),
   definitionNotation = {
     parameter = #(a: %Expr),
-    notation = $ElementParameter(
-      variable = a,
-      set = 𝐌
-    )
+    notation = $ElementParameter(variable = a, set = 𝐌)
   },
   definition = [%setStructuralCases(
     𝐌,
@@ -24,11 +18,7 @@ $Carrier(𝐌: %Element($Monoids)): %SetOperator {
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
         e: %Element(M),
-        _1: %Constraint($monoid(
-          M = M,
-          ∗ = ∗,
-          e = e
-        ))
+        _1: %Constraint($monoid(M = M, ∗ = ∗, e = e))
       ),
       value = M
     }]

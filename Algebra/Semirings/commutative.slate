@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $commutative(𝐑: %Element($Semirings)): %Predicate {
-  notation = $Property(
-    operand = 𝐑,
-    property = 'commutative'
-  ),
+  notation = $Property(operand = 𝐑, property = 'commutative'),
   definition = [%structural(
     𝐑,
     $Semirings,
@@ -16,19 +13,9 @@ $commutative(𝐑: %Element($Semirings)): %Predicate {
         "0": %Element(R),
         ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($semiring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($semiring(R = R, ⊕ = ⊕, "0" = "0", ⊙ = ⊙, "1" = "1"))
       ),
-      value = $../../Essentials/Operations/commutative(
-        X = R,
-        Z = R,
-        ∗ = ⊙
-      )
+      value = $../../Essentials/Operations/commutative(X = R, Z = R, ∗ = ⊙)
     }]
   )]
 }

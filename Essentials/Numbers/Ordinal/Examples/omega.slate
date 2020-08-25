@@ -14,10 +14,7 @@ $omega: %ExplicitOperator {
         T = $../../Natural/"Natural numbers"
       ).relation(_1 = {
         #(m,n: %Element($../../Natural/"Natural numbers")),
-        {p = $../../Natural/"less or equal"(
-          m = m,
-          n = n
-        )}
+        {p = $../../Natural/"less or equal"(m = m, n = n)}
     })
   )]
 }

@@ -25,11 +25,7 @@ $"identity element"(
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
-      value = $../../Essentials/Operations/"identity element"(
-        X = M,
-        ∗ = ∗,
-        e = e
-      )
+      value = $../../Essentials/Operations/"identity element"(X = M, ∗ = ∗, e = e)
     }]
   )]
 }

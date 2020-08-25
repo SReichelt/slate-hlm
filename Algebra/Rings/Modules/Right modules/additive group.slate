@@ -23,30 +23,15 @@ $"additive group"(
         M: %Set,
         ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
         "0": %Element(M),
-        ⊖: %Element($../../../../Essentials/Functions/Functions(
-          X = M,
-          Y = M
-        )),
+        ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
         ⊙: %Element($../../../../Essentials/Operations/Operations(
           X = M,
           Y = $../../Carrier(𝐑 = 𝐑),
           Z = M
         )),
-        _1: %Constraint($"right module"(
-          𝐑 = 𝐑,
-          M = M,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙
-        ))
+        _1: %Constraint($"right module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
-      value = $../../../Groups/Groups.group(
-        G = M,
-        ∗ = ⊕,
-        e = "0",
-        i = ⊖
-      )
+      value = $../../../Groups/Groups.group(G = M, ∗ = ⊕, e = "0", i = ⊖)
     }]
   )]
 }

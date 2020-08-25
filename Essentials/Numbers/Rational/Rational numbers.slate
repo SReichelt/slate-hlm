@@ -35,21 +35,12 @@ $"Rational numbers": %Construction {
         "d'": %Element($../Natural/Subsets/"Positive numbers")
       ),
       definition = [%equals(
-        $../Integer/product(
-          a = n,
-          b = "d'"
-        ),
-        $../Integer/product(
-          a = "n'",
-          b = d
-        )
+        $../Integer/product(a = n, b = "d'"),
+        $../Integer/product(a = "n'", b = d)
       )]
     },
     rewrite = {
-      value = $quotient(
-        a = n,
-        b = d
-      ),
+      value = $quotient(a = n, b = d),
       theorem = $"Actual quotient equals formal quotient"
     }
   }

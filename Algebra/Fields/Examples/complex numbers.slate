@@ -13,10 +13,7 @@ $"complex numbers": %ExplicitOperator {
         Z = $../../../Essentials/Numbers/Complex/"Complex numbers"
       ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
-        {z = $../../../Essentials/Numbers/Complex/sum(
-          a = a,
-          b = b
-        )}
+        {z = $../../../Essentials/Numbers/Complex/sum(a = a, b = b)}
     }),
     "0" = $../../../Essentials/Numbers/Natural/number(value = 0),
     ⊖ = $../../../Essentials/Functions/Functions(
@@ -32,10 +29,7 @@ $"complex numbers": %ExplicitOperator {
         Z = $../../../Essentials/Numbers/Complex/"Complex numbers"
       ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
-        {z = $../../../Essentials/Numbers/Complex/product(
-          a = a,
-          b = b
-        )}
+        {z = $../../../Essentials/Numbers/Complex/product(a = a, b = b)}
     }),
     "1" = $../../../Essentials/Numbers/Natural/number(value = 1)
   )]

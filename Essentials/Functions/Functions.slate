@@ -19,12 +19,7 @@ $Functions(X,Y: %Set): %Construction {
     #(y: %Element(Y))
   )): %Constructor {
     notation = $Parens(
-      body = $FunctionBody(
-        domain = X,
-        codomain = Y,
-        parameter = x,
-        value = y
-      ),
+      body = $FunctionBody(domain = X, codomain = Y, parameter = x, value = y),
       style = '()'
     ),
     abbreviations = [
@@ -40,22 +35,13 @@ $Functions(X,Y: %Set): %Construction {
       {
         parameters = #(function: %Expr),
         originalParameter = y,
-        originalParameterValue = $PrefixUnaryOperator(
-          symbol = function,
-          operand = x
-        ),
+        originalParameterValue = $PrefixUnaryOperator(symbol = function, operand = x),
         abbreviation = function
       }
     ],
     definitionNotation = {
       parameter = #(f: %Expr),
-      notation = $FunctionDefinition(
-        function = f,
-        domain = X,
-        codomain = Y,
-        parameter = x,
-        value = y
-      )
+      notation = $FunctionDefinition(function = f, domain = X, codomain = Y, parameter = x, value = y)
     },
     equalityDefinition = {
       leftParameters = #(_1: %Binder(

@@ -26,10 +26,7 @@ $Isomorphisms(κ,μ: %Element($../"Cardinal numbers")): %SetOperator {
   },
   definition = [
     %subset(
-      #(φ: %Element($Homomorphisms(
-        κ = κ,
-        μ = μ
-      ))),
+      #(φ: %Element($Homomorphisms(κ = κ, μ = μ))),
       $../../../Functions/bijective(
         X = $../Carrier(κ = κ),
         Y = $../Carrier(κ = μ),

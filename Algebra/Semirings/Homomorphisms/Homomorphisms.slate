@@ -34,11 +34,7 @@ $Homomorphisms(𝐑,𝐒: %Element($../Semirings)): %SetOperator {
             X = $../Carrier(𝐑 = 𝐑),
             Y = $../Carrier(𝐑 = 𝐒),
             f = f,
-            x = $../sum(
-              𝐑 = 𝐑,
-              a = a,
-              b = b
-            )
+            x = $../sum(𝐑 = 𝐑, a = a, b = b)
           ),
           $../sum(
             𝐑 = 𝐒,
@@ -73,11 +69,7 @@ $Homomorphisms(𝐑,𝐒: %Element($../Semirings)): %SetOperator {
             X = $../Carrier(𝐑 = 𝐑),
             Y = $../Carrier(𝐑 = 𝐒),
             f = f,
-            x = $../product(
-              𝐑 = 𝐑,
-              a = c,
-              b = d
-            )
+            x = $../product(𝐑 = 𝐑, a = c, b = d)
           ),
           $../product(
             𝐑 = 𝐒,

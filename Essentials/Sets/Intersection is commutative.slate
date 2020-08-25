@@ -9,15 +9,7 @@ $"Intersection is commutative"(
   S,T: %Subset(U)
 ): %StandardTheorem {
   claim = %setEquals(
-    $Intersection(
-      U = U,
-      S = S,
-      T = T
-    ),
-    $Intersection(
-      U = U,
-      S = T,
-      T = S
-    )
+    $Intersection(U = U, S = S, T = T),
+    $Intersection(U = U, S = T, T = S)
   )
 }

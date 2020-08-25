@@ -12,19 +12,12 @@ $Elements(
     %extendedSubset(
       #(
         t: %Element(S),
-        n: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $multiplicity(
-          S = S,
-          𝑻 = 𝑻,
-          t = t
-        )))
+        n: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $multiplicity(S = S, 𝑻 = 𝑻, t = t)))
       ),
       $../"Cartesian product"(
           S = S,
           T = $../../Numbers/Natural/"Natural numbers"
-        ).pair(
-          s = t,
-          t = n
-      )
+        ).pair(s = t, t = n)
     ),
     $../"Generalized operators"/"Generalized union"(
       U = $../"Cartesian product"(
@@ -34,11 +27,7 @@ $Elements(
       I = S,
       _1 = {
         #(t: %Element(S)),
-        {S = $Items(
-          S = S,
-          𝑻 = 𝑻,
-          t = t
-        )}
+        {S = $Items(S = S, 𝑻 = 𝑻, t = t)}
       }
     )
   ]

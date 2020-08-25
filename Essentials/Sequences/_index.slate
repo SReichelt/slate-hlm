@@ -4,10 +4,7 @@ $Sequences: %Section {
   logic = 'hlm',
   items = [
     %item($Tuples),
-    %item(
-      $tuple,
-      title = 'Tuple'
-    ),
+    %item($tuple, title = 'Tuple'),
     %item($"tuple from function"),
     %item($"Finite sequences"),
     %item($"finite sequence length"),

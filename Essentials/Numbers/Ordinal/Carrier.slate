@@ -4,16 +4,10 @@
  * @remarks This definition retrieves a representative set from an ordinal number.
  */
 $Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
-  notation = $Parens(
-    body = α,
-    style = '()'
-  ),
+  notation = $Parens(body = α, style = '()'),
   definitionNotation = {
     parameter = #(a: %Expr),
-    notation = $ElementParameter(
-      variable = a,
-      set = α
-    )
+    notation = $ElementParameter(variable = a, set = α)
   },
   definition = [%setStructuralCases(
     α,
@@ -23,10 +17,7 @@ $Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
       parameters = #(
         A: %Set,
         ⪯: %Element($../../Relations/Endorelations(S = A)),
-        _1: %Constraint($../../Relations/"well-order"(
-          S = A,
-          ⪯ = ⪯
-        ))
+        _1: %Constraint($../../Relations/"well-order"(S = A, ⪯ = ⪯))
       ),
       value = A
     }]

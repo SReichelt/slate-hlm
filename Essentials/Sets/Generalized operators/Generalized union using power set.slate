@@ -7,10 +7,7 @@ $"Generalized union using power set"(
   U: %Set(auto = %true),
   S: %Subset($../"Power set"(S = U))
 ): %SetOperator {
-  notation = $PrefixUnaryOperator(
-    symbol = '⋃',
-    operand = S
-  ),
+  notation = $PrefixUnaryOperator(symbol = '⋃', operand = S),
   definition = [$"Generalized union"(
     _1 = {
       #(i: %Element(S)),

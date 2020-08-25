@@ -8,10 +8,7 @@ $Relations: %Section {
     %item($converse),
     %item($mapping),
     %item($"mapping value"),
-    %item(
-      $Endorelations,
-      title = 'Endorelations'
-    ),
+    %item($Endorelations, title = 'Endorelations'),
     %item($restriction),
     %item($equality),
     %item($reflexive),
@@ -29,21 +26,9 @@ $Relations: %Section {
     %item($"well-order"),
     %item($equivalence),
     %item($"Equivalence classes"),
-    %item(
-      $succession,
-      title = 'Succession'
-    ),
-    %item(
-      $"lexicographical order",
-      title = 'Lexicographical order'
-    ),
-    %subsection(
-      $Closures,
-      'Closures'
-    ),
-    %subsection(
-      $"Dependent equality",
-      'Dependent equality'
-    )
+    %item($succession, title = 'Succession'),
+    %item($"lexicographical order", title = 'Lexicographical order'),
+    %subsection($Closures, 'Closures'),
+    %subsection($"Dependent equality", 'Dependent equality')
   ]
 }

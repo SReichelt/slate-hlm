@@ -10,11 +10,7 @@ $"multiplicative inverse"(
   notation = $Inverse(term = a),
   parameter = #(b: %Element($Units(𝐑 = 𝐑))),
   definition = [%equals(
-    $product(
-      𝐑 = 𝐑,
-      a = a,
-      b = b
-    ),
+    $product(𝐑 = 𝐑, a = a, b = b),
     $one(𝐑 = 𝐑)
   )]
 }

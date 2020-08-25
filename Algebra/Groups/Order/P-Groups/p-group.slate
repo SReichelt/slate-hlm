@@ -12,21 +12,11 @@ $"p-group"(
 ): %Predicate {
   notation = $NounProperty(
     operand = 𝐆,
-    singular = $DependentWord(
-      word = 'group',
-      argument = p
-    ),
-    plural = $DependentWord(
-      word = 'groups',
-      argument = p
-    )
+    singular = $DependentWord(word = 'group', argument = p),
+    plural = $DependentWord(word = 'groups', argument = p)
   ),
   definition = [%forall(
     #(g: %Element($../../Carrier(𝐆 = 𝐆))),
-    $"p-element"(
-      𝐆 = 𝐆,
-      g = g,
-      p = p
-    )
+    $"p-element"(𝐆 = 𝐆, g = g, p = p)
   )]
 }

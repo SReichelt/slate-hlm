@@ -7,32 +7,17 @@
  */
 $converse(
   S,T: %Set(auto = %true),
-  ≺: %Element($Relations(
-    S = S,
-    T = T
-  ))
+  ≺: %Element($Relations(S = S, T = T))
 ): %ExplicitOperator {
   notation = $SubSup(
     body = ≺,
-    sup = $Style(
-      body = 'T',
-      styleClass = 'sans'
-    )
+    sup = $Style(body = 'T', styleClass = 'sans')
   ),
-  definition = [$Relations(
-      S = T,
-      T = S
-    ).relation(_1 = {
+  definition = [$Relations(S = T, T = S).relation(_1 = {
       #(
         t: %Element(T),
         s: %Element(S)
       ),
-      {p = $related(
-        S = S,
-        T = T,
-        ≺ = ≺,
-        s = s,
-        t = t
-      )}
+      {p = $related(S = S, T = T, ≺ = ≺, s = s, t = t)}
   })]
 }

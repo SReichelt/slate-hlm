@@ -9,10 +9,7 @@ $tuple(
   S: %Set,
   items: %Element(S)[]
 ): %MacroOperator {
-  notation = $Tuple(
-    items = items,
-    style = '()'
-  ),
+  notation = $Tuple(items = items, style = '()'),
   variables = #(length: %Nat),
   references = {Tuples = $Tuples(
     S = S,

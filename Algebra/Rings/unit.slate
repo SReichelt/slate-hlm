@@ -14,41 +14,21 @@ $unit(
   ),
   a: %Element($Carrier(𝐑 = 𝐑))
 ): %Predicate {
-  notation = $NounProperty(
-    operand = a,
-    singular = 'unit',
-    plural = 'units'
-  ),
+  notation = $NounProperty(operand = a, singular = 'unit', plural = 'units'),
   definition = [
     %exists(
       #(b: %Element($Carrier(𝐑 = 𝐑))),
       formula = %equals(
-        $product(
-          𝐑 = 𝐑,
-          a = a,
-          b = b
-        ),
-        $product(
-          𝐑 = 𝐑,
-          a = b,
-          b = a
-        ),
+        $product(𝐑 = 𝐑, a = a, b = b),
+        $product(𝐑 = 𝐑, a = b, b = a),
         $one(𝐑 = 𝐑)
       )
     ),
     %existsUnique(
       #(b: %Element($Carrier(𝐑 = 𝐑))),
       formula = %equals(
-        $product(
-          𝐑 = 𝐑,
-          a = a,
-          b = b
-        ),
-        $product(
-          𝐑 = 𝐑,
-          a = b,
-          b = a
-        ),
+        $product(𝐑 = 𝐑, a = a, b = b),
+        $product(𝐑 = 𝐑, a = b, b = a),
         $one(𝐑 = 𝐑)
       )
     )

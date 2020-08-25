@@ -17,20 +17,14 @@ $divisible(
     %exists(
       #(x: %Element($"Natural numbers")),
       formula = %equals(
-        $product(
-          m = m,
-          n = x
-        ),
+        $product(m = m, n = x),
         n
       )
     ),
     %existsUnique(
       #(x: %Element($"Natural numbers")),
       formula = %equals(
-        $product(
-          m = m,
-          n = x
-        ),
+        $product(m = m, n = x),
         n
       )
     )

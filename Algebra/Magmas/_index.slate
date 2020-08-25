@@ -8,18 +8,9 @@ $Magmas: %Section {
     %item($operation),
     %item($associative),
     %item($commutative),
-    %subsection(
-      $Homomorphisms,
-      'Homomorphisms'
-    ),
-    %subsection(
-      $Submagmas,
-      'Submagmas'
-    ),
-    %subsection(
-      $"Free magma",
-      'Free magma'
-    ),
+    %subsection($Homomorphisms, 'Homomorphisms'),
+    %subsection($Submagmas, 'Submagmas'),
+    %subsection($"Free magma", 'Free magma'),
     %item($"identity element"),
     %item($identity),
     %item($"absorbing element"),

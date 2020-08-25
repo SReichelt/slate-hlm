@@ -20,20 +20,9 @@ $operation(
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
         e: %Element(M),
-        _1: %Constraint($monoid(
-          M = M,
-          ∗ = ∗,
-          e = e
-        ))
+        _1: %Constraint($monoid(M = M, ∗ = ∗, e = e))
       ),
-      value = $../../Essentials/Operations/value(
-        X = M,
-        Y = M,
-        Z = M,
-        ∗ = ∗,
-        x = a,
-        y = b
-      )
+      value = $../../Essentials/Operations/value(X = M, Y = M, Z = M, ∗ = ∗, x = a, y = b)
     }]
   )]
 }

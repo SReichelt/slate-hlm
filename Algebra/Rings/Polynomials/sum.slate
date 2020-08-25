@@ -9,18 +9,12 @@ $sum(
     $../../../"Formal systems"/Variables,
     auto = %true
   ),
-  p,q: %Element($Polynomials(
-    𝐑 = 𝐑,
-    X = X
-  ))
+  p,q: %Element($Polynomials(𝐑 = 𝐑, X = X))
 ): %ExplicitOperator {
   notation = $AdditionOperator(operands = [p, q]),
   definition = [%structuralCases(
     q,
-    $Polynomials(
-      𝐑 = 𝐑,
-      X = X
-    ),
+    $Polynomials(𝐑 = 𝐑, X = X),
     [
       {
         constructor = $Polynomials.zero,
@@ -29,18 +23,12 @@ $sum(
       {
         constructor = $Polynomials.term,
         parameters = #(
-          s: %Element($Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          )),
+          s: %Element($Polynomials(𝐑 = 𝐑, X = X)),
           b: %Element($../Carrier(𝐑 = 𝐑)),
           _2: %Constraint(%or(
             %not(%equals(
               s,
-              $Polynomials(
-                  𝐑 = 𝐑,
-                  X = X
-                ).zero
+              $Polynomials(𝐑 = 𝐑, X = X).zero
             )),
             %not(%equals(
               b,
@@ -50,36 +38,21 @@ $sum(
         ),
         value = %structuralCases(
           p,
-          $Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          ),
+          $Polynomials(𝐑 = 𝐑, X = X),
           [
             {
               constructor = $Polynomials.zero,
-              value = $Polynomials(
-                  𝐑 = 𝐑,
-                  X = X
-                ).term(
-                  p = s,
-                  a = b
-              )
+              value = $Polynomials(𝐑 = 𝐑, X = X).term(p = s, a = b)
             },
             {
               constructor = $Polynomials.term,
               parameters = #(
-                r: %Element($Polynomials(
-                  𝐑 = 𝐑,
-                  X = X
-                )),
+                r: %Element($Polynomials(𝐑 = 𝐑, X = X)),
                 a: %Element($../Carrier(𝐑 = 𝐑)),
                 _1: %Constraint(%or(
                   %not(%equals(
                     r,
-                    $Polynomials(
-                        𝐑 = 𝐑,
-                        X = X
-                      ).zero
+                    $Polynomials(𝐑 = 𝐑, X = X).zero
                   )),
                   %not(%equals(
                     a,
@@ -90,17 +63,8 @@ $sum(
               value = $normalized(
                 𝐑 = 𝐑,
                 X = X,
-                p = $sum(
-                  𝐑 = 𝐑,
-                  X = X,
-                  p = r,
-                  q = s
-                ),
-                a = $../sum(
-                  𝐑 = 𝐑,
-                  a = a,
-                  b = b
-                )
+                p = $sum(𝐑 = 𝐑, X = X, p = r, q = s),
+                a = $../sum(𝐑 = 𝐑, a = a, b = b)
               )
             }
           ]

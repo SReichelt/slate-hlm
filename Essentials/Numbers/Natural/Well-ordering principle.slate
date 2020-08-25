@@ -8,15 +8,9 @@
 $"Well-ordering principle": %StandardTheorem {
   claim = $../../Relations/"well-order"(
     S = $"Natural numbers",
-    ⪯ = $../../Relations/Relations(
-        S = $"Natural numbers",
-        T = $"Natural numbers"
-      ).relation(_1 = {
+    ⪯ = $../../Relations/Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
         #(m,n: %Element($"Natural numbers")),
-        {p = $"less or equal"(
-          m = m,
-          n = n
-        )}
+        {p = $"less or equal"(m = m, n = n)}
     })
   )
 }

@@ -9,15 +9,9 @@ $"Span of element"(
     $../"Left modules"(𝐑 = 𝐑),
     auto = %true
   ),
-  x: %Element($../Carrier(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  ))
+  x: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
 ): %SetOperator {
-  notation = $Parens(
-    body = x,
-    style = '<>'
-  ),
+  notation = $Parens(body = x, style = '<>'),
   definition = [
     $Span(
       𝐑 = 𝐑,
@@ -26,12 +20,7 @@ $"Span of element"(
     ),
     %extendedSubset(
       #(a: %Element($../../../Carrier(𝐑 = 𝐑))),
-      $../product(
-        𝐑 = 𝐑,
-        𝐌 = 𝐌,
-        a = a,
-        x = x
-      )
+      $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = a, x = x)
     )
   ]
 }

@@ -5,15 +5,9 @@ $"indexed by finite multiset"(
   ⨂: %Element($"Iterated operations"(X = X)),
   S: %Set(auto = %true),
   𝑰: %Element($../../Sets/Multisets/Multisets(S = S)),
-  _1: %Constraint($../../Sets/Multisets/finite(
-    S = S,
-    𝑻 = 𝑰
-  )),
+  _1: %Constraint($../../Sets/Multisets/finite(S = S, 𝑻 = 𝑰)),
   _2: %Binder(
-    #(i: %Element($../../Sets/Multisets/Set(
-      S = S,
-      𝑻 = 𝑰
-    ))),
+    #(i: %Element($../../Sets/Multisets/Set(S = S, 𝑻 = 𝑰))),
     #(a: %Element(X))
   )
 ): %ExplicitOperator {
@@ -27,15 +21,9 @@ $"indexed by finite multiset"(
     $"indexed by finite set"(
       X = X,
       ⨂ = ⨂,
-      I = $../../Sets/Multisets/Elements(
-        S = S,
-        𝑻 = 𝑰
-      ),
+      I = $../../Sets/Multisets/Elements(S = S, 𝑻 = 𝑰),
       _2 = {
-        #(j: %Element($../../Sets/Multisets/Elements(
-          S = S,
-          𝑻 = 𝑰
-        ))),
+        #(j: %Element($../../Sets/Multisets/Elements(S = S, 𝑻 = 𝑰))),
         {a = %structuralCases(
           j,
           $../../Sets/"Cartesian product"(
@@ -56,29 +44,15 @@ $"indexed by finite multiset"(
     $"indexed by finite set"(
       X = X,
       ⨂ = ⨂,
-      I = $../../Sets/Multisets/Set(
-        S = S,
-        𝑻 = 𝑰
-      ),
+      I = $../../Sets/Multisets/Set(S = S, 𝑻 = 𝑰),
       _2 = {
-        #(j: %Element($../../Sets/Multisets/Set(
-          S = S,
-          𝑻 = 𝑰
-        ))),
+        #(j: %Element($../../Sets/Multisets/Set(S = S, 𝑻 = 𝑰))),
         {a = $"indexed by natural number"(
           X = X,
           ⨂ = ⨂,
-          n = $../../Sets/Multisets/multiplicity(
-            S = S,
-            𝑻 = 𝑰,
-            t = j
-          ),
+          n = $../../Sets/Multisets/multiplicity(S = S, 𝑻 = 𝑰, t = j),
           _1 = {
-            #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $../../Sets/Multisets/multiplicity(
-              S = S,
-              𝑻 = 𝑰,
-              t = j
-            )))),
+            #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $../../Sets/Multisets/multiplicity(S = S, 𝑻 = 𝑰, t = j)))),
             {a = a[i = j]}
           }
         )}
@@ -93,17 +67,9 @@ $"indexed by finite multiset"(
         {a = $"indexed by natural number"(
           X = X,
           ⨂ = ⨂,
-          n = $../../Sets/Multisets/multiplicity(
-            S = S,
-            𝑻 = 𝑰,
-            t = j
-          ),
+          n = $../../Sets/Multisets/multiplicity(S = S, 𝑻 = 𝑰, t = j),
           _1 = {
-            #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $../../Sets/Multisets/multiplicity(
-              S = S,
-              𝑻 = 𝑰,
-              t = j
-            )))),
+            #(k: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $../../Sets/Multisets/multiplicity(S = S, 𝑻 = 𝑰, t = j)))),
             {a = a[i = j]}
           }
         )}

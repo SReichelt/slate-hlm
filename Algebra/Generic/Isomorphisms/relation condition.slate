@@ -2,10 +2,7 @@
 
 $"relation condition"(
   X,Y: %Set(auto = %true),
-  φ: %Element($../../../Essentials/Functions/Bijections(
-    X = X,
-    Y = Y
-  )),
+  φ: %Element($../../../Essentials/Functions/Bijections(X = X, Y = Y)),
   ≺: %Element($../../../Essentials/Relations/Endorelations(S = X)),
   ⊂: %Element($../../../Essentials/Relations/Endorelations(S = Y))
 ): %Predicate {
@@ -34,17 +31,10 @@ $"relation condition"(
             )),
             value = %forall(
               #(x_1,x_2: %Element(X)),
-              %equiv(p[x_1 = x_1, x_2 = x_2], q[y_1 = $../../../Essentials/Functions/value(
-                    X = X,
-                    Y = Y,
-                    f = φ,
-                    x = x_1
-                  ), y_2 = $../../../Essentials/Functions/value(
-                    X = X,
-                    Y = Y,
-                    f = φ,
-                    x = x_2
-              )])
+              %equiv(
+                p[x_1 = x_1, x_2 = x_2],
+                q[y_1 = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_1), y_2 = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_2)]
+              )
             )
           }]
         )
@@ -53,29 +43,13 @@ $"relation condition"(
     %forall(
       #(x_1,x_2: %Element(X)),
       %equiv(
-        $../../../Essentials/Relations/related(
-          S = X,
-          T = X,
-          ≺ = ≺,
-          s = x_1,
-          t = x_2
-        ),
+        $../../../Essentials/Relations/related(S = X, T = X, ≺ = ≺, s = x_1, t = x_2),
         $../../../Essentials/Relations/related(
           S = Y,
           T = Y,
           ≺ = ⊂,
-          s = $../../../Essentials/Functions/value(
-            X = X,
-            Y = Y,
-            f = φ,
-            x = x_1
-          ),
-          t = $../../../Essentials/Functions/value(
-            X = X,
-            Y = Y,
-            f = φ,
-            x = x_2
-          )
+          s = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_1),
+          t = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x_2)
         )
       )
     )

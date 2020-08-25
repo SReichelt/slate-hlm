@@ -27,10 +27,7 @@ $"monomial with exponent one"(
       𝐑 = 𝐑,
       X = X,
       p = a,
-      a = $Polynomials(
-          𝐑 = 𝐑,
-          X = X
-        ).zero
+      a = $Polynomials(𝐑 = 𝐑, X = X).zero
     ),
     %cases([
       {
@@ -38,20 +35,14 @@ $"monomial with exponent one"(
           a,
           $../zero(𝐑 = 𝐑)
         ),
-        value = $Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          ).zero
+        value = $Polynomials(𝐑 = 𝐑, X = X).zero
       },
       {
         formula = %not(%equals(
           a,
           $../zero(𝐑 = 𝐑)
         )),
-        value = $Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          ).term(
+        value = $Polynomials(𝐑 = 𝐑, X = X).term(
             p = a,
             a = $../zero(𝐑 = 𝐑)
         )

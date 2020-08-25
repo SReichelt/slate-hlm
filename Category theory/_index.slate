@@ -9,21 +9,9 @@ $"Category theory": %Section {
     %item($identity),
     %item($composition),
     %item($Isomorphisms),
-    %subsection(
-      $Functors,
-      'Functors'
-    ),
-    %subsection(
-      $"Natural transformations",
-      'Natural transformations'
-    ),
-    %subsection(
-      $"Concrete categories",
-      'Concrete categories'
-    ),
-    %subsection(
-      $Yoneda,
-      'Yoneda lemma'
-    )
+    %subsection($Functors, 'Functors'),
+    %subsection($"Natural transformations", 'Natural transformations'),
+    %subsection($"Concrete categories", 'Concrete categories'),
+    %subsection($Yoneda, 'Yoneda lemma')
   ]
 }

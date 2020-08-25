@@ -5,10 +5,7 @@ $Sequences: %Section {
   items = [
     %item($"indexed element"),
     %item($"bounded cardinality"),
-    %item(
-      $"tuple of numbers",
-      title = 'Tuple'
-    ),
+    %item($"tuple of numbers", title = 'Tuple'),
     %item($"sequence from subset"),
     %item($"infinite sequence from subset")
   ]

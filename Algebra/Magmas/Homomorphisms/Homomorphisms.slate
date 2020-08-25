@@ -31,11 +31,7 @@ $Homomorphisms(𝐌,𝐍: %Element($../Magmas)): %SetOperator {
           X = $../Carrier(𝐌 = 𝐌),
           Y = $../Carrier(𝐌 = 𝐍),
           f = f,
-          x = $../operation(
-            𝐌 = 𝐌,
-            a = a,
-            b = b
-          )
+          x = $../operation(𝐌 = 𝐌, a = a, b = b)
         ),
         $../operation(
           𝐌 = 𝐍,

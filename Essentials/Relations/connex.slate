@@ -10,27 +10,12 @@ $connex(
   S: %Set(auto = %true),
   ≺: %Element($Endorelations(S = S))
 ): %Predicate {
-  notation = $Property(
-    operand = ≺,
-    property = 'connex'
-  ),
+  notation = $Property(operand = ≺, property = 'connex'),
   definition = [%forall(
     #(s,t: %Element(S)),
     %or(
-      $related(
-        S = S,
-        T = S,
-        s = s,
-        ≺ = ≺,
-        t = t
-      ),
-      $related(
-        S = S,
-        T = S,
-        s = t,
-        ≺ = ≺,
-        t = s
-      )
+      $related(S = S, T = S, s = s, ≺ = ≺, t = t),
+      $related(S = S, T = S, s = t, ≺ = ≺, t = s)
     )
   )]
 }

@@ -5,10 +5,7 @@ $"Cantors theorem generalized"(
   μ: %Element($"Cardinal numbers")
 ): %StandardTheorem {
   claim = $less(
-    μ = $power(
-      κ = κ,
-      μ = μ
-    ),
+    μ = $power(κ = κ, μ = μ),
     κ = μ
   )
 }

@@ -17,23 +17,10 @@ $inverse(
         G: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../Essentials/Functions/Functions(
-          X = G,
-          Y = G
-        )),
-        _1: %Constraint($group(
-          G = G,
-          ∗ = ∗,
-          e = e,
-          i = i
-        ))
+        i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
+        _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
-      value = $../../Essentials/Functions/value(
-        X = G,
-        Y = G,
-        f = i,
-        x = a
-      )
+      value = $../../Essentials/Functions/value(X = G, Y = G, f = i, x = a)
     }]
   )]
 }

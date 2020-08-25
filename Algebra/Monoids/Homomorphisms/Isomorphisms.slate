@@ -17,10 +17,7 @@ $Isomorphisms(𝐌,𝐍: %Element($../Monoids)): %SetOperator {
   },
   definition = [
     %subset(
-      #(φ: %Element($Homomorphisms(
-        𝐌 = 𝐌,
-        𝐍 = 𝐍
-      ))),
+      #(φ: %Element($Homomorphisms(𝐌 = 𝐌, 𝐍 = 𝐍))),
       $../../../Essentials/Functions/bijective(
         X = $../Carrier(𝐌 = 𝐌),
         Y = $../Carrier(𝐌 = 𝐍),
@@ -40,11 +37,7 @@ $Isomorphisms(𝐌,𝐍: %Element($../Monoids)): %SetOperator {
               X = $../Carrier(𝐌 = 𝐌),
               Y = $../Carrier(𝐌 = 𝐍),
               f = f,
-              x = $../operation(
-                𝐌 = 𝐌,
-                a = a,
-                b = b
-              )
+              x = $../operation(𝐌 = 𝐌, a = a, b = b)
             ),
             $../operation(
               𝐌 = 𝐍,

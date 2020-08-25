@@ -5,16 +5,10 @@ $"normal subgroup"(𝐆,𝐇: %Element($../Groups)): %Predicate {
   definition = [%exists(
     #(S: %Subset($../Carrier(𝐆 = 𝐇))),
     formula = %and(
-      $"normal subgroup set"(
-        𝐆 = 𝐇,
-        S = S
-      ),
+      $"normal subgroup set"(𝐆 = 𝐇, S = S),
       %equals(
         𝐆,
-        $"subset group"(
-          𝐆 = 𝐇,
-          S = S
-        )
+        $"subset group"(𝐆 = 𝐇, S = S)
       )
     )
   )]

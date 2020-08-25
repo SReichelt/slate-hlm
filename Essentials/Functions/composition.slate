@@ -10,34 +10,20 @@
  */
 $composition(
   X,Y,Z: %Set(auto = %true),
-  f: %Element($Functions(
-    X = X,
-    Y = Y
-  )),
-  g: %Element($Functions(
-    X = Y,
-    Y = Z
-  ))
+  f: %Element($Functions(X = X, Y = Y)),
+  g: %Element($Functions(X = Y, Y = Z))
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(
     symbol = '∘',
     operands = [g, f]
   ),
-  definition = [$Functions(
-      X = X,
-      Y = Z
-    ).function(_1 = {
+  definition = [$Functions(X = X, Y = Z).function(_1 = {
       #(x: %Element(X)),
       {y = $value(
         X = Y,
         Y = Z,
         f = g,
-        x = $value(
-          X = X,
-          Y = Y,
-          f = f,
-          x = x
-        )
+        x = $value(X = X, Y = Y, f = f, x = x)
       )}
   })]
 }

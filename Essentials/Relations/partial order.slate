@@ -11,35 +11,16 @@ $"partial order"(
   S: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
-  notation = $NounProperty(
-    operand = ⪯,
-    singular = 'partial order',
-    plural = 'partial orders'
-  ),
+  notation = $NounProperty(operand = ⪯, singular = 'partial order', plural = 'partial orders'),
   definition = [
     %and(
-      $reflexive(
-        S = S,
-        ⪯ = ⪯
-      ),
-      $antisymmetric(
-        S = S,
-        ⪯ = ⪯
-      ),
-      $transitive(
-        S = S,
-        ≺ = ⪯
-      )
+      $reflexive(S = S, ⪯ = ⪯),
+      $antisymmetric(S = S, ⪯ = ⪯),
+      $transitive(S = S, ≺ = ⪯)
     ),
     %and(
-      $preorder(
-        S = S,
-        ⪯ = ⪯
-      ),
-      $antisymmetric(
-        S = S,
-        ⪯ = ⪯
-      )
+      $preorder(S = S, ⪯ = ⪯),
+      $antisymmetric(S = S, ⪯ = ⪯)
     )
   ]
 }

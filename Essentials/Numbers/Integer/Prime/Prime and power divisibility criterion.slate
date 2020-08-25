@@ -6,26 +6,14 @@ $"Prime and power divisibility criterion"(
   n: %Element($../../Natural/Subsets/"Positive numbers")
 ): %EquivalenceTheorem {
   conditions = [
+    $../divisible(a = p, b = a),
     $../divisible(
       a = p,
-      b = a
+      b = $../power(a = a, n = n)
     ),
     $../divisible(
-      a = p,
-      b = $../power(
-        a = a,
-        n = n
-      )
-    ),
-    $../divisible(
-      a = $../power(
-        a = p,
-        n = n
-      ),
-      b = $../power(
-        a = a,
-        n = n
-      )
+      a = $../power(a = p, n = n),
+      b = $../power(a = a, n = n)
     )
   ]
 }

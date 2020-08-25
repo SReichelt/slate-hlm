@@ -13,20 +13,14 @@ $"fixed-point": %ExplicitOperator {
               #(x: %Element($../../"Fresh variables"(V = %enumeration(f)))),
               {M = $../Terms(V = %enumeration(f, x)).application(
                   M = f,
-                  N = $../Terms(V = %enumeration(f, x)).application(
-                      M = x,
-                      N = x
-                  )
+                  N = $../Terms(V = %enumeration(f, x)).application(M = x, N = x)
               )}
           }),
           N = $../Terms(V = %enumeration(f)).abstraction(_2 = {
               #(x: %Element($../../"Fresh variables"(V = %enumeration(f)))),
               {M = $../Terms(V = %enumeration(f, x)).application(
                   M = f,
-                  N = $../Terms(V = %enumeration(f, x)).application(
-                      M = x,
-                      N = x
-                  )
+                  N = $../Terms(V = %enumeration(f, x)).application(M = x, N = x)
               )}
           })
       )}

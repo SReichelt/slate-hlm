@@ -19,18 +19,9 @@ $before(
       parameters = #(
         A: %Set,
         ⪯: %Element($../../Relations/Endorelations(S = A)),
-        _1: %Constraint($../../Relations/"well-order"(
-          S = A,
-          ⪯ = ⪯
-        ))
+        _1: %Constraint($../../Relations/"well-order"(S = A, ⪯ = ⪯))
       ),
-      value = $../../Relations/related(
-        S = A,
-        T = A,
-        s = a,
-        t = b,
-        ≺ = ⪯
-      )
+      value = $../../Relations/related(S = A, T = A, s = a, t = b, ≺ = ⪯)
     }]
   )]
 }

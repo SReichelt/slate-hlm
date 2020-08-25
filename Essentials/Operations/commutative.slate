@@ -8,35 +8,14 @@
  */
 $commutative(
   X,Z: %Set(auto = %true),
-  ∗: %Element($Operations(
-    X = X,
-    Y = X,
-    Z = Z
-  ))
+  ∗: %Element($Operations(X = X, Y = X, Z = Z))
 ): %Predicate {
-  notation = $Property(
-    operand = ∗,
-    property = 'commutative'
-  ),
+  notation = $Property(operand = ∗, property = 'commutative'),
   definition = [%forall(
     #(x,y: %Element(X)),
     %equals(
-      $value(
-        X = X,
-        Y = X,
-        Z = Z,
-        ∗ = ∗,
-        x = x,
-        y = y
-      ),
-      $value(
-        X = X,
-        Y = X,
-        Z = Z,
-        ∗ = ∗,
-        x = y,
-        y = x
-      )
+      $value(X = X, Y = X, Z = Z, ∗ = ∗, x = x, y = y),
+      $value(X = X, Y = X, Z = Z, ∗ = ∗, x = y, y = x)
     )
   )]
 }

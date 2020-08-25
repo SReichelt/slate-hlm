@@ -18,14 +18,8 @@ $coprime(m,n: %Element($"Natural numbers")): %Predicate {
     %forall(
       #(
         a: %Element($Subsets/"Positive numbers"),
-        _1: %Constraint($divisible(
-          m = a,
-          n = m
-        )),
-        _2: %Constraint($divisible(
-          m = a,
-          n = n
-        ))
+        _1: %Constraint($divisible(m = a, n = m)),
+        _2: %Constraint($divisible(m = a, n = n))
       ),
       %equals(
         a,
@@ -35,14 +29,8 @@ $coprime(m,n: %Element($"Natural numbers")): %Predicate {
     %not(%exists(
       #(b: %Element($Subsets/"Segment (greater)"(n = $number(value = 1)))),
       formula = %and(
-        $divisible(
-          m = b,
-          n = m
-        ),
-        $divisible(
-          m = b,
-          n = n
-        )
+        $divisible(m = b, n = m),
+        $divisible(m = b, n = n)
       )
     )),
     %sub(
@@ -64,14 +52,8 @@ $coprime(m,n: %Element($"Natural numbers")): %Predicate {
     %not(%exists(
       #(p: %Element($Prime/"Prime numbers")),
       formula = %and(
-        $divisible(
-          m = p,
-          n = m
-        ),
-        $divisible(
-          m = p,
-          n = n
-        )
+        $divisible(m = p, n = m),
+        $divisible(m = p, n = n)
       )
     ))
   ]

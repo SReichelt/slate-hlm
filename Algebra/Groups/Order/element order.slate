@@ -16,24 +16,14 @@ $"element order"(
   S: %SetDef(%subset(
     #(n: %Element($../../../Essentials/Numbers/Natural/Subsets/"Positive numbers")),
     %equals(
-      $../"power to natural number"(
-        𝐆 = 𝐆,
-        a = g,
-        n = n
-      ),
+      $../"power to natural number"(𝐆 = 𝐆, a = g, n = n),
       $../identity(𝐆 = 𝐆)
     )
   ))
 ): %ExplicitOperator {
-  notation = $Parens(
-    body = g,
-    style = '||'
-  ),
+  notation = $Parens(body = g, style = '||'),
   definition = [
-    $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Subgroups/"Span of element"(
-      𝐆 = 𝐆,
-      g = g
-    )),
+    $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Subgroups/"Span of element"(𝐆 = 𝐆, g = g)),
     %cases([
       {
         formula = %not($../../../Essentials/Sets/empty(S = S)),

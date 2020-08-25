@@ -21,8 +21,5 @@ $Automorphisms(α: %Element($../"Ordinal numbers")): %SetOperator {
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },
-  definition = [$Isomorphisms(
-    α = α,
-    β = α
-  )]
+  definition = [$Isomorphisms(α = α, β = α)]
 }

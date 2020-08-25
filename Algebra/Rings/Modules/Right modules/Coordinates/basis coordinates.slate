@@ -13,34 +13,16 @@ $"basis coordinates"(
     $../"Right modules"(𝐑 = 𝐑),
     auto = %true
   ),
-  𝒙: %Element($Bases(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  )),
-  m: %Element($../Carrier(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  ))
+  𝒙: %Element($Bases(𝐑 = 𝐑, 𝐌 = 𝐌)),
+  m: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
 ): %ImplicitOperator {
   notation = $Function(
-    function = $SubSup(
-      body = 'coord',
-      sub = 𝒙
-    ),
+    function = $SubSup(body = 'coord', sub = 𝒙),
     arguments = [m]
   ),
-  parameter = #(𝐚: %Element($Coordinates(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌,
-    𝒙 = 𝒙
-  ))),
+  parameter = #(𝐚: %Element($Coordinates(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙))),
   definition = [%equals(
-    $"linear combination"(
-      𝐑 = 𝐑,
-      𝐌 = 𝐌,
-      𝒙 = 𝒙,
-      𝐚 = 𝐚
-    ),
+    $"linear combination"(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙, 𝐚 = 𝐚),
     m
   )]
 }

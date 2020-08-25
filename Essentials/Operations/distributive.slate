@@ -16,17 +16,7 @@ $distributive(
     preposition = 'over'
   ),
   definition = [%and(
-    $"left-distributive"(
-      X = X,
-      Y = X,
-      ∗ = ∗,
-      ⋆ = ⋆
-    ),
-    $"right-distributive"(
-      X = X,
-      Y = X,
-      ∗ = ∗,
-      ⋆ = ⋆
-    )
+    $"left-distributive"(X = X, Y = X, ∗ = ∗, ⋆ = ⋆),
+    $"right-distributive"(X = X, Y = X, ∗ = ∗, ⋆ = ⋆)
   )]
 }

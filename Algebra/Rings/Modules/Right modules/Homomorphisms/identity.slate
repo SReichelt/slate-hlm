@@ -10,12 +10,6 @@ $identity(
     auto = %true
   )
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = 'id',
-    sub = 𝐌
-  ),
-  definition = [$../../../../../Essentials/Functions/identity(X = $../Carrier(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  ))]
+  notation = $SubSup(body = 'id', sub = 𝐌),
+  definition = [$../../../../../Essentials/Functions/identity(X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))]
 }

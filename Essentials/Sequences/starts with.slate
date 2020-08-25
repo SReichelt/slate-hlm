@@ -7,10 +7,7 @@ $"starts with"(
     $../Numbers/Natural/"Natural numbers",
     auto = %true
   ),
-  𝐛: %Element($Tuples(
-    S = S,
-    α = n
-  ))
+  𝐛: %Element($Tuples(S = S, α = n))
 ): %Predicate {
   notation = $TextualRelation(
     verb = 'starts with',
@@ -18,10 +15,7 @@ $"starts with"(
   ),
   definition = [%structural(
     𝐛,
-    $Tuples(
-      S = S,
-      α = n
-    ),
+    $Tuples(S = S, α = n),
     [{
       constructor = $Tuples.sequence,
       parameters = #(_2: %Binder(

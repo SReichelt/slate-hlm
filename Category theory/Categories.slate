@@ -26,11 +26,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
     ),
     _3: %Binder(
       #(𝐃,𝐄,𝐅: %Element(O)),
-      #(∘: %Element($../Essentials/Operations/Operations(
-        X = M[𝐀 = 𝐄, 𝐁 = 𝐅],
-        Y = M[𝐀 = 𝐃, 𝐁 = 𝐄],
-        Z = M[𝐀 = 𝐃, 𝐁 = 𝐅]
-      )))
+      #(∘: %Element($../Essentials/Operations/Operations(X = M[𝐀 = 𝐄, 𝐁 = 𝐅], Y = M[𝐀 = 𝐃, 𝐁 = 𝐄], Z = M[𝐀 = 𝐃, 𝐁 = 𝐅])))
     ),
     _4: %Constraint(%forall(
       #(
@@ -45,14 +41,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
           Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
           ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐙],
-          x = $../Essentials/Operations/value(
-            X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
-            Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-            Z = M[𝐀 = 𝐗, 𝐁 = 𝐙],
-            ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐙],
-            x = h,
-            y = g
-          ),
+          x = $../Essentials/Operations/value(X = M[𝐀 = 𝐘, 𝐁 = 𝐙], Y = M[𝐀 = 𝐗, 𝐁 = 𝐘], Z = M[𝐀 = 𝐗, 𝐁 = 𝐙], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐙], x = h, y = g),
           y = f
         ),
         $../Essentials/Operations/value(
@@ -61,14 +50,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
           ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐘, 𝐅 = 𝐙],
           x = h,
-          y = $../Essentials/Operations/value(
-            X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-            Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
-            Z = M[𝐀 = 𝐖, 𝐁 = 𝐘],
-            ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐘],
-            x = g,
-            y = f
-          )
+          y = $../Essentials/Operations/value(X = M[𝐀 = 𝐗, 𝐁 = 𝐘], Y = M[𝐀 = 𝐖, 𝐁 = 𝐗], Z = M[𝐀 = 𝐖, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐘], x = g, y = f)
         )
       )
     )),
@@ -78,22 +60,8 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         f: %Element(M[𝐀 = 𝐗, 𝐁 = 𝐘])
       ),
       %equals(
-        $../Essentials/Operations/value(
-          X = M[𝐀 = 𝐘, 𝐁 = 𝐘],
-          Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-          Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-          ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐘],
-          x = i[𝐂 = 𝐘],
-          y = f
-        ),
-        $../Essentials/Operations/value(
-          X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-          Y = M[𝐀 = 𝐗, 𝐁 = 𝐗],
-          Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-          ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐗, 𝐅 = 𝐘],
-          x = f,
-          y = i[𝐂 = 𝐗]
-        ),
+        $../Essentials/Operations/value(X = M[𝐀 = 𝐘, 𝐁 = 𝐘], Y = M[𝐀 = 𝐗, 𝐁 = 𝐘], Z = M[𝐀 = 𝐗, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐘], x = i[𝐂 = 𝐘], y = f),
+        $../Essentials/Operations/value(X = M[𝐀 = 𝐗, 𝐁 = 𝐘], Y = M[𝐀 = 𝐗, 𝐁 = 𝐗], Z = M[𝐀 = 𝐗, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐗, 𝐅 = 𝐘], x = f, y = i[𝐂 = 𝐗]),
         f
       )
     )),
@@ -107,25 +75,11 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           ),
           formula = %and(
             %equals(
-              $../Essentials/Operations/value(
-                X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                Y = M[𝐀 = 𝐘, 𝐁 = 𝐗],
-                Z = M[𝐀 = 𝐘, 𝐁 = 𝐘],
-                ∗ = ∘[𝐃 = 𝐘, 𝐄 = 𝐗, 𝐅 = 𝐘],
-                x = f,
-                y = g
-              ),
+              $../Essentials/Operations/value(X = M[𝐀 = 𝐗, 𝐁 = 𝐘], Y = M[𝐀 = 𝐘, 𝐁 = 𝐗], Z = M[𝐀 = 𝐘, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐘, 𝐄 = 𝐗, 𝐅 = 𝐘], x = f, y = g),
               i[𝐂 = 𝐘]
             ),
             %equals(
-              $../Essentials/Operations/value(
-                X = M[𝐀 = 𝐘, 𝐁 = 𝐗],
-                Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                Z = M[𝐀 = 𝐗, 𝐁 = 𝐗],
-                ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐗],
-                x = g,
-                y = f
-              ),
+              $../Essentials/Operations/value(X = M[𝐀 = 𝐘, 𝐁 = 𝐗], Y = M[𝐀 = 𝐗, 𝐁 = 𝐘], Z = M[𝐀 = 𝐗, 𝐁 = 𝐗], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐗], x = g, y = f),
               i[𝐂 = 𝐗]
             )
           )
@@ -139,10 +93,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         items = [
           O,
           $SubSup(
-            body = $Parens(
-              body = M,
-              style = '()'
-            ),
+            body = $Parens(body = M, style = '()'),
             sub = $ElementRelation(operands = [
               $Group(
                 items = [𝐀, 𝐁],
@@ -152,17 +103,11 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             ])
           ),
           $SubSup(
-            body = $Parens(
-              body = i,
-              style = '()'
-            ),
+            body = $Parens(body = i, style = '()'),
             sub = $ElementRelation(operands = [𝐂, O])
           ),
           $SubSup(
-            body = $Parens(
-              body = ∘,
-              style = '()'
-            ),
+            body = $Parens(body = ∘, style = '()'),
             sub = $ElementRelation(operands = [
               $Group(
                 items = [𝐃, 𝐄, 𝐅],
@@ -189,11 +134,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         ),
         _3: %Binder(
           #(𝐃,𝐄,𝐅: %Element(O)),
-          #(∘: %Element($../Essentials/Operations/Operations(
-            X = M[𝐀 = 𝐄, 𝐁 = 𝐅],
-            Y = M[𝐀 = 𝐃, 𝐁 = 𝐄],
-            Z = M[𝐀 = 𝐃, 𝐁 = 𝐅]
-          )))
+          #(∘: %Element($../Essentials/Operations/Operations(X = M[𝐀 = 𝐄, 𝐁 = 𝐅], Y = M[𝐀 = 𝐃, 𝐁 = 𝐄], Z = M[𝐀 = 𝐃, 𝐁 = 𝐅])))
         ),
         _4: %Constraint(%forall(
           #(
@@ -208,14 +149,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
               Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐙],
-              x = $../Essentials/Operations/value(
-                X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
-                Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                Z = M[𝐀 = 𝐗, 𝐁 = 𝐙],
-                ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐙],
-                x = h,
-                y = g
-              ),
+              x = $../Essentials/Operations/value(X = M[𝐀 = 𝐘, 𝐁 = 𝐙], Y = M[𝐀 = 𝐗, 𝐁 = 𝐘], Z = M[𝐀 = 𝐗, 𝐁 = 𝐙], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐙], x = h, y = g),
               y = f
             ),
             $../Essentials/Operations/value(
@@ -224,14 +158,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐘, 𝐅 = 𝐙],
               x = h,
-              y = $../Essentials/Operations/value(
-                X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
-                Z = M[𝐀 = 𝐖, 𝐁 = 𝐘],
-                ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐘],
-                x = g,
-                y = f
-              )
+              y = $../Essentials/Operations/value(X = M[𝐀 = 𝐗, 𝐁 = 𝐘], Y = M[𝐀 = 𝐖, 𝐁 = 𝐗], Z = M[𝐀 = 𝐖, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐘], x = g, y = f)
             )
           )
         )),
@@ -241,22 +168,8 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             f: %Element(M[𝐀 = 𝐗, 𝐁 = 𝐘])
           ),
           %equals(
-            $../Essentials/Operations/value(
-              X = M[𝐀 = 𝐘, 𝐁 = 𝐘],
-              Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-              Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-              ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐘],
-              x = i[𝐂 = 𝐘],
-              y = f
-            ),
-            $../Essentials/Operations/value(
-              X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-              Y = M[𝐀 = 𝐗, 𝐁 = 𝐗],
-              Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-              ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐗, 𝐅 = 𝐘],
-              x = f,
-              y = i[𝐂 = 𝐗]
-            ),
+            $../Essentials/Operations/value(X = M[𝐀 = 𝐘, 𝐁 = 𝐘], Y = M[𝐀 = 𝐗, 𝐁 = 𝐘], Z = M[𝐀 = 𝐗, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐘], x = i[𝐂 = 𝐘], y = f),
+            $../Essentials/Operations/value(X = M[𝐀 = 𝐗, 𝐁 = 𝐘], Y = M[𝐀 = 𝐗, 𝐁 = 𝐗], Z = M[𝐀 = 𝐗, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐗, 𝐅 = 𝐘], x = f, y = i[𝐂 = 𝐗]),
             f
           )
         )),
@@ -270,25 +183,11 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               ),
               formula = %and(
                 %equals(
-                  $../Essentials/Operations/value(
-                    X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                    Y = M[𝐀 = 𝐘, 𝐁 = 𝐗],
-                    Z = M[𝐀 = 𝐘, 𝐁 = 𝐘],
-                    ∗ = ∘[𝐃 = 𝐘, 𝐄 = 𝐗, 𝐅 = 𝐘],
-                    x = f,
-                    y = g
-                  ),
+                  $../Essentials/Operations/value(X = M[𝐀 = 𝐗, 𝐁 = 𝐘], Y = M[𝐀 = 𝐘, 𝐁 = 𝐗], Z = M[𝐀 = 𝐘, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐘, 𝐄 = 𝐗, 𝐅 = 𝐘], x = f, y = g),
                   i[𝐂 = 𝐘]
                 ),
                 %equals(
-                  $../Essentials/Operations/value(
-                    X = M[𝐀 = 𝐘, 𝐁 = 𝐗],
-                    Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                    Z = M[𝐀 = 𝐗, 𝐁 = 𝐗],
-                    ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐗],
-                    x = g,
-                    y = f
-                  ),
+                  $../Essentials/Operations/value(X = M[𝐀 = 𝐘, 𝐁 = 𝐗], Y = M[𝐀 = 𝐗, 𝐁 = 𝐘], Z = M[𝐀 = 𝐗, 𝐁 = 𝐗], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐗], x = g, y = f),
                   i[𝐂 = 𝐗]
                 )
               )
@@ -309,11 +208,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         ),
         _9: %Binder(
           #(𝐃,𝐄,𝐅: %Element(P)),
-          #(∙: %Element($../Essentials/Operations/Operations(
-            X = N[𝐀 = 𝐄, 𝐁 = 𝐅],
-            Y = N[𝐀 = 𝐃, 𝐁 = 𝐄],
-            Z = N[𝐀 = 𝐃, 𝐁 = 𝐅]
-          )))
+          #(∙: %Element($../Essentials/Operations/Operations(X = N[𝐀 = 𝐄, 𝐁 = 𝐅], Y = N[𝐀 = 𝐃, 𝐁 = 𝐄], Z = N[𝐀 = 𝐃, 𝐁 = 𝐅])))
         ),
         _10: %Constraint(%forall(
           #(
@@ -328,14 +223,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               Y = N[𝐀 = 𝐖, 𝐁 = 𝐗],
               Z = N[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∙[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐙],
-              x = $../Essentials/Operations/value(
-                X = N[𝐀 = 𝐘, 𝐁 = 𝐙],
-                Y = N[𝐀 = 𝐗, 𝐁 = 𝐘],
-                Z = N[𝐀 = 𝐗, 𝐁 = 𝐙],
-                ∗ = ∙[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐙],
-                x = h,
-                y = g
-              ),
+              x = $../Essentials/Operations/value(X = N[𝐀 = 𝐘, 𝐁 = 𝐙], Y = N[𝐀 = 𝐗, 𝐁 = 𝐘], Z = N[𝐀 = 𝐗, 𝐁 = 𝐙], ∗ = ∙[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐙], x = h, y = g),
               y = f
             ),
             $../Essentials/Operations/value(
@@ -344,14 +232,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               Z = N[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∙[𝐃 = 𝐖, 𝐄 = 𝐘, 𝐅 = 𝐙],
               x = h,
-              y = $../Essentials/Operations/value(
-                X = N[𝐀 = 𝐗, 𝐁 = 𝐘],
-                Y = N[𝐀 = 𝐖, 𝐁 = 𝐗],
-                Z = N[𝐀 = 𝐖, 𝐁 = 𝐘],
-                ∗ = ∙[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐘],
-                x = g,
-                y = f
-              )
+              y = $../Essentials/Operations/value(X = N[𝐀 = 𝐗, 𝐁 = 𝐘], Y = N[𝐀 = 𝐖, 𝐁 = 𝐗], Z = N[𝐀 = 𝐖, 𝐁 = 𝐘], ∗ = ∙[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐘], x = g, y = f)
             )
           )
         )),
@@ -361,22 +242,8 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             f: %Element(N[𝐀 = 𝐗, 𝐁 = 𝐘])
           ),
           %equals(
-            $../Essentials/Operations/value(
-              X = N[𝐀 = 𝐘, 𝐁 = 𝐘],
-              Y = N[𝐀 = 𝐗, 𝐁 = 𝐘],
-              Z = N[𝐀 = 𝐗, 𝐁 = 𝐘],
-              ∗ = ∙[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐘],
-              x = j[𝐂 = 𝐘],
-              y = f
-            ),
-            $../Essentials/Operations/value(
-              X = N[𝐀 = 𝐗, 𝐁 = 𝐘],
-              Y = N[𝐀 = 𝐗, 𝐁 = 𝐗],
-              Z = N[𝐀 = 𝐗, 𝐁 = 𝐘],
-              ∗ = ∙[𝐃 = 𝐗, 𝐄 = 𝐗, 𝐅 = 𝐘],
-              x = f,
-              y = j[𝐂 = 𝐗]
-            ),
+            $../Essentials/Operations/value(X = N[𝐀 = 𝐘, 𝐁 = 𝐘], Y = N[𝐀 = 𝐗, 𝐁 = 𝐘], Z = N[𝐀 = 𝐗, 𝐁 = 𝐘], ∗ = ∙[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐘], x = j[𝐂 = 𝐘], y = f),
+            $../Essentials/Operations/value(X = N[𝐀 = 𝐗, 𝐁 = 𝐘], Y = N[𝐀 = 𝐗, 𝐁 = 𝐗], Z = N[𝐀 = 𝐗, 𝐁 = 𝐘], ∗ = ∙[𝐃 = 𝐗, 𝐄 = 𝐗, 𝐅 = 𝐘], x = f, y = j[𝐂 = 𝐗]),
             f
           )
         )),
@@ -390,25 +257,11 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               ),
               formula = %and(
                 %equals(
-                  $../Essentials/Operations/value(
-                    X = N[𝐀 = 𝐗, 𝐁 = 𝐘],
-                    Y = N[𝐀 = 𝐘, 𝐁 = 𝐗],
-                    Z = N[𝐀 = 𝐘, 𝐁 = 𝐘],
-                    ∗ = ∙[𝐃 = 𝐘, 𝐄 = 𝐗, 𝐅 = 𝐘],
-                    x = f,
-                    y = g
-                  ),
+                  $../Essentials/Operations/value(X = N[𝐀 = 𝐗, 𝐁 = 𝐘], Y = N[𝐀 = 𝐘, 𝐁 = 𝐗], Z = N[𝐀 = 𝐘, 𝐁 = 𝐘], ∗ = ∙[𝐃 = 𝐘, 𝐄 = 𝐗, 𝐅 = 𝐘], x = f, y = g),
                   j[𝐂 = 𝐘]
                 ),
                 %equals(
-                  $../Essentials/Operations/value(
-                    X = N[𝐀 = 𝐘, 𝐁 = 𝐗],
-                    Y = N[𝐀 = 𝐗, 𝐁 = 𝐘],
-                    Z = N[𝐀 = 𝐗, 𝐁 = 𝐗],
-                    ∗ = ∙[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐗],
-                    x = g,
-                    y = f
-                  ),
+                  $../Essentials/Operations/value(X = N[𝐀 = 𝐘, 𝐁 = 𝐗], Y = N[𝐀 = 𝐗, 𝐁 = 𝐘], Z = N[𝐀 = 𝐗, 𝐁 = 𝐗], ∗ = ∙[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐗], x = g, y = f),
                   j[𝐂 = 𝐗]
                 )
               )
@@ -419,25 +272,12 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
       ),
       definition = [%exists(
         #(
-          φ: %Element($../Essentials/Functions/Bijections(
-            X = O,
-            Y = P
-          )),
+          φ: %Element($../Essentials/Functions/Bijections(X = O, Y = P)),
           _13: %Binder(
             #(𝐀,𝐁: %Element(O)),
             #(ψ: %Element($../Essentials/Functions/Bijections(
               X = M[𝐀 = 𝐀, 𝐁 = 𝐁],
-              Y = N[𝐀 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐀
-                ), 𝐁 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐁
-              )]
+              Y = N[𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐀), 𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐁)]
             )))
           )
         ),
@@ -446,25 +286,10 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             #(𝐂: %Element(O)),
             $../Algebra/Generic/Isomorphisms/"element condition"(
               X = M[𝐀 = 𝐂, 𝐁 = 𝐂],
-              Y = N[𝐀 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐂
-                ), 𝐁 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐂
-              )],
+              Y = N[𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐂), 𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐂)],
               φ = ψ[𝐀 = 𝐂, 𝐁 = 𝐂],
               x = i[𝐂 = 𝐂],
-              y = j[𝐂 = $../Essentials/Functions/value(
-                X = O,
-                Y = P,
-                f = φ,
-                x = 𝐂
-              )]
+              y = j[𝐂 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐂)]
             )
           ),
           %forall(
@@ -473,59 +298,14 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               X_1 = M[𝐀 = 𝐄, 𝐁 = 𝐅],
               X_2 = M[𝐀 = 𝐃, 𝐁 = 𝐄],
               X_3 = M[𝐀 = 𝐃, 𝐁 = 𝐅],
-              Y_1 = N[𝐀 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐄
-                ), 𝐁 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐅
-              )],
-              Y_2 = N[𝐀 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐃
-                ), 𝐁 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐄
-              )],
-              Y_3 = N[𝐀 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐃
-                ), 𝐁 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐅
-              )],
+              Y_1 = N[𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐄), 𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐅)],
+              Y_2 = N[𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐃), 𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐄)],
+              Y_3 = N[𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐃), 𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐅)],
               φ_1 = ψ[𝐀 = 𝐄, 𝐁 = 𝐅],
               φ_2 = ψ[𝐀 = 𝐃, 𝐁 = 𝐄],
               φ_3 = ψ[𝐀 = 𝐃, 𝐁 = 𝐅],
               ∗ = ∘[𝐃 = 𝐃, 𝐄 = 𝐄, 𝐅 = 𝐅],
-              ⋆ = ∙[𝐃 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐃
-                ), 𝐄 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐄
-                ), 𝐅 = $../Essentials/Functions/value(
-                  X = O,
-                  Y = P,
-                  f = φ,
-                  x = 𝐅
-              )]
+              ⋆ = ∙[𝐃 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐃), 𝐄 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐄), 𝐅 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐅)]
             )
           )
         )
@@ -534,24 +314,15 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
     }
   }
 
-  notation = $SubSup(
-    body = '𝓒𝓪𝓽',
-    sub = u
-  ),
+  notation = $SubSup(body = '𝓒𝓪𝓽', sub = u),
   definitionNotation = {
     parameter = #(𝓒: %Expr),
     singularName = [[
-      $DependentWord(
-        word = 'small',
-        argument = u
-      ),
+      $DependentWord(word = 'small', argument = u),
       ' category'
     ]],
     pluralName = [[
-      $DependentWord(
-        word = 'small',
-        argument = u
-      ),
+      $DependentWord(word = 'small', argument = u),
       ' categories'
     ]]
   }

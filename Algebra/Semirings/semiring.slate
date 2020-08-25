@@ -20,25 +20,9 @@ $semiring(
     plural = 'semirings'
   ),
   definition = [%and(
-    $../Monoids/"commutative monoid"(
-      M = R,
-      ∗ = ⊕,
-      e = "0"
-    ),
-    $../Monoids/monoid(
-      M = R,
-      ∗ = ⊙,
-      e = "1"
-    ),
-    $../../Essentials/Operations/distributive(
-      X = R,
-      ∗ = ⊙,
-      ⋆ = ⊕
-    ),
-    $../../Essentials/Operations/"absorbing element"(
-      X = R,
-      ∗ = ⊙,
-      z = "0"
-    )
+    $../Monoids/"commutative monoid"(M = R, ∗ = ⊕, e = "0"),
+    $../Monoids/monoid(M = R, ∗ = ⊙, e = "1"),
+    $../../Essentials/Operations/distributive(X = R, ∗ = ⊙, ⋆ = ⊕),
+    $../../Essentials/Operations/"absorbing element"(X = R, ∗ = ⊙, z = "0")
   )]
 }

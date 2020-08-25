@@ -6,24 +6,14 @@ $Items(
   t: %Element(S)
 ): %SetOperator {
   notation = $Function(
-    function = $SubSup(
-      body = 'Items',
-      sub = 𝑻
-    ),
+    function = $SubSup(body = 'Items', sub = 𝑻),
     arguments = [t]
   ),
   definition = [%extendedSubset(
-    #(n: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $multiplicity(
-      S = S,
-      𝑻 = 𝑻,
-      t = t
-    )))),
+    #(n: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $multiplicity(S = S, 𝑻 = 𝑻, t = t)))),
     $../"Cartesian product"(
         S = S,
         T = $../../Numbers/Natural/"Natural numbers"
-      ).pair(
-        s = t,
-        t = n
-    )
+      ).pair(s = t, t = n)
   )]
 }

@@ -12,27 +12,12 @@ $antisymmetric(
   S: %Set(auto = %true),
   ⪯: %Element($Endorelations(S = S))
 ): %Predicate {
-  notation = $Property(
-    operand = ⪯,
-    property = 'antisymmetric'
-  ),
+  notation = $Property(operand = ⪯, property = 'antisymmetric'),
   definition = [%forall(
     #(
       s,t: %Element(S),
-      _1: %Constraint($related(
-        S = S,
-        T = S,
-        s = s,
-        ≺ = ⪯,
-        t = t
-      )),
-      _2: %Constraint($related(
-        S = S,
-        T = S,
-        s = t,
-        ≺ = ⪯,
-        t = s
-      ))
+      _1: %Constraint($related(S = S, T = S, s = s, ≺ = ⪯, t = t)),
+      _2: %Constraint($related(S = S, T = S, s = t, ≺ = ⪯, t = s))
     ),
     %equals(s, t)
   )]

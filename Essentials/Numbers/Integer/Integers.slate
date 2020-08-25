@@ -28,21 +28,12 @@ $Integers: %Construction {
       leftParameters = #(n,m: %Element($../Natural/"Natural numbers")),
       rightParameters = #("n'","m'": %Element($../Natural/"Natural numbers")),
       definition = [%equals(
-        $../Natural/sum(
-          m = n,
-          n = "m'"
-        ),
-        $../Natural/sum(
-          m = "n'",
-          n = m
-        )
+        $../Natural/sum(m = n, n = "m'"),
+        $../Natural/sum(m = "n'", n = m)
       )]
     },
     rewrite = {
-      value = $difference(
-        a = n,
-        b = m
-      ),
+      value = $difference(a = n, b = m),
       theorem = $"Actual difference equals formal difference"
     }
   }

@@ -7,18 +7,12 @@
  *             * https://proofwiki.org/wiki/Definition:Category_of_Rings_with_Unity
  */
 $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
-  notation = $SubSup(
-    body = '𝐑𝐢𝐧𝐠',
-    sub = u
-  ),
+  notation = $SubSup(body = '𝐑𝐢𝐧𝐠', sub = u),
   definition = [$../Categories(u = u).category(
       O = $../../Algebra/Rings/Rings,
       _1 = {
         #(𝐀,𝐁: %Element($../../Algebra/Rings/Rings)),
-        {M = $../../Algebra/Rings/Homomorphisms/Homomorphisms(
-          𝐑 = 𝐀,
-          𝐒 = 𝐁
-        )}
+        {M = $../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐀, 𝐒 = 𝐁)}
       },
       _2 = {
         #(𝐂: %Element($../../Algebra/Rings/Rings)),
@@ -27,28 +21,13 @@ $rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %Expli
       _3 = {
         #(𝐃,𝐄,𝐅: %Element($../../Algebra/Rings/Rings)),
         {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Algebra/Rings/Homomorphisms/Homomorphisms(
-              𝐑 = 𝐄,
-              𝐒 = 𝐅
-            ),
-            Y = $../../Algebra/Rings/Homomorphisms/Homomorphisms(
-              𝐑 = 𝐃,
-              𝐒 = 𝐄
-            ),
-            Z = $../../Algebra/Rings/Homomorphisms/Homomorphisms(
-              𝐑 = 𝐃,
-              𝐒 = 𝐅
-            )
+            X = $../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅),
+            Y = $../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄),
+            Z = $../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                𝐑 = 𝐄,
-                𝐒 = 𝐅
-              )),
-              φ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(
-                𝐑 = 𝐃,
-                𝐒 = 𝐄
-              ))
+              ψ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅)),
+              φ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄))
             ),
             {z = $../../Essentials/Functions/composition(
               X = $../../Algebra/Rings/Carrier(𝐑 = 𝐃),

@@ -28,68 +28,33 @@ $Isomorphisms(
   },
   definition = [
     %subset(
-      #(φ: %Element($Homomorphisms(
-        𝐑 = 𝐑,
-        𝐌 = 𝐌,
-        𝐍 = 𝐍
-      ))),
+      #(φ: %Element($Homomorphisms(𝐑 = 𝐑, 𝐌 = 𝐌, 𝐍 = 𝐍))),
       $../../../../../Essentials/Functions/bijective(
-        X = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌
-        ),
-        Y = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐍
-        ),
+        X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+        Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
         f = φ
       )
     ),
     %subset(
       #(f: %Element($../../../../../Essentials/Functions/Bijections(
-        X = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌
-        ),
-        Y = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐍
-        )
+        X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+        Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍)
       ))),
       %forall(
         #(
           a,b: %Element($../../../Carrier(𝐑 = 𝐑)),
-          x,y: %Element($../Carrier(
-            𝐑 = 𝐑,
-            𝐌 = 𝐌
-          ))
+          x,y: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
         ),
         %equals(
           $../../../../../Essentials/Functions/value(
-            X = $../Carrier(
-              𝐑 = 𝐑,
-              𝐌 = 𝐌
-            ),
-            Y = $../Carrier(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍
-            ),
+            X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+            Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
             f = f,
             x = $../sum(
               𝐑 = 𝐑,
               𝐌 = 𝐌,
-              x = $../product(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌,
-                x = x,
-                a = a
-              ),
-              y = $../product(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌,
-                x = y,
-                a = b
-              )
+              x = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, x = x, a = a),
+              y = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, x = y, a = b)
             )
           ),
           $../sum(
@@ -99,14 +64,8 @@ $Isomorphisms(
               𝐑 = 𝐑,
               𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐌
-                ),
-                Y = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐍
-                ),
+                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 f = f,
                 x = x
               ),
@@ -116,14 +75,8 @@ $Isomorphisms(
               𝐑 = 𝐑,
               𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐌
-                ),
-                Y = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐍
-                ),
+                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 f = f,
                 x = y
               ),

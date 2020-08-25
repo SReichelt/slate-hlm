@@ -14,53 +14,23 @@ $basis(
     $../"Right modules"(𝐑 = 𝐑),
     auto = %true
   ),
-  𝒙: %Element($"Element sequences"(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  ))
+  𝒙: %Element($"Element sequences"(𝐑 = 𝐑, 𝐌 = 𝐌))
 ): %Predicate {
-  notation = $NounProperty(
-    operand = 𝒙,
-    singular = 'basis',
-    plural = 'bases'
-  ),
+  notation = $NounProperty(operand = 𝒙, singular = 'basis', plural = 'bases'),
   definition = [
     %and(
-      %not($"linearly dependent"(
-        𝐑 = 𝐑,
-        𝐌 = 𝐌,
-        𝒙 = 𝒙
-      )),
+      %not($"linearly dependent"(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙)),
       %setEquals(
-        $Span(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌,
-          𝒙 = 𝒙
-        ),
-        $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌
-        )
+        $Span(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙),
+        $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)
       )
     ),
     %forall(
-      #(m: %Element($../Carrier(
-        𝐑 = 𝐑,
-        𝐌 = 𝐌
-      ))),
+      #(m: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))),
       %existsUnique(
-        #(𝐚: %Element($Coordinates(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌,
-          𝒙 = 𝒙
-        ))),
+        #(𝐚: %Element($Coordinates(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙))),
         formula = %equals(
-          $"linear combination"(
-            𝐑 = 𝐑,
-            𝐌 = 𝐌,
-            𝒙 = 𝒙,
-            𝐚 = 𝐚
-          ),
+          $"linear combination"(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙, 𝐚 = 𝐚),
           m
         )
       )

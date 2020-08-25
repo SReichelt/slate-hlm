@@ -22,8 +22,5 @@ $Automorphisms(𝐌: %Element($../Monoids)): %SetOperator {
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },
-  definition = [$Isomorphisms(
-    𝐌 = 𝐌,
-    𝐍 = 𝐌
-  )]
+  definition = [$Isomorphisms(𝐌 = 𝐌, 𝐍 = 𝐌)]
 }

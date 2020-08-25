@@ -6,16 +6,10 @@
  */
 $"power to natural number"(
   X: %Set(auto = %true),
-  f: %Element($Functions(
-    X = X,
-    Y = X
-  )),
+  f: %Element($Functions(X = X, Y = X)),
   n: %Element($../Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = f,
-    sup = n
-  ),
+  notation = $SubSup(body = f, sup = n),
   definition = [%structuralCases(
     n,
     $../Numbers/Natural/"Natural numbers",
@@ -32,11 +26,7 @@ $"power to natural number"(
           X = X,
           Y = X,
           Z = X,
-          f = $"power to natural number"(
-            X = X,
-            f = f,
-            n = x
-          ),
+          f = $"power to natural number"(X = X, f = f, n = x),
           g = f
         ),
         rewrite = %true

@@ -11,10 +11,7 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
       m = $"Natural numbers".successor(n = m),
       n = n
     ),
-    $"Natural numbers".successor(n = $sum(
-      m = m,
-      n = n
-    ))
+    $"Natural numbers".successor(n = $sum(m = m, n = n))
   ),
   proofs = [{steps = #(_: %ProveByInduction(
     n,
@@ -39,37 +36,22 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
               m = $"Natural numbers".successor(n = m),
               n = x
             )),
-            $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(
-              m = m,
-              n = x
-            )))
+            $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x)))
           ),
           steps = #(
             _: %State(%equals(
-              $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(
-                m = m,
-                n = x
-              ))),
-              $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(
-                m = m,
-                n = x
-              )))
+              $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x))),
+              $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x)))
             )),
             _: %Substitute(
               #(_: %UseTheorem(
-                $"Successor can be pulled over addition"(
-                  m = m,
-                  n = x
-                ),
+                $"Successor can be pulled over addition"(m = m, n = x),
                 result = %equals(
                   $sum(
                     m = $"Natural numbers".successor(n = m),
                     n = x
                   ),
-                  $"Natural numbers".successor(n = $sum(
-                    m = m,
-                    n = x
-                  ))
+                  $"Natural numbers".successor(n = $sum(m = m, n = x))
                 )
               )),
               1,
@@ -78,10 +60,7 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
                   m = $"Natural numbers".successor(n = m),
                   n = x
                 )),
-                $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(
-                  m = m,
-                  n = x
-                )))
+                $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x)))
               )
             )
           )

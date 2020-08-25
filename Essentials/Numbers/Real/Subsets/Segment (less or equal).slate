@@ -1,16 +1,9 @@
 %../../../../../../logics/hlm%
 
 $"Segment (less or equal)"(a: %Element($../"Real numbers")): %SetOperator {
-  notation = $Segment(
-    set = 'ℝ',
-    symbol = '≤',
-    limit = a
-  ),
+  notation = $Segment(set = 'ℝ', symbol = '≤', limit = a),
   definition = [%subset(
     #(b: %Element($../"Real numbers")),
-    $../"less or equal"(
-      a = b,
-      b = a
-    )
+    $../"less or equal"(a = b, b = a)
   )]
 }

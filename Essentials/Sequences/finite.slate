@@ -4,12 +4,6 @@ $finite(
   S: %Set(auto = %true),
   𝒂: %Element($"Ordinal-indexed sequences"(S = S))
 ): %Predicate {
-  notation = $Property(
-    operand = 𝒂,
-    property = 'finite'
-  ),
-  definition = [$../Numbers/Ordinal/finite(α = $"ordinal-indexed sequence length"(
-    S = S,
-    𝒂 = 𝒂
-  ))]
+  notation = $Property(operand = 𝒂, property = 'finite'),
+  definition = [$../Numbers/Ordinal/finite(α = $"ordinal-indexed sequence length"(S = S, 𝒂 = 𝒂))]
 }

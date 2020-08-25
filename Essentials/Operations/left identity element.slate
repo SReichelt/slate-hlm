@@ -7,11 +7,7 @@
  */
 $"left identity element"(
   X,Y: %Set(auto = %true),
-  ∗: %Element($Operations(
-    X = X,
-    Y = Y,
-    Z = Y
-  )),
+  ∗: %Element($Operations(X = X, Y = Y, Z = Y)),
   e: %Element(X)
 ): %Predicate {
   notation = $NounRelation(
@@ -23,14 +19,7 @@ $"left identity element"(
   definition = [%forall(
     #(a: %Element(Y)),
     %equals(
-      $value(
-        X = X,
-        Y = Y,
-        Z = Y,
-        ∗ = ∗,
-        x = e,
-        y = a
-      ),
+      $value(X = X, Y = Y, Z = Y, ∗ = ∗, x = e, y = a),
       a
     )
   )]

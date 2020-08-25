@@ -6,16 +6,10 @@
 $"subset monoid"(
   𝐌: %Element($../Monoids),
   S: %Subset($../Carrier(𝐌 = 𝐌)),
-  _1: %Constraint($"submonoid set"(
-    𝐌 = 𝐌,
-    S = S
-  ))
+  _1: %Constraint($"submonoid set"(𝐌 = 𝐌, S = S))
 ): %ExplicitOperator {
   notation = $SubSup(
-    body = $Parens(
-      body = S,
-      style = '[]'
-    ),
+    body = $Parens(body = S, style = '[]'),
     sub = 𝐌
   ),
   definition = [%structuralCases(
@@ -27,19 +21,11 @@ $"subset monoid"(
         M: %Set,
         ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = M)),
         e: %Element(M),
-        _1: %Constraint($../monoid(
-          M = M,
-          ∗ = ∗,
-          e = e
-        ))
+        _1: %Constraint($../monoid(M = M, ∗ = ∗, e = e))
       ),
       value = $../Monoids.monoid(
         M = S,
-        ∗ = $../../../Essentials/Operations/"inner operation restriction"(
-          X = M,
-          A = S,
-          ∗ = ∗
-        ),
+        ∗ = $../../../Essentials/Operations/"inner operation restriction"(X = M, A = S, ∗ = ∗),
         e = e
       )
     }]

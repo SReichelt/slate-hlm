@@ -9,16 +9,8 @@ $"Equality is extensional"(
     %forall(
       #(p: %Element($Properties(S = S))),
       %equiv(
-        $"has property"(
-          S = S,
-          p = p,
-          s = s
-        ),
-        $"has property"(
-          S = S,
-          p = p,
-          s = t
-        )
+        $"has property"(S = S, p = p, s = s),
+        $"has property"(S = S, p = p, s = t)
       )
     )
   ]

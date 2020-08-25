@@ -6,9 +6,6 @@ $"Vector spaces": %Section {
     %item($"Vector spaces"),
     %item($"finite-dimensional"),
     %item($dimension),
-    %subsection(
-      $Examples,
-      'Examples'
-    )
+    %subsection($Examples, 'Examples')
   ]
 }

@@ -11,10 +11,7 @@ $"Lagranges corollary"(
   g: %Element($../Carrier(𝐆 = 𝐆))
 ): %StandardTheorem {
   claim = $../../../Essentials/Numbers/Natural/divisible(
-    m = $"element order"(
-      𝐆 = 𝐆,
-      g = g
-    ),
+    m = $"element order"(𝐆 = 𝐆, g = g),
     n = $"group order"(𝐆 = 𝐆)
   )
 }

@@ -2,28 +2,11 @@
 
 $"morphism condition"(
   X_1,X_2,X_3,Y_1,Y_2,Y_3: %Set(auto = %true),
-  φ_1: %Element($../../../Essentials/Functions/Bijections(
-    X = X_1,
-    Y = Y_1
-  )),
-  φ_2: %Element($../../../Essentials/Functions/Bijections(
-    X = X_2,
-    Y = Y_2
-  )),
-  φ_3: %Element($../../../Essentials/Functions/Bijections(
-    X = X_3,
-    Y = Y_3
-  )),
-  ∗: %Element($../../../Essentials/Operations/Operations(
-    X = X_1,
-    Y = X_2,
-    Z = X_3
-  )),
-  ⋆: %Element($../../../Essentials/Operations/Operations(
-    X = Y_1,
-    Y = Y_2,
-    Z = Y_3
-  ))
+  φ_1: %Element($../../../Essentials/Functions/Bijections(X = X_1, Y = Y_1)),
+  φ_2: %Element($../../../Essentials/Functions/Bijections(X = X_2, Y = Y_2)),
+  φ_3: %Element($../../../Essentials/Functions/Bijections(X = X_3, Y = Y_3)),
+  ∗: %Element($../../../Essentials/Operations/Operations(X = X_1, Y = X_2, Z = X_3)),
+  ⋆: %Element($../../../Essentials/Operations/Operations(X = Y_1, Y = Y_2, Z = Y_3))
 ): %Predicate {
   notation = $SpecificIsomorphismRelation(
     operands = [∗, ⋆],
@@ -32,11 +15,7 @@ $"morphism condition"(
   definition = [
     %structural(
       ⋆,
-      $../../../Essentials/Operations/Operations(
-        X = Y_1,
-        Y = Y_2,
-        Z = Y_3
-      ),
+      $../../../Essentials/Operations/Operations(X = Y_1, Y = Y_2, Z = Y_3),
       [{
         constructor = $../../../Essentials/Operations/Operations.operation,
         parameters = #(_2: %Binder(
@@ -48,11 +27,7 @@ $"morphism condition"(
         )),
         value = %structural(
           ∗,
-          $../../../Essentials/Operations/Operations(
-            X = X_1,
-            Y = X_2,
-            Z = X_3
-          ),
+          $../../../Essentials/Operations/Operations(X = X_1, Y = X_2, Z = X_3),
           [{
             constructor = $../../../Essentials/Operations/Operations.operation,
             parameters = #(_1: %Binder(
@@ -68,23 +43,8 @@ $"morphism condition"(
                 x_2: %Element(X_2)
               ),
               %equals(
-                $../../../Essentials/Functions/value(
-                  X = X_3,
-                  Y = Y_3,
-                  f = φ_3,
-                  x = a[x_1 = x_1, x_2 = x_2]
-                ),
-                b[y_1 = $../../../Essentials/Functions/value(
-                    X = X_1,
-                    Y = Y_1,
-                    f = φ_1,
-                    x = x_1
-                  ), y_2 = $../../../Essentials/Functions/value(
-                    X = X_2,
-                    Y = Y_2,
-                    f = φ_2,
-                    x = x_2
-                )]
+                $../../../Essentials/Functions/value(X = X_3, Y = Y_3, f = φ_3, x = a[x_1 = x_1, x_2 = x_2]),
+                b[y_1 = $../../../Essentials/Functions/value(X = X_1, Y = Y_1, f = φ_1, x = x_1), y_2 = $../../../Essentials/Functions/value(X = X_2, Y = Y_2, f = φ_2, x = x_2)]
               )
             )
           }]
@@ -101,65 +61,32 @@ $"morphism condition"(
           X = X_3,
           Y = Y_3,
           f = φ_3,
-          x = $../../../Essentials/Operations/value(
-            X = X_1,
-            Y = X_2,
-            Z = X_3,
-            ∗ = ∗,
-            x = x_1,
-            y = x_2
-          )
+          x = $../../../Essentials/Operations/value(X = X_1, Y = X_2, Z = X_3, ∗ = ∗, x = x_1, y = x_2)
         ),
         $../../../Essentials/Operations/value(
           X = Y_1,
           Y = Y_2,
           Z = Y_3,
           ∗ = ⋆,
-          x = $../../../Essentials/Functions/value(
-            X = X_1,
-            Y = Y_1,
-            f = φ_1,
-            x = x_1
-          ),
-          y = $../../../Essentials/Functions/value(
-            X = X_2,
-            Y = Y_2,
-            f = φ_2,
-            x = x_2
-          )
+          x = $../../../Essentials/Functions/value(X = X_1, Y = Y_1, f = φ_1, x = x_1),
+          y = $../../../Essentials/Functions/value(X = X_2, Y = Y_2, f = φ_2, x = x_2)
         )
       )
     ),
     %equals(
       $../../../Essentials/Functions/composition(
-        X = $../../../Essentials/Sets/"Cartesian product"(
-          S = X_1,
-          T = X_2
-        ),
+        X = $../../../Essentials/Sets/"Cartesian product"(S = X_1, T = X_2),
         Y = X_3,
         Z = Y_3,
         g = φ_3,
         f = ∗
       ),
       $../../../Essentials/Functions/composition(
-        X = $../../../Essentials/Sets/"Cartesian product"(
-          S = X_1,
-          T = X_2
-        ),
-        Y = $../../../Essentials/Sets/"Cartesian product"(
-          S = Y_1,
-          T = Y_2
-        ),
+        X = $../../../Essentials/Sets/"Cartesian product"(S = X_1, T = X_2),
+        Y = $../../../Essentials/Sets/"Cartesian product"(S = Y_1, T = Y_2),
         Z = Y_3,
         g = ⋆,
-        f = $../../../Essentials/Functions/"cartesian product"(
-          V = X_1,
-          W = Y_1,
-          X = X_2,
-          Y = Y_2,
-          f = φ_1,
-          g = φ_2
-        )
+        f = $../../../Essentials/Functions/"cartesian product"(V = X_1, W = Y_1, X = X_2, Y = Y_2, f = φ_1, g = φ_2)
       )
     )
   ]

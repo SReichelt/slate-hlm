@@ -14,10 +14,7 @@ $"natural numbers with multiplication": %ExplicitOperator {
         Z = $../../../Essentials/Numbers/Natural/"Natural numbers"
       ).operation(_1 = {
         #(m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-        {z = $../../../Essentials/Numbers/Natural/product(
-          m = m,
-          n = n
-        )}
+        {z = $../../../Essentials/Numbers/Natural/product(m = m, n = n)}
     }),
     e = $../../../Essentials/Numbers/Natural/number(value = 1)
   )]

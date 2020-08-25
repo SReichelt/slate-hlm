@@ -1,16 +1,9 @@
 %../../../../../../logics/hlm%
 
 $"Segment (less)"(a: %Element($../"Rational numbers")): %SetOperator {
-  notation = $Segment(
-    set = 'ℚ',
-    symbol = '<',
-    limit = a
-  ),
+  notation = $Segment(set = 'ℚ', symbol = '<', limit = a),
   definition = [%subset(
     #(b: %Element($../"Rational numbers")),
-    $../less(
-      a = b,
-      b = a
-    )
+    $../less(a = b, b = a)
   )]
 }

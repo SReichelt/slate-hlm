@@ -28,8 +28,5 @@ $limit(
     style = 'shallow'
   ),
   parameter = #(l: %Element($../"Rational numbers")),
-  definition = [$converges(
-    𝐚 = 𝐚,
-    l = l
-  )]
+  definition = [$converges(𝐚 = 𝐚, l = l)]
 }

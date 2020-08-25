@@ -20,10 +20,7 @@ $"yoneda equivalence"(
     𝓒 = 𝓒,
     𝓓 = $../"Concrete categories"/cardinals(u = v)
   )),
-  𝐀: %Element($../Objects(
-    u = u,
-    𝓒 = 𝓒
-  ))
+  𝐀: %Element($../Objects(u = u, 𝓒 = 𝓒))
 ): %ExplicitOperator {
   notation = $Function(
     function = 'yoneda',
@@ -35,12 +32,7 @@ $"yoneda equivalence"(
         v = v,
         𝓒 = 𝓒,
         𝓓 = $../"Concrete categories"/cardinals(u = v),
-        F = $"hom-functor"(
-          u = u,
-          v = v,
-          𝓒 = 𝓒,
-          𝐀 = 𝐀
-        ),
+        F = $"hom-functor"(u = u, v = v, 𝓒 = 𝓒, 𝐀 = 𝐀),
         G = F
       ),
       Y = $../../Essentials/Numbers/Cardinal/Carrier(κ = $../Functors/"object value"(
@@ -57,21 +49,11 @@ $"yoneda equivalence"(
         v = v,
         𝓒 = 𝓒,
         𝓓 = $../"Concrete categories"/cardinals(u = v),
-        F = $"hom-functor"(
-          u = u,
-          v = v,
-          𝓒 = 𝓒,
-          𝐀 = 𝐀
-        ),
+        F = $"hom-functor"(u = u, v = v, 𝓒 = 𝓒, 𝐀 = 𝐀),
         G = F
       ))),
       {y = $../../Essentials/Functions/value(
-        X = $../Morphisms(
-          u = u,
-          𝓒 = 𝓒,
-          𝐗 = 𝐀,
-          𝐘 = 𝐀
-        ),
+        X = $../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐀),
         Y = $../../Essentials/Numbers/Cardinal/Carrier(κ = $../Functors/"object value"(
           u = u,
           v = v,
@@ -85,21 +67,12 @@ $"yoneda equivalence"(
           v = v,
           𝓒 = 𝓒,
           𝓓 = $../"Concrete categories"/cardinals(u = v),
-          F = $"hom-functor"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝐀 = 𝐀
-          ),
+          F = $"hom-functor"(u = u, v = v, 𝓒 = 𝓒, 𝐀 = 𝐀),
           G = F,
           η = η,
           𝐗 = 𝐀
         ),
-        x = $../identity(
-          u = u,
-          𝓒 = 𝓒,
-          𝐗 = 𝐀
-        )
+        x = $../identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀)
       )}
   })]
 }

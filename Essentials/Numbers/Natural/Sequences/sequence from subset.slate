@@ -24,25 +24,16 @@ $"sequence from subset"(
             T = $../"Natural numbers"
           ).relation(_1 = {
             #(m,n: %Element($../"Natural numbers")),
-            {p = $../"less or equal"(
-              m = m,
-              n = n
-            )}
+            {p = $../"less or equal"(m = m, n = n)}
         }),
         T = M
       )
     ),
     $../../../Sequences/"Ordinal-indexed sequences"(S = M).sequence(
         α = α,
-        𝐚 = $../../../Sequences/Tuples(
-            S = M,
-            α = α
-          ).sequence(_1 = {
+        𝐚 = $../../../Sequences/Tuples(S = M, α = α).sequence(_1 = {
             #(n: %Element($../../Ordinal/Subsets/"Segment (less)"(α = α))),
-            {a = $"indexed element"(
-              M = M,
-              n = n
-            )}
+            {a = $"indexed element"(M = M, n = n)}
         })
     )
   ]

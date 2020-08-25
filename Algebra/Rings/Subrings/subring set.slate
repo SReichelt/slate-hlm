@@ -18,11 +18,7 @@ $"subring set"(
     %forall(
       #(a,b: %Element(S)),
       %in(
-        $../sum(
-          𝐑 = 𝐑,
-          a = a,
-          b = b
-        ),
+        $../sum(𝐑 = 𝐑, a = a, b = b),
         S
       )
     ),
@@ -33,21 +29,14 @@ $"subring set"(
     %forall(
       #(c: %Element(S)),
       %in(
-        $../"additive inverse"(
-          𝐑 = 𝐑,
-          a = c
-        ),
+        $../"additive inverse"(𝐑 = 𝐑, a = c),
         S
       )
     ),
     %forall(
       #(d,e: %Element(S)),
       %in(
-        $../product(
-          𝐑 = 𝐑,
-          a = d,
-          b = e
-        ),
+        $../product(𝐑 = 𝐑, a = d, b = e),
         S
       )
     ),

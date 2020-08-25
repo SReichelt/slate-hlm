@@ -4,11 +4,7 @@
  * @references * https://proofwiki.org/wiki/Definition:Negative/Rational_Number
  */
 $"Nonpositive numbers": %SetOperator {
-  notation = $SubSup(
-    body = 'ℚ',
-    sub = '0',
-    sup = '−'
-  ),
+  notation = $SubSup(body = 'ℚ', sub = '0', sup = '−'),
   definition = [
     $"Segment (less or equal)"(a = $../../Natural/number(value = 0)),
     %subset(

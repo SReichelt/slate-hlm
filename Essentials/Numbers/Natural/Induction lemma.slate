@@ -26,10 +26,7 @@ $"Induction lemma"(
         parameters = #(x: %Element($"Natural numbers")),
         value = {steps = #(
           _: %UseTheorem(
-            $"Induction lemma"(
-              M = M,
-              n = x
-            ),
+            $"Induction lemma"(M = M, n = x),
             result = %in(x, M)
           ),
           _: %Consider(_1),

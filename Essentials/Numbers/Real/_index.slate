@@ -9,10 +9,7 @@ $Real: %Section {
     %item($difference),
     %item($"less or equal"),
     %item($less),
-    %subsection(
-      $Subsets,
-      'Subsets'
-    ),
+    %subsection($Subsets, 'Subsets'),
     %item($product),
     %item($quotient),
     %item($power),
@@ -22,17 +19,8 @@ $Real: %Section {
     %item($root),
     %item($"square root"),
     %item($rational),
-    %subsection(
-      $"Iterated operators",
-      'Iterated operators'
-    ),
-    %item(
-      $"Roots of primes are irrational",
-      type = 'theorem'
-    ),
-    %item(
-      $"Square root of two is irrational",
-      type = 'corollary'
-    )
+    %subsection($"Iterated operators", 'Iterated operators'),
+    %item($"Roots of primes are irrational", type = 'theorem'),
+    %item($"Square root of two is irrational", type = 'corollary')
   ]
 }

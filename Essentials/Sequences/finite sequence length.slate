@@ -8,10 +8,7 @@ $"finite sequence length"(
   S: %Set(auto = %true),
   𝒂: %Element($"Finite sequences"(S = S))
 ): %ExplicitOperator {
-  notation = $Parens(
-    body = 𝒂,
-    style = '||'
-  ),
+  notation = $Parens(body = 𝒂, style = '||'),
   definition = [%structuralCases(
     𝒂,
     $"Finite sequences"(S = S),
@@ -19,10 +16,7 @@ $"finite sequence length"(
       constructor = $"Finite sequences".sequence,
       parameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
-        𝐚: %Element($Tuples(
-          S = S,
-          α = n
-        ))
+        𝐚: %Element($Tuples(S = S, α = n))
       ),
       value = n
     }]

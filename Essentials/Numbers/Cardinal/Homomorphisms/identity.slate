@@ -4,9 +4,6 @@ $identity(κ: %Element(
   $../"Cardinal numbers",
   auto = %true
 )): %ExplicitOperator {
-  notation = $SubSup(
-    body = 'id',
-    sub = κ
-  ),
+  notation = $SubSup(body = 'id', sub = κ),
   definition = [$../../../Functions/identity(X = $../Carrier(κ = κ))]
 }

@@ -4,16 +4,10 @@
  * @remarks This definition retrieves a representative carrier set from a ring (which is actually an equivalence class of rings), and enables typical abuse of notation.
  */
 $Carrier(𝐑: %Element($Rings)): %SetOperator {
-  notation = $Parens(
-    body = 𝐑,
-    style = '()'
-  ),
+  notation = $Parens(body = 𝐑, style = '()'),
   definitionNotation = {
     parameter = #(a: %Expr),
-    notation = $ElementParameter(
-      variable = a,
-      set = 𝐑
-    )
+    notation = $ElementParameter(variable = a, set = 𝐑)
   },
   definition = [%setStructuralCases(
     𝐑,
@@ -24,20 +18,10 @@ $Carrier(𝐑: %Element($Rings)): %SetOperator {
         R: %Set,
         ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊖: %Element($../../Essentials/Functions/Functions(
-          X = R,
-          Y = R
-        )),
+        ⊖: %Element($../../Essentials/Functions/Functions(X = R, Y = R)),
         ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($ring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($ring(R = R, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙, "1" = "1"))
       ),
       value = R
     }]

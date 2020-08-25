@@ -6,21 +6,12 @@ $"Power base product law"(
 ): %StandardTheorem {
   claim = %equals(
     $power(
-      a = $product(
-        a = a,
-        b = b
-      ),
+      a = $product(a = a, b = b),
       n = n
     ),
     $product(
-      a = $power(
-        a = a,
-        n = n
-      ),
-      b = $power(
-        a = b,
-        n = n
-      )
+      a = $power(a = a, n = n),
+      b = $power(a = b, n = n)
     )
   )
 }

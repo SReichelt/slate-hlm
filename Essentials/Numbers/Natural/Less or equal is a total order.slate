@@ -7,15 +7,9 @@
 $"Less or equal is a total order": %StandardTheorem {
   claim = $../../Relations/"total order"(
     S = $"Natural numbers",
-    ⪯ = $../../Relations/Relations(
-        S = $"Natural numbers",
-        T = $"Natural numbers"
-      ).relation(_1 = {
+    ⪯ = $../../Relations/Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
         #(m,n: %Element($"Natural numbers")),
-        {p = $"less or equal"(
-          m = m,
-          n = n
-        )}
+        {p = $"less or equal"(m = m, n = n)}
     })
   )
 }

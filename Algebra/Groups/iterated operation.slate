@@ -11,10 +11,7 @@ $"iterated operation"(
   𝐆: %Element($Groups),
   _1: %Constraint($abelian(𝐆 = 𝐆))
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = '∏',
-    sub = 𝐆
-  ),
+  notation = $SubSup(body = '∏', sub = 𝐆),
   definition = [%structuralCases(
     𝐆,
     $Groups,
@@ -24,21 +21,10 @@ $"iterated operation"(
         G: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../Essentials/Functions/Functions(
-          X = G,
-          Y = G
-        )),
-        _1: %Constraint($group(
-          G = G,
-          ∗ = ∗,
-          e = e,
-          i = i
-        ))
+        i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
+        _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
-      value = $../../Essentials/Operations/"Iterated operations"/"Iterated operations"(X = G).operation(
-          ∗ = ∗,
-          e = e
-      )
+      value = $../../Essentials/Operations/"Iterated operations"/"Iterated operations"(X = G).operation(∗ = ∗, e = e)
     }]
   )]
 }

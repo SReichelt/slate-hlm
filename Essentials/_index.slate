@@ -3,33 +3,12 @@
 $Essentials: %Section {
   logic = 'hlm',
   items = [
-    %subsection(
-      $Sets,
-      'Sets'
-    ),
-    %subsection(
-      $Properties,
-      'Properties'
-    ),
-    %subsection(
-      $Relations,
-      'Relations'
-    ),
-    %subsection(
-      $Functions,
-      'Functions'
-    ),
-    %subsection(
-      $Operations,
-      'Operations'
-    ),
-    %subsection(
-      $Sequences,
-      'Sequences'
-    ),
-    %subsection(
-      $Numbers,
-      'Numbers'
-    )
+    %subsection($Sets, 'Sets'),
+    %subsection($Properties, 'Properties'),
+    %subsection($Relations, 'Relations'),
+    %subsection($Functions, 'Functions'),
+    %subsection($Operations, 'Operations'),
+    %subsection($Sequences, 'Sequences'),
+    %subsection($Numbers, 'Numbers')
   ]
 }

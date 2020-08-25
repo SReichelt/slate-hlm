@@ -11,9 +11,6 @@ $"iterated product"(
   𝐑: %Element($../Semirings),
   _1: %Constraint($../commutative(𝐑 = 𝐑))
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = '∏',
-    sub = 𝐑
-  ),
+  notation = $SubSup(body = '∏', sub = 𝐑),
   definition = [$../../Monoids/"iterated operation"(𝐌 = $../"multiplicative monoid"(𝐑 = 𝐑))]
 }

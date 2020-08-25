@@ -8,17 +8,11 @@ $"upper bound"(
 ): %Predicate {
   notation = $NounRelation(
     singular = [
-      $DependentWord(
-        word = 'upper',
-        argument = ≺
-      ),
+      $DependentWord(word = 'upper', argument = ≺),
       ' bound'
     ],
     plural = [
-      $DependentWord(
-        word = 'upper',
-        argument = ≺
-      ),
+      $DependentWord(word = 'upper', argument = ≺),
       ' bounds'
     ],
     operands = [s, T]
@@ -26,22 +20,12 @@ $"upper bound"(
   definition = [
     %forall(
       #(t: %Element(T)),
-      $related(
-        S = S,
-        T = S,
-        ≺ = ≺,
-        s = t,
-        t = s
-      )
+      $related(S = S, T = S, ≺ = ≺, s = t, t = s)
     ),
     $"lower bound"(
       S = S,
       T = T,
-      ≺ = $converse(
-        S = S,
-        T = S,
-        ≺ = ≺
-      ),
+      ≺ = $converse(S = S, T = S, ≺ = ≺),
       s = s
     )
   ]

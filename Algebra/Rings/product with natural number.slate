@@ -26,11 +26,7 @@ $"product with natural number"(
         parameters = #(x: %Element($../../Essentials/Numbers/Natural/"Natural numbers")),
         value = $sum(
           𝐑 = 𝐑,
-          a = $"product with natural number"(
-            𝐑 = 𝐑,
-            n = x,
-            a = a
-          ),
+          a = $"product with natural number"(𝐑 = 𝐑, n = x, a = a),
           b = a
         ),
         rewrite = %true

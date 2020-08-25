@@ -4,10 +4,7 @@ $subgroup(𝐆,𝐇: %Element($../Groups)): %Predicate {
   notation = $SubObjectRelation(operands = [𝐆, 𝐇]),
   definition = [
     %exists(
-      #(φ: %Element($../Homomorphisms/Homomorphisms(
-        𝐆 = 𝐆,
-        𝐇 = 𝐇
-      ))),
+      #(φ: %Element($../Homomorphisms/Homomorphisms(𝐆 = 𝐆, 𝐇 = 𝐇))),
       formula = $../../../Essentials/Functions/injective(
         X = $../Carrier(𝐆 = 𝐆),
         Y = $../Carrier(𝐆 = 𝐇),
@@ -17,16 +14,10 @@ $subgroup(𝐆,𝐇: %Element($../Groups)): %Predicate {
     %exists(
       #(S: %Subset($../Carrier(𝐆 = 𝐇))),
       formula = %and(
-        $"subgroup set"(
-          𝐆 = 𝐇,
-          S = S
-        ),
+        $"subgroup set"(𝐆 = 𝐇, S = S),
         %equals(
           𝐆,
-          $"subset group"(
-            𝐆 = 𝐇,
-            S = S
-          )
+          $"subset group"(𝐆 = 𝐇, S = S)
         )
       )
     )

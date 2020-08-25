@@ -6,10 +6,7 @@ $multiplicity(
   t: %Element(S)
 ): %ExplicitOperator {
   notation = $Function(
-    function = $SubSup(
-      body = 'mult',
-      sub = 𝑻
-    ),
+    function = $SubSup(body = 'mult', sub = 𝑻),
     arguments = [t]
   ),
   definition = [%structuralCases(

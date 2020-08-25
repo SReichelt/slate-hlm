@@ -10,19 +10,12 @@ $Set(
   ),
   definitionNotation = {
     parameter = #(t: %Expr),
-    notation = $ElementParameter(
-      variable = t,
-      set = 𝑻
-    )
+    notation = $ElementParameter(variable = t, set = 𝑻)
   },
   definition = [%subset(
     #(s: %Element(S)),
     %not(%equals(
-      $multiplicity(
-        S = S,
-        𝑻 = 𝑻,
-        t = s
-      ),
+      $multiplicity(S = S, 𝑻 = 𝑻, t = s),
       $../../Numbers/Natural/number(value = 0)
     ))
   )]

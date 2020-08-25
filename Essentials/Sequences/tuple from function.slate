@@ -18,10 +18,7 @@ $"tuple from function"(
     function = 'tpl',
     arguments = [f]
   ),
-  definition = [$Tuples(
-      S = S,
-      α = α
-    ).sequence(_1 = {
+  definition = [$Tuples(S = S, α = α).sequence(_1 = {
       #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
       {a = $../Functions/value(
         X = $../Numbers/Ordinal/Subsets/"Segment (less)"(α = α),

@@ -2,11 +2,7 @@
 
 $value(
   X,Y,Z: %Set(auto = %true),
-  ∗: %Element($Operations(
-    X = X,
-    Y = Y,
-    Z = Z
-  )),
+  ∗: %Element($Operations(X = X, Y = Y, Z = Z)),
   x: %Element(X),
   y: %Element(Y)
 ): %ExplicitOperator {
@@ -17,11 +13,7 @@ $value(
   definition = [
     %structuralCases(
       ∗,
-      $Operations(
-        X = X,
-        Y = Y,
-        Z = Z
-      ),
+      $Operations(X = X, Y = Y, Z = Z),
       [{
         constructor = $Operations.operation,
         parameters = #(_1: %Binder(
@@ -35,19 +27,10 @@ $value(
       }]
     ),
     $../Functions/value(
-      X = $../Sets/"Cartesian product"(
-        S = X,
-        T = Y
-      ),
+      X = $../Sets/"Cartesian product"(S = X, T = Y),
       Y = Z,
       f = ∗,
-      x = $../Sets/"Cartesian product"(
-          S = X,
-          T = Y
-        ).pair(
-          s = x,
-          t = y
-      )
+      x = $../Sets/"Cartesian product"(S = X, T = Y).pair(s = x, t = y)
     )
   ]
 }

@@ -20,10 +20,7 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     #(a: %Element(S))
   )): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = a,
-        style = '()'
-      ),
+      body = $Parens(body = a, style = '()'),
       sub = $ElementRelation(operands = [n, 'ℕ'])
     ),
     equalityDefinition = {
@@ -43,10 +40,7 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  notation = $SubSup(
-    body = S,
-    sup = 'ω'
-  ),
+  notation = $SubSup(body = S, sup = 'ω'),
   definitionNotation = {
     parameter = #(𝐚: %Expr),
     singularName = ['sequence', ' on ', S],

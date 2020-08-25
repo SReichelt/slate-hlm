@@ -15,11 +15,7 @@ $"Binomial theorem"(
   claim = %equals(
     $../"power to natural number"(
       𝐑 = 𝐑,
-      a = $../sum(
-        𝐑 = 𝐑,
-        a = a,
-        b = b
-      ),
+      a = $../sum(𝐑 = 𝐑, a = a, b = b),
       n = n
     ),
     $../../../Essentials/Operations/"Iterated operations"/"indexed by integer"(
@@ -34,25 +30,15 @@ $"Binomial theorem"(
         ))),
         {a = $../"product with natural number"(
           𝐑 = 𝐑,
-          n = $../../../Essentials/Numbers/Natural/"binomial coefficient"(
-            n = n,
-            k = k
-          ),
+          n = $../../../Essentials/Numbers/Natural/"binomial coefficient"(n = n, k = k),
           a = %associative($../product(
             𝐑 = 𝐑,
             a = $../"power to natural number"(
               𝐑 = 𝐑,
               a = a,
-              n = $../../../Essentials/Numbers/Natural/difference(
-                n = n,
-                m = k
-              )
+              n = $../../../Essentials/Numbers/Natural/difference(n = n, m = k)
             ),
-            b = $../"power to natural number"(
-              𝐑 = 𝐑,
-              a = b,
-              n = k
-            )
+            b = $../"power to natural number"(𝐑 = 𝐑, a = b, n = k)
           ))
         )}
       }

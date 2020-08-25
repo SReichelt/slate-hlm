@@ -15,10 +15,7 @@ $integers: %ExplicitOperator {
         Z = $../../../Essentials/Numbers/Integer/Integers
       ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Integer/Integers)),
-        {z = $../../../Essentials/Numbers/Integer/sum(
-          a = a,
-          b = b
-        )}
+        {z = $../../../Essentials/Numbers/Integer/sum(a = a, b = b)}
     }),
     "0" = $../../../Essentials/Numbers/Natural/number(value = 0),
     ⊖ = $../../../Essentials/Functions/Functions(
@@ -34,10 +31,7 @@ $integers: %ExplicitOperator {
         Z = $../../../Essentials/Numbers/Integer/Integers
       ).operation(_1 = {
         #(a,b: %Element($../../../Essentials/Numbers/Integer/Integers)),
-        {z = $../../../Essentials/Numbers/Integer/product(
-          a = a,
-          b = b
-        )}
+        {z = $../../../Essentials/Numbers/Integer/product(a = a, b = b)}
     }),
     "1" = $../../../Essentials/Numbers/Natural/number(value = 1)
   )]

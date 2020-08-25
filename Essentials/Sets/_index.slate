@@ -24,17 +24,8 @@ $Sets: %Section {
     %item($"Power set"),
     %item($"Truth values"),
     %item($"maximal subset"),
-    %subsection(
-      $"Generalized operators",
-      'Generalized operators'
-    ),
-    %subsection(
-      $Choice,
-      'Choice functions and axioms'
-    ),
-    %subsection(
-      $Multisets,
-      'Multisets'
-    )
+    %subsection($"Generalized operators", 'Generalized operators'),
+    %subsection($Choice, 'Choice functions and axioms'),
+    %subsection($Multisets, 'Multisets')
   ]
 }

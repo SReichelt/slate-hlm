@@ -13,17 +13,11 @@ $identity(
     auto = %true
   ),
   𝐗: %Element(
-    $Objects(
-      u = u,
-      𝓒 = 𝓒
-    ),
+    $Objects(u = u, 𝓒 = 𝓒),
     auto = %true
   )
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = 'id',
-    sub = 𝐗
-  ),
+  notation = $SubSup(body = 'id', sub = 𝐗),
   definition = [%structuralCases(
     𝓒,
     $Categories(u = u),
@@ -41,11 +35,7 @@ $identity(
         ),
         _3: %Binder(
           #(𝐃,𝐄,𝐅: %Element(O)),
-          #(∘: %Element($../Essentials/Operations/Operations(
-            X = M[𝐀 = 𝐄, 𝐁 = 𝐅],
-            Y = M[𝐀 = 𝐃, 𝐁 = 𝐄],
-            Z = M[𝐀 = 𝐃, 𝐁 = 𝐅]
-          )))
+          #(∘: %Element($../Essentials/Operations/Operations(X = M[𝐀 = 𝐄, 𝐁 = 𝐅], Y = M[𝐀 = 𝐃, 𝐁 = 𝐄], Z = M[𝐀 = 𝐃, 𝐁 = 𝐅])))
         ),
         _4: %Constraint(%forall(
           #(
@@ -60,14 +50,7 @@ $identity(
               Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
               Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐙],
-              x = $../Essentials/Operations/value(
-                X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
-                Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                Z = M[𝐀 = 𝐗, 𝐁 = 𝐙],
-                ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐙],
-                x = h,
-                y = g
-              ),
+              x = $../Essentials/Operations/value(X = M[𝐀 = 𝐘, 𝐁 = 𝐙], Y = M[𝐀 = 𝐗, 𝐁 = 𝐘], Z = M[𝐀 = 𝐗, 𝐁 = 𝐙], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐙], x = h, y = g),
               y = f
             ),
             $../Essentials/Operations/value(
@@ -76,14 +59,7 @@ $identity(
               Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐘, 𝐅 = 𝐙],
               x = h,
-              y = $../Essentials/Operations/value(
-                X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
-                Z = M[𝐀 = 𝐖, 𝐁 = 𝐘],
-                ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐘],
-                x = g,
-                y = f
-              )
+              y = $../Essentials/Operations/value(X = M[𝐀 = 𝐗, 𝐁 = 𝐘], Y = M[𝐀 = 𝐖, 𝐁 = 𝐗], Z = M[𝐀 = 𝐖, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐘], x = g, y = f)
             )
           )
         )),
@@ -93,22 +69,8 @@ $identity(
             f: %Element(M[𝐀 = 𝐗, 𝐁 = 𝐘])
           ),
           %equals(
-            $../Essentials/Operations/value(
-              X = M[𝐀 = 𝐘, 𝐁 = 𝐘],
-              Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-              Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-              ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐘],
-              x = i[𝐂 = 𝐘],
-              y = f
-            ),
-            $../Essentials/Operations/value(
-              X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-              Y = M[𝐀 = 𝐗, 𝐁 = 𝐗],
-              Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-              ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐗, 𝐅 = 𝐘],
-              x = f,
-              y = i[𝐂 = 𝐗]
-            ),
+            $../Essentials/Operations/value(X = M[𝐀 = 𝐘, 𝐁 = 𝐘], Y = M[𝐀 = 𝐗, 𝐁 = 𝐘], Z = M[𝐀 = 𝐗, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐘], x = i[𝐂 = 𝐘], y = f),
+            $../Essentials/Operations/value(X = M[𝐀 = 𝐗, 𝐁 = 𝐘], Y = M[𝐀 = 𝐗, 𝐁 = 𝐗], Z = M[𝐀 = 𝐗, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐗, 𝐅 = 𝐘], x = f, y = i[𝐂 = 𝐗]),
             f
           )
         )),
@@ -122,25 +84,11 @@ $identity(
               ),
               formula = %and(
                 %equals(
-                  $../Essentials/Operations/value(
-                    X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                    Y = M[𝐀 = 𝐘, 𝐁 = 𝐗],
-                    Z = M[𝐀 = 𝐘, 𝐁 = 𝐘],
-                    ∗ = ∘[𝐃 = 𝐘, 𝐄 = 𝐗, 𝐅 = 𝐘],
-                    x = f,
-                    y = g
-                  ),
+                  $../Essentials/Operations/value(X = M[𝐀 = 𝐗, 𝐁 = 𝐘], Y = M[𝐀 = 𝐘, 𝐁 = 𝐗], Z = M[𝐀 = 𝐘, 𝐁 = 𝐘], ∗ = ∘[𝐃 = 𝐘, 𝐄 = 𝐗, 𝐅 = 𝐘], x = f, y = g),
                   i[𝐂 = 𝐘]
                 ),
                 %equals(
-                  $../Essentials/Operations/value(
-                    X = M[𝐀 = 𝐘, 𝐁 = 𝐗],
-                    Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
-                    Z = M[𝐀 = 𝐗, 𝐁 = 𝐗],
-                    ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐗],
-                    x = g,
-                    y = f
-                  ),
+                  $../Essentials/Operations/value(X = M[𝐀 = 𝐘, 𝐁 = 𝐗], Y = M[𝐀 = 𝐗, 𝐁 = 𝐘], Z = M[𝐀 = 𝐗, 𝐁 = 𝐗], ∗ = ∘[𝐃 = 𝐗, 𝐄 = 𝐘, 𝐅 = 𝐗], x = g, y = f),
                   i[𝐂 = 𝐗]
                 )
               )

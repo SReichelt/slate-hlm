@@ -10,19 +10,13 @@ $"Finite-dimensional vector spaces are isomorphic to column vector spaces"(
     auto = %true
   ),
   𝐕: %Element($../"Vector spaces"(𝐅 = 𝐅)),
-  _1: %Constraint($../"finite-dimensional"(
-    𝐅 = 𝐅,
-    𝐕 = 𝐕
-  ))
+  _1: %Constraint($../"finite-dimensional"(𝐅 = 𝐅, 𝐕 = 𝐕))
 ): %StandardTheorem {
   claim = %equals(
     𝐕,
     $"column vector space"(
       𝐅 = 𝐅,
-      n = $../dimension(
-        𝐅 = 𝐅,
-        𝐕 = 𝐕
-      )
+      n = $../dimension(𝐅 = 𝐅, 𝐕 = 𝐕)
     )
   )
 }

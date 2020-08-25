@@ -8,34 +8,18 @@
 $"sequence from well-ordered set"(
   S: %Set,
   ⪯: %Element($../Relations/Endorelations(S = S)),
-  _1: %Constraint($../Relations/"well-order"(
-    S = S,
-    ⪯ = ⪯
-  )),
-  α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(
-    S = S,
-    ⪯ = ⪯
-  ))
+  _1: %Constraint($../Relations/"well-order"(S = S, ⪯ = ⪯)),
+  α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(S = S, ⪯ = ⪯))
 ): %ExplicitOperator {
   notation = $Function(
-    function = $SubSup(
-      body = 'seq',
-      sub = ⪯
-    ),
+    function = $SubSup(body = 'seq', sub = ⪯),
     arguments = [S]
   ),
   definition = [$"Ordinal-indexed sequences"(S = S).sequence(
       α = α,
-      𝐚 = $Tuples(
-          S = S,
-          α = α
-        ).sequence(_1 = {
+      𝐚 = $Tuples(S = S, α = α).sequence(_1 = {
           #(β: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
-          {a = $"indexed element in well-ordered set"(
-            S = S,
-            ⪯ = ⪯,
-            β = β
-          )}
+          {a = $"indexed element in well-ordered set"(S = S, ⪯ = ⪯, β = β)}
       })
   )]
 }

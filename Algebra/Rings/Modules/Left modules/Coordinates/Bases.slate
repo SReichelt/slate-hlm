@@ -17,14 +17,7 @@ $Bases(
     pluralName = ['bases', ' of ', 𝐌]
   },
   definition = [%subset(
-    #(𝒙: %Element($"Element sequences"(
-      𝐑 = 𝐑,
-      𝐌 = 𝐌
-    ))),
-    $basis(
-      𝐑 = 𝐑,
-      𝐌 = 𝐌,
-      𝒙 = 𝒙
-    )
+    #(𝒙: %Element($"Element sequences"(𝐑 = 𝐑, 𝐌 = 𝐌))),
+    $basis(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙)
   )]
 }

@@ -1,18 +1,11 @@
 %../../../../../../logics/hlm%
 
 $"Segment (greater or equal)"(a: %Element($../"Rational numbers")): %SetOperator {
-  notation = $Segment(
-    set = 'ℚ',
-    symbol = '≥',
-    limit = a
-  ),
+  notation = $Segment(set = 'ℚ', symbol = '≥', limit = a),
   definition = [
     %subset(
       #(b: %Element($../"Rational numbers")),
-      $../"less or equal"(
-        b = b,
-        a = a
-      )
+      $../"less or equal"(b = b, a = a)
     ),
     $../../../Sets/"Relative complement"(
       U = $../"Rational numbers",

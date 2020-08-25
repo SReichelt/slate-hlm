@@ -5,33 +5,15 @@
  */
 $"mapping as function"(
   S,T: %Set(auto = %true),
-  ≺: %Element($../Relations/Relations(
-    S = S,
-    T = T
-  )),
-  _1: %Constraint($../Relations/mapping(
-    S = S,
-    T = T,
-    ≺ = ≺
-  ))
+  ≺: %Element($../Relations/Relations(S = S, T = T)),
+  _1: %Constraint($../Relations/mapping(S = S, T = T, ≺ = ≺))
 ): %ExplicitOperator {
   notation = $SubSup(
-    body = $Parens(
-      body = ≺,
-      style = '()'
-    ),
+    body = $Parens(body = ≺, style = '()'),
     sub = $FunctionOperator(operands = [S, T])
   ),
-  definition = [$Functions(
-      X = S,
-      Y = T
-    ).function(_1 = {
+  definition = [$Functions(X = S, Y = T).function(_1 = {
       #(s: %Element(S)),
-      {y = $../Relations/"mapping value"(
-        S = S,
-        T = T,
-        ≺ = ≺,
-        s = s
-      )}
+      {y = $../Relations/"mapping value"(S = S, T = T, ≺ = ≺, s = s)}
   })]
 }

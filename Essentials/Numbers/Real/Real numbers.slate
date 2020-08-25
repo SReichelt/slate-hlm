@@ -13,10 +13,7 @@ $"Real numbers": %Construction {
     r: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
     _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = r))
   ): %Constructor {
-    notation = $Parens(
-      body = r,
-      style = '[]'
-    ),
+    notation = $Parens(body = r, style = '[]'),
     equalityDefinition = {
       leftParameters = #(
         r: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
@@ -27,10 +24,7 @@ $"Real numbers": %Construction {
         _2: %Constraint($../Rational/Sequences/cauchy(𝐚 = "r'"))
       ),
       definition = [$../Rational/Sequences/converges(
-        𝐚 = $../Rational/Sequences/"sequence difference"(
-          𝐚 = r,
-          𝐛 = "r'"
-        ),
+        𝐚 = $../Rational/Sequences/"sequence difference"(𝐚 = r, 𝐛 = "r'"),
         l = $../Natural/number(value = 0)
       )]
     }

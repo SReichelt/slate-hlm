@@ -10,10 +10,7 @@
  */
 $value(
   X,Y: %Set(auto = %true),
-  f: %Element($Functions(
-    X = X,
-    Y = Y
-  )),
+  f: %Element($Functions(X = X, Y = Y)),
   x: %Element(X)
 ): %ExplicitOperator {
   notation = $Function(
@@ -22,10 +19,7 @@ $value(
   ),
   definition = [%structuralCases(
     f,
-    $Functions(
-      X = X,
-      Y = Y
-    ),
+    $Functions(X = X, Y = Y),
     [{
       constructor = $Functions.function,
       parameters = #(_1: %Binder(

@@ -13,10 +13,7 @@ $"Span of element"(
   ),
   g: %Element($../Carrier(𝐆 = 𝐆))
 ): %SetOperator {
-  notation = $Parens(
-    body = g,
-    style = '<>'
-  ),
+  notation = $Parens(body = g, style = '<>'),
   definition = [
     $Span(
       𝐆 = 𝐆,
@@ -24,11 +21,7 @@ $"Span of element"(
     ),
     %extendedSubset(
       #(z: %Element($../../../Essentials/Numbers/Integer/Integers)),
-      $../"power to integer"(
-        𝐆 = 𝐆,
-        a = g,
-        z = z
-      )
+      $../"power to integer"(𝐆 = 𝐆, a = g, z = z)
     )
   ]
 }

@@ -28,63 +28,31 @@ $Homomorphisms(
   definition = [
     %subset(
       #(f: %Element($../../../../../Essentials/Functions/Functions(
-        X = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌
-        ),
-        Y = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐍
-        )
+        X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+        Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍)
       ))),
       %and(
         %forall(
-          #(x,y: %Element($../Carrier(
-            𝐑 = 𝐑,
-            𝐌 = 𝐌
-          ))),
+          #(x,y: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))),
           %equals(
             $../../../../../Essentials/Functions/value(
-              X = $../Carrier(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌
-              ),
-              Y = $../Carrier(
-                𝐑 = 𝐑,
-                𝐌 = 𝐍
-              ),
+              X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+              Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
               f = f,
-              x = $../sum(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌,
-                x = x,
-                y = y
-              )
+              x = $../sum(𝐑 = 𝐑, 𝐌 = 𝐌, x = x, y = y)
             ),
             $../sum(
               𝐑 = 𝐑,
               𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐌
-                ),
-                Y = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐍
-                ),
+                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 f = f,
                 x = x
               ),
               y = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐌
-                ),
-                Y = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐍
-                ),
+                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 f = f,
                 x = y
               )
@@ -93,59 +61,28 @@ $Homomorphisms(
         ),
         %equals(
           $../../../../../Essentials/Functions/value(
-            X = $../Carrier(
-              𝐑 = 𝐑,
-              𝐌 = 𝐌
-            ),
-            Y = $../Carrier(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍
-            ),
+            X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+            Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
             f = f,
-            x = $../zero(
-              𝐑 = 𝐑,
-              𝐌 = 𝐌
-            )
+            x = $../zero(𝐑 = 𝐑, 𝐌 = 𝐌)
           ),
-          $../zero(
-            𝐑 = 𝐑,
-            𝐌 = 𝐍
-          )
+          $../zero(𝐑 = 𝐑, 𝐌 = 𝐍)
         ),
         %forall(
-          #(z: %Element($../Carrier(
-            𝐑 = 𝐑,
-            𝐌 = 𝐌
-          ))),
+          #(z: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))),
           %equals(
             $../../../../../Essentials/Functions/value(
-              X = $../Carrier(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌
-              ),
-              Y = $../Carrier(
-                𝐑 = 𝐑,
-                𝐌 = 𝐍
-              ),
+              X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+              Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
               f = f,
-              x = $../"additive inverse"(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌,
-                x = z
-              )
+              x = $../"additive inverse"(𝐑 = 𝐑, 𝐌 = 𝐌, x = z)
             ),
             $../"additive inverse"(
               𝐑 = 𝐑,
               𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐌
-                ),
-                Y = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐍
-                ),
+                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 f = f,
                 x = z
               )
@@ -155,42 +92,22 @@ $Homomorphisms(
         %forall(
           #(
             a: %Element($../../../Carrier(𝐑 = 𝐑)),
-            w: %Element($../Carrier(
-              𝐑 = 𝐑,
-              𝐌 = 𝐌
-            ))
+            w: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
           ),
           %equals(
             $../../../../../Essentials/Functions/value(
-              X = $../Carrier(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌
-              ),
-              Y = $../Carrier(
-                𝐑 = 𝐑,
-                𝐌 = 𝐍
-              ),
+              X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+              Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
               f = f,
-              x = $../product(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌,
-                x = w,
-                a = a
-              )
+              x = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, x = w, a = a)
             ),
             $../product(
               𝐑 = 𝐑,
               𝐌 = 𝐍,
               a = a,
               x = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐌
-                ),
-                Y = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐍
-                ),
+                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 x = w,
                 f = f
               )
@@ -201,49 +118,24 @@ $Homomorphisms(
     ),
     %subset(
       #(f: %Element($../../../../../Essentials/Functions/Functions(
-        X = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌
-        ),
-        Y = $../Carrier(
-          𝐑 = 𝐑,
-          𝐌 = 𝐍
-        )
+        X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+        Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍)
       ))),
       %forall(
         #(
           a,b: %Element($../../../Carrier(𝐑 = 𝐑)),
-          x,y: %Element($../Carrier(
-            𝐑 = 𝐑,
-            𝐌 = 𝐌
-          ))
+          x,y: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
         ),
         %equals(
           $../../../../../Essentials/Functions/value(
-            X = $../Carrier(
-              𝐑 = 𝐑,
-              𝐌 = 𝐌
-            ),
-            Y = $../Carrier(
-              𝐑 = 𝐑,
-              𝐌 = 𝐍
-            ),
+            X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+            Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
             f = f,
             x = $../sum(
               𝐑 = 𝐑,
               𝐌 = 𝐌,
-              x = $../product(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌,
-                x = x,
-                a = a
-              ),
-              y = $../product(
-                𝐑 = 𝐑,
-                𝐌 = 𝐌,
-                x = y,
-                a = b
-              )
+              x = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, x = x, a = a),
+              y = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, x = y, a = b)
             )
           ),
           $../sum(
@@ -253,14 +145,8 @@ $Homomorphisms(
               𝐑 = 𝐑,
               𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐌
-                ),
-                Y = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐍
-                ),
+                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 f = f,
                 x = x
               ),
@@ -270,14 +156,8 @@ $Homomorphisms(
               𝐑 = 𝐑,
               𝐌 = 𝐍,
               x = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐌
-                ),
-                Y = $../Carrier(
-                  𝐑 = 𝐑,
-                  𝐌 = 𝐍
-                ),
+                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 f = f,
                 x = y
               ),

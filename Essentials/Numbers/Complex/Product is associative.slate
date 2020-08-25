@@ -3,16 +3,9 @@
 $"Product is associative": %StandardTheorem {
   claim = $../../Operations/associative(
     X = $"Complex numbers",
-    ∗ = $../../Operations/Operations(
-        X = $"Complex numbers",
-        Y = $"Complex numbers",
-        Z = $"Complex numbers"
-      ).operation(_1 = {
+    ∗ = $../../Operations/Operations(X = $"Complex numbers", Y = $"Complex numbers", Z = $"Complex numbers").operation(_1 = {
         #(a,b: %Element($"Complex numbers")),
-        {z = $product(
-          a = a,
-          b = b
-        )}
+        {z = $product(a = a, b = b)}
     })
   )
 }

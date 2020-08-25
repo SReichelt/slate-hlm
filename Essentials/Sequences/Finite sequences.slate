@@ -13,35 +13,20 @@
 $"Finite sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
     n: %Element($../Numbers/Natural/"Natural numbers"),
-    𝐚: %Element($Tuples(
-      S = S,
-      α = n
-    ))
+    𝐚: %Element($Tuples(S = S, α = n))
   ): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = 𝐚,
-        style = '()'
-      ),
-      sub = $SubSup(
-        body = S,
-        sup = n
-      )
+      body = $Parens(body = 𝐚, style = '()'),
+      sub = $SubSup(body = S, sup = n)
     ),
     equalityDefinition = {
       leftParameters = #(
         m: %Element($../Numbers/Natural/"Natural numbers"),
-        𝐚: %Element($Tuples(
-          S = S,
-          α = m
-        ))
+        𝐚: %Element($Tuples(S = S, α = m))
       ),
       rightParameters = #(
         n: %Element($../Numbers/Natural/"Natural numbers"),
-        𝐛: %Element($Tuples(
-          S = S,
-          α = n
-        ))
+        𝐛: %Element($Tuples(S = S, α = n))
       ),
       definition = [%and(
         %equals(m, n),
@@ -49,20 +34,14 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
           𝐚,
           %structuralCases(
             𝐛,
-            $Tuples(
-              S = S,
-              α = n
-            ),
+            $Tuples(S = S, α = n),
             [{
               constructor = $Tuples.sequence,
               parameters = #(_1: %Binder(
                 #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = n))),
                 #(b: %Element(S))
               )),
-              value = $Tuples(
-                  S = S,
-                  α = m
-                ).sequence(_1 = {
+              value = $Tuples(S = S, α = m).sequence(_1 = {
                   #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = m))),
                   {a = b[k = j]}
               })
@@ -74,10 +53,7 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
     }
   }
 
-  notation = $SubSup(
-    body = S,
-    sup = '∗'
-  ),
+  notation = $SubSup(body = S, sup = '∗'),
   definitionNotation = {
     parameter = #(𝒂: %Expr),
     singularName = ['finite sequence', ' on ', S],

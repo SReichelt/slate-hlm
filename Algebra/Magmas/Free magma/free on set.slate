@@ -22,10 +22,7 @@ $"free on set"(
         ))
       ),
       %existsUnique(
-        #(φ: %Element($../Homomorphisms/Homomorphisms(
-          𝐌 = 𝐌,
-          𝐍 = 𝐍
-        ))),
+        #(φ: %Element($../Homomorphisms/Homomorphisms(𝐌 = 𝐌, 𝐍 = 𝐍))),
         formula = %equals(
           $../../../Essentials/Functions/restriction(
             X = $../Carrier(𝐌 = 𝐌),

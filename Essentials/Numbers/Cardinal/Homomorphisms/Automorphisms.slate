@@ -23,8 +23,5 @@ $Automorphisms(κ: %Element($../"Cardinal numbers")): %SetOperator {
     singularName = 'automorphism',
     pluralName = 'automorphisms'
   },
-  definition = [$Isomorphisms(
-    κ = κ,
-    μ = κ
-  )]
+  definition = [$Isomorphisms(κ = κ, μ = κ)]
 }

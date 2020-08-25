@@ -10,35 +10,19 @@ $"inner operation restriction"(
   _1: %Constraint(%forall(
     #(x,y: %Element(A)),
     %in(
-      $value(
-        X = X,
-        Y = X,
-        Z = X,
-        ∗ = ∗,
-        x = x,
-        y = y
-      ),
+      $value(X = X, Y = X, Z = X, ∗ = ∗, x = x, y = y),
       A
     )
   ))
 ): %ExplicitOperator {
   notation = $PostfixUnaryOperator(
-    symbol = $SubSup(
-      body = '∣',
-      sub = A
-    ),
+    symbol = $SubSup(body = '∣', sub = A),
     operand = ∗,
     minParenLevel = 3
   ),
   definition = [$../Functions/"codomain restriction"(
-    X = $../Sets/"Cartesian product"(
-      S = X,
-      T = X
-    ),
-    A = $../Sets/"Cartesian product"(
-      S = A,
-      T = A
-    ),
+    X = $../Sets/"Cartesian product"(S = X, T = X),
+    A = $../Sets/"Cartesian product"(S = A, T = A),
     Y = X,
     B = A,
     f = ∗

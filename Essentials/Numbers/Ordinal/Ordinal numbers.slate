@@ -11,10 +11,7 @@ $"Ordinal numbers": %Construction {
   $"order type"(
     S: %Set,
     ⪯: %Element($../../Relations/Endorelations(S = S)),
-    _1: %Constraint($../../Relations/"well-order"(
-      S = S,
-      ⪯ = ⪯
-    ))
+    _1: %Constraint($../../Relations/"well-order"(S = S, ⪯ = ⪯))
   ): %Constructor {
     notation = $Tuple(
       items = [S, ⪯],
@@ -24,31 +21,16 @@ $"Ordinal numbers": %Construction {
       leftParameters = #(
         S: %Set,
         ⪯: %Element($../../Relations/Endorelations(S = S)),
-        _1: %Constraint($../../Relations/"well-order"(
-          S = S,
-          ⪯ = ⪯
-        ))
+        _1: %Constraint($../../Relations/"well-order"(S = S, ⪯ = ⪯))
       ),
       rightParameters = #(
         T: %Set,
         ⊑: %Element($../../Relations/Endorelations(S = T)),
-        _1: %Constraint($../../Relations/"well-order"(
-          S = T,
-          ⪯ = ⊑
-        ))
+        _1: %Constraint($../../Relations/"well-order"(S = T, ⪯ = ⊑))
       ),
       definition = [%exists(
-        #(φ: %Element($../../Functions/Bijections(
-          X = S,
-          Y = T
-        ))),
-        formula = $../../../Algebra/Generic/Isomorphisms/"relation condition"(
-          X = S,
-          Y = T,
-          φ = φ,
-          ≺ = ⪯,
-          ⊂ = ⊑
-        )
+        #(φ: %Element($../../Functions/Bijections(X = S, Y = T))),
+        formula = $../../../Algebra/Generic/Isomorphisms/"relation condition"(X = S, Y = T, φ = φ, ≺ = ⪯, ⊂ = ⊑)
       )],
       isomorphic = %true
     }
@@ -73,10 +55,7 @@ $"Ordinal numbers": %Construction {
             T = $../Natural/"Natural numbers"
           ).relation(_1 = {
             #(m,n: %Element($../Natural/"Natural numbers")),
-            {p = $../Natural/"less or equal"(
-              m = m,
-              n = n
-            )}
+            {p = $../Natural/"less or equal"(m = m, n = n)}
         })
       )
     )

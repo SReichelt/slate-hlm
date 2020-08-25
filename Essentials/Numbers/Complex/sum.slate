@@ -18,14 +18,8 @@ $sum(a,b: %Element($"Complex numbers")): %ExplicitOperator {
           constructor = $"Complex numbers".complex,
           parameters = #(r_a,i_a: %Element($../Real/"Real numbers")),
           value = $"Complex numbers".complex(
-            r = $../Real/sum(
-              a = r_a,
-              b = r_b
-            ),
-            i = $../Real/sum(
-              a = i_a,
-              b = i_b
-            )
+            r = $../Real/sum(a = r_a, b = r_b),
+            i = $../Real/sum(a = i_a, b = i_b)
           )
         }]
       )

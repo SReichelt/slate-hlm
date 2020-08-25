@@ -20,11 +20,7 @@ $"submonoid set"(
     %forall(
       #(a,b: %Element(S)),
       %in(
-        $../operation(
-          𝐌 = 𝐌,
-          a = a,
-          b = b
-        ),
+        $../operation(𝐌 = 𝐌, a = a, b = b),
         S
       )
     ),

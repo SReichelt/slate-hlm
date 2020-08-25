@@ -6,28 +6,16 @@ $Ordinal: %Section {
     %item($"Ordinal numbers"),
     %item($Carrier),
     %item($before),
-    %subsection(
-      $Homomorphisms,
-      'Homomorphisms'
-    ),
-    %subsection(
-      $"Ordered subsets",
-      'Ordered subsets'
-    ),
+    %subsection($Homomorphisms, 'Homomorphisms'),
+    %subsection($"Ordered subsets", 'Ordered subsets'),
     %item($"less or equal"),
     %item($less),
-    %subsection(
-      $Subsets,
-      'Subsets'
-    ),
+    %subsection($Subsets, 'Subsets'),
     %item($"Equality criterion"),
     %item($"Less or equal is a well-order"),
     %item($sum),
     %item($product),
-    %subsection(
-      $Examples,
-      'Examples'
-    ),
+    %subsection($Examples, 'Examples'),
     %item($cardinality),
     %item($finite),
     %item($countable),

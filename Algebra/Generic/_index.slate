@@ -2,8 +2,5 @@
 
 $Generic: %Section {
   logic = 'hlm',
-  items = [%subsection(
-    $Isomorphisms,
-    'Isomorphisms'
-  )]
+  items = [%subsection($Isomorphisms, 'Isomorphisms')]
 }

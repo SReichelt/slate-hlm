@@ -13,27 +13,15 @@ $"p-element"(
 ): %Predicate {
   notation = $NounProperty(
     operand = g,
-    singular = $DependentWord(
-      word = 'element',
-      argument = p
-    ),
-    plural = $DependentWord(
-      word = 'element',
-      argument = p
-    )
+    singular = $DependentWord(word = 'element', argument = p),
+    plural = $DependentWord(word = 'element', argument = p)
   ),
   definition = [
     %exists(
       #(n: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
       formula = %equals(
-        $../"element order"(
-          𝐆 = 𝐆,
-          g = g
-        ),
-        $../../../../Essentials/Numbers/Natural/power(
-          m = p,
-          n = n
-        )
+        $../"element order"(𝐆 = 𝐆, g = g),
+        $../../../../Essentials/Numbers/Natural/power(m = p, n = n)
       )
     ),
     %exists(
@@ -42,10 +30,7 @@ $"p-element"(
         $../../"power to natural number"(
           𝐆 = 𝐆,
           a = g,
-          n = $../../../../Essentials/Numbers/Natural/power(
-            m = p,
-            n = m
-          )
+          n = $../../../../Essentials/Numbers/Natural/power(m = p, n = m)
         ),
         $../../identity(𝐆 = 𝐆)
       )

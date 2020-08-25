@@ -14,10 +14,7 @@ $dimension(
     $../../../"Formal systems"/Variables,
     auto = %true
   ),
-  p: %Element($Polynomials(
-    𝐑 = 𝐑,
-    X = X
-  ))
+  p: %Element($Polynomials(𝐑 = 𝐑, X = X))
 ): %ExplicitOperator {
   notation = $Function(
     function = 'dim',
@@ -25,10 +22,7 @@ $dimension(
   ),
   definition = [%structuralCases(
     p,
-    $Polynomials(
-      𝐑 = 𝐑,
-      X = X
-    ),
+    $Polynomials(𝐑 = 𝐑, X = X),
     [
       {
         constructor = $Polynomials.zero,
@@ -37,18 +31,12 @@ $dimension(
       {
         constructor = $Polynomials.term,
         parameters = #(
-          q: %Element($Polynomials(
-            𝐑 = 𝐑,
-            X = X
-          )),
+          q: %Element($Polynomials(𝐑 = 𝐑, X = X)),
           a: %Element($../Carrier(𝐑 = 𝐑)),
           _1: %Constraint(%or(
             %not(%equals(
               q,
-              $Polynomials(
-                  𝐑 = 𝐑,
-                  X = X
-                ).zero
+              $Polynomials(𝐑 = 𝐑, X = X).zero
             )),
             %not(%equals(
               a,
@@ -57,11 +45,7 @@ $dimension(
           ))
         ),
         value = $../../../Essentials/Numbers/Natural/sum(
-          m = $dimension(
-            𝐑 = 𝐑,
-            X = X,
-            p = q
-          ),
+          m = $dimension(𝐑 = 𝐑, X = X, p = q),
           n = $../../../Essentials/Numbers/Natural/number(value = 1)
         )
       }

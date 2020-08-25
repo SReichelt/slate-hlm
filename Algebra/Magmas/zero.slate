@@ -7,19 +7,10 @@ $zero(
   𝐌: %Element($Magmas),
   _1: %Constraint(%exists(
     #(z: %Element($Carrier(𝐌 = 𝐌))),
-    formula = $"absorbing element"(
-      𝐌 = 𝐌,
-      z = z
-    )
+    formula = $"absorbing element"(𝐌 = 𝐌, z = z)
   ))
 ): %ImplicitOperator {
-  notation = $SubSup(
-    body = '0',
-    sub = 𝐌
-  ),
+  notation = $SubSup(body = '0', sub = 𝐌),
   parameter = #(m: %Element($Carrier(𝐌 = 𝐌))),
-  definition = [$"absorbing element"(
-    𝐌 = 𝐌,
-    z = m
-  )]
+  definition = [$"absorbing element"(𝐌 = 𝐌, z = m)]
 }

@@ -6,22 +6,13 @@ $restriction(
   T: %Subset(S)
 ): %ExplicitOperator {
   notation = $PostfixUnaryOperator(
-    symbol = $SubSup(
-      body = '∣',
-      sub = T
-    ),
+    symbol = $SubSup(body = '∣', sub = T),
     operand = ≺,
     minParenLevel = 3
   ),
   definition = [$../Properties/restriction(
-    S = $../Sets/"Cartesian product"(
-      S = S,
-      T = S
-    ),
+    S = $../Sets/"Cartesian product"(S = S, T = S),
     p = ≺,
-    T = $../Sets/"Cartesian product"(
-      S = T,
-      T = T
-    )
+    T = $../Sets/"Cartesian product"(S = T, T = T)
   )]
 }

@@ -8,17 +8,11 @@ $"infinite sequence from subset"(
   _1: %Constraint(%not($../../../Sets/finite(S = M)))
 ): %ExplicitOperator {
   notation = $Function(
-    function = $SubSup(
-      body = 'seq',
-      sub = 'ω'
-    ),
+    function = $SubSup(body = 'seq', sub = 'ω'),
     arguments = [M]
   ),
   definition = [$../../../Sequences/"Infinite sequences"(S = $../"Natural numbers").sequence(_1 = {
       #(n: %Element($../"Natural numbers")),
-      {a = $"indexed element"(
-        M = M,
-        n = n
-      )}
+      {a = $"indexed element"(M = M, n = n)}
   })]
 }

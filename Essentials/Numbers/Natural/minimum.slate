@@ -17,27 +17,18 @@ $minimum(
   definition = [
     %forall(
       #(n: %Element(M)),
-      $"less or equal"(
-        m = m,
-        n = n
-      )
+      $"less or equal"(m = m, n = n)
     ),
     %forall(
       #(
         l: %Element(M),
-        _2: %Constraint($"less or equal"(
-          m = l,
-          n = m
-        ))
+        _2: %Constraint($"less or equal"(m = l, n = m))
       ),
       %equals(l, m)
     ),
     %not(%exists(
       #(k: %Element(M)),
-      formula = $less(
-        m = k,
-        n = m
-      )
+      formula = $less(m = k, n = m)
     ))
   ]
 }

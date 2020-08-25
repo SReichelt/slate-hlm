@@ -13,10 +13,7 @@ $"submodule set"(
     auto = %true
   ),
   𝐌: %Element($../"Left modules"(𝐑 = 𝐑)),
-  S: %Subset($../Carrier(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  ))
+  S: %Subset($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
 ): %Predicate {
   notation = $NounRelation(
     operands = [S, 𝐌],
@@ -28,30 +25,18 @@ $"submodule set"(
       %forall(
         #(a,b: %Element(S)),
         %in(
-          $../sum(
-            𝐑 = 𝐑,
-            𝐌 = 𝐌,
-            x = a,
-            y = b
-          ),
+          $../sum(𝐑 = 𝐑, 𝐌 = 𝐌, x = a, y = b),
           S
         )
       ),
       %in(
-        $../zero(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌
-        ),
+        $../zero(𝐑 = 𝐑, 𝐌 = 𝐌),
         S
       ),
       %forall(
         #(c: %Element(S)),
         %in(
-          $../"additive inverse"(
-            𝐑 = 𝐑,
-            𝐌 = 𝐌,
-            x = c
-          ),
+          $../"additive inverse"(𝐑 = 𝐑, 𝐌 = 𝐌, x = c),
           S
         )
       ),
@@ -61,12 +46,7 @@ $"submodule set"(
           e: %Element(S)
         ),
         %in(
-          $../product(
-            𝐑 = 𝐑,
-            𝐌 = 𝐌,
-            a = d,
-            x = e
-          ),
+          $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = d, x = e),
           S
         )
       )
@@ -77,12 +57,7 @@ $"submodule set"(
         e: %Element(S)
       ),
       %in(
-        $../product(
-          𝐑 = 𝐑,
-          𝐌 = 𝐌,
-          a = d,
-          x = e
-        ),
+        $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = d, x = e),
         S
       )
     )

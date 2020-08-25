@@ -21,10 +21,7 @@ $rewritable(
   ),
   definition = [%or(
     %in(
-      $../"Rewriting rules"(T = $Terms(V = V)).rule(
-          l = L,
-          r = R
-      ),
+      $../"Rewriting rules"(T = $Terms(V = V)).rule(l = L, r = R),
       ℜ
     ),
     %structural(
@@ -170,22 +167,12 @@ $rewritable(
                 parameters = #(M,N: %Element($Terms(V = V))),
                 value = %or(
                   %and(
-                    $rewritable(
-                      V = V,
-                      ℜ = ℜ,
-                      L = M,
-                      R = O
-                    ),
+                    $rewritable(V = V, ℜ = ℜ, L = M, R = O),
                     %equals(N, P)
                   ),
                   %and(
                     %equals(M, O),
-                    $rewritable(
-                      V = V,
-                      ℜ = ℜ,
-                      L = N,
-                      R = P
-                    )
+                    $rewritable(V = V, ℜ = ℜ, L = N, R = P)
                   )
                 )
               }

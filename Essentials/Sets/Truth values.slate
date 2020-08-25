@@ -9,10 +9,7 @@
  */
 $"Truth values": %Construction {
   $"truth value"(p: %Prop): %Constructor {
-    notation = $Parens(
-      body = p,
-      style = '[]'
-    ),
+    notation = $Parens(body = p, style = '[]'),
     equalityDefinition = {
       leftParameters = #(p: %Prop),
       rightParameters = #(q: %Prop),

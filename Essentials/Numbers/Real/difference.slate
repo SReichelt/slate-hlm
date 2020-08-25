@@ -24,10 +24,7 @@ $difference(a,b: %Element($"Real numbers")): %ExplicitOperator {
               r_a: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
               _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = r_a))
             ),
-            value = $"Real numbers".class(r = $../Rational/Sequences/"sequence difference"(
-              𝐚 = r_a,
-              𝐛 = r_b
-            ))
+            value = $"Real numbers".class(r = $../Rational/Sequences/"sequence difference"(𝐚 = r_a, 𝐛 = r_b))
           }]
         )
       }]

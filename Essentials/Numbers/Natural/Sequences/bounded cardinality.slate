@@ -8,10 +8,7 @@ $"bounded cardinality"(
   n: %Element($../"Natural numbers")
 ): %ExplicitOperator {
   notation = $SubSup(
-    body = $Parens(
-      body = M,
-      style = '||'
-    ),
+    body = $Parens(body = M, style = '||'),
     sub = ['≤', n]
   ),
   definition = [%structuralCases(

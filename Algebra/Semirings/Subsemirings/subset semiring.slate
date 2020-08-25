@@ -3,16 +3,10 @@
 $"subset semiring"(
   𝐑: %Element($../Semirings),
   S: %Subset($../Carrier(𝐑 = 𝐑)),
-  _1: %Constraint($"subsemiring set"(
-    𝐑 = 𝐑,
-    S = S
-  ))
+  _1: %Constraint($"subsemiring set"(𝐑 = 𝐑, S = S))
 ): %ExplicitOperator {
   notation = $SubSup(
-    body = $Parens(
-      body = S,
-      style = '[]'
-    ),
+    body = $Parens(body = S, style = '[]'),
     sub = 𝐑
   ),
   definition = [%structuralCases(
@@ -26,27 +20,13 @@ $"subset semiring"(
         "0": %Element(R),
         ⊙: %Element($../../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($../semiring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($../semiring(R = R, ⊕ = ⊕, "0" = "0", ⊙ = ⊙, "1" = "1"))
       ),
       value = $../Semirings.semiring(
         R = S,
-        ⊕ = $../../../Essentials/Operations/"inner operation restriction"(
-          X = R,
-          A = S,
-          ∗ = ⊕
-        ),
+        ⊕ = $../../../Essentials/Operations/"inner operation restriction"(X = R, A = S, ∗ = ⊕),
         "0" = "0",
-        ⊙ = $../../../Essentials/Operations/"inner operation restriction"(
-          X = R,
-          A = S,
-          ∗ = ⊙
-        ),
+        ⊙ = $../../../Essentials/Operations/"inner operation restriction"(X = R, A = S, ∗ = ⊙),
         "1" = "1"
       )
     }]

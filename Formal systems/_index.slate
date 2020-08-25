@@ -6,9 +6,6 @@ $"Formal systems": %Section {
     %item($Variables),
     %item($"Fresh variables"),
     %item($"Rewriting rules"),
-    %subsection(
-      $"Untyped lambda calculus",
-      'Untyped lambda calculus'
-    )
+    %subsection($"Untyped lambda calculus", 'Untyped lambda calculus')
   ]
 }

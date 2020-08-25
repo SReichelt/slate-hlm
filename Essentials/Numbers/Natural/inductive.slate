@@ -8,10 +8,7 @@
  *             * https://proofwiki.org/wiki/Definition:Inductive_Set (also uses a 1-based definition)
  */
 $inductive(M: %Subset($"Natural numbers")): %Predicate {
-  notation = $Property(
-    property = 'inductive',
-    operand = M
-  ),
+  notation = $Property(property = 'inductive', operand = M),
   definition = [%and(
     %in(
       $number(value = 0),

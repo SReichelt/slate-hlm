@@ -10,21 +10,12 @@ $"Power base quotient law"(
 ): %StandardTheorem {
   claim = %equals(
     $power(
-      a = $quotient(
-        a = b,
-        b = a
-      ),
+      a = $quotient(a = b, b = a),
       n = n
     ),
     $quotient(
-      a = $power(
-        a = b,
-        n = n
-      ),
-      b = $power(
-        a = a,
-        n = n
-      )
+      a = $power(a = b, n = n),
+      b = $power(a = a, n = n)
     )
   )
 }

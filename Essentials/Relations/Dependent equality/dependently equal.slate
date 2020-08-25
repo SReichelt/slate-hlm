@@ -41,10 +41,7 @@ $"dependently equal"(
             j,k: %Element(I),
             _3: %Constraint(%equals(j, k))
           ),
-          #(≡: %Element($../Relations(
-            S = S[i = j],
-            T = S[i = k]
-          )))
+          #(≡: %Element($../Relations(S = S[i = j], T = S[i = k])))
         ),
         _4: %Constraint(%forall(
           #(i: %Element(I)),
@@ -54,13 +51,7 @@ $"dependently equal"(
           )
         ))
       ),
-      value = $../related(
-        S = S[i = a],
-        T = S[i = b],
-        ≺ = ≡[j = a, k = b],
-        s = s,
-        t = t
-      )
+      value = $../related(S = S[i = a], T = S[i = b], ≺ = ≡[j = a, k = b], s = s, t = t)
     }]
   )]
 }

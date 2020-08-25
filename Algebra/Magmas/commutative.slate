@@ -4,10 +4,7 @@
  * @references * https://ncatlab.org/nlab/show/commutative+magma
  */
 $commutative(𝐌: %Element($Magmas)): %Predicate {
-  notation = $Property(
-    operand = 𝐌,
-    property = 'commutative'
-  ),
+  notation = $Property(operand = 𝐌, property = 'commutative'),
   definition = [%structural(
     𝐌,
     $Magmas,
@@ -17,11 +14,7 @@ $commutative(𝐌: %Element($Magmas)): %Predicate {
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
       ),
-      value = $../../Essentials/Operations/commutative(
-        X = M,
-        Z = M,
-        ∗ = ∗
-      )
+      value = $../../Essentials/Operations/commutative(X = M, Z = M, ∗ = ∗)
     }]
   )]
 }

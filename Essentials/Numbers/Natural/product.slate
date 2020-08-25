@@ -22,10 +22,7 @@ $product(m,n: %Element($"Natural numbers")): %ExplicitOperator {
         constructor = $"Natural numbers".successor,
         parameters = #(x: %Element($"Natural numbers")),
         value = $sum(
-          m = $product(
-            m = m,
-            n = x
-          ),
+          m = $product(m = m, n = x),
           n = m
         ),
         rewrite = %true

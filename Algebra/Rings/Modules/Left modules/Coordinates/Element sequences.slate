@@ -10,17 +10,11 @@ $"Element sequences"(
   ),
   𝐌: %Element($../"Left modules"(𝐑 = 𝐑))
 ): %SetOperator {
-  notation = $SubSup(
-    body = 𝐌,
-    sup = '⋆'
-  ),
+  notation = $SubSup(body = 𝐌, sup = '⋆'),
   definitionNotation = {
     parameter = #(𝒙: %Expr),
     singularName = ['element sequence', ' on ', 𝐌],
     pluralName = ['element sequences', ' on ', 𝐌]
   },
-  definition = [$../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = $../Carrier(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  ))]
+  definition = [$../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))]
 }

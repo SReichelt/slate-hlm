@@ -7,19 +7,12 @@ $"generalized conjunction"(
   S: %Set(auto = %true),
   P: %Subset($Properties(S = S))
 ): %ExplicitOperator {
-  notation = $PrefixUnaryOperator(
-    symbol = '⋀',
-    operand = P
-  ),
+  notation = $PrefixUnaryOperator(symbol = '⋀', operand = P),
   definition = [$Properties(S = S).property(_1 = {
       #(s: %Element(S)),
       {p = %forall(
         #(p: %Element(P)),
-        $"has property"(
-          S = S,
-          p = p,
-          s = s
-        )
+        $"has property"(S = S, p = p, s = s)
       )}
   })]
 }

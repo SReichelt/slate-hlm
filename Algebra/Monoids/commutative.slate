@@ -4,10 +4,7 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group/basic.html#comm_monoid
  */
 $commutative(𝐌: %Element($Monoids)): %Predicate {
-  notation = $Property(
-    operand = 𝐌,
-    property = 'commutative'
-  ),
+  notation = $Property(operand = 𝐌, property = 'commutative'),
   definition = [%structural(
     𝐌,
     $Monoids,
@@ -17,17 +14,9 @@ $commutative(𝐌: %Element($Monoids)): %Predicate {
         M: %Set,
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
         e: %Element(M),
-        _1: %Constraint($monoid(
-          M = M,
-          ∗ = ∗,
-          e = e
-        ))
+        _1: %Constraint($monoid(M = M, ∗ = ∗, e = e))
       ),
-      value = $../../Essentials/Operations/commutative(
-        X = M,
-        Z = M,
-        ∗ = ∗
-      )
+      value = $../../Essentials/Operations/commutative(X = M, Z = M, ∗ = ∗)
     }]
   )]
 }

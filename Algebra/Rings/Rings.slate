@@ -13,20 +13,10 @@ $Rings: %Construction {
     R: %Set,
     ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
     "0": %Element(R),
-    ⊖: %Element($../../Essentials/Functions/Functions(
-      X = R,
-      Y = R
-    )),
+    ⊖: %Element($../../Essentials/Functions/Functions(X = R, Y = R)),
     ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
     "1": %Element(R),
-    _1: %Constraint($ring(
-      R = R,
-      ⊕ = ⊕,
-      "0" = "0",
-      ⊖ = ⊖,
-      ⊙ = ⊙,
-      "1" = "1"
-    ))
+    _1: %Constraint($ring(R = R, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙, "1" = "1"))
   ): %Constructor {
     notation = $Tuple(
       items = [R, ⊕, "0", ⊖, ⊙, "1"],
@@ -37,81 +27,28 @@ $Rings: %Construction {
         R: %Set,
         ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊖: %Element($../../Essentials/Functions/Functions(
-          X = R,
-          Y = R
-        )),
+        ⊖: %Element($../../Essentials/Functions/Functions(X = R, Y = R)),
         ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
         "1": %Element(R),
-        _1: %Constraint($ring(
-          R = R,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙,
-          "1" = "1"
-        ))
+        _1: %Constraint($ring(R = R, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙, "1" = "1"))
       ),
       rightParameters = #(
         S: %Set,
         ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = S)),
         𝟢: %Element(S),
-        ∼: %Element($../../Essentials/Functions/Functions(
-          X = S,
-          Y = S
-        )),
+        ∼: %Element($../../Essentials/Functions/Functions(X = S, Y = S)),
         ∗: %Element($../../Essentials/Operations/"Inner operations"(X = S)),
         𝟣: %Element(S),
-        _2: %Constraint($ring(
-          R = S,
-          ⊕ = ⋆,
-          "0" = 𝟢,
-          ⊖ = ∼,
-          ⊙ = ∗,
-          "1" = 𝟣
-        ))
+        _2: %Constraint($ring(R = S, ⊕ = ⋆, "0" = 𝟢, ⊖ = ∼, ⊙ = ∗, "1" = 𝟣))
       ),
       definition = [%exists(
-        #(φ: %Element($../../Essentials/Functions/Bijections(
-          X = R,
-          Y = S
-        ))),
+        #(φ: %Element($../../Essentials/Functions/Bijections(X = R, Y = S))),
         formula = %and(
-          $../Generic/Isomorphisms/"inner operation condition"(
-            X = R,
-            Y = S,
-            φ = φ,
-            ∗ = ⊕,
-            ⋆ = ⋆
-          ),
-          $../Generic/Isomorphisms/"element condition"(
-            X = R,
-            Y = S,
-            φ = φ,
-            x = "0",
-            y = 𝟢
-          ),
-          $../Generic/Isomorphisms/"function condition"(
-            X = R,
-            Y = S,
-            φ = φ,
-            f = ⊖,
-            g = ∼
-          ),
-          $../Generic/Isomorphisms/"inner operation condition"(
-            X = R,
-            Y = S,
-            φ = φ,
-            ∗ = ⊙,
-            ⋆ = ∗
-          ),
-          $../Generic/Isomorphisms/"element condition"(
-            X = R,
-            Y = S,
-            φ = φ,
-            x = "1",
-            y = 𝟣
-          )
+          $../Generic/Isomorphisms/"inner operation condition"(X = R, Y = S, φ = φ, ∗ = ⊕, ⋆ = ⋆),
+          $../Generic/Isomorphisms/"element condition"(X = R, Y = S, φ = φ, x = "0", y = 𝟢),
+          $../Generic/Isomorphisms/"function condition"(X = R, Y = S, φ = φ, f = ⊖, g = ∼),
+          $../Generic/Isomorphisms/"inner operation condition"(X = R, Y = S, φ = φ, ∗ = ⊙, ⋆ = ∗),
+          $../Generic/Isomorphisms/"element condition"(X = R, Y = S, φ = φ, x = "1", y = 𝟣)
         )
       )],
       isomorphic = %true

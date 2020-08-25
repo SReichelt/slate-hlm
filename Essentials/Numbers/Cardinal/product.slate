@@ -20,10 +20,7 @@ $product(κ,μ: %Element($"Cardinal numbers")): %ExplicitOperator {
         [{
           constructor = $"Cardinal numbers".cardinality,
           parameters = #(K: %Set),
-          value = $"Cardinal numbers".cardinality(S = $../../Sets/"Cartesian product"(
-            S = K,
-            T = J
-          ))
+          value = $"Cardinal numbers".cardinality(S = $../../Sets/"Cartesian product"(S = K, T = J))
         }]
       )
     }]

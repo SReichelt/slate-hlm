@@ -15,17 +15,11 @@ $"sylow subgroup"(
     operands = [H, 𝐆],
     singular = [
       'Sylow ',
-      $DependentWord(
-        word = 'subgroup',
-        argument = p
-      )
+      $DependentWord(word = 'subgroup', argument = p)
     ],
     plural = [
       'Sylow ',
-      $DependentWord(
-        word = 'subgroups',
-        argument = p
-      )
+      $DependentWord(word = 'subgroups', argument = p)
     ]
   ),
   definition = [$../../../Essentials/Sets/"maximal subset"(
@@ -33,11 +27,7 @@ $"sylow subgroup"(
     T = H,
     _1 = {
       #(I: %Subset($../Carrier(𝐆 = 𝐆))),
-      {p = $../Order/"P-Groups"/"p-subgroup"(
-        𝐆 = 𝐆,
-        H = I,
-        p = p
-      )}
+      {p = $../Order/"P-Groups"/"p-subgroup"(𝐆 = 𝐆, H = I, p = p)}
     }
   )]
 }

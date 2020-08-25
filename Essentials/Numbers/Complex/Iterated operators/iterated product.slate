@@ -16,10 +16,7 @@ $"iterated product": %ExplicitOperator {
           Z = $../"Complex numbers"
         ).operation(_1 = {
           #(a,b: %Element($../"Complex numbers")),
-          {z = $../product(
-            a = a,
-            b = b
-          )}
+          {z = $../product(a = a, b = b)}
       }),
       e = $../../Natural/number(value = 1)
   )]

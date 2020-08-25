@@ -17,10 +17,7 @@ $sum(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
       parameters = #(
         B: %Set,
         ⊑: %Element($../../Relations/Endorelations(S = B)),
-        _1: %Constraint($../../Relations/"well-order"(
-          S = B,
-          ⪯ = ⊑
-        ))
+        _1: %Constraint($../../Relations/"well-order"(S = B, ⪯ = ⊑))
       ),
       value = %structuralCases(
         α,
@@ -30,22 +27,11 @@ $sum(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
           parameters = #(
             A: %Set,
             ⪯: %Element($../../Relations/Endorelations(S = A)),
-            _1: %Constraint($../../Relations/"well-order"(
-              S = A,
-              ⪯ = ⪯
-            ))
+            _1: %Constraint($../../Relations/"well-order"(S = A, ⪯ = ⪯))
           ),
           value = $"Ordinal numbers"."order type"(
-            S = $../../Sets/"Disjoint union"(
-              S = A,
-              T = B
-            ),
-            ⪯ = $../../Relations/succession(
-              S = A,
-              T = B,
-              ⪯ = ⪯,
-              ⊑ = ⊑
-            )
+            S = $../../Sets/"Disjoint union"(S = A, T = B),
+            ⪯ = $../../Relations/succession(S = A, T = B, ⪯ = ⪯, ⊑ = ⊑)
           )
         }]
       )

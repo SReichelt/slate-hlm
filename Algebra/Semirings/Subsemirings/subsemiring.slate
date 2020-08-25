@@ -4,10 +4,7 @@ $subsemiring(𝐑,𝐒: %Element($../Semirings)): %Predicate {
   notation = $SubObjectRelation(operands = [𝐑, 𝐒]),
   definition = [
     %exists(
-      #(φ: %Element($../Homomorphisms/Homomorphisms(
-        𝐑 = 𝐑,
-        𝐒 = 𝐒
-      ))),
+      #(φ: %Element($../Homomorphisms/Homomorphisms(𝐑 = 𝐑, 𝐒 = 𝐒))),
       formula = $../../../Essentials/Functions/injective(
         X = $../Carrier(𝐑 = 𝐑),
         Y = $../Carrier(𝐑 = 𝐒),
@@ -17,16 +14,10 @@ $subsemiring(𝐑,𝐒: %Element($../Semirings)): %Predicate {
     %exists(
       #(S: %Subset($../Carrier(𝐑 = 𝐒))),
       formula = %and(
-        $"subsemiring set"(
-          𝐑 = 𝐒,
-          S = S
-        ),
+        $"subsemiring set"(𝐑 = 𝐒, S = S),
         %equals(
           𝐑,
-          $"subset semiring"(
-            𝐑 = 𝐒,
-            S = S
-          )
+          $"subset semiring"(𝐑 = 𝐒, S = S)
         )
       )
     )

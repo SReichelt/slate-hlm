@@ -12,34 +12,13 @@ $transitive(
   S: %Set(auto = %true),
   ≺: %Element($Endorelations(S = S))
 ): %Predicate {
-  notation = $Property(
-    operand = ≺,
-    property = 'transitive'
-  ),
+  notation = $Property(operand = ≺, property = 'transitive'),
   definition = [%forall(
     #(
       s,t,u: %Element(S),
-      _1: %Constraint($related(
-        S = S,
-        T = S,
-        s = s,
-        ≺ = ≺,
-        t = t
-      )),
-      _2: %Constraint($related(
-        S = S,
-        T = S,
-        s = t,
-        ≺ = ≺,
-        t = u
-      ))
+      _1: %Constraint($related(S = S, T = S, s = s, ≺ = ≺, t = t)),
+      _2: %Constraint($related(S = S, T = S, s = t, ≺ = ≺, t = u))
     ),
-    $related(
-      S = S,
-      T = S,
-      s = s,
-      ≺ = ≺,
-      t = u
-    )
+    $related(S = S, T = S, s = s, ≺ = ≺, t = u)
   )]
 }

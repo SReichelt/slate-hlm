@@ -7,16 +7,10 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.lt_of_le_and_ne
  */
 $less(m,n: %Element($"Natural numbers")): %Predicate {
-  properties = {negation = $"less or equal"(
-    n = m,
-    m = n
-  )},
+  properties = {negation = $"less or equal"(n = m, m = n)},
   notation = $LessThanRelation(operands = [m, n]),
   definition = [
-    %not($"less or equal"(
-      n = m,
-      m = n
-    )),
+    %not($"less or equal"(n = m, m = n)),
     $"less or equal"(
       m = $sum(
         m = m,
@@ -25,19 +19,13 @@ $less(m,n: %Element($"Natural numbers")): %Predicate {
       n = n
     ),
     %and(
-      $"less or equal"(
-        m = m,
-        n = n
-      ),
+      $"less or equal"(m = m, n = n),
       %not(%equals(m, n))
     ),
     %exists(
       #(x: %Element($Subsets/"Positive numbers")),
       formula = %equals(
-        $sum(
-          m = m,
-          n = x
-        ),
+        $sum(m = m, n = x),
         n
       )
     ),
@@ -55,10 +43,7 @@ $less(m,n: %Element($"Natural numbers")): %Predicate {
           {
             constructor = $"Natural numbers".successor,
             parameters = #(y: %Element($"Natural numbers")),
-            value = $less(
-              m = y,
-              n = n
-            ),
+            value = $less(m = y, n = n),
             rewrite = %true
           }
         ]
@@ -77,10 +62,7 @@ $less(m,n: %Element($"Natural numbers")): %Predicate {
           constructor = $"Natural numbers".successor,
           parameters = #(z: %Element($"Natural numbers")),
           value = %or(
-            $less(
-              m = m,
-              n = z
-            ),
+            $less(m = m, n = z),
             %equals(m, z)
           ),
           rewrite = %true

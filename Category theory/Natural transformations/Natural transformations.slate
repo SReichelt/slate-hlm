@@ -20,12 +20,7 @@ $"Natural transformations"(
     $../Categories(u = v),
     auto = %true
   ),
-  F,G: %Element($../Functors/Functors(
-    u = u,
-    v = v,
-    𝓒 = 𝓒,
-    𝓓 = 𝓓
-  ))
+  F,G: %Element($../Functors/Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))
 ): %SetOperator {
   notation = $Function(
     function = 'Nat',
@@ -43,123 +38,30 @@ $"Natural transformations"(
     nameOptional = %true
   },
   definition = [%subset(
-    #(η: %Element($"Infranatural transformations"(
-      u = u,
-      v = v,
-      𝓒 = 𝓒,
-      𝓓 = 𝓓,
-      F = F,
-      G = G
-    ))),
+    #(η: %Element($"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G))),
     %forall(
       #(
-        𝐗,𝐘: %Element($../Objects(
-          u = u,
-          𝓒 = 𝓒
-        )),
-        f: %Element($../Morphisms(
-          u = u,
-          𝓒 = 𝓒,
-          𝐗 = 𝐗,
-          𝐘 = 𝐘
-        ))
+        𝐗,𝐘: %Element($../Objects(u = u, 𝓒 = 𝓒)),
+        f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗, 𝐘 = 𝐘))
       ),
       %equals(
         $../composition(
           u = v,
           𝓒 = 𝓓,
-          𝐗 = $../Functors/"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            𝐗 = 𝐗
-          ),
-          𝐘 = $../Functors/"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            𝐗 = 𝐘
-          ),
-          𝐙 = $../Functors/"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = G,
-            𝐗 = 𝐘
-          ),
-          f = $../Functors/"morphism value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            𝐗 = 𝐗,
-            𝐘 = 𝐘,
-            f = f
-          ),
-          g = $component(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            G = G,
-            η = η,
-            𝐗 = 𝐘
-          )
+          𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
+          𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐘),
+          𝐙 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐘),
+          f = $../Functors/"morphism value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗, 𝐘 = 𝐘, f = f),
+          g = $component(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G, η = η, 𝐗 = 𝐘)
         ),
         $../composition(
           u = v,
           𝓒 = 𝓓,
-          𝐗 = $../Functors/"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            𝐗 = 𝐗
-          ),
-          𝐘 = $../Functors/"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = G,
-            𝐗 = 𝐗
-          ),
-          𝐙 = $../Functors/"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = G,
-            𝐗 = 𝐘
-          ),
-          f = $component(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            G = G,
-            η = η,
-            𝐗 = 𝐗
-          ),
-          g = $../Functors/"morphism value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = G,
-            𝐗 = 𝐗,
-            𝐘 = 𝐘,
-            f = f
-          )
+          𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
+          𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗),
+          𝐙 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐘),
+          f = $component(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G, η = η, 𝐗 = 𝐗),
+          g = $../Functors/"morphism value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗, 𝐘 = 𝐘, f = f)
         )
       )
     )

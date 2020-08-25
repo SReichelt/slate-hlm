@@ -9,10 +9,7 @@ $sum(
     $"Right modules"(𝐑 = 𝐑),
     auto = %true
   ),
-  x,y: %Element($Carrier(
-    𝐑 = 𝐑,
-    𝐌 = 𝐌
-  ))
+  x,y: %Element($Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
 ): %ExplicitOperator {
   notation = $AdditionOperator(operands = [x, y]),
   definition = [%structuralCases(
@@ -24,32 +21,15 @@ $sum(
         M: %Set,
         ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
         "0": %Element(M),
-        ⊖: %Element($../../../../Essentials/Functions/Functions(
-          X = M,
-          Y = M
-        )),
+        ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
         ⊙: %Element($../../../../Essentials/Operations/Operations(
           X = M,
           Y = $../../Carrier(𝐑 = 𝐑),
           Z = M
         )),
-        _1: %Constraint($"right module"(
-          𝐑 = 𝐑,
-          M = M,
-          ⊕ = ⊕,
-          "0" = "0",
-          ⊖ = ⊖,
-          ⊙ = ⊙
-        ))
+        _1: %Constraint($"right module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
-      value = $../../../../Essentials/Operations/value(
-        X = M,
-        Y = M,
-        Z = M,
-        ∗ = ⊕,
-        x = x,
-        y = y
-      )
+      value = $../../../../Essentials/Operations/value(X = M, Y = M, Z = M, ∗ = ⊕, x = x, y = y)
     }]
   )]
 }

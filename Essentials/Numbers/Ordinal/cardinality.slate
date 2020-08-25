@@ -1,9 +1,6 @@
 %../../../../../logics/hlm%
 
 $cardinality(α: %Element($"Ordinal numbers")): %ExplicitOperator {
-  notation = $Parens(
-    body = α,
-    style = '||'
-  ),
+  notation = $Parens(body = α, style = '||'),
   definition = [$../Cardinal/"Cardinal numbers".cardinality(S = $Carrier(α = α))]
 }

@@ -12,10 +12,7 @@ $Integer: %Section {
     %item($"Actual difference equals formal difference"),
     %item($"less or equal"),
     %item($less),
-    %subsection(
-      $Subsets,
-      'Subsets'
-    ),
+    %subsection($Subsets, 'Subsets'),
     %item($absolute),
     %item($product),
     %item($"Product is associative"),
@@ -27,14 +24,8 @@ $Integer: %Section {
     %item($"Addition of a fixed number is injective"),
     %item($"Multiplication of a nonzero number is injective"),
     %item($"Power base product law"),
-    %subsection(
-      $"Iterated operators",
-      'Iterated operators'
-    ),
-    %subsection(
-      $Prime,
-      'Prime Numbers'
-    ),
+    %subsection($"Iterated operators", 'Iterated operators'),
+    %subsection($Prime, 'Prime Numbers'),
     %item($coprime)
   ]
 }

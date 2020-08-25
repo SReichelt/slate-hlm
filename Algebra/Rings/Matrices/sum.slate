@@ -9,20 +9,12 @@ $sum(
     $../../../Essentials/Numbers/Natural/"Natural numbers",
     auto = %true
   ),
-  A,B: %Element($Matrices(
-    𝐑 = 𝐑,
-    m = m,
-    n = n
-  ))
+  A,B: %Element($Matrices(𝐑 = 𝐑, m = m, n = n))
 ): %ExplicitOperator {
   notation = $AdditionOperator(operands = [A, B]),
   definition = [%structuralCases(
     B,
-    $Matrices(
-      𝐑 = 𝐑,
-      m = m,
-      n = n
-    ),
+    $Matrices(𝐑 = 𝐑, m = m, n = n),
     [{
       constructor = $Matrices.matrix,
       parameters = #(_2: %Binder(
@@ -34,11 +26,7 @@ $sum(
       )),
       value = %structuralCases(
         A,
-        $Matrices(
-          𝐑 = 𝐑,
-          m = m,
-          n = n
-        ),
+        $Matrices(𝐑 = 𝐑, m = m, n = n),
         [{
           constructor = $Matrices.matrix,
           parameters = #(_1: %Binder(
@@ -48,20 +36,12 @@ $sum(
             ),
             #(a: %Element($../Carrier(𝐑 = 𝐑)))
           )),
-          value = $Matrices(
-              𝐑 = 𝐑,
-              m = m,
-              n = n
-            ).matrix(_1 = {
+          value = $Matrices(𝐑 = 𝐑, m = m, n = n).matrix(_1 = {
               #(
                 i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
                 j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
               ),
-              {a = $../sum(
-                𝐑 = 𝐑,
-                a = a[i = i, j = j],
-                b = b[i = i, j = j]
-              )}
+              {a = $../sum(𝐑 = 𝐑, a = a[i = i, j = j], b = b[i = i, j = j])}
           })
         }]
       )

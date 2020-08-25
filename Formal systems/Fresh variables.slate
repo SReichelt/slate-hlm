@@ -11,9 +11,5 @@ $"Fresh variables"(
     function = 'Fresh',
     arguments = [V]
   ),
-  definition = [$../Essentials/Sets/"Relative complement"(
-    U = $Variables,
-    S = $Variables,
-    T = V
-  )]
+  definition = [$../Essentials/Sets/"Relative complement"(U = $Variables, S = $Variables, T = V)]
 }

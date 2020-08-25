@@ -1,11 +1,7 @@
 %../../../../../../logics/hlm%
 
 $Hole(a: %Element($../"Real numbers")): %SetOperator {
-  notation = $Segment(
-    set = 'ℝ',
-    symbol = '≠',
-    limit = a
-  ),
+  notation = $Segment(set = 'ℝ', symbol = '≠', limit = a),
   definition = [
     %subset(
       #(b: %Element($../"Real numbers")),

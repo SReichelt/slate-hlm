@@ -4,10 +4,6 @@ $Sylow: %Section {
   logic = 'hlm',
   items = [
     %item($"sylow subgroup"),
-    %item(
-      $"First Sylow theorem",
-      type = 'theorem',
-      title = 'First Sylow theorem'
-    )
+    %item($"First Sylow theorem", type = 'theorem', title = 'First Sylow theorem')
   ]
 }

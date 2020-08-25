@@ -22,10 +22,7 @@ $Matrices(
     #(a: %Element($../Carrier(𝐑 = 𝐑)))
   )): %Constructor {
     notation = $SubSup(
-      body = $Parens(
-        body = a,
-        style = '[]'
-      ),
+      body = $Parens(body = a, style = '[]'),
       sub = $Group(items = [
         $LessThanRelation(operands = [i, m]),
         $LessThanRelation(operands = [j, n])

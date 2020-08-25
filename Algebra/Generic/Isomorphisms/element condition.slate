@@ -5,10 +5,7 @@
  */
 $"element condition"(
   X,Y: %Set(auto = %true),
-  φ: %Element($../../../Essentials/Functions/Bijections(
-    X = X,
-    Y = Y
-  )),
+  φ: %Element($../../../Essentials/Functions/Bijections(X = X, Y = Y)),
   x: %Element(X),
   y: %Element(Y)
 ): %Predicate {
@@ -17,12 +14,7 @@ $"element condition"(
     function = φ
   ),
   definition = [%equals(
-    $../../../Essentials/Functions/value(
-      X = X,
-      Y = Y,
-      f = φ,
-      x = x
-    ),
+    $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x),
     y
   )]
 }

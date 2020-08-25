@@ -8,40 +8,21 @@ $"symmetric closure"(
   S: %Set(auto = %true),
   ≺: %Element($../Endorelations(S = S))
 ): %ExplicitOperator {
-  notation = $SubSup(
-    body = ≺,
-    sup = '↔'
-  ),
+  notation = $SubSup(body = ≺, sup = '↔'),
   definition = [
     $closure(
       S = S,
       T = S,
       ≺ = ≺,
-      p = $../../Properties/Properties(S = $../Relations(
-          S = S,
-          T = S
-        )).property(_1 = {
-          #(≺: %Element($../Relations(
-            S = S,
-            T = S
-          ))),
-          {p = $../symmetric(
-            S = S,
-            ≺ = ≺
-          )}
+      p = $../../Properties/Properties(S = $../Relations(S = S, T = S)).property(_1 = {
+          #(≺: %Element($../Relations(S = S, T = S))),
+          {p = $../symmetric(S = S, ≺ = ≺)}
       })
     ),
     $../../Properties/disjunction(
-      S = $../../Sets/"Cartesian product"(
-        S = S,
-        T = S
-      ),
+      S = $../../Sets/"Cartesian product"(S = S, T = S),
       p = ≺,
-      q = $../converse(
-        S = S,
-        T = S,
-        ≺ = ≺
-      )
+      q = $../converse(S = S, T = S, ≺ = ≺)
     )
   ]
 }

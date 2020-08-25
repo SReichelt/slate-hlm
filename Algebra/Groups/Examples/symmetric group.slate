@@ -6,61 +6,24 @@
  *             * https://ncatlab.org/nlab/show/symmetric+group
  */
 $"symmetric group"(X: %Set): %ExplicitOperator {
-  notation = $SubSup(
-    body = '𝑆',
-    sub = X
-  ),
+  notation = $SubSup(body = '𝑆', sub = X),
   definition = [$../Groups.group(
-    G = $../../../Essentials/Functions/Bijections(
-      X = X,
-      Y = X
-    ),
+    G = $../../../Essentials/Functions/Bijections(X = X, Y = X),
     ∗ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Functions/Bijections(
-          X = X,
-          Y = X
-        ),
-        Y = $../../../Essentials/Functions/Bijections(
-          X = X,
-          Y = X
-        ),
-        Z = $../../../Essentials/Functions/Bijections(
-          X = X,
-          Y = X
-        )
+        X = $../../../Essentials/Functions/Bijections(X = X, Y = X),
+        Y = $../../../Essentials/Functions/Bijections(X = X, Y = X),
+        Z = $../../../Essentials/Functions/Bijections(X = X, Y = X)
       ).operation(_1 = {
-        #(g,f: %Element($../../../Essentials/Functions/Bijections(
-          X = X,
-          Y = X
-        ))),
-        {z = $../../../Essentials/Functions/composition(
-          X = X,
-          Y = X,
-          Z = X,
-          f = f,
-          g = g
-        )}
+        #(g,f: %Element($../../../Essentials/Functions/Bijections(X = X, Y = X))),
+        {z = $../../../Essentials/Functions/composition(X = X, Y = X, Z = X, f = f, g = g)}
     }),
     e = $../../../Essentials/Functions/identity(X = X),
     i = $../../../Essentials/Functions/Functions(
-        X = $../../../Essentials/Functions/Bijections(
-          X = X,
-          Y = X
-        ),
-        Y = $../../../Essentials/Functions/Bijections(
-          X = X,
-          Y = X
-        )
+        X = $../../../Essentials/Functions/Bijections(X = X, Y = X),
+        Y = $../../../Essentials/Functions/Bijections(X = X, Y = X)
       ).function(_1 = {
-        #(f: %Element($../../../Essentials/Functions/Bijections(
-          X = X,
-          Y = X
-        ))),
-        {y = $../../../Essentials/Functions/inverse(
-          X = X,
-          Y = X,
-          f = f
-        )}
+        #(f: %Element($../../../Essentials/Functions/Bijections(X = X, Y = X))),
+        {y = $../../../Essentials/Functions/inverse(X = X, Y = X, f = f)}
     })
   )]
 }

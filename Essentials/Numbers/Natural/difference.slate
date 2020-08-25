@@ -15,9 +15,6 @@ $difference(
   parameter = #(x: %Element($"Natural numbers")),
   definition = [%equals(
     n,
-    $sum(
-      m = x,
-      n = m
-    )
+    $sum(m = x, n = m)
   )]
 }

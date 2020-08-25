@@ -3,25 +3,14 @@
 $"left operation restriction"(
   X,Y: %Set(auto = %true),
   A: %Subset(Y),
-  ∗: %Element($Operations(
-    X = X,
-    Y = Y,
-    Z = Y
-  )),
+  ∗: %Element($Operations(X = X, Y = Y, Z = Y)),
   _1: %Constraint(%forall(
     #(
       x: %Element(X),
       y: %Element(A)
     ),
     %in(
-      $value(
-        X = X,
-        Y = Y,
-        Z = Y,
-        ∗ = ∗,
-        x = x,
-        y = y
-      ),
+      $value(X = X, Y = Y, Z = Y, ∗ = ∗, x = x, y = y),
       A
     )
   ))
@@ -38,14 +27,8 @@ $"left operation restriction"(
     minParenLevel = 3
   ),
   definition = [$../Functions/"codomain restriction"(
-    X = $../Sets/"Cartesian product"(
-      S = X,
-      T = Y
-    ),
-    A = $../Sets/"Cartesian product"(
-      S = X,
-      T = A
-    ),
+    X = $../Sets/"Cartesian product"(S = X, T = Y),
+    A = $../Sets/"Cartesian product"(S = X, T = A),
     Y = Y,
     B = A,
     f = ∗

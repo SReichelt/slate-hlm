@@ -2,9 +2,5 @@
 
 $Formulas: %Section {
   logic = 'hlm',
-  items = [%item(
-    $"Binomial theorem",
-    type = 'theorem',
-    title = 'Binomial theorem'
-  )]
+  items = [%item($"Binomial theorem", type = 'theorem', title = 'Binomial theorem')]
 }

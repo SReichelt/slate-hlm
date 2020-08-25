@@ -16,12 +16,7 @@ $"Iterated operation indexed by natural number is distributive"(
       n = n,
       _1 = {
         #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
-        {a = $operation(
-          X = X,
-          ⨂ = ⨂,
-          x = a[i = i],
-          y = b[i = i]
-        )}
+        {a = $operation(X = X, ⨂ = ⨂, x = a[i = i], y = b[i = i])}
       }
     ),
     $operation(

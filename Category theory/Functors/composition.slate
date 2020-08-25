@@ -21,62 +21,29 @@ $composition(
     $../Categories(u = w),
     auto = %true
   ),
-  F: %Element($Functors(
-    u = u,
-    v = v,
-    𝓒 = 𝓒,
-    𝓓 = 𝓓
-  )),
-  G: %Element($Functors(
-    u = v,
-    v = w,
-    𝓒 = 𝓓,
-    𝓓 = 𝓔
-  ))
+  F: %Element($Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓)),
+  G: %Element($Functors(u = v, v = w, 𝓒 = 𝓓, 𝓓 = 𝓔))
 ): %ExplicitOperator {
   notation = $MultiplicationLikeOperator(
     symbol = '∘',
     operands = [G, F]
   ),
-  definition = [$Functors(
-      u = u,
-      v = w,
-      𝓒 = 𝓒,
-      𝓓 = 𝓔
-    ).functor(
+  definition = [$Functors(u = u, v = w, 𝓒 = 𝓒, 𝓓 = 𝓔).functor(
       _1 = {
-        #(𝐗: %Element($../Objects(
-          u = u,
-          𝓒 = 𝓒
-        ))),
+        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
         {𝐘 = $"object value"(
           u = v,
           v = w,
           𝓒 = 𝓓,
           𝓓 = 𝓔,
           F = G,
-          𝐗 = $"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            𝐗 = 𝐗
-          )
+          𝐗 = $"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗)
         )}
       },
       _2 = {
         #(
-          𝐀,𝐁: %Element($../Objects(
-            u = u,
-            𝓒 = 𝓒
-          )),
-          f: %Element($../Morphisms(
-            u = u,
-            𝓒 = 𝓒,
-            𝐗 = 𝐀,
-            𝐘 = 𝐁
-          ))
+          𝐀,𝐁: %Element($../Objects(u = u, 𝓒 = 𝓒)),
+          f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
         ),
         {g = $"morphism value"(
           u = v,
@@ -84,32 +51,9 @@ $composition(
           𝓒 = 𝓓,
           𝓓 = 𝓔,
           F = G,
-          𝐗 = $"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            𝐗 = 𝐀
-          ),
-          𝐘 = $"object value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            𝐗 = 𝐁
-          ),
-          f = $"morphism value"(
-            u = u,
-            v = v,
-            𝓒 = 𝓒,
-            𝓓 = 𝓓,
-            F = F,
-            𝐗 = 𝐀,
-            𝐘 = 𝐁,
-            f = f
-          )
+          𝐗 = $"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐀),
+          𝐘 = $"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐁),
+          f = $"morphism value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐀, 𝐘 = 𝐁, f = f)
         )}
       }
   )]

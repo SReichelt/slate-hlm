@@ -20,20 +20,9 @@ $operation(
       parameters = #(
         ∗: %Element($../"Inner operations"(X = X)),
         e: %Element(X),
-        _1: %Constraint($../../../Algebra/Monoids/"commutative monoid"(
-          M = X,
-          ∗ = ∗,
-          e = e
-        ))
+        _1: %Constraint($../../../Algebra/Monoids/"commutative monoid"(M = X, ∗ = ∗, e = e))
       ),
-      value = $../value(
-        X = X,
-        Y = X,
-        Z = X,
-        ∗ = ∗,
-        x = x,
-        y = y
-      )
+      value = $../value(X = X, Y = X, Z = X, ∗ = ∗, x = x, y = y)
     }]
   )]
 }

@@ -2,10 +2,7 @@
 
 $related(
   S,T: %Set(auto = %true),
-  ≺: %Element($Relations(
-    S = S,
-    T = T
-  )),
+  ≺: %Element($Relations(S = S, T = T)),
   s: %Element(S),
   t: %Element(T)
 ): %Predicate {
@@ -15,10 +12,7 @@ $related(
   ),
   definition = [%structural(
     ≺,
-    $Relations(
-      S = S,
-      T = T
-    ),
+    $Relations(S = S, T = T),
     [{
       constructor = $Relations.relation,
       parameters = #(_1: %Binder(

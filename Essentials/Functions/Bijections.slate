@@ -25,14 +25,7 @@ $Bijections(X,Y: %Set): %SetOperator {
     nameOptional = %true
   },
   definition = [%subset(
-    #(f: %Element($Functions(
-      X = X,
-      Y = Y
-    ))),
-    $bijective(
-      X = X,
-      Y = Y,
-      f = f
-    )
+    #(f: %Element($Functions(X = X, Y = Y))),
+    $bijective(X = X, Y = Y, f = f)
   )]
 }

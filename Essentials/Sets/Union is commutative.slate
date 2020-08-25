@@ -9,15 +9,7 @@ $"Union is commutative"(
   S,T: %Subset(U)
 ): %StandardTheorem {
   claim = %setEquals(
-    $Union(
-      U = U,
-      S = S,
-      T = T
-    ),
-    $Union(
-      U = U,
-      S = T,
-      T = S
-    )
+    $Union(U = U, S = S, T = T),
+    $Union(U = U, S = T, T = S)
   )
 }

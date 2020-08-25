@@ -26,10 +26,7 @@ $Semigroups: %SetOperator {
             M: %Set,
             ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
           ),
-          value = $semigroup(
-            M = M,
-            ∗ = ∗
-          )
+          value = $semigroup(M = M, ∗ = ∗)
         }]
       )
     ),
