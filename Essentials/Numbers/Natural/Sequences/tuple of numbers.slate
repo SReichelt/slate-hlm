@@ -1,5 +1,8 @@
 %../../../../../../logics/hlm%
 
+/**
+ * This macro provides a shortcut for tuples of natural numbers.
+ */
 $"tuple of numbers"(items: %Nat[]): %MacroOperator {
   notation = $Tuple(
     items = items,

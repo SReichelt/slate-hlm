@@ -1,6 +1,13 @@
 %../../../../../logics/hlm%
 
 /**
+ * We write:
+ * * 0 := `$"Natural numbers".zero`
+ * * 1 := `$"Natural numbers".successor(n = {$number(value = 0)})`
+ * * 2 := `$"Natural numbers".successor(n = {$number(value = 1)})`
+ * * 3 := `$"Natural numbers".successor(n = {$number(value = 2)})`
+ * * ...
+ *
  * @remarks Positional notation is implemented as a macro, i.e. using additional code that is injected into the proof checker. Therefore, no definition is given here.
  *
  * @references * https://en.wikipedia.org/wiki/Positional_notation

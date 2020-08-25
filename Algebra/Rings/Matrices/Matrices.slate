@@ -24,7 +24,7 @@ $Matrices(
     notation = $SubSup(
       body = $Parens(
         body = a,
-        style = '()'
+        style = '[]'
       ),
       sub = $Group(items = [
         $LessThanRelation(operands = [i, m]),

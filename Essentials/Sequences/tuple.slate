@@ -1,15 +1,17 @@
 %../../../../logics/hlm%
 
+/**
+ * We write:
+ *
+ * `$tuple(S = {S}, items = [{a_0}, {a_1}, {"..."}, {"a_n-1"}])` := `$Tuples(S = {S}, α = {n}).sequence(_1 = {#(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = {n}))), {a = {a_k}}})`
+ */
 $tuple(
   S: %Set,
   items: %Element(S)[]
 ): %MacroOperator {
-  notation = $SubSup(
-    body = $Tuple(
-      items = items,
-      style = '()'
-    ),
-    sub = S
+  notation = $Tuple(
+    items = items,
+    style = '()'
   ),
   variables = #(length: %Nat),
   references = {Tuples = $Tuples(
