@@ -13,9 +13,13 @@ $"Finiteness criterion lemma"(
 ): %StandardTheorem {
   claim = %exists(
     #(m: %Element(M)),
-    formula = %forall(
-      #(n: %Element(M)),
-      $"less or equal"(m = n, n = m)
+    formula = $../../Relations/"greatest element"(
+      S = $"Natural numbers",
+      ⪯ = $../../Relations/Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
+          #(m,n: %Element($"Natural numbers")),
+          {p = $"less or equal"(m = m, n = n)}
+      }),
+      T = M, t = m
     )
   ),
   proofs = [{steps = #(_: %ProveByInduction(
@@ -48,41 +52,38 @@ $"Finiteness criterion lemma"(
             )
           ))),
           steps = #(
-            S: %SetDef($Subsets/"Segment (less or equal)"(n = x)),
+            N: %SetDef($../../Functions/Image(
+              X = $Subsets/"Segment (less or equal)"(n = k),
+              Y = M, f = f,
+              S = $Subsets/"Segment (less or equal)"(n = x)
+            )),
             _: %UseTheorem(
               $"Finiteness criterion lemma"(
-                M = $../../Functions/Image(
-                  X = $Subsets/"Segment (less or equal)"(n = k),
-                  Y = M, f = f, S = S
-                ),
-                k = x,
+                M = N, k = x,
                 f = $../../Functions/"codomain restriction"(
                   X = $Subsets/"Segment (less or equal)"(n = k),
-                  Y = M, f = f, A = S,
+                  Y = M, f = f,
+                  A = $Subsets/"Segment (less or equal)"(n = x),
                   B = $../../Functions/Image(
                     X = $Subsets/"Segment (less or equal)"(n = k),
-                    Y = M, f = f, S = S
+                    Y = M, f = f,
+                    S = $Subsets/"Segment (less or equal)"(n = x)
                   )
                 )
               ),
               result = %exists(
-                #(i: %Element($../../Functions/Image(
-                  X = $Subsets/"Segment (less or equal)"(n = k),
-                  Y = M, f = f, S = S
-                ))),
-                formula = %forall(
-                  #(j: %Element($../../Functions/Image(
-                    X = $Subsets/"Segment (less or equal)"(n = k),
-                    Y = M, f = f, S = S
-                  ))),
-                  $"less or equal"(m = j, n = i)
+                #(n: %Element(N)),
+                formula = $../../Relations/"greatest element"(
+                  S = $"Natural numbers",
+                  ⪯ = $../../Relations/Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
+                      #(m,n: %Element($"Natural numbers")),
+                      {p = $"less or equal"(m = m, n = n)}
+                  }),
+                  T = N, t = n
                 )
               )
             ),
-            _: %UseExists(#(i: %Element($../../Functions/Image(
-              X = $Subsets/"Segment (less or equal)"(n = k),
-              Y = M, f = f, S = S
-            )))),
+            _: %UseExists(#(n: %Element(N))),
             _: %ProveExists({m = %cases([
               {
                 formula = $less(
@@ -90,7 +91,7 @@ $"Finiteness criterion lemma"(
                     X = $Subsets/"Segment (less or equal)"(n = k),
                     Y = M, f = f, x = k
                   ),
-                  m = i
+                  m = n
                 ),
                 value = $../../Functions/value(
                   X = $Subsets/"Segment (less or equal)"(n = k),
@@ -103,9 +104,9 @@ $"Finiteness criterion lemma"(
                     X = $Subsets/"Segment (less or equal)"(n = k),
                     Y = M, f = f, x = k
                   ),
-                  n = i
+                  n = n
                 ),
-                value = i
+                value = n
               }
             ])})
           )
