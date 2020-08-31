@@ -22,55 +22,51 @@ $empty(S: %Set): %Predicate {
   equivalenceProofs = [
     {
       from = 1,
-      to = 2,
-      parameters = #(@: %Constraint(%setEquals(S, $"Empty set"))),
-      goal = %sub(S, $"Empty set"),
-      steps = #(
-        _: %Consider(@),
-        _: %UseDef(result = %sub(S, $"Empty set"))
-      )
-    },
-    {
-      from = 2,
       to = 3,
-      parameters = #(@: %Constraint(%sub(S, $"Empty set"))),
+      parameters = #(_1: %Constraint(%setEquals(S, $"Empty set"))),
       goal = %not(%exists(#(x: %Element(S)))),
-      steps = #(_: %ProveNeg({
+      steps = #(_: %ProveByContradiction({
         parameters = #(x: %Element(S)),
         steps = #(
-          _: %Consider(@),
-          _: %UseDef(result = %forall(
-            #(s: %Element(S)),
-            %in(s, $"Empty set")
-          )),
-          _: %UseForAll({s = x}),
+          _: %Substitute(
+            #(_: %Consider(_1)),
+            1,
+            %in(x, $"Empty set")
+          ),
           _: %UseDef(result = %or)
         )
       }))
     },
     {
       from = 3,
+      to = 2,
+      parameters = #(_1: %Constraint(%not(%exists(#(x: %Element(S)))))),
+      goal = %sub(S, $"Empty set"),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(a: %Element(S)),
+          %in(a, $"Empty set")
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(a: %Element(S)),
+          goal = %or,
+          steps = #(_: %State(
+            %exists(#(x: %Element(S))),
+            proof = {steps = #(_: %ProveExists({x = a}))}
+          ))
+        }))
+      }))
+    },
+    {
+      from = 2,
       to = 1,
-      parameters = #(@: %Constraint(%not(%exists(#(x: %Element(S)))))),
+      parameters = #(_1: %Constraint(%sub(S, $"Empty set"))),
       goal = %setEquals(S, $"Empty set"),
       steps = #(_: %ProveEquivalence([
         {
           from = 1,
           to = 2,
-          steps = #(_: %ProveDef(proof = {
-            goal = %forall(
-              #(a: %Element(S)),
-              %in(a, $"Empty set")
-            ),
-            steps = #(_: %ProveForAll({
-              parameters = #(a: %Element(S)),
-              goal = %in(a, $"Empty set"),
-              steps = #(_: %State(
-                %exists(#(x: %Element(S))),
-                proof = {steps = #(_: %ProveExists({x = a}))}
-              ))
-            }))
-          }))
+          steps = #()
         },
         {
           from = 2,

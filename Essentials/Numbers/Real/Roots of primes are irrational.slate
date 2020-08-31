@@ -10,10 +10,10 @@ $"Roots of primes are irrational"(
   n: %Element($../Natural/Subsets/"Segment (greater)"(n = $../Natural/number(value = 1)))
 ): %StandardTheorem {
   claim = %not($rational(a = $root(a = p, n = n))),
-  proofs = [{steps = #(_: %ProveNeg({
+  proofs = [{steps = #(_: %ProveByContradiction({
     parameters = #(_: %Constraint($rational(a = $root(a = p, n = n)))),
     steps = #(
-      _: %UseDef(result = %exists(
+      _: %UseDef(result = %existsUnique(
         #(
           a: %Element($../Integer/Subsets/"Positive numbers"),
           b: %Element($../Integer/Integers),
@@ -29,13 +29,16 @@ $"Roots of primes are irrational"(
         b: %Element($../Integer/Integers),
         _1: %Constraint($../Integer/coprime(a = a, b = b))
       )),
-      _: %UseDef(result = %equals(
-        p,
-        $power(
-          a = $quotient(a = b, b = a),
-          n = n
+      _: %UseDef(
+        side = 1,
+        result = %equals(
+          p,
+          $power(
+            a = $quotient(a = b, b = a),
+            n = n
+          )
         )
-      )),
+      ),
       _: %Substitute(
         #(_: %UseTheorem(
           $"Power base quotient law"(b = b, a = a, n = n),
@@ -50,7 +53,7 @@ $"Roots of primes are irrational"(
             )
           )
         )),
-        0,
+        1,
         %equals(
           p,
           $quotient(
@@ -59,13 +62,16 @@ $"Roots of primes are irrational"(
           )
         )
       ),
-      _2: %UseDef(result = %equals(
-        $../Integer/product(
-          a = p,
-          b = $../Integer/power(a = a, n = n)
-        ),
-        $../Integer/power(a = b, n = n)
-      )),
+      _2: %UseDef(
+        side = 2,
+        result = %equals(
+          $../Integer/product(
+            a = p,
+            b = $../Integer/power(a = a, n = n)
+          ),
+          $../Integer/power(a = b, n = n)
+        )
+      ),
       _7: %State(
         $../Integer/divisible(
           a = p,
@@ -134,7 +140,7 @@ $"Roots of primes are irrational"(
                 _: %Consider(_2),
                 _: %Substitute(
                   #(_: %Consider(_5)),
-                  1,
+                  2,
                   %equals(
                     $../Integer/product(
                       a = p,
@@ -149,7 +155,7 @@ $"Roots of primes are irrational"(
                     )
                   )
                 ),
-                _: %UnfoldDef(%equals(
+                _: %Unfold(%equals(
                   $../Integer/product(
                     a = p,
                     b = $../Integer/power(a = a, n = n)
@@ -164,7 +170,7 @@ $"Roots of primes are irrational"(
                 )),
                 _6: %Substitute(
                   #(_: %Consider(_3)),
-                  1,
+                  2,
                   %equals(
                     $../Integer/product(
                       a = p,

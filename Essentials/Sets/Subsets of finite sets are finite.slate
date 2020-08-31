@@ -60,7 +60,7 @@ $"Subsets of finite sets are finite"(
         },
         proof = {
           goal = $../Functions/injective(
-            X = S,
+            X = T,
             Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = n),
             f = $../Functions/restriction(
               X = S,

@@ -257,7 +257,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                     ),
                     _: %Substitute(
                       #(_: %Consider(_2)),
-                      1,
+                      2,
                       %sub(
                         M,
                         $Subsets/"Segment (less or equal)"(n = $number(value = 0))
@@ -319,13 +319,14 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
       ),
       goal = $../../Sets/finite(S = M),
       steps = #(
-        _: %UseTheorem(
+        _2: %UseTheorem(
           $Subsets/"Initial segments are finite"(n = b),
           result = $../../Sets/finite(S = $Subsets/"Segment (less)"(n = b))
         ),
         _: %UseTheorem(
           $../../Sets/"Subsets of finite sets are finite"(
             S = $Subsets/"Segment (less)"(n = b),
+            _1 = {{steps = #(_: %Consider(_2))}},
             T = M
           ),
           result = $../../Sets/finite(S = M)

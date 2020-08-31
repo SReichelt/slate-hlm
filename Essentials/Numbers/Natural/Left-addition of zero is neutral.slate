@@ -56,7 +56,7 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
                   x
                 )
               )),
-              1,
+              2,
               %equals(
                 $"Natural numbers".successor(n = $sum(
                   m = $"Natural numbers".zero,

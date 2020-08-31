@@ -145,8 +145,8 @@ $finite(S: %Set): %Predicate {
             ),
             proof = {steps = #(_: %ProveDef(proof = {
               goal = %exists(#(s: %Element($../Functions/Bijections(
-                X = S,
-                Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = l)
+                X = $../Numbers/Natural/Subsets/"Segment (less)"(n = l),
+                Y = S
               )))),
               steps = #(_: %ProveExists({s = g}))
             }))}
@@ -159,7 +159,7 @@ $finite(S: %Set): %Predicate {
               ),
               proof = {steps = #(_: %ProveDef)}
             )),
-            1,
+            2,
             %equals(
               l,
               $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)
@@ -168,7 +168,7 @@ $finite(S: %Set): %Predicate {
           _: %Consider(l),
           _: %Substitute(
             #(_: %Consider(_1)),
-            0,
+            1,
             %in(
               $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
               $../Numbers/Natural/"Natural numbers"
@@ -202,6 +202,12 @@ $finite(S: %Set): %Predicate {
         )
       ),
       steps = #(
+        _: %Consider(f),
+        _: %UseDef(result = $../Functions/bijective(
+          X = S,
+          Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = k),
+          f = f
+        )),
         _: %UseDef(result = $../Functions/injective(
           X = S,
           Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = k),

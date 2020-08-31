@@ -72,7 +72,7 @@ $Integers: %Construction {
             n = $../Natural/number(value = 0)
           )
         )),
-        _: %UnfoldDef(%equals(x, y))
+        _: %Unfold(%equals(x, y))
       )
     }
   }
