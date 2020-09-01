@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $inverse(
-  𝐆: %Element(
-    $Groups,
-    auto = %true
-  ),
+  𝐆: %Element($Groups, auto = %true),
   a: %Element($Carrier(𝐆 = 𝐆))
 ): %ExplicitOperator {
   notation = $Inverse(term = a),

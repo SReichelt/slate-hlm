@@ -5,10 +5,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#gpow
  */
 $"power to integer"(
-  𝐆: %Element(
-    $Groups,
-    auto = %true
-  ),
+  𝐆: %Element($Groups, auto = %true),
   a: %Element($Carrier(𝐆 = 𝐆)),
   z: %Element($../../Essentials/Numbers/Integer/Integers)
 ): %ExplicitOperator {

@@ -10,10 +10,7 @@
  *             * https://coq.inria.fr/library/Coq.Sets.Powerset.html
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.powerset
  */
-$"Power set"(S: %Set(
-  auto = %true,
-  embedSubsets = %true
-)): %Construction {
+$"Power set"(S: %Set(auto = %true, embedSubsets = %true)): %Construction {
   $subset(T: %Subset(S)): %Constructor {
     notation = $Parens(body = T, style = '()'),
     equalityDefinition = {

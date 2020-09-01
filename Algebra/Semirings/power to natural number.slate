@@ -5,10 +5,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#monoid.pow
  */
 $"power to natural number"(
-  𝐑: %Element(
-    $Semirings,
-    auto = %true
-  ),
+  𝐑: %Element($Semirings, auto = %true),
   a: %Element($Carrier(𝐑 = 𝐑)),
   n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {

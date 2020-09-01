@@ -4,10 +4,7 @@
  * @remarks This definition can be used to access underlying well-ordering of a given ordinal number. It must not be confused with comparison of two ordinal numbers, which is defined a little further below.
  */
 $before(
-  α: %Element(
-    $"Ordinal numbers",
-    auto = %true
-  ),
+  α: %Element($"Ordinal numbers", auto = %true),
   a,b: %Element($Carrier(α = α))
 ): %Predicate {
   notation = $LessOrEqualRelation(operands = [a, b]),

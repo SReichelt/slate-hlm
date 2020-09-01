@@ -13,10 +13,7 @@ $"dependently equal"(
       {S = S[i = i]}
     }
   )),
-  a,b: %Element(
-    I,
-    auto = %true
-  ),
+  a,b: %Element(I, auto = %true),
   s: %Element(S[i = a]),
   t: %Element(S[i = b])
 ): %Predicate {

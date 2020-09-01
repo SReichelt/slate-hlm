@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $"multiplicative inverse"(
-  𝐑: %Element(
-    $Rings,
-    auto = %true
-  ),
+  𝐑: %Element($Rings, auto = %true),
   a: %Element($Units(𝐑 = 𝐑))
 ): %ImplicitOperator {
   notation = $Inverse(term = a),

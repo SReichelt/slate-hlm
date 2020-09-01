@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $difference(
-  𝐑: %Element(
-    $Rings,
-    auto = %true
-  ),
+  𝐑: %Element($Rings, auto = %true),
   a,b: %Element($Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),

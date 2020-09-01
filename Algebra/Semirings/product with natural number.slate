@@ -4,10 +4,7 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#add_monoid.smul
  */
 $"product with natural number"(
-  𝐑: %Element(
-    $Semirings,
-    auto = %true
-  ),
+  𝐑: %Element($Semirings, auto = %true),
   n: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
   a: %Element($Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {

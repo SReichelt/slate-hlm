@@ -8,10 +8,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/units.html#is_unit
  */
 $unit(
-  𝐑: %Element(
-    $Rings,
-    auto = %true
-  ),
+  𝐑: %Element($Rings, auto = %true),
   a: %Element($Carrier(𝐑 = 𝐑))
 ): %Predicate {
   notation = $NounProperty(operand = a, singular = 'unit', plural = 'units'),

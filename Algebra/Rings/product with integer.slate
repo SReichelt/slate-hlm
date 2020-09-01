@@ -4,10 +4,7 @@
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#gsmul
  */
 $"product with integer"(
-  𝐑: %Element(
-    $Rings,
-    auto = %true
-  ),
+  𝐑: %Element($Rings, auto = %true),
   z: %Element($../../Essentials/Numbers/Integer/Integers),
   a: %Element($Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {

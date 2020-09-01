@@ -1,10 +1,7 @@
 %../../../../logics/hlm%
 
 $"additive inverse"(
-  𝐑: %Element(
-    $Rings,
-    auto = %true
-  ),
+  𝐑: %Element($Rings, auto = %true),
   a: %Element($Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $NegationOperator(operand = a),

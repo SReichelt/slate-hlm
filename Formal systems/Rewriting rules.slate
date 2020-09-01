@@ -3,10 +3,7 @@
 /**
  * @remarks This definition just provides some useful notation for rewriting rules for terms in `T`. It is actually equivalent to the Cartesian product of `T` with itself.
  */
-$"Rewriting rules"(T: %Set(
-  auto = %true,
-  embedSubsets = %true
-)): %Construction {
+$"Rewriting rules"(T: %Set(auto = %true, embedSubsets = %true)): %Construction {
   $rule(l,r: %Element(T)): %Constructor {
     notation = $FunctionOperator(operands = [l, r]),
     equalityDefinition = {

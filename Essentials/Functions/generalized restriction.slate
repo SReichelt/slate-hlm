@@ -9,10 +9,7 @@ $"generalized restriction"(
   X: %Set(auto = %true),
   A: %Subset(X),
   B: %Set,
-  Y: %Subset(
-    B,
-    auto = %true
-  ),
+  Y: %Subset(B, auto = %true),
   f: %Element($Functions(X = X, Y = Y))
 ): %ExplicitOperator {
   notation = $PostfixUnaryOperator(

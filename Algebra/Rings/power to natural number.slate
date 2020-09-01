@@ -4,10 +4,7 @@
  * @references * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#pow_N
  */
 $"power to natural number"(
-  𝐑: %Element(
-    $Rings,
-    auto = %true
-  ),
+  𝐑: %Element($Rings, auto = %true),
   a: %Element($Carrier(𝐑 = 𝐑)),
   n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {

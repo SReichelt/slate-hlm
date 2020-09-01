@@ -7,10 +7,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/units.html#is_unit
  */
 $invertible(
-  𝐌: %Element(
-    $Monoids,
-    auto = %true
-  ),
+  𝐌: %Element($Monoids, auto = %true),
   a: %Element($Carrier(𝐌 = 𝐌))
 ): %Predicate {
   notation = $Property(operand = a, property = 'invertible'),

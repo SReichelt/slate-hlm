@@ -4,10 +4,7 @@
  * @remarks This definition lets us add elements without decomposing the semiring.
  */
 $sum(
-  𝐑: %Element(
-    $Semirings,
-    auto = %true
-  ),
+  𝐑: %Element($Semirings, auto = %true),
   a,b: %Element($Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $AdditionOperator(operands = [a, b]),
