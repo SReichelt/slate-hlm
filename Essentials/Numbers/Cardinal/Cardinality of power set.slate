@@ -7,6 +7,7 @@
 $"Cardinality of power set"(S: %Set): %StandardTheorem {
   claim = %equals(
     $"Cardinal numbers".cardinality(S = $../../Sets/"Power set"(S = S)),
+    $"Cardinal numbers".cardinality(S = $../../Properties/Properties(S = S)),
     $power(
       κ = $../Natural/number(value = 2),
       μ = $"Cardinal numbers".cardinality(S = S)

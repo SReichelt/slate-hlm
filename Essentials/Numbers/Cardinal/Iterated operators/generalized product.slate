@@ -18,8 +18,8 @@ $"generalized product"(
   definition = [$../"Cardinal numbers".cardinality(S = $../../../Sets/"Generalized operators"/"Generalized cartesian product"(
     I = I,
     _1 = {
-      #(j: %Element(I)),
-      {S = $../Carrier(κ = κ[i = j])}
+      #(i: %Element(I)),
+      {S = $../Carrier(κ = κ[i = i])}
     }
   ))]
 }
