@@ -67,6 +67,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
       ),
       steps = #(
         _: %Consider(_1),
+        _: %UseDef(result = $../Cardinal/finite(κ = $../Cardinal/"Cardinal numbers".cardinality(S = M))),
         _: %UseDef(result = %in(
           $../Cardinal/"Cardinal numbers".cardinality(S = M),
           $"Natural numbers"
