@@ -65,7 +65,7 @@ $finite(S: %Set): %Predicate {
     {
       from = 1,
       to = 2,
-      parameters = #(@: %Constraint($../Numbers/Cardinal/finite(κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)))),
+      parameters = #(_1: %Constraint($../Numbers/Cardinal/finite(κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)))),
       goal = %exists(#(
         k: %Element($../Numbers/Natural/"Natural numbers"),
         f: %Element($../Functions/Bijections(
@@ -74,25 +74,31 @@ $finite(S: %Set): %Predicate {
         ))
       )),
       steps = #(
+        _: %Consider(_1),
+        _: %UseDef(result = %in(
+          $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
+          $../Numbers/Natural/"Natural numbers"
+        )),
+        n: %Def(%asElementOf(
+          $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
+          $../Numbers/Natural/"Natural numbers"
+        )),
         _: %State(
           %equals(
-            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)))
+            n,
+            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Numbers/Natural/Subsets/"Segment (less)"(n = n))
           ),
           proof = {steps = #(_: %ProveDef)}
         ),
         _: %UseDef(result = %exists(#(r: %Element($../Functions/Bijections(
           X = S,
-          Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S))
+          Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = n)
         ))))),
         _: %UseExists(#(r: %Element($../Functions/Bijections(
           X = S,
-          Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S))
+          Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = n)
         )))),
-        _: %ProveExists({
-          k = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-          f = r
-        })
+        _: %ProveExists({k = n, f = r})
       )
     },
     {
