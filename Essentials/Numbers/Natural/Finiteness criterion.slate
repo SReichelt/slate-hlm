@@ -98,7 +98,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
               constructor = $"Natural numbers".successor,
               parameters = #(k: %Element($"Natural numbers")),
               value = {
-                parameters = #(_: %Constraint(%equals(
+                parameters = #(_2: %Constraint(%equals(
                   %asElementOf(
                     $../Cardinal/"Cardinal numbers".cardinality(S = M),
                     $"Natural numbers"
@@ -120,26 +120,20 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                   )
                 ),
                 steps = #(
-                  _: %State(%equals(
-                    $sum(
-                      m = k,
-                      n = $number(value = 1)
-                    ),
-                    $../Cardinal/"Cardinal numbers".cardinality(S = M)
-                  )),
+                  _: %Consider(_2),
                   _: %UseDef(result = %exists(#(f: %Element($../../Functions/Bijections(
-                    X = $Subsets/"Segment (less)"(n = $sum(
+                    X = M,
+                    Y = $Subsets/"Segment (less)"(n = $sum(
                       m = k,
                       n = $number(value = 1)
-                    )),
-                    Y = M
+                    ))
                   ))))),
                   _: %UseExists(#(f: %Element($../../Functions/Bijections(
-                    X = $Subsets/"Segment (less)"(n = $sum(
+                    X = M,
+                    Y = $Subsets/"Segment (less)"(n = $sum(
                       m = k,
                       n = $number(value = 1)
-                    )),
-                    Y = M
+                    ))
                   )))),
                   _: %UseTheorem(
                     $"Finiteness criterion lemma"(
@@ -151,7 +145,15 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                         )),
                         Y = M,
                         A = $Subsets/"Segment (less or equal)"(n = k),
-                        B = M, f = f
+                        B = M,
+                        f = $../../Functions/inverse(
+                          X = M,
+                          Y = $Subsets/"Segment (less)"(n = $sum(
+                            m = k,
+                            n = $number(value = 1)
+                          )),
+                          f = f
+                        )
                       )
                     ),
                     result = %exists(
