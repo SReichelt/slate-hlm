@@ -120,7 +120,13 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                   )
                 ),
                 steps = #(
-                  _: %Consider(_2),
+                  _: %State(%equals(
+                    $../Cardinal/"Cardinal numbers".cardinality(S = M),
+                    $sum(
+                      m = k,
+                      n = $number(value = 1)
+                    )
+                  )),
                   _: %UseDef(result = %exists(#(f: %Element($../../Functions/Bijections(
                     X = M,
                     Y = $Subsets/"Segment (less)"(n = $sum(

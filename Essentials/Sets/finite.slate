@@ -3,8 +3,6 @@
 /**
  * @remarks This definition uses functions as well as the natural and cardinal numbers, all of which are defined in later sections (see `$../Functions/Functions`, `$../Numbers/Natural/"Natural numbers"`, `$../Numbers/Cardinal/"Cardinal numbers"`). That is not a problem as long as no circularities exist. In other words, definitions and theorems are ordered by topic instead of by dependency.
  *
- *          These are just some example proofs, which will be completed later.
- *
  * @references * https://en.wikipedia.org/wiki/Finite_set
  *             * https://mathworld.wolfram.com/FiniteSet.html
  *             * https://proofwiki.org/wiki/Definition:Finite_Set
@@ -75,21 +73,14 @@ $finite(S: %Set): %Predicate {
       )),
       steps = #(
         _: %Consider(_1),
-        _: %UseDef(result = %in(
-          $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-          $../Numbers/Natural/"Natural numbers"
+        _: %UseDef(result = %exists(
+          #(n: %Element($../Numbers/Natural/"Natural numbers")),
+          formula = %equals(
+            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
+            n
+          )
         )),
-        n: %Def(%asElementOf(
-          $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-          $../Numbers/Natural/"Natural numbers"
-        )),
-        _: %State(
-          %equals(
-            n,
-            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Numbers/Natural/Subsets/"Segment (less)"(n = n))
-          ),
-          proof = {steps = #(_: %ProveDef)}
-        ),
+        _: %UseExists(#(n: %Element($../Numbers/Natural/"Natural numbers"))),
         _: %UseDef(result = %exists(#(r: %Element($../Functions/Bijections(
           X = S,
           Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = n)
@@ -224,6 +215,55 @@ $finite(S: %Set): %Predicate {
     },
     {
       from = 4,
+      to = 1,
+      parameters = #(
+        n: %Element($../Numbers/Natural/"Natural numbers"),
+        i: %Element($../Functions/Functions(
+          X = S,
+          Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = n)
+        )),
+        _1: %Constraint($../Functions/injective(
+          X = S,
+          Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = n),
+          f = i
+        ))
+      ),
+      goal = $../Numbers/Cardinal/finite(κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)),
+      steps = #(_: %ProveDef(proof = {
+        goal = %exists(
+          #(y: %Element($../Numbers/Natural/"Natural numbers")),
+          formula = $../Numbers/Cardinal/"less or equal"(
+            κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
+            μ = y
+          )
+        ),
+        steps = #(_: %ProveExists(
+          {y = n},
+          proof = {
+            goal = $../Numbers/Cardinal/"less or equal"(
+              κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
+              μ = n
+            ),
+            steps = #(_: %ProveDef(proof = {
+              goal = %exists(
+                #(φ: %Element($../Numbers/Cardinal/Homomorphisms/Homomorphisms(
+                  κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
+                  μ = n
+                ))),
+                formula = $../Functions/injective(
+                  X = S,
+                  Y = $../Numbers/Cardinal/Carrier(κ = n),
+                  f = φ
+                )
+              ),
+              steps = #(_: %ProveExists({φ = i}))
+            }))
+          }
+        ))
+      }))
+    },
+    {
+      from = 4,
       to = 5,
       parameters = #(
         m: %Element($../Numbers/Natural/"Natural numbers"),
@@ -259,16 +299,140 @@ $finite(S: %Set): %Predicate {
             $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = m)
           )
         ),
-        _: %ProveExists({
-          n = m,
-          i = $../Functions/"generalized restriction"(
-            X = S, A = S,
-            B = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = m),
-            Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = m),
-            f = h
-          )
-        })
+        _: %ProveExists(
+          {
+            n = m,
+            i = $../Functions/"generalized restriction"(
+              X = S, A = S,
+              B = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = m),
+              Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = m),
+              f = h
+            )
+          },
+          proof = {
+            goal = $../Functions/injective(
+              X = S,
+              Y = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = m),
+              f = $../Functions/"generalized restriction"(
+                X = S, A = S,
+                B = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = m),
+                Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = m),
+                f = h
+              )
+            ),
+            steps = #(_: %UseTheorem(
+              $../Functions/"Generalized restriction preserves injectivity"(
+                X = S, A = S,
+                B = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = m),
+                Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = m),
+                f = h
+              ),
+              result = $../Functions/injective(
+                X = S,
+                Y = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = m),
+                f = $../Functions/"generalized restriction"(
+                  X = S, A = S,
+                  B = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = m),
+                  Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = m),
+                  f = h
+                )
+              )
+            ))
+          }
+        )
       )
+    },
+    {
+      from = 5,
+      to = 4,
+      parameters = #(
+        n: %Element($../Numbers/Natural/"Natural numbers"),
+        i: %Element($../Functions/Functions(
+          X = S,
+          Y = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = n)
+        )),
+        _1: %Constraint($../Functions/injective(
+          X = S,
+          Y = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = n),
+          f = i
+        ))
+      ),
+      goal = %exists(
+        #(
+          m: %Element($../Numbers/Natural/"Natural numbers"),
+          h: %Element($../Functions/Functions(
+            X = S,
+            Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = m)
+          ))
+        ),
+        formula = $../Functions/injective(
+          X = S,
+          Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = m),
+          f = h
+        )
+      ),
+      steps = #(_: %ProveExists(
+        {
+          m = $../Numbers/Natural/sum(
+            m = n,
+            n = $../Numbers/Natural/number(value = 1)
+          ),
+          h = $../Functions/"generalized restriction"(
+            X = S, A = S,
+            B = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/sum(
+              m = n,
+              n = $../Numbers/Natural/number(value = 1)
+            )),
+            Y = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = n),
+            f = i
+          )
+        },
+        proof = {
+          goal = $../Functions/injective(
+            X = S,
+            Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/sum(
+              m = n,
+              n = $../Numbers/Natural/number(value = 1)
+            )),
+            f = $../Functions/"generalized restriction"(
+              X = S, A = S,
+              B = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/sum(
+                m = n,
+                n = $../Numbers/Natural/number(value = 1)
+              )),
+              Y = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = n),
+              f = i
+            )
+          ),
+          steps = #(_: %UseTheorem(
+            $../Functions/"Generalized restriction preserves injectivity"(
+              X = S, A = S,
+              B = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/sum(
+                m = n,
+                n = $../Numbers/Natural/number(value = 1)
+              )),
+              Y = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = n),
+              f = i
+            ),
+            result = $../Functions/injective(
+              X = S,
+              Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/sum(
+                m = n,
+                n = $../Numbers/Natural/number(value = 1)
+              )),
+              f = $../Functions/"generalized restriction"(
+                X = S, A = S,
+                B = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/sum(
+                  m = n,
+                  n = $../Numbers/Natural/number(value = 1)
+                )),
+                Y = $../Numbers/Natural/Subsets/"Segment (less or equal)"(n = n),
+                f = i
+              )
+            )
+          ))
+        }
+      ))
     }
   ]
 }
