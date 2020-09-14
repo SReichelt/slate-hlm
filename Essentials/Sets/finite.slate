@@ -135,9 +135,9 @@ $finite(S: %Set): %Predicate {
           $../Numbers/Natural/"Natural numbers"
         ),
         steps = #(
-          _: %State(
+          _1: %State(
             %equals(
-              $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Numbers/Natural/Subsets/"Segment (less)"(n = l)),
+              l,
               $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)
             ),
             proof = {steps = #(_: %ProveDef(proof = {
@@ -147,20 +147,6 @@ $finite(S: %Set): %Predicate {
               )))),
               steps = #(_: %ProveExists({s = g}))
             }))}
-          ),
-          _1: %Substitute(
-            #(_: %State(
-              %equals(
-                l,
-                $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Numbers/Natural/Subsets/"Segment (less)"(n = l))
-              ),
-              proof = {steps = #(_: %ProveDef)}
-            )),
-            2,
-            %equals(
-              l,
-              $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)
-            )
           ),
           _: %Consider(l),
           _: %Substitute(
