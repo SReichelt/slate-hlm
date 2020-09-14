@@ -143,10 +143,28 @@ $empty(S: %Set): %Predicate {
         κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
         μ = $../Numbers/Natural/number(value = 0)
       ),
-      steps = #(
-        _: %UseTheorem(
-          $../Numbers/Cardinal/"Less or equal is a partial order",
-          result = $../Relations/"partial order"(
+      steps = #(_: %ProveBySubstitution(
+        #(_: %Consider(_1)),
+        1,
+        $../Numbers/Cardinal/"less or equal"(
+          κ = $../Numbers/Natural/number(value = 0),
+          μ = $../Numbers/Natural/number(value = 0)
+        ),
+        proof = {steps = #(
+          _: %UseTheorem(
+            $../Numbers/Cardinal/"Less or equal is a partial order",
+            result = $../Relations/"partial order"(
+              S = $../Numbers/Cardinal/"Cardinal numbers",
+              ⪯ = $../Relations/Relations(
+                  S = $../Numbers/Cardinal/"Cardinal numbers",
+                  T = $../Numbers/Cardinal/"Cardinal numbers"
+                ).relation(_1 = {
+                  #(κ,μ: %Element($../Numbers/Cardinal/"Cardinal numbers")),
+                  {p = $../Numbers/Cardinal/"less or equal"(κ = κ, μ = μ)}
+              })
+            )
+          ),
+          _: %UseDef(result = $../Relations/reflexive(
             S = $../Numbers/Cardinal/"Cardinal numbers",
             ⪯ = $../Relations/Relations(
                 S = $../Numbers/Cardinal/"Cardinal numbers",
@@ -155,32 +173,14 @@ $empty(S: %Set): %Predicate {
                 #(κ,μ: %Element($../Numbers/Cardinal/"Cardinal numbers")),
                 {p = $../Numbers/Cardinal/"less or equal"(κ = κ, μ = μ)}
             })
-          )
-        ),
-        _: %UseDef(result = $../Relations/reflexive(
-          S = $../Numbers/Cardinal/"Cardinal numbers",
-          ⪯ = $../Relations/Relations(
-              S = $../Numbers/Cardinal/"Cardinal numbers",
-              T = $../Numbers/Cardinal/"Cardinal numbers"
-            ).relation(_1 = {
-              #(κ,μ: %Element($../Numbers/Cardinal/"Cardinal numbers")),
-              {p = $../Numbers/Cardinal/"less or equal"(κ = κ, μ = μ)}
-          })
-        )),
-        _: %UseDef(result = %forall(
-          #(κ: %Element($../Numbers/Cardinal/"Cardinal numbers")),
-          $../Numbers/Cardinal/"less or equal"(κ = κ, μ = κ)
-        )),
-        _: %UseForAll({κ = $../Numbers/Natural/number(value = 0)}),
-        _: %Substitute(
-          #(_: %Consider(_1)),
-          2,
-          $../Numbers/Cardinal/"less or equal"(
-            κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-            μ = $../Numbers/Natural/number(value = 0)
-          )
-        )
-      )
+          )),
+          _: %UseDef(result = %forall(
+            #(κ: %Element($../Numbers/Cardinal/"Cardinal numbers")),
+            $../Numbers/Cardinal/"less or equal"(κ = κ, μ = κ)
+          )),
+          _: %UseForAll({κ = $../Numbers/Natural/number(value = 0)})
+        )}
+      ))
     },
     {
       from = 5,
