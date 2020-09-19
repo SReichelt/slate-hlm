@@ -5,20 +5,35 @@
  */
 $"Square root of two is irrational": %StandardTheorem {
   claim = %not($rational(a = $"square root"(a = $../Natural/number(value = 2)))),
-  proofs = [{steps = #(
-    _: %UseTheorem(
-      $../Natural/Prime/"Two is prime",
-      result = $../Natural/Prime/prime(n = $../Natural/number(value = 2))
+  proofs = [{steps = #(_: %UseTheorem(
+    $"Roots of primes are irrational"(
+      p = {
+        $../Natural/number(value = 2),
+        elementProof = {
+          goal = %in(
+            $../Natural/number(value = 2),
+            $../Natural/Prime/"Prime numbers"
+          ),
+          steps = #(_: %ProveDef(proof = {
+            goal = %and(
+              %in(
+                $../Natural/number(value = 2),
+                $../Natural/Subsets/"Segment (greater)"(n = $../Natural/number(value = 1))
+              ),
+              $../Natural/Prime/prime(n = $../Natural/number(value = 2))
+            ),
+            steps = #(_: %UseTheorem(
+              $../Natural/Prime/"Two is prime",
+              result = $../Natural/Prime/prime(n = $../Natural/number(value = 2))
+            ))
+          }))
+        }
+      },
+      n = $../Natural/number(value = 2)
     ),
-    _: %UseTheorem(
-      $"Roots of primes are irrational"(
-        p = $../Natural/number(value = 2),
-        n = $../Natural/number(value = 2)
-      ),
-      result = %not($rational(a = $root(
-        a = $../Natural/number(value = 2),
-        n = $../Natural/number(value = 2)
-      )))
-    )
-  )}]
+    result = %not($rational(a = $root(
+      a = $../Natural/number(value = 2),
+      n = $../Natural/number(value = 2)
+    )))
+  ))}]
 }
