@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~Operations = $../../../Essentials/Operations/Operations,
+  $~Rings = $../Rings
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Polynomial_ring
  *             * https://proofwiki.org/wiki/Definition:Polynomial_Ring#One_Indeterminate
@@ -7,10 +12,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/polynomial/basic.html#polynomial.comm_semiring
  */
 $"polynomial ring"(
-  𝐑: %Element(
-    $../Rings,
-    auto = %true
-  ),
+  𝐑: %Element($~Rings, auto = %true),
   X: %Element($../../../"Formal systems"/Variables)
 ): %ExplicitOperator {
   notation = $Function(
@@ -18,9 +20,9 @@ $"polynomial ring"(
     arguments = [X],
     style = '[]'
   ),
-  definition = [$../Rings.ring(
+  definition = [$~Rings.ring(
     R = $Polynomials(𝐑 = 𝐑, X = X),
-    ⊕ = $../../../Essentials/Operations/Operations(
+    ⊕ = $~Operations(
         X = $Polynomials(𝐑 = 𝐑, X = X),
         Y = $Polynomials(𝐑 = 𝐑, X = X),
         Z = $Polynomials(𝐑 = 𝐑, X = X)
@@ -36,7 +38,7 @@ $"polynomial ring"(
         #(p: %Element($Polynomials(𝐑 = 𝐑, X = X))),
         {y = $"additive inverse"(𝐑 = 𝐑, X = X, p = p)}
     }),
-    ⊙ = $../../../Essentials/Operations/Operations(
+    ⊙ = $~Operations(
         X = $Polynomials(𝐑 = 𝐑, X = X),
         Y = $Polynomials(𝐑 = 𝐑, X = X),
         Z = $Polynomials(𝐑 = 𝐑, X = X)

@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../../Carrier,
+  $~Operations = $../../../../Essentials/Operations
+]
+
 $product(
   𝐑: %Element(
     $../../Rings,
@@ -9,7 +14,7 @@ $product(
     $"Left modules"(𝐑 = 𝐑),
     auto = %true
   ),
-  a: %Element($../../Carrier(𝐑 = 𝐑)),
+  a: %Element($~Carrier(𝐑 = 𝐑)),
   x: %Element($Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [a, x]),
@@ -20,17 +25,17 @@ $product(
       constructor = $"Left modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
+        ⊕: %Element($~Operations/"Inner operations"(X = M)),
         "0": %Element(M),
         ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
-        ⊙: %Element($../../../../Essentials/Operations/Operations(
-          X = $../../Carrier(𝐑 = 𝐑),
+        ⊙: %Element($~Operations/Operations(
+          X = $~Carrier(𝐑 = 𝐑),
           Y = M, Z = M
         )),
         _1: %Constraint($"left module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
-      value = $../../../../Essentials/Operations/value(
-        X = $../../Carrier(𝐑 = 𝐑),
+      value = $~Operations/value(
+        X = $~Carrier(𝐑 = 𝐑),
         Y = M, Z = M, ∗ = ⊙, x = a, y = x
       )
     }]

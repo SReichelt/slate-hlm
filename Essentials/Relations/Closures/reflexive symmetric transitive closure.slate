@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Relations = $../Relations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Closure_(mathematics)#Binary_relation_closures: reflexive transitive symmetric closure
  */
@@ -10,8 +14,8 @@ $"reflexive symmetric transitive closure"(
   notation = $SubSup(body = ≺, sup = '≡'),
   definition = [$closure(
     S = S, T = S, ≺ = ≺,
-    p = $../../Properties/Properties(S = $../Relations(S = S, T = S)).property(_1 = {
-        #(≺: %Element($../Relations(S = S, T = S))),
+    p = $../../Properties/Properties(S = $~Relations(S = S, T = S)).property(_1 = {
+        #(≺: %Element($~Relations(S = S, T = S))),
         {p = $../equivalence(S = S, ≺ = ≺)}
     })
   )]

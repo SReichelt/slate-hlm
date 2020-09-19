@@ -1,5 +1,14 @@
 %../../../../logics/hlm%
 
+[
+  $~Categories = $../Categories,
+  $~Morphisms = $../Morphisms,
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers",
+  $~Objects = $../Objects,
+  $~composition = $../composition,
+  $~identity = $../identity
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Functor
  *             * https://mathworld.wolfram.com/Functor.html
@@ -8,37 +17,34 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor.html#category_theory.functor
  */
 $Functors(
-  u,v: %Element(
-    $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  𝓒: %Element($../Categories(u = u)),
-  𝓓: %Element($../Categories(u = v))
+  u,v: %Element($~"Natural numbers", auto = %true),
+  𝓒: %Element($~Categories(u = u)),
+  𝓓: %Element($~Categories(u = v))
 ): %Construction {
   $functor(
     _1: %Binder(
-      #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
-      #(𝐘: %Element($../Objects(u = v, 𝓒 = 𝓓)))
+      #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
+      #(𝐘: %Element($~Objects(u = v, 𝓒 = 𝓓)))
     ),
     _2: %Binder(
       #(
-        𝐀,𝐁: %Element($../Objects(u = u, 𝓒 = 𝓒)),
-        f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
+        𝐀,𝐁: %Element($~Objects(u = u, 𝓒 = 𝓒)),
+        f: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
       ),
-      #(g: %Element($../Morphisms(
+      #(g: %Element($~Morphisms(
         u = v, 𝓒 = 𝓓,
         𝐗 = 𝐘[𝐗 = 𝐀],
         𝐘 = 𝐘[𝐗 = 𝐁]
       )))
     ),
     _3: %Constraint(%forall(
-      #(𝐀: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+      #(𝐀: %Element($~Objects(u = u, 𝓒 = 𝓒))),
       %equals(
         g[
           𝐀 = 𝐀, 𝐁 = 𝐀,
-          f = $../identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀)
+          f = $~identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀)
         ],
-        $../identity(
+        $~identity(
           u = v, 𝓒 = 𝓓,
           𝐗 = 𝐘[𝐗 = 𝐀]
         )
@@ -46,16 +52,16 @@ $Functors(
     )),
     _4: %Constraint(%forall(
       #(
-        𝐀,𝐁,𝐂: %Element($../Objects(u = u, 𝓒 = 𝓒)),
-        d: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁)),
-        e: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐁, 𝐘 = 𝐂))
+        𝐀,𝐁,𝐂: %Element($~Objects(u = u, 𝓒 = 𝓒)),
+        d: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁)),
+        e: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐁, 𝐘 = 𝐂))
       ),
       %equals(
         g[
           𝐀 = 𝐀, 𝐁 = 𝐂,
-          f = $../composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁, 𝐙 = 𝐂, g = e, f = d)
+          f = $~composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁, 𝐙 = 𝐂, g = e, f = d)
         ],
-        $../composition(
+        $~composition(
           u = v, 𝓒 = 𝓓,
           𝐗 = 𝐘[𝐗 = 𝐀],
           𝐘 = 𝐘[𝐗 = 𝐁],
@@ -104,28 +110,28 @@ $Functors(
     equalityDefinition = {
       leftParameters = #(
         _1: %Binder(
-          #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
-          #(𝐘: %Element($../Objects(u = v, 𝓒 = 𝓓)))
+          #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
+          #(𝐘: %Element($~Objects(u = v, 𝓒 = 𝓓)))
         ),
         _2: %Binder(
           #(
-            𝐀,𝐁: %Element($../Objects(u = u, 𝓒 = 𝓒)),
-            f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
+            𝐀,𝐁: %Element($~Objects(u = u, 𝓒 = 𝓒)),
+            f: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
           ),
-          #(g: %Element($../Morphisms(
+          #(g: %Element($~Morphisms(
             u = v, 𝓒 = 𝓓,
             𝐗 = 𝐘[𝐗 = 𝐀],
             𝐘 = 𝐘[𝐗 = 𝐁]
           )))
         ),
         _3: %Constraint(%forall(
-          #(𝐀: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+          #(𝐀: %Element($~Objects(u = u, 𝓒 = 𝓒))),
           %equals(
             g[
               𝐀 = 𝐀, 𝐁 = 𝐀,
-              f = $../identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀)
+              f = $~identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀)
             ],
-            $../identity(
+            $~identity(
               u = v, 𝓒 = 𝓓,
               𝐗 = 𝐘[𝐗 = 𝐀]
             )
@@ -133,16 +139,16 @@ $Functors(
         )),
         _4: %Constraint(%forall(
           #(
-            𝐀,𝐁,𝐂: %Element($../Objects(u = u, 𝓒 = 𝓒)),
-            d: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁)),
-            e: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐁, 𝐘 = 𝐂))
+            𝐀,𝐁,𝐂: %Element($~Objects(u = u, 𝓒 = 𝓒)),
+            d: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁)),
+            e: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐁, 𝐘 = 𝐂))
           ),
           %equals(
             g[
               𝐀 = 𝐀, 𝐁 = 𝐂,
-              f = $../composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁, 𝐙 = 𝐂, g = e, f = d)
+              f = $~composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁, 𝐙 = 𝐂, g = e, f = d)
             ],
-            $../composition(
+            $~composition(
               u = v, 𝓒 = 𝓓,
               𝐗 = 𝐘[𝐗 = 𝐀],
               𝐘 = 𝐘[𝐗 = 𝐁],
@@ -155,28 +161,28 @@ $Functors(
       ),
       rightParameters = #(
         _5: %Binder(
-          #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
-          #("𝐘'": %Element($../Objects(u = v, 𝓒 = 𝓓)))
+          #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
+          #("𝐘'": %Element($~Objects(u = v, 𝓒 = 𝓓)))
         ),
         _6: %Binder(
           #(
-            𝐀,𝐁: %Element($../Objects(u = u, 𝓒 = 𝓒)),
-            f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
+            𝐀,𝐁: %Element($~Objects(u = u, 𝓒 = 𝓒)),
+            f: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
           ),
-          #("g'": %Element($../Morphisms(
+          #("g'": %Element($~Morphisms(
             u = v, 𝓒 = 𝓓,
             𝐗 = "𝐘'"[𝐗 = 𝐀],
             𝐘 = "𝐘'"[𝐗 = 𝐁]
           )))
         ),
         _7: %Constraint(%forall(
-          #(𝐀: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+          #(𝐀: %Element($~Objects(u = u, 𝓒 = 𝓒))),
           %equals(
             "g'"[
               𝐀 = 𝐀, 𝐁 = 𝐀,
-              f = $../identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀)
+              f = $~identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀)
             ],
-            $../identity(
+            $~identity(
               u = v, 𝓒 = 𝓓,
               𝐗 = "𝐘'"[𝐗 = 𝐀]
             )
@@ -184,16 +190,16 @@ $Functors(
         )),
         _8: %Constraint(%forall(
           #(
-            𝐀,𝐁,𝐂: %Element($../Objects(u = u, 𝓒 = 𝓒)),
-            d: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁)),
-            e: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐁, 𝐘 = 𝐂))
+            𝐀,𝐁,𝐂: %Element($~Objects(u = u, 𝓒 = 𝓒)),
+            d: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁)),
+            e: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐁, 𝐘 = 𝐂))
           ),
           %equals(
             "g'"[
               𝐀 = 𝐀, 𝐁 = 𝐂,
-              f = $../composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁, 𝐙 = 𝐂, g = e, f = d)
+              f = $~composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁, 𝐙 = 𝐂, g = e, f = d)
             ],
-            $../composition(
+            $~composition(
               u = v, 𝓒 = 𝓓,
               𝐗 = "𝐘'"[𝐗 = 𝐀],
               𝐘 = "𝐘'"[𝐗 = 𝐁],
@@ -206,7 +212,7 @@ $Functors(
       ),
       definition = [%exists(
         #(_9: %Binder(
-          #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+          #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
           #(i: %Element($../Isomorphisms(
             u = v, 𝓒 = 𝓓,
             𝐗 = 𝐘[𝐗 = 𝐗],
@@ -215,11 +221,11 @@ $Functors(
         )),
         formula = %forall(
           #(
-            𝐀,𝐁: %Element($../Objects(u = u, 𝓒 = 𝓒)),
-            f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
+            𝐀,𝐁: %Element($~Objects(u = u, 𝓒 = 𝓒)),
+            f: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
           ),
           %equals(
-            $../composition(
+            $~composition(
               u = v, 𝓒 = 𝓓,
               𝐗 = 𝐘[𝐗 = 𝐀],
               𝐘 = 𝐘[𝐗 = 𝐁],
@@ -227,7 +233,7 @@ $Functors(
               f = g[𝐀 = 𝐀, 𝐁 = 𝐁, f = f],
               g = i[𝐗 = 𝐁]
             ),
-            $../composition(
+            $~composition(
               u = v, 𝓒 = 𝓓,
               𝐗 = 𝐘[𝐗 = 𝐀],
               𝐘 = "𝐘'"[𝐗 = 𝐀],

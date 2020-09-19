@@ -1,10 +1,16 @@
 %../../../../../logics/hlm%
 
+[
+  $~Functions = $../../../Essentials/Functions/Functions,
+  $~composition = $../../../Essentials/Functions/composition,
+  $~value = $../../../Essentials/Functions/value
+]
+
 $"function condition"(
   X,Y: %Set(auto = %true),
   φ: %Element($../../../Essentials/Functions/Bijections(X = X, Y = Y)),
-  f: %Element($../../../Essentials/Functions/Functions(X = X, Y = X)),
-  g: %Element($../../../Essentials/Functions/Functions(X = Y, Y = Y))
+  f: %Element($~Functions(X = X, Y = X)),
+  g: %Element($~Functions(X = Y, Y = Y))
 ): %Predicate {
   notation = $SpecificIsomorphismRelation(
     operands = [f, g],
@@ -13,18 +19,18 @@ $"function condition"(
   definition = [
     %structural(
       g,
-      $../../../Essentials/Functions/Functions(X = Y, Y = Y),
+      $~Functions(X = Y, Y = Y),
       [{
-        constructor = $../../../Essentials/Functions/Functions.function,
+        constructor = $~Functions.function,
         parameters = #(_2: %Binder(
           #(y: %Element(Y)),
           #(b: %Element(Y))
         )),
         value = %structural(
           f,
-          $../../../Essentials/Functions/Functions(X = X, Y = X),
+          $~Functions(X = X, Y = X),
           [{
-            constructor = $../../../Essentials/Functions/Functions.function,
+            constructor = $~Functions.function,
             parameters = #(_1: %Binder(
               #(x: %Element(X)),
               #(a: %Element(X))
@@ -32,11 +38,11 @@ $"function condition"(
             value = %forall(
               #(x: %Element(X)),
               %equals(
-                $../../../Essentials/Functions/value(
+                $~value(
                   X = X, Y = Y, f = φ,
                   x = a[x = x]
                 ),
-                b[y = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x)]
+                b[y = $~value(X = X, Y = Y, f = φ, x = x)]
               )
             )
           }]
@@ -46,19 +52,19 @@ $"function condition"(
     %forall(
       #(x: %Element(X)),
       %equals(
-        $../../../Essentials/Functions/value(
+        $~value(
           X = X, Y = Y, f = φ,
-          x = $../../../Essentials/Functions/value(X = X, Y = X, f = f, x = x)
+          x = $~value(X = X, Y = X, f = f, x = x)
         ),
-        $../../../Essentials/Functions/value(
+        $~value(
           X = Y, Y = Y, f = g,
-          x = $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x)
+          x = $~value(X = X, Y = Y, f = φ, x = x)
         )
       )
     ),
     %equals(
-      $../../../Essentials/Functions/composition(X = X, Y = X, Z = Y, g = φ, f = f),
-      $../../../Essentials/Functions/composition(X = X, Y = Y, Z = Y, g = g, f = φ)
+      $~composition(X = X, Y = X, Z = Y, g = φ, f = f),
+      $~composition(X = X, Y = Y, Z = Y, g = g, f = φ)
     )
   ]
 }

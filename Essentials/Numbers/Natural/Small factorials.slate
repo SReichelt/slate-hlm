@@ -1,12 +1,16 @@
 %../../../../../logics/hlm%
 
+[
+  $~Sequences = $../../Sequences
+]
+
 /**
  * @references * http://oeis.org/A000142
  */
 $"Small factorials": %StandardTheorem {
-  claim = $../../Sequences/"starts with"(
+  claim = $~Sequences/"starts with"(
     S = $"Natural numbers",
-    𝐚 = $../../Sequences/"Infinite sequences"(S = $"Natural numbers").sequence(_1 = {
+    𝐚 = $~Sequences/"Infinite sequences"(S = $"Natural numbers").sequence(_1 = {
         #(n: %Element($"Natural numbers")),
         {a = $factorial(n = n)}
     }),

@@ -1,24 +1,27 @@
 %../../../../logics/hlm%
 
+[
+  $~Categories = $../Categories,
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers",
+  $~Objects = $../Objects
+]
+
 /**
  * @references * https://proofwiki.org/wiki/Definition:Composition_of_Functors
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor.html#category_theory.functor.comp
  */
 $composition(
-  u,v,w: %Element(
-    $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  u,v,w: %Element($~"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(u = u),
+    $~Categories(u = u),
     auto = %true
   ),
   𝓓: %Element(
-    $../Categories(u = v),
+    $~Categories(u = v),
     auto = %true
   ),
   𝓔: %Element(
-    $../Categories(u = w),
+    $~Categories(u = w),
     auto = %true
   ),
   F: %Element($Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓)),
@@ -30,7 +33,7 @@ $composition(
   ),
   definition = [$Functors(u = u, v = w, 𝓒 = 𝓒, 𝓓 = 𝓔).functor(
       _1 = {
-        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+        #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
         {𝐘 = $"object value"(
           u = v, v = w, 𝓒 = 𝓓, 𝓓 = 𝓔, F = G,
           𝐗 = $"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗)
@@ -38,7 +41,7 @@ $composition(
       },
       _2 = {
         #(
-          𝐀,𝐁: %Element($../Objects(u = u, 𝓒 = 𝓒)),
+          𝐀,𝐁: %Element($~Objects(u = u, 𝓒 = 𝓒)),
           f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
         ),
         {g = $"morphism value"(

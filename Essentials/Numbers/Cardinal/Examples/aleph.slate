@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Cardinal numbers" = $../"Cardinal numbers",
+  $~Natural = $../../Natural
+]
+
 /**
  * @remarks This definition is currently a stub that should be extended to arbitrary aleph numbers.
  *
@@ -8,11 +13,11 @@
  *             * https://ncatlab.org/nlab/show/aleph
  *             * https://leanprover-community.github.io/mathlib_docs/set_theory/ordinal.html#cardinal.aleph_zero
  */
-$aleph(α: %Element(%enumeration($../../Natural/number(value = 0)))): %ExplicitOperator {
+$aleph(α: %Element(%enumeration($~Natural/number(value = 0)))): %ExplicitOperator {
   notation = $SubSup(body = 'ℵ', sub = α),
   definition = [
-    $../"Cardinal numbers".cardinality(S = $../../Natural/"Natural numbers"),
-    $../"Cardinal numbers".cardinality(S = $../../Integer/Integers),
-    $../"Cardinal numbers".cardinality(S = $../../Rational/"Rational numbers")
+    $~"Cardinal numbers".cardinality(S = $~Natural/"Natural numbers"),
+    $~"Cardinal numbers".cardinality(S = $../../Integer/Integers),
+    $~"Cardinal numbers".cardinality(S = $../../Rational/"Rational numbers")
   ]
 }

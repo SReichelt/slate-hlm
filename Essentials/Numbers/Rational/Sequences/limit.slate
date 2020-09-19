@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../Natural/"Natural numbers",
+  $~"Rational numbers" = $../"Rational numbers"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Limit_of_a_sequence
  *             * https://mathworld.wolfram.com/Limit.html
@@ -8,11 +13,11 @@
  */
 $limit(
   _1: %Binder(
-    #(n: %Element($../../Natural/"Natural numbers")),
-    #(a: %Element($../"Rational numbers"))
+    #(n: %Element($~"Natural numbers")),
+    #(a: %Element($~"Rational numbers"))
   ),
-  𝐚: %Def($../../../Sequences/"Infinite sequences"(S = $../"Rational numbers").sequence(_1 = {
-      #(m: %Element($../../Natural/"Natural numbers")),
+  𝐚: %Def($../../../Sequences/"Infinite sequences"(S = $~"Rational numbers").sequence(_1 = {
+      #(m: %Element($~"Natural numbers")),
       {a = a[n = m]}
   })),
   _1: %Constraint($convergent(𝐚 = 𝐚))
@@ -27,6 +32,6 @@ $limit(
     maxParenLevel = 1,
     style = 'shallow'
   ),
-  parameter = #(l: %Element($../"Rational numbers")),
+  parameter = #(l: %Element($~"Rational numbers")),
   definition = [$converges(𝐚 = 𝐚, l = l)]
 }

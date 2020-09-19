@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~Relations = $../Relations,
+  $~equality = $../equality
+]
+
 /**
  * @remarks This somewhat technical construction exposes the equality relation on `S[i = i]` in such a way that it becomes possible to ask whether `%equals(s, t)` for `%in(s, S[i = a])` and `%in(t, S[i = b])` whenever a `%equals(a, b)`.
  *
@@ -22,7 +27,7 @@ $"Dependent equality"(
         a,b: %Element(I),
         _3: %Constraint(%equals(a, b))
       ),
-      #(≡: %Element($../Relations(
+      #(≡: %Element($~Relations(
         S = S[i = a],
         T = S[i = b]
       )))
@@ -31,7 +36,7 @@ $"Dependent equality"(
       #(i: %Element(I)),
       %equals(
         ≡[a = i, b = i],
-        $../equality(S = S[i = i])
+        $~equality(S = S[i = i])
       )
     ))
   ): %Constructor {
@@ -50,7 +55,7 @@ $"Dependent equality"(
             a,b: %Element(I),
             _3: %Constraint(%equals(a, b))
           ),
-          #(≡: %Element($../Relations(
+          #(≡: %Element($~Relations(
             S = S[i = a],
             T = S[i = b]
           )))
@@ -59,7 +64,7 @@ $"Dependent equality"(
           #(i: %Element(I)),
           %equals(
             ≡[a = i, b = i],
-            $../equality(S = S[i = i])
+            $~equality(S = S[i = i])
           )
         ))
       ),
@@ -69,7 +74,7 @@ $"Dependent equality"(
             a,b: %Element(I),
             _6: %Constraint(%equals(a, b))
           ),
-          #("≡'": %Element($../Relations(
+          #("≡'": %Element($~Relations(
             S = S[i = a],
             T = S[i = b]
           )))
@@ -78,7 +83,7 @@ $"Dependent equality"(
           #(i: %Element(I)),
           %equals(
             "≡'"[a = i, b = i],
-            $../equality(S = S[i = i])
+            $~equality(S = S[i = i])
           )
         ))
       ),

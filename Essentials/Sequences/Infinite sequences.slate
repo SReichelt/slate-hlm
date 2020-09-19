@@ -1,5 +1,10 @@
 %../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Numbers/Natural/"Natural numbers",
+  $~omega = $../Numbers/Ordinal/Examples/omega
+]
+
 /**
  * @remarks We omit the word "infinite" because infinite sequences are used much more frequently than finite ones.
  *
@@ -16,7 +21,7 @@
  */
 $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(_1: %Binder(
-    #(n: %Element($../Numbers/Natural/"Natural numbers")),
+    #(n: %Element($~"Natural numbers")),
     #(a: %Element(S))
   )): %Constructor {
     notation = $SubSup(
@@ -25,15 +30,15 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     ),
     equalityDefinition = {
       leftParameters = #(_1: %Binder(
-        #(n: %Element($../Numbers/Natural/"Natural numbers")),
+        #(n: %Element($~"Natural numbers")),
         #(a: %Element(S))
       )),
       rightParameters = #(_2: %Binder(
-        #(n: %Element($../Numbers/Natural/"Natural numbers")),
+        #(n: %Element($~"Natural numbers")),
         #(b: %Element(S))
       )),
       definition = [%forall(
-        #(n: %Element($../Numbers/Natural/"Natural numbers")),
+        #(n: %Element($~"Natural numbers")),
         %equals(
           a[n = n],
           b[n = n]
@@ -51,24 +56,18 @@ $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
     nameOptional = %true
   },
   embedding = {
-    parameter = #(𝐚: %Element($Tuples(
-      S = S,
-      α = $../Numbers/Ordinal/Examples/omega
-    ))),
+    parameter = #(𝐚: %Element($Tuples(S = S, α = $~omega))),
     target = %structuralCases(
       𝐚,
-      $Tuples(
-        S = S,
-        α = $../Numbers/Ordinal/Examples/omega
-      ),
+      $Tuples(S = S, α = $~omega),
       [{
         constructor = $Tuples.sequence,
         parameters = #(_1: %Binder(
-          #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = $../Numbers/Ordinal/Examples/omega))),
+          #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = $~omega))),
           #(a: %Element(S))
         )),
         value = $"Infinite sequences"(S = S).sequence(_1 = {
-            #(k: %Element($../Numbers/Natural/"Natural numbers")),
+            #(k: %Element($~"Natural numbers")),
             {a = a[j = k]}
         })
       }]

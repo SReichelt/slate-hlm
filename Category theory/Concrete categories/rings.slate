@@ -1,38 +1,45 @@
 %../../../../logics/hlm%
 
+[
+  $~Carrier = $../../Algebra/Rings/Carrier,
+  $~Essentials = $../../Essentials,
+  $~Homomorphisms = $../../Algebra/Rings/Homomorphisms/Homomorphisms,
+  $~Rings = $../../Algebra/Rings/Rings
+]
+
 /**
  * @remarks The objects of this category are actually isomorphism classes of rings.
  *
  * @references * https://en.wikipedia.org/wiki/Category_of_rings
  *             * https://proofwiki.org/wiki/Definition:Category_of_Rings_with_Unity
  */
-$rings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+$rings(u: %Element($~Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   notation = $SubSup(body = '𝐑𝐢𝐧𝐠', sub = u),
   definition = [$../Categories(u = u).category(
-      O = $../../Algebra/Rings/Rings,
+      O = $~Rings,
       _1 = {
-        #(𝐀,𝐁: %Element($../../Algebra/Rings/Rings)),
-        {M = $../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐀, 𝐒 = 𝐁)}
+        #(𝐀,𝐁: %Element($~Rings)),
+        {M = $~Homomorphisms(𝐑 = 𝐀, 𝐒 = 𝐁)}
       },
       _2 = {
-        #(𝐂: %Element($../../Algebra/Rings/Rings)),
+        #(𝐂: %Element($~Rings)),
         {i = $../../Algebra/Rings/Homomorphisms/identity(𝐑 = 𝐂)}
       },
       _3 = {
-        #(𝐃,𝐄,𝐅: %Element($../../Algebra/Rings/Rings)),
-        {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅),
-            Y = $../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄),
-            Z = $../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐅)
+        #(𝐃,𝐄,𝐅: %Element($~Rings)),
+        {∘ = $~Essentials/Operations/Operations(
+            X = $~Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅),
+            Y = $~Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄),
+            Z = $~Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅)),
-              φ: %Element($../../Algebra/Rings/Homomorphisms/Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄))
+              ψ: %Element($~Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅)),
+              φ: %Element($~Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄))
             ),
-            {z = $../../Essentials/Functions/composition(
-              X = $../../Algebra/Rings/Carrier(𝐑 = 𝐃),
-              Y = $../../Algebra/Rings/Carrier(𝐑 = 𝐄),
-              Z = $../../Algebra/Rings/Carrier(𝐑 = 𝐅),
+            {z = $~Essentials/Functions/composition(
+              X = $~Carrier(𝐑 = 𝐃),
+              Y = $~Carrier(𝐑 = 𝐄),
+              Z = $~Carrier(𝐑 = 𝐅),
               f = φ, g = ψ
             )}
         })}

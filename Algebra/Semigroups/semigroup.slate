@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Semigroup
  *             * https://mathworld.wolfram.com/Semigroup.html
@@ -9,12 +13,12 @@
  */
 $semigroup(
   M: %Set,
-  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
+  ∗: %Element($~Operations/"Inner operations"(X = M))
 ): %Predicate {
   notation = $Structure(
     items = [M, ∗],
     singular = 'semigroup',
     plural = 'semigroups'
   ),
-  definition = [$../../Essentials/Operations/associative(X = M, ∗ = ∗)]
+  definition = [$~Operations/associative(X = M, ∗ = ∗)]
 }

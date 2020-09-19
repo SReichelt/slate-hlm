@@ -1,11 +1,18 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../../../Carrier,
+  $~Essentials = $../../../../../Essentials,
+  $~Operations = $../../../../../Essentials/Operations,
+  $~"Right modules" = $../"Right modules"
+]
+
 $"subset module"(
   𝐑: %Element(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Right modules"(𝐑 = 𝐑)),
+  𝐌: %Element($~"Right modules"(𝐑 = 𝐑)),
   S: %Subset($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)),
   _1: %Constraint($"submodule set"(𝐑 = 𝐑, 𝐌 = 𝐌, S = S))
 ): %ExplicitOperator {
@@ -15,29 +22,29 @@ $"subset module"(
   ),
   definition = [%structuralCases(
     𝐌,
-    $../"Right modules"(𝐑 = 𝐑),
+    $~"Right modules"(𝐑 = 𝐑),
     [{
-      constructor = $../"Right modules".module,
+      constructor = $~"Right modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../../Essentials/Operations/"Inner operations"(X = M)),
+        ⊕: %Element($~Operations/"Inner operations"(X = M)),
         "0": %Element(M),
-        ⊖: %Element($../../../../../Essentials/Functions/Functions(X = M, Y = M)),
-        ⊙: %Element($../../../../../Essentials/Operations/Operations(
+        ⊖: %Element($~Essentials/Functions/Functions(X = M, Y = M)),
+        ⊙: %Element($~Operations/Operations(
           X = M,
-          Y = $../../../Carrier(𝐑 = 𝐑),
+          Y = $~Carrier(𝐑 = 𝐑),
           Z = M
         )),
         _1: %Constraint($../"right module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
-      value = $../"Right modules"(𝐑 = 𝐑).module(
+      value = $~"Right modules"(𝐑 = 𝐑).module(
           M = S,
-          ⊕ = $../../../../../Essentials/Operations/"inner operation restriction"(X = M, A = S, ∗ = ⊕),
+          ⊕ = $~Operations/"inner operation restriction"(X = M, A = S, ∗ = ⊕),
           "0" = "0",
-          ⊖ = $../../../../../Essentials/Functions/"codomain restriction"(X = M, A = S, Y = M, B = S, f = ⊖),
-          ⊙ = $../../../../../Essentials/Operations/"right operation restriction"(
+          ⊖ = $~Essentials/Functions/"codomain restriction"(X = M, A = S, Y = M, B = S, f = ⊖),
+          ⊙ = $~Operations/"right operation restriction"(
             X = M,
-            Y = $../../../Carrier(𝐑 = 𝐑),
+            Y = $~Carrier(𝐑 = 𝐑),
             A = S, ∗ = ⊙
           )
       )

@@ -1,14 +1,18 @@
 %../../../../../../logics/hlm%
 
-$Hole(a: %Element($../"Real numbers")): %SetOperator {
+[
+  $~"Real numbers" = $../"Real numbers"
+]
+
+$Hole(a: %Element($~"Real numbers")): %SetOperator {
   notation = $Segment(set = 'ℝ', symbol = '≠', limit = a),
   definition = [
     %subset(
-      #(b: %Element($../"Real numbers")),
+      #(b: %Element($~"Real numbers")),
       %not(%equals(b, a))
     ),
     $../../../Sets/Union(
-      U = $../"Real numbers",
+      U = $~"Real numbers",
       S = $"Segment (less)"(a = a),
       T = $"Segment (greater)"(a = a)
     )

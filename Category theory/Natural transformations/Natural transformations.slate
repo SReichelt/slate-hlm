@@ -1,5 +1,14 @@
 %../../../../logics/hlm%
 
+[
+  $~Categories = $../Categories,
+  $~Functors = $../Functors/Functors,
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers",
+  $~composition = $../composition,
+  $~"morphism value" = $../Functors/"morphism value",
+  $~"object value" = $../Functors/"object value"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Natural_transformation
  *             * https://mathworld.wolfram.com/NaturalTransformation.html
@@ -8,19 +17,16 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans
  */
 $"Natural transformations"(
-  u,v: %Element(
-    $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  u,v: %Element($~"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(u = u),
+    $~Categories(u = u),
     auto = %true
   ),
   𝓓: %Element(
-    $../Categories(u = v),
+    $~Categories(u = v),
     auto = %true
   ),
-  F,G: %Element($../Functors/Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))
+  F,G: %Element($~Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))
 ): %SetOperator {
   notation = $Function(
     function = 'Nat',
@@ -45,21 +51,21 @@ $"Natural transformations"(
         f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗, 𝐘 = 𝐘))
       ),
       %equals(
-        $../composition(
+        $~composition(
           u = v, 𝓒 = 𝓓,
-          𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
-          𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐘),
-          𝐙 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐘),
-          f = $../Functors/"morphism value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗, 𝐘 = 𝐘, f = f),
+          𝐗 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
+          𝐘 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐘),
+          𝐙 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐘),
+          f = $~"morphism value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗, 𝐘 = 𝐘, f = f),
           g = $component(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G, η = η, 𝐗 = 𝐘)
         ),
-        $../composition(
+        $~composition(
           u = v, 𝓒 = 𝓓,
-          𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
-          𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗),
-          𝐙 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐘),
+          𝐗 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
+          𝐘 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗),
+          𝐙 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐘),
           f = $component(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G, η = η, 𝐗 = 𝐗),
-          g = $../Functors/"morphism value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗, 𝐘 = 𝐘, f = f)
+          g = $~"morphism value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗, 𝐘 = 𝐘, f = f)
         )
       )
     )

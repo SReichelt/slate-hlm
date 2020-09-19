@@ -1,22 +1,25 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Natural/"Natural numbers"
+]
+
 $power(
   a: %Element($"Real numbers"),
-  n: %Element($../Natural/"Natural numbers")
+  n: %Element($~"Natural numbers")
 ): %ExplicitOperator {
   notation = $SubSup(body = a, sup = n),
   definition = [%structuralCases(
-    n,
-    $../Natural/"Natural numbers",
+    n, $~"Natural numbers",
     [
       {
-        constructor = $../Natural/"Natural numbers".zero,
+        constructor = $~"Natural numbers".zero,
         value = $../Natural/number(value = 1),
         rewrite = %true
       },
       {
-        constructor = $../Natural/"Natural numbers".successor,
-        parameters = #(x: %Element($../Natural/"Natural numbers")),
+        constructor = $~"Natural numbers".successor,
+        parameters = #(x: %Element($~"Natural numbers")),
         value = $product(
           a = $power(a = a, n = x),
           b = a

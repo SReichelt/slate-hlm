@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~Natural = $../../../Essentials/Numbers/Natural,
+  $~"Natural numbers" = $../../../Essentials/Numbers/Natural/"Natural numbers"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Monoid#Examples
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.monoid
@@ -7,15 +12,11 @@
 $"natural numbers with multiplication": %ExplicitOperator {
   notation = $Tuple(items = ['ℕ', '⋅']),
   definition = [$../Monoids.monoid(
-    M = $../../../Essentials/Numbers/Natural/"Natural numbers",
-    ∗ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Natural/"Natural numbers",
-        Y = $../../../Essentials/Numbers/Natural/"Natural numbers",
-        Z = $../../../Essentials/Numbers/Natural/"Natural numbers"
-      ).operation(_1 = {
-        #(m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-        {z = $../../../Essentials/Numbers/Natural/product(m = m, n = n)}
+    M = $~"Natural numbers",
+    ∗ = $../../../Essentials/Operations/Operations(X = $~"Natural numbers", Y = $~"Natural numbers", Z = $~"Natural numbers").operation(_1 = {
+        #(m,n: %Element($~"Natural numbers")),
+        {z = $~Natural/product(m = m, n = n)}
     }),
-    e = $../../../Essentials/Numbers/Natural/number(value = 1)
+    e = $~Natural/number(value = 1)
   )]
 }

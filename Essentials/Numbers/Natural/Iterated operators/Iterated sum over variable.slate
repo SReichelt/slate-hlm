@@ -1,10 +1,14 @@
 %../../../../../../logics/hlm%
 
-$"Iterated sum over variable"(n: %Element($../"Natural numbers")): %StandardTheorem {
+[
+  $~"Natural numbers" = $../"Natural numbers",
+  $~number = $../number
+]
+
+$"Iterated sum over variable"(n: %Element($~"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $../../../Operations/"Iterated operations"/"indexed by natural number"(
-      X = $../"Natural numbers",
-      ⨂ = $"iterated sum",
+      X = $~"Natural numbers", ⨂ = $"iterated sum",
       _1 = {
         #(i: %Element($../Subsets/"Segment (less)"(n = n))),
         {a = i}
@@ -13,31 +17,31 @@ $"Iterated sum over variable"(n: %Element($../"Natural numbers")): %StandardTheo
     ),
     $../"binomial coefficient"(
       n = n,
-      k = $../number(value = 2)
+      k = $~number(value = 2)
     ),
     %cases([
       {
         formula = %not(%equals(
           n,
-          $../number(value = 0)
+          $~number(value = 0)
         )),
         value = $../quotient(
           n = $../product(
             m = n,
             n = $../difference(
               n = n,
-              m = $../number(value = 1)
+              m = $~number(value = 1)
             )
           ),
-          m = $../number(value = 2)
+          m = $~number(value = 2)
         )
       },
       {
         formula = %equals(
           n,
-          $../number(value = 0)
+          $~number(value = 0)
         ),
-        value = $../number(value = 0)
+        value = $~number(value = 0)
       }
     ])
   )

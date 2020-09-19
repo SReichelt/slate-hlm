@@ -1,5 +1,13 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Infinite sequences" = $../../Sequences/"Infinite sequences",
+  $~Natural = $../Natural,
+  $~"Rational numbers" = $../Rational/"Rational numbers",
+  $~Sequences = $../Rational/Sequences,
+  $~cauchy = $../Rational/Sequences/cauchy
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Real_number
  *             * https://mathworld.wolfram.com/RealNumber.html
@@ -10,31 +18,31 @@
  */
 $"Real numbers": %Construction {
   $class(
-    r: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
-    _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = r))
+    r: %Element($~"Infinite sequences"(S = $~"Rational numbers")),
+    _1: %Constraint($~cauchy(𝐚 = r))
   ): %Constructor {
     notation = $Parens(body = r, style = '[]'),
     equalityDefinition = {
       leftParameters = #(
-        r: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
-        _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = r))
+        r: %Element($~"Infinite sequences"(S = $~"Rational numbers")),
+        _1: %Constraint($~cauchy(𝐚 = r))
       ),
       rightParameters = #(
-        "r'": %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
-        _2: %Constraint($../Rational/Sequences/cauchy(𝐚 = "r'"))
+        "r'": %Element($~"Infinite sequences"(S = $~"Rational numbers")),
+        _2: %Constraint($~cauchy(𝐚 = "r'"))
       ),
-      definition = [$../Rational/Sequences/converges(
-        𝐚 = $../Rational/Sequences/"sequence difference"(𝐚 = r, 𝐛 = "r'"),
-        l = $../Natural/number(value = 0)
+      definition = [$~Sequences/converges(
+        𝐚 = $~Sequences/"sequence difference"(𝐚 = r, 𝐛 = "r'"),
+        l = $~Natural/number(value = 0)
       )]
     }
   }
 
   notation = 'ℝ',
   embedding = {
-    parameter = #(x: %Element($../Rational/"Rational numbers")),
-    target = $"Real numbers".class(r = $../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers").sequence(_1 = {
-        #(k: %Element($../Natural/"Natural numbers")),
+    parameter = #(x: %Element($~"Rational numbers")),
+    target = $"Real numbers".class(r = $~"Infinite sequences"(S = $~"Rational numbers").sequence(_1 = {
+        #(k: %Element($~Natural/"Natural numbers")),
         {a = x}
     }))
   }

@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+[
+  $~Bijections = $../../Functions/Bijections,
+  $~"Natural numbers" = $../../Numbers/Natural/"Natural numbers",
+  $~"Segment (less)" = $../../Numbers/Natural/Subsets/"Segment (less)",
+  $~value = $../../Functions/value
+]
+
 $"indexed by finite set"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = X)),
@@ -20,9 +27,9 @@ $"indexed by finite set"(
   definition = [
     %forall(
       #(
-        n: %Element($../../Numbers/Natural/"Natural numbers"),
-        f: %Element($../../Functions/Bijections(
-          X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
+        n: %Element($~"Natural numbers"),
+        f: %Element($~Bijections(
+          X = $~"Segment (less)"(n = n),
           Y = I
         ))
       ),
@@ -30,9 +37,9 @@ $"indexed by finite set"(
         $"indexed by natural number"(
           X = X, ⨂ = ⨂, n = n,
           _1 = {
-            #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
-            {a = a[i = $../../Functions/value(
-              X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
+            #(j: %Element($~"Segment (less)"(n = n))),
+            {a = a[i = $~value(
+              X = $~"Segment (less)"(n = n),
               Y = I, f = f, x = j
             )]}
           }
@@ -42,9 +49,9 @@ $"indexed by finite set"(
     ),
     %exists(
       #(
-        n: %Element($../../Numbers/Natural/"Natural numbers"),
-        f: %Element($../../Functions/Bijections(
-          X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
+        n: %Element($~"Natural numbers"),
+        f: %Element($~Bijections(
+          X = $~"Segment (less)"(n = n),
           Y = I
         ))
       ),
@@ -52,9 +59,9 @@ $"indexed by finite set"(
         $"indexed by natural number"(
           X = X, ⨂ = ⨂, n = n,
           _1 = {
-            #(j: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
-            {a = a[i = $../../Functions/value(
-              X = $../../Numbers/Natural/Subsets/"Segment (less)"(n = n),
+            #(j: %Element($~"Segment (less)"(n = n))),
+            {a = a[i = $~value(
+              X = $~"Segment (less)"(n = n),
               Y = I, f = f, x = j
             )]}
           }

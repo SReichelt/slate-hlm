@@ -1,5 +1,15 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Functions = $../../../Essentials/Functions/Functions,
+  $~Groups = $../Groups,
+  $~identity = $../identity,
+  $~inverse = $../inverse,
+  $~operation = $../operation,
+  $~value = $../../../Essentials/Functions/value
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Group_homomorphism
  *             * https://mathworld.wolfram.com/GroupHomomorphism.html
@@ -7,7 +17,7 @@
  *             * https://ncatlab.org/nlab/show/homomorphism
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group/hom.html#monoid_hom
  */
-$Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
+$Homomorphisms(𝐆,𝐇: %Element($~Groups)): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [𝐆, 𝐇]
@@ -23,58 +33,58 @@ $Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
   },
   definition = [
     %subset(
-      #(f: %Element($../../../Essentials/Functions/Functions(
-        X = $../Carrier(𝐆 = 𝐆),
-        Y = $../Carrier(𝐆 = 𝐇)
+      #(f: %Element($~Functions(
+        X = $~Carrier(𝐆 = 𝐆),
+        Y = $~Carrier(𝐆 = 𝐇)
       ))),
       %and(
         %forall(
-          #(a,b: %Element($../Carrier(𝐆 = 𝐆))),
+          #(a,b: %Element($~Carrier(𝐆 = 𝐆))),
           %equals(
-            $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐆 = 𝐆),
-              Y = $../Carrier(𝐆 = 𝐇),
+            $~value(
+              X = $~Carrier(𝐆 = 𝐆),
+              Y = $~Carrier(𝐆 = 𝐇),
               f = f,
-              x = $../operation(𝐆 = 𝐆, a = a, b = b)
+              x = $~operation(𝐆 = 𝐆, a = a, b = b)
             ),
-            $../operation(
+            $~operation(
               𝐆 = 𝐇,
-              a = $../../../Essentials/Functions/value(
-                X = $../Carrier(𝐆 = 𝐆),
-                Y = $../Carrier(𝐆 = 𝐇),
+              a = $~value(
+                X = $~Carrier(𝐆 = 𝐆),
+                Y = $~Carrier(𝐆 = 𝐇),
                 f = f, x = a
               ),
-              b = $../../../Essentials/Functions/value(
-                X = $../Carrier(𝐆 = 𝐆),
-                Y = $../Carrier(𝐆 = 𝐇),
+              b = $~value(
+                X = $~Carrier(𝐆 = 𝐆),
+                Y = $~Carrier(𝐆 = 𝐇),
                 f = f, x = b
               )
             )
           )
         ),
         %equals(
-          $../../../Essentials/Functions/value(
-            X = $../Carrier(𝐆 = 𝐆),
-            Y = $../Carrier(𝐆 = 𝐇),
+          $~value(
+            X = $~Carrier(𝐆 = 𝐆),
+            Y = $~Carrier(𝐆 = 𝐇),
             f = f,
-            x = $../identity(𝐆 = 𝐆)
+            x = $~identity(𝐆 = 𝐆)
           ),
-          $../identity(𝐆 = 𝐇)
+          $~identity(𝐆 = 𝐇)
         ),
         %forall(
-          #(c: %Element($../Carrier(𝐆 = 𝐆))),
+          #(c: %Element($~Carrier(𝐆 = 𝐆))),
           %equals(
-            $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐆 = 𝐆),
-              Y = $../Carrier(𝐆 = 𝐇),
+            $~value(
+              X = $~Carrier(𝐆 = 𝐆),
+              Y = $~Carrier(𝐆 = 𝐇),
               f = f,
-              x = $../inverse(𝐆 = 𝐆, a = c)
+              x = $~inverse(𝐆 = 𝐆, a = c)
             ),
-            $../inverse(
+            $~inverse(
               𝐆 = 𝐇,
-              a = $../../../Essentials/Functions/value(
-                X = $../Carrier(𝐆 = 𝐆),
-                Y = $../Carrier(𝐆 = 𝐇),
+              a = $~value(
+                X = $~Carrier(𝐆 = 𝐆),
+                Y = $~Carrier(𝐆 = 𝐇),
                 f = f, x = c
               )
             )
@@ -83,29 +93,29 @@ $Homomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
       )
     ),
     %subset(
-      #(f: %Element($../../../Essentials/Functions/Functions(
-        X = $../Carrier(𝐆 = 𝐆),
-        Y = $../Carrier(𝐆 = 𝐇)
+      #(f: %Element($~Functions(
+        X = $~Carrier(𝐆 = 𝐆),
+        Y = $~Carrier(𝐆 = 𝐇)
       ))),
       %forall(
-        #(a,b: %Element($../Carrier(𝐆 = 𝐆))),
+        #(a,b: %Element($~Carrier(𝐆 = 𝐆))),
         %equals(
-          $../../../Essentials/Functions/value(
-            X = $../Carrier(𝐆 = 𝐆),
-            Y = $../Carrier(𝐆 = 𝐇),
+          $~value(
+            X = $~Carrier(𝐆 = 𝐆),
+            Y = $~Carrier(𝐆 = 𝐇),
             f = f,
-            x = $../operation(𝐆 = 𝐆, a = a, b = b)
+            x = $~operation(𝐆 = 𝐆, a = a, b = b)
           ),
-          $../operation(
+          $~operation(
             𝐆 = 𝐇,
-            a = $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐆 = 𝐆),
-              Y = $../Carrier(𝐆 = 𝐇),
+            a = $~value(
+              X = $~Carrier(𝐆 = 𝐆),
+              Y = $~Carrier(𝐆 = 𝐇),
               f = f, x = a
             ),
-            b = $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐆 = 𝐆),
-              Y = $../Carrier(𝐆 = 𝐇),
+            b = $~value(
+              X = $~Carrier(𝐆 = 𝐆),
+              Y = $~Carrier(𝐆 = 𝐇),
               f = f, x = b
             )
           )

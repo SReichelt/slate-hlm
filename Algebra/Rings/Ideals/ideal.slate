@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Rings = $../Rings
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Ideal_(ring_theory)
  *             * https://mathworld.wolfram.com/Ideal.html
@@ -8,7 +12,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/module/basic.html#ideal
  */
 $ideal(
-  𝐑: %Element($../Rings),
+  𝐑: %Element($~Rings),
   I: %Subset($../Carrier(𝐑 = 𝐑))
 ): %Predicate {
   notation = $NounRelation(
@@ -24,7 +28,7 @@ $ideal(
     ),
     %exists(
       #(
-        𝐒: %Element($../Rings),
+        𝐒: %Element($~Rings),
         φ: %Element($../Homomorphisms/Homomorphisms(𝐑 = 𝐑, 𝐒 = 𝐒))
       ),
       formula = %setEquals(

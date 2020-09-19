@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Empty set" = $../"Empty set",
+  $~"Power set" = $../"Power set",
+  $~"Relative complement" = $../"Relative complement"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Axiom_of_choice#Variants
  */
@@ -15,10 +21,10 @@ $"Choice functions"(S: %Set): %SetOperator {
   },
   definition = [%subset(
     #(f: %Element($../../Functions/Functions(
-      X = $../"Relative complement"(
-        U = $../"Power set"(S = S),
-        S = $../"Power set"(S = S),
-        T = %enumeration($../"Power set"(S = S).subset(T = $../"Empty set"))
+      X = $~"Relative complement"(
+        U = $~"Power set"(S = S),
+        S = $~"Power set"(S = S),
+        T = %enumeration($~"Power set"(S = S).subset(T = $~"Empty set"))
       ),
       Y = S
     ))),
@@ -29,13 +35,13 @@ $"Choice functions"(S: %Set): %SetOperator {
       ),
       %in(
         $../../Functions/value(
-          X = $../"Relative complement"(
-            U = $../"Power set"(S = S),
-            S = $../"Power set"(S = S),
-            T = %enumeration($../"Power set"(S = S).subset(T = $../"Empty set"))
+          X = $~"Relative complement"(
+            U = $~"Power set"(S = S),
+            S = $~"Power set"(S = S),
+            T = %enumeration($~"Power set"(S = S).subset(T = $~"Empty set"))
           ),
           Y = S, f = f,
-          x = $../"Power set"(S = S).subset(T = T)
+          x = $~"Power set"(S = S).subset(T = T)
         ),
         T
       )

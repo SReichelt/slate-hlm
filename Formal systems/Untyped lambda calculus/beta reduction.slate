@@ -1,39 +1,43 @@
 %../../../../logics/hlm%
 
+[
+  $~"Fresh variables" = $../"Fresh variables",
+  $~Union = $../../Essentials/Sets/Union,
+  $~Variables = $../Variables
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Lambda_calculus#%CE%B2-reduction
  *             * https://ncatlab.org/nlab/show/beta-reduction
  */
 $"beta reduction"(
-  V: %Subset($../Variables),
+  V: %Subset($~Variables),
   _1: %Constraint($../../Essentials/Sets/finite(S = V))
 ): %SetOperator {
   notation = $SubSup(body = 'β', sub = V),
   definition = [%extendedSubset(
     #(
       _2: %Binder(
-        #(x: %Element($../"Fresh variables"(V = V))),
-        #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
-          U = $../Variables,
-          S = V,
+        #(x: %Element($~"Fresh variables"(V = V))),
+        #(M: %Element($Terms(V = $~Union(
+          U = $~Variables, S = V,
           T = %enumeration(x)
         ))))
       ),
       N: %Element($Terms(V = V)),
-      y: %Element($../"Fresh variables"(V = V))
+      y: %Element($~"Fresh variables"(V = V))
     ),
     $../"Rewriting rules"(T = $Terms(V = V)).rule(
         l = $Terms(V = V).application(
             M = $Terms(V = V).abstraction(_2 = {
-                #(z: %Element($../"Fresh variables"(V = V))),
+                #(z: %Element($~"Fresh variables"(V = V))),
                 {M = M[x = z]}
             }),
             N = N
         ),
         r = $substitution(
-          V = $../../Essentials/Sets/Union(
-            U = $../Variables,
-            S = V,
+          V = $~Union(
+            U = $~Variables, S = V,
             T = %enumeration(y)
           ),
           T = M[x = y],

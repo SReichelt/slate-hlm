@@ -1,20 +1,23 @@
 %../../../../logics/hlm%
 
+[
+  $~Morphisms = $../Morphisms,
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers",
+  $~Objects = $../Objects
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Hom_functor
  *             * https://proofwiki.org/wiki/Definition:Covariant_Hom_Functor
  *             * https://ncatlab.org/nlab/show/hom-functor
  */
 $"hom-functor"(
-  u,v: %Element(
-    $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  u,v: %Element($~"Natural numbers", auto = %true),
   𝓒: %Element(
     $../Categories(u = u),
     auto = %true
   ),
-  𝐀: %Element($../Objects(u = u, 𝓒 = 𝓒))
+  𝐀: %Element($~Objects(u = u, 𝓒 = 𝓒))
 ): %ExplicitOperator {
   notation = $Function(
     function = $SubSup(body = 'Hom', sub = v),
@@ -25,19 +28,19 @@ $"hom-functor"(
       𝓓 = $../"Concrete categories"/cardinals(u = v)
     ).functor(
       _1 = {
-        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
-        {𝐘 = $../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐗))}
+        #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
+        {𝐘 = $../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = $~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐗))}
       },
       _2 = {
         #(
-          𝐘,𝐙: %Element($../Objects(u = u, 𝓒 = 𝓒)),
-          f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐘, 𝐘 = 𝐙))
+          𝐘,𝐙: %Element($~Objects(u = u, 𝓒 = 𝓒)),
+          f: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐘, 𝐘 = 𝐙))
         ),
         {g = $../../Essentials/Functions/Functions(
-            X = $../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐘),
-            Y = $../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐙)
+            X = $~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐘),
+            Y = $~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐙)
           ).function(_1 = {
-            #(g: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐘))),
+            #(g: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐘))),
             {y = $../composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐘, 𝐙 = 𝐙, f = g, g = f)}
         })}
       }

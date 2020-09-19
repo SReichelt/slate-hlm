@@ -1,15 +1,19 @@
 %../../../../../logics/hlm%
 
+[
+  $~Essentials = $../../../Essentials
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Cyclic_group
  *             * https://mathworld.wolfram.com/CyclicGroup.html
  *             * https://proofwiki.org/wiki/Definition:Cyclic_Group/Notation
  *             * https://ncatlab.org/nlab/show/cyclic+group#examples
  */
-$"cyclic group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+$"cyclic group"(n: %Element($~Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   notation = $SubSup(body = '𝐶', sub = n),
   definition = [$../Quotients/"quotient group"(
     𝐆 = $integers,
-    S = $../../../Essentials/Numbers/Integer/Subsets/Multiples(n = n)
+    S = $~Essentials/Numbers/Integer/Subsets/Multiples(n = n)
   )]
 }

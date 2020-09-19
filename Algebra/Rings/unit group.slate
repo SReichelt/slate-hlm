@@ -1,5 +1,10 @@
 %../../../../logics/hlm%
 
+[
+  $~Functions = $../../Essentials/Functions/Functions,
+  $~"Inner operations" = $../../Essentials/Operations/"Inner operations"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Unit_(ring_theory)#Group_of_units
  *             * https://proofwiki.org/wiki/Definition:Group_of_Units/Ring
@@ -16,10 +21,10 @@ $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
       constructor = $Rings.ring,
       parameters = #(
         R: %Set,
-        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+        ⊕: %Element($~"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊖: %Element($../../Essentials/Functions/Functions(X = R, Y = R)),
-        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+        ⊖: %Element($~Functions(X = R, Y = R)),
+        ⊙: %Element($~"Inner operations"(X = R)),
         "1": %Element(R),
         _1: %Constraint($ring(R = R, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙, "1" = "1"))
       ),
@@ -31,7 +36,7 @@ $"unit group"(𝐑: %Element($Rings)): %ExplicitOperator {
           ∗ = ⊙
         ),
         e = "1",
-        i = $../../Essentials/Functions/Functions(
+        i = $~Functions(
             X = $Units(𝐑 = 𝐑),
             Y = $Units(𝐑 = 𝐑)
           ).function(_1 = {

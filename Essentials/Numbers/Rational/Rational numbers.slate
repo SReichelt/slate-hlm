@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+[
+  $~Integers = $../Integer/Integers,
+  $~"Positive numbers" = $../Natural/Subsets/"Positive numbers",
+  $~product = $../Integer/product
+]
+
 /**
  * @remarks This definition is rather similar to `$../Integer/Integers`. The constructor notation is later justified by `$"Actual quotient equals formal quotient"`.
  *
@@ -14,8 +20,8 @@
  */
 $"Rational numbers": %Construction {
   $quotient(
-    n: %Element($../Integer/Integers),
-    d: %Element($../Natural/Subsets/"Positive numbers")
+    n: %Element($~Integers),
+    d: %Element($~"Positive numbers")
   ): %Constructor {
     notation = $Parens(
       body = $Operator(
@@ -27,16 +33,16 @@ $"Rational numbers": %Construction {
     ),
     equalityDefinition = {
       leftParameters = #(
-        n: %Element($../Integer/Integers),
-        d: %Element($../Natural/Subsets/"Positive numbers")
+        n: %Element($~Integers),
+        d: %Element($~"Positive numbers")
       ),
       rightParameters = #(
-        "n'": %Element($../Integer/Integers),
-        "d'": %Element($../Natural/Subsets/"Positive numbers")
+        "n'": %Element($~Integers),
+        "d'": %Element($~"Positive numbers")
       ),
       definition = [%equals(
-        $../Integer/product(a = n, b = "d'"),
-        $../Integer/product(a = "n'", b = d)
+        $~product(a = n, b = "d'"),
+        $~product(a = "n'", b = d)
       )]
     },
     rewrite = {
@@ -47,7 +53,7 @@ $"Rational numbers": %Construction {
 
   notation = 'ℚ',
   embedding = {
-    parameter = #(x: %Element($../Integer/Integers)),
+    parameter = #(x: %Element($~Integers)),
     target = $"Rational numbers".quotient(
       n = x,
       d = $../Natural/number(value = 1)

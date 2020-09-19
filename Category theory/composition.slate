@@ -1,5 +1,9 @@
 %../../../logics/hlm%
 
+[
+  $~value = $../Essentials/Operations/value
+]
+
 /**
  * @references * https://proofwiki.org/wiki/Definition:Composition_of_Morphisms
  */
@@ -54,12 +58,12 @@ $composition(
             h: %Element(M[𝐀 = 𝐘, 𝐁 = 𝐙])
           ),
           %equals(
-            $../Essentials/Operations/value(
+            $~value(
               X = M[𝐀 = 𝐗, 𝐁 = 𝐙],
               Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
               Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐙],
-              x = $../Essentials/Operations/value(
+              x = $~value(
                 X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
                 Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                 Z = M[𝐀 = 𝐗, 𝐁 = 𝐙],
@@ -68,13 +72,13 @@ $composition(
               ),
               y = f
             ),
-            $../Essentials/Operations/value(
+            $~value(
               X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
               Y = M[𝐀 = 𝐖, 𝐁 = 𝐘],
               Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐘, 𝐅 = 𝐙],
               x = h,
-              y = $../Essentials/Operations/value(
+              y = $~value(
                 X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                 Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
                 Z = M[𝐀 = 𝐖, 𝐁 = 𝐘],
@@ -90,7 +94,7 @@ $composition(
             f: %Element(M[𝐀 = 𝐗, 𝐁 = 𝐘])
           ),
           %equals(
-            $../Essentials/Operations/value(
+            $~value(
               X = M[𝐀 = 𝐘, 𝐁 = 𝐘],
               Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
               Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
@@ -98,7 +102,7 @@ $composition(
               x = i[𝐂 = 𝐘],
               y = f
             ),
-            $../Essentials/Operations/value(
+            $~value(
               X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
               Y = M[𝐀 = 𝐗, 𝐁 = 𝐗],
               Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
@@ -119,7 +123,7 @@ $composition(
               ),
               formula = %and(
                 %equals(
-                  $../Essentials/Operations/value(
+                  $~value(
                     X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                     Y = M[𝐀 = 𝐘, 𝐁 = 𝐗],
                     Z = M[𝐀 = 𝐘, 𝐁 = 𝐘],
@@ -129,7 +133,7 @@ $composition(
                   i[𝐂 = 𝐘]
                 ),
                 %equals(
-                  $../Essentials/Operations/value(
+                  $~value(
                     X = M[𝐀 = 𝐘, 𝐁 = 𝐗],
                     Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                     Z = M[𝐀 = 𝐗, 𝐁 = 𝐗],
@@ -144,7 +148,7 @@ $composition(
           %equals(𝐗, 𝐘)
         ))
       ),
-      value = $../Essentials/Operations/value(
+      value = $~value(
         X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
         Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
         Z = M[𝐀 = 𝐗, 𝐁 = 𝐙],

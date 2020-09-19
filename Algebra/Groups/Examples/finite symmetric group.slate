@@ -1,12 +1,16 @@
 %../../../../../logics/hlm%
 
+[
+  $~Numbers = $../../../Essentials/Numbers
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Symmetric_group
  *             * https://mathworld.wolfram.com/SymmetricGroup.html
  *             * https://proofwiki.org/wiki/Definition:Symmetric_Group/n_Letters
  *             * https://ncatlab.org/nlab/show/symmetric+group
  */
-$"finite symmetric group"(n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+$"finite symmetric group"(n: %Element($~Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   notation = $SubSup(body = '𝑆', sub = n),
-  definition = [$"symmetric group"(X = $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))]
+  definition = [$"symmetric group"(X = $~Numbers/Natural/Subsets/"Segment (less)"(n = n))]
 }

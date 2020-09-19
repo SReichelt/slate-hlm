@@ -1,18 +1,23 @@
 %../../../../../logics/hlm%
 
-$submagma(𝐌,𝐍: %Element($../Magmas)): %Predicate {
+[
+  $~Carrier = $../Carrier,
+  $~Magmas = $../Magmas
+]
+
+$submagma(𝐌,𝐍: %Element($~Magmas)): %Predicate {
   notation = $SubObjectRelation(operands = [𝐌, 𝐍]),
   definition = [
     %exists(
       #(φ: %Element($../Homomorphisms/Homomorphisms(𝐌 = 𝐌, 𝐍 = 𝐍))),
       formula = $../../../Essentials/Functions/injective(
-        X = $../Carrier(𝐌 = 𝐌),
-        Y = $../Carrier(𝐌 = 𝐍),
+        X = $~Carrier(𝐌 = 𝐌),
+        Y = $~Carrier(𝐌 = 𝐍),
         f = φ
       )
     ),
     %exists(
-      #(S: %Subset($../Carrier(𝐌 = 𝐍))),
+      #(S: %Subset($~Carrier(𝐌 = 𝐍))),
       formula = %and(
         $"submagma set"(𝐌 = 𝐍, S = S),
         %equals(

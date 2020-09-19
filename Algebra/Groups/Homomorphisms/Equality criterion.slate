@@ -1,9 +1,13 @@
 %../../../../../logics/hlm%
 
+[
+  $~Groups = $../Groups
+]
+
 /**
  * @remarks This follows immediately from the HLM-specific definition of equality of groups.
  */
-$"Equality criterion"(𝐆,𝐇: %Element($../Groups)): %EquivalenceTheorem {
+$"Equality criterion"(𝐆,𝐇: %Element($~Groups)): %EquivalenceTheorem {
   conditions = [
     %not($../../../Essentials/Sets/empty(S = $Isomorphisms(𝐆 = 𝐆, 𝐇 = 𝐇))),
     %equals(𝐆, 𝐇)

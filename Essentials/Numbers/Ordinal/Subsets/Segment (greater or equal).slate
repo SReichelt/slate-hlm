@@ -1,9 +1,13 @@
 %../../../../../../logics/hlm%
 
-$"Segment (greater or equal)"(α: %Element($../"Ordinal numbers")): %SetOperator {
+[
+  $~"Ordinal numbers" = $../"Ordinal numbers"
+]
+
+$"Segment (greater or equal)"(α: %Element($~"Ordinal numbers")): %SetOperator {
   notation = $Segment(set = '𝓞𝓻𝓭', symbol = '≥', limit = α),
   definition = [%subset(
-    #(β: %Element($../"Ordinal numbers")),
+    #(β: %Element($~"Ordinal numbers")),
     $../"less or equal"(β = β, α = α)
   )]
 }

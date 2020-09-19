@@ -1,14 +1,18 @@
 %../../../../../../logics/hlm%
 
+[
+  $~number = $../../Natural/number
+]
+
 $"Nonpositive numbers": %SetOperator {
   notation = $SubSup(body = 'ℤ', sub = '0', sup = '−'),
   definition = [
-    $"Segment (less or equal)"(a = $../../Natural/number(value = 0)),
+    $"Segment (less or equal)"(a = $~number(value = 0)),
     %subset(
       #(a: %Element($../Integers)),
       $../"less or equal"(
         a = a,
-        b = $../../Natural/number(value = 0)
+        b = $~number(value = 0)
       )
     )
   ]

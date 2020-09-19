@@ -1,5 +1,13 @@
 %../../../../logics/hlm%
 
+[
+  $~Categories = $../Categories,
+  $~Functors = $../Functors/Functors,
+  $~Natural = $../../Essentials/Numbers/Natural,
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers",
+  $~"Natural transformations" = $../"Natural transformations"/"Natural transformations"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Functor_category
  *             * https://proofwiki.org/wiki/Definition:Functor_Category
@@ -7,40 +15,37 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/functor_category.html#category_theory.functor.category
  */
 $functors(
-  u,v: %Element(
-    $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
-  𝓒: %Element($../Categories(u = u)),
-  𝓓: %Element($../Categories(u = v))
+  u,v: %Element($~"Natural numbers", auto = %true),
+  𝓒: %Element($~Categories(u = u)),
+  𝓓: %Element($~Categories(u = v))
 ): %ExplicitOperator {
   notation = $Function(
     function = '𝐅𝐮𝐧',
     arguments = [𝓒, 𝓓]
   ),
-  definition = [$../Categories(u = $../../Essentials/Numbers/Natural/sum(
-      m = $../../Essentials/Numbers/Natural/"maximum of two numbers"(m = u, n = v),
-      n = $../../Essentials/Numbers/Natural/number(value = 1)
+  definition = [$~Categories(u = $~Natural/sum(
+      m = $~Natural/"maximum of two numbers"(m = u, n = v),
+      n = $~Natural/number(value = 1)
     )).category(
-      O = $../Functors/Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓),
+      O = $~Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓),
       _1 = {
-        #(A,B: %Element($../Functors/Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))),
-        {M = $../"Natural transformations"/"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = A, G = B)}
+        #(A,B: %Element($~Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))),
+        {M = $~"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = A, G = B)}
       },
       _2 = {
-        #(C: %Element($../Functors/Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))),
+        #(C: %Element($~Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))),
         {i = $../"Natural transformations"/identity(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = C)}
       },
       _3 = {
-        #(D,E,F: %Element($../Functors/Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))),
+        #(D,E,F: %Element($~Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))),
         {∘ = $../../Essentials/Operations/Operations(
-            X = $../"Natural transformations"/"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = E, G = F),
-            Y = $../"Natural transformations"/"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = D, G = E),
-            Z = $../"Natural transformations"/"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = D, G = F)
+            X = $~"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = E, G = F),
+            Y = $~"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = D, G = E),
+            Z = $~"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = D, G = F)
           ).operation(_1 = {
             #(
-              ε: %Element($../"Natural transformations"/"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = E, G = F)),
-              η: %Element($../"Natural transformations"/"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = D, G = E))
+              ε: %Element($~"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = E, G = F)),
+              η: %Element($~"Natural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = D, G = E))
             ),
             {z = $../"Natural transformations"/"vertical composition"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = D, G = E, H = F, η = η, ε = ε)}
         })}

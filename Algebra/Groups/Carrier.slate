@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Essentials = $../../Essentials
+]
+
 /**
  * @remarks This definition retrieves a representative carrier set from a group (which is actually an equivalence class of groups), and enables typical abuse of notation.
  */
@@ -15,9 +19,9 @@ $Carrier(𝐆: %Element($Groups)): %SetOperator {
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
+        ∗: %Element($~Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
+        i: %Element($~Essentials/Functions/Functions(X = G, Y = G)),
         _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
       value = G

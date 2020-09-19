@@ -1,5 +1,11 @@
 %../../../../logics/hlm%
 
+[
+  $~"Inner operations" = $../../Essentials/Operations/"Inner operations",
+  $~Monoids = $../Monoids,
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Semiring
  *             * https://proofwiki.org/wiki/Definition:Rig#Also_defined_as
@@ -9,9 +15,9 @@
  */
 $semiring(
   R: %Set,
-  ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+  ⊕: %Element($~"Inner operations"(X = R)),
   "0": %Element(R),
-  ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+  ⊙: %Element($~"Inner operations"(X = R)),
   "1": %Element(R)
 ): %Predicate {
   notation = $Structure(
@@ -20,9 +26,9 @@ $semiring(
     plural = 'semirings'
   ),
   definition = [%and(
-    $../Monoids/"commutative monoid"(M = R, ∗ = ⊕, e = "0"),
-    $../Monoids/monoid(M = R, ∗ = ⊙, e = "1"),
-    $../../Essentials/Operations/distributive(X = R, ∗ = ⊙, ⋆ = ⊕),
-    $../../Essentials/Operations/"absorbing element"(X = R, ∗ = ⊙, z = "0")
+    $~Monoids/"commutative monoid"(M = R, ∗ = ⊕, e = "0"),
+    $~Monoids/monoid(M = R, ∗ = ⊙, e = "1"),
+    $~Operations/distributive(X = R, ∗ = ⊙, ⋆ = ⊕),
+    $~Operations/"absorbing element"(X = R, ∗ = ⊙, z = "0")
   )]
 }

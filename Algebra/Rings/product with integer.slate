@@ -1,30 +1,35 @@
 %../../../../logics/hlm%
 
+[
+  $~Integer = $../../Essentials/Numbers/Integer,
+  $~number = $../../Essentials/Numbers/Natural/number
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#gsmul
  */
 $"product with integer"(
   𝐑: %Element($Rings, auto = %true),
-  z: %Element($../../Essentials/Numbers/Integer/Integers),
+  z: %Element($~Integer/Integers),
   a: %Element($Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [z, a]),
   definition = [%cases([
     {
-      formula = $../../Essentials/Numbers/Integer/"less or equal"(
+      formula = $~Integer/"less or equal"(
         b = z,
-        a = $../../Essentials/Numbers/Natural/number(value = 0)
+        a = $~number(value = 0)
       ),
       value = $"product with natural number"(𝐑 = 𝐑, n = z, a = a)
     },
     {
-      formula = $../../Essentials/Numbers/Integer/less(
+      formula = $~Integer/less(
         a = z,
-        b = $../../Essentials/Numbers/Natural/number(value = 0)
+        b = $~number(value = 0)
       ),
       value = $"product with natural number"(
         𝐑 = 𝐑,
-        n = $../../Essentials/Numbers/Integer/inverse(a = z),
+        n = $~Integer/inverse(a = z),
         a = $"additive inverse"(𝐑 = 𝐑, a = a)
       )
     }

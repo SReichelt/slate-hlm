@@ -1,5 +1,13 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Essentials = $../../../../../Essentials,
+  $~"Ordinal-indexed sequences" = $../../../../../Essentials/Sequences/"Ordinal-indexed sequences",
+  $~"Segment (less)" = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)",
+  $~Tuples = $../../../../../Essentials/Sequences/Tuples,
+  $~"ordinal-indexed sequence length" = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Linear_combination
  *             * https://mathworld.wolfram.com/LinearCombination.html
@@ -22,17 +30,17 @@ $"linear combination"(
   notation = $MultiplicationOperator(operands = [𝐚, 𝒙]),
   definition = [%structuralCases(
     𝐚,
-    $../../../../../Essentials/Sequences/Tuples(
+    $~Tuples(
       S = $../../../Carrier(𝐑 = 𝐑),
-      α = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
+      α = $~"ordinal-indexed sequence length"(
         S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
         𝒂 = 𝒙
       )
     ),
     [{
-      constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
+      constructor = $~Tuples.sequence,
       parameters = #(_1: %Binder(
-        #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
+        #(k: %Element($~"Segment (less)"(α = $~"ordinal-indexed sequence length"(
           S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
           𝒂 = 𝒙
         )))),
@@ -40,34 +48,34 @@ $"linear combination"(
       )),
       value = %structuralCases(
         𝒙,
-        $../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)),
+        $~"Ordinal-indexed sequences"(S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)),
         [{
-          constructor = $../../../../../Essentials/Sequences/"Ordinal-indexed sequences".sequence,
+          constructor = $~"Ordinal-indexed sequences".sequence,
           parameters = #(
-            α: %Element($../../../../../Essentials/Numbers/Ordinal/"Ordinal numbers"),
-            m: %Element($../../../../../Essentials/Sequences/Tuples(
+            α: %Element($~Essentials/Numbers/Ordinal/"Ordinal numbers"),
+            m: %Element($~Tuples(
               S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
               α = α
             ))
           ),
           value = %structuralCases(
             m,
-            $../../../../../Essentials/Sequences/Tuples(
+            $~Tuples(
               S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
               α = α
             ),
             [{
-              constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
+              constructor = $~Tuples.sequence,
               parameters = #(_2: %Binder(
-                #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+                #(k: %Element($~"Segment (less)"(α = α))),
                 #(x: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)))
               )),
-              value = $../../../../../Essentials/Operations/"Iterated operations"/"indexed by set with finite support"(
+              value = $~Essentials/Operations/"Iterated operations"/"indexed by set with finite support"(
                 X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
                 ⨂ = $../"iterated sum"(𝐑 = 𝐑, 𝐌 = 𝐌),
-                I = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
+                I = $~"Segment (less)"(α = α),
                 _1 = {
-                  #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+                  #(k: %Element($~"Segment (less)"(α = α))),
                   {a = $../product(
                     𝐑 = 𝐑, 𝐌 = 𝐌,
                     a = a[k = k],

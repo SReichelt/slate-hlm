@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Sequences = $../Sequences
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/List_of_prime_numbers
  *             * http://oeis.org/A000040
@@ -7,9 +11,9 @@
 $"Small primes": %StandardTheorem {
   claim = $../../../Sequences/"starts with"(
     S = $../"Natural numbers",
-    𝐚 = $../Sequences/"infinite sequence from subset"(M = $"Prime numbers"),
+    𝐚 = $~Sequences/"infinite sequence from subset"(M = $"Prime numbers"),
     n = $../number(value = 58),
-    𝐛 = $../Sequences/"tuple of numbers"(items = [
+    𝐛 = $~Sequences/"tuple of numbers"(items = [
       2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
       31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
       73, 79, 83, 89, 97, 101, 103, 107, 109, 113,

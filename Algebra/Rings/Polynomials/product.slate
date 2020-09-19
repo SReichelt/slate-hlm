@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~zero = $../zero
+]
+
 $product(
   𝐑: %Element(
     $../Rings,
@@ -32,7 +36,7 @@ $product(
             )),
             %not(%equals(
               a,
-              $../zero(𝐑 = 𝐑)
+              $~zero(𝐑 = 𝐑)
             ))
           ))
         ),
@@ -41,7 +45,7 @@ $product(
           p = $normalized(
             𝐑 = 𝐑, X = X,
             p = $product(𝐑 = 𝐑, X = X, p = r, q = q),
-            a = $../zero(𝐑 = 𝐑)
+            a = $~zero(𝐑 = 𝐑)
           ),
           q = $"product with left scalar"(𝐑 = 𝐑, X = X, a = a, p = q)
         )

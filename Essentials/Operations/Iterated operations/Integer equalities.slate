@@ -1,11 +1,16 @@
 %../../../../../logics/hlm%
 
+[
+  $~Integers = $../../Numbers/Integer/Integers,
+  $~Interval = $../../Numbers/Integer/Subsets/Interval
+]
+
 $"Integer equalities"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = X)),
-  j,k: %Element($../../Numbers/Integer/Integers),
+  j,k: %Element($~Integers),
   _1: %Binder(
-    #(i: %Element($../../Numbers/Integer/Subsets/Interval(a = j, b = k))),
+    #(i: %Element($~Interval(a = j, b = k))),
     #(a: %Element(X))
   )
 ): %StandardTheorem {
@@ -13,15 +18,15 @@ $"Integer equalities"(
     $"indexed by integer"(
       X = X, ⨂ = ⨂, j = j, k = k,
       _1 = {
-        #(i: %Element($../../Numbers/Integer/Subsets/Interval(a = j, b = k))),
+        #(i: %Element($~Interval(a = j, b = k))),
         {a = a[i = i]}
       }
     ),
     $"indexed by finite set"(
       X = X, ⨂ = ⨂,
-      I = $../../Numbers/Integer/Subsets/Interval(a = j, b = k),
+      I = $~Interval(a = j, b = k),
       _2 = {
-        #(i: %Element($../../Numbers/Integer/Subsets/Interval(a = j, b = k))),
+        #(i: %Element($~Interval(a = j, b = k))),
         {a = a[i = i]}
       }
     )

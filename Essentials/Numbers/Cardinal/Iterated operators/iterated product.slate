@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Cardinal numbers" = $../"Cardinal numbers"
+]
+
 /**
  * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = $../"Cardinal numbers", ⨂ = $"iterated product", n = n, _1 = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = n))), {a = {a[i = i]}}})`
  *
@@ -9,13 +13,9 @@
  */
 $"iterated product": %ExplicitOperator {
   notation = '∏',
-  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = $../"Cardinal numbers").operation(
-      ∗ = $../../../Operations/Operations(
-          X = $../"Cardinal numbers",
-          Y = $../"Cardinal numbers",
-          Z = $../"Cardinal numbers"
-        ).operation(_1 = {
-          #(κ,μ: %Element($../"Cardinal numbers")),
+  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = $~"Cardinal numbers").operation(
+      ∗ = $../../../Operations/Operations(X = $~"Cardinal numbers", Y = $~"Cardinal numbers", Z = $~"Cardinal numbers").operation(_1 = {
+          #(κ,μ: %Element($~"Cardinal numbers")),
           {z = $../product(κ = κ, μ = μ)}
       }),
       e = $../../Natural/number(value = 1)

@@ -1,5 +1,10 @@
 %../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Numbers/Natural/"Natural numbers",
+  $~"Segment (less)" = $../Numbers/Ordinal/Subsets/"Segment (less)"
+]
+
 /**
  * @remarks Finite sequences could alternatively be defined inductively (i.e. as lists). However, since we also need a definition for tuples of a given length, we base our definition on that.
  *
@@ -12,7 +17,7 @@
  */
 $"Finite sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
-    n: %Element($../Numbers/Natural/"Natural numbers"),
+    n: %Element($~"Natural numbers"),
     𝐚: %Element($Tuples(S = S, α = n))
   ): %Constructor {
     notation = $SubSup(
@@ -21,11 +26,11 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
     ),
     equalityDefinition = {
       leftParameters = #(
-        m: %Element($../Numbers/Natural/"Natural numbers"),
+        m: %Element($~"Natural numbers"),
         𝐚: %Element($Tuples(S = S, α = m))
       ),
       rightParameters = #(
-        n: %Element($../Numbers/Natural/"Natural numbers"),
+        n: %Element($~"Natural numbers"),
         𝐛: %Element($Tuples(S = S, α = n))
       ),
       definition = [%and(
@@ -38,11 +43,11 @@ $"Finite sequences"(S: %Set(auto = %true)): %Construction {
             [{
               constructor = $Tuples.sequence,
               parameters = #(_1: %Binder(
-                #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = n))),
+                #(k: %Element($~"Segment (less)"(α = n))),
                 #(b: %Element(S))
               )),
               value = $Tuples(S = S, α = m).sequence(_1 = {
-                  #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = m))),
+                  #(j: %Element($~"Segment (less)"(α = m))),
                   {a = b[k = j]}
               })
             }]

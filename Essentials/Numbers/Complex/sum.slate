@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Real numbers" = $../Real/"Real numbers",
+  $~sum = $../Real/sum
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex.has_add
  */
@@ -9,15 +14,15 @@ $sum(a,b: %Element($"Complex numbers")): %ExplicitOperator {
     b, $"Complex numbers",
     [{
       constructor = $"Complex numbers".complex,
-      parameters = #(r_b,i_b: %Element($../Real/"Real numbers")),
+      parameters = #(r_b,i_b: %Element($~"Real numbers")),
       value = %structuralCases(
         a, $"Complex numbers",
         [{
           constructor = $"Complex numbers".complex,
-          parameters = #(r_a,i_a: %Element($../Real/"Real numbers")),
+          parameters = #(r_a,i_a: %Element($~"Real numbers")),
           value = $"Complex numbers".complex(
-            r = $../Real/sum(a = r_a, b = r_b),
-            i = $../Real/sum(a = i_a, b = i_b)
+            r = $~sum(a = r_a, b = r_b),
+            i = $~sum(a = i_a, b = i_b)
           )
         }]
       )

@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~zero = $../zero
+]
+
 $sum(
   𝐑: %Element(
     $../Rings,
@@ -24,7 +29,7 @@ $sum(
         constructor = $Polynomials.term,
         parameters = #(
           s: %Element($Polynomials(𝐑 = 𝐑, X = X)),
-          b: %Element($../Carrier(𝐑 = 𝐑)),
+          b: %Element($~Carrier(𝐑 = 𝐑)),
           _2: %Constraint(%or(
             %not(%equals(
               s,
@@ -32,7 +37,7 @@ $sum(
             )),
             %not(%equals(
               b,
-              $../zero(𝐑 = 𝐑)
+              $~zero(𝐑 = 𝐑)
             ))
           ))
         ),
@@ -48,7 +53,7 @@ $sum(
               constructor = $Polynomials.term,
               parameters = #(
                 r: %Element($Polynomials(𝐑 = 𝐑, X = X)),
-                a: %Element($../Carrier(𝐑 = 𝐑)),
+                a: %Element($~Carrier(𝐑 = 𝐑)),
                 _1: %Constraint(%or(
                   %not(%equals(
                     r,
@@ -56,7 +61,7 @@ $sum(
                   )),
                   %not(%equals(
                     a,
-                    $../zero(𝐑 = 𝐑)
+                    $~zero(𝐑 = 𝐑)
                   ))
                 ))
               ),

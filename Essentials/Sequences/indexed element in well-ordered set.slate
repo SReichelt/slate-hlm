@@ -1,14 +1,19 @@
 %../../../../logics/hlm%
 
+[
+  $~Numbers = $../Numbers,
+  $~Relations = $../Relations
+]
+
 /**
  * @remarks This is just the inverse of the previous definition.
  */
 $"indexed element in well-ordered set"(
   S: %Set,
-  ⪯: %Element($../Relations/Endorelations(S = S)),
-  _1: %Constraint($../Relations/"well-order"(S = S, ⪯ = ⪯)),
-  α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(S = S, ⪯ = ⪯)),
-  β: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))
+  ⪯: %Element($~Relations/Endorelations(S = S)),
+  _1: %Constraint($~Relations/"well-order"(S = S, ⪯ = ⪯)),
+  α: %Def($~Numbers/Ordinal/"Ordinal numbers"."order type"(S = S, ⪯ = ⪯)),
+  β: %Element($~Numbers/Ordinal/Subsets/"Segment (less)"(α = α))
 ): %ImplicitOperator {
   notation = $Function(
     function = $SubSup(body = S, sub = ⪯),

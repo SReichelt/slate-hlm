@@ -1,15 +1,18 @@
 %../../../../../../logics/hlm%
 
-$"Segment (greater or equal)"(a: %Element($../Integers)): %SetOperator {
+[
+  $~Integers = $../Integers
+]
+
+$"Segment (greater or equal)"(a: %Element($~Integers)): %SetOperator {
   notation = $Segment(set = 'ℤ', symbol = '≥', limit = a),
   definition = [
     %subset(
-      #(b: %Element($../Integers)),
+      #(b: %Element($~Integers)),
       $../"less or equal"(b = b, a = a)
     ),
     $../../../Sets/"Relative complement"(
-      U = $../Integers,
-      S = $../Integers,
+      U = $~Integers, S = $~Integers,
       T = $"Segment (less)"(a = a)
     )
   ]

@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Ideal_(ring_theory)
  *             * https://mathworld.wolfram.com/LeftIdeal.html
@@ -8,7 +12,7 @@
  */
 $"left ideal"(
   𝐑: %Element($../Rings),
-  I: %Subset($../Carrier(𝐑 = 𝐑))
+  I: %Subset($~Carrier(𝐑 = 𝐑))
 ): %Predicate {
   notation = $NounRelation(
     operands = [I, 𝐑],
@@ -23,7 +27,7 @@ $"left ideal"(
     %forall(
       #(
         i: %Element(I),
-        r: %Element($../Carrier(𝐑 = 𝐑))
+        r: %Element($~Carrier(𝐑 = 𝐑))
       ),
       %in(
         $../product(𝐑 = 𝐑, a = r, b = i),

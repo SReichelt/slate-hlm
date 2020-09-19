@@ -1,35 +1,42 @@
 %../../../../logics/hlm%
 
+[
+  $~Carrier = $../../Algebra/Semirings/Carrier,
+  $~Essentials = $../../Essentials,
+  $~Homomorphisms = $../../Algebra/Semirings/Homomorphisms/Homomorphisms,
+  $~Semirings = $../../Algebra/Semirings/Semirings
+]
+
 /**
  * @remarks The objects of this category are actually isomorphism classes of semirings.
  */
-$semirings(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+$semirings(u: %Element($~Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   notation = $SubSup(body = '𝐒𝐞𝐦𝐢𝐑𝐢𝐧𝐠', sub = u),
   definition = [$../Categories(u = u).category(
-      O = $../../Algebra/Semirings/Semirings,
+      O = $~Semirings,
       _1 = {
-        #(𝐀,𝐁: %Element($../../Algebra/Semirings/Semirings)),
-        {M = $../../Algebra/Semirings/Homomorphisms/Homomorphisms(𝐑 = 𝐀, 𝐒 = 𝐁)}
+        #(𝐀,𝐁: %Element($~Semirings)),
+        {M = $~Homomorphisms(𝐑 = 𝐀, 𝐒 = 𝐁)}
       },
       _2 = {
-        #(𝐂: %Element($../../Algebra/Semirings/Semirings)),
+        #(𝐂: %Element($~Semirings)),
         {i = $../../Algebra/Semirings/Homomorphisms/identity(𝐑 = 𝐂)}
       },
       _3 = {
-        #(𝐃,𝐄,𝐅: %Element($../../Algebra/Semirings/Semirings)),
-        {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Algebra/Semirings/Homomorphisms/Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅),
-            Y = $../../Algebra/Semirings/Homomorphisms/Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄),
-            Z = $../../Algebra/Semirings/Homomorphisms/Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐅)
+        #(𝐃,𝐄,𝐅: %Element($~Semirings)),
+        {∘ = $~Essentials/Operations/Operations(
+            X = $~Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅),
+            Y = $~Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄),
+            Z = $~Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Algebra/Semirings/Homomorphisms/Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅)),
-              φ: %Element($../../Algebra/Semirings/Homomorphisms/Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄))
+              ψ: %Element($~Homomorphisms(𝐑 = 𝐄, 𝐒 = 𝐅)),
+              φ: %Element($~Homomorphisms(𝐑 = 𝐃, 𝐒 = 𝐄))
             ),
-            {z = $../../Essentials/Functions/composition(
-              X = $../../Algebra/Semirings/Carrier(𝐑 = 𝐃),
-              Y = $../../Algebra/Semirings/Carrier(𝐑 = 𝐄),
-              Z = $../../Algebra/Semirings/Carrier(𝐑 = 𝐅),
+            {z = $~Essentials/Functions/composition(
+              X = $~Carrier(𝐑 = 𝐃),
+              Y = $~Carrier(𝐑 = 𝐄),
+              Z = $~Carrier(𝐑 = 𝐅),
               f = φ, g = ψ
             )}
         })}

@@ -1,8 +1,12 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 $"commutative monoid"(
   M: %Set,
-  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
+  ∗: %Element($~Operations/"Inner operations"(X = M)),
   e: %Element(M)
 ): %Predicate {
   notation = $Structure(
@@ -16,9 +20,9 @@ $"commutative monoid"(
       $commutative(𝐌 = $Monoids.monoid(M = M, ∗ = ∗, e = e))
     ),
     %and(
-      $../../Essentials/Operations/associative(X = M, ∗ = ∗),
-      $../../Essentials/Operations/commutative(X = M, Z = M, ∗ = ∗),
-      $../../Essentials/Operations/"identity element"(X = M, ∗ = ∗, e = e)
+      $~Operations/associative(X = M, ∗ = ∗),
+      $~Operations/commutative(X = M, Z = M, ∗ = ∗),
+      $~Operations/"identity element"(X = M, ∗ = ∗, e = e)
     )
   ]
 }

@@ -1,5 +1,12 @@
 %../../../logics/hlm%
 
+[
+  $~Bijections = $../Essentials/Functions/Bijections,
+  $~Essentials = $../Essentials,
+  $~Isomorphisms = $../Algebra/Generic/Isomorphisms,
+  $~Operations = $../Essentials/Operations/Operations
+]
+
 /**
  * @remarks This definition of categories includes the additional requirement that all categories are [skeletal](https://en.wikipedia.org/wiki/Skeleton_(category_theory)). The reasoning behind this is that I expect the equality definition above, which is derived purely syntactically, to be equivalent to _isomorphism_ of categories, not _equivalence_. That is, without this restriction, two isomorphic categories would be considered equal, but two equivalent categories would not necessarily be. (This needs to be verified.)
  *
@@ -13,7 +20,7 @@
  *             * https://ncatlab.org/nlab/show/category
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/category/default.html#category_theory.category
  */
-$Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Construction {
+$Categories(u: %Element($~Essentials/Numbers/Natural/"Natural numbers")): %Construction {
   $category(
     O: %Set,
     _1: %Binder(
@@ -26,7 +33,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
     ),
     _3: %Binder(
       #(𝐃,𝐄,𝐅: %Element(O)),
-      #(∘: %Element($../Essentials/Operations/Operations(
+      #(∘: %Element($~Operations(
         X = M[𝐀 = 𝐄, 𝐁 = 𝐅],
         Y = M[𝐀 = 𝐃, 𝐁 = 𝐄],
         Z = M[𝐀 = 𝐃, 𝐁 = 𝐅]
@@ -40,12 +47,12 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         h: %Element(M[𝐀 = 𝐘, 𝐁 = 𝐙])
       ),
       %equals(
-        $../Essentials/Operations/value(
+        $~Essentials/Operations/value(
           X = M[𝐀 = 𝐗, 𝐁 = 𝐙],
           Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
           Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
           ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐙],
-          x = $../Essentials/Operations/value(
+          x = $~Essentials/Operations/value(
             X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
             Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
             Z = M[𝐀 = 𝐗, 𝐁 = 𝐙],
@@ -54,13 +61,13 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           ),
           y = f
         ),
-        $../Essentials/Operations/value(
+        $~Essentials/Operations/value(
           X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
           Y = M[𝐀 = 𝐖, 𝐁 = 𝐘],
           Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
           ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐘, 𝐅 = 𝐙],
           x = h,
-          y = $../Essentials/Operations/value(
+          y = $~Essentials/Operations/value(
             X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
             Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
             Z = M[𝐀 = 𝐖, 𝐁 = 𝐘],
@@ -76,7 +83,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         f: %Element(M[𝐀 = 𝐗, 𝐁 = 𝐘])
       ),
       %equals(
-        $../Essentials/Operations/value(
+        $~Essentials/Operations/value(
           X = M[𝐀 = 𝐘, 𝐁 = 𝐘],
           Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
           Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
@@ -84,7 +91,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           x = i[𝐂 = 𝐘],
           y = f
         ),
-        $../Essentials/Operations/value(
+        $~Essentials/Operations/value(
           X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
           Y = M[𝐀 = 𝐗, 𝐁 = 𝐗],
           Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
@@ -105,7 +112,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
           ),
           formula = %and(
             %equals(
-              $../Essentials/Operations/value(
+              $~Essentials/Operations/value(
                 X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                 Y = M[𝐀 = 𝐘, 𝐁 = 𝐗],
                 Z = M[𝐀 = 𝐘, 𝐁 = 𝐘],
@@ -115,7 +122,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               i[𝐂 = 𝐘]
             ),
             %equals(
-              $../Essentials/Operations/value(
+              $~Essentials/Operations/value(
                 X = M[𝐀 = 𝐘, 𝐁 = 𝐗],
                 Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                 Z = M[𝐀 = 𝐗, 𝐁 = 𝐗],
@@ -176,7 +183,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         ),
         _3: %Binder(
           #(𝐃,𝐄,𝐅: %Element(O)),
-          #(∘: %Element($../Essentials/Operations/Operations(
+          #(∘: %Element($~Operations(
             X = M[𝐀 = 𝐄, 𝐁 = 𝐅],
             Y = M[𝐀 = 𝐃, 𝐁 = 𝐄],
             Z = M[𝐀 = 𝐃, 𝐁 = 𝐅]
@@ -190,12 +197,12 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             h: %Element(M[𝐀 = 𝐘, 𝐁 = 𝐙])
           ),
           %equals(
-            $../Essentials/Operations/value(
+            $~Essentials/Operations/value(
               X = M[𝐀 = 𝐗, 𝐁 = 𝐙],
               Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
               Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐙],
-              x = $../Essentials/Operations/value(
+              x = $~Essentials/Operations/value(
                 X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
                 Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                 Z = M[𝐀 = 𝐗, 𝐁 = 𝐙],
@@ -204,13 +211,13 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               ),
               y = f
             ),
-            $../Essentials/Operations/value(
+            $~Essentials/Operations/value(
               X = M[𝐀 = 𝐘, 𝐁 = 𝐙],
               Y = M[𝐀 = 𝐖, 𝐁 = 𝐘],
               Z = M[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∘[𝐃 = 𝐖, 𝐄 = 𝐘, 𝐅 = 𝐙],
               x = h,
-              y = $../Essentials/Operations/value(
+              y = $~Essentials/Operations/value(
                 X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                 Y = M[𝐀 = 𝐖, 𝐁 = 𝐗],
                 Z = M[𝐀 = 𝐖, 𝐁 = 𝐘],
@@ -226,7 +233,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             f: %Element(M[𝐀 = 𝐗, 𝐁 = 𝐘])
           ),
           %equals(
-            $../Essentials/Operations/value(
+            $~Essentials/Operations/value(
               X = M[𝐀 = 𝐘, 𝐁 = 𝐘],
               Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
               Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
@@ -234,7 +241,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               x = i[𝐂 = 𝐘],
               y = f
             ),
-            $../Essentials/Operations/value(
+            $~Essentials/Operations/value(
               X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
               Y = M[𝐀 = 𝐗, 𝐁 = 𝐗],
               Z = M[𝐀 = 𝐗, 𝐁 = 𝐘],
@@ -255,7 +262,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               ),
               formula = %and(
                 %equals(
-                  $../Essentials/Operations/value(
+                  $~Essentials/Operations/value(
                     X = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                     Y = M[𝐀 = 𝐘, 𝐁 = 𝐗],
                     Z = M[𝐀 = 𝐘, 𝐁 = 𝐘],
@@ -265,7 +272,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
                   i[𝐂 = 𝐘]
                 ),
                 %equals(
-                  $../Essentials/Operations/value(
+                  $~Essentials/Operations/value(
                     X = M[𝐀 = 𝐘, 𝐁 = 𝐗],
                     Y = M[𝐀 = 𝐗, 𝐁 = 𝐘],
                     Z = M[𝐀 = 𝐗, 𝐁 = 𝐗],
@@ -292,7 +299,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         ),
         _9: %Binder(
           #(𝐃,𝐄,𝐅: %Element(P)),
-          #(∙: %Element($../Essentials/Operations/Operations(
+          #(∙: %Element($~Operations(
             X = N[𝐀 = 𝐄, 𝐁 = 𝐅],
             Y = N[𝐀 = 𝐃, 𝐁 = 𝐄],
             Z = N[𝐀 = 𝐃, 𝐁 = 𝐅]
@@ -306,12 +313,12 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             h: %Element(N[𝐀 = 𝐘, 𝐁 = 𝐙])
           ),
           %equals(
-            $../Essentials/Operations/value(
+            $~Essentials/Operations/value(
               X = N[𝐀 = 𝐗, 𝐁 = 𝐙],
               Y = N[𝐀 = 𝐖, 𝐁 = 𝐗],
               Z = N[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∙[𝐃 = 𝐖, 𝐄 = 𝐗, 𝐅 = 𝐙],
-              x = $../Essentials/Operations/value(
+              x = $~Essentials/Operations/value(
                 X = N[𝐀 = 𝐘, 𝐁 = 𝐙],
                 Y = N[𝐀 = 𝐗, 𝐁 = 𝐘],
                 Z = N[𝐀 = 𝐗, 𝐁 = 𝐙],
@@ -320,13 +327,13 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               ),
               y = f
             ),
-            $../Essentials/Operations/value(
+            $~Essentials/Operations/value(
               X = N[𝐀 = 𝐘, 𝐁 = 𝐙],
               Y = N[𝐀 = 𝐖, 𝐁 = 𝐘],
               Z = N[𝐀 = 𝐖, 𝐁 = 𝐙],
               ∗ = ∙[𝐃 = 𝐖, 𝐄 = 𝐘, 𝐅 = 𝐙],
               x = h,
-              y = $../Essentials/Operations/value(
+              y = $~Essentials/Operations/value(
                 X = N[𝐀 = 𝐗, 𝐁 = 𝐘],
                 Y = N[𝐀 = 𝐖, 𝐁 = 𝐗],
                 Z = N[𝐀 = 𝐖, 𝐁 = 𝐘],
@@ -342,7 +349,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
             f: %Element(N[𝐀 = 𝐗, 𝐁 = 𝐘])
           ),
           %equals(
-            $../Essentials/Operations/value(
+            $~Essentials/Operations/value(
               X = N[𝐀 = 𝐘, 𝐁 = 𝐘],
               Y = N[𝐀 = 𝐗, 𝐁 = 𝐘],
               Z = N[𝐀 = 𝐗, 𝐁 = 𝐘],
@@ -350,7 +357,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               x = j[𝐂 = 𝐘],
               y = f
             ),
-            $../Essentials/Operations/value(
+            $~Essentials/Operations/value(
               X = N[𝐀 = 𝐗, 𝐁 = 𝐘],
               Y = N[𝐀 = 𝐗, 𝐁 = 𝐗],
               Z = N[𝐀 = 𝐗, 𝐁 = 𝐘],
@@ -371,7 +378,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
               ),
               formula = %and(
                 %equals(
-                  $../Essentials/Operations/value(
+                  $~Essentials/Operations/value(
                     X = N[𝐀 = 𝐗, 𝐁 = 𝐘],
                     Y = N[𝐀 = 𝐘, 𝐁 = 𝐗],
                     Z = N[𝐀 = 𝐘, 𝐁 = 𝐘],
@@ -381,7 +388,7 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
                   j[𝐂 = 𝐘]
                 ),
                 %equals(
-                  $../Essentials/Operations/value(
+                  $~Essentials/Operations/value(
                     X = N[𝐀 = 𝐘, 𝐁 = 𝐗],
                     Y = N[𝐀 = 𝐗, 𝐁 = 𝐘],
                     Z = N[𝐀 = 𝐗, 𝐁 = 𝐗],
@@ -398,14 +405,14 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
       ),
       definition = [%exists(
         #(
-          φ: %Element($../Essentials/Functions/Bijections(X = O, Y = P)),
+          φ: %Element($~Bijections(X = O, Y = P)),
           _13: %Binder(
             #(𝐀,𝐁: %Element(O)),
-            #(ψ: %Element($../Essentials/Functions/Bijections(
+            #(ψ: %Element($~Bijections(
               X = M[𝐀 = 𝐀, 𝐁 = 𝐁],
               Y = N[
-                𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐀),
-                𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐁)
+                𝐀 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐀),
+                𝐁 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐁)
               ]
             )))
           )
@@ -413,43 +420,43 @@ $Categories(u: %Element($../Essentials/Numbers/Natural/"Natural numbers")): %Con
         formula = %and(
           %forall(
             #(𝐂: %Element(O)),
-            $../Algebra/Generic/Isomorphisms/"element condition"(
+            $~Isomorphisms/"element condition"(
               X = M[𝐀 = 𝐂, 𝐁 = 𝐂],
               Y = N[
-                𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐂),
-                𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐂)
+                𝐀 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐂),
+                𝐁 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐂)
               ],
               φ = ψ[𝐀 = 𝐂, 𝐁 = 𝐂],
               x = i[𝐂 = 𝐂],
-              y = j[𝐂 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐂)]
+              y = j[𝐂 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐂)]
             )
           ),
           %forall(
             #(𝐃,𝐄,𝐅: %Element(O)),
-            $../Algebra/Generic/Isomorphisms/"morphism condition"(
+            $~Isomorphisms/"morphism condition"(
               X_1 = M[𝐀 = 𝐄, 𝐁 = 𝐅],
               X_2 = M[𝐀 = 𝐃, 𝐁 = 𝐄],
               X_3 = M[𝐀 = 𝐃, 𝐁 = 𝐅],
               Y_1 = N[
-                𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐄),
-                𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐅)
+                𝐀 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐄),
+                𝐁 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐅)
               ],
               Y_2 = N[
-                𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐃),
-                𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐄)
+                𝐀 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐃),
+                𝐁 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐄)
               ],
               Y_3 = N[
-                𝐀 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐃),
-                𝐁 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐅)
+                𝐀 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐃),
+                𝐁 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐅)
               ],
               φ_1 = ψ[𝐀 = 𝐄, 𝐁 = 𝐅],
               φ_2 = ψ[𝐀 = 𝐃, 𝐁 = 𝐄],
               φ_3 = ψ[𝐀 = 𝐃, 𝐁 = 𝐅],
               ∗ = ∘[𝐃 = 𝐃, 𝐄 = 𝐄, 𝐅 = 𝐅],
               ⋆ = ∙[
-                𝐃 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐃),
-                𝐄 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐄),
-                𝐅 = $../Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐅)
+                𝐃 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐃),
+                𝐄 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐄),
+                𝐅 = $~Essentials/Functions/value(X = O, Y = P, f = φ, x = 𝐅)
               ]
             )
           )

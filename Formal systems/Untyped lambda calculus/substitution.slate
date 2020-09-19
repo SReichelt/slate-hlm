@@ -1,5 +1,12 @@
 %../../../../logics/hlm%
 
+[
+  $~"Fresh variables" = $../"Fresh variables",
+  $~"Relative complement" = $../../Essentials/Sets/"Relative complement",
+  $~Union = $../../Essentials/Sets/Union,
+  $~Variables = $../Variables
+]
+
 /**
  * @remarks Note that we do not allow `x` to appear free in `R`. This ensures that `x` does not appear free in the result either, which is important for e.g. the definition `$"beta reduction"` of beta reduction.
  *
@@ -7,14 +14,11 @@
  *             * https://ncatlab.org/nlab/show/substitution#avoiding+variable+capture
  */
 $substitution(
-  V: %Subset(
-    $../Variables,
-    auto = %true
-  ),
+  V: %Subset($~Variables, auto = %true),
   _1: %Constraint($../../Essentials/Sets/finite(S = V)),
   T: %Element($Terms(V = V)),
   x: %Element(V),
-  R: %Element($Terms(V = $../../Essentials/Sets/"Relative complement"(
+  R: %Element($Terms(V = $~"Relative complement"(
     U = V, S = V,
     T = %enumeration(x)
   )))
@@ -42,20 +46,18 @@ $substitution(
         constructor = $Terms.abstraction,
         parameters = #(
           _2: %Binder(
-            #(y: %Element($../"Fresh variables"(V = V))),
-            #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
-              U = $../Variables,
-              S = V,
+            #(y: %Element($~"Fresh variables"(V = V))),
+            #(M: %Element($Terms(V = $~Union(
+              U = $~Variables, S = V,
               T = %enumeration(y)
             ))))
           ),
           _3: %Constraint(%forall(
-            #(y,z: %Element($../"Fresh variables"(V = V))),
+            #(y,z: %Element($~"Fresh variables"(V = V))),
             %equals(
               $substitution(
-                V = $Terms(V = $../../Essentials/Sets/Union(
-                  U = $../Variables,
-                  S = V,
+                V = $Terms(V = $~Union(
+                  U = $~Variables, S = V,
                   T = %enumeration(y)
                 )),
                 T = M[y = y],
@@ -65,16 +67,16 @@ $substitution(
             )
           ))
         ),
-        value = $Terms(V = $../../Essentials/Sets/"Relative complement"(
+        value = $Terms(V = $~"Relative complement"(
             U = V, S = V,
             T = %enumeration(x)
           )).abstraction(_2 = {
-            #(z: %Element($../"Fresh variables"(V = $../../Essentials/Sets/"Relative complement"(
+            #(z: %Element($~"Fresh variables"(V = $~"Relative complement"(
               U = V, S = V,
               T = %enumeration(x)
             )))),
             {M = $substitution(
-              V = $../"Fresh variables"(V = V),
+              V = $~"Fresh variables"(V = V),
               T = M[y = z],
               x = x, R = R
             )}
@@ -83,7 +85,7 @@ $substitution(
       {
         constructor = $Terms.application,
         parameters = #(M,N: %Element($Terms(V = V))),
-        value = $Terms(V = $../../Essentials/Sets/"Relative complement"(
+        value = $Terms(V = $~"Relative complement"(
             U = V, S = V,
             T = %enumeration(x)
           )).application(

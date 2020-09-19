@@ -1,14 +1,19 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Inner operations" = $../"Inner operations",
+  $~"commutative monoid" = $../../../Algebra/Monoids/"commutative monoid"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Iterated_binary_operation
  *             * https://proofwiki.org/wiki/Definition:Iterated_Binary_Operation
  */
 $"Iterated operations"(X: %Set(auto = %true)): %Construction {
   $operation(
-    ∗: %Element($../"Inner operations"(X = X)),
+    ∗: %Element($~"Inner operations"(X = X)),
     e: %Element(X),
-    _1: %Constraint($../../../Algebra/Monoids/"commutative monoid"(M = X, ∗ = ∗, e = e))
+    _1: %Constraint($~"commutative monoid"(M = X, ∗ = ∗, e = e))
   ): %Constructor {
     notation = $Parens(
       body = $Operator(
@@ -19,14 +24,14 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
     ),
     equalityDefinition = {
       leftParameters = #(
-        ∗: %Element($../"Inner operations"(X = X)),
+        ∗: %Element($~"Inner operations"(X = X)),
         e: %Element(X),
-        _1: %Constraint($../../../Algebra/Monoids/"commutative monoid"(M = X, ∗ = ∗, e = e))
+        _1: %Constraint($~"commutative monoid"(M = X, ∗ = ∗, e = e))
       ),
       rightParameters = #(
-        ⋆: %Element($../"Inner operations"(X = X)),
+        ⋆: %Element($~"Inner operations"(X = X)),
         f: %Element(X),
-        _2: %Constraint($../../../Algebra/Monoids/"commutative monoid"(M = X, ∗ = ⋆, e = f))
+        _2: %Constraint($~"commutative monoid"(M = X, ∗ = ⋆, e = f))
       ),
       definition = [%and(
         %equals(∗, ⋆),

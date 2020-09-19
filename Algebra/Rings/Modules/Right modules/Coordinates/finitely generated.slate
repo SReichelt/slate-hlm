@@ -1,5 +1,9 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Finitely_generated_module
  *             * https://proofwiki.org/wiki/Definition:Finitely_Generated_Module
@@ -17,12 +21,12 @@ $"finitely generated"(
     #(𝒙: %Element($"Element sequences"(𝐑 = 𝐑, 𝐌 = 𝐌))),
     formula = %and(
       $../../../../../Essentials/Sequences/finite(
-        S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+        S = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
         𝒂 = 𝒙
       ),
       %setEquals(
         $Span(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙),
-        $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)
+        $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)
       )
     )
   )]

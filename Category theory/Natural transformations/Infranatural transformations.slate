@@ -1,31 +1,37 @@
 %../../../../logics/hlm%
 
+[
+  $~Categories = $../Categories,
+  $~Functors = $../Functors/Functors,
+  $~Morphisms = $../Morphisms,
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers",
+  $~Objects = $../Objects,
+  $~"object value" = $../Functors/"object value"
+]
+
 /**
  * @remarks Here, we first define infranatural transformations, as a prerequisite for defining natural transformations (see `$"Natural transformations"`). This is necessary if we want to be able to ask whether a given transformation is natural or not.
  *
  * @references * https://en.wikipedia.org/wiki/Natural_transformation#Definition: infranatural transformation
  */
 $"Infranatural transformations"(
-  u,v: %Element(
-    $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  u,v: %Element($~"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(u = u),
+    $~Categories(u = u),
     auto = %true
   ),
   𝓓: %Element(
-    $../Categories(u = v),
+    $~Categories(u = v),
     auto = %true
   ),
-  F,G: %Element($../Functors/Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))
+  F,G: %Element($~Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓))
 ): %Construction {
   $transformation(_1: %Binder(
-    #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
-    #(n: %Element($../Morphisms(
+    #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
+    #(n: %Element($~Morphisms(
       u = v, 𝓒 = 𝓓,
-      𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
-      𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗)
+      𝐗 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
+      𝐘 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗)
     )))
   )): %Constructor {
     notation = $SubSup(
@@ -34,23 +40,23 @@ $"Infranatural transformations"(
     ),
     equalityDefinition = {
       leftParameters = #(_1: %Binder(
-        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
-        #(n: %Element($../Morphisms(
+        #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
+        #(n: %Element($~Morphisms(
           u = v, 𝓒 = 𝓓,
-          𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
-          𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗)
+          𝐗 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
+          𝐘 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗)
         )))
       )),
       rightParameters = #(_2: %Binder(
-        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
-        #(m: %Element($../Morphisms(
+        #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
+        #(m: %Element($~Morphisms(
           u = v, 𝓒 = 𝓓,
-          𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
-          𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗)
+          𝐗 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
+          𝐘 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗)
         )))
       )),
       definition = [%forall(
-        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+        #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
         %equals(
           n[𝐗 = 𝐗],
           m[𝐗 = 𝐗]

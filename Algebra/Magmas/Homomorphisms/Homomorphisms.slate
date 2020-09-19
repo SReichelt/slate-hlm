@@ -1,11 +1,18 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Magmas = $../Magmas,
+  $~operation = $../operation,
+  $~value = $../../../Essentials/Functions/value
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Magma_(algebra)#Morphism_of_magmas
  *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/homomorphism
  */
-$Homomorphisms(𝐌,𝐍: %Element($../Magmas)): %SetOperator {
+$Homomorphisms(𝐌,𝐍: %Element($~Magmas)): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [𝐌, 𝐍]
@@ -21,28 +28,28 @@ $Homomorphisms(𝐌,𝐍: %Element($../Magmas)): %SetOperator {
   },
   definition = [%subset(
     #(f: %Element($../../../Essentials/Functions/Functions(
-      X = $../Carrier(𝐌 = 𝐌),
-      Y = $../Carrier(𝐌 = 𝐍)
+      X = $~Carrier(𝐌 = 𝐌),
+      Y = $~Carrier(𝐌 = 𝐍)
     ))),
     %forall(
-      #(a,b: %Element($../Carrier(𝐌 = 𝐌))),
+      #(a,b: %Element($~Carrier(𝐌 = 𝐌))),
       %equals(
-        $../../../Essentials/Functions/value(
-          X = $../Carrier(𝐌 = 𝐌),
-          Y = $../Carrier(𝐌 = 𝐍),
+        $~value(
+          X = $~Carrier(𝐌 = 𝐌),
+          Y = $~Carrier(𝐌 = 𝐍),
           f = f,
-          x = $../operation(𝐌 = 𝐌, a = a, b = b)
+          x = $~operation(𝐌 = 𝐌, a = a, b = b)
         ),
-        $../operation(
+        $~operation(
           𝐌 = 𝐍,
-          a = $../../../Essentials/Functions/value(
-            X = $../Carrier(𝐌 = 𝐌),
-            Y = $../Carrier(𝐌 = 𝐍),
+          a = $~value(
+            X = $~Carrier(𝐌 = 𝐌),
+            Y = $~Carrier(𝐌 = 𝐍),
             f = f, x = a
           ),
-          b = $../../../Essentials/Functions/value(
-            X = $../Carrier(𝐌 = 𝐌),
-            Y = $../Carrier(𝐌 = 𝐍),
+          b = $~value(
+            X = $~Carrier(𝐌 = 𝐌),
+            Y = $~Carrier(𝐌 = 𝐍),
             f = f, x = b
           )
         )

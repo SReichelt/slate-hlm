@@ -1,5 +1,12 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../../../Carrier,
+  $~"Segment (less)" = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)",
+  $~Sets = $../../../../../Essentials/Sets,
+  $~Tuples = $../../../../../Essentials/Sequences/Tuples
+]
+
 /**
  * @remarks This defines the set of valid coordinate sequences corresponding to a given element sequence `𝒙`. This set only depends on the length of `𝒙`. A coordinate sequence is a sequence of ring elements that has the same length and finite support.
  *
@@ -27,30 +34,30 @@ $Coordinates(
     pluralName = ['coordinate sequences', ' for ', 𝒙]
   },
   definition = [%subset(
-    #(𝐚: %Element($../../../../../Essentials/Sequences/Tuples(
-      S = $../../../Carrier(𝐑 = 𝐑),
+    #(𝐚: %Element($~Tuples(
+      S = $~Carrier(𝐑 = 𝐑),
       α = α
     ))),
     %structural(
       𝐚,
-      $../../../../../Essentials/Sequences/Tuples(
-        S = $../../../Carrier(𝐑 = 𝐑),
+      $~Tuples(
+        S = $~Carrier(𝐑 = 𝐑),
         α = α
       ),
       [{
-        constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
+        constructor = $~Tuples.sequence,
         parameters = #(_1: %Binder(
-          #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
-          #(a: %Element($../../../Carrier(𝐑 = 𝐑)))
+          #(k: %Element($~"Segment (less)"(α = α))),
+          #(a: %Element($~Carrier(𝐑 = 𝐑)))
         )),
         value = %exists(
-          #(S: %Subset($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+          #(S: %Subset($~"Segment (less)"(α = α))),
           formula = %and(
-            $../../../../../Essentials/Sets/finite(S = S),
+            $~Sets/finite(S = S),
             %forall(
-              #(j: %Element($../../../../../Essentials/Sets/"Relative complement"(
-                U = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
-                S = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
+              #(j: %Element($~Sets/"Relative complement"(
+                U = $~"Segment (less)"(α = α),
+                S = $~"Segment (less)"(α = α),
                 T = S
               ))),
               %equals(

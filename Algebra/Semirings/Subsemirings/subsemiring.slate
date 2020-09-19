@@ -1,18 +1,23 @@
 %../../../../../logics/hlm%
 
-$subsemiring(𝐑,𝐒: %Element($../Semirings)): %Predicate {
+[
+  $~Carrier = $../Carrier,
+  $~Semirings = $../Semirings
+]
+
+$subsemiring(𝐑,𝐒: %Element($~Semirings)): %Predicate {
   notation = $SubObjectRelation(operands = [𝐑, 𝐒]),
   definition = [
     %exists(
       #(φ: %Element($../Homomorphisms/Homomorphisms(𝐑 = 𝐑, 𝐒 = 𝐒))),
       formula = $../../../Essentials/Functions/injective(
-        X = $../Carrier(𝐑 = 𝐑),
-        Y = $../Carrier(𝐑 = 𝐒),
+        X = $~Carrier(𝐑 = 𝐑),
+        Y = $~Carrier(𝐑 = 𝐒),
         f = φ
       )
     ),
     %exists(
-      #(S: %Subset($../Carrier(𝐑 = 𝐒))),
+      #(S: %Subset($~Carrier(𝐑 = 𝐒))),
       formula = %and(
         $"subsemiring set"(𝐑 = 𝐒, S = S),
         %equals(

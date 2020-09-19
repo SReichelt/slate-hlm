@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers"
+]
+
 /**
  * @references * https://proofwiki.org/wiki/Definition:Power_of_Element/Monoid
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#monoid.pow
@@ -7,21 +11,20 @@
 $"power to natural number"(
   𝐌: %Element($Monoids, auto = %true),
   a: %Element($Carrier(𝐌 = 𝐌)),
-  n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
+  n: %Element($~"Natural numbers")
 ): %ExplicitOperator {
   notation = $SubSup(body = a, sup = n),
   definition = [%structuralCases(
-    n,
-    $../../Essentials/Numbers/Natural/"Natural numbers",
+    n, $~"Natural numbers",
     [
       {
-        constructor = $../../Essentials/Numbers/Natural/"Natural numbers".zero,
+        constructor = $~"Natural numbers".zero,
         value = $identity(𝐌 = 𝐌),
         rewrite = %true
       },
       {
-        constructor = $../../Essentials/Numbers/Natural/"Natural numbers".successor,
-        parameters = #(x: %Element($../../Essentials/Numbers/Natural/"Natural numbers")),
+        constructor = $~"Natural numbers".successor,
+        parameters = #(x: %Element($~"Natural numbers")),
         value = $operation(
           𝐌 = 𝐌,
           a = $"power to natural number"(𝐌 = 𝐌, a = a, n = x),

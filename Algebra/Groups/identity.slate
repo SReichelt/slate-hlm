@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Essentials = $../../Essentials
+]
+
 $identity(𝐆: %Element($Groups)): %ExplicitOperator {
   notation = $SubSup(body = 'e', sub = 𝐆),
   definition = [%structuralCases(
@@ -8,9 +12,9 @@ $identity(𝐆: %Element($Groups)): %ExplicitOperator {
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
+        ∗: %Element($~Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
+        i: %Element($~Essentials/Functions/Functions(X = G, Y = G)),
         _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
       value = e

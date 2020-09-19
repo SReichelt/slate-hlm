@@ -1,19 +1,21 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Real numbers" = $../"Real numbers",
+  $~number = $../../Natural/number
+]
+
 $"Nonzero numbers": %SetOperator {
   notation = $SubSup(body = 'ℝ', sub = '±'),
   definition = [
-    $Hole(a = $../../Natural/number(value = 0)),
+    $Hole(a = $~number(value = 0)),
     %subset(
-      #(a: %Element($../"Real numbers")),
+      #(a: %Element($~"Real numbers")),
       %not(%equals(
         a,
-        $../../Natural/number(value = 0)
+        $~number(value = 0)
       ))
     ),
-    $../../../Sets/Union(
-      U = $../"Real numbers",
-      S = $"Negative numbers", T = $"Positive numbers"
-    )
+    $../../../Sets/Union(U = $~"Real numbers", S = $"Negative numbers", T = $"Positive numbers")
   ]
 }

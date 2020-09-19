@@ -1,5 +1,11 @@
 %../../../../logics/hlm%
 
+[
+  $~"Fresh variables" = $../"Fresh variables",
+  $~Union = $../../Essentials/Sets/Union,
+  $~Variables = $../Variables
+]
+
 /**
  * @remarks This formalization of the untyped lambda calculus is fairly standard except for one aspect: The right side of a lambda abstraction depends on the value of the bound variable used to define it (which is kind of the point of bound variables). To prevent wild pseudo-terms that actually differ in nontrivial ways depending on the variable, there needs to be an additional substitutability constraint. Although substitution is defined later, we can use it in this case because we are applying it to subterms only (i.e. we are employing mutual induction).
  *
@@ -7,10 +13,7 @@
  *             * https://ncatlab.org/nlab/show/lambda-calculus#https://ncatlab.org/nlab/show/lambda-calculus#pure_lambda_calculus
  */
 $Terms(
-  V: %Subset(
-    $../Variables,
-    auto = %true
-  ),
+  V: %Subset($~Variables, auto = %true),
   _1: %Constraint($../../Essentials/Sets/finite(S = V))
 ): %Construction {
   $variable(x: %Element(V)): %Constructor {
@@ -25,20 +28,18 @@ $Terms(
 
   $abstraction(
     _2: %Binder(
-      #(x: %Element($../"Fresh variables"(V = V))),
-      #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
-        U = $../Variables,
-        S = V,
+      #(x: %Element($~"Fresh variables"(V = V))),
+      #(M: %Element($Terms(V = $~Union(
+        U = $~Variables, S = V,
         T = %enumeration(x)
       ))))
     ),
     _3: %Constraint(%forall(
-      #(x,y: %Element($../"Fresh variables"(V = V))),
+      #(x,y: %Element($~"Fresh variables"(V = V))),
       %equals(
         $substitution(
-          V = $Terms(V = $../../Essentials/Sets/Union(
-            U = $../Variables,
-            S = V,
+          V = $Terms(V = $~Union(
+            U = $~Variables, S = V,
             T = %enumeration(x)
           )),
           T = M[x = x],
@@ -52,20 +53,18 @@ $Terms(
     equalityDefinition = {
       leftParameters = #(
         _2: %Binder(
-          #(x: %Element($../"Fresh variables"(V = V))),
-          #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
-            U = $../Variables,
-            S = V,
+          #(x: %Element($~"Fresh variables"(V = V))),
+          #(M: %Element($Terms(V = $~Union(
+            U = $~Variables, S = V,
             T = %enumeration(x)
           ))))
         ),
         _3: %Constraint(%forall(
-          #(x,y: %Element($../"Fresh variables"(V = V))),
+          #(x,y: %Element($~"Fresh variables"(V = V))),
           %equals(
             $substitution(
-              V = $Terms(V = $../../Essentials/Sets/Union(
-                U = $../Variables,
-                S = V,
+              V = $Terms(V = $~Union(
+                U = $~Variables, S = V,
                 T = %enumeration(x)
               )),
               T = M[x = x],
@@ -77,20 +76,18 @@ $Terms(
       ),
       rightParameters = #(
         _4: %Binder(
-          #(x: %Element($../"Fresh variables"(V = V))),
-          #("M'": %Element($Terms(V = $../../Essentials/Sets/Union(
-            U = $../Variables,
-            S = V,
+          #(x: %Element($~"Fresh variables"(V = V))),
+          #("M'": %Element($Terms(V = $~Union(
+            U = $~Variables, S = V,
             T = %enumeration(x)
           ))))
         ),
         _5: %Constraint(%forall(
-          #(x,y: %Element($../"Fresh variables"(V = V))),
+          #(x,y: %Element($~"Fresh variables"(V = V))),
           %equals(
             $substitution(
-              V = $Terms(V = $../../Essentials/Sets/Union(
-                U = $../Variables,
-                S = V,
+              V = $Terms(V = $~Union(
+                U = $~Variables, S = V,
                 T = %enumeration(x)
               )),
               T = "M'"[x = x],
@@ -102,14 +99,14 @@ $Terms(
       ),
       definition = [
         %forall(
-          #(x: %Element($../"Fresh variables"(V = V))),
+          #(x: %Element($~"Fresh variables"(V = V))),
           %equals(
             M[x = x],
             "M'"[x = x]
           )
         ),
         %exists(
-          #(x: %Element($../"Fresh variables"(V = V))),
+          #(x: %Element($~"Fresh variables"(V = V))),
           formula = %equals(
             M[x = x],
             "M'"[x = x]

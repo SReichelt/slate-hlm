@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Relations = $../../Relations
+]
+
 /**
  * @remarks In HLM, the disjoint union additionally needs to be equipped with a "dependent equality" `≃` that allows us to ask whether `%equals(s, t)` given `%equals(j, k)`.
  *
@@ -12,7 +16,7 @@ $"Generalized disjoint union"(
     #(i: %Element(I)),
     #(S: %Set(auto = %true))
   ),
-  ≃: %Element($../../Relations/"Dependent equality"/"Dependent equality"(
+  ≃: %Element($~Relations/"Dependent equality"/"Dependent equality"(
     I = I,
     _1 = {
       #(i: %Element(I)),
@@ -36,7 +40,7 @@ $"Generalized disjoint union"(
       ),
       definition = [%and(
         %equals(j, k),
-        $../../Relations/"Dependent equality"/"dependently equal"(
+        $~Relations/"Dependent equality"/"dependently equal"(
           I = I,
           _1 = {
             #(k: %Element(I)),

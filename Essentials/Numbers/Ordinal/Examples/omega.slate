@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../Natural/"Natural numbers"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Ordinal_number#Ordinals_extend_the_natural_numbers
  *             * https://mathworld.wolfram.com/OrdinalNumber.html
@@ -8,12 +12,9 @@
 $omega: %ExplicitOperator {
   notation = 'ω',
   definition = [$../"Ordinal numbers"."order type"(
-    S = $../../Natural/"Natural numbers",
-    ⪯ = $../../../Relations/Relations(
-        S = $../../Natural/"Natural numbers",
-        T = $../../Natural/"Natural numbers"
-      ).relation(_1 = {
-        #(m,n: %Element($../../Natural/"Natural numbers")),
+    S = $~"Natural numbers",
+    ⪯ = $../../../Relations/Relations(S = $~"Natural numbers", T = $~"Natural numbers").relation(_1 = {
+        #(m,n: %Element($~"Natural numbers")),
         {p = $../../Natural/"less or equal"(m = m, n = n)}
     })
   )]

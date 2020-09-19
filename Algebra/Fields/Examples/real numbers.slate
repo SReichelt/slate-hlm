@@ -1,36 +1,32 @@
 %../../../../../logics/hlm%
 
+[
+  $~Operations = $../../../Essentials/Operations/Operations,
+  $~Real = $../../../Essentials/Numbers/Real,
+  $~"Real numbers" = $../../../Essentials/Numbers/Real/"Real numbers",
+  $~number = $../../../Essentials/Numbers/Natural/number
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/data/real/basic.html#real.field
  */
 $"real numbers": %ExplicitOperator {
   notation = 'ℝ',
   definition = [$../../Rings/Rings.ring(
-    R = $../../../Essentials/Numbers/Real/"Real numbers",
-    ⊕ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Real/"Real numbers",
-        Y = $../../../Essentials/Numbers/Real/"Real numbers",
-        Z = $../../../Essentials/Numbers/Real/"Real numbers"
-      ).operation(_1 = {
-        #(a,b: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
-        {z = $../../../Essentials/Numbers/Real/sum(a = a, b = b)}
+    R = $~"Real numbers",
+    ⊕ = $~Operations(X = $~"Real numbers", Y = $~"Real numbers", Z = $~"Real numbers").operation(_1 = {
+        #(a,b: %Element($~"Real numbers")),
+        {z = $~Real/sum(a = a, b = b)}
     }),
-    "0" = $../../../Essentials/Numbers/Natural/number(value = 0),
-    ⊖ = $../../../Essentials/Functions/Functions(
-        X = $../../../Essentials/Numbers/Real/"Real numbers",
-        Y = $../../../Essentials/Numbers/Real/"Real numbers"
-      ).function(_1 = {
-        #(a: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
-        {y = $../../../Essentials/Numbers/Real/inverse(a = a)}
+    "0" = $~number(value = 0),
+    ⊖ = $../../../Essentials/Functions/Functions(X = $~"Real numbers", Y = $~"Real numbers").function(_1 = {
+        #(a: %Element($~"Real numbers")),
+        {y = $~Real/inverse(a = a)}
     }),
-    ⊙ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Real/"Real numbers",
-        Y = $../../../Essentials/Numbers/Real/"Real numbers",
-        Z = $../../../Essentials/Numbers/Real/"Real numbers"
-      ).operation(_1 = {
-        #(a,b: %Element($../../../Essentials/Numbers/Real/"Real numbers")),
-        {z = $../../../Essentials/Numbers/Real/product(a = a, b = b)}
+    ⊙ = $~Operations(X = $~"Real numbers", Y = $~"Real numbers", Z = $~"Real numbers").operation(_1 = {
+        #(a,b: %Element($~"Real numbers")),
+        {z = $~Real/product(a = a, b = b)}
     }),
-    "1" = $../../../Essentials/Numbers/Natural/number(value = 1)
+    "1" = $~number(value = 1)
   )]
 }

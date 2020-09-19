@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+[
+  $~one = $../../one,
+  $~zero = $../../zero
+]
+
 $"Identity matrix of dimension 2"(𝐑: %Element($../../Rings)): %StandardTheorem {
   claim = %equals(
     $../identity(
@@ -10,12 +15,12 @@ $"Identity matrix of dimension 2"(𝐑: %Element($../../Rings)): %StandardTheore
       𝐑 = 𝐑,
       items = [
         [
-          $../../one(𝐑 = 𝐑),
-          $../../zero(𝐑 = 𝐑)
+          $~one(𝐑 = 𝐑),
+          $~zero(𝐑 = 𝐑)
         ],
         [
-          $../../zero(𝐑 = 𝐑),
-          $../../one(𝐑 = 𝐑)
+          $~zero(𝐑 = 𝐑),
+          $~one(𝐑 = 𝐑)
         ]
       ]
     )

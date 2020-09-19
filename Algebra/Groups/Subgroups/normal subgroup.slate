@@ -1,6 +1,10 @@
 %../../../../../logics/hlm%
 
-$"normal subgroup"(𝐆,𝐇: %Element($../Groups)): %Predicate {
+[
+  $~Groups = $../Groups
+]
+
+$"normal subgroup"(𝐆,𝐇: %Element($~Groups)): %Predicate {
   notation = $NormalSubgroupRelation(operands = [𝐆, 𝐇]),
   definition = [%exists(
     #(S: %Subset($../Carrier(𝐆 = 𝐇))),

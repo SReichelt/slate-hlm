@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers"
+]
+
 /**
  * @references * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#pow_N
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#monoid.pow
@@ -7,21 +11,20 @@
 $"power to natural number"(
   𝐑: %Element($Semirings, auto = %true),
   a: %Element($Carrier(𝐑 = 𝐑)),
-  n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")
+  n: %Element($~"Natural numbers")
 ): %ExplicitOperator {
   notation = $SubSup(body = a, sup = n),
   definition = [%structuralCases(
-    n,
-    $../../Essentials/Numbers/Natural/"Natural numbers",
+    n, $~"Natural numbers",
     [
       {
-        constructor = $../../Essentials/Numbers/Natural/"Natural numbers".zero,
+        constructor = $~"Natural numbers".zero,
         value = $one(𝐑 = 𝐑),
         rewrite = %true
       },
       {
-        constructor = $../../Essentials/Numbers/Natural/"Natural numbers".successor,
-        parameters = #(x: %Element($../../Essentials/Numbers/Natural/"Natural numbers")),
+        constructor = $~"Natural numbers".successor,
+        parameters = #(x: %Element($~"Natural numbers")),
         value = $product(
           𝐑 = 𝐑,
           a = $"power to natural number"(𝐑 = 𝐑, a = a, n = x),

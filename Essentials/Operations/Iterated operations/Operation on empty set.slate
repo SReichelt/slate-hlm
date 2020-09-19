@@ -1,19 +1,22 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Empty set" = $../../Sets/"Empty set"
+]
+
 $"Operation on empty set"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = X)),
   _1: %Binder(
-    #(i: %Element($../../Sets/"Empty set")),
+    #(i: %Element($~"Empty set")),
     #(a: %Element(X))
   )
 ): %StandardTheorem {
   claim = %equals(
     $"indexed by finite set"(
-      X = X, ⨂ = ⨂,
-      I = $../../Sets/"Empty set",
+      X = X, ⨂ = ⨂, I = $~"Empty set",
       _2 = {
-        #(i: %Element($../../Sets/"Empty set")),
+        #(i: %Element($~"Empty set")),
         {a = a[i = i]}
       }
     ),

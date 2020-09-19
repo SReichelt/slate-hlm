@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Operations = $../../../../Essentials/Operations
+]
+
 $sum(
   𝐑: %Element(
     $../../Rings,
@@ -19,16 +23,16 @@ $sum(
       constructor = $"Left modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
+        ⊕: %Element($~Operations/"Inner operations"(X = M)),
         "0": %Element(M),
         ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
-        ⊙: %Element($../../../../Essentials/Operations/Operations(
+        ⊙: %Element($~Operations/Operations(
           X = $../../Carrier(𝐑 = 𝐑),
           Y = M, Z = M
         )),
         _1: %Constraint($"left module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
-      value = $../../../../Essentials/Operations/value(X = M, Y = M, Z = M, ∗ = ⊕, x = x, y = y)
+      value = $~Operations/value(X = M, Y = M, Z = M, ∗ = ⊕, x = x, y = y)
     }]
   )]
 }

@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Groups = $../../../../Algebra/Groups
+]
+
 /**
  * @remarks The automorphism group, as a subgroup of the symmetric group of the carrier.
  *
@@ -17,8 +21,8 @@ $"automorphism group"(κ: %Element($../"Cardinal numbers")): %ExplicitOperator {
     function = 'Aut',
     arguments = [κ]
   ),
-  definition = [$../../../../Algebra/Groups/Subgroups/"subset group"(
-    𝐆 = $../../../../Algebra/Groups/Examples/"symmetric group"(X = $../Carrier(κ = κ)),
+  definition = [$~Groups/Subgroups/"subset group"(
+    𝐆 = $~Groups/Examples/"symmetric group"(X = $../Carrier(κ = κ)),
     S = $Automorphisms(κ = κ)
   )]
 }

@@ -1,12 +1,19 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Essentials = $../../../../../Essentials,
+  $~"Inner operations" = $../../../../../Essentials/Operations/"Inner operations",
+  $~Operations = $../../../../../Essentials/Operations,
+  $~Rings = $../../../Rings
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Module_(mathematics)#Examples
  *             * https://proofwiki.org/wiki/Left_Ideal_is_Left_Module_over_Ring
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/module/basic.html#ideal (defined as submodule)
  */
 $"ideal module"(
-  𝐑: %Element($../../../Rings),
+  𝐑: %Element($~Rings),
   I: %Subset($../../../Carrier(𝐑 = 𝐑)),
   _1: %Constraint($../../../Ideals/"left ideal"(𝐑 = 𝐑, I = I))
 ): %ExplicitOperator {
@@ -15,25 +22,24 @@ $"ideal module"(
     sub = 𝐑
   ),
   definition = [%structuralCases(
-    𝐑,
-    $../../../Rings,
+    𝐑, $~Rings,
     [{
-      constructor = $../../../Rings.ring,
+      constructor = $~Rings.ring,
       parameters = #(
         R: %Set,
-        ⊕: %Element($../../../../../Essentials/Operations/"Inner operations"(X = R)),
+        ⊕: %Element($~"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊖: %Element($../../../../../Essentials/Functions/Functions(X = R, Y = R)),
-        ⊙: %Element($../../../../../Essentials/Operations/"Inner operations"(X = R)),
+        ⊖: %Element($~Essentials/Functions/Functions(X = R, Y = R)),
+        ⊙: %Element($~"Inner operations"(X = R)),
         "1": %Element(R),
         _1: %Constraint($../../../ring(R = R, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙, "1" = "1"))
       ),
       value = $../"Left modules"(𝐑 = 𝐑).module(
           M = I,
-          ⊕ = $../../../../../Essentials/Operations/"inner operation restriction"(X = R, A = I, ∗ = ⊕),
+          ⊕ = $~Operations/"inner operation restriction"(X = R, A = I, ∗ = ⊕),
           "0" = "0",
-          ⊖ = $../../../../../Essentials/Functions/"codomain restriction"(X = R, A = I, Y = R, B = I, f = ⊖),
-          ⊙ = $../../../../../Essentials/Operations/"left operation restriction"(X = R, Y = R, A = I, ∗ = ⊙)
+          ⊖ = $~Essentials/Functions/"codomain restriction"(X = R, A = I, Y = R, B = I, f = ⊖),
+          ⊙ = $~Operations/"left operation restriction"(X = R, Y = R, A = I, ∗ = ⊙)
       )
     }]
   )]

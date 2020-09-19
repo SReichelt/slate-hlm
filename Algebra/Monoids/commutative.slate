@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group/basic.html#comm_monoid
  */
@@ -11,11 +15,11 @@ $commutative(𝐌: %Element($Monoids)): %Predicate {
       constructor = $Monoids.monoid,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
+        ∗: %Element($~Operations/"Inner operations"(X = M)),
         e: %Element(M),
         _1: %Constraint($monoid(M = M, ∗ = ∗, e = e))
       ),
-      value = $../../Essentials/Operations/commutative(X = M, Z = M, ∗ = ∗)
+      value = $~Operations/commutative(X = M, Z = M, ∗ = ∗)
     }]
   )]
 }

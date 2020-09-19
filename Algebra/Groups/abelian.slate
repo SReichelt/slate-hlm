@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Abelian_group
  *             * https://mathworld.wolfram.com/Abelian.html
@@ -15,12 +19,12 @@ $abelian(𝐆: %Element($Groups)): %Predicate {
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
+        ∗: %Element($~Operations/"Inner operations"(X = G)),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
         _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
-      value = $../../Essentials/Operations/commutative(X = G, Z = G, ∗ = ∗)
+      value = $~Operations/commutative(X = G, Z = G, ∗ = ∗)
     }]
   )]
 }

@@ -1,9 +1,13 @@
 %../../../../../logics/hlm%
 
+[
+  $~Magmas = $../Magmas
+]
+
 /**
  * @remarks This follows immediately from the HLM-specific definition of equality of magmas.
  */
-$"Equality criterion"(𝐌,𝐍: %Element($../Magmas)): %EquivalenceTheorem {
+$"Equality criterion"(𝐌,𝐍: %Element($~Magmas)): %EquivalenceTheorem {
   conditions = [
     %not($../../../Essentials/Sets/empty(S = $Isomorphisms(𝐌 = 𝐌, 𝐍 = 𝐍))),
     %equals(𝐌, 𝐍)

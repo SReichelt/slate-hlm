@@ -1,12 +1,16 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Empty set" = $../../../Essentials/Sets/"Empty set"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Lambda_calculus#Standard_terms
  */
 $identity: %ExplicitOperator {
   notation = '𝗜',
-  definition = [$../Terms(V = $../../../Essentials/Sets/"Empty set").abstraction(_2 = {
-      #(x: %Element($../../"Fresh variables"(V = $../../../Essentials/Sets/"Empty set"))),
+  definition = [$../Terms(V = $~"Empty set").abstraction(_2 = {
+      #(x: %Element($../../"Fresh variables"(V = $~"Empty set"))),
       {M = x}
   })]
 }

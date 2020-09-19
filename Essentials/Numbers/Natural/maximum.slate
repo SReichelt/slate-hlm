@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Sets = $../../Sets
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Maxima_and_minima#In_relation_to_sets
  *             * https://mathworld.wolfram.com/Maximum.html
@@ -7,8 +11,8 @@
  */
 $maximum(
   M: %Subset($"Natural numbers"),
-  _1: %Constraint($../../Sets/finite(S = M)),
-  _2: %Constraint(%not($../../Sets/empty(S = M)))
+  _1: %Constraint($~Sets/finite(S = M)),
+  _2: %Constraint(%not($~Sets/empty(S = M)))
 ): %ImplicitOperator {
   notation = $Function(
     function = 'max',

@@ -1,9 +1,13 @@
 %../../../../../../logics/hlm%
 
-$"Segment (less or equal)"(a: %Element($../"Rational numbers")): %SetOperator {
+[
+  $~"Rational numbers" = $../"Rational numbers"
+]
+
+$"Segment (less or equal)"(a: %Element($~"Rational numbers")): %SetOperator {
   notation = $Segment(set = 'ℚ', symbol = '≤', limit = a),
   definition = [%subset(
-    #(b: %Element($../"Rational numbers")),
+    #(b: %Element($~"Rational numbers")),
     $../"less or equal"(a = b, b = a)
   )]
 }

@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Inner operations" = $../../Essentials/Operations/"Inner operations"
+]
+
 /**
  * @remarks Strictly speaking, the elements of this set are not magmas but isomorphism classes of magmas. Due to the rules of HLM, it is not even possible to define magmas (or other structures) in a way that would distinguish two isomorphic structures. In particular, the requirement to specify an equality definition, together with the way two arbitrary sets are treated as separate types, make sure that in the most general case, equality is in fact the same as isomorphism. (It is possible to identify more structures, but not fewer.)
  *
@@ -11,7 +15,7 @@
 $Magmas: %Construction {
   $magma(
     M: %Set,
-    ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
+    ∗: %Element($~"Inner operations"(X = M))
   ): %Constructor {
     notation = $Tuple(
       items = [M, ∗],
@@ -20,11 +24,11 @@ $Magmas: %Construction {
     equalityDefinition = {
       leftParameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
+        ∗: %Element($~"Inner operations"(X = M))
       ),
       rightParameters = #(
         N: %Set,
-        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = N))
+        ⋆: %Element($~"Inner operations"(X = N))
       ),
       definition = [%exists(
         #(φ: %Element($../../Essentials/Functions/Bijections(X = M, Y = N))),

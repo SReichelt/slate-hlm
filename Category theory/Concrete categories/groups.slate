@@ -1,5 +1,12 @@
 %../../../../logics/hlm%
 
+[
+  $~Carrier = $../../Algebra/Groups/Carrier,
+  $~Essentials = $../../Essentials,
+  $~Groups = $../../Algebra/Groups/Groups,
+  $~Homomorphisms = $../../Algebra/Groups/Homomorphisms/Homomorphisms
+]
+
 /**
  * @remarks The objects of this category are actually isomorphism classes of groups.
  *
@@ -8,33 +15,33 @@
  *             * https://ncatlab.org/nlab/show/Grp
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/category/Group/basic.html#Group
  */
-$groups(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+$groups(u: %Element($~Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   notation = $SubSup(body = '𝐆𝐫𝐩', sub = u),
   definition = [$../Categories(u = u).category(
-      O = $../../Algebra/Groups/Groups,
+      O = $~Groups,
       _1 = {
-        #(𝐀,𝐁: %Element($../../Algebra/Groups/Groups)),
-        {M = $../../Algebra/Groups/Homomorphisms/Homomorphisms(𝐆 = 𝐀, 𝐇 = 𝐁)}
+        #(𝐀,𝐁: %Element($~Groups)),
+        {M = $~Homomorphisms(𝐆 = 𝐀, 𝐇 = 𝐁)}
       },
       _2 = {
-        #(𝐂: %Element($../../Algebra/Groups/Groups)),
+        #(𝐂: %Element($~Groups)),
         {i = $../../Algebra/Groups/Homomorphisms/identity(𝐆 = 𝐂)}
       },
       _3 = {
-        #(𝐃,𝐄,𝐅: %Element($../../Algebra/Groups/Groups)),
-        {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Algebra/Groups/Homomorphisms/Homomorphisms(𝐆 = 𝐄, 𝐇 = 𝐅),
-            Y = $../../Algebra/Groups/Homomorphisms/Homomorphisms(𝐆 = 𝐃, 𝐇 = 𝐄),
-            Z = $../../Algebra/Groups/Homomorphisms/Homomorphisms(𝐆 = 𝐃, 𝐇 = 𝐅)
+        #(𝐃,𝐄,𝐅: %Element($~Groups)),
+        {∘ = $~Essentials/Operations/Operations(
+            X = $~Homomorphisms(𝐆 = 𝐄, 𝐇 = 𝐅),
+            Y = $~Homomorphisms(𝐆 = 𝐃, 𝐇 = 𝐄),
+            Z = $~Homomorphisms(𝐆 = 𝐃, 𝐇 = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Algebra/Groups/Homomorphisms/Homomorphisms(𝐆 = 𝐄, 𝐇 = 𝐅)),
-              φ: %Element($../../Algebra/Groups/Homomorphisms/Homomorphisms(𝐆 = 𝐃, 𝐇 = 𝐄))
+              ψ: %Element($~Homomorphisms(𝐆 = 𝐄, 𝐇 = 𝐅)),
+              φ: %Element($~Homomorphisms(𝐆 = 𝐃, 𝐇 = 𝐄))
             ),
-            {z = $../../Essentials/Functions/composition(
-              X = $../../Algebra/Groups/Carrier(𝐆 = 𝐃),
-              Y = $../../Algebra/Groups/Carrier(𝐆 = 𝐄),
-              Z = $../../Algebra/Groups/Carrier(𝐆 = 𝐅),
+            {z = $~Essentials/Functions/composition(
+              X = $~Carrier(𝐆 = 𝐃),
+              Y = $~Carrier(𝐆 = 𝐄),
+              Z = $~Carrier(𝐆 = 𝐅),
               f = φ, g = ψ
             )}
         })}

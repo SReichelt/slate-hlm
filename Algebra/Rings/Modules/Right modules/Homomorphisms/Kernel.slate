@@ -1,5 +1,10 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~"Right modules" = $../"Right modules"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Module_homomorphism
  *             * https://mathworld.wolfram.com/ModuleKernel.html
@@ -12,7 +17,7 @@ $Kernel(
     auto = %true
   ),
   𝐌,𝐍: %Element(
-    $../"Right modules"(𝐑 = 𝐑),
+    $~"Right modules"(𝐑 = 𝐑),
     auto = %true
   ),
   φ: %Element($Homomorphisms(𝐑 = 𝐑, 𝐌 = 𝐌, 𝐍 = 𝐍))
@@ -22,8 +27,8 @@ $Kernel(
     arguments = [φ]
   ),
   definition = [$../../../../../Essentials/Functions/Preimage(
-    X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
-    Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
+    X = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+    Y = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
     f = φ,
     S = %enumeration($../zero(𝐑 = 𝐑, 𝐌 = 𝐍))
   )]

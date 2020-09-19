@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Sequences = $../../../Sequences
+]
+
 /**
  * This macro provides a shortcut for tuples of natural numbers.
  */
@@ -7,10 +11,10 @@ $"tuple of numbers"(items: %Nat[]): %MacroOperator {
   notation = $Tuple(items = items, style = '()'),
   variables = #(length: %Nat),
   references = {
-    Tuples = $../../../Sequences/Tuples(
+    Tuples = $~Sequences/Tuples(
       S = $../"Natural numbers",
       α = $../number(value = length)
     ),
-    tuple = $../../../Sequences/tuple
+    tuple = $~Sequences/tuple
   }
 }

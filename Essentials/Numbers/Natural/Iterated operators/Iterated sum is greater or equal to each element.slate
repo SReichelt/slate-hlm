@@ -1,19 +1,22 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../"Natural numbers"
+]
+
 $"Iterated sum is greater or equal to each element"(
   I: %Set,
   _1: %Constraint($../../../Sets/finite(S = I)),
   _2: %Binder(
     #(i: %Element(I)),
-    #(a: %Element($../"Natural numbers"))
+    #(a: %Element($~"Natural numbers"))
   ),
   j: %Element(I)
 ): %StandardTheorem {
   claim = $../"less or equal"(
     m = a[i = j],
     n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
-      X = $../"Natural numbers",
-      ⨂ = $"iterated sum", I = I,
+      X = $~"Natural numbers", ⨂ = $"iterated sum", I = I,
       _2 = {
         #(i: %Element(I)),
         {a = a[i = i]}

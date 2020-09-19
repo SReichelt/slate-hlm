@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Groups = $../../../../Algebra/Groups
+]
+
 /**
  * @remarks The automorphism group, as a subgroup of the symmetric group of the carrier.
  *
@@ -17,8 +21,8 @@ $"automorphism group"(α: %Element($../"Ordinal numbers")): %ExplicitOperator {
     function = 'Aut',
     arguments = [α]
   ),
-  definition = [$../../../../Algebra/Groups/Subgroups/"subset group"(
-    𝐆 = $../../../../Algebra/Groups/Examples/"symmetric group"(X = $../Carrier(α = α)),
+  definition = [$~Groups/Subgroups/"subset group"(
+    𝐆 = $~Groups/Examples/"symmetric group"(X = $../Carrier(α = α)),
     S = $Automorphisms(α = α)
   )]
 }

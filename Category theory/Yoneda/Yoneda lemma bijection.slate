@@ -1,5 +1,15 @@
 %../../../../logics/hlm%
 
+[
+  $~Carrier = $../../Essentials/Numbers/Cardinal/Carrier,
+  $~Morphisms = $../Morphisms,
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers",
+  $~"Natural transformations" = $../"Natural transformations"/"Natural transformations",
+  $~Objects = $../Objects,
+  $~cardinals = $../"Concrete categories"/cardinals,
+  $~"object value" = $../Functors/"object value"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Yoneda_lemma#Formal_statement
  *             * https://proofwiki.org/wiki/Bijection_in_Yoneda_Lemma_for_Covariant_Functors
@@ -7,98 +17,95 @@
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/yoneda.html
  */
 $"Yoneda lemma bijection"(
-  u,v: %Element(
-    $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  u,v: %Element($~"Natural numbers", auto = %true),
   𝓒: %Element(
     $../Categories(u = u),
     auto = %true
   ),
   F: %Element($../Functors/Functors(
     u = u, v = v, 𝓒 = 𝓒,
-    𝓓 = $../"Concrete categories"/cardinals(u = v)
+    𝓓 = $~cardinals(u = v)
   )),
-  𝐀: %Element($../Objects(u = u, 𝓒 = 𝓒))
+  𝐀: %Element($~Objects(u = u, 𝓒 = 𝓒))
 ): %StandardTheorem {
   claim = %and(
     $../../Essentials/Functions/bijective(
-      X = $../"Natural transformations"/"Natural transformations"(
+      X = $~"Natural transformations"(
         u = u, v = v, 𝓒 = 𝓒,
-        𝓓 = $../"Concrete categories"/cardinals(u = v),
+        𝓓 = $~cardinals(u = v),
         F = $"hom-functor"(u = u, v = v, 𝓒 = 𝓒, 𝐀 = 𝐀),
         G = F
       ),
-      Y = $../../Essentials/Numbers/Cardinal/Carrier(κ = $../Functors/"object value"(
+      Y = $~Carrier(κ = $~"object value"(
         u = u, v = v, 𝓒 = 𝓒,
-        𝓓 = $../"Concrete categories"/cardinals(u = v),
+        𝓓 = $~cardinals(u = v),
         F = F, 𝐗 = 𝐀
       )),
       f = $"yoneda equivalence"(u = u, v = v, 𝓒 = 𝓒, F = F, 𝐀 = 𝐀)
     ),
     %equals(
       $../../Essentials/Functions/inverse(
-        X = $../"Natural transformations"/"Natural transformations"(
+        X = $~"Natural transformations"(
           u = u, v = v, 𝓒 = 𝓒,
-          𝓓 = $../"Concrete categories"/cardinals(u = v),
+          𝓓 = $~cardinals(u = v),
           F = $"hom-functor"(u = u, v = v, 𝓒 = 𝓒, 𝐀 = 𝐀),
           G = F
         ),
-        Y = $../../Essentials/Numbers/Cardinal/Carrier(κ = $../Functors/"object value"(
+        Y = $~Carrier(κ = $~"object value"(
           u = u, v = v, 𝓒 = 𝓒,
-          𝓓 = $../"Concrete categories"/cardinals(u = v),
+          𝓓 = $~cardinals(u = v),
           F = F, 𝐗 = 𝐀
         )),
         f = $"yoneda equivalence"(u = u, v = v, 𝓒 = 𝓒, F = F, 𝐀 = 𝐀)
       ),
       $../../Essentials/Functions/Functions(
-          X = $../../Essentials/Numbers/Cardinal/Carrier(κ = $../Functors/"object value"(
+          X = $~Carrier(κ = $~"object value"(
             u = u, v = v, 𝓒 = 𝓒,
-            𝓓 = $../"Concrete categories"/cardinals(u = v),
+            𝓓 = $~cardinals(u = v),
             F = F, 𝐗 = 𝐀
           )),
-          Y = $../"Natural transformations"/"Natural transformations"(
+          Y = $~"Natural transformations"(
             u = u, v = v, 𝓒 = 𝓒,
-            𝓓 = $../"Concrete categories"/cardinals(u = v),
+            𝓓 = $~cardinals(u = v),
             F = $"hom-functor"(u = u, v = v, 𝓒 = 𝓒, 𝐀 = 𝐀),
             G = F
           )
         ).function(_1 = {
-          #(x: %Element($../../Essentials/Numbers/Cardinal/Carrier(κ = $../Functors/"object value"(
+          #(x: %Element($~Carrier(κ = $~"object value"(
             u = u, v = v, 𝓒 = 𝓒,
-            𝓓 = $../"Concrete categories"/cardinals(u = v),
+            𝓓 = $~cardinals(u = v),
             F = F, 𝐗 = 𝐀
           )))),
           {y = $../"Natural transformations"/"Infranatural transformations"(
               u = u, v = v, 𝓒 = 𝓒,
-              𝓓 = $../"Concrete categories"/cardinals(u = v),
+              𝓓 = $~cardinals(u = v),
               F = $"hom-functor"(u = u, v = v, 𝓒 = 𝓒, 𝐀 = 𝐀),
               G = F
             ).transformation(_1 = {
-              #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+              #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
               {n = $../../Essentials/Functions/Functions(
-                  X = $../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐗),
-                  Y = $../../Essentials/Numbers/Cardinal/Carrier(κ = $../Functors/"object value"(
+                  X = $~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐗),
+                  Y = $~Carrier(κ = $~"object value"(
                     u = u, v = v, 𝓒 = 𝓒,
-                    𝓓 = $../"Concrete categories"/cardinals(u = v),
+                    𝓓 = $~cardinals(u = v),
                     F = F, 𝐗 = 𝐗
                   ))
                 ).function(_1 = {
-                  #(f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐗))),
+                  #(f: %Element($~Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐗))),
                   {y = $../../Essentials/Functions/value(
-                    X = $../../Essentials/Numbers/Cardinal/Carrier(κ = $../Functors/"object value"(
+                    X = $~Carrier(κ = $~"object value"(
                       u = u, v = v, 𝓒 = 𝓒,
-                      𝓓 = $../"Concrete categories"/cardinals(u = v),
+                      𝓓 = $~cardinals(u = v),
                       F = F, 𝐗 = 𝐀
                     )),
-                    Y = $../../Essentials/Numbers/Cardinal/Carrier(κ = $../Functors/"object value"(
+                    Y = $~Carrier(κ = $~"object value"(
                       u = u, v = v, 𝓒 = 𝓒,
-                      𝓓 = $../"Concrete categories"/cardinals(u = v),
+                      𝓓 = $~cardinals(u = v),
                       F = F, 𝐗 = 𝐗
                     )),
                     f = $../Functors/"morphism value"(
                       u = u, v = v, 𝓒 = 𝓒,
-                      𝓓 = $../"Concrete categories"/cardinals(u = v),
+                      𝓓 = $~cardinals(u = v),
                       F = F, 𝐗 = 𝐀, 𝐘 = 𝐗, f = f
                     ),
                     x = x

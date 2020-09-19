@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Groups = $../Groups
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Kernel_(algebra)#Group_homomorphisms
  *             * https://mathworld.wolfram.com/GroupKernel.html
@@ -8,10 +13,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/group_theory/subgroup.html#is_group_hom.ker
  */
 $Kernel(
-  𝐆,𝐇: %Element(
-    $../Groups,
-    auto = %true
-  ),
+  𝐆,𝐇: %Element($~Groups, auto = %true),
   φ: %Element($Homomorphisms(𝐆 = 𝐆, 𝐇 = 𝐇))
 ): %SetOperator {
   notation = $Function(
@@ -19,8 +21,8 @@ $Kernel(
     arguments = [φ]
   ),
   definition = [$../../../Essentials/Functions/Preimage(
-    X = $../Carrier(𝐆 = 𝐆),
-    Y = $../Carrier(𝐆 = 𝐇),
+    X = $~Carrier(𝐆 = 𝐆),
+    Y = $~Carrier(𝐆 = 𝐇),
     f = φ,
     S = %enumeration($../identity(𝐆 = 𝐇))
   )]

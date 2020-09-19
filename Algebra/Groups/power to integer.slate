@@ -1,5 +1,10 @@
 %../../../../logics/hlm%
 
+[
+  $~Integer = $../../Essentials/Numbers/Integer,
+  $~number = $../../Essentials/Numbers/Natural/number
+]
+
 /**
  * @references * https://proofwiki.org/wiki/Definition:Power_of_Element/Group
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#gpow
@@ -7,26 +12,26 @@
 $"power to integer"(
   𝐆: %Element($Groups, auto = %true),
   a: %Element($Carrier(𝐆 = 𝐆)),
-  z: %Element($../../Essentials/Numbers/Integer/Integers)
+  z: %Element($~Integer/Integers)
 ): %ExplicitOperator {
   notation = $SubSup(body = a, sup = z),
   definition = [%cases([
     {
-      formula = $../../Essentials/Numbers/Integer/"less or equal"(
+      formula = $~Integer/"less or equal"(
         b = z,
-        a = $../../Essentials/Numbers/Natural/number(value = 0)
+        a = $~number(value = 0)
       ),
       value = $"power to natural number"(𝐆 = 𝐆, a = a, n = z)
     },
     {
-      formula = $../../Essentials/Numbers/Integer/less(
+      formula = $~Integer/less(
         a = z,
-        b = $../../Essentials/Numbers/Natural/number(value = 0)
+        b = $~number(value = 0)
       ),
       value = $"power to natural number"(
         𝐆 = 𝐆,
         a = $inverse(𝐆 = 𝐆, a = a),
-        n = $../../Essentials/Numbers/Integer/inverse(a = z)
+        n = $~Integer/inverse(a = z)
       )
     }
   ])]

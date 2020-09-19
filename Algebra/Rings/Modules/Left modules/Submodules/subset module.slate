@@ -1,5 +1,12 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../../../Carrier,
+  $~Essentials = $../../../../../Essentials,
+  $~"Left modules" = $../"Left modules",
+  $~Operations = $../../../../../Essentials/Operations
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/module/basic.html#submodule.module
  */
@@ -8,7 +15,7 @@ $"subset module"(
     $../../../Rings,
     auto = %true
   ),
-  𝐌: %Element($../"Left modules"(𝐑 = 𝐑)),
+  𝐌: %Element($~"Left modules"(𝐑 = 𝐑)),
   S: %Subset($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)),
   _1: %Constraint($"submodule set"(𝐑 = 𝐑, 𝐌 = 𝐌, S = S))
 ): %ExplicitOperator {
@@ -18,27 +25,27 @@ $"subset module"(
   ),
   definition = [%structuralCases(
     𝐌,
-    $../"Left modules"(𝐑 = 𝐑),
+    $~"Left modules"(𝐑 = 𝐑),
     [{
-      constructor = $../"Left modules".module,
+      constructor = $~"Left modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../../Essentials/Operations/"Inner operations"(X = M)),
+        ⊕: %Element($~Operations/"Inner operations"(X = M)),
         "0": %Element(M),
-        ⊖: %Element($../../../../../Essentials/Functions/Functions(X = M, Y = M)),
-        ⊙: %Element($../../../../../Essentials/Operations/Operations(
-          X = $../../../Carrier(𝐑 = 𝐑),
+        ⊖: %Element($~Essentials/Functions/Functions(X = M, Y = M)),
+        ⊙: %Element($~Operations/Operations(
+          X = $~Carrier(𝐑 = 𝐑),
           Y = M, Z = M
         )),
         _1: %Constraint($../"left module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
-      value = $../"Left modules"(𝐑 = 𝐑).module(
+      value = $~"Left modules"(𝐑 = 𝐑).module(
           M = S,
-          ⊕ = $../../../../../Essentials/Operations/"inner operation restriction"(X = M, A = S, ∗ = ⊕),
+          ⊕ = $~Operations/"inner operation restriction"(X = M, A = S, ∗ = ⊕),
           "0" = "0",
-          ⊖ = $../../../../../Essentials/Functions/"codomain restriction"(X = M, A = S, Y = M, B = S, f = ⊖),
-          ⊙ = $../../../../../Essentials/Operations/"left operation restriction"(
-            X = $../../../Carrier(𝐑 = 𝐑),
+          ⊖ = $~Essentials/Functions/"codomain restriction"(X = M, A = S, Y = M, B = S, f = ⊖),
+          ⊙ = $~Operations/"left operation restriction"(
+            X = $~Carrier(𝐑 = 𝐑),
             Y = M, A = S, ∗ = ⊙
           )
       )

@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Groups = $../../Groups
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Automorphism_group
  *             * https://mathworld.wolfram.com/AutomorphismGroup.html
@@ -12,8 +16,8 @@ $"automorphism group"(𝐑: %Element($../Semirings)): %ExplicitOperator {
     function = 'Aut',
     arguments = [𝐑]
   ),
-  definition = [$../../Groups/Subgroups/"subset group"(
-    𝐆 = $../../Groups/Examples/"symmetric group"(X = $../Carrier(𝐑 = 𝐑)),
+  definition = [$~Groups/Subgroups/"subset group"(
+    𝐆 = $~Groups/Examples/"symmetric group"(X = $../Carrier(𝐑 = 𝐑)),
     S = $Automorphisms(𝐑 = 𝐑)
   )]
 }

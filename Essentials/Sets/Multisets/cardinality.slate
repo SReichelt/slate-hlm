@@ -1,18 +1,24 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Cardinal numbers" = $../../Numbers/Cardinal/"Cardinal numbers",
+  $~"Iterated operations" = $../../Operations/"Iterated operations",
+  $~"Natural numbers" = $../../Numbers/Natural/"Natural numbers",
+  $~"iterated sum" = $../../Numbers/Natural/"Iterated operators"/"iterated sum"
+]
+
 $cardinality(
   S: %Set(auto = %true),
   𝑻: %Element($Multisets(S = S))
 ): %ExplicitOperator {
   notation = $Parens(body = 𝑻, style = '||'),
   definition = [
-    $../../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $Elements(S = S, 𝑻 = 𝑻)),
+    $~"Cardinal numbers".cardinality(S = $Elements(S = S, 𝑻 = 𝑻)),
     %cases([
       {
         formula = $finite(S = S, 𝑻 = 𝑻),
-        value = $../../Operations/"Iterated operations"/"indexed by finite set"(
-          X = $../../Numbers/Natural/"Natural numbers",
-          ⨂ = $../../Numbers/Natural/"Iterated operators"/"iterated sum",
+        value = $~"Iterated operations"/"indexed by finite set"(
+          X = $~"Natural numbers", ⨂ = $~"iterated sum",
           I = $Set(S = S, 𝑻 = 𝑻),
           _2 = {
             #(i: %Element($Set(S = S, 𝑻 = 𝑻))),
@@ -22,16 +28,14 @@ $cardinality(
       },
       {
         formula = %not($finite(S = S, 𝑻 = 𝑻)),
-        value = $../../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $Set(S = S, 𝑻 = 𝑻))
+        value = $~"Cardinal numbers".cardinality(S = $Set(S = S, 𝑻 = 𝑻))
       }
     ]),
     %cases([
       {
         formula = $finite(S = S, 𝑻 = 𝑻),
-        value = $../../Operations/"Iterated operations"/"indexed by set with finite support"(
-          X = $../../Numbers/Natural/"Natural numbers",
-          ⨂ = $../../Numbers/Natural/"Iterated operators"/"iterated sum",
-          I = S,
+        value = $~"Iterated operations"/"indexed by set with finite support"(
+          X = $~"Natural numbers", ⨂ = $~"iterated sum", I = S,
           _1 = {
             #(i: %Element(S)),
             {a = $multiplicity(S = S, 𝑻 = 𝑻, t = i)}
@@ -40,7 +44,7 @@ $cardinality(
       },
       {
         formula = %not($finite(S = S, 𝑻 = 𝑻)),
-        value = $../../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $Set(S = S, 𝑻 = 𝑻))
+        value = $~"Cardinal numbers".cardinality(S = $Set(S = S, 𝑻 = 𝑻))
       }
     ])
   ]

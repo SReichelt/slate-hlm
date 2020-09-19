@@ -1,5 +1,13 @@
 %../../../../logics/hlm%
 
+[
+  $~"Cardinal numbers" = $../../Essentials/Numbers/Cardinal/"Cardinal numbers",
+  $~Carrier = $../../Essentials/Numbers/Cardinal/Carrier,
+  $~Essentials = $../../Essentials,
+  $~Homomorphisms = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms,
+  $~Numbers = $../../Essentials/Numbers
+]
+
 /**
  * @remarks The objects of this category are actually isomorphism classes of sets, i.e. cardinal numbers. In HLM, arbitrary sets cannot be used as objects because it is impossible to ask whether two arbitrary sets are equal. However, cardinal numbers work fine as a replacement, due to the ability to obtain a representative set from a cardinal number. The situation with other categories is similar.
  *
@@ -8,33 +16,33 @@
  *             * https://ncatlab.org/nlab/show/Set
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/types.html#category_theory.types
  */
-$cardinals(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+$cardinals(u: %Element($~Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   notation = $SubSup(body = '𝐒𝐞𝐭', sub = u),
   definition = [$../Categories(u = u).category(
-      O = $../../Essentials/Numbers/Cardinal/"Cardinal numbers",
+      O = $~"Cardinal numbers",
       _1 = {
-        #(𝐀,𝐁: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-        {M = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐀, μ = 𝐁)}
+        #(𝐀,𝐁: %Element($~"Cardinal numbers")),
+        {M = $~Homomorphisms(κ = 𝐀, μ = 𝐁)}
       },
       _2 = {
-        #(𝐂: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-        {i = $../../Essentials/Numbers/Cardinal/Homomorphisms/identity(κ = 𝐂)}
+        #(𝐂: %Element($~"Cardinal numbers")),
+        {i = $~Numbers/Cardinal/Homomorphisms/identity(κ = 𝐂)}
       },
       _3 = {
-        #(𝐃,𝐄,𝐅: %Element($../../Essentials/Numbers/Cardinal/"Cardinal numbers")),
-        {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐄, μ = 𝐅),
-            Y = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐃, μ = 𝐄),
-            Z = $../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐃, μ = 𝐅)
+        #(𝐃,𝐄,𝐅: %Element($~"Cardinal numbers")),
+        {∘ = $~Essentials/Operations/Operations(
+            X = $~Homomorphisms(κ = 𝐄, μ = 𝐅),
+            Y = $~Homomorphisms(κ = 𝐃, μ = 𝐄),
+            Z = $~Homomorphisms(κ = 𝐃, μ = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐄, μ = 𝐅)),
-              φ: %Element($../../Essentials/Numbers/Cardinal/Homomorphisms/Homomorphisms(κ = 𝐃, μ = 𝐄))
+              ψ: %Element($~Homomorphisms(κ = 𝐄, μ = 𝐅)),
+              φ: %Element($~Homomorphisms(κ = 𝐃, μ = 𝐄))
             ),
-            {z = $../../Essentials/Functions/composition(
-              X = $../../Essentials/Numbers/Cardinal/Carrier(κ = 𝐃),
-              Y = $../../Essentials/Numbers/Cardinal/Carrier(κ = 𝐄),
-              Z = $../../Essentials/Numbers/Cardinal/Carrier(κ = 𝐅),
+            {z = $~Essentials/Functions/composition(
+              X = $~Carrier(κ = 𝐃),
+              Y = $~Carrier(κ = 𝐄),
+              Z = $~Carrier(κ = 𝐅),
               f = φ, g = ψ
             )}
         })}

@@ -1,16 +1,20 @@
 %../../../../../logics/hlm%
 
+[
+  $~Operations = $../../Operations/Operations
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.distrib
  */
 $"Product is distributive over sum": %StandardTheorem {
   claim = $../../Operations/distributive(
     X = $"Natural numbers",
-    ∗ = $../../Operations/Operations(X = $"Natural numbers", Y = $"Natural numbers", Z = $"Natural numbers").operation(_1 = {
+    ∗ = $~Operations(X = $"Natural numbers", Y = $"Natural numbers", Z = $"Natural numbers").operation(_1 = {
         #(m,n: %Element($"Natural numbers")),
         {z = $product(m = m, n = n)}
     }),
-    ⋆ = $../../Operations/Operations(X = $"Natural numbers", Y = $"Natural numbers", Z = $"Natural numbers").operation(_1 = {
+    ⋆ = $~Operations(X = $"Natural numbers", Y = $"Natural numbers", Z = $"Natural numbers").operation(_1 = {
         #(m,n: %Element($"Natural numbers")),
         {z = $sum(m = m, n = n)}
     })

@@ -1,24 +1,22 @@
 %../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Numbers/Natural/"Natural numbers"
+]
+
 /**
  * @remarks This definition produces an infinite sequence from a function.
  */
 $"sequence from function"(
   S: %Set(auto = %true),
-  f: %Element($../Functions/Functions(
-    X = $../Numbers/Natural/"Natural numbers",
-    Y = S
-  ))
+  f: %Element($../Functions/Functions(X = $~"Natural numbers", Y = S))
 ): %ExplicitOperator {
   notation = $Function(
     function = 'seq',
     arguments = [f]
   ),
   definition = [$"Infinite sequences"(S = S).sequence(_1 = {
-      #(n: %Element($../Numbers/Natural/"Natural numbers")),
-      {a = $../Functions/value(
-        X = $../Numbers/Natural/"Natural numbers",
-        Y = S, f = f, x = n
-      )}
+      #(n: %Element($~"Natural numbers")),
+      {a = $../Functions/value(X = $~"Natural numbers", Y = S, f = f, x = n)}
   })]
 }

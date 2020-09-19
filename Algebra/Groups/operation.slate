@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @remarks This definition lets us multiply elements without decomposing the group.
  */
@@ -14,12 +18,12 @@ $operation(
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
+        ∗: %Element($~Operations/"Inner operations"(X = G)),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
         _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
-      value = $../../Essentials/Operations/value(X = G, Y = G, Z = G, ∗ = ∗, x = a, y = b)
+      value = $~Operations/value(X = G, Y = G, Z = G, ∗ = ∗, x = a, y = b)
     }]
   )]
 }

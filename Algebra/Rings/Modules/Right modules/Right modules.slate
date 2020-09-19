@@ -1,5 +1,13 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../../Carrier,
+  $~Functions = $../../../../Essentials/Functions/Functions,
+  $~"Inner operations" = $../../../../Essentials/Operations/"Inner operations",
+  $~Isomorphisms = $../../../Generic/Isomorphisms,
+  $~Operations = $../../../../Essentials/Operations/Operations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Module_(mathematics)
  *             * https://mathworld.wolfram.com/Module.html
@@ -9,12 +17,12 @@
 $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
   $module(
     M: %Set,
-    ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
+    ⊕: %Element($~"Inner operations"(X = M)),
     "0": %Element(M),
-    ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
-    ⊙: %Element($../../../../Essentials/Operations/Operations(
+    ⊖: %Element($~Functions(X = M, Y = M)),
+    ⊙: %Element($~Operations(
       X = M,
-      Y = $../../Carrier(𝐑 = 𝐑),
+      Y = $~Carrier(𝐑 = 𝐑),
       Z = M
     )),
     _1: %Constraint($"right module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
@@ -29,24 +37,24 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
     equalityDefinition = {
       leftParameters = #(
         M: %Set,
-        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
+        ⊕: %Element($~"Inner operations"(X = M)),
         "0": %Element(M),
-        ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
-        ⊙: %Element($../../../../Essentials/Operations/Operations(
+        ⊖: %Element($~Functions(X = M, Y = M)),
+        ⊙: %Element($~Operations(
           X = M,
-          Y = $../../Carrier(𝐑 = 𝐑),
+          Y = $~Carrier(𝐑 = 𝐑),
           Z = M
         )),
         _1: %Constraint($"right module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
       rightParameters = #(
         N: %Set,
-        ⋆: %Element($../../../../Essentials/Operations/"Inner operations"(X = N)),
+        ⋆: %Element($~"Inner operations"(X = N)),
         𝟢: %Element(N),
-        ∼: %Element($../../../../Essentials/Functions/Functions(X = N, Y = N)),
-        ∗: %Element($../../../../Essentials/Operations/Operations(
+        ∼: %Element($~Functions(X = N, Y = N)),
+        ∗: %Element($~Operations(
           X = N,
-          Y = $../../Carrier(𝐑 = 𝐑),
+          Y = $~Carrier(𝐑 = 𝐑),
           Z = N
         )),
         _2: %Constraint($"right module"(𝐑 = 𝐑, M = N, ⊕ = ⋆, "0" = 𝟢, ⊖ = ∼, ⊙ = ∗))
@@ -54,11 +62,11 @@ $"Right modules"(𝐑: %Element($../../Rings)): %Construction {
       definition = [%exists(
         #(φ: %Element($../../../../Essentials/Functions/Bijections(X = M, Y = N))),
         formula = %and(
-          $../../../Generic/Isomorphisms/"inner operation condition"(X = M, Y = N, φ = φ, ∗ = ⊕, ⋆ = ⋆),
-          $../../../Generic/Isomorphisms/"element condition"(X = M, Y = N, φ = φ, x = "0", y = 𝟢),
-          $../../../Generic/Isomorphisms/"function condition"(X = M, Y = N, φ = φ, f = ⊖, g = ∼),
-          $../../../Generic/Isomorphisms/"right operation condition"(
-            S = $../../Carrier(𝐑 = 𝐑),
+          $~Isomorphisms/"inner operation condition"(X = M, Y = N, φ = φ, ∗ = ⊕, ⋆ = ⋆),
+          $~Isomorphisms/"element condition"(X = M, Y = N, φ = φ, x = "0", y = 𝟢),
+          $~Isomorphisms/"function condition"(X = M, Y = N, φ = φ, f = ⊖, g = ∼),
+          $~Isomorphisms/"right operation condition"(
+            S = $~Carrier(𝐑 = 𝐑),
             X = M, Y = N, φ = φ, ∗ = ⊙, ⋆ = ∗
           )
         )

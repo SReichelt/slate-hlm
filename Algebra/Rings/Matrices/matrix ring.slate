@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~Operations = $../../../Essentials/Operations/Operations,
+  $~Rings = $../Rings
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Matrix_ring
  *             * https://proofwiki.org/wiki/Definition:Ring_of_Square_Matrices
@@ -7,7 +12,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/matrix/basic.html#matrix.ring
  */
 $"matrix ring"(
-  𝐑: %Element($../Rings),
+  𝐑: %Element($~Rings),
   n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
 ): %ExplicitOperator {
   notation = $SubSup(
@@ -17,9 +22,9 @@ $"matrix ring"(
       operands = [n, n]
     )
   ),
-  definition = [$../Rings.ring(
+  definition = [$~Rings.ring(
     R = $Matrices(𝐑 = 𝐑, m = n, n = n),
-    ⊕ = $../../../Essentials/Operations/Operations(
+    ⊕ = $~Operations(
         X = $Matrices(𝐑 = 𝐑, m = n, n = n),
         Y = $Matrices(𝐑 = 𝐑, m = n, n = n),
         Z = $Matrices(𝐑 = 𝐑, m = n, n = n)
@@ -35,7 +40,7 @@ $"matrix ring"(
         #(A: %Element($Matrices(𝐑 = 𝐑, m = n, n = n))),
         {y = $"additive inverse"(𝐑 = 𝐑, m = n, n = n, A = A)}
     }),
-    ⊙ = $../../../Essentials/Operations/Operations(
+    ⊙ = $~Operations(
         X = $Matrices(𝐑 = 𝐑, m = n, n = n),
         Y = $Matrices(𝐑 = 𝐑, m = n, n = n),
         Z = $Matrices(𝐑 = 𝐑, m = n, n = n)

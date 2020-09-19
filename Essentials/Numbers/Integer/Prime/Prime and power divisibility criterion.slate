@@ -1,19 +1,25 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Natural = $../../Natural,
+  $~divisible = $../divisible,
+  $~power = $../power
+]
+
 $"Prime and power divisibility criterion"(
-  p: %Element($../../Natural/Prime/"Prime numbers"),
+  p: %Element($~Natural/Prime/"Prime numbers"),
   a: %Element($../Integers),
-  n: %Element($../../Natural/Subsets/"Positive numbers")
+  n: %Element($~Natural/Subsets/"Positive numbers")
 ): %EquivalenceTheorem {
   conditions = [
-    $../divisible(a = p, b = a),
-    $../divisible(
+    $~divisible(a = p, b = a),
+    $~divisible(
       a = p,
-      b = $../power(a = a, n = n)
+      b = $~power(a = a, n = n)
     ),
-    $../divisible(
-      a = $../power(a = p, n = n),
-      b = $../power(a = a, n = n)
+    $~divisible(
+      a = $~power(a = p, n = n),
+      b = $~power(a = a, n = n)
     )
   ]
 }

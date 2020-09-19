@@ -1,14 +1,18 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../"Natural numbers"
+]
+
 /**
  * @references * https://mathworld.wolfram.com/InitialSegment.html
  *             * https://proofwiki.org/wiki/Definition:Initial_Segment_of_Natural_Numbers/Zero-Based
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/fin/basic.html#fin
  */
-$"Segment (less)"(n: %Element($../"Natural numbers")): %SetOperator {
+$"Segment (less)"(n: %Element($~"Natural numbers")): %SetOperator {
   notation = $Segment(set = 'ℕ', symbol = '<', limit = n),
   definition = [%subset(
-    #(m: %Element($../"Natural numbers")),
+    #(m: %Element($~"Natural numbers")),
     $../less(m = m, n = n)
   )]
 }

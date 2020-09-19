@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Rings = $../../Rings
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Field_extension
  *             * https://mathworld.wolfram.com/Subfield.html
@@ -9,7 +13,7 @@
  */
 $"subfield set"(
   𝐅: %Element($../Fields),
-  S: %Subset($../../Rings/Carrier(𝐑 = 𝐅))
+  S: %Subset($~Rings/Carrier(𝐑 = 𝐅))
 ): %Predicate {
   notation = $NounRelation(
     operands = [S, 𝐅],
@@ -17,14 +21,14 @@ $"subfield set"(
     plural = 'subfields'
   ),
   definition = [%and(
-    $../../Rings/Subrings/"subring set"(𝐑 = 𝐅, S = S),
+    $~Rings/Subrings/"subring set"(𝐑 = 𝐅, S = S),
     %forall(
       #(a: %Element($../../../Essentials/Sets/"Relative complement"(
         U = S, S = S,
-        T = %enumeration($../../Rings/zero(𝐑 = 𝐅))
+        T = %enumeration($~Rings/zero(𝐑 = 𝐅))
       ))),
       %in(
-        $../../Rings/"multiplicative inverse"(𝐑 = 𝐅, a = a),
+        $~Rings/"multiplicative inverse"(𝐑 = 𝐅, a = a),
         S
       )
     )

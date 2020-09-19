@@ -1,11 +1,15 @@
 %../../../../../logics/hlm%
 
+[
+  $~Functions = $../../../Essentials/Functions
+]
+
 /**
  * @remarks The definitions in this section are somewhat technical. Their purpose is to implement a generic notion of "isomorphism" that can be checked purely syntactically. If it can be determined that the equality definition of a constructor does not identify any non-isomorphic objects, definitions based on the decomposition of that constructor are automatically well-defined.
  */
 $"element condition"(
   X,Y: %Set(auto = %true),
-  φ: %Element($../../../Essentials/Functions/Bijections(X = X, Y = Y)),
+  φ: %Element($~Functions/Bijections(X = X, Y = Y)),
   x: %Element(X),
   y: %Element(Y)
 ): %Predicate {
@@ -14,7 +18,7 @@ $"element condition"(
     function = φ
   ),
   definition = [%equals(
-    $../../../Essentials/Functions/value(X = X, Y = Y, f = φ, x = x),
+    $~Functions/value(X = X, Y = Y, f = φ, x = x),
     y
   )]
 }

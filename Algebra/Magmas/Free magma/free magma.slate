@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Cartesian product" = $../../../Essentials/Sets/"Cartesian product"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Magma_(algebra)#Free_magma
  */
@@ -14,15 +18,15 @@ $"free magma"(
   definition = [$../Magmas.magma(
     M = T,
     ∗ = $../../../Essentials/Functions/Functions(
-        X = $../../../Essentials/Sets/"Cartesian product"(S = T, T = T),
+        X = $~"Cartesian product"(S = T, T = T),
         Y = T
       ).function(_1 = {
-        #(x: %Element($../../../Essentials/Sets/"Cartesian product"(S = T, T = T))),
+        #(x: %Element($~"Cartesian product"(S = T, T = T))),
         {y = %structuralCases(
           x,
-          $../../../Essentials/Sets/"Cartesian product"(S = T, T = T),
+          $~"Cartesian product"(S = T, T = T),
           [{
-            constructor = $../../../Essentials/Sets/"Cartesian product".pair,
+            constructor = $~"Cartesian product".pair,
             parameters = #(
               a: %Element(T),
               b: %Element(T)

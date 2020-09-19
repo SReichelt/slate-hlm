@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~number = $../Natural/number
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Absolute_value
  *             * https://mathworld.wolfram.com/AbsoluteValue.html
@@ -13,14 +17,14 @@ $absolute(a: %Element($"Rational numbers")): %ExplicitOperator {
     {
       formula = $"less or equal"(
         b = a,
-        a = $../Natural/number(value = 0)
+        a = $~number(value = 0)
       ),
       value = a
     },
     {
       formula = $less(
         a = a,
-        b = $../Natural/number(value = 0)
+        b = $~number(value = 0)
       ),
       value = $inverse(a = a)
     }

@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Carrier = $../Rings/Carrier
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Field_(mathematics)
  *             * https://mathworld.wolfram.com/Field.html
@@ -22,8 +26,8 @@ $Fields: %SetOperator {
       %setEquals(
         $../Rings/Units(𝐑 = 𝐑),
         $../../Essentials/Sets/"Relative complement"(
-          U = $../Rings/Carrier(𝐑 = 𝐑),
-          S = $../Rings/Carrier(𝐑 = 𝐑),
+          U = $~Carrier(𝐑 = 𝐑),
+          S = $~Carrier(𝐑 = 𝐑),
           T = %enumeration($../Rings/zero(𝐑 = 𝐑))
         )
       )

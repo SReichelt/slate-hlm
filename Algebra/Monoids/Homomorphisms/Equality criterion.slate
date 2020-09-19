@@ -1,9 +1,13 @@
 %../../../../../logics/hlm%
 
+[
+  $~Monoids = $../Monoids
+]
+
 /**
  * @remarks This follows immediately from the HLM-specific definition of equality of monoids.
  */
-$"Equality criterion"(𝐌,𝐍: %Element($../Monoids)): %EquivalenceTheorem {
+$"Equality criterion"(𝐌,𝐍: %Element($~Monoids)): %EquivalenceTheorem {
   conditions = [
     %not($../../../Essentials/Sets/empty(S = $Isomorphisms(𝐌 = 𝐌, 𝐍 = 𝐍))),
     %equals(𝐌, 𝐍)

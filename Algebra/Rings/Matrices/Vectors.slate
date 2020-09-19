@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Natural = $../../../Essentials/Numbers/Natural
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Row_and_column_vectors
  *             * https://mathworld.wolfram.com/ColumnVector.html
@@ -7,12 +11,12 @@
  */
 $Vectors(
   𝐑: %Element($../Rings),
-  n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
+  n: %Element($~Natural/"Natural numbers")
 ): %SetOperator {
   notation = $SubSup(body = 𝐑, sup = n),
   definition = [$Matrices(
     𝐑 = 𝐑,
-    m = $../../../Essentials/Numbers/Natural/number(value = 1),
+    m = $~Natural/number(value = 1),
     n = n
   )]
 }

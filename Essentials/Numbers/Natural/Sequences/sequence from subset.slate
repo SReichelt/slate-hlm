@@ -1,12 +1,18 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../"Natural numbers",
+  $~Ordinal = $../../Ordinal,
+  $~Sequences = $../../../Sequences
+]
+
 /**
  * @remarks This definition produces a sorted finite sequence from a finite subset of natural numbers.
  */
 $"sequence from subset"(
-  M: %Subset($../"Natural numbers"),
-  α: %Def($../../Ordinal/"Ordered subsets"/"subset ordinal"(
-    α = $../../Ordinal/Examples/omega,
+  M: %Subset($~"Natural numbers"),
+  α: %Def($~Ordinal/"Ordered subsets"/"subset ordinal"(
+    α = $~Ordinal/Examples/omega,
     S = M
   ))
 ): %ExplicitOperator {
@@ -15,24 +21,21 @@ $"sequence from subset"(
     arguments = [M]
   ),
   definition = [
-    $../../../Sequences/"sequence from well-ordered set"(
+    $~Sequences/"sequence from well-ordered set"(
       S = M,
       ⪯ = $../../../Relations/restriction(
-        S = $../"Natural numbers",
-        ≺ = $../../../Relations/Relations(
-            S = $../"Natural numbers",
-            T = $../"Natural numbers"
-          ).relation(_1 = {
-            #(m,n: %Element($../"Natural numbers")),
+        S = $~"Natural numbers",
+        ≺ = $../../../Relations/Relations(S = $~"Natural numbers", T = $~"Natural numbers").relation(_1 = {
+            #(m,n: %Element($~"Natural numbers")),
             {p = $../"less or equal"(m = m, n = n)}
         }),
         T = M
       )
     ),
-    $../../../Sequences/"Ordinal-indexed sequences"(S = M).sequence(
+    $~Sequences/"Ordinal-indexed sequences"(S = M).sequence(
         α = α,
-        𝐚 = $../../../Sequences/Tuples(S = M, α = α).sequence(_1 = {
-            #(n: %Element($../../Ordinal/Subsets/"Segment (less)"(α = α))),
+        𝐚 = $~Sequences/Tuples(S = M, α = α).sequence(_1 = {
+            #(n: %Element($~Ordinal/Subsets/"Segment (less)"(α = α))),
             {a = $"indexed element"(M = M, n = n)}
         })
     )

@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Real numbers" = $../Real/"Real numbers",
+  $~difference = $../Real/difference
+]
+
 $difference(a,b: %Element($"Complex numbers")): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),
   definition = [
@@ -7,15 +12,15 @@ $difference(a,b: %Element($"Complex numbers")): %ExplicitOperator {
       b, $"Complex numbers",
       [{
         constructor = $"Complex numbers".complex,
-        parameters = #(r_b,i_b: %Element($../Real/"Real numbers")),
+        parameters = #(r_b,i_b: %Element($~"Real numbers")),
         value = %structuralCases(
           a, $"Complex numbers",
           [{
             constructor = $"Complex numbers".complex,
-            parameters = #(r_a,i_a: %Element($../Real/"Real numbers")),
+            parameters = #(r_a,i_a: %Element($~"Real numbers")),
             value = $"Complex numbers".complex(
-              r = $../Real/difference(a = r_a, b = r_b),
-              i = $../Real/difference(a = i_a, b = i_b)
+              r = $~difference(a = r_a, b = r_b),
+              i = $~difference(a = i_a, b = i_b)
             )
           }]
         )

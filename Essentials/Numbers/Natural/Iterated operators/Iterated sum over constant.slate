@@ -1,10 +1,13 @@
 %../../../../../../logics/hlm%
 
-$"Iterated sum over constant"(n,a: %Element($../"Natural numbers")): %StandardTheorem {
+[
+  $~"Natural numbers" = $../"Natural numbers"
+]
+
+$"Iterated sum over constant"(n,a: %Element($~"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $../../../Operations/"Iterated operations"/"indexed by natural number"(
-      X = $../"Natural numbers",
-      ⨂ = $"iterated sum",
+      X = $~"Natural numbers", ⨂ = $"iterated sum",
       _1 = {
         #(i: %Element($../Subsets/"Segment (less)"(n = n))),
         {a = a}

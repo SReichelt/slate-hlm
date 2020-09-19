@@ -1,5 +1,10 @@
 %../../../../logics/hlm%
 
+[
+  $~"Cartesian product" = $../../Essentials/Sets/"Cartesian product",
+  $~Intersection = $../../Essentials/Sets/Intersection
+]
+
 /**
  * @remarks This is one possible formalization of the discrete category obtained from elements of `S`. We simply define morphisms to be elements of `S` as well, such that `%setEquals($../Morphisms(u = u, 𝓒 = $elements(u = u, S = S), 𝐗 = a, 𝐘 = a), %enumeration($../identity(u = u, 𝓒 = $elements(u = u, S = S), 𝐗 = a)), %enumeration(a))`, and `%setEquals($../Morphisms(u = u, 𝓒 = $elements(u = u, S = S), 𝐗 = a, 𝐘 = b), $../../Essentials/Sets/"Empty set")` if `%not(%equals(a, b))`.
  *
@@ -22,7 +27,7 @@ $elements(
       O = S,
       _1 = {
         #(a,b: %Element(S)),
-        {M = $../../Essentials/Sets/Intersection(
+        {M = $~Intersection(
           U = S,
           S = %enumeration(a),
           T = %enumeration(b)
@@ -35,31 +40,31 @@ $elements(
       _3 = {
         #(d,e,f: %Element(S)),
         {∘ = $../../Essentials/Functions/Functions(
-            X = $../../Essentials/Sets/"Cartesian product"(
-              S = $../../Essentials/Sets/Intersection(
+            X = $~"Cartesian product"(
+              S = $~Intersection(
                 U = S,
                 S = %enumeration(e),
                 T = %enumeration(f)
               ),
-              T = $../../Essentials/Sets/Intersection(
+              T = $~Intersection(
                 U = S,
                 S = %enumeration(d),
                 T = %enumeration(e)
               )
             ),
-            Y = $../../Essentials/Sets/Intersection(
+            Y = $~Intersection(
               U = S,
               S = %enumeration(d),
               T = %enumeration(f)
             )
           ).function(_1 = {
-            #(x: %Element($../../Essentials/Sets/"Cartesian product"(
-              S = $../../Essentials/Sets/Intersection(
+            #(x: %Element($~"Cartesian product"(
+              S = $~Intersection(
                 U = S,
                 S = %enumeration(e),
                 T = %enumeration(f)
               ),
-              T = $../../Essentials/Sets/Intersection(
+              T = $~Intersection(
                 U = S,
                 S = %enumeration(d),
                 T = %enumeration(e)

@@ -1,13 +1,27 @@
 %../../../../../logics/hlm%
 
+[
+  $~Integers = $../Integer/Integers,
+  $~"Natural numbers" = $../Natural/"Natural numbers",
+  $~"Positive numbers" = $../Integer/Subsets/"Positive numbers",
+  $~"Prime and power divisibility criterion" = $../Integer/Prime/"Prime and power divisibility criterion",
+  $~"Prime numbers" = $../Natural/Prime/"Prime numbers",
+  $~coprime = $../Integer/coprime,
+  $~divisible = $../Integer/divisible,
+  $~number = $../Natural/number,
+  $~power = $../Integer/power,
+  $~product = $../Integer/product,
+  $~sum = $../Natural/sum
+]
+
 /**
  * @references * https://proofwiki.org/wiki/Square_Root_of_Prime_is_Irrational (for `n` = 2)
  *             * https://isabelle.in.tum.de/website-Isabelle2012/dist/library/HOL/ex/Sqrt.html (for `n` = 2)
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/irrational.html#irr_sqrt_of_prime (for `n` = 2)
  */
 $"Roots of primes are irrational"(
-  p: %Element($../Natural/Prime/"Prime numbers"),
-  n: %Element($../Natural/Subsets/"Segment (greater)"(n = $../Natural/number(value = 1)))
+  p: %Element($~"Prime numbers"),
+  n: %Element($../Natural/Subsets/"Segment (greater)"(n = $~number(value = 1)))
 ): %StandardTheorem {
   claim = %not($rational(a = $root(a = p, n = n))),
   proofs = [{steps = #(_: %ProveByContradiction({
@@ -15,9 +29,9 @@ $"Roots of primes are irrational"(
     steps = #(
       _: %UseDef(result = %existsUnique(
         #(
-          a: %Element($../Integer/Subsets/"Positive numbers"),
-          b: %Element($../Integer/Integers),
-          _1: %Constraint($../Integer/coprime(a = a, b = b))
+          a: %Element($~"Positive numbers"),
+          b: %Element($~Integers),
+          _1: %Constraint($~coprime(a = a, b = b))
         ),
         formula = %equals(
           $root(a = p, n = n),
@@ -25,9 +39,9 @@ $"Roots of primes are irrational"(
         )
       )),
       _: %UseExists(#(
-        a: %Element($../Integer/Subsets/"Positive numbers"),
-        b: %Element($../Integer/Integers),
-        _1: %Constraint($../Integer/coprime(a = a, b = b))
+        a: %Element($~"Positive numbers"),
+        b: %Element($~Integers),
+        _1: %Constraint($~coprime(a = a, b = b))
       )),
       _: %UseDef(
         side = 1,
@@ -65,73 +79,73 @@ $"Roots of primes are irrational"(
       _2: %UseDef(
         side = 2,
         result = %equals(
-          $../Integer/product(
+          $~product(
             a = p,
-            b = $../Integer/power(a = a, n = n)
+            b = $~power(a = a, n = n)
           ),
-          $../Integer/power(a = b, n = n)
+          $~power(a = b, n = n)
         )
       ),
       _7: %State(
-        $../Integer/divisible(
+        $~divisible(
           a = p,
-          b = $../Integer/power(a = b, n = n)
+          b = $~power(a = b, n = n)
         ),
         proof = {steps = #(_: %ProveDef(proof = {
           goal = %exists(
-            #(x: %Element($../Integer/Integers)),
+            #(x: %Element($~Integers)),
             formula = %equals(
-              $../Integer/product(a = p, b = x),
-              $../Integer/power(a = b, n = n)
+              $~product(a = p, b = x),
+              $~power(a = b, n = n)
             )
           ),
-          steps = #(_: %ProveExists({x = $../Integer/power(a = a, n = n)}))
+          steps = #(_: %ProveExists({x = $~power(a = a, n = n)}))
         }))}
       ),
       _4: %UseTheorem(
-        $../Integer/Prime/"Prime and power divisibility criterion"(p = p, a = b, n = n),
+        $~"Prime and power divisibility criterion"(p = p, a = b, n = n),
         input = #(_: %Consider(_7)),
-        result = $../Integer/divisible(a = p, b = b)
+        result = $~divisible(a = p, b = b)
       ),
       _8: %State(
-        $../Integer/divisible(
+        $~divisible(
           a = p,
-          b = $../Integer/power(a = a, n = n)
+          b = $~power(a = a, n = n)
         ),
         proof = {steps = #(_: %ProveDef(proof = {
           goal = %exists(
-            #(y: %Element($../Integer/Integers)),
+            #(y: %Element($~Integers)),
             formula = %equals(
-              $../Integer/product(a = p, b = y),
-              $../Integer/power(a = a, n = n)
+              $~product(a = p, b = y),
+              $~power(a = a, n = n)
             )
           ),
           steps = #(
             _: %Consider(_4),
             _: %UseDef(result = %exists(
-              #(z: %Element($../Integer/Integers)),
+              #(z: %Element($~Integers)),
               formula = %equals(
-                $../Integer/product(a = p, b = z),
+                $~product(a = p, b = z),
                 b
               )
             )),
-            _3: %UseExists(#(z: %Element($../Integer/Integers))),
+            _3: %UseExists(#(z: %Element($~Integers))),
             _: %Consider(n),
             _: %UseDef(result = %exists(
-              #(m: %Element($../Natural/"Natural numbers")),
+              #(m: %Element($~"Natural numbers")),
               formula = %equals(
-                $../Natural/sum(
-                  m = $../Natural/number(value = 2),
+                $~sum(
+                  m = $~number(value = 2),
                   n = m
                 ),
                 n
               )
             )),
-            _5: %UseExists(#(m: %Element($../Natural/"Natural numbers"))),
+            _5: %UseExists(#(m: %Element($~"Natural numbers"))),
             _: %ProveExists(
-              {y = $../Integer/product(
-                a = %associative($../Integer/product(
-                  a = $../Integer/power(a = b, n = m),
+              {y = $~product(
+                a = %associative($~product(
+                  a = $~power(a = b, n = m),
                   b = z
                 )),
                 b = z
@@ -142,27 +156,27 @@ $"Roots of primes are irrational"(
                   #(_: %Consider(_5)),
                   2,
                   %equals(
-                    $../Integer/product(
+                    $~product(
                       a = p,
-                      b = $../Integer/power(a = a, n = n)
+                      b = $~power(a = a, n = n)
                     ),
-                    $../Integer/power(
+                    $~power(
                       a = b,
-                      n = $../Natural/sum(
-                        m = $../Natural/number(value = 2),
+                      n = $~sum(
+                        m = $~number(value = 2),
                         n = m
                       )
                     )
                   )
                 ),
                 _: %Unfold(%equals(
-                  $../Integer/product(
+                  $~product(
                     a = p,
-                    b = $../Integer/power(a = a, n = n)
+                    b = $~power(a = a, n = n)
                   ),
-                  $../Integer/product(
-                    a = %associative($../Integer/product(
-                      a = $../Integer/power(a = b, n = m),
+                  $~product(
+                    a = %associative($~product(
+                      a = $~power(a = b, n = m),
                       b = b
                     )),
                     b = b
@@ -172,40 +186,40 @@ $"Roots of primes are irrational"(
                   #(_: %Consider(_3)),
                   2,
                   %equals(
-                    $../Integer/product(
+                    $~product(
                       a = p,
-                      b = $../Integer/power(a = a, n = n)
+                      b = $~power(a = a, n = n)
                     ),
-                    $../Integer/product(
-                      a = %associative($../Integer/product(
-                        a = $../Integer/power(a = b, n = m),
-                        b = %associative($../Integer/product(a = p, b = z))
+                    $~product(
+                      a = %associative($~product(
+                        a = $~power(a = b, n = m),
+                        b = %associative($~product(a = p, b = z))
                       )),
-                      b = %associative($../Integer/product(a = p, b = z))
+                      b = %associative($~product(a = p, b = z))
                     )
                   )
                 ),
                 _: %UseTheorem(
                   $../Integer/"Multiplication of a nonzero number is injective"(
-                    a = $../Integer/product(
-                      a = %associative($../Integer/product(
-                        a = $../Integer/power(a = b, n = m),
+                    a = $~product(
+                      a = %associative($~product(
+                        a = $~power(a = b, n = m),
                         b = z
                       )),
-                      b = %associative($../Integer/product(a = p, b = z))
+                      b = %associative($~product(a = p, b = z))
                     ),
-                    b = $../Integer/power(a = a, n = n),
+                    b = $~power(a = a, n = n),
                     c = p,
                     _1 = {proof = {steps = #(_: %Consider(_6))}}
                   ),
                   result = %equals(
-                    $../Integer/power(a = a, n = n),
-                    $../Integer/product(
-                      a = %associative($../Integer/product(
-                        a = $../Integer/power(a = b, n = m),
+                    $~power(a = a, n = n),
+                    $~product(
+                      a = %associative($~product(
+                        a = $~power(a = b, n = m),
                         b = z
                       )),
-                      b = %associative($../Integer/product(a = p, b = z))
+                      b = %associative($~product(a = p, b = z))
                     )
                   )
                 )
@@ -215,18 +229,18 @@ $"Roots of primes are irrational"(
         }))}
       ),
       _: %UseTheorem(
-        $../Integer/Prime/"Prime and power divisibility criterion"(p = p, a = a, n = n),
+        $~"Prime and power divisibility criterion"(p = p, a = a, n = n),
         input = #(_: %Consider(_8)),
-        result = $../Integer/divisible(a = p, b = a)
+        result = $~divisible(a = p, b = a)
       ),
       _: %State(
-        %not($../Integer/coprime(a = a, b = b)),
+        %not($~coprime(a = a, b = b)),
         proof = {steps = #(_: %ProveDef(proof = {
           goal = %exists(
-            #(q: %Element($../Natural/Prime/"Prime numbers")),
+            #(q: %Element($~"Prime numbers")),
             formula = %and(
-              $../Integer/divisible(a = q, b = a),
-              $../Integer/divisible(a = q, b = b)
+              $~divisible(a = q, b = a),
+              $~divisible(a = q, b = b)
             )
           ),
           steps = #(_: %ProveExists({q = p}))

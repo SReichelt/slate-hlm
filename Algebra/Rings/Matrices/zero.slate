@@ -1,8 +1,13 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../../Essentials/Numbers/Natural/"Natural numbers",
+  $~"Segment (less)" = $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"
+]
+
 $zero(
   𝐑: %Element($../Rings),
-  m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
+  m,n: %Element($~"Natural numbers")
 ): %ExplicitOperator {
   notation = $SubSup(
     body = '0',
@@ -16,8 +21,8 @@ $zero(
   ),
   definition = [$Matrices(𝐑 = 𝐑, m = m, n = n).matrix(_1 = {
       #(
-        i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
-        j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
+        i: %Element($~"Segment (less)"(n = m)),
+        j: %Element($~"Segment (less)"(n = n))
       ),
       {a = $../zero(𝐑 = 𝐑)}
   })]

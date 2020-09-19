@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Cartesian product" = $../Sets/"Cartesian product"
+]
+
 $value(
   X,Y,Z: %Set(auto = %true),
   ∗: %Element($Operations(X = X, Y = Y, Z = Z)),
@@ -27,9 +31,9 @@ $value(
       }]
     ),
     $../Functions/value(
-      X = $../Sets/"Cartesian product"(S = X, T = Y),
+      X = $~"Cartesian product"(S = X, T = Y),
       Y = Z, f = ∗,
-      x = $../Sets/"Cartesian product"(S = X, T = Y).pair(s = x, t = y)
+      x = $~"Cartesian product"(S = X, T = Y).pair(s = x, t = y)
     )
   ]
 }

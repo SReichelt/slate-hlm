@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Cardinal = $../Numbers/Cardinal
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Countable_set
  *             * https://mathworld.wolfram.com/CountablyInfinite.html
@@ -9,7 +13,7 @@
 $"countably infinite"(S: %Set): %Predicate {
   notation = $Property(operand = S, property = 'countably infinite'),
   definition = [
-    $../Numbers/Cardinal/"countably infinite"(κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)),
+    $~Cardinal/"countably infinite"(κ = $~Cardinal/"Cardinal numbers".cardinality(S = S)),
     %and(
       $countable(S = S),
       %not($finite(S = S))

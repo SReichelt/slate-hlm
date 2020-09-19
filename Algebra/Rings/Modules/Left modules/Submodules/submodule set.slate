@@ -1,5 +1,10 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../../../Carrier,
+  $~product = $../product
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Module_(mathematics)#Submodules_and_homomorphisms
  *             * https://mathworld.wolfram.com/Submodule.html
@@ -42,22 +47,22 @@ $"submodule set"(
       ),
       %forall(
         #(
-          d: %Element($../../../Carrier(𝐑 = 𝐑)),
+          d: %Element($~Carrier(𝐑 = 𝐑)),
           e: %Element(S)
         ),
         %in(
-          $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = d, x = e),
+          $~product(𝐑 = 𝐑, 𝐌 = 𝐌, a = d, x = e),
           S
         )
       )
     ),
     %forall(
       #(
-        d: %Element($../../../Carrier(𝐑 = 𝐑)),
+        d: %Element($~Carrier(𝐑 = 𝐑)),
         e: %Element(S)
       ),
       %in(
-        $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = d, x = e),
+        $~product(𝐑 = 𝐑, 𝐌 = 𝐌, a = d, x = e),
         S
       )
     )

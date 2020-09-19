@@ -1,11 +1,18 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~"Ordinal numbers" = $../"Ordinal numbers",
+  $~before = $../before,
+  $~value = $../../../Functions/value
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Order_embedding
  *             * https://proofwiki.org/wiki/Definition:Order_Embedding
  *             * https://leanprover-community.github.io/mathlib_docs/order/rel_iso.html#order_embedding
  */
-$Homomorphisms(α,β: %Element($../"Ordinal numbers")): %SetOperator {
+$Homomorphisms(α,β: %Element($~"Ordinal numbers")): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [α, β]
@@ -21,23 +28,23 @@ $Homomorphisms(α,β: %Element($../"Ordinal numbers")): %SetOperator {
   },
   definition = [%subset(
     #(f: %Element($../../../Functions/Functions(
-      X = $../Carrier(α = α),
-      Y = $../Carrier(α = β)
+      X = $~Carrier(α = α),
+      Y = $~Carrier(α = β)
     ))),
     %forall(
-      #(a,b: %Element($../Carrier(α = α))),
+      #(a,b: %Element($~Carrier(α = α))),
       %equiv(
-        $../before(α = α, a = a, b = b),
-        $../before(
+        $~before(α = α, a = a, b = b),
+        $~before(
           α = β,
-          a = $../../../Functions/value(
-            X = $../Carrier(α = α),
-            Y = $../Carrier(α = β),
+          a = $~value(
+            X = $~Carrier(α = α),
+            Y = $~Carrier(α = β),
             f = f, x = a
           ),
-          b = $../../../Functions/value(
-            X = $../Carrier(α = α),
-            Y = $../Carrier(α = β),
+          b = $~value(
+            X = $~Carrier(α = α),
+            Y = $~Carrier(α = β),
             f = f, x = b
           )
         )

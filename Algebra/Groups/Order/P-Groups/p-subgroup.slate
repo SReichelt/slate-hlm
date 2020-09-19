@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Subgroups = $../../Subgroups
+]
+
 $"p-subgroup"(
   𝐆: %Element($../../Groups),
   H: %Subset($../../Carrier(𝐆 = 𝐆)),
@@ -11,9 +15,9 @@ $"p-subgroup"(
     plural = $DependentWord(word = 'subgroups', argument = p)
   ),
   definition = [%and(
-    $../../Subgroups/"subgroup set"(𝐆 = 𝐆, S = H),
+    $~Subgroups/"subgroup set"(𝐆 = 𝐆, S = H),
     $"p-group"(
-      𝐆 = $../../Subgroups/"subset group"(𝐆 = 𝐆, S = H),
+      𝐆 = $~Subgroups/"subset group"(𝐆 = 𝐆, S = H),
       p = p
     )
   )]

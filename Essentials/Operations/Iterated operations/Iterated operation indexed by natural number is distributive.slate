@@ -1,11 +1,15 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Segment (less)" = $../../Numbers/Natural/Subsets/"Segment (less)"
+]
+
 $"Iterated operation indexed by natural number is distributive"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = X)),
   n: %Element($../../Numbers/Natural/"Natural numbers"),
   _1: %Binder(
-    #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+    #(i: %Element($~"Segment (less)"(n = n))),
     #(a,b: %Element(X))
   )
 ): %StandardTheorem {
@@ -13,7 +17,7 @@ $"Iterated operation indexed by natural number is distributive"(
     $"indexed by natural number"(
       X = X, ⨂ = ⨂, n = n,
       _1 = {
-        #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+        #(i: %Element($~"Segment (less)"(n = n))),
         {a = $operation(
           X = X, ⨂ = ⨂,
           x = a[i = i],
@@ -26,14 +30,14 @@ $"Iterated operation indexed by natural number is distributive"(
       x = $"indexed by natural number"(
         X = X, ⨂ = ⨂, n = n,
         _1 = {
-          #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+          #(i: %Element($~"Segment (less)"(n = n))),
           {a = a[i = i]}
         }
       ),
       y = $"indexed by natural number"(
         X = X, ⨂ = ⨂, n = n,
         _1 = {
-          #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+          #(i: %Element($~"Segment (less)"(n = n))),
           {a = b[i = i]}
         }
       )

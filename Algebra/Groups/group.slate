@@ -1,5 +1,10 @@
 %../../../../logics/hlm%
 
+[
+  $~Essentials = $../../Essentials,
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Group_(mathematics)
  *             * https://mathworld.wolfram.com/Group.html
@@ -9,9 +14,9 @@
  */
 $group(
   G: %Set,
-  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
+  ∗: %Element($~Operations/"Inner operations"(X = G)),
   e: %Element(G),
-  i: %Element($../../Essentials/Functions/Functions(X = G, Y = G))
+  i: %Element($~Essentials/Functions/Functions(X = G, Y = G))
 ): %Predicate {
   notation = $Structure(
     items = [G, ∗, e, i],
@@ -23,13 +28,13 @@ $group(
     %forall(
       #(a: %Element(G)),
       %equals(
-        $../../Essentials/Operations/value(
+        $~Operations/value(
           X = G, Y = G, Z = G, ∗ = ∗, x = a,
-          y = $../../Essentials/Functions/value(X = G, Y = G, f = i, x = a)
+          y = $~Essentials/Functions/value(X = G, Y = G, f = i, x = a)
         ),
-        $../../Essentials/Operations/value(
+        $~Operations/value(
           X = G, Y = G, Z = G, ∗ = ∗,
-          x = $../../Essentials/Functions/value(X = G, Y = G, f = i, x = a),
+          x = $~Essentials/Functions/value(X = G, Y = G, f = i, x = a),
           y = a
         ),
         e

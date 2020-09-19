@@ -1,26 +1,29 @@
 %../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers"
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#add_monoid.smul
  */
 $"product with natural number"(
   𝐑: %Element($Rings, auto = %true),
-  n: %Element($../../Essentials/Numbers/Natural/"Natural numbers"),
+  n: %Element($~"Natural numbers"),
   a: %Element($Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [n, a]),
   definition = [%structuralCases(
-    n,
-    $../../Essentials/Numbers/Natural/"Natural numbers",
+    n, $~"Natural numbers",
     [
       {
-        constructor = $../../Essentials/Numbers/Natural/"Natural numbers".zero,
+        constructor = $~"Natural numbers".zero,
         value = $zero(𝐑 = 𝐑),
         rewrite = %true
       },
       {
-        constructor = $../../Essentials/Numbers/Natural/"Natural numbers".successor,
-        parameters = #(x: %Element($../../Essentials/Numbers/Natural/"Natural numbers")),
+        constructor = $~"Natural numbers".successor,
+        parameters = #(x: %Element($~"Natural numbers")),
         value = $sum(
           𝐑 = 𝐑,
           a = $"product with natural number"(𝐑 = 𝐑, n = x, a = a),

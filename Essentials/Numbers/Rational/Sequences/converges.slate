@@ -1,5 +1,11 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Infinite sequences" = $../../../Sequences/"Infinite sequences",
+  $~"Natural numbers" = $../../Natural/"Natural numbers",
+  $~"Rational numbers" = $../"Rational numbers"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Limit_of_a_sequence
  *             * https://mathworld.wolfram.com/ConvergentSequence.html
@@ -7,8 +13,8 @@
  *             * https://ncatlab.org/nlab/show/convergence
  */
 $converges(
-  𝐚: %Element($../../../Sequences/"Infinite sequences"(S = $../"Rational numbers")),
-  l: %Element($../"Rational numbers")
+  𝐚: %Element($~"Infinite sequences"(S = $~"Rational numbers")),
+  l: %Element($~"Rational numbers")
 ): %Predicate {
   notation = $TextualRelation(
     verb = %neg('converges to', 'does not converge to'),
@@ -16,17 +22,17 @@ $converges(
   ),
   definition = [%structural(
     𝐚,
-    $../../../Sequences/"Infinite sequences"(S = $../"Rational numbers"),
+    $~"Infinite sequences"(S = $~"Rational numbers"),
     [{
-      constructor = $../../../Sequences/"Infinite sequences".sequence,
+      constructor = $~"Infinite sequences".sequence,
       parameters = #(_1: %Binder(
-        #(n: %Element($../../Natural/"Natural numbers")),
-        #(a: %Element($../"Rational numbers"))
+        #(n: %Element($~"Natural numbers")),
+        #(a: %Element($~"Rational numbers"))
       )),
       value = %forall(
         #(ε: %Element($../Subsets/"Positive numbers")),
         %exists(
-          #(n: %Element($../../Natural/"Natural numbers")),
+          #(n: %Element($~"Natural numbers")),
           formula = %forall(
             #(m: %Element($../../Natural/Subsets/"Segment (greater or equal)"(n = n))),
             $../less(

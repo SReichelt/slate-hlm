@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Cardinal numbers" = $../"Cardinal numbers",
+  $~Carrier = $../Carrier
+]
+
 /**
  * @remarks The definition of cardinal numbers in HLM is very similar to the definition of algebraic structures such as magmas. Thus it makes sense to define a homomorphism between cardinal numbers as a function between representative sets.
  *
@@ -10,7 +15,7 @@
  *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/homomorphism
  */
-$Homomorphisms(κ,μ: %Element($../"Cardinal numbers")): %SetOperator {
+$Homomorphisms(κ,μ: %Element($~"Cardinal numbers")): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [κ, μ]
@@ -26,7 +31,7 @@ $Homomorphisms(κ,μ: %Element($../"Cardinal numbers")): %SetOperator {
     nameOptional = %true
   },
   definition = [$../../../Functions/Functions(
-    X = $../Carrier(κ = κ),
-    Y = $../Carrier(κ = μ)
+    X = $~Carrier(κ = κ),
+    Y = $~Carrier(κ = μ)
   )]
 }

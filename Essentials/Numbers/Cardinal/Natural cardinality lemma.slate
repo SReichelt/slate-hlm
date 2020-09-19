@@ -1,13 +1,18 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Natural/"Natural numbers",
+  $~"Segment (less)" = $../Natural/Subsets/"Segment (less)"
+]
+
 /**
  * @remarks This lemma is part of the well-definedness proof of the embedding of the natural numbers into the cardinal numbers.
  */
 $"Natural cardinality lemma"(
-  m,n: %Element($../Natural/"Natural numbers"),
+  m,n: %Element($~"Natural numbers"),
   f: %Element($../../Functions/Bijections(
-    X = $../Natural/Subsets/"Segment (less)"(n = m),
-    Y = $../Natural/Subsets/"Segment (less)"(n = n)
+    X = $~"Segment (less)"(n = m),
+    Y = $~"Segment (less)"(n = n)
   ))
 ): %StandardTheorem {
   claim = %equals(m, n)

@@ -1,14 +1,18 @@
 %../../../../../../logics/hlm%
 
+[
+  $~number = $../../Natural/number
+]
+
 $"Negative numbers": %SetOperator {
   notation = $SubSup(body = 'ℚ', sub = '−'),
   definition = [
-    $"Segment (less)"(a = $../../Natural/number(value = 0)),
+    $"Segment (less)"(a = $~number(value = 0)),
     %subset(
       #(a: %Element($../"Rational numbers")),
       $../less(
         a = a,
-        b = $../../Natural/number(value = 0)
+        b = $~number(value = 0)
       )
     )
   ]

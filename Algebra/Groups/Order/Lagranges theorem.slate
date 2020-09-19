@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Numbers = $../../../Essentials/Numbers
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)
  *             * https://mathworld.wolfram.com/LagrangesGroupTheorem.html
@@ -13,8 +17,8 @@ $"Lagranges theorem"(
   S: %Subset($../Carrier(𝐆 = 𝐆)),
   _2: %Constraint($../Subgroups/"subgroup set"(𝐆 = 𝐆, S = S))
 ): %StandardTheorem {
-  claim = $../../../Essentials/Numbers/Natural/divisible(
-    m = $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
+  claim = $~Numbers/Natural/divisible(
+    m = $~Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
     n = $"group order"(𝐆 = 𝐆)
   )
 }

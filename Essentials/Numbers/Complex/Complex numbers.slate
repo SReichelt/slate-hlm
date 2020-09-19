@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Real numbers" = $../Real/"Real numbers"
+]
+
 /**
  * @remarks The constructor notation is later justified by `$"Actual linear combination equals formal linear combination"`.
  *
@@ -10,7 +14,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex
  */
 $"Complex numbers": %Construction {
-  $complex(r,i: %Element($../Real/"Real numbers")): %Constructor {
+  $complex(r,i: %Element($~"Real numbers")): %Constructor {
     notation = $Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '+'),
@@ -28,8 +32,8 @@ $"Complex numbers": %Construction {
       style = '()'
     ),
     equalityDefinition = {
-      leftParameters = #(r,i: %Element($../Real/"Real numbers")),
-      rightParameters = #("r'","i'": %Element($../Real/"Real numbers")),
+      leftParameters = #(r,i: %Element($~"Real numbers")),
+      rightParameters = #("r'","i'": %Element($~"Real numbers")),
       definition = [%and(
         %equals(r, "r'"),
         %equals(i, "i'")
@@ -47,7 +51,7 @@ $"Complex numbers": %Construction {
 
   notation = 'ℂ',
   embedding = {
-    parameter = #(r: %Element($../Real/"Real numbers")),
+    parameter = #(r: %Element($~"Real numbers")),
     target = $"Complex numbers".complex(
       r = r,
       i = $../Natural/number(value = 0)

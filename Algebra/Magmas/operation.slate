@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @remarks This definition lets us multiply elements without decomposing the magma.
  */
@@ -14,9 +18,9 @@ $operation(
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
+        ∗: %Element($~Operations/"Inner operations"(X = M))
       ),
-      value = $../../Essentials/Operations/value(X = M, Y = M, Z = M, ∗ = ∗, x = a, y = b)
+      value = $~Operations/value(X = M, Y = M, Z = M, ∗ = ∗, x = a, y = b)
     }]
   )]
 }

@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Natural/"Natural numbers",
+  $~number = $../Natural/number,
+  $~sum = $../Natural/sum
+]
+
 /**
  * @remarks This is essentially the standard definition of integers as equivalence classes of pairs of natural numbers. We just use a notation that highlights the role of the two numbers in each pair. This notation is later justified by `$"Actual difference equals formal difference"`).
  *
@@ -15,7 +21,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int (but uses a different encoding as an inductive data type with two constructors)
  */
 $Integers: %Construction {
-  $difference(n,m: %Element($../Natural/"Natural numbers")): %Constructor {
+  $difference(n,m: %Element($~"Natural numbers")): %Constructor {
     notation = $Parens(
       body = $Operator(
         symbol = $ConstructorName(name = '-'),
@@ -25,11 +31,11 @@ $Integers: %Construction {
       style = '()'
     ),
     equalityDefinition = {
-      leftParameters = #(n,m: %Element($../Natural/"Natural numbers")),
-      rightParameters = #("n'","m'": %Element($../Natural/"Natural numbers")),
+      leftParameters = #(n,m: %Element($~"Natural numbers")),
+      rightParameters = #("n'","m'": %Element($~"Natural numbers")),
       definition = [%equals(
-        $../Natural/sum(m = n, n = "m'"),
-        $../Natural/sum(m = "n'", n = m)
+        $~sum(m = n, n = "m'"),
+        $~sum(m = "n'", n = m)
       )]
     },
     rewrite = {
@@ -40,22 +46,22 @@ $Integers: %Construction {
 
   notation = 'ℤ',
   embedding = {
-    parameter = #(x: %Element($../Natural/"Natural numbers")),
+    parameter = #(x: %Element($~"Natural numbers")),
     target = $Integers.difference(
       n = x,
-      m = $../Natural/number(value = 0)
+      m = $~number(value = 0)
     ),
     wellDefinednessProof = {
       parameters = #(
-        x,y: %Element($../Natural/"Natural numbers"),
+        x,y: %Element($~"Natural numbers"),
         _1: %Constraint(%equals(
           $Integers.difference(
             n = x,
-            m = $../Natural/number(value = 0)
+            m = $~number(value = 0)
           ),
           $Integers.difference(
             n = y,
-            m = $../Natural/number(value = 0)
+            m = $~number(value = 0)
           )
         ))
       ),
@@ -63,13 +69,13 @@ $Integers: %Construction {
       steps = #(
         _: %Consider(_1),
         _: %UseDef(result = %equals(
-          $../Natural/sum(
+          $~sum(
             m = x,
-            n = $../Natural/number(value = 0)
+            n = $~number(value = 0)
           ),
-          $../Natural/sum(
+          $~sum(
             m = y,
-            n = $../Natural/number(value = 0)
+            n = $~number(value = 0)
           )
         )),
         _: %Unfold(%equals(x, y))

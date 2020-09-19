@@ -1,9 +1,13 @@
 %../../../../../logics/hlm%
 
+[
+  $~Rings = $../Rings
+]
+
 /**
  * @remarks This follows immediately from the HLM-specific definition of equality of rings.
  */
-$"Equality criterion"(𝐑,𝐒: %Element($../Rings)): %EquivalenceTheorem {
+$"Equality criterion"(𝐑,𝐒: %Element($~Rings)): %EquivalenceTheorem {
   conditions = [
     %not($../../../Essentials/Sets/empty(S = $Isomorphisms(𝐑 = 𝐑, 𝐒 = 𝐒))),
     %equals(𝐑, 𝐒)

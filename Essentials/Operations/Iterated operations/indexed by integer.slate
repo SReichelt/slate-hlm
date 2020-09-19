@@ -1,11 +1,19 @@
 %../../../../../logics/hlm%
 
+[
+  $~Integers = $../../Numbers/Integer/Integers,
+  $~Numbers = $../../Numbers,
+  $~difference = $../../Numbers/Integer/difference,
+  $~number = $../../Numbers/Natural/number,
+  $~sum = $../../Numbers/Integer/sum
+]
+
 $"indexed by integer"(
   X: %Set(auto = %true),
   ⨂: %Element($"Iterated operations"(X = X)),
-  j,k: %Element($../../Numbers/Integer/Integers),
+  j,k: %Element($~Integers),
   _1: %Binder(
-    #(i: %Element($../../Numbers/Integer/Subsets/Interval(a = j, b = k))),
+    #(i: %Element($~Numbers/Integer/Subsets/Interval(a = j, b = k))),
     #(a: %Element(X))
   )
 ): %ExplicitOperator {
@@ -18,16 +26,16 @@ $"indexed by integer"(
   ),
   definition = [$"indexed by natural number"(
     X = X, ⨂ = ⨂,
-    n = $../../Numbers/Integer/sum(
-      a = %associative($../../Numbers/Integer/difference(a = k, b = j)),
-      b = $../../Numbers/Natural/number(value = 1)
+    n = $~sum(
+      a = %associative($~difference(a = k, b = j)),
+      b = $~number(value = 1)
     ),
     _1 = {
-      #(i: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $../../Numbers/Integer/sum(
-        a = %associative($../../Numbers/Integer/difference(a = k, b = j)),
-        b = $../../Numbers/Natural/number(value = 1)
+      #(i: %Element($~Numbers/Natural/Subsets/"Segment (less)"(n = $~sum(
+        a = %associative($~difference(a = k, b = j)),
+        b = $~number(value = 1)
       )))),
-      {a = a[i = $../../Numbers/Integer/sum(a = i, b = j)]}
+      {a = a[i = $~sum(a = i, b = j)]}
     }
   )]
 }

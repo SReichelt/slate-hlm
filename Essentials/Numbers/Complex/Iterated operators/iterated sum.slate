@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Complex numbers" = $../"Complex numbers"
+]
+
 /**
  * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = $../"Complex numbers", ⨂ = $"iterated sum", n = n, _1 = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = n))), {a = {a[i = i]}}})`
  *
@@ -9,13 +13,9 @@
  */
 $"iterated sum": %ExplicitOperator {
   notation = '∑',
-  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = $../"Complex numbers").operation(
-      ∗ = $../../../Operations/Operations(
-          X = $../"Complex numbers",
-          Y = $../"Complex numbers",
-          Z = $../"Complex numbers"
-        ).operation(_1 = {
-          #(a,b: %Element($../"Complex numbers")),
+  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = $~"Complex numbers").operation(
+      ∗ = $../../../Operations/Operations(X = $~"Complex numbers", Y = $~"Complex numbers", Z = $~"Complex numbers").operation(_1 = {
+          #(a,b: %Element($~"Complex numbers")),
           {z = $../sum(a = a, b = b)}
       }),
       e = $../../Natural/number(value = 0)

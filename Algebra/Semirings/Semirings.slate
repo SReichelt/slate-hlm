@@ -1,5 +1,11 @@
 %../../../../logics/hlm%
 
+[
+  $~"Inner operations" = $../../Essentials/Operations/"Inner operations",
+  $~"element condition" = $../Generic/Isomorphisms/"element condition",
+  $~"inner operation condition" = $../Generic/Isomorphisms/"inner operation condition"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Semiring
  *             * https://proofwiki.org/wiki/Definition:Rig#Also_defined_as
@@ -10,9 +16,9 @@
 $Semirings: %Construction {
   $semiring(
     R: %Set,
-    ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+    ⊕: %Element($~"Inner operations"(X = R)),
     "0": %Element(R),
-    ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+    ⊙: %Element($~"Inner operations"(X = R)),
     "1": %Element(R),
     _1: %Constraint($semiring(R = R, ⊕ = ⊕, "0" = "0", ⊙ = ⊙, "1" = "1"))
   ): %Constructor {
@@ -23,27 +29,27 @@ $Semirings: %Construction {
     equalityDefinition = {
       leftParameters = #(
         R: %Set,
-        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+        ⊕: %Element($~"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+        ⊙: %Element($~"Inner operations"(X = R)),
         "1": %Element(R),
         _1: %Constraint($semiring(R = R, ⊕ = ⊕, "0" = "0", ⊙ = ⊙, "1" = "1"))
       ),
       rightParameters = #(
         S: %Set,
-        ⋆: %Element($../../Essentials/Operations/"Inner operations"(X = S)),
+        ⋆: %Element($~"Inner operations"(X = S)),
         𝟢: %Element(S),
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = S)),
+        ∗: %Element($~"Inner operations"(X = S)),
         𝟣: %Element(S),
         _2: %Constraint($semiring(R = S, ⊕ = ⋆, "0" = 𝟢, ⊙ = ∗, "1" = 𝟣))
       ),
       definition = [%exists(
         #(φ: %Element($../../Essentials/Functions/Bijections(X = R, Y = S))),
         formula = %and(
-          $../Generic/Isomorphisms/"inner operation condition"(X = R, Y = S, φ = φ, ∗ = ⊕, ⋆ = ⋆),
-          $../Generic/Isomorphisms/"element condition"(X = R, Y = S, φ = φ, x = "0", y = 𝟢),
-          $../Generic/Isomorphisms/"inner operation condition"(X = R, Y = S, φ = φ, ∗ = ⊙, ⋆ = ∗),
-          $../Generic/Isomorphisms/"element condition"(X = R, Y = S, φ = φ, x = "1", y = 𝟣)
+          $~"inner operation condition"(X = R, Y = S, φ = φ, ∗ = ⊕, ⋆ = ⋆),
+          $~"element condition"(X = R, Y = S, φ = φ, x = "0", y = 𝟢),
+          $~"inner operation condition"(X = R, Y = S, φ = φ, ∗ = ⊙, ⋆ = ∗),
+          $~"element condition"(X = R, Y = S, φ = φ, x = "1", y = 𝟣)
         )
       )],
       isomorphic = %true

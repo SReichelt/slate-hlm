@@ -1,15 +1,19 @@
 %../../../../logics/hlm%
 
+[
+  $~"Fresh variables" = $../"Fresh variables",
+  $~"Rewriting rules" = $../"Rewriting rules",
+  $~Union = $../../Essentials/Sets/Union,
+  $~Variables = $../Variables
+]
+
 /**
  * @remarks This definition checks whether a rewrite rule matches a pair of terms. It considers both the pair itself as well as all subterms. Structural induction on both sides makes the definition a bit complicated.
  */
 $rewritable(
-  V: %Subset(
-    $../Variables,
-    auto = %true
-  ),
+  V: %Subset($~Variables, auto = %true),
   _1: %Constraint($../../Essentials/Sets/finite(S = V)),
-  ℜ: %Subset($../"Rewriting rules"(T = $Terms(V = V))),
+  ℜ: %Subset($~"Rewriting rules"(T = $Terms(V = V))),
   L,R: %Element($Terms(V = V))
 ): %Predicate {
   notation = $Relation(
@@ -21,7 +25,7 @@ $rewritable(
   ),
   definition = [%or(
     %in(
-      $../"Rewriting rules"(T = $Terms(V = V)).rule(l = L, r = R),
+      $~"Rewriting rules"(T = $Terms(V = V)).rule(l = L, r = R),
       ℜ
     ),
     %structural(
@@ -37,20 +41,18 @@ $rewritable(
           constructor = $Terms.abstraction,
           parameters = #(
             _4: %Binder(
-              #(z: %Element($../"Fresh variables"(V = V))),
-              #(N: %Element($Terms(V = $../../Essentials/Sets/Union(
-                U = $../Variables,
-                S = V,
+              #(z: %Element($~"Fresh variables"(V = V))),
+              #(N: %Element($Terms(V = $~Union(
+                U = $~Variables, S = V,
                 T = %enumeration(z)
               ))))
             ),
             _5: %Constraint(%forall(
-              #(a,b: %Element($../"Fresh variables"(V = V))),
+              #(a,b: %Element($~"Fresh variables"(V = V))),
               %equals(
                 $substitution(
-                  V = $Terms(V = $../../Essentials/Sets/Union(
-                    U = $../Variables,
-                    S = V,
+                  V = $Terms(V = $~Union(
+                    U = $~Variables, S = V,
                     T = %enumeration(a)
                   )),
                   T = N[z = a],
@@ -73,20 +75,18 @@ $rewritable(
                 constructor = $Terms.abstraction,
                 parameters = #(
                   _2: %Binder(
-                    #(y: %Element($../"Fresh variables"(V = V))),
-                    #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
-                      U = $../Variables,
-                      S = V,
+                    #(y: %Element($~"Fresh variables"(V = V))),
+                    #(M: %Element($Terms(V = $~Union(
+                      U = $~Variables, S = V,
                       T = %enumeration(y)
                     ))))
                   ),
                   _3: %Constraint(%forall(
-                    #(a,b: %Element($../"Fresh variables"(V = V))),
+                    #(a,b: %Element($~"Fresh variables"(V = V))),
                     %equals(
                       $substitution(
-                        V = $Terms(V = $../../Essentials/Sets/Union(
-                          U = $../Variables,
-                          S = V,
+                        V = $Terms(V = $~Union(
+                          U = $~Variables, S = V,
                           T = %enumeration(a)
                         )),
                         T = M[y = a],
@@ -97,11 +97,10 @@ $rewritable(
                   ))
                 ),
                 value = %forall(
-                  #(v: %Element($../"Fresh variables"(V = V))),
+                  #(v: %Element($~"Fresh variables"(V = V))),
                   $rewritable(
-                    V = $../../Essentials/Sets/Union(
-                      U = $../Variables,
-                      S = V,
+                    V = $~Union(
+                      U = $~Variables, S = V,
                       T = %enumeration(v)
                     ),
                     ℜ = ℜ,
@@ -134,20 +133,18 @@ $rewritable(
                 constructor = $Terms.abstraction,
                 parameters = #(
                   _2: %Binder(
-                    #(y: %Element($../"Fresh variables"(V = V))),
-                    #(M: %Element($Terms(V = $../../Essentials/Sets/Union(
-                      U = $../Variables,
-                      S = V,
+                    #(y: %Element($~"Fresh variables"(V = V))),
+                    #(M: %Element($Terms(V = $~Union(
+                      U = $~Variables, S = V,
                       T = %enumeration(y)
                     ))))
                   ),
                   _3: %Constraint(%forall(
-                    #(a,b: %Element($../"Fresh variables"(V = V))),
+                    #(a,b: %Element($~"Fresh variables"(V = V))),
                     %equals(
                       $substitution(
-                        V = $Terms(V = $../../Essentials/Sets/Union(
-                          U = $../Variables,
-                          S = V,
+                        V = $Terms(V = $~Union(
+                          U = $~Variables, S = V,
                           T = %enumeration(a)
                         )),
                         T = M[y = a],

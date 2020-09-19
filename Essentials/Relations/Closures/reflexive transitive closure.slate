@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Relations = $../Relations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Closure_(mathematics)#Binary_relation_closures: reflexive transitive closure
  *             * https://proofwiki.org/wiki/Definition:Reflexive_Transitive_Closure
@@ -14,8 +18,8 @@ $"reflexive transitive closure"(
   definition = [
     $closure(
       S = S, T = S, ≺ = ≺,
-      p = $../../Properties/Properties(S = $../Relations(S = S, T = S)).property(_1 = {
-          #(≺: %Element($../Relations(S = S, T = S))),
+      p = $../../Properties/Properties(S = $~Relations(S = S, T = S)).property(_1 = {
+          #(≺: %Element($~Relations(S = S, T = S))),
           {p = $../preorder(S = S, ⪯ = ≺)}
       })
     ),

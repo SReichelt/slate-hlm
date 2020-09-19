@@ -1,5 +1,12 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~"Ordinal-indexed sequences" = $../../../../../Essentials/Sequences/"Ordinal-indexed sequences",
+  $~"Segment (less)" = $../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)",
+  $~Tuples = $../../../../../Essentials/Sequences/Tuples
+]
+
 $Span(
   𝐑: %Element(
     $../../../Rings,
@@ -15,32 +22,32 @@ $Span(
   definition = [
     %setStructuralCases(
       𝒙,
-      $../../../../../Essentials/Sequences/"Ordinal-indexed sequences"(S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)),
+      $~"Ordinal-indexed sequences"(S = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)),
       [{
-        constructor = $../../../../../Essentials/Sequences/"Ordinal-indexed sequences".sequence,
+        constructor = $~"Ordinal-indexed sequences".sequence,
         parameters = #(
           α: %Element($../../../../../Essentials/Numbers/Ordinal/"Ordinal numbers"),
-          m: %Element($../../../../../Essentials/Sequences/Tuples(
-            S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+          m: %Element($~Tuples(
+            S = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
             α = α
           ))
         ),
         value = %setStructuralCases(
           m,
-          $../../../../../Essentials/Sequences/Tuples(
-            S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+          $~Tuples(
+            S = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
             α = α
           ),
           [{
-            constructor = $../../../../../Essentials/Sequences/Tuples.sequence,
+            constructor = $~Tuples.sequence,
             parameters = #(_1: %Binder(
-              #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
-              #(x: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)))
+              #(k: %Element($~"Segment (less)"(α = α))),
+              #(x: %Element($~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)))
             )),
             value = $../Submodules/Span(
               𝐑 = 𝐑, 𝐌 = 𝐌,
               X = %extendedSubset(
-                #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+                #(k: %Element($~"Segment (less)"(α = α))),
                 x[k = k]
               )
             )

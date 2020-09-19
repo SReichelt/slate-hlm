@@ -1,11 +1,18 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Functions = $../../../Essentials/Functions,
+  $~"Pointed sets" = $../"Pointed sets",
+  $~"base point" = $../"base point"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Isomorphism
  *             * https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/isomorphism
  */
-$Isomorphisms(𝐒,𝐓: %Element($../"Pointed sets")): %SetOperator {
+$Isomorphisms(𝐒,𝐓: %Element($~"Pointed sets")): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [𝐒, 𝐓]
@@ -23,25 +30,25 @@ $Isomorphisms(𝐒,𝐓: %Element($../"Pointed sets")): %SetOperator {
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(𝐒 = 𝐒, 𝐓 = 𝐓))),
-      $../../../Essentials/Functions/bijective(
-        X = $../Carrier(𝐒 = 𝐒),
-        Y = $../Carrier(𝐒 = 𝐓),
+      $~Functions/bijective(
+        X = $~Carrier(𝐒 = 𝐒),
+        Y = $~Carrier(𝐒 = 𝐓),
         f = φ
       )
     ),
     %subset(
-      #(f: %Element($../../../Essentials/Functions/Bijections(
-        X = $../Carrier(𝐒 = 𝐒),
-        Y = $../Carrier(𝐒 = 𝐓)
+      #(f: %Element($~Functions/Bijections(
+        X = $~Carrier(𝐒 = 𝐒),
+        Y = $~Carrier(𝐒 = 𝐓)
       ))),
       %equals(
-        $../../../Essentials/Functions/value(
-          X = $../Carrier(𝐒 = 𝐒),
-          Y = $../Carrier(𝐒 = 𝐓),
+        $~Functions/value(
+          X = $~Carrier(𝐒 = 𝐒),
+          Y = $~Carrier(𝐒 = 𝐓),
           f = f,
-          x = $../"base point"(𝐒 = 𝐒)
+          x = $~"base point"(𝐒 = 𝐒)
         ),
-        $../"base point"(𝐒 = 𝐓)
+        $~"base point"(𝐒 = 𝐓)
       )
     )
   ]

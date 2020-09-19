@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Natural = $../../Numbers/Natural
+]
+
 $Items(
   S: %Set(auto = %true),
   𝑻: %Element($Multisets(S = S)),
@@ -10,10 +14,10 @@ $Items(
     arguments = [t]
   ),
   definition = [%extendedSubset(
-    #(n: %Element($../../Numbers/Natural/Subsets/"Segment (less)"(n = $multiplicity(S = S, 𝑻 = 𝑻, t = t)))),
+    #(n: %Element($~Natural/Subsets/"Segment (less)"(n = $multiplicity(S = S, 𝑻 = 𝑻, t = t)))),
     $../"Cartesian product"(
         S = S,
-        T = $../../Numbers/Natural/"Natural numbers"
+        T = $~Natural/"Natural numbers"
       ).pair(s = t, t = n)
   )]
 }

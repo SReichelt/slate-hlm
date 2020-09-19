@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Segment (less)" = $../Numbers/Ordinal/Subsets/"Segment (less)"
+]
+
 /**
  * @remarks This is a slightly generalized notion of "tuple" where the length `α` can be an arbitrary ordinal number. If `α` is a natural number, it matches the common definition.
  *
@@ -19,7 +23,7 @@ $Tuples(
   α: %Element($../Numbers/Ordinal/"Ordinal numbers")
 ): %Construction {
   $sequence(_1: %Binder(
-    #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+    #(k: %Element($~"Segment (less)"(α = α))),
     #(a: %Element(S))
   )): %Constructor {
     notation = $SubSup(
@@ -28,15 +32,15 @@ $Tuples(
     ),
     equalityDefinition = {
       leftParameters = #(_1: %Binder(
-        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+        #(k: %Element($~"Segment (less)"(α = α))),
         #(a: %Element(S))
       )),
       rightParameters = #(_2: %Binder(
-        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+        #(k: %Element($~"Segment (less)"(α = α))),
         #(b: %Element(S))
       )),
       definition = [%forall(
-        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+        #(k: %Element($~"Segment (less)"(α = α))),
         %equals(
           a[k = k],
           b[k = k]

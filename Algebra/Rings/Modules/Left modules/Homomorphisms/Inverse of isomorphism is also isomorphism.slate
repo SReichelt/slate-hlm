@@ -1,17 +1,22 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~"Left modules" = $../"Left modules"
+]
+
 $"Inverse of isomorphism is also isomorphism"(
   𝐑: %Element(
     $../../../Rings,
     auto = %true
   ),
-  𝐌,𝐍: %Element($../"Left modules"(𝐑 = 𝐑)),
+  𝐌,𝐍: %Element($~"Left modules"(𝐑 = 𝐑)),
   φ: %Element($Isomorphisms(𝐑 = 𝐑, 𝐌 = 𝐌, 𝐍 = 𝐍))
 ): %StandardTheorem {
   claim = %in(
     $../../../../../Essentials/Functions/inverse(
-      X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
-      Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
+      X = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+      Y = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
       f = φ
     ),
     $Isomorphisms(𝐑 = 𝐑, 𝐌 = 𝐍, 𝐍 = 𝐌)

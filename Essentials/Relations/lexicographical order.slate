@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Cartesian product" = $../Sets/"Cartesian product"
+]
+
 /**
  * @remarks This definition constructs a partial order on the Cartesian product of two sets `S` and `T` from partial orders on `S` and `T`, combining the two partial orders lexicographically. It is used to define multiplication of ordinal numbers (see `$../Numbers/Ordinal/product`).
  *
@@ -20,22 +24,22 @@ $"lexicographical order"(
     symbol = '∠',
     operands = [⪯, ⊑]
   ),
-  definition = [$Endorelations(S = $../Sets/"Cartesian product"(S = S, T = T)).relation(_1 = {
-      #(a,b: %Element($../Sets/"Cartesian product"(S = S, T = T))),
+  definition = [$Endorelations(S = $~"Cartesian product"(S = S, T = T)).relation(_1 = {
+      #(a,b: %Element($~"Cartesian product"(S = S, T = T))),
       {p = %structural(
         b,
-        $../Sets/"Cartesian product"(S = S, T = T),
+        $~"Cartesian product"(S = S, T = T),
         [{
-          constructor = $../Sets/"Cartesian product".pair,
+          constructor = $~"Cartesian product".pair,
           parameters = #(
             "s'": %Element(S),
             "t'": %Element(T)
           ),
           value = %structural(
             a,
-            $../Sets/"Cartesian product"(S = S, T = T),
+            $~"Cartesian product"(S = S, T = T),
             [{
-              constructor = $../Sets/"Cartesian product".pair,
+              constructor = $~"Cartesian product".pair,
               parameters = #(
                 s: %Element(S),
                 t: %Element(T)

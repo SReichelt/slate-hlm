@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~number = $../../../Essentials/Numbers/Natural/number
+]
+
 /**
  * We write:
  *
@@ -16,7 +20,7 @@ $matrix(
   variables = #(rows: %Nat, columns: %Nat),
   references = {Matrices = $Matrices(
     𝐑 = 𝐑,
-    m = $../../../Essentials/Numbers/Natural/number(value = rows),
-    n = $../../../Essentials/Numbers/Natural/number(value = columns)
+    m = $~number(value = rows),
+    n = $~number(value = columns)
   )}
 }

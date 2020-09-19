@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Infinite sequences" = $../../Sequences/"Infinite sequences",
+  $~"Rational numbers" = $../Rational/"Rational numbers",
+  $~cauchy = $../Rational/Sequences/cauchy
+]
+
 /**
  * @references * https://coq.inria.fr/library/Coq.Reals.Cauchy.ConstructiveCauchyRealsMult.html#CReal_mult
  */
@@ -10,16 +16,16 @@ $product(a,b: %Element($"Real numbers")): %ExplicitOperator {
     [{
       constructor = $"Real numbers".class,
       parameters = #(
-        r_b: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
-        _2: %Constraint($../Rational/Sequences/cauchy(𝐚 = r_b))
+        r_b: %Element($~"Infinite sequences"(S = $~"Rational numbers")),
+        _2: %Constraint($~cauchy(𝐚 = r_b))
       ),
       value = %structuralCases(
         a, $"Real numbers",
         [{
           constructor = $"Real numbers".class,
           parameters = #(
-            r_a: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
-            _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = r_a))
+            r_a: %Element($~"Infinite sequences"(S = $~"Rational numbers")),
+            _1: %Constraint($~cauchy(𝐚 = r_a))
           ),
           value = $"Real numbers".class(r = $../Rational/Sequences/"sequence product"(𝐚 = r_a, 𝐛 = r_b))
         }]

@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~zero = $../zero
+]
+
 $"monomial with exponent one"(
   𝐑: %Element(
     $../Rings,
@@ -29,18 +33,18 @@ $"monomial with exponent one"(
       {
         formula = %equals(
           a,
-          $../zero(𝐑 = 𝐑)
+          $~zero(𝐑 = 𝐑)
         ),
         value = $Polynomials(𝐑 = 𝐑, X = X).zero
       },
       {
         formula = %not(%equals(
           a,
-          $../zero(𝐑 = 𝐑)
+          $~zero(𝐑 = 𝐑)
         )),
         value = $Polynomials(𝐑 = 𝐑, X = X).term(
             p = a,
-            a = $../zero(𝐑 = 𝐑)
+            a = $~zero(𝐑 = 𝐑)
         )
       }
     ])

@@ -1,5 +1,11 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Cardinal numbers" = $../"Cardinal numbers",
+  $~Carrier = $../Carrier,
+  $~Functions = $../../../Functions
+]
+
 /**
  * @remarks An isomorphism between cardinal numbers is simply a bijection between their representative sets. Thus, the existence of an isomorphism implies that the two cardinal numbers are in fact equal, as is shown below in `$../"Equality criterion"`).
  *
@@ -8,7 +14,7 @@
  *             * https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/isomorphism
  */
-$Isomorphisms(κ,μ: %Element($../"Cardinal numbers")): %SetOperator {
+$Isomorphisms(κ,μ: %Element($~"Cardinal numbers")): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [κ, μ]
@@ -27,15 +33,15 @@ $Isomorphisms(κ,μ: %Element($../"Cardinal numbers")): %SetOperator {
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(κ = κ, μ = μ))),
-      $../../../Functions/bijective(
-        X = $../Carrier(κ = κ),
-        Y = $../Carrier(κ = μ),
+      $~Functions/bijective(
+        X = $~Carrier(κ = κ),
+        Y = $~Carrier(κ = μ),
         f = φ
       )
     ),
-    $../../../Functions/Bijections(
-      X = $../Carrier(κ = κ),
-      Y = $../Carrier(κ = μ)
+    $~Functions/Bijections(
+      X = $~Carrier(κ = κ),
+      Y = $~Carrier(κ = μ)
     )
   ]
 }

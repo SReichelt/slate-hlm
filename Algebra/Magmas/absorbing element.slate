@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Absorbing_element
  *             * https://proofwiki.org/wiki/Definition:Zero_Element#Zero
@@ -20,9 +24,9 @@ $"absorbing element"(
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
+        ∗: %Element($~Operations/"Inner operations"(X = M))
       ),
-      value = $../../Essentials/Operations/"absorbing element"(X = M, ∗ = ∗, z = z)
+      value = $~Operations/"absorbing element"(X = M, ∗ = ∗, z = z)
     }]
   )]
 }

@@ -1,17 +1,21 @@
 %../../../../../../logics/hlm%
 
+[
+  $~number = $../../Natural/number
+]
+
 /**
  * @remarks Due to the embedding of `$../../Natural/"Natural numbers"` into `$../Integers`, this is just an alias for `$../../Natural/Subsets/"Positive numbers"`.
  */
 $"Positive numbers": %SetOperator {
   notation = $SubSup(body = 'ℤ', sub = '+'),
   definition = [
-    $"Segment (greater)"(a = $../../Natural/number(value = 0)),
+    $"Segment (greater)"(a = $~number(value = 0)),
     %subset(
       #(a: %Element($../Integers)),
       $../less(
         b = a,
-        a = $../../Natural/number(value = 0)
+        a = $~number(value = 0)
       )
     ),
     $../../Natural/Subsets/"Positive numbers"

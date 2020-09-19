@@ -1,28 +1,33 @@
 %../../../../logics/hlm%
 
+[
+  $~"Ordinal numbers" = $../Numbers/Ordinal/"Ordinal numbers",
+  $~Relations = $../Relations
+]
+
 /**
  * @remarks This is a helper definition which yields the index of `s` within the sequence defined by the given well-order. This index is an ordinal number which is defined using the set of all elements less than `s`.
  */
 $"index in well-ordered set"(
   S: %Set,
-  ⪯: %Element($../Relations/Endorelations(S = S)),
-  _1: %Constraint($../Relations/"well-order"(S = S, ⪯ = ⪯)),
-  α: %Def($../Numbers/Ordinal/"Ordinal numbers"."order type"(S = S, ⪯ = ⪯)),
+  ⪯: %Element($~Relations/Endorelations(S = S)),
+  _1: %Constraint($~Relations/"well-order"(S = S, ⪯ = ⪯)),
+  α: %Def($~"Ordinal numbers"."order type"(S = S, ⪯ = ⪯)),
   s: %Element(S),
   T: %SetDef(%subset(
     #(t: %Element($../Sets/"Relative complement"(
       U = S, S = S,
       T = %enumeration(s)
     ))),
-    $../Relations/related(S = S, T = S, ≺ = ⪯, s = t, t = s)
+    $~Relations/related(S = S, T = S, ≺ = ⪯, s = t, t = s)
   ))
 ): %ExplicitOperator {
   notation = $Function(
     function = $SubSup(body = 'idx', sub = ⪯),
     arguments = [s]
   ),
-  definition = [$../Numbers/Ordinal/"Ordinal numbers"."order type"(
+  definition = [$~"Ordinal numbers"."order type"(
     S = T,
-    ⪯ = $../Relations/restriction(S = S, ≺ = ⪯, T = T)
+    ⪯ = $~Relations/restriction(S = S, ≺ = ⪯, T = T)
   )]
 }

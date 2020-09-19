@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Cardinal numbers" = $../"Cardinal numbers",
+  $~number = $../../Natural/number
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Cardinality_of_the_continuum
  *             * https://mathworld.wolfram.com/Continuum.html
@@ -9,12 +14,12 @@
 $continuum: %ExplicitOperator {
   notation = '𝔠',
   definition = [
-    $../"Cardinal numbers".cardinality(S = $../../Real/"Real numbers"),
-    $../"Cardinal numbers".cardinality(S = $../../Complex/"Complex numbers"),
-    $../"Cardinal numbers".cardinality(S = $../../../Sets/"Power set"(S = $../../Natural/"Natural numbers")),
+    $~"Cardinal numbers".cardinality(S = $../../Real/"Real numbers"),
+    $~"Cardinal numbers".cardinality(S = $../../Complex/"Complex numbers"),
+    $~"Cardinal numbers".cardinality(S = $../../../Sets/"Power set"(S = $../../Natural/"Natural numbers")),
     $../power(
-      κ = $../../Natural/number(value = 2),
-      μ = $aleph(α = $../../Natural/number(value = 0))
+      κ = $~number(value = 2),
+      μ = $aleph(α = $~number(value = 0))
     )
   ]
 }

@@ -1,6 +1,15 @@
 %../../../../../logics/hlm%
 
-$Isomorphisms(𝐌,𝐍: %Element($../Monoids)): %SetOperator {
+[
+  $~Carrier = $../Carrier,
+  $~Functions = $../../../Essentials/Functions,
+  $~Monoids = $../Monoids,
+  $~identity = $../identity,
+  $~operation = $../operation,
+  $~value = $../../../Essentials/Functions/value
+]
+
+$Isomorphisms(𝐌,𝐍: %Element($~Monoids)): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [𝐌, 𝐍]
@@ -18,50 +27,50 @@ $Isomorphisms(𝐌,𝐍: %Element($../Monoids)): %SetOperator {
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(𝐌 = 𝐌, 𝐍 = 𝐍))),
-      $../../../Essentials/Functions/bijective(
-        X = $../Carrier(𝐌 = 𝐌),
-        Y = $../Carrier(𝐌 = 𝐍),
+      $~Functions/bijective(
+        X = $~Carrier(𝐌 = 𝐌),
+        Y = $~Carrier(𝐌 = 𝐍),
         f = φ
       )
     ),
     %subset(
-      #(f: %Element($../../../Essentials/Functions/Bijections(
-        X = $../Carrier(𝐌 = 𝐌),
-        Y = $../Carrier(𝐌 = 𝐍)
+      #(f: %Element($~Functions/Bijections(
+        X = $~Carrier(𝐌 = 𝐌),
+        Y = $~Carrier(𝐌 = 𝐍)
       ))),
       %and(
         %forall(
-          #(a,b: %Element($../Carrier(𝐌 = 𝐌))),
+          #(a,b: %Element($~Carrier(𝐌 = 𝐌))),
           %equals(
-            $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐌 = 𝐌),
-              Y = $../Carrier(𝐌 = 𝐍),
+            $~value(
+              X = $~Carrier(𝐌 = 𝐌),
+              Y = $~Carrier(𝐌 = 𝐍),
               f = f,
-              x = $../operation(𝐌 = 𝐌, a = a, b = b)
+              x = $~operation(𝐌 = 𝐌, a = a, b = b)
             ),
-            $../operation(
+            $~operation(
               𝐌 = 𝐍,
-              a = $../../../Essentials/Functions/value(
-                X = $../Carrier(𝐌 = 𝐌),
-                Y = $../Carrier(𝐌 = 𝐍),
+              a = $~value(
+                X = $~Carrier(𝐌 = 𝐌),
+                Y = $~Carrier(𝐌 = 𝐍),
                 f = f, x = a
               ),
-              b = $../../../Essentials/Functions/value(
-                X = $../Carrier(𝐌 = 𝐌),
-                Y = $../Carrier(𝐌 = 𝐍),
+              b = $~value(
+                X = $~Carrier(𝐌 = 𝐌),
+                Y = $~Carrier(𝐌 = 𝐍),
                 f = f, x = b
               )
             )
           )
         ),
         %equals(
-          $../../../Essentials/Functions/value(
-            X = $../Carrier(𝐌 = 𝐌),
-            Y = $../Carrier(𝐌 = 𝐍),
+          $~value(
+            X = $~Carrier(𝐌 = 𝐌),
+            Y = $~Carrier(𝐌 = 𝐍),
             f = f,
-            x = $../identity(𝐌 = 𝐌)
+            x = $~identity(𝐌 = 𝐌)
           ),
-          $../identity(𝐌 = 𝐍)
+          $~identity(𝐌 = 𝐍)
         )
       )
     )

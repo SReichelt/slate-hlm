@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Abelian_group
  *             * https://mathworld.wolfram.com/Abelian.html
@@ -9,7 +13,7 @@
  */
 $"abelian group"(
   G: %Set,
-  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
+  ∗: %Element($~Operations/"Inner operations"(X = G)),
   e: %Element(G),
   i: %Element($../../Essentials/Functions/Functions(X = G, Y = G))
 ): %Predicate {
@@ -26,7 +30,7 @@ $"abelian group"(
     ),
     %and(
       $group(G = G, ∗ = ∗, e = e, i = i),
-      $../../Essentials/Operations/commutative(X = G, Z = G, ∗ = ∗)
+      $~Operations/commutative(X = G, Z = G, ∗ = ∗)
     )
   ]
 }

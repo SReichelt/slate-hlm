@@ -1,5 +1,10 @@
 %../../../../logics/hlm%
 
+[
+  $~Cardinal = $../Numbers/Cardinal,
+  $~"Natural numbers" = $../Numbers/Natural/"Natural numbers"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Countable_set
  *             * https://mathworld.wolfram.com/CountableSet.html
@@ -13,17 +18,10 @@ $countable(S: %Set): %Predicate {
     property = %neg('countable', 'uncountable')
   ),
   definition = [
-    $../Numbers/Cardinal/countable(κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)),
+    $~Cardinal/countable(κ = $~Cardinal/"Cardinal numbers".cardinality(S = S)),
     %exists(
-      #(f: %Element($../Functions/Functions(
-        X = S,
-        Y = $../Numbers/Natural/"Natural numbers"
-      ))),
-      formula = $../Functions/injective(
-        X = S,
-        Y = $../Numbers/Natural/"Natural numbers",
-        f = f
-      )
+      #(f: %Element($../Functions/Functions(X = S, Y = $~"Natural numbers"))),
+      formula = $../Functions/injective(X = S, Y = $~"Natural numbers", f = f)
     )
   ]
 }

@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Essentials = $../../Essentials
+]
+
 $inverse(
   𝐆: %Element($Groups, auto = %true),
   a: %Element($Carrier(𝐆 = 𝐆))
@@ -11,12 +15,12 @@ $inverse(
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
+        ∗: %Element($~Essentials/Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
+        i: %Element($~Essentials/Functions/Functions(X = G, Y = G)),
         _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
-      value = $../../Essentials/Functions/value(X = G, Y = G, f = i, x = a)
+      value = $~Essentials/Functions/value(X = G, Y = G, f = i, x = a)
     }]
   )]
 }

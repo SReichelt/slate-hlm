@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+[
+  $~Essentials = $../../../Essentials,
+  $~Integer = $../../../Essentials/Numbers/Integer,
+  $~Integers = $../../../Essentials/Numbers/Integer/Integers
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Group_(mathematics)#First_example:_the_integers
  *             * https://proofwiki.org/wiki/Definition:Additive_Group_of_Integers
@@ -7,22 +13,15 @@
 $integers: %ExplicitOperator {
   notation = 'ℤ',
   definition = [$../Groups.group(
-    G = $../../../Essentials/Numbers/Integer/Integers,
-    ∗ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Integer/Integers,
-        Y = $../../../Essentials/Numbers/Integer/Integers,
-        Z = $../../../Essentials/Numbers/Integer/Integers
-      ).operation(_1 = {
-        #(a,b: %Element($../../../Essentials/Numbers/Integer/Integers)),
-        {z = $../../../Essentials/Numbers/Integer/sum(a = a, b = b)}
+    G = $~Integers,
+    ∗ = $~Essentials/Operations/Operations(X = $~Integers, Y = $~Integers, Z = $~Integers).operation(_1 = {
+        #(a,b: %Element($~Integers)),
+        {z = $~Integer/sum(a = a, b = b)}
     }),
-    e = $../../../Essentials/Numbers/Natural/number(value = 0),
-    i = $../../../Essentials/Functions/Functions(
-        X = $../../../Essentials/Numbers/Integer/Integers,
-        Y = $../../../Essentials/Numbers/Integer/Integers
-      ).function(_1 = {
-        #(a: %Element($../../../Essentials/Numbers/Integer/Integers)),
-        {y = $../../../Essentials/Numbers/Integer/inverse(a = a)}
+    e = $~Essentials/Numbers/Natural/number(value = 0),
+    i = $~Essentials/Functions/Functions(X = $~Integers, Y = $~Integers).function(_1 = {
+        #(a: %Element($~Integers)),
+        {y = $~Integer/inverse(a = a)}
     })
   )]
 }

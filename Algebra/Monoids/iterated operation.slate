@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @example `$../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(X = $Carrier(𝐌 = 𝐌), ⨂ = $"iterated operation"(𝐌 = 𝐌), n = n, _1 = {#(i: %Element($../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))), {a = {a[i = i]}}})`
  *
@@ -18,11 +22,11 @@ $"iterated operation"(
       constructor = $Monoids.monoid,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
+        ∗: %Element($~Operations/"Inner operations"(X = M)),
         e: %Element(M),
         _1: %Constraint($monoid(M = M, ∗ = ∗, e = e))
       ),
-      value = $../../Essentials/Operations/"Iterated operations"/"Iterated operations"(X = M).operation(∗ = ∗, e = e)
+      value = $~Operations/"Iterated operations"/"Iterated operations"(X = M).operation(∗ = ∗, e = e)
     }]
   )]
 }

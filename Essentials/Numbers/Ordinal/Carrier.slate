@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Relations = $../../Relations
+]
+
 /**
  * @remarks This definition retrieves a representative set from an ordinal number.
  */
@@ -15,8 +19,8 @@ $Carrier(α: %Element($"Ordinal numbers")): %SetOperator {
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
         A: %Set,
-        ⪯: %Element($../../Relations/Endorelations(S = A)),
-        _1: %Constraint($../../Relations/"well-order"(S = A, ⪯ = ⪯))
+        ⪯: %Element($~Relations/Endorelations(S = A)),
+        _1: %Constraint($~Relations/"well-order"(S = A, ⪯ = ⪯))
       ),
       value = A
     }]

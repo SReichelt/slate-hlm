@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~zero = $../zero
+]
+
 /**
  * @remarks This definition can be understood as follows:
  *          * Usually, it just yields the constructor term with the given arguments.
@@ -42,7 +46,7 @@ $normalized(
         )),
         %not(%equals(
           a,
-          $../zero(𝐑 = 𝐑)
+          $~zero(𝐑 = 𝐑)
         ))
       ),
       value = $Polynomials(𝐑 = 𝐑, X = X).term(p = p, a = a)
@@ -55,7 +59,7 @@ $normalized(
         ),
         %equals(
           a,
-          $../zero(𝐑 = 𝐑)
+          $~zero(𝐑 = 𝐑)
         )
       ),
       value = $Polynomials(𝐑 = 𝐑, X = X).zero

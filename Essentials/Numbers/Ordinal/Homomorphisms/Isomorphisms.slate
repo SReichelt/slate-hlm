@@ -1,11 +1,19 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Functions = $../../../Functions,
+  $~"Ordinal numbers" = $../"Ordinal numbers",
+  $~before = $../before,
+  $~value = $../../../Functions/value
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Order_isomorphism
  *             * https://proofwiki.org/wiki/Definition:Order_Isomorphism
  *             * https://leanprover-community.github.io/mathlib_docs/order/rel_iso.html#order_iso
  */
-$Isomorphisms(α,β: %Element($../"Ordinal numbers")): %SetOperator {
+$Isomorphisms(α,β: %Element($~"Ordinal numbers")): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [α, β]
@@ -24,31 +32,31 @@ $Isomorphisms(α,β: %Element($../"Ordinal numbers")): %SetOperator {
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(α = α, β = β))),
-      $../../../Functions/bijective(
-        X = $../Carrier(α = α),
-        Y = $../Carrier(α = β),
+      $~Functions/bijective(
+        X = $~Carrier(α = α),
+        Y = $~Carrier(α = β),
         f = φ
       )
     ),
     %subset(
-      #(f: %Element($../../../Functions/Bijections(
-        X = $../Carrier(α = α),
-        Y = $../Carrier(α = β)
+      #(f: %Element($~Functions/Bijections(
+        X = $~Carrier(α = α),
+        Y = $~Carrier(α = β)
       ))),
       %forall(
-        #(a,b: %Element($../Carrier(α = α))),
+        #(a,b: %Element($~Carrier(α = α))),
         %equiv(
-          $../before(α = α, a = a, b = b),
-          $../before(
+          $~before(α = α, a = a, b = b),
+          $~before(
             α = β,
-            a = $../../../Functions/value(
-              X = $../Carrier(α = α),
-              Y = $../Carrier(α = β),
+            a = $~value(
+              X = $~Carrier(α = α),
+              Y = $~Carrier(α = β),
               f = f, x = a
             ),
-            b = $../../../Functions/value(
-              X = $../Carrier(α = α),
-              Y = $../Carrier(α = β),
+            b = $~value(
+              X = $~Carrier(α = α),
+              Y = $~Carrier(α = β),
               f = f, x = b
             )
           )

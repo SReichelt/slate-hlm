@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+[
+  $~Numbers = $../../../Essentials/Numbers,
+  $~Order = $../Order,
+  $~Prime = $../../../Essentials/Numbers/Natural/Prime
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Sylow_theorems#Theorems
  *             * https://mathworld.wolfram.com/SylowTheorems.html
@@ -8,19 +14,19 @@
  */
 $"First Sylow theorem"(
   𝐆: %Element($../Groups),
-  _1: %Constraint($../Order/finite(𝐆 = 𝐆)),
-  p: %Element($../../../Essentials/Numbers/Natural/Prime/"Prime numbers")
+  _1: %Constraint($~Order/finite(𝐆 = 𝐆)),
+  p: %Element($~Prime/"Prime numbers")
 ): %StandardTheorem {
   claim = %exists(
     #(H: %Subset($../Carrier(𝐆 = 𝐆))),
     formula = %and(
       $"sylow subgroup"(𝐆 = 𝐆, H = H, p = p),
       %equals(
-        $../../../Essentials/Numbers/Cardinal/"Cardinal numbers".cardinality(S = H),
-        $../../../Essentials/Numbers/Natural/power(
+        $~Numbers/Cardinal/"Cardinal numbers".cardinality(S = H),
+        $~Numbers/Natural/power(
           m = p,
-          n = $../../../Essentials/Numbers/Natural/Prime/multiplicity(
-            n = $../Order/"group order"(𝐆 = 𝐆),
+          n = $~Prime/multiplicity(
+            n = $~Order/"group order"(𝐆 = 𝐆),
             p = p
           )
         )

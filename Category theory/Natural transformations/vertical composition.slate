@@ -1,24 +1,28 @@
 %../../../../logics/hlm%
 
+[
+  $~Categories = $../Categories,
+  $~Functors = $../Functors/Functors,
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers",
+  $~"object value" = $../Functors/"object value"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Natural_transformation#Operations_with_natural_transformations
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans.vcomp
  */
 $"vertical composition"(
-  u,v: %Element(
-    $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  u,v: %Element($~"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(u = u),
+    $~Categories(u = u),
     auto = %true
   ),
   𝓓: %Element(
-    $../Categories(u = v),
+    $~Categories(u = v),
     auto = %true
   ),
   F,G,H: %Element(
-    $../Functors/Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓),
+    $~Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓),
     auto = %true
   ),
   η: %Element($"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G)),
@@ -32,9 +36,9 @@ $"vertical composition"(
       #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
       {n = $../composition(
         u = v, 𝓒 = 𝓓,
-        𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
-        𝐘 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗),
-        𝐙 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = H, 𝐗 = 𝐗),
+        𝐗 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗),
+        𝐘 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, 𝐗 = 𝐗),
+        𝐙 = $~"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = H, 𝐗 = 𝐗),
         f = $component(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G, η = η, 𝐗 = 𝐗),
         g = $component(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, G = H, η = ε, 𝐗 = 𝐗)
       )}

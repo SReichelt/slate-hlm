@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Natural = $../Natural
+]
+
 $countable(κ: %Element($"Cardinal numbers")): %Predicate {
   notation = $Property(
     operand = κ,
@@ -8,10 +12,10 @@ $countable(κ: %Element($"Cardinal numbers")): %Predicate {
   definition = [
     $"less or equal"(
       κ = κ,
-      μ = $Examples/aleph(α = $../Natural/number(value = 0))
+      μ = $Examples/aleph(α = $~Natural/number(value = 0))
     ),
     %exists(
-      #(M: %Subset($../Natural/"Natural numbers")),
+      #(M: %Subset($~Natural/"Natural numbers")),
       formula = %equals(
         κ,
         $"Cardinal numbers".cardinality(S = M)

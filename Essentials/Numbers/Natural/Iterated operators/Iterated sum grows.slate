@@ -1,26 +1,29 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../"Natural numbers",
+  $~"indexed by finite set" = $../../../Operations/"Iterated operations"/"indexed by finite set"
+]
+
 $"Iterated sum grows"(
   I: %Set,
   _1: %Constraint($../../../Sets/finite(S = I)),
   _2: %Binder(
     #(i: %Element(I)),
-    #(a: %Element($../"Natural numbers"))
+    #(a: %Element($~"Natural numbers"))
   ),
   J: %Subset(I)
 ): %StandardTheorem {
   claim = $../"less or equal"(
-    m = $../../../Operations/"Iterated operations"/"indexed by finite set"(
-      X = $../"Natural numbers",
-      ⨂ = $"iterated sum", I = J,
+    m = $~"indexed by finite set"(
+      X = $~"Natural numbers", ⨂ = $"iterated sum", I = J,
       _2 = {
         #(i: %Element(J)),
         {a = a[i = i]}
       }
     ),
-    n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
-      X = $../"Natural numbers",
-      ⨂ = $"iterated sum", I = I,
+    n = $~"indexed by finite set"(
+      X = $~"Natural numbers", ⨂ = $"iterated sum", I = I,
       _2 = {
         #(i: %Element(I)),
         {a = a[i = i]}

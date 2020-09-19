@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../../Essentials/Numbers/Natural/"Natural numbers"
+]
+
 /**
  * @remarks This definition is useful to build polynomials in their familiar style.
  */
@@ -13,7 +17,7 @@ $monomial(
     auto = %true
   ),
   a: %Element($../Carrier(𝐑 = 𝐑)),
-  n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")
+  n: %Element($~"Natural numbers")
 ): %ExplicitOperator {
   notation = $Operator(
     symbol = '',
@@ -24,17 +28,16 @@ $monomial(
     space = ''
   ),
   definition = [%structuralCases(
-    n,
-    $../../../Essentials/Numbers/Natural/"Natural numbers",
+    n, $~"Natural numbers",
     [
       {
-        constructor = $../../../Essentials/Numbers/Natural/"Natural numbers".zero,
+        constructor = $~"Natural numbers".zero,
         value = a,
         rewrite = %true
       },
       {
-        constructor = $../../../Essentials/Numbers/Natural/"Natural numbers".successor,
-        parameters = #(m: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
+        constructor = $~"Natural numbers".successor,
+        parameters = #(m: %Element($~"Natural numbers")),
         value = $normalized(
           𝐑 = 𝐑, X = X,
           p = $monomial(𝐑 = 𝐑, X = X, a = a, n = m),

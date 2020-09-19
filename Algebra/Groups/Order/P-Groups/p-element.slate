@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../../../Essentials/Numbers/Natural/"Natural numbers",
+  $~power = $../../../../Essentials/Numbers/Natural/power
+]
+
 /**
  * @references * https://proofwiki.org/wiki/Definition:P-Element
  */
@@ -18,18 +23,18 @@ $"p-element"(
   ),
   definition = [
     %exists(
-      #(n: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
+      #(n: %Element($~"Natural numbers")),
       formula = %equals(
         $../"element order"(𝐆 = 𝐆, g = g),
-        $../../../../Essentials/Numbers/Natural/power(m = p, n = n)
+        $~power(m = p, n = n)
       )
     ),
     %exists(
-      #(m: %Element($../../../../Essentials/Numbers/Natural/"Natural numbers")),
+      #(m: %Element($~"Natural numbers")),
       formula = %equals(
         $../../"power to natural number"(
           𝐆 = 𝐆, a = g,
-          n = $../../../../Essentials/Numbers/Natural/power(m = p, n = m)
+          n = $~power(m = p, n = m)
         ),
         $../../identity(𝐆 = 𝐆)
       )

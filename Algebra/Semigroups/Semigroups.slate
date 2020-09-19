@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Magmas = $../Magmas/Magmas
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Semigroup
  *             * https://mathworld.wolfram.com/Semigroup.html
@@ -16,12 +20,11 @@ $Semigroups: %SetOperator {
   },
   definition = [
     %subset(
-      #(𝐒: %Element($../Magmas/Magmas)),
+      #(𝐒: %Element($~Magmas)),
       %structural(
-        𝐒,
-        $../Magmas/Magmas,
+        𝐒, $~Magmas,
         [{
-          constructor = $../Magmas/Magmas.magma,
+          constructor = $~Magmas.magma,
           parameters = #(
             M: %Set,
             ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
@@ -31,7 +34,7 @@ $Semigroups: %SetOperator {
       )
     ),
     %subset(
-      #(𝐒: %Element($../Magmas/Magmas)),
+      #(𝐒: %Element($~Magmas)),
       $../Magmas/associative(𝐌 = 𝐒)
     )
   ]

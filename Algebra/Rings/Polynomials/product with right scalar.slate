@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier
+]
+
 $"product with right scalar"(
   𝐑: %Element(
     $../Rings,
@@ -10,7 +14,7 @@ $"product with right scalar"(
     auto = %true
   ),
   p: %Element($Polynomials(𝐑 = 𝐑, X = X)),
-  a: %Element($../Carrier(𝐑 = 𝐑))
+  a: %Element($~Carrier(𝐑 = 𝐑))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [p, a]),
   definition = [%structuralCases(
@@ -25,7 +29,7 @@ $"product with right scalar"(
         constructor = $Polynomials.term,
         parameters = #(
           q: %Element($Polynomials(𝐑 = 𝐑, X = X)),
-          b: %Element($../Carrier(𝐑 = 𝐑)),
+          b: %Element($~Carrier(𝐑 = 𝐑)),
           _1: %Constraint(%or(
             %not(%equals(
               q,

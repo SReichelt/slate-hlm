@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+[
+  $~Natural = $../../../Essentials/Numbers/Natural,
+  $~"Natural numbers" = $../../../Essentials/Numbers/Natural/"Natural numbers",
+  $~Operations = $../../../Essentials/Operations/Operations,
+  $~number = $../../../Essentials/Numbers/Natural/number
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Semiring#Examples
  *             * https://ncatlab.org/nlab/show/rig#examples
@@ -8,24 +15,16 @@
 $"natural numbers": %ExplicitOperator {
   notation = 'ℕ',
   definition = [$../Semirings.semiring(
-    R = $../../../Essentials/Numbers/Natural/"Natural numbers",
-    ⊕ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Natural/"Natural numbers",
-        Y = $../../../Essentials/Numbers/Natural/"Natural numbers",
-        Z = $../../../Essentials/Numbers/Natural/"Natural numbers"
-      ).operation(_1 = {
-        #(m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-        {z = $../../../Essentials/Numbers/Natural/sum(m = m, n = n)}
+    R = $~"Natural numbers",
+    ⊕ = $~Operations(X = $~"Natural numbers", Y = $~"Natural numbers", Z = $~"Natural numbers").operation(_1 = {
+        #(m,n: %Element($~"Natural numbers")),
+        {z = $~Natural/sum(m = m, n = n)}
     }),
-    "0" = $../../../Essentials/Numbers/Natural/number(value = 0),
-    ⊙ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Natural/"Natural numbers",
-        Y = $../../../Essentials/Numbers/Natural/"Natural numbers",
-        Z = $../../../Essentials/Numbers/Natural/"Natural numbers"
-      ).operation(_1 = {
-        #(m,n: %Element($../../../Essentials/Numbers/Natural/"Natural numbers")),
-        {z = $../../../Essentials/Numbers/Natural/product(m = m, n = n)}
+    "0" = $~number(value = 0),
+    ⊙ = $~Operations(X = $~"Natural numbers", Y = $~"Natural numbers", Z = $~"Natural numbers").operation(_1 = {
+        #(m,n: %Element($~"Natural numbers")),
+        {z = $~Natural/product(m = m, n = n)}
     }),
-    "1" = $../../../Essentials/Numbers/Natural/number(value = 1)
+    "1" = $~number(value = 1)
   )]
 }

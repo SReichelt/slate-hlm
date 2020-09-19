@@ -1,5 +1,14 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Functions = $../../../../../Essentials/Functions,
+  $~"Left modules" = $../"Left modules",
+  $~product = $../product,
+  $~sum = $../sum,
+  $~value = $../../../../../Essentials/Functions/value
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Module_homomorphism#Terminology
  *             * https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)/R-Algebraic_Structure_Isomorphism/Module_Isomorphism
@@ -10,7 +19,7 @@ $Isomorphisms(
     $../../../Rings,
     auto = %true
   ),
-  𝐌,𝐍: %Element($../"Left modules"(𝐑 = 𝐑))
+  𝐌,𝐍: %Element($~"Left modules"(𝐑 = 𝐑))
 ): %SetOperator {
   notation = $Function(
     function = 'Iso',
@@ -29,48 +38,48 @@ $Isomorphisms(
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(𝐑 = 𝐑, 𝐌 = 𝐌, 𝐍 = 𝐍))),
-      $../../../../../Essentials/Functions/bijective(
-        X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
-        Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
+      $~Functions/bijective(
+        X = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+        Y = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
         f = φ
       )
     ),
     %subset(
-      #(f: %Element($../../../../../Essentials/Functions/Bijections(
-        X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
-        Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍)
+      #(f: %Element($~Functions/Bijections(
+        X = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+        Y = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐍)
       ))),
       %forall(
         #(
           a,b: %Element($../../../Carrier(𝐑 = 𝐑)),
-          x,y: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
+          x,y: %Element($~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
         ),
         %equals(
-          $../../../../../Essentials/Functions/value(
-            X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
-            Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
+          $~value(
+            X = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+            Y = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
             f = f,
-            x = $../sum(
+            x = $~sum(
               𝐑 = 𝐑, 𝐌 = 𝐌,
-              x = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = a, x = x),
-              y = $../product(𝐑 = 𝐑, 𝐌 = 𝐌, a = b, x = y)
+              x = $~product(𝐑 = 𝐑, 𝐌 = 𝐌, a = a, x = x),
+              y = $~product(𝐑 = 𝐑, 𝐌 = 𝐌, a = b, x = y)
             )
           ),
-          $../sum(
+          $~sum(
             𝐑 = 𝐑, 𝐌 = 𝐍,
-            x = $../product(
+            x = $~product(
               𝐑 = 𝐑, 𝐌 = 𝐍, a = a,
-              x = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
-                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
+              x = $~value(
+                X = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 f = f, x = x
               )
             ),
-            y = $../product(
+            y = $~product(
               𝐑 = 𝐑, 𝐌 = 𝐍, a = b,
-              x = $../../../../../Essentials/Functions/value(
-                X = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
-                Y = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
+              x = $~value(
+                X = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+                Y = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐍),
                 f = f, x = y
               )
             )

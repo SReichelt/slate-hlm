@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @example `$../../Essentials/Operations/"Iterated operations"/"indexed by natural number"(X = $Carrier(𝐆 = 𝐆), ⨂ = $"iterated operation"(𝐆 = 𝐆), n = n, _1 = {#(i: %Element($../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))), {a = {a[i = i]}}})`
  *
@@ -18,12 +22,12 @@ $"iterated operation"(
       constructor = $Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = G)),
+        ∗: %Element($~Operations/"Inner operations"(X = G)),
         e: %Element(G),
         i: %Element($../../Essentials/Functions/Functions(X = G, Y = G)),
         _1: %Constraint($group(G = G, ∗ = ∗, e = e, i = i))
       ),
-      value = $../../Essentials/Operations/"Iterated operations"/"Iterated operations"(X = G).operation(∗ = ∗, e = e)
+      value = $~Operations/"Iterated operations"/"Iterated operations"(X = G).operation(∗ = ∗, e = e)
     }]
   )]
 }

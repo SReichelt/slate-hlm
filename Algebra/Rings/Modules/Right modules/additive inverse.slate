@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Essentials = $../../../../Essentials,
+  $~Operations = $../../../../Essentials/Operations
+]
+
 $"additive inverse"(
   𝐑: %Element(
     $../../Rings,
@@ -19,17 +24,17 @@ $"additive inverse"(
       constructor = $"Right modules".module,
       parameters = #(
         M: %Set,
-        ⊕: %Element($../../../../Essentials/Operations/"Inner operations"(X = M)),
+        ⊕: %Element($~Operations/"Inner operations"(X = M)),
         "0": %Element(M),
-        ⊖: %Element($../../../../Essentials/Functions/Functions(X = M, Y = M)),
-        ⊙: %Element($../../../../Essentials/Operations/Operations(
+        ⊖: %Element($~Essentials/Functions/Functions(X = M, Y = M)),
+        ⊙: %Element($~Operations/Operations(
           X = M,
           Y = $../../Carrier(𝐑 = 𝐑),
           Z = M
         )),
         _1: %Constraint($"right module"(𝐑 = 𝐑, M = M, ⊕ = ⊕, "0" = "0", ⊖ = ⊖, ⊙ = ⊙))
       ),
-      value = $../../../../Essentials/Functions/value(X = M, Y = M, f = ⊖, x = x)
+      value = $~Essentials/Functions/value(X = M, Y = M, f = ⊖, x = x)
     }]
   )]
 }

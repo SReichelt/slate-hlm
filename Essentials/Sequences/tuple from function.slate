@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Segment (less)" = $../Numbers/Ordinal/Subsets/"Segment (less)"
+]
+
 /**
  * @remarks This definition produces a tuple from a function.
  */
@@ -10,7 +14,7 @@ $"tuple from function"(
     auto = %true
   ),
   f: %Element($../Functions/Functions(
-    X = $../Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
+    X = $~"Segment (less)"(α = α),
     Y = S
   ))
 ): %ExplicitOperator {
@@ -19,9 +23,9 @@ $"tuple from function"(
     arguments = [f]
   ),
   definition = [$Tuples(S = S, α = α).sequence(_1 = {
-      #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+      #(k: %Element($~"Segment (less)"(α = α))),
       {a = $../Functions/value(
-        X = $../Numbers/Ordinal/Subsets/"Segment (less)"(α = α),
+        X = $~"Segment (less)"(α = α),
         Y = S, f = f, x = k
       )}
   })]

@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~"has property" = $../../Properties/"has property"
+]
+
 /**
  * @remarks This is just a slight reformulation based on the definition of a property (see `$../../Properties/Properties`).
  *
@@ -9,16 +13,16 @@
  */
 $"Induction principle of property"(
   p: %Element($../../Properties/Properties(S = $"Natural numbers")),
-  _1: %Constraint($../../Properties/"has property"(
+  _1: %Constraint($~"has property"(
     S = $"Natural numbers", p = p,
     s = $number(value = 0)
   )),
   _2: %Constraint(%forall(
     #(
       m: %Element($"Natural numbers"),
-      _3: %Constraint($../../Properties/"has property"(S = $"Natural numbers", p = p, s = m))
+      _3: %Constraint($~"has property"(S = $"Natural numbers", p = p, s = m))
     ),
-    $../../Properties/"has property"(
+    $~"has property"(
       S = $"Natural numbers", p = p,
       s = $sum(
         m = m,
@@ -29,6 +33,6 @@ $"Induction principle of property"(
 ): %StandardTheorem {
   claim = %forall(
     #(n: %Element($"Natural numbers")),
-    $../../Properties/"has property"(S = $"Natural numbers", p = p, s = n)
+    $~"has property"(S = $"Natural numbers", p = p, s = n)
   )
 }

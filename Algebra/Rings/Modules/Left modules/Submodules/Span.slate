@@ -1,5 +1,10 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~"Power set" = $../../../../../Essentials/Sets/"Power set"
+]
+
 /**
  * @remarks According to https://proofwiki.org/wiki/Equivalence_of_Definitions_of_Generated_Submodule, the linear span of a set as defined here is equal to the set of all linear combinations (see `$../Coordinates/Span`). However, this probably requires the set to be well-orderable, and should be a separate theorem in that case.
  *
@@ -15,19 +20,19 @@ $Span(
     $../"Left modules"(𝐑 = 𝐑),
     auto = %true
   ),
-  X: %Subset($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
+  X: %Subset($~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
 ): %SetOperator {
   notation = $Parens(body = X, style = '<>'),
   definition = [$../../../../../Essentials/Sets/"Generalized operators"/"Generalized intersection using power set"(
-    U = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+    U = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
     S = %subset(
-      #(s: %Element($../../../../../Essentials/Sets/"Power set"(S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)))),
+      #(s: %Element($~"Power set"(S = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)))),
       %structural(
         s,
-        $../../../../../Essentials/Sets/"Power set"(S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)),
+        $~"Power set"(S = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)),
         [{
-          constructor = $../../../../../Essentials/Sets/"Power set".subset,
-          parameters = #(S: %Subset($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))),
+          constructor = $~"Power set".subset,
+          parameters = #(S: %Subset($~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))),
           value = %and(
             $"submodule set"(𝐑 = 𝐑, 𝐌 = 𝐌, S = S),
             %sub(X, S)

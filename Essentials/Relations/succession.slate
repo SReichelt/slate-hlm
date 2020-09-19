@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Disjoint union" = $../Sets/"Disjoint union"
+]
+
 /**
  * @remarks This definition constructs a partial order on the disjoint union of two sets `S` and `T` from partial orders on `S` and `T`. Elements of `S` are always considered smaller than elements of `T`. This is used to define addition of ordinal numbers (see `$../Numbers/Ordinal/sum`).
  *
@@ -17,26 +21,26 @@ $succession(
     symbol = '≪',
     operands = [⪯, ⊑]
   ),
-  definition = [$Endorelations(S = $../Sets/"Disjoint union"(S = S, T = T)).relation(_1 = {
-      #(a,b: %Element($../Sets/"Disjoint union"(S = S, T = T))),
+  definition = [$Endorelations(S = $~"Disjoint union"(S = S, T = T)).relation(_1 = {
+      #(a,b: %Element($~"Disjoint union"(S = S, T = T))),
       {p = %structural(
         b,
-        $../Sets/"Disjoint union"(S = S, T = T),
+        $~"Disjoint union"(S = S, T = T),
         [
           {
-            constructor = $../Sets/"Disjoint union".left,
+            constructor = $~"Disjoint union".left,
             parameters = #(s_b: %Element(S)),
             value = %structural(
               a,
-              $../Sets/"Disjoint union"(S = S, T = T),
+              $~"Disjoint union"(S = S, T = T),
               [
                 {
-                  constructor = $../Sets/"Disjoint union".left,
+                  constructor = $~"Disjoint union".left,
                   parameters = #(s_a: %Element(S)),
                   value = $related(S = S, T = S, ≺ = ⪯, s = s_a, t = s_b)
                 },
                 {
-                  constructor = $../Sets/"Disjoint union".right,
+                  constructor = $~"Disjoint union".right,
                   parameters = #(t_a: %Element(T)),
                   value = %or
                 }
@@ -44,19 +48,19 @@ $succession(
             )
           },
           {
-            constructor = $../Sets/"Disjoint union".right,
+            constructor = $~"Disjoint union".right,
             parameters = #(t_b: %Element(T)),
             value = %structural(
               a,
-              $../Sets/"Disjoint union"(S = S, T = T),
+              $~"Disjoint union"(S = S, T = T),
               [
                 {
-                  constructor = $../Sets/"Disjoint union".left,
+                  constructor = $~"Disjoint union".left,
                   parameters = #(s_a: %Element(S)),
                   value = %and
                 },
                 {
-                  constructor = $../Sets/"Disjoint union".right,
+                  constructor = $~"Disjoint union".right,
                   parameters = #(t_a: %Element(T)),
                   value = $related(S = T, T = T, ≺ = ⊑, s = t_a, t = t_b)
                 }

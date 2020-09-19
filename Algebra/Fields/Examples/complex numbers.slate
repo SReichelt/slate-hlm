@@ -1,36 +1,32 @@
 %../../../../../logics/hlm%
 
+[
+  $~Complex = $../../../Essentials/Numbers/Complex,
+  $~"Complex numbers" = $../../../Essentials/Numbers/Complex/"Complex numbers",
+  $~Operations = $../../../Essentials/Operations/Operations,
+  $~number = $../../../Essentials/Numbers/Natural/number
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/data/complex/basic.html#complex.field
  */
 $"complex numbers": %ExplicitOperator {
   notation = 'ℂ',
   definition = [$../../Rings/Rings.ring(
-    R = $../../../Essentials/Numbers/Complex/"Complex numbers",
-    ⊕ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Complex/"Complex numbers",
-        Y = $../../../Essentials/Numbers/Complex/"Complex numbers",
-        Z = $../../../Essentials/Numbers/Complex/"Complex numbers"
-      ).operation(_1 = {
-        #(a,b: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
-        {z = $../../../Essentials/Numbers/Complex/sum(a = a, b = b)}
+    R = $~"Complex numbers",
+    ⊕ = $~Operations(X = $~"Complex numbers", Y = $~"Complex numbers", Z = $~"Complex numbers").operation(_1 = {
+        #(a,b: %Element($~"Complex numbers")),
+        {z = $~Complex/sum(a = a, b = b)}
     }),
-    "0" = $../../../Essentials/Numbers/Natural/number(value = 0),
-    ⊖ = $../../../Essentials/Functions/Functions(
-        X = $../../../Essentials/Numbers/Complex/"Complex numbers",
-        Y = $../../../Essentials/Numbers/Complex/"Complex numbers"
-      ).function(_1 = {
-        #(a: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
-        {y = $../../../Essentials/Numbers/Complex/inverse(a = a)}
+    "0" = $~number(value = 0),
+    ⊖ = $../../../Essentials/Functions/Functions(X = $~"Complex numbers", Y = $~"Complex numbers").function(_1 = {
+        #(a: %Element($~"Complex numbers")),
+        {y = $~Complex/inverse(a = a)}
     }),
-    ⊙ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Complex/"Complex numbers",
-        Y = $../../../Essentials/Numbers/Complex/"Complex numbers",
-        Z = $../../../Essentials/Numbers/Complex/"Complex numbers"
-      ).operation(_1 = {
-        #(a,b: %Element($../../../Essentials/Numbers/Complex/"Complex numbers")),
-        {z = $../../../Essentials/Numbers/Complex/product(a = a, b = b)}
+    ⊙ = $~Operations(X = $~"Complex numbers", Y = $~"Complex numbers", Z = $~"Complex numbers").operation(_1 = {
+        #(a,b: %Element($~"Complex numbers")),
+        {z = $~Complex/product(a = a, b = b)}
     }),
-    "1" = $../../../Essentials/Numbers/Natural/number(value = 1)
+    "1" = $~number(value = 1)
   )]
 }

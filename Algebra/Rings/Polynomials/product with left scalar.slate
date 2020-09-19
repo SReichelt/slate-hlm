@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier
+]
+
 $"product with left scalar"(
   𝐑: %Element(
     $../Rings,
@@ -9,7 +13,7 @@ $"product with left scalar"(
     $../../../"Formal systems"/Variables,
     auto = %true
   ),
-  a: %Element($../Carrier(𝐑 = 𝐑)),
+  a: %Element($~Carrier(𝐑 = 𝐑)),
   p: %Element($Polynomials(𝐑 = 𝐑, X = X))
 ): %ExplicitOperator {
   notation = $MultiplicationOperator(operands = [a, p]),
@@ -25,7 +29,7 @@ $"product with left scalar"(
         constructor = $Polynomials.term,
         parameters = #(
           q: %Element($Polynomials(𝐑 = 𝐑, X = X)),
-          b: %Element($../Carrier(𝐑 = 𝐑)),
+          b: %Element($~Carrier(𝐑 = 𝐑)),
           _1: %Constraint(%or(
             %not(%equals(
               q,

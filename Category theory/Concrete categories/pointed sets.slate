@@ -1,5 +1,12 @@
 %../../../../logics/hlm%
 
+[
+  $~Carrier = $../../Algebra/"Pointed sets"/Carrier,
+  $~Essentials = $../../Essentials,
+  $~Homomorphisms = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms,
+  $~"Pointed sets" = $../../Algebra/"Pointed sets"/"Pointed sets"
+]
+
 /**
  * @remarks The objects of this category are actually isomorphism classes of pointed sets.
  *
@@ -7,33 +14,33 @@
  *             * https://ncatlab.org/nlab/show/pointed+set
  *             * https://proofwiki.org/wiki/Category:Category_of_Pointed_Sets
  */
-$"pointed sets"(u: %Element($../../Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
+$"pointed sets"(u: %Element($~Essentials/Numbers/Natural/"Natural numbers")): %ExplicitOperator {
   notation = $SubSup(body = '𝐏𝐭𝐒𝐞𝐭', sub = u),
   definition = [$../Categories(u = u).category(
-      O = $../../Algebra/"Pointed sets"/"Pointed sets",
+      O = $~"Pointed sets",
       _1 = {
-        #(𝐀,𝐁: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
-        {M = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐀, 𝐓 = 𝐁)}
+        #(𝐀,𝐁: %Element($~"Pointed sets")),
+        {M = $~Homomorphisms(𝐒 = 𝐀, 𝐓 = 𝐁)}
       },
       _2 = {
-        #(𝐂: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
+        #(𝐂: %Element($~"Pointed sets")),
         {i = $../../Algebra/"Pointed sets"/Homomorphisms/identity(𝐒 = 𝐂)}
       },
       _3 = {
-        #(𝐃,𝐄,𝐅: %Element($../../Algebra/"Pointed sets"/"Pointed sets")),
-        {∘ = $../../Essentials/Operations/Operations(
-            X = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐄, 𝐓 = 𝐅),
-            Y = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐃, 𝐓 = 𝐄),
-            Z = $../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐃, 𝐓 = 𝐅)
+        #(𝐃,𝐄,𝐅: %Element($~"Pointed sets")),
+        {∘ = $~Essentials/Operations/Operations(
+            X = $~Homomorphisms(𝐒 = 𝐄, 𝐓 = 𝐅),
+            Y = $~Homomorphisms(𝐒 = 𝐃, 𝐓 = 𝐄),
+            Z = $~Homomorphisms(𝐒 = 𝐃, 𝐓 = 𝐅)
           ).operation(_1 = {
             #(
-              ψ: %Element($../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐄, 𝐓 = 𝐅)),
-              φ: %Element($../../Algebra/"Pointed sets"/Homomorphisms/Homomorphisms(𝐒 = 𝐃, 𝐓 = 𝐄))
+              ψ: %Element($~Homomorphisms(𝐒 = 𝐄, 𝐓 = 𝐅)),
+              φ: %Element($~Homomorphisms(𝐒 = 𝐃, 𝐓 = 𝐄))
             ),
-            {z = $../../Essentials/Functions/composition(
-              X = $../../Algebra/"Pointed sets"/Carrier(𝐒 = 𝐃),
-              Y = $../../Algebra/"Pointed sets"/Carrier(𝐒 = 𝐄),
-              Z = $../../Algebra/"Pointed sets"/Carrier(𝐒 = 𝐅),
+            {z = $~Essentials/Functions/composition(
+              X = $~Carrier(𝐒 = 𝐃),
+              Y = $~Carrier(𝐒 = 𝐄),
+              Z = $~Carrier(𝐒 = 𝐅),
               f = φ, g = ψ
             )}
         })}

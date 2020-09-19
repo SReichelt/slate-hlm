@@ -1,14 +1,19 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Cardinal = $../../Cardinal,
+  $~"Natural numbers" = $../"Natural numbers"
+]
+
 /**
  * @remarks This definition is used to prove the equivalence of alternative definitions of finiteness (see `$../../../Sets/finite`), and to provide a way of obtaining a sequence from a finite set of natural numbers (see `$"sequence from subset"`).
  */
 $"indexed element"(
-  M: %Subset($../"Natural numbers"),
-  n: %Element($../"Natural numbers"),
-  _1: %Constraint($../../Cardinal/less(
+  M: %Subset($~"Natural numbers"),
+  n: %Element($~"Natural numbers"),
+  _1: %Constraint($~Cardinal/less(
     κ = n,
-    μ = $../../Cardinal/"Cardinal numbers".cardinality(S = M)
+    μ = $~Cardinal/"Cardinal numbers".cardinality(S = M)
   )),
   m: %Def($../minimum(M = M))
 ): %ExplicitOperator {
@@ -18,17 +23,16 @@ $"indexed element"(
     style = '[]'
   ),
   definition = [%structuralCases(
-    n,
-    $../"Natural numbers",
+    n, $~"Natural numbers",
     [
       {
-        constructor = $../"Natural numbers".zero,
+        constructor = $~"Natural numbers".zero,
         value = m,
         rewrite = %true
       },
       {
-        constructor = $../"Natural numbers".successor,
-        parameters = #(x: %Element($../"Natural numbers")),
+        constructor = $~"Natural numbers".successor,
+        parameters = #(x: %Element($~"Natural numbers")),
         value = $"indexed element"(
           M = $../../../Sets/"Relative complement"(
             U = M, S = M,

@@ -1,5 +1,11 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Iterated operations" = $../../../Operations/"Iterated operations",
+  $~"Natural numbers" = $../"Natural numbers",
+  $~"iterated product" = $../"Iterated operators"/"iterated product"
+]
+
 /**
  * @remarks This weaker but perhaps more useful version of the fundamental theorem of arithmetic simply states that each number can be written as the product of its prime divisors raised to their multiplicity (which is 0 for all primes that are not prime factors).
  *
@@ -14,10 +20,8 @@
 $"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTheorem {
   claim = %equals(
     n,
-    $../../../Operations/"Iterated operations"/"indexed by set with finite support"(
-      X = $../"Natural numbers",
-      ⨂ = $../"Iterated operators"/"iterated product",
-      I = $"Prime numbers",
+    $~"Iterated operations"/"indexed by set with finite support"(
+      X = $~"Natural numbers", ⨂ = $~"iterated product", I = $"Prime numbers",
       _1 = {
         #(p: %Element($"Prime numbers")),
         {a = $../power(
@@ -26,10 +30,8 @@ $"Prime factorization"(n: %Element($../Subsets/"Positive numbers")): %StandardTh
         )}
       }
     ),
-    $../../../Operations/"Iterated operations"/"indexed by finite multiset"(
-      X = $../"Natural numbers",
-      ⨂ = $../"Iterated operators"/"iterated product",
-      S = $"Prime numbers",
+    $~"Iterated operations"/"indexed by finite multiset"(
+      X = $~"Natural numbers", ⨂ = $~"iterated product", S = $"Prime numbers",
       𝑰 = $"prime factors"(n = n),
       _2 = {
         #(p: %Element($../../../Sets/Multisets/Set(

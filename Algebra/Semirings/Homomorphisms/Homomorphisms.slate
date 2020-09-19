@@ -1,5 +1,15 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Semirings = $../Semirings,
+  $~one = $../one,
+  $~product = $../product,
+  $~sum = $../sum,
+  $~value = $../../../Essentials/Functions/value,
+  $~zero = $../zero
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Homomorphism
  *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
@@ -7,7 +17,7 @@
  *             * https://coq.inria.fr/library/Coq.setoid_ring.Ring_theory.html#semi_morph
  *             * https://leanprover-community.github.io/mathlib_docs/algebra/ring/basic.html#ring_hom
  */
-$Homomorphisms(𝐑,𝐒: %Element($../Semirings)): %SetOperator {
+$Homomorphisms(𝐑,𝐒: %Element($~Semirings)): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [𝐑, 𝐒]
@@ -23,75 +33,75 @@ $Homomorphisms(𝐑,𝐒: %Element($../Semirings)): %SetOperator {
   },
   definition = [%subset(
     #(f: %Element($../../../Essentials/Functions/Functions(
-      X = $../Carrier(𝐑 = 𝐑),
-      Y = $../Carrier(𝐑 = 𝐒)
+      X = $~Carrier(𝐑 = 𝐑),
+      Y = $~Carrier(𝐑 = 𝐒)
     ))),
     %and(
       %forall(
-        #(a,b: %Element($../Carrier(𝐑 = 𝐑))),
+        #(a,b: %Element($~Carrier(𝐑 = 𝐑))),
         %equals(
-          $../../../Essentials/Functions/value(
-            X = $../Carrier(𝐑 = 𝐑),
-            Y = $../Carrier(𝐑 = 𝐒),
+          $~value(
+            X = $~Carrier(𝐑 = 𝐑),
+            Y = $~Carrier(𝐑 = 𝐒),
             f = f,
-            x = $../sum(𝐑 = 𝐑, a = a, b = b)
+            x = $~sum(𝐑 = 𝐑, a = a, b = b)
           ),
-          $../sum(
+          $~sum(
             𝐑 = 𝐒,
-            a = $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐑 = 𝐑),
-              Y = $../Carrier(𝐑 = 𝐒),
+            a = $~value(
+              X = $~Carrier(𝐑 = 𝐑),
+              Y = $~Carrier(𝐑 = 𝐒),
               f = f, x = a
             ),
-            b = $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐑 = 𝐑),
-              Y = $../Carrier(𝐑 = 𝐒),
+            b = $~value(
+              X = $~Carrier(𝐑 = 𝐑),
+              Y = $~Carrier(𝐑 = 𝐒),
               f = f, x = b
             )
           )
         )
       ),
       %equals(
-        $../../../Essentials/Functions/value(
-          X = $../Carrier(𝐑 = 𝐑),
-          Y = $../Carrier(𝐑 = 𝐒),
+        $~value(
+          X = $~Carrier(𝐑 = 𝐑),
+          Y = $~Carrier(𝐑 = 𝐒),
           f = f,
-          x = $../zero(𝐑 = 𝐑)
+          x = $~zero(𝐑 = 𝐑)
         ),
-        $../zero(𝐑 = 𝐒)
+        $~zero(𝐑 = 𝐒)
       ),
       %forall(
-        #(c,d: %Element($../Carrier(𝐑 = 𝐑))),
+        #(c,d: %Element($~Carrier(𝐑 = 𝐑))),
         %equals(
-          $../../../Essentials/Functions/value(
-            X = $../Carrier(𝐑 = 𝐑),
-            Y = $../Carrier(𝐑 = 𝐒),
+          $~value(
+            X = $~Carrier(𝐑 = 𝐑),
+            Y = $~Carrier(𝐑 = 𝐒),
             f = f,
-            x = $../product(𝐑 = 𝐑, a = c, b = d)
+            x = $~product(𝐑 = 𝐑, a = c, b = d)
           ),
-          $../product(
+          $~product(
             𝐑 = 𝐒,
-            a = $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐑 = 𝐑),
-              Y = $../Carrier(𝐑 = 𝐒),
+            a = $~value(
+              X = $~Carrier(𝐑 = 𝐑),
+              Y = $~Carrier(𝐑 = 𝐒),
               f = f, x = c
             ),
-            b = $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐑 = 𝐑),
-              Y = $../Carrier(𝐑 = 𝐒),
+            b = $~value(
+              X = $~Carrier(𝐑 = 𝐑),
+              Y = $~Carrier(𝐑 = 𝐒),
               f = f, x = d
             )
           )
         )
       ),
       %equals(
-        $../../../Essentials/Functions/value(
-          X = $../Carrier(𝐑 = 𝐑),
-          Y = $../Carrier(𝐑 = 𝐒),
+        $~value(
+          X = $~Carrier(𝐑 = 𝐑),
+          Y = $~Carrier(𝐑 = 𝐒),
           f = f,
-          x = $../one(𝐑 = 𝐑)
+          x = $~one(𝐑 = 𝐑)
         ),
-        $../one(𝐑 = 𝐒)
+        $~one(𝐑 = 𝐒)
       )
     )
   )]

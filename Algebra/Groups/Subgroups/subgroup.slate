@@ -1,18 +1,23 @@
 %../../../../../logics/hlm%
 
-$subgroup(𝐆,𝐇: %Element($../Groups)): %Predicate {
+[
+  $~Carrier = $../Carrier,
+  $~Groups = $../Groups
+]
+
+$subgroup(𝐆,𝐇: %Element($~Groups)): %Predicate {
   notation = $SubObjectRelation(operands = [𝐆, 𝐇]),
   definition = [
     %exists(
       #(φ: %Element($../Homomorphisms/Homomorphisms(𝐆 = 𝐆, 𝐇 = 𝐇))),
       formula = $../../../Essentials/Functions/injective(
-        X = $../Carrier(𝐆 = 𝐆),
-        Y = $../Carrier(𝐆 = 𝐇),
+        X = $~Carrier(𝐆 = 𝐆),
+        Y = $~Carrier(𝐆 = 𝐇),
         f = φ
       )
     ),
     %exists(
-      #(S: %Subset($../Carrier(𝐆 = 𝐇))),
+      #(S: %Subset($~Carrier(𝐆 = 𝐇))),
       formula = %and(
         $"subgroup set"(𝐆 = 𝐇, S = S),
         %equals(

@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Objects = $../Objects
+]
+
 /**
  * @references * https://proofwiki.org/wiki/Definition:Identity_Functor
  *             * https://ncatlab.org/nlab/show/identity+functor
@@ -18,12 +22,12 @@ $identity(
   notation = $SubSup(body = 'id', sub = 𝓒),
   definition = [$Functors(u = u, v = u, 𝓒 = 𝓒, 𝓓 = 𝓒).functor(
       _1 = {
-        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+        #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
         {𝐘 = 𝐗}
       },
       _2 = {
         #(
-          𝐀,𝐁: %Element($../Objects(u = u, 𝓒 = 𝓒)),
+          𝐀,𝐁: %Element($~Objects(u = u, 𝓒 = 𝓒)),
           f: %Element($../Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁))
         ),
         {g = f}

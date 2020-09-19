@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Cartesian product" = $../Sets/"Cartesian product"
+]
+
 /**
  * @references * https://proofwiki.org/wiki/Definition:Operation/Binary_Operation
  */
@@ -96,7 +100,7 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
   },
   embedding = {
     parameter = #(f: %Element($../Functions/Functions(
-      X = $../Sets/"Cartesian product"(S = X, T = Y),
+      X = $~"Cartesian product"(S = X, T = Y),
       Y = Z
     ))),
     target = $Operations(X = X, Y = Y, Z = Z).operation(_1 = {
@@ -105,9 +109,9 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
           y: %Element(Y)
         ),
         {z = $../Functions/value(
-          X = $../Sets/"Cartesian product"(S = X, T = Y),
+          X = $~"Cartesian product"(S = X, T = Y),
           Y = Z, f = f,
-          x = $../Sets/"Cartesian product"(S = X, T = Y).pair(s = x, t = y)
+          x = $~"Cartesian product"(S = X, T = Y).pair(s = x, t = y)
         )}
     }),
     full = %true

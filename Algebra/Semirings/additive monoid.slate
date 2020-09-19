@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Inner operations" = $../../Essentials/Operations/"Inner operations"
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/algebra/ring/basic.html#semiring.to_add_comm_monoid
  */
@@ -14,9 +18,9 @@ $"additive monoid"(𝐑: %Element($Semirings)): %ExplicitOperator {
       constructor = $Semirings.semiring,
       parameters = #(
         R: %Set,
-        ⊕: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+        ⊕: %Element($~"Inner operations"(X = R)),
         "0": %Element(R),
-        ⊙: %Element($../../Essentials/Operations/"Inner operations"(X = R)),
+        ⊙: %Element($~"Inner operations"(X = R)),
         "1": %Element(R),
         _1: %Constraint($semiring(R = R, ⊕ = ⊕, "0" = "0", ⊙ = ⊙, "1" = "1"))
       ),

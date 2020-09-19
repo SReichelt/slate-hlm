@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+[
+  $~Integer = $../../../Essentials/Numbers/Integer,
+  $~Integers = $../../../Essentials/Numbers/Integer/Integers,
+  $~Operations = $../../../Essentials/Operations/Operations,
+  $~number = $../../../Essentials/Numbers/Natural/number
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Ring_(mathematics)#Basic_examples
  *             * https://ncatlab.org/nlab/show/ring#Examples
@@ -8,31 +15,20 @@
 $integers: %ExplicitOperator {
   notation = 'ℤ',
   definition = [$../Rings.ring(
-    R = $../../../Essentials/Numbers/Integer/Integers,
-    ⊕ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Integer/Integers,
-        Y = $../../../Essentials/Numbers/Integer/Integers,
-        Z = $../../../Essentials/Numbers/Integer/Integers
-      ).operation(_1 = {
-        #(a,b: %Element($../../../Essentials/Numbers/Integer/Integers)),
-        {z = $../../../Essentials/Numbers/Integer/sum(a = a, b = b)}
+    R = $~Integers,
+    ⊕ = $~Operations(X = $~Integers, Y = $~Integers, Z = $~Integers).operation(_1 = {
+        #(a,b: %Element($~Integers)),
+        {z = $~Integer/sum(a = a, b = b)}
     }),
-    "0" = $../../../Essentials/Numbers/Natural/number(value = 0),
-    ⊖ = $../../../Essentials/Functions/Functions(
-        X = $../../../Essentials/Numbers/Integer/Integers,
-        Y = $../../../Essentials/Numbers/Integer/Integers
-      ).function(_1 = {
-        #(a: %Element($../../../Essentials/Numbers/Integer/Integers)),
-        {y = $../../../Essentials/Numbers/Integer/inverse(a = a)}
+    "0" = $~number(value = 0),
+    ⊖ = $../../../Essentials/Functions/Functions(X = $~Integers, Y = $~Integers).function(_1 = {
+        #(a: %Element($~Integers)),
+        {y = $~Integer/inverse(a = a)}
     }),
-    ⊙ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Numbers/Integer/Integers,
-        Y = $../../../Essentials/Numbers/Integer/Integers,
-        Z = $../../../Essentials/Numbers/Integer/Integers
-      ).operation(_1 = {
-        #(a,b: %Element($../../../Essentials/Numbers/Integer/Integers)),
-        {z = $../../../Essentials/Numbers/Integer/product(a = a, b = b)}
+    ⊙ = $~Operations(X = $~Integers, Y = $~Integers, Z = $~Integers).operation(_1 = {
+        #(a,b: %Element($~Integers)),
+        {z = $~Integer/product(a = a, b = b)}
     }),
-    "1" = $../../../Essentials/Numbers/Natural/number(value = 1)
+    "1" = $~number(value = 1)
   )]
 }

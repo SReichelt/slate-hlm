@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+[
+  $~Integers = $../Integer/Integers,
+  $~"Positive numbers" = $../Natural/Subsets/"Positive numbers",
+  $~product = $../Integer/product
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Rational_number#Subtraction
  *             * https://proofwiki.org/wiki/Definition:Subtraction/Rational_Numbers
@@ -14,21 +20,21 @@ $difference(a,b: %Element($"Rational numbers")): %ExplicitOperator {
       [{
         constructor = $"Rational numbers".quotient,
         parameters = #(
-          n_b: %Element($../Integer/Integers),
-          d_b: %Element($../Natural/Subsets/"Positive numbers")
+          n_b: %Element($~Integers),
+          d_b: %Element($~"Positive numbers")
         ),
         value = %structuralCases(
           a, $"Rational numbers",
           [{
             constructor = $"Rational numbers".quotient,
             parameters = #(
-              n_a: %Element($../Integer/Integers),
-              d_a: %Element($../Natural/Subsets/"Positive numbers")
+              n_a: %Element($~Integers),
+              d_a: %Element($~"Positive numbers")
             ),
             value = $"Rational numbers".quotient(
               n = $../Integer/difference(
-                a = $../Integer/product(a = n_a, b = d_b),
-                b = $../Integer/product(a = n_b, b = d_a)
+                a = $~product(a = n_a, b = d_b),
+                b = $~product(a = n_b, b = d_a)
               ),
               d = $../Natural/product(m = d_a, n = d_b)
             )

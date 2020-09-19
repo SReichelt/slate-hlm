@@ -1,17 +1,21 @@
 %../../../../../../logics/hlm%
 
+[
+  $~number = $../../Natural/number
+]
+
 /**
  * @remarks Due to the embedding of `$../../Natural/"Natural numbers"` into `$../Integers`, this is just an alias for `$../../Natural/"Natural numbers"`.
  */
 $"Nonnegative numbers": %SetOperator {
   notation = $SubSup(body = 'ℤ', sub = '0', sup = '+'),
   definition = [
-    $"Segment (greater or equal)"(a = $../../Natural/number(value = 0)),
+    $"Segment (greater or equal)"(a = $~number(value = 0)),
     %subset(
       #(a: %Element($../Integers)),
       $../"less or equal"(
         b = a,
-        a = $../../Natural/number(value = 0)
+        a = $~number(value = 0)
       )
     ),
     $../../Natural/"Natural numbers"

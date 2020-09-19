@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Cartesian product" = $../Sets/"Cartesian product"
+]
+
 $restriction(
   S: %Set(auto = %true),
   ≺: %Element($Endorelations(S = S)),
@@ -11,8 +15,8 @@ $restriction(
     minParenLevel = 3
   ),
   definition = [$../Properties/restriction(
-    S = $../Sets/"Cartesian product"(S = S, T = S),
+    S = $~"Cartesian product"(S = S, T = S),
     p = ≺,
-    T = $../Sets/"Cartesian product"(S = T, T = T)
+    T = $~"Cartesian product"(S = T, T = T)
   )]
 }

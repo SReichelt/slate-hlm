@@ -1,5 +1,13 @@
 %../../../../logics/hlm%
 
+[
+  $~Bases = $../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases,
+  $~Carrier = $../../Algebra/Rings/Modules/"Left modules"/Carrier,
+  $~Coordinates = $../../Algebra/Rings/Modules/"Left modules"/Coordinates,
+  $~Numbers = $../../Essentials/Numbers,
+  $~"ordinal-indexed sequence length" = $../../Essentials/Sequences/"ordinal-indexed sequence length"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Dimension_(vector_space)
  *             * https://mathworld.wolfram.com/Dimension.html
@@ -19,23 +27,23 @@ $dimension(
     function = 'dim',
     arguments = [𝐕]
   ),
-  parameter = #(n: %Element($../../Essentials/Numbers/Natural/"Natural numbers")),
+  parameter = #(n: %Element($~Numbers/Natural/"Natural numbers")),
   definition = [
     %forall(
-      #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(𝐑 = 𝐅, 𝐌 = 𝐕))),
+      #(𝒙: %Element($~Bases(𝐑 = 𝐅, 𝐌 = 𝐕))),
       %equals(
-        $../../Essentials/Sequences/"ordinal-indexed sequence length"(
-          S = $../../Algebra/Rings/Modules/"Left modules"/Carrier(𝐑 = 𝐅, 𝐌 = 𝐕),
+        $~"ordinal-indexed sequence length"(
+          S = $~Carrier(𝐑 = 𝐅, 𝐌 = 𝐕),
           𝒂 = 𝒙
         ),
         n
       )
     ),
     %exists(
-      #(𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/Bases(𝐑 = 𝐅, 𝐌 = 𝐕))),
+      #(𝒙: %Element($~Bases(𝐑 = 𝐅, 𝐌 = 𝐕))),
       formula = %equals(
-        $../../Essentials/Sequences/"ordinal-indexed sequence length"(
-          S = $../../Algebra/Rings/Modules/"Left modules"/Carrier(𝐑 = 𝐅, 𝐌 = 𝐕),
+        $~"ordinal-indexed sequence length"(
+          S = $~Carrier(𝐑 = 𝐅, 𝐌 = 𝐕),
           𝒂 = 𝒙
         ),
         n
@@ -43,15 +51,15 @@ $dimension(
     ),
     %forall(
       #(
-        𝒙: %Element($../../Algebra/Rings/Modules/"Left modules"/Coordinates/"Element sequences"(𝐑 = 𝐅, 𝐌 = 𝐕)),
+        𝒙: %Element($~Coordinates/"Element sequences"(𝐑 = 𝐅, 𝐌 = 𝐕)),
         _1: %Constraint(%setEquals(
-          $../../Algebra/Rings/Modules/"Left modules"/Coordinates/Span(𝐑 = 𝐅, 𝐌 = 𝐕, 𝒙 = 𝒙),
-          $../../Algebra/Rings/Modules/"Left modules"/Carrier(𝐑 = 𝐅, 𝐌 = 𝐕)
+          $~Coordinates/Span(𝐑 = 𝐅, 𝐌 = 𝐕, 𝒙 = 𝒙),
+          $~Carrier(𝐑 = 𝐅, 𝐌 = 𝐕)
         ))
       ),
-      $../../Essentials/Numbers/Ordinal/"less or equal"(
-        β = $../../Essentials/Sequences/"ordinal-indexed sequence length"(
-          S = $../../Algebra/Rings/Modules/"Left modules"/Carrier(𝐑 = 𝐅, 𝐌 = 𝐕),
+      $~Numbers/Ordinal/"less or equal"(
+        β = $~"ordinal-indexed sequence length"(
+          S = $~Carrier(𝐑 = 𝐅, 𝐌 = 𝐕),
           𝒂 = 𝒙
         ),
         α = n

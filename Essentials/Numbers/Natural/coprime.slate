@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Intersection = $../../Sets/Intersection
+]
+
 /**
  * @remarks Note that in addition to this definition for natural numbers, there is a compatible definition for integers: `$../Integer/coprime`.
  *
@@ -34,7 +38,7 @@ $coprime(m,n: %Element($"Natural numbers")): %Predicate {
       )
     )),
     %sub(
-      $../../Sets/Intersection(
+      $~Intersection(
         U = $"Natural numbers",
         S = $Divisors(n = m),
         T = $Divisors(n = n)
@@ -42,7 +46,7 @@ $coprime(m,n: %Element($"Natural numbers")): %Predicate {
       %enumeration($number(value = 1))
     ),
     %setEquals(
-      $../../Sets/Intersection(
+      $~Intersection(
         U = $"Natural numbers",
         S = $Divisors(n = m),
         T = $Divisors(n = n)

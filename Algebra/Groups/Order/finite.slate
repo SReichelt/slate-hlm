@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Essentials = $../../../Essentials
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Finite_group
  *             * https://proofwiki.org/wiki/Definition:Order_of_Structure/Finite_Structure
@@ -10,7 +14,7 @@ $finite(𝐆: %Element($../Groups)): %Predicate {
     property = %neg('finite', 'infinite')
   ),
   definition = [
-    $../../../Essentials/Numbers/Cardinal/finite(κ = $"group order"(𝐆 = 𝐆)),
-    $../../../Essentials/Sets/finite(S = $../Carrier(𝐆 = 𝐆))
+    $~Essentials/Numbers/Cardinal/finite(κ = $"group order"(𝐆 = 𝐆)),
+    $~Essentials/Sets/finite(S = $../Carrier(𝐆 = 𝐆))
   ]
 }

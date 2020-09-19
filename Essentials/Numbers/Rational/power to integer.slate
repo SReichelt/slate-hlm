@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+[
+  $~Integer = $../Integer,
+  $~"less or equal" = $../Integer/"less or equal",
+  $~number = $../Natural/number
+]
+
 /**
  * @remarks The exponentiation on the right uses the previous definition, which is possible because the exponents are nonnegative.
  *
@@ -9,37 +15,37 @@
  */
 $"power to integer"(
   a: %Element($"Rational numbers"),
-  b: %Element($../Integer/Integers),
+  b: %Element($~Integer/Integers),
   _1: %Constraint(%or(
     %not(%equals(
       a,
-      $../Natural/number(value = 0)
+      $~number(value = 0)
     )),
-    $../Integer/"less or equal"(
+    $~"less or equal"(
       b = b,
-      a = $../Natural/number(value = 0)
+      a = $~number(value = 0)
     )
   ))
 ): %ExplicitOperator {
   notation = $SubSup(body = a, sup = b),
   definition = [%cases([
     {
-      formula = $../Integer/"less or equal"(
+      formula = $~"less or equal"(
         b = b,
-        a = $../Natural/number(value = 0)
+        a = $~number(value = 0)
       ),
       value = $power(a = a, n = b)
     },
     {
-      formula = $../Integer/less(
+      formula = $~Integer/less(
         a = b,
-        b = $../Natural/number(value = 0)
+        b = $~number(value = 0)
       ),
       value = $quotient(
-        a = $../Natural/number(value = 1),
+        a = $~number(value = 1),
         b = $power(
           a = a,
-          n = $../Integer/inverse(a = b)
+          n = $~Integer/inverse(a = b)
         )
       )
     }

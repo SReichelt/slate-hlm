@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Groups = $../Groups,
+  $~inverse = $../inverse,
+  $~operation = $../operation
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Normal_subgroup
  *             * https://mathworld.wolfram.com/NormalSubgroup.html
@@ -8,8 +15,8 @@
  *             * https://leanprover-community.github.io/mathlib_docs/group_theory/subgroup.html#normal_subgroup
  */
 $"normal subgroup set"(
-  𝐆: %Element($../Groups),
-  S: %Subset($../Carrier(𝐆 = 𝐆))
+  𝐆: %Element($~Groups),
+  S: %Subset($~Carrier(𝐆 = 𝐆))
 ): %Predicate {
   notation = $NounRelation(
     operands = [S, 𝐆],
@@ -22,13 +29,13 @@ $"normal subgroup set"(
       %forall(
         #(
           s: %Element(S),
-          g: %Element($../Carrier(𝐆 = 𝐆))
+          g: %Element($~Carrier(𝐆 = 𝐆))
         ),
         %in(
-          $../operation(
+          $~operation(
             𝐆 = 𝐆,
-            a = %associative($../operation(𝐆 = 𝐆, a = g, b = s)),
-            b = $../inverse(𝐆 = 𝐆, a = g)
+            a = %associative($~operation(𝐆 = 𝐆, a = g, b = s)),
+            b = $~inverse(𝐆 = 𝐆, a = g)
           ),
           S
         )
@@ -39,13 +46,13 @@ $"normal subgroup set"(
       %forall(
         #(
           s: %Element(S),
-          h: %Element($../Carrier(𝐆 = 𝐆))
+          h: %Element($~Carrier(𝐆 = 𝐆))
         ),
         %in(
-          $../operation(
+          $~operation(
             𝐆 = 𝐆,
-            a = $../inverse(𝐆 = 𝐆, a = h),
-            b = %associative($../operation(𝐆 = 𝐆, a = s, b = h))
+            a = $~inverse(𝐆 = 𝐆, a = h),
+            b = %associative($~operation(𝐆 = 𝐆, a = s, b = h))
           ),
           S
         )
@@ -53,7 +60,7 @@ $"normal subgroup set"(
     ),
     %exists(
       #(
-        𝐇: %Element($../Groups),
+        𝐇: %Element($~Groups),
         φ: %Element($../Homomorphisms/Homomorphisms(𝐆 = 𝐆, 𝐇 = 𝐇))
       ),
       formula = %setEquals(

@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~inverse = $../Real/inverse
+]
+
 $inverse(a: %Element($"Complex numbers")): %ExplicitOperator {
   notation = $NegationOperator(operand = a),
   definition = [%structuralCases(
@@ -8,8 +12,8 @@ $inverse(a: %Element($"Complex numbers")): %ExplicitOperator {
       constructor = $"Complex numbers".complex,
       parameters = #(r_a,i_a: %Element($../Real/"Real numbers")),
       value = $"Complex numbers".complex(
-        r = $../Real/inverse(a = r_a),
-        i = $../Real/inverse(a = i_a)
+        r = $~inverse(a = r_a),
+        i = $~inverse(a = i_a)
       )
     }]
   )]

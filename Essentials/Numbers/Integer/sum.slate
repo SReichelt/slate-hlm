@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Natural/"Natural numbers",
+  $~sum = $../Natural/sum
+]
+
 /**
  * @remarks Note that the sums on the right are sums of natural numbers.
  *
@@ -14,15 +19,15 @@ $sum(a,b: %Element($Integers)): %ExplicitOperator {
     b, $Integers,
     [{
       constructor = $Integers.difference,
-      parameters = #(n_b,m_b: %Element($../Natural/"Natural numbers")),
+      parameters = #(n_b,m_b: %Element($~"Natural numbers")),
       value = %structuralCases(
         a, $Integers,
         [{
           constructor = $Integers.difference,
-          parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),
+          parameters = #(n_a,m_a: %Element($~"Natural numbers")),
           value = $Integers.difference(
-            n = $../Natural/sum(m = n_a, n = n_b),
-            m = $../Natural/sum(m = m_a, n = m_b)
+            n = $~sum(m = n_a, n = n_b),
+            m = $~sum(m = m_a, n = m_b)
           )
         }]
       )

@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Sequences = $../Rational/Sequences
+]
+
 /**
  * @references * https://coq.inria.fr/library/Coq.Reals.Cauchy.ConstructiveCauchyReals.html#CReal_opp
  */
@@ -11,9 +15,9 @@ $inverse(a: %Element($"Real numbers")): %ExplicitOperator {
       constructor = $"Real numbers".class,
       parameters = #(
         r_a: %Element($../../Sequences/"Infinite sequences"(S = $../Rational/"Rational numbers")),
-        _1: %Constraint($../Rational/Sequences/cauchy(𝐚 = r_a))
+        _1: %Constraint($~Sequences/cauchy(𝐚 = r_a))
       ),
-      value = $"Real numbers".class(r = $../Rational/Sequences/"sequence inverse"(𝐚 = r_a))
+      value = $"Real numbers".class(r = $~Sequences/"sequence inverse"(𝐚 = r_a))
     }]
   )]
 }

@@ -1,5 +1,16 @@
 %../../../../logics/hlm%
 
+[
+  $~"Cardinal numbers" = $../Numbers/Cardinal/"Cardinal numbers",
+  $~Homomorphisms = $../Numbers/Cardinal/Homomorphisms/Homomorphisms,
+  $~Numbers = $../Numbers,
+  $~Relations = $../Relations/Relations,
+  $~"Segment (less)" = $../Numbers/Natural/Subsets/"Segment (less)",
+  $~"less or equal" = $../Numbers/Cardinal/"less or equal",
+  $~number = $../Numbers/Natural/number,
+  $~value = $../Functions/value
+]
+
 /**
  * @remarks In HLM, multiple alternative definitions can be given for an operator or predicate, if they can be shown to be equal/equivalent. In proofs, the most convenient alternative can be selected at will, which reduces the number of necessary steps. Sometimes, it also makes sense to prove a property according to one alternative and then use it according to another.
  *
@@ -15,12 +26,12 @@ $empty(S: %Set): %Predicate {
     %sub(S, $"Empty set"),
     %not(%exists(#(x: %Element(S)))),
     %equals(
-      $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-      $../Numbers/Natural/number(value = 0)
+      $~"Cardinal numbers".cardinality(S = S),
+      $~number(value = 0)
     ),
-    $../Numbers/Cardinal/"less or equal"(
-      κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-      μ = $../Numbers/Natural/number(value = 0)
+    $~"less or equal"(
+      κ = $~"Cardinal numbers".cardinality(S = S),
+      μ = $~number(value = 0)
     )
   ],
   equivalenceProofs = [
@@ -87,47 +98,47 @@ $empty(S: %Set): %Predicate {
       to = 4,
       parameters = #(_1: %Constraint(%setEquals(S, $"Empty set"))),
       goal = %equals(
-        $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-        $../Numbers/Natural/number(value = 0)
+        $~"Cardinal numbers".cardinality(S = S),
+        $~number(value = 0)
       ),
       steps = #(
         _: %State(
           %equals(
-            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $"Empty set")
+            $~"Cardinal numbers".cardinality(S = S),
+            $~"Cardinal numbers".cardinality(S = $"Empty set")
           ),
           proof = {steps = #(_: %ProveBySubstitution(
             #(_: %Consider(_1)),
             2,
             %equals(
-              $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-              $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S)
+              $~"Cardinal numbers".cardinality(S = S),
+              $~"Cardinal numbers".cardinality(S = S)
             )
           ))}
         ),
         _: %Substitute(
           #(_: %State(%setEquals(
-            $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/number(value = 0)),
+            $~"Segment (less)"(n = $~number(value = 0)),
             $"Empty set"
           ))),
           2,
           %equals(
-            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/number(value = 0)))
+            $~"Cardinal numbers".cardinality(S = S),
+            $~"Cardinal numbers".cardinality(S = $~"Segment (less)"(n = $~number(value = 0)))
           )
         ),
         _: %Substitute(
           #(_: %State(
             %equals(
-              $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/number(value = 0))),
-              $../Numbers/Natural/number(value = 0)
+              $~"Cardinal numbers".cardinality(S = $~"Segment (less)"(n = $~number(value = 0))),
+              $~number(value = 0)
             ),
             proof = {steps = #(_: %ProveDef)}
           )),
           1,
           %equals(
-            $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-            $../Numbers/Natural/number(value = 0)
+            $~"Cardinal numbers".cardinality(S = S),
+            $~number(value = 0)
           )
         )
       )
@@ -136,95 +147,89 @@ $empty(S: %Set): %Predicate {
       from = 4,
       to = 5,
       parameters = #(_1: %Constraint(%equals(
-        $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-        $../Numbers/Natural/number(value = 0)
+        $~"Cardinal numbers".cardinality(S = S),
+        $~number(value = 0)
       ))),
-      goal = $../Numbers/Cardinal/"less or equal"(
-        κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-        μ = $../Numbers/Natural/number(value = 0)
+      goal = $~"less or equal"(
+        κ = $~"Cardinal numbers".cardinality(S = S),
+        μ = $~number(value = 0)
       ),
       steps = #(_: %ProveBySubstitution(
         #(_: %Consider(_1)),
         1,
-        $../Numbers/Cardinal/"less or equal"(
-          κ = $../Numbers/Natural/number(value = 0),
-          μ = $../Numbers/Natural/number(value = 0)
+        $~"less or equal"(
+          κ = $~number(value = 0),
+          μ = $~number(value = 0)
         ),
         proof = {steps = #(
           _: %UseTheorem(
-            $../Numbers/Cardinal/"Less or equal is a partial order",
+            $~Numbers/Cardinal/"Less or equal is a partial order",
             result = $../Relations/"partial order"(
-              S = $../Numbers/Cardinal/"Cardinal numbers",
-              ⪯ = $../Relations/Relations(
-                  S = $../Numbers/Cardinal/"Cardinal numbers",
-                  T = $../Numbers/Cardinal/"Cardinal numbers"
-                ).relation(_1 = {
-                  #(κ,μ: %Element($../Numbers/Cardinal/"Cardinal numbers")),
-                  {p = $../Numbers/Cardinal/"less or equal"(κ = κ, μ = μ)}
+              S = $~"Cardinal numbers",
+              ⪯ = $~Relations(S = $~"Cardinal numbers", T = $~"Cardinal numbers").relation(_1 = {
+                  #(κ,μ: %Element($~"Cardinal numbers")),
+                  {p = $~"less or equal"(κ = κ, μ = μ)}
               })
             )
           ),
           _: %UseDef(result = $../Relations/reflexive(
-            S = $../Numbers/Cardinal/"Cardinal numbers",
-            ⪯ = $../Relations/Relations(
-                S = $../Numbers/Cardinal/"Cardinal numbers",
-                T = $../Numbers/Cardinal/"Cardinal numbers"
-              ).relation(_1 = {
-                #(κ,μ: %Element($../Numbers/Cardinal/"Cardinal numbers")),
-                {p = $../Numbers/Cardinal/"less or equal"(κ = κ, μ = μ)}
+            S = $~"Cardinal numbers",
+            ⪯ = $~Relations(S = $~"Cardinal numbers", T = $~"Cardinal numbers").relation(_1 = {
+                #(κ,μ: %Element($~"Cardinal numbers")),
+                {p = $~"less or equal"(κ = κ, μ = μ)}
             })
           )),
           _: %UseDef(result = %forall(
-            #(κ: %Element($../Numbers/Cardinal/"Cardinal numbers")),
-            $../Numbers/Cardinal/"less or equal"(κ = κ, μ = κ)
+            #(κ: %Element($~"Cardinal numbers")),
+            $~"less or equal"(κ = κ, μ = κ)
           )),
-          _: %UseForAll({κ = $../Numbers/Natural/number(value = 0)})
+          _: %UseForAll({κ = $~number(value = 0)})
         )}
       ))
     },
     {
       from = 5,
       to = 3,
-      parameters = #(_1: %Constraint($../Numbers/Cardinal/"less or equal"(
-        κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-        μ = $../Numbers/Natural/number(value = 0)
+      parameters = #(_1: %Constraint($~"less or equal"(
+        κ = $~"Cardinal numbers".cardinality(S = S),
+        μ = $~number(value = 0)
       ))),
       goal = %not(%exists(#(x: %Element(S)))),
       steps = #(
         _: %Consider(_1),
         _: %UseDef(result = %exists(
-          #(φ: %Element($../Numbers/Cardinal/Homomorphisms/Homomorphisms(
-            κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-            μ = $../Numbers/Natural/number(value = 0)
+          #(φ: %Element($~Homomorphisms(
+            κ = $~"Cardinal numbers".cardinality(S = S),
+            μ = $~number(value = 0)
           ))),
           formula = $../Functions/injective(
             X = S,
-            Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/number(value = 0)),
+            Y = $~"Segment (less)"(n = $~number(value = 0)),
             f = φ
           )
         )),
-        _: %UseExists(#(φ: %Element($../Numbers/Cardinal/Homomorphisms/Homomorphisms(
-          κ = $../Numbers/Cardinal/"Cardinal numbers".cardinality(S = S),
-          μ = $../Numbers/Natural/number(value = 0)
+        _: %UseExists(#(φ: %Element($~Homomorphisms(
+          κ = $~"Cardinal numbers".cardinality(S = S),
+          μ = $~number(value = 0)
         )))),
         _: %ProveByContradiction({
           parameters = #(x: %Element(S)),
           steps = #(
             _: %State(%in(
-              $../Functions/value(
+              $~value(
                 X = S,
-                Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/number(value = 0)),
+                Y = $~"Segment (less)"(n = $~number(value = 0)),
                 f = φ, x = x
               ),
-              $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/number(value = 0))
+              $~"Segment (less)"(n = $~number(value = 0))
             )),
-            _: %UseDef(result = $../Numbers/Natural/less(
-              m = $../Functions/value(
+            _: %UseDef(result = $~Numbers/Natural/less(
+              m = $~value(
                 X = S,
-                Y = $../Numbers/Natural/Subsets/"Segment (less)"(n = $../Numbers/Natural/number(value = 0)),
+                Y = $~"Segment (less)"(n = $~number(value = 0)),
                 f = φ, x = x
               ),
-              n = $../Numbers/Natural/number(value = 0)
+              n = $~number(value = 0)
             )),
             _: %UseDef(result = %or)
           )

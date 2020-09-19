@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../Numbers/Natural/"Natural numbers"
+]
+
 /**
  * @remarks Note that we only formalize multi-subsets of a given set `S`. Arbitrary multisets cannot be defined because there is no suitable notion of equality.
  *
@@ -15,17 +19,17 @@
 $Multisets(S: %Set): %Construction {
   $multiset(_1: %Binder(
     #(s: %Element(S)),
-    #(m: %Element($../../Numbers/Natural/"Natural numbers"))
+    #(m: %Element($~"Natural numbers"))
   )): %Constructor {
     notation = $Set(body = $SubSup(body = s, sup = m)),
     equalityDefinition = {
       leftParameters = #(_1: %Binder(
         #(s: %Element(S)),
-        #(m: %Element($../../Numbers/Natural/"Natural numbers"))
+        #(m: %Element($~"Natural numbers"))
       )),
       rightParameters = #(_2: %Binder(
         #(s: %Element(S)),
-        #("m'": %Element($../../Numbers/Natural/"Natural numbers"))
+        #("m'": %Element($~"Natural numbers"))
       )),
       definition = [%forall(
         #(s: %Element(S)),

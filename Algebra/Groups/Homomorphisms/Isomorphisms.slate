@@ -1,6 +1,14 @@
 %../../../../../logics/hlm%
 
-$Isomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
+[
+  $~Carrier = $../Carrier,
+  $~Functions = $../../../Essentials/Functions,
+  $~Groups = $../Groups,
+  $~operation = $../operation,
+  $~value = $../../../Essentials/Functions/value
+]
+
+$Isomorphisms(𝐆,𝐇: %Element($~Groups)): %SetOperator {
   notation = $Function(
     function = 'Iso',
     arguments = [𝐆, 𝐇]
@@ -18,36 +26,36 @@ $Isomorphisms(𝐆,𝐇: %Element($../Groups)): %SetOperator {
   definition = [
     %subset(
       #(φ: %Element($Homomorphisms(𝐆 = 𝐆, 𝐇 = 𝐇))),
-      $../../../Essentials/Functions/bijective(
-        X = $../Carrier(𝐆 = 𝐆),
-        Y = $../Carrier(𝐆 = 𝐇),
+      $~Functions/bijective(
+        X = $~Carrier(𝐆 = 𝐆),
+        Y = $~Carrier(𝐆 = 𝐇),
         f = φ
       )
     ),
     %subset(
-      #(f: %Element($../../../Essentials/Functions/Bijections(
-        X = $../Carrier(𝐆 = 𝐆),
-        Y = $../Carrier(𝐆 = 𝐇)
+      #(f: %Element($~Functions/Bijections(
+        X = $~Carrier(𝐆 = 𝐆),
+        Y = $~Carrier(𝐆 = 𝐇)
       ))),
       %forall(
-        #(a,b: %Element($../Carrier(𝐆 = 𝐆))),
+        #(a,b: %Element($~Carrier(𝐆 = 𝐆))),
         %equals(
-          $../../../Essentials/Functions/value(
-            X = $../Carrier(𝐆 = 𝐆),
-            Y = $../Carrier(𝐆 = 𝐇),
+          $~value(
+            X = $~Carrier(𝐆 = 𝐆),
+            Y = $~Carrier(𝐆 = 𝐇),
             f = f,
-            x = $../operation(𝐆 = 𝐆, a = a, b = b)
+            x = $~operation(𝐆 = 𝐆, a = a, b = b)
           ),
-          $../operation(
+          $~operation(
             𝐆 = 𝐇,
-            a = $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐆 = 𝐆),
-              Y = $../Carrier(𝐆 = 𝐇),
+            a = $~value(
+              X = $~Carrier(𝐆 = 𝐆),
+              Y = $~Carrier(𝐆 = 𝐇),
               f = f, x = a
             ),
-            b = $../../../Essentials/Functions/value(
-              X = $../Carrier(𝐆 = 𝐆),
-              Y = $../Carrier(𝐆 = 𝐇),
+            b = $~value(
+              X = $~Carrier(𝐆 = 𝐆),
+              Y = $~Carrier(𝐆 = 𝐇),
               f = f, x = b
             )
           )

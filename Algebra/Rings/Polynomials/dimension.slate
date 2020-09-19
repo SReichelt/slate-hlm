@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~number = $../../../Essentials/Numbers/Natural/number
+]
+
 /**
  * @remarks This is mostly a helper definition to define the degree (see `$degree`). However, in many cases this definition may actually be more useful than the degree itself.
  *
@@ -26,7 +30,7 @@ $dimension(
     [
       {
         constructor = $Polynomials.zero,
-        value = $../../../Essentials/Numbers/Natural/number(value = 0)
+        value = $~number(value = 0)
       },
       {
         constructor = $Polynomials.term,
@@ -46,7 +50,7 @@ $dimension(
         ),
         value = $../../../Essentials/Numbers/Natural/sum(
           m = $dimension(𝐑 = 𝐑, X = X, p = q),
-          n = $../../../Essentials/Numbers/Natural/number(value = 1)
+          n = $~number(value = 1)
         )
       }
     ]

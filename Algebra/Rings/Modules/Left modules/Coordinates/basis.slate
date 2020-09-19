@@ -1,5 +1,9 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Basis_(linear_algebra)
  *             * https://proofwiki.org/wiki/Definition:Ordered_Basis
@@ -23,11 +27,11 @@ $basis(
       %not($"linearly dependent"(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙)),
       %setEquals(
         $Span(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙),
-        $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)
+        $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)
       )
     ),
     %forall(
-      #(m: %Element($../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))),
+      #(m: %Element($~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))),
       %existsUnique(
         #(𝐚: %Element($Coordinates(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙))),
         formula = %equals(

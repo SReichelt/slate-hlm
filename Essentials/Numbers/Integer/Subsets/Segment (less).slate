@@ -1,9 +1,13 @@
 %../../../../../../logics/hlm%
 
-$"Segment (less)"(a: %Element($../Integers)): %SetOperator {
+[
+  $~Integers = $../Integers
+]
+
+$"Segment (less)"(a: %Element($~Integers)): %SetOperator {
   notation = $Segment(set = 'ℤ', symbol = '<', limit = a),
   definition = [%subset(
-    #(b: %Element($../Integers)),
+    #(b: %Element($~Integers)),
     $../less(a = b, b = a)
   )]
 }

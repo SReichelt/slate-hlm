@@ -1,19 +1,22 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../"Natural numbers"
+]
+
 $"Iterated product is a multiple of each element"(
   I: %Set,
   _1: %Constraint($../../../Sets/finite(S = I)),
   _2: %Binder(
     #(i: %Element(I)),
-    #(a: %Element($../"Natural numbers"))
+    #(a: %Element($~"Natural numbers"))
   ),
   j: %Element(I)
 ): %StandardTheorem {
   claim = $../divisible(
     m = a[i = j],
     n = $../../../Operations/"Iterated operations"/"indexed by finite set"(
-      X = $../"Natural numbers",
-      ⨂ = $"iterated product", I = I,
+      X = $~"Natural numbers", ⨂ = $"iterated product", I = I,
       _2 = {
         #(i: %Element(I)),
         {a = a[i = i]}

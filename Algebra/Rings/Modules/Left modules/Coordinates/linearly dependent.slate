@@ -1,5 +1,11 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Essentials = $../../../../../Essentials,
+  $~"ordinal-indexed sequence length" = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Linear_independence
  *             * https://mathworld.wolfram.com/LinearlyDependentVectors.html
@@ -23,18 +29,18 @@ $"linearly dependent"(
     property = %neg('linearly dependent', 'linearly independent')
   ),
   definition = [%exists(
-    #(𝐚: %Element($../../../../../Essentials/Sets/"Relative complement"(
+    #(𝐚: %Element($~Essentials/Sets/"Relative complement"(
       U = $Coordinates(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙),
       S = $Coordinates(𝐑 = 𝐑, 𝐌 = 𝐌, 𝒙 = 𝒙),
-      T = %enumeration($../../../../../Essentials/Sequences/Tuples(
+      T = %enumeration($~Essentials/Sequences/Tuples(
           S = $../../../Carrier(𝐑 = 𝐑),
-          α = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-            S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+          α = $~"ordinal-indexed sequence length"(
+            S = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
             𝒂 = 𝒙
           )
         ).sequence(_1 = {
-          #(k: %Element($../../../../../Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = $../../../../../Essentials/Sequences/"ordinal-indexed sequence length"(
-            S = $../Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+          #(k: %Element($~Essentials/Numbers/Ordinal/Subsets/"Segment (less)"(α = $~"ordinal-indexed sequence length"(
+            S = $~Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
             𝒂 = 𝒙
           )))),
           {a = $../../../zero(𝐑 = 𝐑)}

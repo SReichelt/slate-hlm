@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Rational numbers" = $../"Rational numbers"
+]
+
 /**
  * @example `$../../../Operations/"Iterated operations"/"indexed by natural number"(X = $../"Rational numbers", ⨂ = $"iterated product", n = n, _1 = {#(i: %Element($../../Natural/Subsets/"Segment (less)"(n = n))), {a = {a[i = i]}}})`
  *
@@ -9,13 +13,9 @@
  */
 $"iterated product": %ExplicitOperator {
   notation = '∏',
-  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = $../"Rational numbers").operation(
-      ∗ = $../../../Operations/Operations(
-          X = $../"Rational numbers",
-          Y = $../"Rational numbers",
-          Z = $../"Rational numbers"
-        ).operation(_1 = {
-          #(a,b: %Element($../"Rational numbers")),
+  definition = [$../../../Operations/"Iterated operations"/"Iterated operations"(X = $~"Rational numbers").operation(
+      ∗ = $../../../Operations/Operations(X = $~"Rational numbers", Y = $~"Rational numbers", Z = $~"Rational numbers").operation(_1 = {
+          #(a,b: %Element($~"Rational numbers")),
           {z = $../product(a = a, b = b)}
       }),
       e = $../../Natural/number(value = 1)

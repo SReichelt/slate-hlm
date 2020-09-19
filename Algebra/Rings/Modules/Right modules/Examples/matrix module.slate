@@ -1,8 +1,15 @@
 %../../../../../../../logics/hlm%
 
+[
+  $~Carrier = $../../../Carrier,
+  $~Matrices = $../../../Matrices/Matrices,
+  $~"Natural numbers" = $../../../../../Essentials/Numbers/Natural/"Natural numbers",
+  $~Operations = $../../../../../Essentials/Operations/Operations
+]
+
 $"matrix module"(
   𝐑: %Element($../../../Rings),
-  m,n: %Element($../../../../../Essentials/Numbers/Natural/"Natural numbers")
+  m,n: %Element($~"Natural numbers")
 ): %ExplicitOperator {
   notation = $SubSup(
     body = 𝐑,
@@ -12,31 +19,31 @@ $"matrix module"(
     )
   ),
   definition = [$../"Right modules"(𝐑 = 𝐑).module(
-      M = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
-      ⊕ = $../../../../../Essentials/Operations/Operations(
-          X = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
-          Y = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
-          Z = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n)
+      M = $~Matrices(𝐑 = 𝐑, m = m, n = n),
+      ⊕ = $~Operations(
+          X = $~Matrices(𝐑 = 𝐑, m = m, n = n),
+          Y = $~Matrices(𝐑 = 𝐑, m = m, n = n),
+          Z = $~Matrices(𝐑 = 𝐑, m = m, n = n)
         ).operation(_1 = {
-          #(A,B: %Element($../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n))),
+          #(A,B: %Element($~Matrices(𝐑 = 𝐑, m = m, n = n))),
           {z = $../../../Matrices/sum(𝐑 = 𝐑, m = m, n = n, A = A, B = B)}
       }),
       "0" = $../../../Matrices/zero(𝐑 = 𝐑, m = m, n = n),
       ⊖ = $../../../../../Essentials/Functions/Functions(
-          X = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
-          Y = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n)
+          X = $~Matrices(𝐑 = 𝐑, m = m, n = n),
+          Y = $~Matrices(𝐑 = 𝐑, m = m, n = n)
         ).function(_1 = {
-          #(A: %Element($../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n))),
+          #(A: %Element($~Matrices(𝐑 = 𝐑, m = m, n = n))),
           {y = $../../../Matrices/"additive inverse"(𝐑 = 𝐑, m = m, n = n, A = A)}
       }),
-      ⊙ = $../../../../../Essentials/Operations/Operations(
-          X = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n),
-          Y = $../../../Carrier(𝐑 = 𝐑),
-          Z = $../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n)
+      ⊙ = $~Operations(
+          X = $~Matrices(𝐑 = 𝐑, m = m, n = n),
+          Y = $~Carrier(𝐑 = 𝐑),
+          Z = $~Matrices(𝐑 = 𝐑, m = m, n = n)
         ).operation(_1 = {
           #(
-            A: %Element($../../../Matrices/Matrices(𝐑 = 𝐑, m = m, n = n)),
-            r: %Element($../../../Carrier(𝐑 = 𝐑))
+            A: %Element($~Matrices(𝐑 = 𝐑, m = m, n = n)),
+            r: %Element($~Carrier(𝐑 = 𝐑))
           ),
           {z = $../../../Matrices/"product with right scalar"(𝐑 = 𝐑, m = m, n = n, A = A, r = r)}
       })

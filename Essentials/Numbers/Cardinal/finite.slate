@@ -1,25 +1,26 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Natural/"Natural numbers"
+]
+
 $finite(κ: %Element($"Cardinal numbers")): %Predicate {
   notation = $Property(
     operand = κ,
     property = %neg('finite', 'infinite')
   ),
   definition = [
-    %in(
-      κ,
-      $../Natural/"Natural numbers"
-    ),
+    %in(κ, $~"Natural numbers"),
     %exists(
-      #(x: %Element($../Natural/"Natural numbers")),
+      #(x: %Element($~"Natural numbers")),
       formula = %equals(κ, x)
     ),
     %exists(
-      #(y: %Element($../Natural/"Natural numbers")),
+      #(y: %Element($~"Natural numbers")),
       formula = $"less or equal"(κ = κ, μ = y)
     ),
     %exists(
-      #(z: %Element($../Natural/"Natural numbers")),
+      #(z: %Element($~"Natural numbers")),
       formula = $less(κ = κ, μ = z)
     )
   ]

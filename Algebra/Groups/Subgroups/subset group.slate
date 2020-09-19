@@ -1,10 +1,16 @@
 %../../../../../logics/hlm%
 
+[
+  $~Essentials = $../../../Essentials,
+  $~Groups = $../Groups,
+  $~Operations = $../../../Essentials/Operations
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/group_theory/subgroup.html#subtype.group
  */
 $"subset group"(
-  𝐆: %Element($../Groups),
+  𝐆: %Element($~Groups),
   S: %Subset($../Carrier(𝐆 = 𝐆)),
   _1: %Constraint($"subgroup set"(𝐆 = 𝐆, S = S))
 ): %ExplicitOperator {
@@ -13,22 +19,21 @@ $"subset group"(
     sub = 𝐆
   ),
   definition = [%structuralCases(
-    𝐆,
-    $../Groups,
+    𝐆, $~Groups,
     [{
-      constructor = $../Groups.group,
+      constructor = $~Groups.group,
       parameters = #(
         G: %Set,
-        ∗: %Element($../../../Essentials/Operations/"Inner operations"(X = G)),
+        ∗: %Element($~Operations/"Inner operations"(X = G)),
         e: %Element(G),
-        i: %Element($../../../Essentials/Functions/Functions(X = G, Y = G)),
+        i: %Element($~Essentials/Functions/Functions(X = G, Y = G)),
         _1: %Constraint($../group(G = G, ∗ = ∗, e = e, i = i))
       ),
-      value = $../Groups.group(
+      value = $~Groups.group(
         G = S,
-        ∗ = $../../../Essentials/Operations/"inner operation restriction"(X = G, A = S, ∗ = ∗),
+        ∗ = $~Operations/"inner operation restriction"(X = G, A = S, ∗ = ∗),
         e = e,
-        i = $../../../Essentials/Functions/"codomain restriction"(X = G, A = S, Y = G, B = S, f = i)
+        i = $~Essentials/Functions/"codomain restriction"(X = G, A = S, Y = G, B = S, f = i)
       )
     }]
   )]

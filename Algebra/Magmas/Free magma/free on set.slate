@@ -1,8 +1,14 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Essentials = $../../../Essentials,
+  $~Magmas = $../Magmas
+]
+
 $"free on set"(
-  𝐌: %Element($../Magmas),
-  S: %Subset($../Carrier(𝐌 = 𝐌))
+  𝐌: %Element($~Magmas),
+  S: %Subset($~Carrier(𝐌 = 𝐌))
 ): %Predicate {
   notation = $Property(
     operand = 𝐌,
@@ -15,18 +21,18 @@ $"free on set"(
     ),
     %forall(
       #(
-        𝐍: %Element($../Magmas),
-        f: %Element($../../../Essentials/Functions/Functions(
+        𝐍: %Element($~Magmas),
+        f: %Element($~Essentials/Functions/Functions(
           X = S,
-          Y = $../Carrier(𝐌 = 𝐍)
+          Y = $~Carrier(𝐌 = 𝐍)
         ))
       ),
       %existsUnique(
         #(φ: %Element($../Homomorphisms/Homomorphisms(𝐌 = 𝐌, 𝐍 = 𝐍))),
         formula = %equals(
-          $../../../Essentials/Functions/restriction(
-            X = $../Carrier(𝐌 = 𝐌),
-            Y = $../Carrier(𝐌 = 𝐍),
+          $~Essentials/Functions/restriction(
+            X = $~Carrier(𝐌 = 𝐌),
+            Y = $~Carrier(𝐌 = 𝐍),
             A = S, f = φ
           ),
           f

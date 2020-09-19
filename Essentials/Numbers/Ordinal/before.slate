@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Relations = $../../Relations
+]
+
 /**
  * @remarks This definition can be used to access underlying well-ordering of a given ordinal number. It must not be confused with comparison of two ordinal numbers, which is defined a little further below.
  */
@@ -14,10 +18,10 @@ $before(
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
         A: %Set,
-        ⪯: %Element($../../Relations/Endorelations(S = A)),
-        _1: %Constraint($../../Relations/"well-order"(S = A, ⪯ = ⪯))
+        ⪯: %Element($~Relations/Endorelations(S = A)),
+        _1: %Constraint($~Relations/"well-order"(S = A, ⪯ = ⪯))
       ),
-      value = $../../Relations/related(S = A, T = A, s = a, t = b, ≺ = ⪯)
+      value = $~Relations/related(S = A, T = A, s = a, t = b, ≺ = ⪯)
     }]
   )]
 }

@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Identity_element
  *             * https://mathworld.wolfram.com/IdentityElement.html
@@ -22,9 +26,9 @@ $"identity element"(
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
+        ∗: %Element($~Operations/"Inner operations"(X = M))
       ),
-      value = $../../Essentials/Operations/"identity element"(X = M, ∗ = ∗, e = e)
+      value = $~Operations/"identity element"(X = M, ∗ = ∗, e = e)
     }]
   )]
 }

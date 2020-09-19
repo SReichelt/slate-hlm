@@ -1,5 +1,11 @@
 %../../../../../logics/hlm%
 
+[
+  $~Integers = $../Integer/Integers,
+  $~"Positive numbers" = $../Natural/Subsets/"Positive numbers",
+  $~product = $../Integer/product
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Rational_number#Ordering
  *             * https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Qle
@@ -13,20 +19,20 @@ $"less or equal"(a,b: %Element($"Rational numbers")): %Predicate {
     [{
       constructor = $"Rational numbers".quotient,
       parameters = #(
-        n_b: %Element($../Integer/Integers),
-        d_b: %Element($../Natural/Subsets/"Positive numbers")
+        n_b: %Element($~Integers),
+        d_b: %Element($~"Positive numbers")
       ),
       value = %structural(
         a, $"Rational numbers",
         [{
           constructor = $"Rational numbers".quotient,
           parameters = #(
-            n_a: %Element($../Integer/Integers),
-            d_a: %Element($../Natural/Subsets/"Positive numbers")
+            n_a: %Element($~Integers),
+            d_a: %Element($~"Positive numbers")
           ),
           value = $../Integer/"less or equal"(
-            a = $../Integer/product(a = n_a, b = d_b),
-            b = $../Integer/product(a = n_b, b = d_a)
+            a = $~product(a = n_a, b = d_b),
+            b = $~product(a = n_b, b = d_a)
           )
         }]
       )

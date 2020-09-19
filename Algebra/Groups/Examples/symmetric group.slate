@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~Bijections = $../../../Essentials/Functions/Bijections,
+  $~Functions = $../../../Essentials/Functions
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Symmetric_group
  *             * https://proofwiki.org/wiki/Definition:Symmetric_Group
@@ -8,22 +13,22 @@
 $"symmetric group"(X: %Set): %ExplicitOperator {
   notation = $SubSup(body = '𝑆', sub = X),
   definition = [$../Groups.group(
-    G = $../../../Essentials/Functions/Bijections(X = X, Y = X),
+    G = $~Bijections(X = X, Y = X),
     ∗ = $../../../Essentials/Operations/Operations(
-        X = $../../../Essentials/Functions/Bijections(X = X, Y = X),
-        Y = $../../../Essentials/Functions/Bijections(X = X, Y = X),
-        Z = $../../../Essentials/Functions/Bijections(X = X, Y = X)
+        X = $~Bijections(X = X, Y = X),
+        Y = $~Bijections(X = X, Y = X),
+        Z = $~Bijections(X = X, Y = X)
       ).operation(_1 = {
-        #(g,f: %Element($../../../Essentials/Functions/Bijections(X = X, Y = X))),
-        {z = $../../../Essentials/Functions/composition(X = X, Y = X, Z = X, f = f, g = g)}
+        #(g,f: %Element($~Bijections(X = X, Y = X))),
+        {z = $~Functions/composition(X = X, Y = X, Z = X, f = f, g = g)}
     }),
-    e = $../../../Essentials/Functions/identity(X = X),
-    i = $../../../Essentials/Functions/Functions(
-        X = $../../../Essentials/Functions/Bijections(X = X, Y = X),
-        Y = $../../../Essentials/Functions/Bijections(X = X, Y = X)
+    e = $~Functions/identity(X = X),
+    i = $~Functions/Functions(
+        X = $~Bijections(X = X, Y = X),
+        Y = $~Bijections(X = X, Y = X)
       ).function(_1 = {
-        #(f: %Element($../../../Essentials/Functions/Bijections(X = X, Y = X))),
-        {y = $../../../Essentials/Functions/inverse(X = X, Y = X, f = f)}
+        #(f: %Element($~Bijections(X = X, Y = X))),
+        {y = $~Functions/inverse(X = X, Y = X, f = f)}
     })
   )]
 }

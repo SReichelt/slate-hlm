@@ -1,12 +1,14 @@
 %../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Numbers/Natural/"Natural numbers",
+  $~Numbers = $../Numbers
+]
+
 $"starts with"(
   S: %Set(auto = %true),
   𝐚: %Element($"Infinite sequences"(S = S)),
-  n: %Element(
-    $../Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  n: %Element($~"Natural numbers", auto = %true),
   𝐛: %Element($Tuples(S = S, α = n))
 ): %Predicate {
   notation = $TextualRelation(
@@ -19,7 +21,7 @@ $"starts with"(
     [{
       constructor = $Tuples.sequence,
       parameters = #(_2: %Binder(
-        #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = n))),
+        #(k: %Element($~Numbers/Ordinal/Subsets/"Segment (less)"(α = n))),
         #(b: %Element(S))
       )),
       value = %structural(
@@ -28,11 +30,11 @@ $"starts with"(
         [{
           constructor = $"Infinite sequences".sequence,
           parameters = #(_1: %Binder(
-            #(k: %Element($../Numbers/Natural/"Natural numbers")),
+            #(k: %Element($~"Natural numbers")),
             #(a: %Element(S))
           )),
           value = %forall(
-            #(k: %Element($../Numbers/Natural/Subsets/"Segment (less)"(n = n))),
+            #(k: %Element($~Numbers/Natural/Subsets/"Segment (less)"(n = n))),
             %equals(
               a[k = k],
               b[k = k]

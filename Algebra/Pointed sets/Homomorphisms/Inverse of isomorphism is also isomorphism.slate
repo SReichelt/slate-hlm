@@ -1,13 +1,18 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~"Pointed sets" = $../"Pointed sets"
+]
+
 $"Inverse of isomorphism is also isomorphism"(
-  𝐒,𝐓: %Element($../"Pointed sets"),
+  𝐒,𝐓: %Element($~"Pointed sets"),
   φ: %Element($Isomorphisms(𝐒 = 𝐒, 𝐓 = 𝐓))
 ): %StandardTheorem {
   claim = %in(
     $../../../Essentials/Functions/inverse(
-      X = $../Carrier(𝐒 = 𝐒),
-      Y = $../Carrier(𝐒 = 𝐓),
+      X = $~Carrier(𝐒 = 𝐒),
+      Y = $~Carrier(𝐒 = 𝐓),
       f = φ
     ),
     $Isomorphisms(𝐒 = 𝐓, 𝐓 = 𝐒)

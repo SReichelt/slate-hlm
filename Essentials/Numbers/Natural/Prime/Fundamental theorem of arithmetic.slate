@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Sets = $../../../Sets
+]
+
 /**
  * @remarks This "official" statement of the fundamental theorem of arithmetic is actually a simple corollary of the previous version.
  *
@@ -14,8 +18,8 @@
 $"Fundamental theorem of arithmetic"(n: %Element($../Subsets/"Positive numbers")): %StandardTheorem {
   claim = %existsUnique(
     #(
-      𝑷: %Element($../../../Sets/Multisets/Multisets(S = $"Prime numbers")),
-      _1: %Constraint($../../../Sets/Multisets/finite(S = $"Prime numbers", 𝑻 = 𝑷))
+      𝑷: %Element($~Sets/Multisets/Multisets(S = $"Prime numbers")),
+      _1: %Constraint($~Sets/Multisets/finite(S = $"Prime numbers", 𝑻 = 𝑷))
     ),
     formula = %equals(
       n,
@@ -24,7 +28,7 @@ $"Fundamental theorem of arithmetic"(n: %Element($../Subsets/"Positive numbers")
         ⨂ = $../"Iterated operators"/"iterated product",
         S = $"Prime numbers", 𝑰 = 𝑷,
         _2 = {
-          #(p: %Element($../../../Sets/Multisets/Set(S = $"Prime numbers", 𝑻 = 𝑷))),
+          #(p: %Element($~Sets/Multisets/Set(S = $"Prime numbers", 𝑻 = 𝑷))),
           {a = p}
         }
       )

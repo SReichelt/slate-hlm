@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~Relations = $../Relations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Symmetric_closure
  *             * https://proofwiki.org/wiki/Definition:Symmetric_Closure
@@ -12,8 +16,8 @@ $"symmetric closure"(
   definition = [
     $closure(
       S = S, T = S, ≺ = ≺,
-      p = $../../Properties/Properties(S = $../Relations(S = S, T = S)).property(_1 = {
-          #(≺: %Element($../Relations(S = S, T = S))),
+      p = $../../Properties/Properties(S = $~Relations(S = S, T = S)).property(_1 = {
+          #(≺: %Element($~Relations(S = S, T = S))),
           {p = $../symmetric(S = S, ≺ = ≺)}
       })
     ),

@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~Integers = $../Integer/Integers,
+  $~Subsets = $../Integer/Subsets
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/data/real/irrational.html#irrational
  */
@@ -15,8 +20,8 @@ $rational(a: %Element($"Real numbers")): %Predicate {
     ),
     %exists(
       #(
-        b: %Element($../Integer/Subsets/"Nonzero numbers"),
-        c: %Element($../Integer/Integers)
+        b: %Element($~Subsets/"Nonzero numbers"),
+        c: %Element($~Integers)
       ),
       formula = %equals(
         a,
@@ -25,8 +30,8 @@ $rational(a: %Element($"Real numbers")): %Predicate {
     ),
     %existsUnique(
       #(
-        d: %Element($../Integer/Subsets/"Positive numbers"),
-        e: %Element($../Integer/Integers),
+        d: %Element($~Subsets/"Positive numbers"),
+        e: %Element($~Integers),
         _1: %Constraint($../Integer/coprime(a = d, b = e))
       ),
       formula = %equals(

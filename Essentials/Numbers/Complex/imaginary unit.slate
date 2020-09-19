@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~number = $../Natural/number
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Imaginary_unit
  *             * https://mathworld.wolfram.com/ImaginaryUnit.html
@@ -10,7 +14,7 @@
 $"imaginary unit": %ExplicitOperator {
   notation = '𝒊',
   definition = [$"Complex numbers".complex(
-    r = $../Natural/number(value = 0),
-    i = $../Natural/number(value = 1)
+    r = $~number(value = 0),
+    i = $~number(value = 1)
   )]
 }

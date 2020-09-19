@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Cartesian product" = $../Sets/"Cartesian product"
+]
+
 /**
  * @remarks This definition encodes a relation from `S` to `T` as a proposition depending on an element of `S` and an element of `T` (up to equivalence). It would be equally possible to encode relations as subsets of the Cartesian product; the given definition is just more convenient.
  *
@@ -73,16 +77,16 @@ $Relations(S,T: %Set(auto = %true)): %Construction {
     nameOptional = %true
   },
   embedding = {
-    parameter = #(r: %Element($../Properties/Properties(S = $../Sets/"Cartesian product"(S = S, T = T)))),
+    parameter = #(r: %Element($../Properties/Properties(S = $~"Cartesian product"(S = S, T = T)))),
     target = $Relations(S = S, T = T).relation(_1 = {
         #(
           s: %Element(S),
           t: %Element(T)
         ),
         {p = $../Properties/"has property"(
-          S = $../Sets/"Cartesian product"(S = S, T = T),
+          S = $~"Cartesian product"(S = S, T = T),
           p = r,
-          s = $../Sets/"Cartesian product"(S = S, T = T).pair(s = s, t = t)
+          s = $~"Cartesian product"(S = S, T = T).pair(s = s, t = t)
         )}
     }),
     full = %true

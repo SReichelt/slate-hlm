@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://ncatlab.org/nlab/show/associative+magma
  */
@@ -11,9 +15,9 @@ $associative(𝐌: %Element($Magmas)): %Predicate {
       constructor = $Magmas.magma,
       parameters = #(
         M: %Set,
-        ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M))
+        ∗: %Element($~Operations/"Inner operations"(X = M))
       ),
-      value = $../../Essentials/Operations/associative(X = M, ∗ = ∗)
+      value = $~Operations/associative(X = M, ∗ = ∗)
     }]
   )]
 }

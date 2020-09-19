@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../Natural/"Natural numbers",
+  $~sum = $../Natural/sum
+]
+
 /**
  * @remarks Note that the comparison on the right is comparison on natural numbers.
  *
@@ -13,22 +18,22 @@ $"less or equal"(a,b: %Element($Integers)): %Predicate {
       b, $Integers,
       [{
         constructor = $Integers.difference,
-        parameters = #(n_b,m_b: %Element($../Natural/"Natural numbers")),
+        parameters = #(n_b,m_b: %Element($~"Natural numbers")),
         value = %structural(
           a, $Integers,
           [{
             constructor = $Integers.difference,
-            parameters = #(n_a,m_a: %Element($../Natural/"Natural numbers")),
+            parameters = #(n_a,m_a: %Element($~"Natural numbers")),
             value = $../Natural/"less or equal"(
-              m = $../Natural/sum(m = n_a, n = m_b),
-              n = $../Natural/sum(m = n_b, n = m_a)
+              m = $~sum(m = n_a, n = m_b),
+              n = $~sum(m = n_b, n = m_a)
             )
           }]
         )
       }]
     ),
     %exists(
-      #(x: %Element($../Natural/"Natural numbers")),
+      #(x: %Element($~"Natural numbers")),
       formula = %equals(
         $sum(a = a, b = x),
         b

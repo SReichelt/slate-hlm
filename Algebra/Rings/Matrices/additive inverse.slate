@@ -1,14 +1,16 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Natural numbers" = $../../../Essentials/Numbers/Natural/"Natural numbers",
+  $~"Segment (less)" = $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"
+]
+
 $"additive inverse"(
   𝐑: %Element(
     $../Rings,
     auto = %true
   ),
-  m,n: %Element(
-    $../../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  m,n: %Element($~"Natural numbers", auto = %true),
   A: %Element($Matrices(𝐑 = 𝐑, m = m, n = n))
 ): %ExplicitOperator {
   notation = $NegationOperator(operand = A),
@@ -19,15 +21,15 @@ $"additive inverse"(
       constructor = $Matrices.matrix,
       parameters = #(_1: %Binder(
         #(
-          i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
-          j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
+          i: %Element($~"Segment (less)"(n = m)),
+          j: %Element($~"Segment (less)"(n = n))
         ),
         #(a: %Element($../Carrier(𝐑 = 𝐑)))
       )),
       value = $Matrices(𝐑 = 𝐑, m = m, n = n).matrix(_1 = {
           #(
-            i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
-            j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
+            i: %Element($~"Segment (less)"(n = m)),
+            j: %Element($~"Segment (less)"(n = n))
           ),
           {a = $../"additive inverse"(
             𝐑 = 𝐑,

@@ -1,20 +1,24 @@
 %../../../../logics/hlm%
 
+[
+  $~Categories = $../Categories,
+  $~"Natural numbers" = $../../Essentials/Numbers/Natural/"Natural numbers",
+  $~Objects = $../Objects,
+  $~identity = $../identity
+]
+
 /**
  * @references * https://ncatlab.org/nlab/show/identity+natural+transformation
  *             * https://leanprover-community.github.io/mathlib_docs/category_theory/natural_transformation.html#category_theory.nat_trans.id
  */
 $identity(
-  u,v: %Element(
-    $../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  u,v: %Element($~"Natural numbers", auto = %true),
   𝓒: %Element(
-    $../Categories(u = u),
+    $~Categories(u = u),
     auto = %true
   ),
   𝓓: %Element(
-    $../Categories(u = v),
+    $~Categories(u = v),
     auto = %true
   ),
   F: %Element(
@@ -25,17 +29,17 @@ $identity(
   notation = $SubSup(body = 'id', sub = F),
   definition = [
     $"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = F).transformation(_1 = {
-        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
-        {n = $../identity(
+        #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
+        {n = $~identity(
           u = v, 𝓒 = 𝓓,
           𝐗 = $../Functors/"object value"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗)
         )}
     }),
     $"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = F).transformation(_1 = {
-        #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
+        #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
         {n = $../Functors/"morphism value"(
           u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, 𝐗 = 𝐗, 𝐘 = 𝐗,
-          f = $../identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗)
+          f = $~identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗)
         )}
     })
   ]

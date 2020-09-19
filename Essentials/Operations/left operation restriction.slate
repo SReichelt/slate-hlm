@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~"Cartesian product" = $../Sets/"Cartesian product"
+]
+
 $"left operation restriction"(
   X,Y: %Set(auto = %true),
   A: %Subset(Y),
@@ -27,8 +31,8 @@ $"left operation restriction"(
     minParenLevel = 3
   ),
   definition = [$../Functions/"codomain restriction"(
-    X = $../Sets/"Cartesian product"(S = X, T = Y),
-    A = $../Sets/"Cartesian product"(S = X, T = A),
+    X = $~"Cartesian product"(S = X, T = Y),
+    A = $~"Cartesian product"(S = X, T = A),
     Y = Y, B = A, f = ∗
   )]
 }

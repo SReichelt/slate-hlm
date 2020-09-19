@@ -1,5 +1,11 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Positive numbers" = $../Subsets/"Positive numbers",
+  $~divisible = $../divisible,
+  $~power = $../power
+]
+
 /**
  * @remarks This definition would make sense even if `p` was not required to be prime. However, the term "multiplicity" is reserved for prime numbers due to its use in the unique prime factorization.
  *
@@ -8,7 +14,7 @@
  *             * https://leanprover-community.github.io/mathlib_docs/ring_theory/multiplicity.html#multiplicity
  */
 $multiplicity(
-  n: %Element($../Subsets/"Positive numbers"),
+  n: %Element($~"Positive numbers"),
   p: %Element($"Prime numbers")
 ): %ImplicitOperator {
   notation = $Function(
@@ -18,38 +24,38 @@ $multiplicity(
   parameter = #(x: %Element($../"Natural numbers")),
   definition = [
     %exists(
-      #(m: %Element($../Subsets/"Positive numbers")),
+      #(m: %Element($~"Positive numbers")),
       formula = %and(
         %equals(
           $../product(
-            m = $../power(m = p, n = x),
+            m = $~power(m = p, n = x),
             n = m
           ),
           n
         ),
-        %not($../divisible(m = p, n = m))
+        %not($~divisible(m = p, n = m))
       )
     ),
     %and(
-      $../divisible(
-        m = $../power(m = p, n = x),
+      $~divisible(
+        m = $~power(m = p, n = x),
         n = n
       ),
-      %not($../divisible(
+      %not($~divisible(
         m = p,
         n = $../quotient(
           n = n,
-          m = $../power(m = p, n = x)
+          m = $~power(m = p, n = x)
         )
       ))
     ),
     %and(
-      $../divisible(
-        m = $../power(m = p, n = x),
+      $~divisible(
+        m = $~power(m = p, n = x),
         n = n
       ),
-      %not($../divisible(
-        m = $../power(
+      %not($~divisible(
+        m = $~power(
           m = p,
           n = $../sum(
             m = x,
@@ -60,14 +66,14 @@ $multiplicity(
       ))
     ),
     %and(
-      $../divisible(
-        m = $../power(m = p, n = x),
+      $~divisible(
+        m = $~power(m = p, n = x),
         n = n
       ),
       %not(%exists(
         #(y: %Element($../Subsets/"Segment (greater)"(n = x))),
-        formula = $../divisible(
-          m = $../power(m = p, n = y),
+        formula = $~divisible(
+          m = $~power(m = p, n = y),
           n = n
         )
       ))

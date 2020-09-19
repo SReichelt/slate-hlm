@@ -1,11 +1,18 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~Essentials = $../../../Essentials,
+  $~"Pointed sets" = $../"Pointed sets",
+  $~"base point" = $../"base point"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Homomorphism
  *             * https://proofwiki.org/wiki/Definition:Homomorphism_(Abstract_Algebra)
  *             * https://ncatlab.org/nlab/show/homomorphism
  */
-$Homomorphisms(𝐒,𝐓: %Element($../"Pointed sets")): %SetOperator {
+$Homomorphisms(𝐒,𝐓: %Element($~"Pointed sets")): %SetOperator {
   notation = $Function(
     function = 'Hom',
     arguments = [𝐒, 𝐓]
@@ -20,18 +27,18 @@ $Homomorphisms(𝐒,𝐓: %Element($../"Pointed sets")): %SetOperator {
     pluralName = 'homomorphisms'
   },
   definition = [%subset(
-    #(f: %Element($../../../Essentials/Functions/Functions(
-      X = $../Carrier(𝐒 = 𝐒),
-      Y = $../Carrier(𝐒 = 𝐓)
+    #(f: %Element($~Essentials/Functions/Functions(
+      X = $~Carrier(𝐒 = 𝐒),
+      Y = $~Carrier(𝐒 = 𝐓)
     ))),
     %equals(
-      $../../../Essentials/Functions/value(
-        X = $../Carrier(𝐒 = 𝐒),
-        Y = $../Carrier(𝐒 = 𝐓),
+      $~Essentials/Functions/value(
+        X = $~Carrier(𝐒 = 𝐒),
+        Y = $~Carrier(𝐒 = 𝐓),
         f = f,
-        x = $../"base point"(𝐒 = 𝐒)
+        x = $~"base point"(𝐒 = 𝐒)
       ),
-      $../"base point"(𝐒 = 𝐓)
+      $~"base point"(𝐒 = 𝐓)
     )
   )]
 }

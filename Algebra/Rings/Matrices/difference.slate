@@ -1,14 +1,17 @@
 %../../../../../logics/hlm%
 
+[
+  $~Carrier = $../Carrier,
+  $~"Natural numbers" = $../../../Essentials/Numbers/Natural/"Natural numbers",
+  $~"Segment (less)" = $../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"
+]
+
 $difference(
   𝐑: %Element(
     $../Rings,
     auto = %true
   ),
-  m,n: %Element(
-    $../../../Essentials/Numbers/Natural/"Natural numbers",
-    auto = %true
-  ),
+  m,n: %Element($~"Natural numbers", auto = %true),
   A,B: %Element($Matrices(𝐑 = 𝐑, m = m, n = n))
 ): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [A, B]),
@@ -19,10 +22,10 @@ $difference(
       constructor = $Matrices.matrix,
       parameters = #(_2: %Binder(
         #(
-          i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
-          j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
+          i: %Element($~"Segment (less)"(n = m)),
+          j: %Element($~"Segment (less)"(n = n))
         ),
-        #(b: %Element($../Carrier(𝐑 = 𝐑)))
+        #(b: %Element($~Carrier(𝐑 = 𝐑)))
       )),
       value = %structuralCases(
         A,
@@ -31,15 +34,15 @@ $difference(
           constructor = $Matrices.matrix,
           parameters = #(_1: %Binder(
             #(
-              i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
-              j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
+              i: %Element($~"Segment (less)"(n = m)),
+              j: %Element($~"Segment (less)"(n = n))
             ),
-            #(a: %Element($../Carrier(𝐑 = 𝐑)))
+            #(a: %Element($~Carrier(𝐑 = 𝐑)))
           )),
           value = $Matrices(𝐑 = 𝐑, m = m, n = n).matrix(_1 = {
               #(
-                i: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = m)),
-                j: %Element($../../../Essentials/Numbers/Natural/Subsets/"Segment (less)"(n = n))
+                i: %Element($~"Segment (less)"(n = m)),
+                j: %Element($~"Segment (less)"(n = n))
               ),
               {a = $../difference(
                 𝐑 = 𝐑,

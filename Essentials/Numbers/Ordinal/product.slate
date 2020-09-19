@@ -1,5 +1,10 @@
 %../../../../../logics/hlm%
 
+[
+  $~Endorelations = $../../Relations/Endorelations,
+  $~"well-order" = $../../Relations/"well-order"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Ordinal_arithmetic#Multiplication
  *             * https://mathworld.wolfram.com/OrdinalMultiplication.html
@@ -14,8 +19,8 @@ $product(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
       constructor = $"Ordinal numbers"."order type",
       parameters = #(
         B: %Set,
-        ⊑: %Element($../../Relations/Endorelations(S = B)),
-        _1: %Constraint($../../Relations/"well-order"(S = B, ⪯ = ⊑))
+        ⊑: %Element($~Endorelations(S = B)),
+        _1: %Constraint($~"well-order"(S = B, ⪯ = ⊑))
       ),
       value = %structuralCases(
         α, $"Ordinal numbers",
@@ -23,8 +28,8 @@ $product(α,β: %Element($"Ordinal numbers")): %ExplicitOperator {
           constructor = $"Ordinal numbers"."order type",
           parameters = #(
             A: %Set,
-            ⪯: %Element($../../Relations/Endorelations(S = A)),
-            _1: %Constraint($../../Relations/"well-order"(S = A, ⪯ = ⪯))
+            ⪯: %Element($~Endorelations(S = A)),
+            _1: %Constraint($~"well-order"(S = A, ⪯ = ⪯))
           ),
           value = $"Ordinal numbers"."order type"(
             S = $../../Sets/"Cartesian product"(S = A, T = B),

@@ -1,5 +1,10 @@
 %../../../../../../logics/hlm%
 
+[
+  $~"Cardinal numbers" = $../"Cardinal numbers",
+  $~Carrier = $../Carrier
+]
+
 /**
  * @remarks In contrast to the previous definition, this definition works for arbitrary index sets `I`, using the generalized disjoint union to add cardinal numbers. However, due to the definition of disjoint union, it requires a "dependent equality" on the carrier sets of cardinalities.
  */
@@ -7,13 +12,13 @@ $"generalized sum"(
   I: %Set,
   _1: %Binder(
     #(i: %Element(I)),
-    #(κ: %Element($../"Cardinal numbers"))
+    #(κ: %Element($~"Cardinal numbers"))
   ),
   ≃: %Element($../../../Relations/"Dependent equality"/"Dependent equality"(
     I = I,
     _1 = {
       #(i: %Element(I)),
-      {S = $../Carrier(κ = κ[i = i])}
+      {S = $~Carrier(κ = κ[i = i])}
     }
   ))
 ): %ExplicitOperator {
@@ -23,11 +28,11 @@ $"generalized sum"(
     over = ≃,
     under = $ElementRelation(operands = [i, I])
   ),
-  definition = [$../"Cardinal numbers".cardinality(S = $../../../Sets/"Generalized operators"/"Generalized disjoint union"(
+  definition = [$~"Cardinal numbers".cardinality(S = $../../../Sets/"Generalized operators"/"Generalized disjoint union"(
     I = I,
     _1 = {
       #(i: %Element(I)),
-      {S = $../Carrier(κ = κ[i = i])}
+      {S = $~Carrier(κ = κ[i = i])}
     },
     ≃ = ≃
   ))]

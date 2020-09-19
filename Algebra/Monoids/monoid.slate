@@ -1,5 +1,9 @@
 %../../../../logics/hlm%
 
+[
+  $~Operations = $../../Essentials/Operations
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Monoid
  *             * https://mathworld.wolfram.com/Monoid.html
@@ -9,7 +13,7 @@
  */
 $monoid(
   M: %Set,
-  ∗: %Element($../../Essentials/Operations/"Inner operations"(X = M)),
+  ∗: %Element($~Operations/"Inner operations"(X = M)),
   e: %Element(M)
 ): %Predicate {
   notation = $Structure(
@@ -26,8 +30,8 @@ $monoid(
       )
     ),
     %and(
-      $../../Essentials/Operations/associative(X = M, ∗ = ∗),
-      $../../Essentials/Operations/"identity element"(X = M, ∗ = ∗, e = e)
+      $~Operations/associative(X = M, ∗ = ∗),
+      $~Operations/"identity element"(X = M, ∗ = ∗, e = e)
     )
   ]
 }

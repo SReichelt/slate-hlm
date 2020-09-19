@@ -1,11 +1,16 @@
 %../../../../logics/hlm%
 
+[
+  $~"Ordinal numbers" = $../Numbers/Ordinal/"Ordinal numbers",
+  $~"Segment (less)" = $../Numbers/Ordinal/Subsets/"Segment (less)"
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Ordinal_number#Transfinite_sequence (but we use arbitrary ordinals, not only limit ordinals)
  */
 $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(
-    α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
+    α: %Element($~"Ordinal numbers"),
     𝐚: %Element($Tuples(S = S, α = α))
   ): %Constructor {
     notation = $SubSup(
@@ -14,11 +19,11 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
     ),
     equalityDefinition = {
       leftParameters = #(
-        α: %Element($../Numbers/Ordinal/"Ordinal numbers"),
+        α: %Element($~"Ordinal numbers"),
         𝐚: %Element($Tuples(S = S, α = α))
       ),
       rightParameters = #(
-        β: %Element($../Numbers/Ordinal/"Ordinal numbers"),
+        β: %Element($~"Ordinal numbers"),
         𝐛: %Element($Tuples(S = S, α = β))
       ),
       definition = [%and(
@@ -31,11 +36,11 @@ $"Ordinal-indexed sequences"(S: %Set(auto = %true)): %Construction {
             [{
               constructor = $Tuples.sequence,
               parameters = #(_1: %Binder(
-                #(k: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = β))),
+                #(k: %Element($~"Segment (less)"(α = β))),
                 #(b: %Element(S))
               )),
               value = $Tuples(S = S, α = α).sequence(_1 = {
-                  #(j: %Element($../Numbers/Ordinal/Subsets/"Segment (less)"(α = α))),
+                  #(j: %Element($~"Segment (less)"(α = α))),
                   {a = b[k = j]}
               })
             }]
