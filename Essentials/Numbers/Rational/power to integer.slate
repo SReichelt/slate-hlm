@@ -11,7 +11,7 @@
  *
  * @references * https://en.wikipedia.org/wiki/Rational_number#Exponentiation_to_integer_power
  *             * https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Qpower
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#gpow
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power/basic.html#gpow
  */
 $"power to integer"(
   a: %Element($"Rational numbers"),

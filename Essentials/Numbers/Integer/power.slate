@@ -6,7 +6,7 @@
 
 /**
  * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.pow
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#monoid.pow
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power/basic.html#monoid.pow
  */
 $power(
   a: %Element($Integers),

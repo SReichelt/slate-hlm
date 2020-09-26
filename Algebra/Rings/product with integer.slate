@@ -6,7 +6,7 @@
 ]
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#gsmul
+ * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power/basic.html#gsmul
  */
 $"product with integer"(
   𝐑: %Element($Rings, auto = %true),

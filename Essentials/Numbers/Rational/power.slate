@@ -7,7 +7,7 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Rational_number#Exponentiation_to_integer_power
  *             * https://coq.inria.fr/library/Coq.QArith.QArith_base.html#Qpower_positive
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#monoid.pow
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power/basic.html#monoid.pow
  */
 $power(
   a: %Element($"Rational numbers"),

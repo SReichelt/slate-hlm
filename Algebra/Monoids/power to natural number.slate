@@ -6,7 +6,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Definition:Power_of_Element/Monoid
- *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#monoid.pow
+ *             * https://leanprover-community.github.io/mathlib_docs/algebra/group_power/basic.html#monoid.pow
  */
 $"power to natural number"(
   𝐌: %Element($Monoids, auto = %true),

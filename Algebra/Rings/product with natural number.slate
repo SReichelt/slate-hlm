@@ -5,7 +5,7 @@
 ]
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#add_monoid.smul
+ * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power/basic.html#nsmul
  */
 $"product with natural number"(
   𝐑: %Element($Rings, auto = %true),

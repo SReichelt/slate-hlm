@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power.html#div_pow
+ * @references * https://leanprover-community.github.io/mathlib_docs/algebra/group_power/basic.html#div_pow
  */
 $"Power base quotient law"(
   b: %Element($"Real numbers"),
