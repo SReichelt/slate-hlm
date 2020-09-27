@@ -38,21 +38,22 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
             $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x)))
           ),
           steps = #(
+            _1: %UseTheorem(
+              $"Successor can be pulled over addition"(m = m, n = x),
+              result = %equals(
+                $sum(
+                  m = $"Natural numbers".successor(n = m),
+                  n = x
+                ),
+                $"Natural numbers".successor(n = $sum(m = m, n = x))
+              )
+            ),
             _: %State(%equals(
               $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x))),
               $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x)))
             )),
             _: %Substitute(
-              #(_: %UseTheorem(
-                $"Successor can be pulled over addition"(m = m, n = x),
-                result = %equals(
-                  $sum(
-                    m = $"Natural numbers".successor(n = m),
-                    n = x
-                  ),
-                  $"Natural numbers".successor(n = $sum(m = m, n = x))
-                )
-              )),
+              #(_: %Consider(_1)),
               2,
               %equals(
                 $"Natural numbers".successor(n = $sum(

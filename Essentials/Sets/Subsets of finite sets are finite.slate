@@ -11,7 +11,7 @@
 /**
  * @remarks This is just an example proof. It could be rewritten in a very concise way as a proof about cardinals.
  *
- * @references * https://leanprover-community.github.io/mathlib_docs/data/set/finite.html#set.finite_subset
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/set/finite.html#set.finite.subset
  */
 $"Subsets of finite sets are finite"(
   S: %Set,

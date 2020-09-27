@@ -41,21 +41,22 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
             $"Natural numbers".successor(n = x)
           ),
           steps = #(
+            _1: %UseTheorem(
+              $"Left-addition of zero is neutral"(n = x),
+              result = %equals(
+                $sum(
+                  m = $"Natural numbers".zero,
+                  n = x
+                ),
+                x
+              )
+            ),
             _: %State(%equals(
               $"Natural numbers".successor(n = x),
               $"Natural numbers".successor(n = x)
             )),
             _: %Substitute(
-              #(_: %UseTheorem(
-                $"Left-addition of zero is neutral"(n = x),
-                result = %equals(
-                  $sum(
-                    m = $"Natural numbers".zero,
-                    n = x
-                  ),
-                  x
-                )
-              )),
+              #(_: %Consider(_1)),
               2,
               %equals(
                 $"Natural numbers".successor(n = $sum(
