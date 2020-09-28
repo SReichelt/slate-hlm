@@ -10,5 +10,22 @@ $"Union is superset of argument"(
   claim = %sub(
     S,
     $Union(U = U, S = S, T = T)
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(x: %Element(S)),
+      %in(
+        x,
+        $Union(U = U, S = S, T = T)
+      )
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(x: %Element(S)),
+      goal = %in(
+        x,
+        $Union(U = U, S = S, T = T)
+      ),
+      steps = #(_: %ProveDef)
+    }))
+  }))}]
 }

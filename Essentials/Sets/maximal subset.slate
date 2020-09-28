@@ -8,9 +8,10 @@ $"maximal subset"(
     #(p: %Prop)
   )
 ): %Predicate {
-  notation = $Verb(
+  notation = $NounProperty(
     operand = T,
-    verb = ['is a maximal subset ', I, ' of ', S, ' such that ', p]
+    singular = ['maximal subset ', I, ' of ', S, ' such that ', p],
+    plural = ['maximal subsets ', I, ' of ', S, ' such that ', p]
   ),
   definition = [%and(
     p[I = T],

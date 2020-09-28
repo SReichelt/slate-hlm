@@ -11,5 +11,19 @@ $"Intersection is subset of argument"(
   claim = %sub(
     $Intersection(U = U, S = S, T = T),
     S
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(x: %Element($Intersection(U = U, S = S, T = T))),
+      %in(x, S)
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(x: %Element($Intersection(U = U, S = S, T = T))),
+      goal = %in(x, S),
+      steps = #(
+        _: %Consider(x),
+        _: %UseDef(result = %in(x, S))
+      )
+    }))
+  }))}]
 }
