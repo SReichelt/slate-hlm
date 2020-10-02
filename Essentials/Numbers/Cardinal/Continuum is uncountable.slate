@@ -3,6 +3,7 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Cardinality_of_the_continuum
  *             * https://proofwiki.org/wiki/Real_Numbers_are_Uncountable
+ *             * http://us.metamath.org/mpeuni/ruc.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/cardinality.html#cardinal.not_countable_real
  */
 $"Continuum is uncountable": %StandardTheorem {

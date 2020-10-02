@@ -18,6 +18,7 @@
  * @references * https://en.wikipedia.org/wiki/Euclid%27s_theorem
  *             * https://mathworld.wolfram.com/EuclidsTheorems.html
  *             * https://proofwiki.org/wiki/Euclid%27s_Theorem
+ *             * http://us.metamath.org/mpeuni/infpn.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/nat/prime.html#nat.exists_infinite_primes
  */
 $"Euclids theorem": %StandardTheorem {
@@ -138,9 +139,9 @@ $"Euclids theorem": %StandardTheorem {
           )}
         }),
         result = %exists(
-          #(p: %Element($"Prime numbers")),
+          #(q: %Element($"Prime numbers")),
           formula = $~divisible(
-            m = p,
+            m = q,
             n = $~sum(
               m = a,
               n = $~number(value = 1)
@@ -148,56 +149,60 @@ $"Euclids theorem": %StandardTheorem {
           )
         )
       ),
-      _3: %UseExists(#(p: %Element($"Prime numbers"))),
-      _4: %UseTheorem(
-        $../"Divisibility criterion"(
-          a = p, b = a,
-          _1 = {proof = {steps = #(_: %UseTheorem(
-            $~"Iterated operators"/"Iterated product is a multiple of each element"(
-              I = $"Prime numbers",
+      _3: %UseExists(#(q: %Element($"Prime numbers"))),
+      _4: %State(
+        $~divisible(m = q, n = a),
+        proof = {steps = #(_: %UseTheorem(
+          $~"Iterated operators"/"Iterated product is a multiple of each element"(
+            I = $"Prime numbers",
+            _2 = {
+              #(p: %Element($"Prime numbers")),
+              {a = p}
+            },
+            j = q
+          ),
+          result = $~divisible(
+            m = q,
+            n = $~"indexed by finite set"(
+              X = $~"Natural numbers", ⨂ = $~"iterated product", I = $"Prime numbers",
               _2 = {
                 #(p: %Element($"Prime numbers")),
                 {a = p}
-              },
-              j = p
-            ),
-            result = $~divisible(
-              m = p,
-              n = $~"indexed by finite set"(
-                X = $~"Natural numbers", ⨂ = $~"iterated product", I = $"Prime numbers",
-                _2 = {
-                  #(p: %Element($"Prime numbers")),
-                  {a = p}
-                }
-              )
+              }
             )
-          ))}},
+          )
+        ))}
+      ),
+      _5: %UseTheorem(
+        $../"Divisibility criterion"(
+          a = q, b = a,
+          _1 = {proof = {steps = #(_: %Consider(_4))}},
           c = $~number(value = 1)
         ),
         input = #(_: %Consider(_3)),
         result = $~divisible(
-          m = p,
+          m = q,
           n = $~number(value = 1)
         )
       ),
       _: %UseTheorem(
         $../"Divisors are less or equal"(
-          m = p,
+          m = q,
           n = $~number(value = 1),
-          _1 = {proof = {steps = #(_: %Consider(_4))}}
+          _1 = {proof = {steps = #(_: %Consider(_5))}}
         ),
         result = $~"less or equal"(
-          m = p,
+          m = q,
           n = $~number(value = 1)
         )
       ),
-      _: %Consider(p),
+      _: %Consider(q),
       _: %UseDef(result = %in(
-        p,
+        q,
         $../Subsets/"Segment (greater)"(n = $~number(value = 1))
       )),
       _: %UseDef(result = $~less(
-        n = p,
+        n = q,
         m = $~number(value = 1)
       ))
     )

@@ -2,6 +2,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Intersection_is_Commutative
+ *             * http://us.metamath.org/mpeuni/incom.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.inter_comm
  */
 $"Intersection is commutative"(

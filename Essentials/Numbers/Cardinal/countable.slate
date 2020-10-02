@@ -4,6 +4,9 @@
   $~Natural = $../Natural
 ]
 
+/**
+ * @remarks See also the definition of a `$../../Sets/countable` set, which references this definition as one alternative.
+ */
 $countable(κ: %Element($"Cardinal numbers")): %Predicate {
   notation = $Property(
     operand = κ,

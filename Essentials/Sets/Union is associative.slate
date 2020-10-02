@@ -2,6 +2,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Union_is_Associative
+ *             * http://us.metamath.org/mpeuni/unass.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.union_assoc
  */
 $"Union is associative"(

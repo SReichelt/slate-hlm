@@ -18,6 +18,8 @@
  * @references * https://proofwiki.org/wiki/Square_Root_of_Prime_is_Irrational (for `n` = 2)
  *             * https://isabelle.in.tum.de/website-Isabelle2012/dist/library/HOL/ex/Sqrt.html (for `n` = 2)
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/irrational.html#nat.prime.irrational_sqrt (for `n` = 2)
+ *             * https://isabelle.in.tum.de/dist/library/HOL/HOL-ex/Sqrt.html (for `n` = 2)
+ *             * http://www.mizar.org/version/current/html/irrat_1.html#T1 (for `n` = 2)
  */
 $"Roots of primes are irrational"(
   p: %Element($~"Prime numbers"),

@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @remarks See also the definition of a `$../../Sets/"countably infinite"` set, which references this definition as one alternative.
+ */
 $"countably infinite"(κ: %Element($"Cardinal numbers")): %Predicate {
   notation = $Property(operand = κ, property = 'countably infinite'),
   definition = [
