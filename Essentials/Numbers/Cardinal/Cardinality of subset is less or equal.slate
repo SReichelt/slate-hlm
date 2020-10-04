@@ -1,0 +1,21 @@
+%../../../../../logics/hlm%
+
+$"Cardinality of subset is less or equal"(
+  S: %Set,
+  T: %Subset(S)
+): %StandardTheorem {
+  claim = $"less or equal"(
+    κ = $"Cardinal numbers".cardinality(S = T),
+    μ = $"Cardinal numbers".cardinality(S = S)
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %exists(
+      #(X: %Subset(S)),
+      formula = %equals(
+        $"Cardinal numbers".cardinality(S = X),
+        $"Cardinal numbers".cardinality(S = T)
+      )
+    ),
+    steps = #(_: %ProveExists({X = T}))
+  }))}]
+}

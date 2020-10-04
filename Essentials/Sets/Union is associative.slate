@@ -2,7 +2,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Union_is_Associative
- *             * http://us.metamath.org/mpeuni/unass.html
+ *             * http://metamath.tirix.org/unass.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.union_assoc
  */
 $"Union is associative"(
@@ -19,5 +19,271 @@ $"Union is associative"(
       U = U, S = R,
       T = $Union(U = U, S = S, T = T)
     )
-  )
+  ),
+  proofs = [{steps = #(_: %ProveEquivalence([
+    {
+      from = 1,
+      to = 2,
+      goal = %sub(
+        $Union(
+          U = U,
+          S = $Union(U = U, S = R, T = S),
+          T = T
+        ),
+        $Union(
+          U = U, S = R,
+          T = $Union(U = U, S = S, T = T)
+        )
+      ),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element($Union(
+            U = U,
+            S = $Union(U = U, S = R, T = S),
+            T = T
+          ))),
+          %in(
+            x,
+            $Union(
+              U = U, S = R,
+              T = $Union(U = U, S = S, T = T)
+            )
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element($Union(
+            U = U,
+            S = $Union(U = U, S = R, T = S),
+            T = T
+          ))),
+          goal = %in(
+            x,
+            $Union(
+              U = U, S = R,
+              T = $Union(U = U, S = S, T = T)
+            )
+          ),
+          steps = #(
+            _: %Consider(x),
+            _: %UseDef(result = %or(
+              %in(
+                x,
+                $Union(U = U, S = R, T = S)
+              ),
+              %in(x, T)
+            )),
+            _: %UseCases(caseProofs = [
+              {
+                parameters = #(_1: %Constraint(%in(
+                  x,
+                  $Union(U = U, S = R, T = S)
+                ))),
+                goal = %in(
+                  x,
+                  $Union(
+                    U = U, S = R,
+                    T = $Union(U = U, S = S, T = T)
+                  )
+                ),
+                steps = #(
+                  _: %Consider(_1),
+                  _: %UseDef(result = %or(
+                    %in(x, R),
+                    %in(x, S)
+                  )),
+                  _: %UseCases(caseProofs = [
+                    {
+                      parameters = #(_1: %Constraint(%in(x, R))),
+                      goal = %in(
+                        x,
+                        $Union(
+                          U = U, S = R,
+                          T = $Union(U = U, S = S, T = T)
+                        )
+                      ),
+                      steps = #(_: %ProveDef)
+                    },
+                    {
+                      parameters = #(_1: %Constraint(%in(x, S))),
+                      goal = %in(
+                        x,
+                        $Union(
+                          U = U, S = R,
+                          T = $Union(U = U, S = S, T = T)
+                        )
+                      ),
+                      steps = #(
+                        _: %State(
+                          %in(
+                            x,
+                            $Union(U = U, S = S, T = T)
+                          ),
+                          proof = {steps = #(_: %ProveDef)}
+                        ),
+                        _: %ProveDef
+                      )
+                    }
+                  ])
+                )
+              },
+              {
+                parameters = #(_1: %Constraint(%in(x, T))),
+                goal = %in(
+                  x,
+                  $Union(
+                    U = U, S = R,
+                    T = $Union(U = U, S = S, T = T)
+                  )
+                ),
+                steps = #(
+                  _: %State(
+                    %in(
+                      x,
+                      $Union(U = U, S = S, T = T)
+                    ),
+                    proof = {steps = #(_: %ProveDef)}
+                  ),
+                  _: %ProveDef
+                )
+              }
+            ])
+          )
+        }))
+      }))
+    },
+    {
+      from = 2,
+      to = 1,
+      goal = %sub(
+        $Union(
+          U = U, S = R,
+          T = $Union(U = U, S = S, T = T)
+        ),
+        $Union(
+          U = U,
+          S = $Union(U = U, S = R, T = S),
+          T = T
+        )
+      ),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element($Union(
+            U = U, S = R,
+            T = $Union(U = U, S = S, T = T)
+          ))),
+          %in(
+            x,
+            $Union(
+              U = U,
+              S = $Union(U = U, S = R, T = S),
+              T = T
+            )
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element($Union(
+            U = U, S = R,
+            T = $Union(U = U, S = S, T = T)
+          ))),
+          goal = %in(
+            x,
+            $Union(
+              U = U,
+              S = $Union(U = U, S = R, T = S),
+              T = T
+            )
+          ),
+          steps = #(
+            _: %Consider(x),
+            _: %UseDef(result = %or(
+              %in(x, R),
+              %in(
+                x,
+                $Union(U = U, S = S, T = T)
+              )
+            )),
+            _: %UseCases(caseProofs = [
+              {
+                parameters = #(_1: %Constraint(%in(x, R))),
+                goal = %in(
+                  x,
+                  $Union(
+                    U = U,
+                    S = $Union(U = U, S = R, T = S),
+                    T = T
+                  )
+                ),
+                steps = #(
+                  _: %State(
+                    %in(
+                      x,
+                      $Union(U = U, S = R, T = S)
+                    ),
+                    proof = {steps = #(_: %ProveDef)}
+                  ),
+                  _: %ProveDef
+                )
+              },
+              {
+                parameters = #(_1: %Constraint(%in(
+                  x,
+                  $Union(U = U, S = S, T = T)
+                ))),
+                goal = %in(
+                  x,
+                  $Union(
+                    U = U,
+                    S = $Union(U = U, S = R, T = S),
+                    T = T
+                  )
+                ),
+                steps = #(
+                  _: %Consider(_1),
+                  _: %UseDef(result = %or(
+                    %in(x, S),
+                    %in(x, T)
+                  )),
+                  _: %UseCases(caseProofs = [
+                    {
+                      parameters = #(_1: %Constraint(%in(x, S))),
+                      goal = %in(
+                        x,
+                        $Union(
+                          U = U,
+                          S = $Union(U = U, S = R, T = S),
+                          T = T
+                        )
+                      ),
+                      steps = #(
+                        _: %State(
+                          %in(
+                            x,
+                            $Union(U = U, S = R, T = S)
+                          ),
+                          proof = {steps = #(_: %ProveDef)}
+                        ),
+                        _: %ProveDef
+                      )
+                    },
+                    {
+                      parameters = #(_1: %Constraint(%in(x, T))),
+                      goal = %in(
+                        x,
+                        $Union(
+                          U = U,
+                          S = $Union(U = U, S = R, T = S),
+                          T = T
+                        )
+                      ),
+                      steps = #(_: %ProveDef)
+                    }
+                  ])
+                )
+              }
+            ])
+          )
+        }))
+      }))
+    }
+  ]))}]
 }

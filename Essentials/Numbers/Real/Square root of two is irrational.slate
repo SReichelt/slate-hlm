@@ -7,7 +7,7 @@
 ]
 
 /**
- * @references * http://us.metamath.org/mpeuni/infpn.html
+ * @references * http://metamath.tirix.org/infpn.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/real/irrational.html#irr_sqrt_two
  */
 $"Square root of two is irrational": %StandardTheorem {

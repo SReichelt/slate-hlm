@@ -2,7 +2,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Intersection_is_Commutative
- *             * http://us.metamath.org/mpeuni/incom.html
+ *             * http://metamath.tirix.org/incom.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.inter_comm
  */
 $"Intersection is commutative"(
@@ -12,5 +12,81 @@ $"Intersection is commutative"(
   claim = %setEquals(
     $Intersection(U = U, S = S, T = T),
     $Intersection(U = U, S = T, T = S)
-  )
+  ),
+  proofs = [{steps = #(_: %ProveEquivalence([
+    {
+      from = 1,
+      to = 2,
+      goal = %sub(
+        $Intersection(U = U, S = S, T = T),
+        $Intersection(U = U, S = T, T = S)
+      ),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element($Intersection(U = U, S = S, T = T))),
+          %in(
+            x,
+            $Intersection(U = U, S = T, T = S)
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element($Intersection(U = U, S = S, T = T))),
+          goal = %in(
+            x,
+            $Intersection(U = U, S = T, T = S)
+          ),
+          steps = #(_: %ProveDef(proof = {
+            goal = %and(
+              %in(x, T),
+              %in(x, S)
+            ),
+            steps = #(
+              _: %Consider(x),
+              _: %UseDef(result = %and(
+                %in(x, S),
+                %in(x, T)
+              ))
+            )
+          }))
+        }))
+      }))
+    },
+    {
+      from = 2,
+      to = 1,
+      goal = %sub(
+        $Intersection(U = U, S = T, T = S),
+        $Intersection(U = U, S = S, T = T)
+      ),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element($Intersection(U = U, S = T, T = S))),
+          %in(
+            x,
+            $Intersection(U = U, S = S, T = T)
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element($Intersection(U = U, S = T, T = S))),
+          goal = %in(
+            x,
+            $Intersection(U = U, S = S, T = T)
+          ),
+          steps = #(_: %ProveDef(proof = {
+            goal = %and(
+              %in(x, S),
+              %in(x, T)
+            ),
+            steps = #(
+              _: %Consider(x),
+              _: %UseDef(result = %and(
+                %in(x, T),
+                %in(x, S)
+              ))
+            )
+          }))
+        }))
+      }))
+    }
+  ]))}]
 }

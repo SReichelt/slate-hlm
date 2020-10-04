@@ -1,0 +1,33 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://proofwiki.org/wiki/Set_is_Subset_of_Union
+ *             * http://metamath.tirix.org/ssun2.html
+ *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.subset_union_right
+ */
+$"Union is superset of right argument"(
+  U: %Set,
+  S,T: %Subset(U)
+): %StandardTheorem {
+  claim = %sub(
+    T,
+    $Union(U = U, S = S, T = T)
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(x: %Element(T)),
+      %in(
+        x,
+        $Union(U = U, S = S, T = T)
+      )
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(x: %Element(T)),
+      goal = %in(
+        x,
+        $Union(U = U, S = S, T = T)
+      ),
+      steps = #(_: %ProveDef)
+    }))
+  }))}]
+}

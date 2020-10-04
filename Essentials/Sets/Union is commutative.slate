@@ -2,7 +2,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Union_is_Commutative
- *             * http://us.metamath.org/mpeuni/uncom.html
+ *             * http://metamath.tirix.org/uncom.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.union_comm
  */
 $"Union is commutative"(
@@ -12,5 +12,81 @@ $"Union is commutative"(
   claim = %setEquals(
     $Union(U = U, S = S, T = T),
     $Union(U = U, S = T, T = S)
-  )
+  ),
+  proofs = [{steps = #(_: %ProveEquivalence([
+    {
+      from = 1,
+      to = 2,
+      goal = %sub(
+        $Union(U = U, S = S, T = T),
+        $Union(U = U, S = T, T = S)
+      ),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element($Union(U = U, S = S, T = T))),
+          %in(
+            x,
+            $Union(U = U, S = T, T = S)
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element($Union(U = U, S = S, T = T))),
+          goal = %in(
+            x,
+            $Union(U = U, S = T, T = S)
+          ),
+          steps = #(_: %ProveDef(proof = {
+            goal = %or(
+              %in(x, T),
+              %in(x, S)
+            ),
+            steps = #(
+              _: %Consider(x),
+              _: %UseDef(result = %or(
+                %in(x, S),
+                %in(x, T)
+              ))
+            )
+          }))
+        }))
+      }))
+    },
+    {
+      from = 2,
+      to = 1,
+      goal = %sub(
+        $Union(U = U, S = T, T = S),
+        $Union(U = U, S = S, T = T)
+      ),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element($Union(U = U, S = T, T = S))),
+          %in(
+            x,
+            $Union(U = U, S = S, T = T)
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element($Union(U = U, S = T, T = S))),
+          goal = %in(
+            x,
+            $Union(U = U, S = S, T = T)
+          ),
+          steps = #(_: %ProveDef(proof = {
+            goal = %or(
+              %in(x, S),
+              %in(x, T)
+            ),
+            steps = #(
+              _: %Consider(x),
+              _: %UseDef(result = %or(
+                %in(x, T),
+                %in(x, S)
+              ))
+            )
+          }))
+        }))
+      }))
+    }
+  ]))}]
 }

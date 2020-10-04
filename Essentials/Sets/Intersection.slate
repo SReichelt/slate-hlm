@@ -7,8 +7,8 @@
  *             * https://mathworld.wolfram.com/Intersection.html
  *             * https://proofwiki.org/wiki/Definition:Set_Intersection
  *             * https://ncatlab.org/nlab/show/intersection
- *             * http://us.metamath.org/mpeuni/df-in.html
- *             * http://us.metamath.org/mpeuni/dfin5.html
+ *             * http://metamath.tirix.org/df-in.html
+ *             * http://metamath.tirix.org/dfin5.html
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.inter
  */
 $Intersection(
@@ -20,21 +20,11 @@ $Intersection(
     operands = [S, T],
     space = ' '
   ),
-  definition = [
-    %subset(
-      #(x: %Element(U)),
-      %and(
-        %in(x, S),
-        %in(x, T)
-      )
-    ),
-    %subset(
-      #(x: %Element(S)),
+  definition = [%subset(
+    #(x: %Element(U)),
+    %and(
+      %in(x, S),
       %in(x, T)
-    ),
-    %subset(
-      #(x: %Element(T)),
-      %in(x, S)
     )
-  ]
+  )]
 }

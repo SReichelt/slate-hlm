@@ -7,7 +7,7 @@
  *             * https://mathworld.wolfram.com/EmptySet.html
  *             * https://proofwiki.org/wiki/Definition:Empty_Set
  *             * https://ncatlab.org/nlab/show/empty+set
- *             * http://us.metamath.org/mpeuni/df-nul.html
+ *             * http://metamath.tirix.org/df-nul.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.empty_def
  */
 $"Empty set": %SetOperator {

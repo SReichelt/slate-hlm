@@ -2,28 +2,28 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Intersection_is_Subset
- *             * http://us.metamath.org/mpeuni/inss1.html
- *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.inter_subset_left
+ *             * http://metamath.tirix.org/inss2.html
+ *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.inter_subset_right
  */
-$"Intersection is subset of argument"(
+$"Intersection is subset of right argument"(
   U: %Set,
   S,T: %Subset(U)
 ): %StandardTheorem {
   claim = %sub(
     $Intersection(U = U, S = S, T = T),
-    S
+    T
   ),
   proofs = [{steps = #(_: %ProveDef(proof = {
     goal = %forall(
       #(x: %Element($Intersection(U = U, S = S, T = T))),
-      %in(x, S)
+      %in(x, T)
     ),
     steps = #(_: %ProveForAll({
       parameters = #(x: %Element($Intersection(U = U, S = S, T = T))),
-      goal = %in(x, S),
+      goal = %in(x, T),
       steps = #(
         _: %Consider(x),
-        _: %UseDef(result = %in(x, S))
+        _: %UseDef(result = %in(x, T))
       )
     }))
   }))}]

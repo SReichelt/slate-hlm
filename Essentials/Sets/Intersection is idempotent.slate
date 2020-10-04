@@ -1,0 +1,49 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://proofwiki.org/wiki/Intersection_is_Idempotent
+ *             * http://metamath.tirix.org/inidm.html
+ *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.inter_self
+ */
+$"Intersection is idempotent"(S: %Set): %StandardTheorem {
+  claim = %setEquals(
+    $Intersection(U = S, S = S, T = S),
+    S
+  ),
+  proofs = [{steps = #(_: %ProveEquivalence([
+    {
+      from = 1,
+      to = 2,
+      goal = %sub(
+        $Intersection(U = S, S = S, T = S),
+        S
+      ),
+      steps = #()
+    },
+    {
+      from = 2,
+      to = 1,
+      goal = %sub(
+        S,
+        $Intersection(U = S, S = S, T = S)
+      ),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element(S)),
+          %in(
+            x,
+            $Intersection(U = S, S = S, T = S)
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element(S)),
+          goal = %in(
+            x,
+            $Intersection(U = S, S = S, T = S)
+          ),
+          steps = #(_: %ProveDef)
+        }))
+      }))
+    }
+  ]))}]
+}

@@ -1,10 +1,11 @@
 %../../../../logics/hlm%
 
 /**
- * @references * http://us.metamath.org/mpeuni/ssun1.html
+ * @references * https://proofwiki.org/wiki/Set_is_Subset_of_Union
+ *             * http://metamath.tirix.org/ssun1.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.subset_union_left
  */
-$"Union is superset of argument"(
+$"Union is superset of left argument"(
   U: %Set,
   S,T: %Subset(U)
 ): %StandardTheorem {

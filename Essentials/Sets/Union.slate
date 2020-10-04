@@ -7,7 +7,7 @@
  *             * https://mathworld.wolfram.com/Union.html
  *             * https://proofwiki.org/wiki/Definition:Set_Union
  *             * https://ncatlab.org/nlab/show/union
- *             * http://us.metamath.org/mpeuni/df-un.html
+ *             * http://metamath.tirix.org/df-un.html
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.union
  */
 $Union(

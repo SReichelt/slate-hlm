@@ -1,0 +1,39 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://proofwiki.org/wiki/Union_with_Empty_Set
+ *             * http://metamath.tirix.org/un0.html
+ *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.union_empty
+ */
+$"Union with empty right argument is self"(S: %Set): %StandardTheorem {
+  claim = %setEquals(
+    $Union(U = S, S = S, T = $"Empty set"),
+    S
+  ),
+  proofs = [{steps = #(_: %ProveEquivalence([
+    {
+      from = 1,
+      to = 2,
+      goal = %sub(
+        $Union(U = S, S = S, T = $"Empty set"),
+        S
+      ),
+      steps = #()
+    },
+    {
+      from = 2,
+      to = 1,
+      goal = %sub(
+        S,
+        $Union(U = S, S = S, T = $"Empty set")
+      ),
+      steps = #(_: %UseTheorem(
+        $"Union is superset of left argument"(U = S, S = S, T = $"Empty set"),
+        result = %sub(
+          S,
+          $Union(U = S, S = S, T = $"Empty set")
+        )
+      ))
+    }
+  ]))}]
+}

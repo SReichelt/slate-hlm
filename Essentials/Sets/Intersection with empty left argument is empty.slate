@@ -1,0 +1,43 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.empty_inter
+ */
+$"Intersection with empty left argument is empty"(S: %Set): %StandardTheorem {
+  claim = %setEquals(
+    $Intersection(U = S, S = $"Empty set", T = S),
+    $"Empty set"
+  ),
+  proofs = [{steps = #(_: %ProveEquivalence([
+    {
+      from = 1,
+      to = 2,
+      goal = %sub(
+        $Intersection(U = S, S = $"Empty set", T = S),
+        $"Empty set"
+      ),
+      steps = #(_: %UseTheorem(
+        $"Intersection is subset of left argument"(U = S, S = $"Empty set", T = S),
+        result = %sub(
+          $Intersection(U = S, S = $"Empty set", T = S),
+          $"Empty set"
+        )
+      ))
+    },
+    {
+      from = 2,
+      to = 1,
+      goal = %sub(
+        $"Empty set",
+        $Intersection(U = S, S = $"Empty set", T = S)
+      ),
+      steps = #(_: %UseTheorem(
+        $"Empty set is subset of any set"(S = $Intersection(U = S, S = $"Empty set", T = S)),
+        result = %sub(
+          $"Empty set",
+          $Intersection(U = S, S = $"Empty set", T = S)
+        )
+      ))
+    }
+  ]))}]
+}

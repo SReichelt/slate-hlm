@@ -4,8 +4,8 @@
  * @references * https://en.wikipedia.org/wiki/Complement_(set_theory)#Relative_complement
  *             * https://mathworld.wolfram.com/SetDifference.html
  *             * https://proofwiki.org/wiki/Definition:Set_Difference
- *             * http://us.metamath.org/mpeuni/df-dif.html
- *             * http://us.metamath.org/mpeuni/dfdif2.html
+ *             * http://metamath.tirix.org/df-dif.html
+ *             * http://metamath.tirix.org/dfdif2.html
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.diff
  */
 $"Relative complement"(

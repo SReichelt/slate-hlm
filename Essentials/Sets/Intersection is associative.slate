@@ -2,7 +2,7 @@
 
 /**
  * @references * https://proofwiki.org/wiki/Intersection_is_Associative
- *             * http://us.metamath.org/mpeuni/inass.html
+ *             * http://metamath.tirix.org/inass.html
  *             * https://leanprover-community.github.io/mathlib_docs/data/set/basic.html#set.inter_assoc
  */
 $"Intersection is associative"(
@@ -19,5 +19,171 @@ $"Intersection is associative"(
       U = U, S = R,
       T = $Intersection(U = U, S = S, T = T)
     )
-  )
+  ),
+  proofs = [{steps = #(_: %ProveEquivalence([
+    {
+      from = 1,
+      to = 2,
+      goal = %sub(
+        $Intersection(
+          U = U,
+          S = $Intersection(U = U, S = R, T = S),
+          T = T
+        ),
+        $Intersection(
+          U = U, S = R,
+          T = $Intersection(U = U, S = S, T = T)
+        )
+      ),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element($Intersection(
+            U = U,
+            S = $Intersection(U = U, S = R, T = S),
+            T = T
+          ))),
+          %in(
+            x,
+            $Intersection(
+              U = U, S = R,
+              T = $Intersection(U = U, S = S, T = T)
+            )
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element($Intersection(
+            U = U,
+            S = $Intersection(U = U, S = R, T = S),
+            T = T
+          ))),
+          goal = %in(
+            x,
+            $Intersection(
+              U = U, S = R,
+              T = $Intersection(U = U, S = S, T = T)
+            )
+          ),
+          steps = #(_: %ProveDef(proof = {
+            goal = %and(
+              %in(x, R),
+              %in(
+                x,
+                $Intersection(U = U, S = S, T = T)
+              )
+            ),
+            steps = #(
+              _: %Consider(x),
+              _1: %UseDef(result = %and(
+                %in(
+                  x,
+                  $Intersection(U = U, S = R, T = S)
+                ),
+                %in(x, T)
+              )),
+              _: %Consider(
+                _1,
+                result = %in(
+                  x,
+                  $Intersection(U = U, S = R, T = S)
+                )
+              ),
+              _: %UseDef(result = %and(
+                %in(x, R),
+                %in(x, S)
+              )),
+              _: %State(
+                %in(
+                  x,
+                  $Intersection(U = U, S = S, T = T)
+                ),
+                proof = {steps = #(_: %ProveDef)}
+              )
+            )
+          }))
+        }))
+      }))
+    },
+    {
+      from = 2,
+      to = 1,
+      goal = %sub(
+        $Intersection(
+          U = U, S = R,
+          T = $Intersection(U = U, S = S, T = T)
+        ),
+        $Intersection(
+          U = U,
+          S = $Intersection(U = U, S = R, T = S),
+          T = T
+        )
+      ),
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element($Intersection(
+            U = U, S = R,
+            T = $Intersection(U = U, S = S, T = T)
+          ))),
+          %in(
+            x,
+            $Intersection(
+              U = U,
+              S = $Intersection(U = U, S = R, T = S),
+              T = T
+            )
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element($Intersection(
+            U = U, S = R,
+            T = $Intersection(U = U, S = S, T = T)
+          ))),
+          goal = %in(
+            x,
+            $Intersection(
+              U = U,
+              S = $Intersection(U = U, S = R, T = S),
+              T = T
+            )
+          ),
+          steps = #(_: %ProveDef(proof = {
+            goal = %and(
+              %in(
+                x,
+                $Intersection(U = U, S = R, T = S)
+              ),
+              %in(x, T)
+            ),
+            steps = #(
+              _: %Consider(x),
+              _2: %UseDef(result = %and(
+                %in(x, R),
+                %in(
+                  x,
+                  $Intersection(U = U, S = S, T = T)
+                )
+              )),
+              _: %Consider(
+                _2,
+                result = %in(
+                  x,
+                  $Intersection(U = U, S = S, T = T)
+                )
+              ),
+              _: %UseDef(result = %and(
+                %in(x, S),
+                %in(x, T)
+              )),
+              _: %State(
+                %in(
+                  x,
+                  $Intersection(U = U, S = R, T = S)
+                ),
+                proof = {steps = #(_: %ProveDef)}
+              )
+            )
+          }))
+        }))
+      }))
+    }
+  ]))}]
 }

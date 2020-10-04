@@ -1,0 +1,9 @@
+%../../../../../logics/hlm%
+
+$"Less or equal preserves finiteness"(
+  κ,μ: %Element($"Cardinal numbers"),
+  _1: %Constraint($finite(κ = μ)),
+  _2: %Constraint($"less or equal"(κ = κ, μ = μ))
+): %StandardTheorem {
+  claim = $finite(κ = κ)
+}
