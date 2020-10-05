@@ -17,10 +17,6 @@ $"Intersection is commutative"(
     {
       from = 1,
       to = 2,
-      goal = %sub(
-        $Intersection(U = U, S = S, T = T),
-        $Intersection(U = U, S = T, T = S)
-      ),
       steps = #(_: %ProveDef(proof = {
         goal = %forall(
           #(x: %Element($Intersection(U = U, S = S, T = T))),
@@ -54,10 +50,6 @@ $"Intersection is commutative"(
     {
       from = 2,
       to = 1,
-      goal = %sub(
-        $Intersection(U = U, S = T, T = S),
-        $Intersection(U = U, S = S, T = T)
-      ),
       steps = #(_: %ProveDef(proof = {
         goal = %forall(
           #(x: %Element($Intersection(U = U, S = T, T = S))),

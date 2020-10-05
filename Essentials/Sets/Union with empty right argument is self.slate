@@ -14,19 +14,11 @@ $"Union with empty right argument is self"(S: %Set): %StandardTheorem {
     {
       from = 1,
       to = 2,
-      goal = %sub(
-        $Union(U = S, S = S, T = $"Empty set"),
-        S
-      ),
       steps = #()
     },
     {
       from = 2,
       to = 1,
-      goal = %sub(
-        S,
-        $Union(U = S, S = S, T = $"Empty set")
-      ),
       steps = #(_: %UseTheorem(
         $"Union is superset of left argument"(U = S, S = S, T = $"Empty set"),
         result = %sub(

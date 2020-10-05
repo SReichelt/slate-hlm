@@ -24,17 +24,6 @@ $"Intersection is associative"(
     {
       from = 1,
       to = 2,
-      goal = %sub(
-        $Intersection(
-          U = U,
-          S = $Intersection(U = U, S = R, T = S),
-          T = T
-        ),
-        $Intersection(
-          U = U, S = R,
-          T = $Intersection(U = U, S = S, T = T)
-        )
-      ),
       steps = #(_: %ProveDef(proof = {
         goal = %forall(
           #(x: %Element($Intersection(
@@ -106,17 +95,6 @@ $"Intersection is associative"(
     {
       from = 2,
       to = 1,
-      goal = %sub(
-        $Intersection(
-          U = U, S = R,
-          T = $Intersection(U = U, S = S, T = T)
-        ),
-        $Intersection(
-          U = U,
-          S = $Intersection(U = U, S = R, T = S),
-          T = T
-        )
-      ),
       steps = #(_: %ProveDef(proof = {
         goal = %forall(
           #(x: %Element($Intersection(

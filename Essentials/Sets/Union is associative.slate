@@ -24,17 +24,6 @@ $"Union is associative"(
     {
       from = 1,
       to = 2,
-      goal = %sub(
-        $Union(
-          U = U,
-          S = $Union(U = U, S = R, T = S),
-          T = T
-        ),
-        $Union(
-          U = U, S = R,
-          T = $Union(U = U, S = S, T = T)
-        )
-      ),
       steps = #(_: %ProveDef(proof = {
         goal = %forall(
           #(x: %Element($Union(
@@ -154,17 +143,6 @@ $"Union is associative"(
     {
       from = 2,
       to = 1,
-      goal = %sub(
-        $Union(
-          U = U, S = R,
-          T = $Union(U = U, S = S, T = T)
-        ),
-        $Union(
-          U = U,
-          S = $Union(U = U, S = R, T = S),
-          T = T
-        )
-      ),
       steps = #(_: %ProveDef(proof = {
         goal = %forall(
           #(x: %Element($Union(

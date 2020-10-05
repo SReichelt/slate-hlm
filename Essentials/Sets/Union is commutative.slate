@@ -17,10 +17,6 @@ $"Union is commutative"(
     {
       from = 1,
       to = 2,
-      goal = %sub(
-        $Union(U = U, S = S, T = T),
-        $Union(U = U, S = T, T = S)
-      ),
       steps = #(_: %ProveDef(proof = {
         goal = %forall(
           #(x: %Element($Union(U = U, S = S, T = T))),
@@ -54,10 +50,6 @@ $"Union is commutative"(
     {
       from = 2,
       to = 1,
-      goal = %sub(
-        $Union(U = U, S = T, T = S),
-        $Union(U = U, S = S, T = T)
-      ),
       steps = #(_: %ProveDef(proof = {
         goal = %forall(
           #(x: %Element($Union(U = U, S = T, T = S))),

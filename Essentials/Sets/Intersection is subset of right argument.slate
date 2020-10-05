@@ -20,11 +20,7 @@ $"Intersection is subset of right argument"(
     ),
     steps = #(_: %ProveForAll({
       parameters = #(x: %Element($Intersection(U = U, S = S, T = T))),
-      goal = %in(x, T),
-      steps = #(
-        _: %Consider(x),
-        _: %UseDef(result = %in(x, T))
-      )
+      steps = #(_: %UseDef(result = %in(x, T)))
     }))
   }))}]
 }
