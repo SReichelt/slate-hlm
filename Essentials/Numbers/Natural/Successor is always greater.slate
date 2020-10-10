@@ -10,5 +10,18 @@ $"Successor is always greater"(n: %Element($"Natural numbers")): %StandardTheore
       n = $number(value = 1)
     ),
     m = n
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %exists(
+      #(x: %Element($Subsets/"Positive numbers")),
+      formula = %equals(
+        $sum(m = n, n = x),
+        $sum(
+          m = n,
+          n = $number(value = 1)
+        )
+      )
+    ),
+    steps = #(_: %ProveExists({x = $number(value = 1)}))
+  }))}]
 }

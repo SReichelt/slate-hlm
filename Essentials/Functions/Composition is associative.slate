@@ -23,5 +23,45 @@ $"Composition is associative"(
       f = $composition(X = W, Y = X, Z = Y, f = f, g = g),
       g = h
     )
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(w: %Element(W)),
+      %equals(
+        $value(
+          X = X, Y = Z,
+          f = $composition(X = X, Y = Y, Z = Z, f = g, g = h),
+          x = $value(X = W, Y = X, f = f, x = w)
+        ),
+        $value(
+          X = Y, Y = Z, f = h,
+          x = $value(
+            X = W, Y = Y,
+            f = $composition(X = W, Y = X, Z = Y, f = f, g = g),
+            x = w
+          )
+        )
+      )
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(w: %Element(W)),
+      goal = %equals(
+        $value(
+          X = Y, Y = Z, f = h,
+          x = $value(
+            X = X, Y = Y, f = g,
+            x = $value(X = W, Y = X, f = f, x = w)
+          )
+        ),
+        $value(
+          X = Y, Y = Z, f = h,
+          x = $value(
+            X = X, Y = Y, f = g,
+            x = $value(X = W, Y = X, f = f, x = w)
+          )
+        )
+      ),
+      steps = #()
+    }))
+  }))}]
 }

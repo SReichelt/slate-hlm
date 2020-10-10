@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Positive numbers" = $Subsets/"Positive numbers"
+]
+
 /**
  * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.lt_of_lt_of_le
  */
@@ -11,5 +15,38 @@ $"Less and less or equal combine to less"(
     n = c
   ))
 ): %StandardTheorem {
-  claim = $less(m = a, n = c)
+  claim = $less(m = a, n = c),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %exists(
+      #(x: %Element($~"Positive numbers")),
+      formula = %equals(
+        $sum(m = a, n = x),
+        c
+      )
+    ),
+    steps = #(
+      _: %Consider(_1),
+      _: %UseDef(result = %exists(
+        #(y: %Element($~"Positive numbers")),
+        formula = %equals(
+          $sum(m = a, n = y),
+          b
+        )
+      )),
+      _: %UseExists(#(y: %Element($~"Positive numbers"))),
+      _: %Consider(_2),
+      _: %UseDef(result = %exists(
+        #(z: %Element($"Natural numbers")),
+        formula = %equals(
+          $sum(
+            m = %associative(b),
+            n = z
+          ),
+          c
+        )
+      )),
+      _: %UseExists(#(z: %Element($"Natural numbers"))),
+      _: %ProveExists({x = $sum(m = y, n = z)})
+    )
+  }))}]
 }
