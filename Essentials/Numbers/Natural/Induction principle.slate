@@ -10,28 +10,54 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
     $inductive(M = M),
     %setEquals(M, $"Natural numbers")
   ],
-  equivalenceProofs = [{
-    from = 1,
-    to = 2,
-    parameters = #(@: %Constraint($inductive(M = M))),
-    goal = %setEquals(M, $"Natural numbers"),
-    steps = #(_: %ProveEquivalence([{
+  equivalenceProofs = [
+    {
+      from = 1,
+      to = 2,
+      parameters = #(_1: %Constraint($inductive(M = M))),
+      goal = %setEquals(M, $"Natural numbers"),
+      steps = #(_: %ProveEquivalence([
+        {
+          from = 1,
+          to = 2,
+          steps = #()
+        },
+        {
+          from = 2,
+          to = 1,
+          steps = #(_: %ProveDef(proof = {
+            goal = %forall(
+              #(n: %Element($"Natural numbers")),
+              %in(n, M)
+            ),
+            steps = #(_: %ProveForAll({
+              parameters = #(n: %Element($"Natural numbers")),
+              goal = %in(n, M),
+              steps = #(_: %UseTheorem(
+                $"Induction lemma"(M = M, n = n),
+                result = %in(n, M)
+              ))
+            }))
+          }))
+        }
+      ]))
+    },
+    {
       from = 2,
       to = 1,
-      steps = #(_: %ProveDef(proof = {
-        goal = %forall(
-          #(n: %Element($"Natural numbers")),
-          %in(n, M)
+      parameters = #(_1: %Constraint(%setEquals(M, $"Natural numbers"))),
+      goal = $inductive(M = M),
+      steps = #(
+        _: %State(
+          $inductive(M = $"Natural numbers"),
+          proof = {steps = #(_: %ProveDef)}
         ),
-        steps = #(_: %ProveForAll({
-          parameters = #(n: %Element($"Natural numbers")),
-          goal = %in(n, M),
-          steps = #(_: %UseTheorem(
-            $"Induction lemma"(M = M, n = n),
-            result = %in(n, M)
-          ))
-        }))
-      }))
-    }]))
-  }]
+        _: %Substitute(
+          #(_: %Consider(_1)),
+          2,
+          $inductive(M = M)
+        )
+      )
+    }
+  ]
 }

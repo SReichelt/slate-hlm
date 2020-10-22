@@ -1,5 +1,8 @@
 %../../../../../logics/hlm%
 
+/**
+ * @remarks This lemma is necessary to prove `$"Induction principle"` because structural induction is only allowed on theorem parameters.
+ */
 $"Induction lemma"(
   M: %Subset($"Natural numbers"),
   _1: %Constraint($inductive(M = M)),

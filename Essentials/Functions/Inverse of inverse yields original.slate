@@ -10,5 +10,34 @@ $"Inverse of inverse yields original"(
       f = $inverse(X = X, Y = Y, f = f)
     ),
     f
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(
+    side = 1,
+    proof = {
+      goal = %equals(
+        $composition(
+          X = X, Y = Y, Z = X, f = f,
+          g = $inverse(X = X, Y = Y, f = f)
+        ),
+        $identity(X = X)
+      ),
+      steps = #(
+        g: %Def($inverse(X = X, Y = Y, f = f)),
+        _: %UseDef(
+          side = 2,
+          result = %equals(
+            $identity(X = X),
+            $composition(X = X, Y = Y, Z = X, f = f, g = g)
+          )
+        ),
+        _: %Unfold(%equals(
+          $identity(X = X),
+          $composition(
+            X = X, Y = Y, Z = X, f = f,
+            g = $inverse(X = X, Y = Y, f = f)
+          )
+        ))
+      )
+    }
+  ))}]
 }
