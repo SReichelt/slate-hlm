@@ -10,5 +10,12 @@ $"Restriction preserves injectivity"(
   claim = $injective(
     X = A, Y = Y,
     f = $restriction(X = X, A = A, Y = Y, f = f)
-  )
+  ),
+  proofs = [{steps = #(_: %UseTheorem(
+    $"Generalized restriction preserves injectivity"(X = X, A = A, B = Y, Y = Y, f = f),
+    result = $injective(
+      X = A, Y = Y,
+      f = $"generalized restriction"(X = X, A = A, B = Y, Y = Y, f = f)
+    )
+  ))}]
 }

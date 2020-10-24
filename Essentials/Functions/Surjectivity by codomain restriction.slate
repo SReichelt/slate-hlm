@@ -14,5 +14,66 @@ $"Surjectivity by codomain restriction"(
       B = $Image(X = X, Y = Y, f = f, S = A),
       f = f
     )
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(y: %Element($Image(X = X, Y = Y, f = f, S = A))),
+      %exists(
+        #(x: %Element(A)),
+        formula = %equals(
+          $value(
+            X = A,
+            Y = $Image(X = X, Y = Y, f = f, S = A),
+            f = $"codomain restriction"(
+              X = X, A = A, Y = Y,
+              B = $Image(X = X, Y = Y, f = f, S = A),
+              f = f
+            ),
+            x = x
+          ),
+          y
+        )
+      )
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(y: %Element($Image(X = X, Y = Y, f = f, S = A))),
+      goal = %exists(
+        #(x: %Element(A)),
+        formula = %equals(
+          $value(
+            X = A,
+            Y = $Image(X = X, Y = Y, f = f, S = A),
+            f = $"codomain restriction"(
+              X = X, A = A, Y = Y,
+              B = $Image(X = X, Y = Y, f = f, S = A),
+              f = f
+            ),
+            x = x
+          ),
+          y
+        )
+      ),
+      steps = #(
+        _: %Consider(y),
+        _: %UseDef(result = %exists(
+          #(a: %Element(A)),
+          formula = %equals(
+            y,
+            $value(X = X, Y = Y, f = f, x = a)
+          )
+        )),
+        _: %UseExists(#(a: %Element(A))),
+        _: %ProveExists(
+          {x = a},
+          proof = {
+            goal = %equals(
+              $value(X = X, Y = Y, f = f, x = a),
+              y
+            ),
+            steps = #()
+          }
+        )
+      )
+    }))
+  }))}]
 }

@@ -11,5 +11,62 @@ $"Generalized restriction preserves injectivity"(
   claim = $injective(
     X = A, Y = B,
     f = $"generalized restriction"(X = X, A = A, B = B, Y = Y, f = f)
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(
+        a,b: %Element(A),
+        _2: %Constraint(%equals(
+          $value(
+            X = A, Y = B,
+            f = $"generalized restriction"(X = X, A = A, B = B, Y = Y, f = f),
+            x = a
+          ),
+          $value(
+            X = A, Y = B,
+            f = $"generalized restriction"(X = X, A = A, B = B, Y = Y, f = f),
+            x = b
+          )
+        ))
+      ),
+      %equals(a, b)
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(
+        a,b: %Element(A),
+        _3: %Constraint(%equals(
+          $value(
+            X = A, Y = B,
+            f = $"generalized restriction"(X = X, A = A, B = B, Y = Y, f = f),
+            x = a
+          ),
+          $value(
+            X = A, Y = B,
+            f = $"generalized restriction"(X = X, A = A, B = B, Y = Y, f = f),
+            x = b
+          )
+        ))
+      ),
+      goal = %equals(a, b),
+      steps = #(
+        _: %Consider(_3),
+        _: %Unfold(%equals(
+          $value(X = X, Y = Y, f = f, x = a),
+          $value(X = X, Y = Y, f = f, x = b)
+        )),
+        _: %Consider(_1),
+        _: %UseDef(result = %forall(
+          #(
+            x,y: %Element(X),
+            _3: %Constraint(%equals(
+              $value(X = X, Y = Y, f = f, x = x),
+              $value(X = X, Y = Y, f = f, x = y)
+            ))
+          ),
+          %equals(x, y)
+        )),
+        _: %UseForAll({x = a, y = b})
+      )
+    }))
+  }))}]
 }

@@ -1,0 +1,18 @@
+%../../../../logics/hlm%
+
+$"Injectivity by generalized restriction"(
+  X: %Set(auto = %true),
+  B: %Set,
+  Y: %Subset(B, auto = %true),
+  f: %Element($Functions(X = X, Y = Y))
+): %StandardTheorem {
+  claim = $injective(
+    X = $Preimage(X = X, Y = Y, f = f, S = Y),
+    Y = B,
+    f = $"generalized restriction"(
+      X = X,
+      A = $Preimage(X = X, Y = Y, f = f, S = Y),
+      B = B, Y = Y, f = f
+    )
+  )
+}

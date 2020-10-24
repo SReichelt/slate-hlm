@@ -10,5 +10,9 @@ $"Extension preserves surjectivity"(
     f = $restriction(X = X, A = A, Y = Y, f = f)
   ))
 ): %StandardTheorem {
-  claim = $surjective(X = X, Y = Y, f = f)
+  claim = $surjective(X = X, Y = Y, f = f),
+  proofs = [{steps = #(_: %UseTheorem(
+    $"Generalized extension preserves surjectivity"(X = X, A = A, B = Y, Y = Y, f = f),
+    result = $surjective(X = X, Y = Y, f = f)
+  ))}]
 }

@@ -11,5 +11,51 @@ $"Generalized extension preserves surjectivity"(
     f = $"generalized restriction"(X = X, A = A, B = B, Y = Y, f = f)
   ))
 ): %StandardTheorem {
-  claim = $surjective(X = X, Y = Y, f = f)
+  claim = $surjective(X = X, Y = Y, f = f),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(y: %Element(Y)),
+      %exists(
+        #(x: %Element(X)),
+        formula = %equals(
+          $value(X = X, Y = Y, f = f, x = x),
+          y
+        )
+      )
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(y: %Element(Y)),
+      goal = %exists(
+        #(x: %Element(X)),
+        formula = %equals(
+          $value(X = X, Y = Y, f = f, x = x),
+          y
+        )
+      ),
+      steps = #(
+        _: %Consider(_1),
+        _: %UseDef(result = %forall(
+          #(b: %Element(B)),
+          %exists(
+            #(a: %Element(A)),
+            formula = %equals(
+              $value(
+                X = A, Y = B,
+                f = $"generalized restriction"(X = X, A = A, B = B, Y = Y, f = f),
+                x = a
+              ),
+              b
+            )
+          )
+        )),
+        _: %UseForAll({b = y}),
+        _: %UseExists(#(a: %Element(A))),
+        _: %Unfold(%equals(
+          $value(X = X, Y = Y, f = f, x = a),
+          y
+        )),
+        _: %ProveExists({x = a})
+      )
+    }))
+  }))}]
 }
