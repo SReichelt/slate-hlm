@@ -23,10 +23,6 @@ $"Union is superset of left argument"(
     ),
     steps = #(_: %ProveForAll({
       parameters = #(x: %Element(S)),
-      goal = %in(
-        x,
-        $Union(U = U, S = S, T = T)
-      ),
       steps = #(_: %ProveDef)
     }))
   }))}]

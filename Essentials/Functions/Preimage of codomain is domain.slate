@@ -27,10 +27,6 @@ $"Preimage of codomain is domain"(
         ),
         steps = #(_: %ProveForAll({
           parameters = #(x: %Element(X)),
-          goal = %in(
-            x,
-            $Preimage(X = X, Y = Y, f = f, S = Y)
-          ),
           steps = #(_: %ProveDef)
         }))
       }))

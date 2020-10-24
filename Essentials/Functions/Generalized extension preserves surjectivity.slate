@@ -25,13 +25,6 @@ $"Generalized extension preserves surjectivity"(
     ),
     steps = #(_: %ProveForAll({
       parameters = #(y: %Element(Y)),
-      goal = %exists(
-        #(x: %Element(X)),
-        formula = %equals(
-          $value(X = X, Y = Y, f = f, x = x),
-          y
-        )
-      ),
       steps = #(
         _: %Consider(_1),
         _: %UseDef(result = %forall(

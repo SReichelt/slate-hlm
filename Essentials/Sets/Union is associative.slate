@@ -45,13 +45,6 @@ $"Union is associative"(
             S = $Union(U = U, S = R, T = S),
             T = T
           ))),
-          goal = %in(
-            x,
-            $Union(
-              U = U, S = R,
-              T = $Union(U = U, S = S, T = T)
-            )
-          ),
           steps = #(
             _: %Consider(x),
             _: %UseDef(result = %or(
@@ -163,14 +156,6 @@ $"Union is associative"(
             U = U, S = R,
             T = $Union(U = U, S = S, T = T)
           ))),
-          goal = %in(
-            x,
-            $Union(
-              U = U,
-              S = $Union(U = U, S = R, T = S),
-              T = T
-            )
-          ),
           steps = #(
             _: %Consider(x),
             _: %UseDef(result = %or(

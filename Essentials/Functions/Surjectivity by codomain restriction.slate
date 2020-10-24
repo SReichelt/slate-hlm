@@ -37,22 +37,6 @@ $"Surjectivity by codomain restriction"(
     ),
     steps = #(_: %ProveForAll({
       parameters = #(y: %Element($Image(X = X, Y = Y, f = f, S = A))),
-      goal = %exists(
-        #(x: %Element(A)),
-        formula = %equals(
-          $value(
-            X = A,
-            Y = $Image(X = X, Y = Y, f = f, S = A),
-            f = $"codomain restriction"(
-              X = X, A = A, Y = Y,
-              B = $Image(X = X, Y = Y, f = f, S = A),
-              f = f
-            ),
-            x = x
-          ),
-          y
-        )
-      ),
       steps = #(
         _: %Consider(y),
         _: %UseDef(result = %exists(

@@ -45,13 +45,6 @@ $"Intersection is associative"(
             S = $Intersection(U = U, S = R, T = S),
             T = T
           ))),
-          goal = %in(
-            x,
-            $Intersection(
-              U = U, S = R,
-              T = $Intersection(U = U, S = S, T = T)
-            )
-          ),
           steps = #(_: %ProveDef(proof = {
             goal = %and(
               %in(x, R),
@@ -115,14 +108,6 @@ $"Intersection is associative"(
             U = U, S = R,
             T = $Intersection(U = U, S = S, T = T)
           ))),
-          goal = %in(
-            x,
-            $Intersection(
-              U = U,
-              S = $Intersection(U = U, S = R, T = S),
-              T = T
-            )
-          ),
           steps = #(_: %ProveDef(proof = {
             goal = %and(
               %in(

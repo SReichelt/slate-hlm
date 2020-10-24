@@ -13,11 +13,7 @@ $"Empty set is subset of any set"(S: %Set): %StandardTheorem {
     ),
     steps = #(_: %ProveForAll({
       parameters = #(x: %Element($"Empty set")),
-      goal = %in(x, S),
-      steps = #(
-        _: %Consider(x),
-        _: %UseDef(result = %or)
-      )
+      steps = #(_: %UseDef(result = %or))
     }))
   }))}]
 }

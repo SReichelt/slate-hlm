@@ -29,10 +29,6 @@ $"Intersection is idempotent"(S: %Set): %StandardTheorem {
         ),
         steps = #(_: %ProveForAll({
           parameters = #(x: %Element(S)),
-          goal = %in(
-            x,
-            $Intersection(U = S, S = S, T = S)
-          ),
           steps = #(_: %ProveDef)
         }))
       }))

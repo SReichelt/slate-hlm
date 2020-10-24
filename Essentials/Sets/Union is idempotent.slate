@@ -29,10 +29,6 @@ $"Union is idempotent"(S: %Set): %StandardTheorem {
         ),
         steps = #(_: %ProveForAll({
           parameters = #(x: %Element(S)),
-          goal = %in(
-            x,
-            $Union(U = S, S = S, T = S)
-          ),
           steps = #(_: %ProveDef)
         }))
       }))

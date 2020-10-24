@@ -27,10 +27,6 @@ $"Union is commutative"(
         ),
         steps = #(_: %ProveForAll({
           parameters = #(x: %Element($Union(U = U, S = S, T = T))),
-          goal = %in(
-            x,
-            $Union(U = U, S = T, T = S)
-          ),
           steps = #(_: %ProveDef(proof = {
             goal = %or(
               %in(x, T),
@@ -60,10 +56,6 @@ $"Union is commutative"(
         ),
         steps = #(_: %ProveForAll({
           parameters = #(x: %Element($Union(U = U, S = T, T = S))),
-          goal = %in(
-            x,
-            $Union(U = U, S = S, T = T)
-          ),
           steps = #(_: %ProveDef(proof = {
             goal = %or(
               %in(x, S),

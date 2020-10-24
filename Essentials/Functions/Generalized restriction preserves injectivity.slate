@@ -34,7 +34,7 @@ $"Generalized restriction preserves injectivity"(
     steps = #(_: %ProveForAll({
       parameters = #(
         a,b: %Element(A),
-        _3: %Constraint(%equals(
+        _2: %Constraint(%equals(
           $value(
             X = A, Y = B,
             f = $"generalized restriction"(X = X, A = A, B = B, Y = Y, f = f),
@@ -47,9 +47,8 @@ $"Generalized restriction preserves injectivity"(
           )
         ))
       ),
-      goal = %equals(a, b),
       steps = #(
-        _: %Consider(_3),
+        _: %Consider(_2),
         _: %Unfold(%equals(
           $value(X = X, Y = Y, f = f, x = a),
           $value(X = X, Y = Y, f = f, x = b)
