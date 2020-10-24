@@ -1,0 +1,39 @@
+%../../../../logics/hlm%
+
+$"Preimage of codomain is domain"(
+  X,Y: %Set(auto = %true),
+  f: %Element($Functions(X = X, Y = Y))
+): %StandardTheorem {
+  claim = %setEquals(
+    $Preimage(X = X, Y = Y, f = f, S = Y),
+    X
+  ),
+  proofs = [{steps = #(_: %ProveEquivalence([
+    {
+      from = 1,
+      to = 2,
+      steps = #()
+    },
+    {
+      from = 2,
+      to = 1,
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(x: %Element(X)),
+          %in(
+            x,
+            $Preimage(X = X, Y = Y, f = f, S = Y)
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(x: %Element(X)),
+          goal = %in(
+            x,
+            $Preimage(X = X, Y = Y, f = f, S = Y)
+          ),
+          steps = #(_: %ProveDef)
+        }))
+      }))
+    }
+  ]))}]
+}
