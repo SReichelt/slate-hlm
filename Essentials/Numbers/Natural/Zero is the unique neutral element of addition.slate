@@ -1,0 +1,14 @@
+%../../../../../logics/hlm%
+
+$"Zero is the unique neutral element of addition"(
+  m,n: %Element($"Natural numbers"),
+  _1: %Constraint(%equals(
+    $sum(m = m, n = n),
+    m
+  ))
+): %StandardTheorem {
+  claim = %equals(
+    n,
+    $number(value = 0)
+  )
+}

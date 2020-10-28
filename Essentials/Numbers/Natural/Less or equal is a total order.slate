@@ -1,5 +1,12 @@
 %../../../../../logics/hlm%
 
+[
+  $~Relations = $../../Relations/Relations,
+  $~antisymmetric = $../../Relations/antisymmetric,
+  $~connex = $../../Relations/connex,
+  $~transitive = $../../Relations/transitive
+]
+
 /**
  * @references * https://en.wikipedia.org/wiki/Natural_number#Order
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.linear_order
@@ -7,9 +14,209 @@
 $"Less or equal is a total order": %StandardTheorem {
   claim = $../../Relations/"total order"(
     S = $"Natural numbers",
-    ⪯ = $../../Relations/Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
+    ⪯ = $~Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
         #(m,n: %Element($"Natural numbers")),
         {p = $"less or equal"(m = m, n = n)}
     })
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %and(
+      $~connex(
+        S = $"Natural numbers",
+        ≺ = $~Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
+            #(m,n: %Element($"Natural numbers")),
+            {p = $"less or equal"(m = m, n = n)}
+        })
+      ),
+      $~antisymmetric(
+        S = $"Natural numbers",
+        ⪯ = $~Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
+            #(m,n: %Element($"Natural numbers")),
+            {p = $"less or equal"(m = m, n = n)}
+        })
+      ),
+      $~transitive(
+        S = $"Natural numbers",
+        ≺ = $~Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
+            #(m,n: %Element($"Natural numbers")),
+            {p = $"less or equal"(m = m, n = n)}
+        })
+      )
+    ),
+    steps = #(_: %ProveCases(caseProofs = [
+      {
+        goal = $~connex(
+          S = $"Natural numbers",
+          ≺ = $~Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
+              #(x,y: %Element($"Natural numbers")),
+              {p = $"less or equal"(m = x, n = y)}
+          })
+        ),
+        steps = #(_: %ProveDef(proof = {
+          goal = %forall(
+            #(m,n: %Element($"Natural numbers")),
+            %or(
+              $"less or equal"(m = m, n = n),
+              $"less or equal"(m = n, n = m)
+            )
+          ),
+          steps = #(_: %ProveForAll({
+            parameters = #(m,n: %Element($"Natural numbers")),
+            steps = #(_: %ProveByContradiction({
+              to = 2,
+              parameters = #(_3: %Constraint($less(n = m, m = n))),
+              goal = $"less or equal"(m = n, n = m),
+              steps = #()
+            }))
+          }))
+        }))
+      },
+      {
+        goal = $~antisymmetric(
+          S = $"Natural numbers",
+          ⪯ = $~Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
+              #(z,a: %Element($"Natural numbers")),
+              {p = $"less or equal"(m = z, n = a)}
+          })
+        ),
+        steps = #(_: %ProveDef(proof = {
+          goal = %forall(
+            #(
+              m,n: %Element($"Natural numbers"),
+              _1: %Constraint($"less or equal"(m = m, n = n)),
+              _2: %Constraint($"less or equal"(m = n, n = m))
+            ),
+            %equals(m, n)
+          ),
+          steps = #(_: %ProveForAll({
+            parameters = #(
+              m,n: %Element($"Natural numbers"),
+              _1: %Constraint($"less or equal"(m = m, n = n)),
+              _2: %Constraint($"less or equal"(m = n, n = m))
+            ),
+            steps = #(
+              _: %Consider(_1),
+              _: %UseDef(result = %exists(
+                #(x: %Element($"Natural numbers")),
+                formula = %equals(
+                  $sum(m = m, n = x),
+                  n
+                )
+              )),
+              _3: %UseExists(#(x: %Element($"Natural numbers"))),
+              _: %Consider(_2),
+              _: %UseDef(result = %exists(
+                #(y: %Element($"Natural numbers")),
+                formula = %equals(
+                  $sum(m = n, n = y),
+                  m
+                )
+              )),
+              _: %UseExists(#(y: %Element($"Natural numbers"))),
+              _4: %Substitute(
+                #(_: %Consider(_3)),
+                2,
+                %equals(
+                  $sum(
+                    m = %associative($sum(m = m, n = x)),
+                    n = y
+                  ),
+                  m
+                )
+              ),
+              _5: %UseTheorem(
+                $"Zero is the unique neutral element of addition"(
+                  m = m,
+                  n = $sum(m = x, n = y),
+                  _1 = {proof = {steps = #(_: %Consider(_4))}}
+                ),
+                result = %equals(
+                  $sum(m = x, n = y),
+                  $number(value = 0)
+                )
+              ),
+              _6: %UseTheorem(
+                $"Both summands are zero if sum is zero"(
+                  m = x, n = y,
+                  _1 = {proof = {steps = #(_: %Consider(_5))}}
+                ),
+                result = %equals(
+                  x, y,
+                  $number(value = 0)
+                )
+              ),
+              _: %Consider(_3),
+              _: %Substitute(
+                #(_: %Consider(_6)),
+                1,
+                %equals(
+                  $sum(
+                    m = m,
+                    n = $number(value = 0)
+                  ),
+                  n
+                )
+              )
+            )
+          }))
+        }))
+      },
+      {
+        goal = $~transitive(
+          S = $"Natural numbers",
+          ≺ = $~Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
+              #(b,c: %Element($"Natural numbers")),
+              {p = $"less or equal"(m = b, n = c)}
+          })
+        ),
+        steps = #(_: %ProveDef(proof = {
+          goal = %forall(
+            #(
+              l,m,n: %Element($"Natural numbers"),
+              _1: %Constraint($"less or equal"(m = l, n = m)),
+              _2: %Constraint($"less or equal"(m = m, n = n))
+            ),
+            $"less or equal"(m = l, n = n)
+          ),
+          steps = #(_: %ProveForAll({
+            parameters = #(
+              l,m,n: %Element($"Natural numbers"),
+              _1: %Constraint($"less or equal"(m = l, n = m)),
+              _2: %Constraint($"less or equal"(m = m, n = n))
+            ),
+            steps = #(_: %ProveDef(proof = {
+              goal = %exists(
+                #(x: %Element($"Natural numbers")),
+                formula = %equals(
+                  $sum(m = l, n = x),
+                  n
+                )
+              ),
+              steps = #(
+                _: %Consider(_1),
+                _: %UseDef(result = %exists(
+                  #(y: %Element($"Natural numbers")),
+                  formula = %equals(
+                    $sum(m = l, n = y),
+                    m
+                  )
+                )),
+                _: %UseExists(#(y: %Element($"Natural numbers"))),
+                _: %Consider(_2),
+                _: %UseDef(result = %exists(
+                  #(z: %Element($"Natural numbers")),
+                  formula = %equals(
+                    $sum(m = m, n = z),
+                    n
+                  )
+                )),
+                _: %UseExists(#(z: %Element($"Natural numbers"))),
+                _: %ProveExists({x = $sum(m = y, n = z)})
+              )
+            }))
+          }))
+        }))
+      }
+    ]))
+  }))}]
 }

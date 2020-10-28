@@ -1,0 +1,14 @@
+%../../../../../logics/hlm%
+
+$"Both summands are zero if sum is zero"(
+  m,n: %Element($"Natural numbers"),
+  _1: %Constraint(%equals(
+    $sum(m = m, n = n),
+    $number(value = 0)
+  ))
+): %StandardTheorem {
+  claim = %and(%equals(
+    m, n,
+    $number(value = 0)
+  ))
+}
