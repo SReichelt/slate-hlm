@@ -10,5 +10,15 @@ $"Zero is the only number less than or equal to zero"(
   claim = %equals(
     n,
     $number(value = 0)
-  )
+  ),
+  proofs = [{steps = #(
+    _: %Consider(_1),
+    _: %UseDef(result = %or(
+      %equals(
+        n,
+        $number(value = 0)
+      ),
+      %or
+    ))
+  )}]
 }

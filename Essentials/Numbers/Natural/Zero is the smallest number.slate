@@ -7,5 +7,9 @@ $"Zero is the smallest number"(n: %Element($"Natural numbers")): %StandardTheore
   claim = $"less or equal"(
     n = n,
     m = $number(value = 0)
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %and,
+    steps = #()
+  }))}]
 }

@@ -51,18 +51,11 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
                 x
               )
             ),
-            _: %State(%equals(
-              $"Natural numbers".successor(n = x),
-              $"Natural numbers".successor(n = x)
-            )),
-            _: %Substitute(
+            _: %ProveBySubstitution(
               #(_: %Consider(_1)),
-              2,
+              1,
               %equals(
-                $"Natural numbers".successor(n = $sum(
-                  m = $"Natural numbers".zero,
-                  n = x
-                )),
+                $"Natural numbers".successor(n = x),
                 $"Natural numbers".successor(n = x)
               )
             )
