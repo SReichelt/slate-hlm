@@ -10,5 +10,26 @@ $"Zero is the unique neutral element of addition"(
   claim = %equals(
     n,
     $number(value = 0)
-  )
+  ),
+  proofs = [{steps = #(
+    _2: %State(%equals(
+      $sum(m = n, n = m),
+      $sum(
+        m = $number(value = 0),
+        n = m
+      )
+    )),
+    _: %UseTheorem(
+      $"Addition of a fixed number is injective"(
+        a = n,
+        b = $number(value = 0),
+        c = m,
+        _1 = {proof = {steps = #(_: %Consider(_2))}}
+      ),
+      result = %equals(
+        n,
+        $number(value = 0)
+      )
+    )
+  )}]
 }
