@@ -1,0 +1,20 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Inverse_function#Self-inverses
+ */
+$"Identity is its own inverse"(X: %Set): %StandardTheorem {
+  claim = %and(
+    $bijective(
+      X = X, Y = X,
+      f = $identity(X = X)
+    ),
+    %equals(
+      $inverse(
+        X = X, Y = X,
+        f = $identity(X = X)
+      ),
+      $identity(X = X)
+    )
+  )
+}

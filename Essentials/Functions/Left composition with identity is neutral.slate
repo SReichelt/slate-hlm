@@ -1,0 +1,14 @@
+%../../../../logics/hlm%
+
+$"Left composition with identity is neutral"(
+  X,Y: %Set,
+  f: %Element($Functions(X = X, Y = Y))
+): %StandardTheorem {
+  claim = %equals(
+    $composition(
+      X = X, Y = Y, Z = Y, f = f,
+      g = $identity(X = Y)
+    ),
+    f
+  )
+}

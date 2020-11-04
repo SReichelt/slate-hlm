@@ -1,0 +1,93 @@
+%../../../../logics/hlm%
+
+[
+  $~"Natural numbers" = $../Numbers/Natural/"Natural numbers"
+]
+
+$"Power of identity to natural number is identity"(
+  X: %Set,
+  n: %Element($~"Natural numbers")
+): %StandardTheorem {
+  claim = %equals(
+    $"power to natural number"(
+      X = X,
+      f = $identity(X = X),
+      n = n
+    ),
+    $identity(X = X)
+  ),
+  proofs = [{steps = #(_: %ProveByInduction(
+    n, $~"Natural numbers",
+    [
+      {
+        constructor = $~"Natural numbers".zero,
+        value = {
+          goal = %equals(
+            $identity(X = X),
+            $identity(X = X)
+          ),
+          steps = #()
+        },
+        rewrite = %true
+      },
+      {
+        constructor = $~"Natural numbers".successor,
+        parameters = #(x: %Element($~"Natural numbers")),
+        value = {
+          goal = %equals(
+            $composition(
+              X = X, Y = X, Z = X,
+              f = $"power to natural number"(
+                X = X,
+                f = $identity(X = X),
+                n = x
+              ),
+              g = $identity(X = X)
+            ),
+            $identity(X = X)
+          ),
+          steps = #(
+            _1: %UseTheorem(
+              $"Power of identity to natural number is identity"(X = X, n = x),
+              result = %equals(
+                $"power to natural number"(
+                  X = X,
+                  f = $identity(X = X),
+                  n = x
+                ),
+                $identity(X = X)
+              )
+            ),
+            _: %ProveBySubstitution(
+              #(_: %Consider(_1)),
+              1,
+              %equals(
+                $composition(
+                  X = X, Y = X, Z = X,
+                  f = $identity(X = X),
+                  g = $identity(X = X)
+                ),
+                $identity(X = X)
+              ),
+              proof = {steps = #(_: %UseTheorem(
+                $"Left composition with identity is neutral"(
+                  X = X, Y = X,
+                  f = $identity(X = X)
+                ),
+                result = %equals(
+                  $composition(
+                    X = X, Y = X, Z = X,
+                    f = $identity(X = X),
+                    g = $identity(X = X)
+                  ),
+                  $identity(X = X)
+                )
+              ))}
+            )
+          )
+        },
+        rewrite = %true
+      }
+    ]
+  ))}]
+}

@@ -1,0 +1,136 @@
+%../../../../logics/hlm%
+
+[
+  $~inverse = $../Numbers/Integer/inverse,
+  $~less = $../Numbers/Integer/less,
+  $~"less or equal" = $../Numbers/Integer/"less or equal",
+  $~number = $../Numbers/Natural/number
+]
+
+$"Power of identity to integer is identity"(
+  X: %Set,
+  a: %Element($../Numbers/Integer/Integers)
+): %StandardTheorem {
+  claim = %equals(
+    $"power to integer"(
+      X = X,
+      f = $identity(X = X),
+      a = a
+    ),
+    $identity(X = X)
+  ),
+  proofs = [{
+    goal = %equals(
+      %cases([
+        {
+          formula = $~"less or equal"(
+            b = a,
+            a = $~number(value = 0)
+          ),
+          value = $"power to natural number"(
+            X = X,
+            f = $identity(X = X),
+            n = a
+          )
+        },
+        {
+          formula = $~less(
+            a = a,
+            b = $~number(value = 0)
+          ),
+          value = $"power to natural number"(
+            X = X,
+            f = $inverse(
+              X = X, Y = X,
+              f = $identity(X = X)
+            ),
+            n = $~inverse(a = a)
+          )
+        }
+      ]),
+      $identity(X = X)
+    ),
+    steps = #(_: %ProveCases(
+      side = 1,
+      caseProofs = [
+        {
+          parameters = #(_1: %Constraint($~"less or equal"(
+            b = a,
+            a = $~number(value = 0)
+          ))),
+          goal = %equals(
+            $"power to natural number"(
+              X = X,
+              f = $identity(X = X),
+              n = a
+            ),
+            $identity(X = X)
+          ),
+          steps = #(_: %UseTheorem(
+            $"Power of identity to natural number is identity"(X = X, n = a),
+            result = %equals(
+              $"power to natural number"(
+                X = X,
+                f = $identity(X = X),
+                n = a
+              ),
+              $identity(X = X)
+            )
+          ))
+        },
+        {
+          parameters = #(_2: %Constraint($~less(
+            a = a,
+            b = $~number(value = 0)
+          ))),
+          goal = %equals(
+            $"power to natural number"(
+              X = X,
+              f = $inverse(
+                X = X, Y = X,
+                f = $identity(X = X)
+              ),
+              n = $~inverse(a = a)
+            ),
+            $identity(X = X)
+          ),
+          steps = #(_: %ProveBySubstitution(
+            #(_: %UseTheorem(
+              $"Identity is its own inverse"(X = X),
+              result = %equals(
+                $inverse(
+                  X = X, Y = X,
+                  f = $identity(X = X)
+                ),
+                $identity(X = X)
+              )
+            )),
+            1,
+            %equals(
+              $"power to natural number"(
+                X = X,
+                f = $identity(X = X),
+                n = $~inverse(a = a)
+              ),
+              $identity(X = X)
+            ),
+            proof = {steps = #(_: %UseTheorem(
+              $"Power of identity to natural number is identity"(
+                X = X,
+                n = $~inverse(a = a)
+              ),
+              result = %equals(
+                $"power to natural number"(
+                  X = X,
+                  f = $identity(X = X),
+                  n = $~inverse(a = a)
+                ),
+                $identity(X = X)
+              )
+            ))}
+          ))
+        }
+      ]
+    ))
+  }]
+}
