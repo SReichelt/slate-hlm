@@ -14,24 +14,12 @@ $"Intersection with empty right argument is empty"(S: %Set): %StandardTheorem {
     {
       from = 1,
       to = 2,
-      steps = #(_: %UseTheorem(
-        $"Intersection is subset of right argument"(U = S, S = S, T = $"Empty set"),
-        result = %sub(
-          $Intersection(U = S, S = S, T = $"Empty set"),
-          $"Empty set"
-        )
-      ))
+      steps = #(_: %UseTheorem($"Intersection is subset of right argument"(U = S, S = S, T = $"Empty set")))
     },
     {
       from = 2,
       to = 1,
-      steps = #(_: %UseTheorem(
-        $"Empty set is subset of any set"(S = $Intersection(U = S, S = S, T = $"Empty set")),
-        result = %sub(
-          $"Empty set",
-          $Intersection(U = S, S = S, T = $"Empty set")
-        )
-      ))
+      steps = #(_: %UseTheorem($"Empty set is subset of any set"(S = $Intersection(U = S, S = S, T = $"Empty set"))))
     }
   ]))}]
 }
