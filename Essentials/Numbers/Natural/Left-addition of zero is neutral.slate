@@ -11,7 +11,7 @@
 $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $sum(
-      m = $"Natural numbers".zero,
+      m = $number(value = 0),
       n = n
     ),
     n
@@ -23,11 +23,12 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
         constructor = $"Natural numbers".zero,
         value = {
           goal = %equals(
-            $"Natural numbers".zero,
-            $"Natural numbers".zero
+            $number(value = 0),
+            $number(value = 0)
           ),
           steps = #()
-        }
+        },
+        rewrite = %true
       },
       {
         constructor = $"Natural numbers".successor,
@@ -35,7 +36,7 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
         value = {
           goal = %equals(
             $"Natural numbers".successor(n = $sum(
-              m = $"Natural numbers".zero,
+              m = $number(value = 0),
               n = x
             )),
             $"Natural numbers".successor(n = x)
@@ -45,7 +46,7 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
               $"Left-addition of zero is neutral"(n = x),
               result = %equals(
                 $sum(
-                  m = $"Natural numbers".zero,
+                  m = $number(value = 0),
                   n = x
                 ),
                 x
