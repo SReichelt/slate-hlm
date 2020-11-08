@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~"Positive numbers" = $Subsets/"Positive numbers"
+]
+
 $"Less or equal and less combine to less"(
   a,b,c: %Element($"Natural numbers"),
   _1: %Constraint($"less or equal"(m = a, n = b)),
@@ -8,5 +12,38 @@ $"Less or equal and less combine to less"(
     n = c
   ))
 ): %StandardTheorem {
-  claim = $less(m = a, n = c)
+  claim = $less(m = a, n = c),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %exists(
+      #(x: %Element($~"Positive numbers")),
+      formula = %equals(
+        $sum(m = a, n = x),
+        c
+      )
+    ),
+    steps = #(
+      _: %Consider(_1),
+      _: %UseDef(result = %exists(
+        #(y: %Element($"Natural numbers")),
+        formula = %equals(
+          $sum(m = a, n = y),
+          b
+        )
+      )),
+      _: %UseExists(#(y: %Element($"Natural numbers"))),
+      _: %Consider(_2),
+      _: %UseDef(result = %exists(
+        #(z: %Element($~"Positive numbers")),
+        formula = %equals(
+          $sum(
+            m = %associative(b),
+            n = z
+          ),
+          c
+        )
+      )),
+      _: %UseExists(#(z: %Element($~"Positive numbers"))),
+      _: %ProveExists({x = $sum(m = y, n = z)})
+    )
+  }))}]
 }

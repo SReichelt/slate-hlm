@@ -10,5 +10,24 @@ $"Multiplication by one is neutral"(n: %Element($"Natural numbers")): %StandardT
       n = $number(value = 1)
     ),
     n
-  )
+  ),
+  proofs = [{
+    goal = %equals(
+      $sum(
+        m = $number(value = 0),
+        n = n
+      ),
+      n
+    ),
+    steps = #(_: %UseTheorem(
+      $"Left-addition of zero is neutral"(n = n),
+      result = %equals(
+        $sum(
+          m = $"Natural numbers".zero,
+          n = n
+        ),
+        n
+      )
+    ))
+  }]
 }

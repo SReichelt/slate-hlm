@@ -8,16 +8,10 @@
 $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(
     $sum(
-      m = $sum(
-        m = m,
-        n = $number(value = 1)
-      ),
+      m = $"Natural numbers".successor(n = m),
       n = n
     ),
-    $sum(
-      m = $sum(m = m, n = n),
-      n = $number(value = 1)
-    )
+    $"Natural numbers".successor(n = $sum(m = m, n = n))
   ),
   proofs = [{steps = #(_: %ProveByInduction(
     n, $"Natural numbers",
@@ -26,14 +20,8 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
         constructor = $"Natural numbers".zero,
         value = {
           goal = %equals(
-            $sum(
-              m = m,
-              n = $number(value = 1)
-            ),
-            $sum(
-              m = m,
-              n = $number(value = 1)
-            )
+            $"Natural numbers".successor(n = m),
+            $"Natural numbers".successor(n = m)
           ),
           steps = #()
         }
@@ -44,54 +32,29 @@ $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %St
         value = {
           goal = %equals(
             $"Natural numbers".successor(n = $sum(
-              m = $sum(
-                m = m,
-                n = $number(value = 1)
-              ),
+              m = $"Natural numbers".successor(n = m),
               n = x
             )),
-            $sum(
-              m = $"Natural numbers".successor(n = $sum(m = m, n = x)),
-              n = $number(value = 1)
-            )
+            $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x)))
           ),
           steps = #(
             _1: %UseTheorem(
               $"Successor can be pulled over addition"(m = m, n = x),
               result = %equals(
                 $sum(
-                  m = $sum(
-                    m = m,
-                    n = $number(value = 1)
-                  ),
+                  m = $"Natural numbers".successor(n = m),
                   n = x
                 ),
-                $sum(
-                  m = $sum(m = m, n = x),
-                  n = $number(value = 1)
-                )
+                $"Natural numbers".successor(n = $sum(m = m, n = x))
               )
             ),
             _: %ProveBySubstitution(
               #(_: %Consider(_1)),
               1,
               %equals(
-                $"Natural numbers".successor(n = $sum(
-                  m = $sum(m = m, n = x),
-                  n = $number(value = 1)
-                )),
-                $sum(
-                  m = $"Natural numbers".successor(n = $sum(m = m, n = x)),
-                  n = $number(value = 1)
-                )
-              ),
-              proof = {
-                goal = %equals(
-                  $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x))),
-                  $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x)))
-                ),
-                steps = #()
-              }
+                $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x))),
+                $"Natural numbers".successor(n = $"Natural numbers".successor(n = $sum(m = m, n = x)))
+              )
             )
           )
         }

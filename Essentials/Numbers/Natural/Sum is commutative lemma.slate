@@ -13,7 +13,7 @@ $"Sum is commutative lemma"(m,n: %Element($"Natural numbers")): %StandardTheorem
         value = {
           goal = %equals(
             $sum(
-              m = $number(value = 0),
+              m = $"Natural numbers".zero,
               n = n
             ),
             n
@@ -22,14 +22,13 @@ $"Sum is commutative lemma"(m,n: %Element($"Natural numbers")): %StandardTheorem
             $"Left-addition of zero is neutral"(n = n),
             result = %equals(
               $sum(
-                m = $number(value = 0),
+                m = $"Natural numbers".zero,
                 n = n
               ),
               n
             )
           ))
-        },
-        rewrite = %true
+        }
       },
       {
         constructor = $"Natural numbers".successor,
