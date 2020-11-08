@@ -1,5 +1,9 @@
 %../../../../../logics/hlm%
 
+[
+  $~"has property" = $../../Properties/"has property"
+]
+
 /**
  * @remarks Structural induction on the natural numbers is a direct consequence of their definition as a construction. This set-theoretic form of the induction principle is provable from it.
  *
@@ -7,14 +11,54 @@
  */
 $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
   conditions = [
-    $inductive(M = M),
+    %and(
+      %in(
+        $number(value = 0),
+        M
+      ),
+      %forall(
+        #(m: %Element(M)),
+        %in(
+          $sum(
+            m = m,
+            n = $number(value = 1)
+          ),
+          M
+        )
+      )
+    ),
+    %forall(
+      #(
+        n: %Element($"Natural numbers"),
+        _1: %Constraint(%sub(
+          $Subsets/"Segment (less)"(n = n),
+          M
+        ))
+      ),
+      %in(n, M)
+    ),
     %setEquals(M, $"Natural numbers")
   ],
   equivalenceProofs = [
     {
       from = 1,
-      to = 2,
-      parameters = #(_1: %Constraint($inductive(M = M))),
+      to = 3,
+      parameters = #(
+        _1: %Constraint(%in(
+          $number(value = 0),
+          M
+        )),
+        _2: %Constraint(%forall(
+          #(m: %Element(M)),
+          %in(
+            $sum(
+              m = m,
+              n = $number(value = 1)
+            ),
+            M
+          )
+        ))
+      ),
       goal = %setEquals(M, $"Natural numbers"),
       steps = #(_: %ProveEquivalence([
         {
@@ -32,27 +76,82 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
             ),
             steps = #(_: %ProveForAll({
               parameters = #(n: %Element($"Natural numbers")),
-              steps = #(_: %UseTheorem($"Induction lemma"(M = M, n = n)))
+              steps = #(
+                p: %Def($../../Properties/Properties(S = $"Natural numbers").property(_1 = {
+                    #(m: %Element($"Natural numbers")),
+                    {p = %in(m, M)}
+                })),
+                _: %UseTheorem(
+                  $"Induction principle of property"(
+                    p = p, n = n,
+                    _1 = {proof = {steps = #(_: %ProveDef)}},
+                    _2 = {proof = {steps = #(_: %ProveForAll({
+                      parameters = #(
+                        x: %Element($"Natural numbers"),
+                        _3: %Constraint($~"has property"(S = $"Natural numbers", p = p, s = x))
+                      ),
+                      steps = #(
+                        _: %Consider(_2),
+                        _: %UseForAll({m = {
+                          x,
+                          elementProof = {steps = #(
+                            _: %Consider(_3),
+                            _: %UseDef
+                          )}
+                        }}),
+                        _: %ProveDef
+                      )
+                    }))}}
+                  ),
+                  result = $~"has property"(S = $"Natural numbers", p = p, s = n)
+                ),
+                _: %UseDef
+              )
             }))
           }))
         }
       ]))
     },
     {
-      from = 2,
+      from = 3,
       to = 1,
       parameters = #(_1: %Constraint(%setEquals(M, $"Natural numbers"))),
-      goal = $inductive(M = M),
-      steps = #(
-        _: %State(
-          $inductive(M = $"Natural numbers"),
-          proof = {steps = #(_: %ProveDef)}
+      goal = %and(
+        %in(
+          $number(value = 0),
+          M
         ),
-        _: %Substitute(
-          #(_: %Consider(_1)),
-          2
+        %forall(
+          #(m: %Element(M)),
+          %in(
+            $sum(
+              m = m,
+              n = $number(value = 1)
+            ),
+            M
+          )
         )
-      )
+      ),
+      steps = #(_: %ProveBySubstitution(
+        #(_: %Consider(_1)),
+        1,
+        %and(
+          %in(
+            $number(value = 0),
+            $"Natural numbers"
+          ),
+          %forall(
+            #(m: %Element($"Natural numbers")),
+            %in(
+              $sum(
+                m = m,
+                n = $number(value = 1)
+              ),
+              $"Natural numbers"
+            )
+          )
+        )
+      ))
     }
   ]
 }

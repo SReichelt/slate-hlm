@@ -1,16 +1,13 @@
 %../../../../logics/hlm%
 
-/**
- * @remarks "`s` is `p`" is shorthand for "`s` has property `p`."
- */
 $"has property"(
   S: %Set(auto = %true),
   p: %Element($Properties(S = S)),
   s: %Element(S)
 ): %Predicate {
-  notation = $TextualRelation(
-    verb = %neg('is', 'is not'),
-    operands = [s, p]
+  notation = $Function(
+    function = p,
+    arguments = [s]
   ),
   definition = [%structural(
     p,

@@ -5,7 +5,7 @@
 ]
 
 /**
- * @remarks This is just a slight reformulation based on the definition of a property (see `$../../Properties/Properties`).
+ * @remarks This is a formulation of the induction principle based on the definition of a property (see `$../../Properties/Properties`). In HLM, it is provable from structural induction.
  *
  * @references * https://en.wikipedia.org/wiki/Mathematical_induction
  *             * https://mathworld.wolfram.com/PrincipleofMathematicalInduction.html
@@ -29,10 +29,31 @@ $"Induction principle of property"(
         n = $number(value = 1)
       )
     )
-  ))
+  )),
+  n: %Element($"Natural numbers")
 ): %StandardTheorem {
-  claim = %forall(
-    #(n: %Element($"Natural numbers")),
-    $~"has property"(S = $"Natural numbers", p = p, s = n)
-  )
+  claim = $~"has property"(S = $"Natural numbers", p = p, s = n),
+  proofs = [{steps = #(_: %ProveByInduction(
+    n, $"Natural numbers",
+    [
+      {
+        constructor = $"Natural numbers".zero,
+        value = {steps = #()},
+        rewrite = %true
+      },
+      {
+        constructor = $"Natural numbers".successor,
+        parameters = #(x: %Element($"Natural numbers")),
+        value = {steps = #(
+          _: %UseTheorem(
+            $"Induction principle of property"(p = p, n = x),
+            result = $~"has property"(S = $"Natural numbers", p = p, s = x)
+          ),
+          _: %Consider(_2),
+          _: %UseForAll({m = x})
+        )},
+        rewrite = %true
+      }
+    ]
+  ))}]
 }
