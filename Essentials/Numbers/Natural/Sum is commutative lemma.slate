@@ -6,19 +6,28 @@ $"Sum is commutative lemma"(m,n: %Element($"Natural numbers")): %StandardTheorem
     $sum(m = n, n = m)
   ),
   proofs = [{steps = #(_: %ProveByInduction(
-    m, $"Natural numbers",
+    n, $"Natural numbers",
     [
       {
         constructor = $"Natural numbers".zero,
         value = {
           goal = %equals(
+            m,
             $sum(
               m = $"Natural numbers".zero,
-              n = n
-            ),
-            n
+              n = m
+            )
           ),
-          steps = #(_: %UseTheorem($"Left-addition of zero is neutral"(n = n)))
+          steps = #(_: %UseTheorem(
+            $"Left-addition of zero is neutral"(n = m),
+            result = %equals(
+              $sum(
+                m = $"Natural numbers".zero,
+                n = m
+              ),
+              m
+            )
+          ))
         }
       },
       {
@@ -26,33 +35,40 @@ $"Sum is commutative lemma"(m,n: %Element($"Natural numbers")): %StandardTheorem
         parameters = #(x: %Element($"Natural numbers")),
         value = {
           goal = %equals(
+            $"Natural numbers".successor(n = $sum(m = m, n = x)),
             $sum(
               m = $"Natural numbers".successor(n = x),
-              n = n
-            ),
-            $"Natural numbers".successor(n = $sum(m = n, n = x))
+              n = m
+            )
           ),
           steps = #(
             _1: %UseTheorem(
-              $"Sum is commutative lemma"(m = x, n = n),
+              $"Sum is commutative lemma"(m = m, n = x),
               result = %equals(
-                $sum(m = x, n = n),
-                $sum(m = n, n = x)
+                $sum(m = m, n = x),
+                $sum(m = x, n = m)
               )
             ),
-            _: %UseTheorem(
-              $"Successor can be pulled over addition"(m = x, n = n),
-              result = %equals(
+            _: %ProveBySubstitution(
+              #(_: %Consider(_1)),
+              1,
+              %equals(
+                $"Natural numbers".successor(n = $sum(m = x, n = m)),
                 $sum(
                   m = $"Natural numbers".successor(n = x),
-                  n = n
-                ),
-                $"Natural numbers".successor(n = $sum(m = x, n = n))
-              )
-            ),
-            _: %Substitute(
-              #(_: %Consider(_1)),
-              1
+                  n = m
+                )
+              ),
+              proof = {steps = #(_: %UseTheorem(
+                $"Successor can be pulled over addition"(m = x, n = m),
+                result = %equals(
+                  $sum(
+                    m = $"Natural numbers".successor(n = x),
+                    n = m
+                  ),
+                  $"Natural numbers".successor(n = $sum(m = x, n = m))
+                )
+              ))}
             )
           )
         }

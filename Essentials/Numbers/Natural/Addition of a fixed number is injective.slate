@@ -10,5 +10,82 @@ $"Addition of a fixed number is injective"(
     $sum(m = b, n = c)
   ))
 ): %StandardTheorem {
-  claim = %equals(a, b)
+  claim = %equals(a, b),
+  proofs = [{steps = #(_: %ProveByInduction(
+    c, $"Natural numbers",
+    [
+      {
+        constructor = $"Natural numbers".zero,
+        value = {
+          parameters = #(_2: %Constraint(%equals(
+            c,
+            $number(value = 0)
+          ))),
+          steps = #(
+            _: %Consider(_1),
+            _: %Substitute(
+              #(_: %Consider(_2)),
+              1,
+              result = %equals(
+                $sum(
+                  m = a,
+                  n = $number(value = 0)
+                ),
+                $sum(
+                  m = b,
+                  n = $number(value = 0)
+                )
+              )
+            )
+          )
+        },
+        rewrite = %true
+      },
+      {
+        constructor = $"Natural numbers".successor,
+        parameters = #(x: %Element($"Natural numbers")),
+        value = {
+          parameters = #(_3: %Constraint(%equals(
+            c,
+            $sum(
+              m = x,
+              n = $number(value = 1)
+            )
+          ))),
+          steps = #(
+            _: %Consider(_1),
+            _: %Substitute(
+              #(_: %Consider(_3)),
+              1,
+              result = %equals(
+                $sum(
+                  m = a,
+                  n = $sum(
+                    m = x,
+                    n = $number(value = 1)
+                  )
+                ),
+                $sum(
+                  m = b,
+                  n = $sum(
+                    m = x,
+                    n = $number(value = 1)
+                  )
+                )
+              )
+            ),
+            _4: %UseDef(result = %equals(
+              $sum(m = a, n = x),
+              $sum(m = b, n = x)
+            )),
+            _: %UseTheorem($"Addition of a fixed number is injective"(
+              a = a, b = b, c = x,
+              _1 = {proof = {steps = #(_: %Consider(_4))}}
+            ))
+          )
+        },
+        rewrite = %true
+      }
+    ]
+  ))}]
 }
