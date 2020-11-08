@@ -1,0 +1,74 @@
+%../../../../../logics/hlm%
+
+$"Sum is associative lemma"(l,m,n: %Element($"Natural numbers")): %StandardTheorem {
+  claim = %equals(
+    $sum(
+      m = $sum(m = l, n = m),
+      n = n
+    ),
+    $sum(
+      m = l,
+      n = $sum(m = m, n = n)
+    )
+  ),
+  proofs = [{steps = #(_: %ProveByInduction(
+    n, $"Natural numbers",
+    [
+      {
+        constructor = $"Natural numbers".zero,
+        value = {
+          goal = %equals(
+            $sum(m = l, n = m),
+            $sum(m = l, n = m)
+          ),
+          steps = #()
+        }
+      },
+      {
+        constructor = $"Natural numbers".successor,
+        parameters = #(x: %Element($"Natural numbers")),
+        value = {
+          goal = %equals(
+            $"Natural numbers".successor(n = $sum(
+              m = $sum(m = l, n = m),
+              n = x
+            )),
+            $"Natural numbers".successor(n = $sum(
+              m = l,
+              n = $sum(m = m, n = x)
+            ))
+          ),
+          steps = #(
+            _1: %UseTheorem(
+              $"Sum is associative lemma"(l = l, m = m, n = x),
+              result = %equals(
+                $sum(
+                  m = $sum(m = l, n = m),
+                  n = x
+                ),
+                $sum(
+                  m = l,
+                  n = $sum(m = m, n = x)
+                )
+              )
+            ),
+            _: %ProveBySubstitution(
+              #(_: %Consider(_1)),
+              1,
+              %equals(
+                $"Natural numbers".successor(n = $sum(
+                  m = l,
+                  n = $sum(m = m, n = x)
+                )),
+                $"Natural numbers".successor(n = $sum(
+                  m = l,
+                  n = $sum(m = m, n = x)
+                ))
+              )
+            )
+          )
+        }
+      }
+    ]
+  ))}]
+}

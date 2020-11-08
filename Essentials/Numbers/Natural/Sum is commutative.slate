@@ -12,5 +12,24 @@ $"Sum is commutative": %StandardTheorem {
         #(m,n: %Element($"Natural numbers")),
         {z = $sum(m = m, n = n)}
     })
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(m,n: %Element($"Natural numbers")),
+      %equals(
+        $sum(m = m, n = n),
+        $sum(m = n, n = m)
+      )
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(m,n: %Element($"Natural numbers")),
+      steps = #(_: %UseTheorem(
+        $"Sum is commutative lemma"(m = m, n = n),
+        result = %equals(
+          $sum(m = m, n = n),
+          $sum(m = n, n = m)
+        )
+      ))
+    }))
+  }))}]
 }

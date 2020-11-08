@@ -12,5 +12,36 @@ $"Sum is associative": %StandardTheorem {
         #(m,n: %Element($"Natural numbers")),
         {z = $sum(m = m, n = n)}
     })
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(l,m,n: %Element($"Natural numbers")),
+      %equals(
+        $sum(
+          m = $sum(m = l, n = m),
+          n = n
+        ),
+        $sum(
+          m = l,
+          n = $sum(m = m, n = n)
+        )
+      )
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(l,m,n: %Element($"Natural numbers")),
+      steps = #(_: %UseTheorem(
+        $"Sum is associative lemma"(l = l, m = m, n = n),
+        result = %equals(
+          $sum(
+            m = $sum(m = l, n = m),
+            n = n
+          ),
+          $sum(
+            m = l,
+            n = $sum(m = m, n = n)
+          )
+        )
+      ))
+    }))
+  }))}]
 }
