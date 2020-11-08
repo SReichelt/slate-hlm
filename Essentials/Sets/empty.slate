@@ -46,9 +46,9 @@ $empty(S: %Set): %Predicate {
           _: %Substitute(
             #(_: %Consider(_1)),
             1,
-            %in(x, $"Empty set")
+            result = %in(x, $"Empty set")
           ),
-          _: %UseDef(result = %or)
+          _: %UseDef
         )
       }))
     },
@@ -86,10 +86,7 @@ $empty(S: %Set): %Predicate {
         {
           from = 2,
           to = 1,
-          steps = #(_: %UseTheorem(
-            $"Empty set is subset of any set"(S = S),
-            result = %sub($"Empty set", S)
-          ))
+          steps = #(_: %UseTheorem($"Empty set is subset of any set"(S = S)))
         }
       ]))
     },
@@ -122,7 +119,7 @@ $empty(S: %Set): %Predicate {
             $"Empty set"
           ))),
           2,
-          %equals(
+          result = %equals(
             $~"Cardinal numbers".cardinality(S = S),
             $~"Cardinal numbers".cardinality(S = $~"Segment (less)"(n = $~number(value = 0)))
           )
@@ -135,11 +132,7 @@ $empty(S: %Set): %Predicate {
             ),
             proof = {steps = #(_: %ProveDef)}
           )),
-          1,
-          %equals(
-            $~"Cardinal numbers".cardinality(S = S),
-            $~number(value = 0)
-          )
+          1
         )
       )
     },

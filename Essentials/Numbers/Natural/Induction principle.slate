@@ -32,10 +32,7 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
             ),
             steps = #(_: %ProveForAll({
               parameters = #(n: %Element($"Natural numbers")),
-              steps = #(_: %UseTheorem(
-                $"Induction lemma"(M = M, n = n),
-                result = %in(n, M)
-              ))
+              steps = #(_: %UseTheorem($"Induction lemma"(M = M, n = n)))
             }))
           }))
         }
@@ -53,8 +50,7 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         ),
         _: %Substitute(
           #(_: %Consider(_1)),
-          2,
-          $inductive(M = M)
+          2
         )
       )
     }

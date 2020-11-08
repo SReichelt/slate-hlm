@@ -66,17 +66,7 @@ $"Power of identity to integer is identity"(
             ),
             $identity(X = X)
           ),
-          steps = #(_: %UseTheorem(
-            $"Power of identity to natural number is identity"(X = X, n = a),
-            result = %equals(
-              $"power to natural number"(
-                X = X,
-                f = $identity(X = X),
-                n = a
-              ),
-              $identity(X = X)
-            )
-          ))
+          steps = #(_: %UseTheorem($"Power of identity to natural number is identity"(X = X, n = a)))
         },
         {
           parameters = #(_2: %Constraint($~less(
@@ -114,20 +104,10 @@ $"Power of identity to integer is identity"(
               ),
               $identity(X = X)
             ),
-            proof = {steps = #(_: %UseTheorem(
-              $"Power of identity to natural number is identity"(
-                X = X,
-                n = $~inverse(a = a)
-              ),
-              result = %equals(
-                $"power to natural number"(
-                  X = X,
-                  f = $identity(X = X),
-                  n = $~inverse(a = a)
-                ),
-                $identity(X = X)
-              )
-            ))}
+            proof = {steps = #(_: %UseTheorem($"Power of identity to natural number is identity"(
+              X = X,
+              n = $~inverse(a = a)
+            )))}
           ))
         }
       ]

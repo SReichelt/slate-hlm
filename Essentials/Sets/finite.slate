@@ -168,11 +168,7 @@ $finite(S: %Set): %Predicate {
           _: %Consider(l),
           _: %Substitute(
             #(_: %Consider(_1)),
-            1,
-            %in(
-              $~"Cardinal numbers".cardinality(S = S),
-              $~"Natural numbers"
-            )
+            1
           )
         )
       }))
@@ -323,24 +319,12 @@ $finite(S: %Set): %Predicate {
                 f = h
               )
             ),
-            steps = #(_: %UseTheorem(
-              $~"Generalized restriction preserves injectivity"(
-                X = S, A = S,
-                B = $~"Segment (less or equal)"(n = m),
-                Y = $~"Segment (less)"(n = m),
-                f = h
-              ),
-              result = $~injective(
-                X = S,
-                Y = $~"Segment (less or equal)"(n = m),
-                f = $~"generalized restriction"(
-                  X = S, A = S,
-                  B = $~"Segment (less or equal)"(n = m),
-                  Y = $~"Segment (less)"(n = m),
-                  f = h
-                )
-              )
-            ))
+            steps = #(_: %UseTheorem($~"Generalized restriction preserves injectivity"(
+              X = S, A = S,
+              B = $~"Segment (less or equal)"(n = m),
+              Y = $~"Segment (less)"(n = m),
+              f = h
+            )))
           }
         )
       )
@@ -407,33 +391,15 @@ $finite(S: %Set): %Predicate {
               f = i
             )
           ),
-          steps = #(_: %UseTheorem(
-            $~"Generalized restriction preserves injectivity"(
-              X = S, A = S,
-              B = $~"Segment (less)"(n = $~sum(
-                m = n,
-                n = $~number(value = 1)
-              )),
-              Y = $~"Segment (less or equal)"(n = n),
-              f = i
-            ),
-            result = $~injective(
-              X = S,
-              Y = $~"Segment (less)"(n = $~sum(
-                m = n,
-                n = $~number(value = 1)
-              )),
-              f = $~"generalized restriction"(
-                X = S, A = S,
-                B = $~"Segment (less)"(n = $~sum(
-                  m = n,
-                  n = $~number(value = 1)
-                )),
-                Y = $~"Segment (less or equal)"(n = n),
-                f = i
-              )
-            )
-          ))
+          steps = #(_: %UseTheorem($~"Generalized restriction preserves injectivity"(
+            X = S, A = S,
+            B = $~"Segment (less)"(n = $~sum(
+              m = n,
+              n = $~number(value = 1)
+            )),
+            Y = $~"Segment (less or equal)"(n = n),
+            f = i
+          )))
         }
       ))
     }

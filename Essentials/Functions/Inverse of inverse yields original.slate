@@ -21,16 +21,7 @@ $"Inverse of inverse yields original"(
         ),
         $identity(X = X)
       ),
-      steps = #(g: %UseTheorem(
-        $inverse(X = X, Y = Y, f = f),
-        result = %equals(
-          $composition(
-            X = X, Y = Y, Z = X, f = f,
-            g = $inverse(X = X, Y = Y, f = f)
-          ),
-          $identity(X = X)
-        )
-      ))
+      steps = #(g: %UseTheorem($inverse(X = X, Y = Y, f = f)))
     }
   ))}]
 }

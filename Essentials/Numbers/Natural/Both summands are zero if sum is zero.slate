@@ -47,7 +47,7 @@ $"Both summands are zero if sum is zero"(
                 _: %Substitute(
                   #(_: %Consider(_3)),
                   1,
-                  %equals(
+                  result = %equals(
                     $sum(
                       m = m,
                       n = $sum(
@@ -70,7 +70,7 @@ $"Both summands are zero if sum is zero"(
     _: %Substitute(
       #(_: %Consider(_2)),
       1,
-      %equals(
+      result = %equals(
         $sum(
           m = m,
           n = $number(value = 0)
@@ -78,7 +78,7 @@ $"Both summands are zero if sum is zero"(
         $number(value = 0)
       )
     ),
-    _: %Unfold(%equals(
+    _: %Unfold(result = %equals(
       m,
       $number(value = 0)
     ))

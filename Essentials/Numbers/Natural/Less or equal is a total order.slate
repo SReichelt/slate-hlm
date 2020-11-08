@@ -116,7 +116,7 @@ $"Less or equal is a total order": %StandardTheorem {
               _4: %Substitute(
                 #(_: %Consider(_3)),
                 2,
-                %equals(
+                result = %equals(
                   $sum(
                     m = %associative($sum(m = m, n = x)),
                     n = y
@@ -149,7 +149,7 @@ $"Less or equal is a total order": %StandardTheorem {
               _: %Substitute(
                 #(_: %Consider(_6)),
                 1,
-                %equals(
+                result = %equals(
                   $sum(
                     m = m,
                     n = $number(value = 0)

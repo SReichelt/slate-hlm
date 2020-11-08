@@ -19,17 +19,11 @@ $"Zero is the unique neutral element of addition"(
         n = m
       )
     )),
-    _: %UseTheorem(
-      $"Addition of a fixed number is injective"(
-        a = n,
-        b = $number(value = 0),
-        c = m,
-        _1 = {proof = {steps = #(_: %Consider(_2))}}
-      ),
-      result = %equals(
-        n,
-        $number(value = 0)
-      )
-    )
+    _: %UseTheorem($"Addition of a fixed number is injective"(
+      a = n,
+      b = $number(value = 0),
+      c = m,
+      _1 = {proof = {steps = #(_: %Consider(_2))}}
+    ))
   )}]
 }

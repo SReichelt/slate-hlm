@@ -29,19 +29,7 @@ $"Sum is associative": %StandardTheorem {
     ),
     steps = #(_: %ProveForAll({
       parameters = #(l,m,n: %Element($"Natural numbers")),
-      steps = #(_: %UseTheorem(
-        $"Sum is associative lemma"(l = l, m = m, n = n),
-        result = %equals(
-          $sum(
-            m = $sum(m = l, n = m),
-            n = n
-          ),
-          $sum(
-            m = l,
-            n = $sum(m = m, n = n)
-          )
-        )
-      ))
+      steps = #(_: %UseTheorem($"Sum is associative lemma"(l = l, m = m, n = n)))
     }))
   }))}]
 }

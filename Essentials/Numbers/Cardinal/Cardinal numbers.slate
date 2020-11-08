@@ -63,10 +63,7 @@ $"Cardinal numbers": %Construction {
           X = $~"Segment (less)"(n = m),
           Y = $~"Segment (less)"(n = n)
         )))),
-        _: %UseTheorem(
-          $"Natural cardinality lemma"(m = m, n = n, f = f),
-          result = %equals(m, n)
-        )
+        _: %UseTheorem($"Natural cardinality lemma"(m = m, n = n, f = f))
       )
     }
   }

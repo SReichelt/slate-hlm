@@ -78,7 +78,7 @@ $Integers: %Construction {
             n = $~number(value = 0)
           )
         )),
-        _: %Unfold(%equals(x, y))
+        _: %Unfold
       )
     }
   }

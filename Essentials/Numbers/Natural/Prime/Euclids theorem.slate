@@ -86,7 +86,7 @@ $"Euclids theorem": %StandardTheorem {
               )
             )),
             1,
-            $~"less or equal"(
+            result = $~"less or equal"(
               m = $~number(value = 1),
               n = $~"indexed by finite set"(
                 X = $~"Natural numbers", ⨂ = $~"iterated product", I = $"Prime numbers",

@@ -23,13 +23,7 @@ $"Sum is commutative": %StandardTheorem {
     ),
     steps = #(_: %ProveForAll({
       parameters = #(m,n: %Element($"Natural numbers")),
-      steps = #(_: %UseTheorem(
-        $"Sum is commutative lemma"(m = m, n = n),
-        result = %equals(
-          $sum(m = m, n = n),
-          $sum(m = n, n = m)
-        )
-      ))
+      steps = #(_: %UseTheorem($"Sum is commutative lemma"(m = m, n = n)))
     }))
   }))}]
 }

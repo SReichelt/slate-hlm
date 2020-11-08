@@ -70,7 +70,7 @@ $"Roots of primes are irrational"(
           )
         )),
         1,
-        %equals(
+        result = %equals(
           p,
           $quotient(
             a = $power(a = b, n = n),
@@ -157,7 +157,7 @@ $"Roots of primes are irrational"(
                 _: %Substitute(
                   #(_: %Consider(_5)),
                   2,
-                  %equals(
+                  result = %equals(
                     $~product(
                       a = p,
                       b = $~power(a = a, n = n)
@@ -171,7 +171,7 @@ $"Roots of primes are irrational"(
                     )
                   )
                 ),
-                _: %Unfold(%equals(
+                _: %Unfold(result = %equals(
                   $~product(
                     a = p,
                     b = $~power(a = a, n = n)
@@ -187,7 +187,7 @@ $"Roots of primes are irrational"(
                 _6: %Substitute(
                   #(_: %Consider(_3)),
                   2,
-                  %equals(
+                  result = %equals(
                     $~product(
                       a = p,
                       b = $~power(a = a, n = n)

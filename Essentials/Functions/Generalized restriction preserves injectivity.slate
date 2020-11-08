@@ -49,7 +49,7 @@ $"Generalized restriction preserves injectivity"(
       ),
       steps = #(
         _: %Consider(_2),
-        _: %Unfold(%equals(
+        _: %Unfold(result = %equals(
           $value(X = X, Y = Y, f = f, x = a),
           $value(X = X, Y = Y, f = f, x = b)
         )),

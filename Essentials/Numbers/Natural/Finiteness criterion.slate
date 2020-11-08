@@ -155,39 +155,26 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                       n = $number(value = 1)
                     ))
                   )))),
-                  _: %UseTheorem(
-                    $"Finiteness criterion lemma"(
-                      M = M, k = k,
-                      f = $~Functions/"generalized restriction"(
-                        X = $~"Segment (less)"(n = $sum(
+                  _: %UseTheorem($"Finiteness criterion lemma"(
+                    M = M, k = k,
+                    f = $~Functions/"generalized restriction"(
+                      X = $~"Segment (less)"(n = $sum(
+                        m = k,
+                        n = $number(value = 1)
+                      )),
+                      Y = M,
+                      A = $~"Segment (less or equal)"(n = k),
+                      B = M,
+                      f = $~Functions/inverse(
+                        X = M,
+                        Y = $~"Segment (less)"(n = $sum(
                           m = k,
                           n = $number(value = 1)
                         )),
-                        Y = M,
-                        A = $~"Segment (less or equal)"(n = k),
-                        B = M,
-                        f = $~Functions/inverse(
-                          X = M,
-                          Y = $~"Segment (less)"(n = $sum(
-                            m = k,
-                            n = $number(value = 1)
-                          )),
-                          f = f
-                        )
-                      )
-                    ),
-                    result = %exists(
-                      #(m: %Element(M)),
-                      formula = $~"greatest element"(
-                        S = $"Natural numbers",
-                        ⪯ = $~Relations(S = $"Natural numbers", T = $"Natural numbers").relation(_1 = {
-                            #(m,n: %Element($"Natural numbers")),
-                            {p = $"less or equal"(m = m, n = n)}
-                        }),
-                        T = M, t = m
+                        f = f
                       )
                     )
-                  )
+                  ))
                 )
               },
               rewrite = %true
@@ -277,11 +264,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                     ),
                     _: %Substitute(
                       #(_: %Consider(_2)),
-                      2,
-                      %sub(
-                        M,
-                        $~"Segment (less or equal)"(n = $number(value = 0))
-                      )
+                      2
                     )
                   )
                 }
@@ -343,14 +326,11 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
           $Subsets/"Initial segments are finite"(n = b),
           result = $~finite(S = $~"Segment (less)"(n = b))
         ),
-        _: %UseTheorem(
-          $~Sets/"Subsets of finite sets are finite"(
-            S = $~"Segment (less)"(n = b),
-            _1 = {{steps = #(_: %Consider(_2))}},
-            T = M
-          ),
-          result = $~finite(S = M)
-        )
+        _: %UseTheorem($~Sets/"Subsets of finite sets are finite"(
+          S = $~"Segment (less)"(n = b),
+          _1 = {{steps = #(_: %Consider(_2))}},
+          T = M
+        ))
       )
     }
   ]

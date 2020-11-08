@@ -43,7 +43,7 @@ $"Generalized extension preserves surjectivity"(
         )),
         _: %UseForAll({b = y}),
         _: %UseExists(#(a: %Element(A))),
-        _: %Unfold(%equals(
+        _: %Unfold(result = %equals(
           $value(X = X, Y = Y, f = f, x = a),
           y
         )),

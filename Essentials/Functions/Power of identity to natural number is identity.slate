@@ -69,20 +69,10 @@ $"Power of identity to natural number is identity"(
                 ),
                 $identity(X = X)
               ),
-              proof = {steps = #(_: %UseTheorem(
-                $"Left composition with identity is neutral"(
-                  X = X, Y = X,
-                  f = $identity(X = X)
-                ),
-                result = %equals(
-                  $composition(
-                    X = X, Y = X, Z = X,
-                    f = $identity(X = X),
-                    g = $identity(X = X)
-                  ),
-                  $identity(X = X)
-                )
-              ))}
+              proof = {steps = #(_: %UseTheorem($"Left composition with identity is neutral"(
+                X = X, Y = X,
+                f = $identity(X = X)
+              )))}
             )
           )
         },
