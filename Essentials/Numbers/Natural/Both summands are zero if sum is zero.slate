@@ -7,8 +7,80 @@ $"Both summands are zero if sum is zero"(
     $number(value = 0)
   ))
 ): %StandardTheorem {
-  claim = %and(%equals(
+  claim = %equals(
     m, n,
     $number(value = 0)
-  ))
+  ),
+  proofs = [{steps = #(
+    _2: %State(
+      %equals(
+        n,
+        $number(value = 0)
+      ),
+      proof = {steps = #(_: %ProveByInduction(
+        n, $"Natural numbers",
+        [
+          {
+            constructor = $"Natural numbers".zero,
+            value = {
+              parameters = #(_: %Constraint(%equals(
+                n,
+                $number(value = 0)
+              ))),
+              steps = #()
+            },
+            rewrite = %true
+          },
+          {
+            constructor = $"Natural numbers".successor,
+            parameters = #(x: %Element($"Natural numbers")),
+            value = {
+              parameters = #(_3: %Constraint(%equals(
+                n,
+                $sum(
+                  m = x,
+                  n = $number(value = 1)
+                )
+              ))),
+              steps = #(
+                _: %Consider(_1),
+                _: %Substitute(
+                  #(_: %Consider(_3)),
+                  1,
+                  %equals(
+                    $sum(
+                      m = m,
+                      n = $sum(
+                        m = x,
+                        n = $number(value = 1)
+                      )
+                    ),
+                    $number(value = 0)
+                  )
+                ),
+                _: %UseDef(result = %or)
+              )
+            },
+            rewrite = %true
+          }
+        ]
+      ))}
+    ),
+    _: %Consider(_1),
+    _: %Substitute(
+      #(_: %Consider(_2)),
+      1,
+      %equals(
+        $sum(
+          m = m,
+          n = $number(value = 0)
+        ),
+        $number(value = 0)
+      )
+    ),
+    _: %Unfold(%equals(
+      m,
+      $number(value = 0)
+    ))
+  )}]
 }
