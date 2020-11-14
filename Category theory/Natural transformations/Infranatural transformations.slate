@@ -80,5 +80,12 @@ $"Infranatural transformations"(
     singularName = 'infranatural transformation',
     pluralName = 'infranatural transformations',
     nameOptional = %true
+  },
+  rewrite = {
+    parameter = #(η: %Element($"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G))),
+    value = $"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G).transformation(_1 = {
+        #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),
+        {n = $component(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G, η = η, 𝐗 = 𝐗)}
+    })
   }
 }

@@ -50,5 +50,12 @@ $Multisets(S: %Set): %Construction {
     parameter = #(𝑻: %Expr),
     singularName = $DependentWord(word = 'multiset', argument = S),
     pluralName = $DependentWord(word = 'multisets', argument = S)
+  },
+  rewrite = {
+    parameter = #(𝑻: %Element($Multisets(S = S))),
+    value = $Multisets(S = S).multiset(_1 = {
+        #(s: %Element(S)),
+        {m = $multiplicity(S = S, 𝑻 = 𝑻, t = s)}
+    })
   }
 }

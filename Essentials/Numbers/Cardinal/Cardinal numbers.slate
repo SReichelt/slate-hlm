@@ -66,5 +66,9 @@ $"Cardinal numbers": %Construction {
         _: %UseTheorem($"Natural cardinality lemma"(m = m, n = n, f = f))
       )
     }
+  },
+  rewrite = {
+    parameter = #(κ: %Element($"Cardinal numbers")),
+    value = $"Cardinal numbers".cardinality(S = $Carrier(κ = κ))
   }
 }

@@ -73,5 +73,12 @@ $Functions(X,Y: %Set): %Construction {
     singularName = 'function',
     pluralName = 'functions',
     nameOptional = %true
+  },
+  rewrite = {
+    parameter = #(f: %Element($Functions(X = X, Y = Y))),
+    value = $Functions(X = X, Y = Y).function(_1 = {
+        #(x: %Element(X)),
+        {y = $value(X = X, Y = Y, f = f, x = x)}
+    })
   }
 }

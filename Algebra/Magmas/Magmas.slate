@@ -1,6 +1,7 @@
 %../../../../logics/hlm%
 
 [
+  $~Essentials = $../../Essentials,
   $~"Inner operations" = $../../Essentials/Operations/"Inner operations"
 ]
 
@@ -31,7 +32,7 @@ $Magmas: %Construction {
         ⋆: %Element($~"Inner operations"(X = N))
       ),
       definition = [%exists(
-        #(φ: %Element($../../Essentials/Functions/Bijections(X = M, Y = N))),
+        #(φ: %Element($~Essentials/Functions/Bijections(X = M, Y = N))),
         formula = $../Generic/Isomorphisms/"inner operation condition"(X = M, Y = N, φ = φ, ∗ = ∗, ⋆ = ⋆)
       )],
       isomorphic = %true
@@ -43,5 +44,19 @@ $Magmas: %Construction {
     parameter = #(𝐌: %Expr),
     singularName = 'magma',
     pluralName = 'magmas'
+  },
+  rewrite = {
+    parameter = #(𝐌: %Element($Magmas)),
+    value = $Magmas.magma(
+      M = $Carrier(𝐌 = 𝐌),
+      ∗ = $~Essentials/Operations/Operations(
+          X = $Carrier(𝐌 = 𝐌),
+          Y = $Carrier(𝐌 = 𝐌),
+          Z = $Carrier(𝐌 = 𝐌)
+        ).operation(_1 = {
+          #(a,b: %Element($Carrier(𝐌 = 𝐌))),
+          {z = $operation(𝐌 = 𝐌, a = a, b = b)}
+      })
+    )
   }
 }

@@ -1,6 +1,7 @@
 %../../../../logics/hlm%
 
 [
+  $~Essentials = $../../Essentials,
   $~"Inner operations" = $../../Essentials/Operations/"Inner operations",
   $~Isomorphisms = $../Generic/Isomorphisms
 ]
@@ -37,7 +38,7 @@ $Monoids: %Construction {
         _2: %Constraint($monoid(M = N, ∗ = ⋆, e = f))
       ),
       definition = [%exists(
-        #(φ: %Element($../../Essentials/Functions/Bijections(X = M, Y = N))),
+        #(φ: %Element($~Essentials/Functions/Bijections(X = M, Y = N))),
         formula = %and(
           $~Isomorphisms/"inner operation condition"(X = M, Y = N, φ = φ, ∗ = ∗, ⋆ = ⋆),
           $~Isomorphisms/"element condition"(X = M, Y = N, φ = φ, x = e, y = f)
@@ -52,5 +53,20 @@ $Monoids: %Construction {
     parameter = #(𝐌: %Expr),
     singularName = 'monoid',
     pluralName = 'monoids'
+  },
+  rewrite = {
+    parameter = #(𝐌: %Element($Monoids)),
+    value = $Monoids.monoid(
+      M = $Carrier(𝐌 = 𝐌),
+      ∗ = $~Essentials/Operations/Operations(
+          X = $Carrier(𝐌 = 𝐌),
+          Y = $Carrier(𝐌 = 𝐌),
+          Z = $Carrier(𝐌 = 𝐌)
+        ).operation(_1 = {
+          #(a,b: %Element($Carrier(𝐌 = 𝐌))),
+          {z = $operation(𝐌 = 𝐌, a = a, b = b)}
+      }),
+      e = $identity(𝐌 = 𝐌)
+    )
   }
 }

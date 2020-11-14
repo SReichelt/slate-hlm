@@ -90,5 +90,15 @@ $Relations(S,T: %Set(auto = %true)): %Construction {
         )}
     }),
     full = %true
+  },
+  rewrite = {
+    parameter = #(≺: %Element($Relations(S = S, T = T))),
+    value = $Relations(S = S, T = T).relation(_1 = {
+        #(
+          s: %Element(S),
+          t: %Element(T)
+        ),
+        {p = $related(S = S, T = T, ≺ = ≺, s = s, t = t)}
+    })
   }
 }

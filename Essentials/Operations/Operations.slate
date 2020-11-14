@@ -115,5 +115,15 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
         )}
     }),
     full = %true
+  },
+  rewrite = {
+    parameter = #(∗: %Element($Operations(X = X, Y = Y, Z = Z))),
+    value = $Operations(X = X, Y = Y, Z = Z).operation(_1 = {
+        #(
+          x: %Element(X),
+          y: %Element(Y)
+        ),
+        {z = $value(X = X, Y = Y, Z = Z, ∗ = ∗, x = x, y = y)}
+    })
   }
 }

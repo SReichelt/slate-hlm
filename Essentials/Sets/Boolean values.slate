@@ -3,12 +3,14 @@
 /**
  * @remarks This definition captures propositions up to equivalence. Since HLM uses classical logic, it can be proved to contain only two values, true and false. It can therefore be used interchangeably with the set `$../Numbers/Natural/Subsets/"Binary digits"` of binary digits.
  *
- * @references * https://en.wikipedia.org/wiki/Truth_value
+ * @references * https://en.wikipedia.org/wiki/Boolean_data_type
  *             * https://proofwiki.org/wiki/Definition:Truth_Value
  *             * https://ncatlab.org/nlab/show/truth+value
+ *             * https://coq.inria.fr/library/Coq.Bool.Bool.html
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#bool
  */
-$"Truth values": %Construction {
-  $"truth value"(p: %Prop): %Constructor {
+$"Boolean values": %Construction {
+  $value(p: %Prop): %Constructor {
     notation = $Parens(body = p, style = '[]'),
     equalityDefinition = {
       leftParameters = #(p: %Prop),
@@ -18,10 +20,9 @@ $"Truth values": %Construction {
     }
   }
 
-  notation = '𝓣𝓻𝓾𝓽𝓱',
-  definitionNotation = {
-    parameter = #(p: %Expr),
-    singularName = 'truth value',
-    pluralName = 'truth values'
+  notation = '𝓑𝓸𝓸𝓵',
+  rewrite = {
+    parameter = #(b: %Element($"Boolean values")),
+    value = $"Boolean values".value(p = $true(b = b))
   }
 }

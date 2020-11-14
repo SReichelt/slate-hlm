@@ -1,6 +1,7 @@
 %../../../../logics/hlm%
 
 [
+  $~Essentials = $../../Essentials,
   $~Functions = $../../Essentials/Functions/Functions,
   $~"Inner operations" = $../../Essentials/Operations/"Inner operations",
   $~Isomorphisms = $../Generic/Isomorphisms
@@ -41,7 +42,7 @@ $Groups: %Construction {
         _2: %Constraint($group(G = H, ∗ = ⋆, e = f, i = j))
       ),
       definition = [%exists(
-        #(φ: %Element($../../Essentials/Functions/Bijections(X = G, Y = H))),
+        #(φ: %Element($~Essentials/Functions/Bijections(X = G, Y = H))),
         formula = %and(
           $~Isomorphisms/"inner operation condition"(X = G, Y = H, φ = φ, ∗ = ∗, ⋆ = ⋆),
           $~Isomorphisms/"element condition"(X = G, Y = H, φ = φ, x = e, y = f),
@@ -57,5 +58,27 @@ $Groups: %Construction {
     parameter = #(𝐆: %Expr),
     singularName = 'group',
     pluralName = 'groups'
+  },
+  rewrite = {
+    parameter = #(𝐆: %Element($Groups)),
+    value = $Groups.group(
+      G = $Carrier(𝐆 = 𝐆),
+      ∗ = $~Essentials/Operations/Operations(
+          X = $Carrier(𝐆 = 𝐆),
+          Y = $Carrier(𝐆 = 𝐆),
+          Z = $Carrier(𝐆 = 𝐆)
+        ).operation(_1 = {
+          #(a,b: %Element($Carrier(𝐆 = 𝐆))),
+          {z = $operation(𝐆 = 𝐆, a = a, b = b)}
+      }),
+      e = $identity(𝐆 = 𝐆),
+      i = $~Functions(
+          X = $Carrier(𝐆 = 𝐆),
+          Y = $Carrier(𝐆 = 𝐆)
+        ).function(_1 = {
+          #(a: %Element($Carrier(𝐆 = 𝐆))),
+          {y = $inverse(𝐆 = 𝐆, a = a)}
+      })
+    )
   }
 }

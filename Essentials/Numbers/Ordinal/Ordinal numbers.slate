@@ -63,5 +63,15 @@ $"Ordinal numbers": %Construction {
         })
       )
     )
+  },
+  rewrite = {
+    parameter = #(α: %Element($"Ordinal numbers")),
+    value = $"Ordinal numbers"."order type"(
+      S = $Carrier(α = α),
+      ⪯ = $~Endorelations(S = $Carrier(α = α)).relation(_1 = {
+          #(a,b: %Element($Carrier(α = α))),
+          {p = $before(α = α, a = a, b = b)}
+      })
+    )
   }
 }

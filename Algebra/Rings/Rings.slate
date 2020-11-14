@@ -3,6 +3,7 @@
 [
   $~Functions = $../../Essentials/Functions/Functions,
   $~"Inner operations" = $../../Essentials/Operations/"Inner operations",
+  $~Operations = $../../Essentials/Operations/Operations,
   $~"element condition" = $../Generic/Isomorphisms/"element condition",
   $~"inner operation condition" = $../Generic/Isomorphisms/"inner operation condition"
 ]
@@ -67,5 +68,36 @@ $Rings: %Construction {
     parameter = #(𝐑: %Expr),
     singularName = 'ring',
     pluralName = 'rings'
+  },
+  rewrite = {
+    parameter = #(𝐑: %Element($Rings)),
+    value = $Rings.ring(
+      R = $Carrier(𝐑 = 𝐑),
+      ⊕ = $~Operations(
+          X = $Carrier(𝐑 = 𝐑),
+          Y = $Carrier(𝐑 = 𝐑),
+          Z = $Carrier(𝐑 = 𝐑)
+        ).operation(_1 = {
+          #(a,b: %Element($Carrier(𝐑 = 𝐑))),
+          {z = $sum(𝐑 = 𝐑, a = a, b = b)}
+      }),
+      "0" = $zero(𝐑 = 𝐑),
+      ⊖ = $~Functions(
+          X = $Carrier(𝐑 = 𝐑),
+          Y = $Carrier(𝐑 = 𝐑)
+        ).function(_1 = {
+          #(a: %Element($Carrier(𝐑 = 𝐑))),
+          {y = $"additive inverse"(𝐑 = 𝐑, a = a)}
+      }),
+      ⊙ = $~Operations(
+          X = $Carrier(𝐑 = 𝐑),
+          Y = $Carrier(𝐑 = 𝐑),
+          Z = $Carrier(𝐑 = 𝐑)
+        ).operation(_1 = {
+          #(a,b: %Element($Carrier(𝐑 = 𝐑))),
+          {z = $product(𝐑 = 𝐑, a = a, b = b)}
+      }),
+      "1" = $one(𝐑 = 𝐑)
+    )
   }
 }

@@ -127,5 +127,43 @@ $"Dependent equality"(
         style = '()'
       )
     ]
+  },
+  rewrite = {
+    parameter = #(≃: %Element($"Dependent equality"(
+      I = I,
+      _1 = {
+        #(i: %Element(I)),
+        {S = S[i = i]}
+      }
+    ))),
+    value = $"Dependent equality"(
+        I = I,
+        _1 = {
+          #(i: %Element(I)),
+          {S = S[i = i]}
+        }
+      ).equality(_2 = {
+        #(
+          a,b: %Element(I),
+          _3: %Constraint(%equals(a, b))
+        ),
+        {≡ = $~Relations(
+            S = S[i = a],
+            T = S[i = b]
+          ).relation(_1 = {
+            #(
+              s: %Element(S[i = a]),
+              t: %Element(S[i = b])
+            ),
+            {p = $"dependently equal"(
+              I = I,
+              _1 = {
+                #(i: %Element(I)),
+                {S = S[i = i]}
+              },
+              ≃ = ≃, a = a, b = b, s = s, t = t
+            )}
+        })}
+    })
   }
 }

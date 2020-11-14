@@ -50,5 +50,12 @@ $Properties(S: %Set(auto = %true)): %Construction {
     singularName = ['property', ' on ', S],
     pluralName = ['properties', ' on ', S],
     nameOptional = %true
+  },
+  rewrite = {
+    parameter = #(p: %Element($Properties(S = S))),
+    value = $Properties(S = S).property(_1 = {
+        #(s: %Element(S)),
+        {p = $"has property"(S = S, p = p, s = s)}
+    })
   }
 }

@@ -1,0 +1,20 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://coq.inria.fr/library/Coq.Bool.Bool.html#Is_true
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/coe.html#coe_bool_to_Prop
+ */
+$true(b: %Element($"Boolean values")): %Predicate {
+  notation = $Property(
+    operand = b,
+    property = %neg('true', 'false')
+  ),
+  definition = [%structural(
+    b, $"Boolean values",
+    [{
+      constructor = $"Boolean values".value,
+      parameters = #(p: %Prop),
+      value = p
+    }]
+  )]
+}

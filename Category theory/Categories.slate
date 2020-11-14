@@ -477,5 +477,33 @@ $Categories(u: %Element($~Essentials/Numbers/Natural/"Natural numbers")): %Const
       $DependentWord(word = 'small', argument = u),
       ' categories'
     ]]
+  },
+  rewrite = {
+    parameter = #(𝓒: %Element($Categories(u = u))),
+    value = $Categories(u = u).category(
+        O = $Objects(u = u, 𝓒 = 𝓒),
+        _1 = {
+          #(𝐀,𝐁: %Element($Objects(u = u, 𝓒 = 𝓒))),
+          {M = $Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐀, 𝐘 = 𝐁)}
+        },
+        _2 = {
+          #(𝐂: %Element($Objects(u = u, 𝓒 = 𝓒))),
+          {i = $identity(u = u, 𝓒 = 𝓒, 𝐗 = 𝐂)}
+        },
+        _3 = {
+          #(𝐃,𝐄,𝐅: %Element($Objects(u = u, 𝓒 = 𝓒))),
+          {∘ = $~Operations(
+              X = $Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐄, 𝐘 = 𝐅),
+              Y = $Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐃, 𝐘 = 𝐄),
+              Z = $Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐃, 𝐘 = 𝐅)
+            ).operation(_1 = {
+              #(
+                g: %Element($Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐄, 𝐘 = 𝐅)),
+                f: %Element($Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐃, 𝐘 = 𝐄))
+              ),
+              {z = $composition(u = u, 𝓒 = 𝓒, 𝐗 = 𝐃, 𝐘 = 𝐄, 𝐙 = 𝐅, f = f, g = g)}
+          })}
+        }
+    )
   }
 }

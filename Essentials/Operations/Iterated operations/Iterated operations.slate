@@ -49,5 +49,15 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
     parameter = #(⨂: %Expr),
     singularName = ['iterated operation', ' on ', X],
     pluralName = ['iterated operations', ' on ', X]
+  },
+  rewrite = {
+    parameter = #(⨂: %Element($"Iterated operations"(X = X))),
+    value = $"Iterated operations"(X = X).operation(
+        ∗ = $../Operations(X = X, Y = X, Z = X).operation(_1 = {
+            #(x,y: %Element(X)),
+            {z = $operation(X = X, ⨂ = ⨂, x = x, y = y)}
+        }),
+        e = $"identity element"(X = X, ⨂ = ⨂)
+    )
   }
 }

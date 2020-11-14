@@ -87,5 +87,38 @@ $"Left modules"(𝐑: %Element($../../Rings)): %Construction {
       'left ',
       $DependentWord(word = 'modules', argument = 𝐑)
     ]]
+  },
+  rewrite = {
+    parameter = #(𝐌: %Element($"Left modules"(𝐑 = 𝐑))),
+    value = $"Left modules"(𝐑 = 𝐑).module(
+        M = $Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+        ⊕ = $~Operations(
+            X = $Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+            Y = $Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+            Z = $Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)
+          ).operation(_1 = {
+            #(x,y: %Element($Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))),
+            {z = $sum(𝐑 = 𝐑, 𝐌 = 𝐌, x = x, y = y)}
+        }),
+        "0" = $zero(𝐑 = 𝐑, 𝐌 = 𝐌),
+        ⊖ = $~Functions(
+            X = $Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+            Y = $Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)
+          ).function(_1 = {
+            #(x: %Element($Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))),
+            {y = $"additive inverse"(𝐑 = 𝐑, 𝐌 = 𝐌, x = x)}
+        }),
+        ⊙ = $~Operations(
+            X = $~Carrier(𝐑 = 𝐑),
+            Y = $Carrier(𝐑 = 𝐑, 𝐌 = 𝐌),
+            Z = $Carrier(𝐑 = 𝐑, 𝐌 = 𝐌)
+          ).operation(_1 = {
+            #(
+              a: %Element($~Carrier(𝐑 = 𝐑)),
+              x: %Element($Carrier(𝐑 = 𝐑, 𝐌 = 𝐌))
+            ),
+            {z = $product(𝐑 = 𝐑, 𝐌 = 𝐌, a = a, x = x)}
+        })
+    )
   }
 }

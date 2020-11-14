@@ -38,5 +38,12 @@ $"Pointed sets": %Construction {
     parameter = #(𝐒: %Expr),
     singularName = 'pointed set',
     pluralName = 'pointed sets'
+  },
+  rewrite = {
+    parameter = #(𝐒: %Element($"Pointed sets")),
+    value = $"Pointed sets"."pointed set"(
+      S = $Carrier(𝐒 = 𝐒),
+      s = $"base point"(𝐒 = 𝐒)
+    )
   }
 }

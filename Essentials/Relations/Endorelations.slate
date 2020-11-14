@@ -57,5 +57,12 @@ $Endorelations(S: %Set(auto = %true)): %Construction {
         {p = $related(S = S, T = S, ≺ = ≺, s = s, t = t)}
     }),
     full = %true
+  },
+  rewrite = {
+    parameter = #(≺: %Element($Endorelations(S = S))),
+    value = $Endorelations(S = S).relation(_1 = {
+        #(s,t: %Element(S)),
+        {p = $related(S = S, T = S, ≺ = ≺, s = s, t = t)}
+    })
   }
 }

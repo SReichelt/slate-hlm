@@ -2,6 +2,7 @@
 
 [
   $~"Inner operations" = $../../Essentials/Operations/"Inner operations",
+  $~Operations = $../../Essentials/Operations/Operations,
   $~"element condition" = $../Generic/Isomorphisms/"element condition",
   $~"inner operation condition" = $../Generic/Isomorphisms/"inner operation condition"
 ]
@@ -61,5 +62,29 @@ $Semirings: %Construction {
     parameter = #(𝐑: %Expr),
     singularName = 'semiring',
     pluralName = 'semirings'
+  },
+  rewrite = {
+    parameter = #(𝐑: %Element($Semirings)),
+    value = $Semirings.semiring(
+      R = $Carrier(𝐑 = 𝐑),
+      ⊕ = $~Operations(
+          X = $Carrier(𝐑 = 𝐑),
+          Y = $Carrier(𝐑 = 𝐑),
+          Z = $Carrier(𝐑 = 𝐑)
+        ).operation(_1 = {
+          #(a,b: %Element($Carrier(𝐑 = 𝐑))),
+          {z = $sum(𝐑 = 𝐑, a = a, b = b)}
+      }),
+      "0" = $zero(𝐑 = 𝐑),
+      ⊙ = $~Operations(
+          X = $Carrier(𝐑 = 𝐑),
+          Y = $Carrier(𝐑 = 𝐑),
+          Z = $Carrier(𝐑 = 𝐑)
+        ).operation(_1 = {
+          #(a,b: %Element($Carrier(𝐑 = 𝐑))),
+          {z = $product(𝐑 = 𝐑, a = a, b = b)}
+      }),
+      "1" = $one(𝐑 = 𝐑)
+    )
   }
 }
