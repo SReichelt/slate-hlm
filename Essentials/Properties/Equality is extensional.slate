@@ -13,5 +13,59 @@ $"Equality is extensional"(
         $"has property"(S = S, p = p, s = t)
       )
     )
+  ],
+  equivalenceProofs = [
+    {
+      from = 1,
+      to = 2,
+      parameters = #(_1: %Constraint(%equals(s, t))),
+      goal = %forall(
+        #(p: %Element($Properties(S = S))),
+        %equiv(
+          $"has property"(S = S, p = p, s = s),
+          $"has property"(S = S, p = p, s = t)
+        )
+      ),
+      steps = #(_: %ProveBySubstitution(
+        #(_: %Consider(_1)),
+        2,
+        %forall(
+          #(p: %Element($Properties(S = S))),
+          %equiv(
+            $"has property"(S = S, p = p, s = s),
+            $"has property"(S = S, p = p, s = s)
+          )
+        )
+      ))
+    },
+    {
+      from = 2,
+      to = 1,
+      parameters = #(_1: %Constraint(%forall(
+        #(p: %Element($Properties(S = S))),
+        %equiv(
+          $"has property"(S = S, p = p, s = s),
+          $"has property"(S = S, p = p, s = t)
+        )
+      ))),
+      goal = %equals(s, t),
+      steps = #(
+        q: %Def($Properties(S = S).property(_1 = {
+            #(x: %Element(S)),
+            {p = %equals(x, t)}
+        })),
+        _: %Consider(_1),
+        _: %UseForAll({p = q}),
+        _2: %Unfold(result = %equiv(
+          %equals(s, t),
+          %equals(t, t)
+        )),
+        _: %ProveBySubstitution(
+          #(_: %Consider(_2)),
+          1,
+          %equals(t, t)
+        )
+      )
+    }
   ]
 }
