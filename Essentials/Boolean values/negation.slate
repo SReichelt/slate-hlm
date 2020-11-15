@@ -1,0 +1,6 @@
+%../../../../logics/hlm%
+
+$negation(b: %Element($"Boolean values")): %ExplicitOperator {
+  notation = $PrefixUnaryOperator(symbol = '¬', operand = b),
+  definition = [$"Boolean values".value(p = %not($true(b = b)))]
+}

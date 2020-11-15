@@ -1,0 +1,12 @@
+%../../../../logics/hlm%
+
+$negation(
+  S: %Set(auto = %true),
+  p: %Element($Properties(S = S))
+): %ExplicitOperator {
+  notation = $PrefixUnaryOperator(symbol = '¬', operand = p),
+  definition = [$Properties(S = S).property(_1 = {
+      #(s: %Element(S)),
+      {p = %not($"has property"(S = S, p = p, s = s))}
+  })]
+}

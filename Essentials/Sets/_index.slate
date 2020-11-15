@@ -30,8 +30,6 @@ $Sets: %Section {
     %item($"Disjoint union"),
     %item($"Cartesian product"),
     %item($"Power set"),
-    %item($"Boolean values"),
-    %item($true),
     %item($"maximal subset"),
     %subsection($"Generalized operators", 'Generalized operators'),
     %subsection($Choice, 'Choice functions and axioms'),

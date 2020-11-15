@@ -1,0 +1,12 @@
+%../../../../logics/library%
+
+$"Boolean values": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"Boolean values"),
+    %item($true),
+    %item($negation),
+    %item($conjunction),
+    %item($disjunction)
+  ]
+}

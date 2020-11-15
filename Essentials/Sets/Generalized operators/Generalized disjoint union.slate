@@ -5,7 +5,7 @@
 ]
 
 /**
- * @remarks In HLM, the disjoint union additionally needs to be equipped with a "dependent equality" `≃` that allows us to ask whether `%equals(s, t)` given `%equals(j, k)`.
+ * @remarks In HLM, the disjoint union additionally needs to be equipped with a "heterogenous equality" `≃` that allows us to ask whether `%equals(s, t)` given `%equals(j, k)`.
  *
  * @references * https://en.wikipedia.org/wiki/Disjoint_union#Set_theory_definition
  *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#sigma
@@ -16,7 +16,7 @@ $"Generalized disjoint union"(
     #(i: %Element(I)),
     #(S: %Set(auto = %true))
   ),
-  ≃: %Element($~Relations/"Dependent equality"/"Dependent equality"(
+  ≃: %Element($~Relations/"Heterogenous equality"/"Heterogenous equality"(
     I = I,
     _1 = {
       #(i: %Element(I)),
@@ -40,7 +40,7 @@ $"Generalized disjoint union"(
       ),
       definition = [%and(
         %equals(j, k),
-        $~Relations/"Dependent equality"/"dependently equal"(
+        $~Relations/"Heterogenous equality"/equal(
           I = I,
           _1 = {
             #(k: %Element(I)),

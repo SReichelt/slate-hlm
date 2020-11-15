@@ -29,6 +29,6 @@ $Relations: %Section {
     %item($succession, title = 'Succession'),
     %item($"lexicographical order", title = 'Lexicographical order'),
     %subsection($Closures, 'Closures'),
-    %subsection($"Dependent equality", 'Dependent equality')
+    %subsection($"Heterogenous equality", 'Heterogenous equality')
   ]
 }

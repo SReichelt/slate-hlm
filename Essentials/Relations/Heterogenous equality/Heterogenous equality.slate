@@ -12,9 +12,9 @@
  *
  *          E.g. in category theory, `I` may be a set of objects (which are equal whenever they are isomorphic), and `S[i = i]` may be a set of morphisms from or to `i`. To check whether two of these morphisms are equal, one of them first needs to be composed with a specific isomorphism.
  *
- *          Dependent equality is a prerequisite to formalizing arbitrary disjoint unions (see `$../../Sets/"Generalized operators"/"Generalized disjoint union"`).
+ *          In HLM, there is no global heterogenous equality. Instead, generalized disjoint unions aka ∑ types must be parameterized with a specific heterogenous equality (see `$../../Sets/"Generalized operators"/"Generalized disjoint union"`).
  */
-$"Dependent equality"(
+$"Heterogenous equality"(
   I: %Set,
   _1: %Binder(
     #(i: %Element(I)),
@@ -99,7 +99,7 @@ $"Dependent equality"(
   }
 
   notation = $Function(
-    function = '𝓓𝓮𝓹𝓔𝓺',
+    function = '𝓗𝓔𝓺',
     arguments = [$SubSup(
       body = $Parens(body = S, style = '()'),
       sub = $ElementParameter(variable = i, set = I)
@@ -108,7 +108,7 @@ $"Dependent equality"(
   definitionNotation = {
     parameter = #(≃: %Expr),
     singularName = [
-      'dependent equality',
+      'heterogenous equality',
       ' on ',
       S,
       ' ',
@@ -118,7 +118,7 @@ $"Dependent equality"(
       )
     ],
     pluralName = [
-      'dependent equalities',
+      'heterogenous equalities',
       ' on ',
       S,
       ' ',
@@ -129,14 +129,14 @@ $"Dependent equality"(
     ]
   },
   rewrite = {
-    parameter = #(≃: %Element($"Dependent equality"(
+    parameter = #(≃: %Element($"Heterogenous equality"(
       I = I,
       _1 = {
         #(i: %Element(I)),
         {S = S[i = i]}
       }
     ))),
-    value = $"Dependent equality"(
+    value = $"Heterogenous equality"(
         I = I,
         _1 = {
           #(i: %Element(I)),
@@ -155,7 +155,7 @@ $"Dependent equality"(
               s: %Element(S[i = a]),
               t: %Element(S[i = b])
             ),
-            {p = $"dependently equal"(
+            {p = $equal(
               I = I,
               _1 = {
                 #(i: %Element(I)),

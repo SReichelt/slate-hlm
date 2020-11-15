@@ -1,0 +1,9 @@
+%../../../../../logics/library%
+
+$"Heterogenous equality": %Section {
+  logic = 'hlm',
+  items = [
+    %item($"Heterogenous equality"),
+    %item($equal)
+  ]
+}

@@ -1,0 +1,13 @@
+%../../../../logics/hlm%
+
+$conjunction(a,b: %Element($"Boolean values")): %ExplicitOperator {
+  notation = $Operator(
+    symbol = '∧',
+    operands = [a, b],
+    space = ' '
+  ),
+  definition = [$"Boolean values".value(p = %and(
+    $true(b = a),
+    $true(b = b)
+  ))]
+}

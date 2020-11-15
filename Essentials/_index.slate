@@ -4,6 +4,7 @@ $Essentials: %Section {
   logic = 'hlm',
   items = [
     %subsection($Sets, 'Sets'),
+    %subsection($"Boolean values", 'Boolean values'),
     %subsection($Properties, 'Properties'),
     %subsection($Relations, 'Relations'),
     %subsection($Functions, 'Functions'),

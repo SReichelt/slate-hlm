@@ -6,6 +6,7 @@ $Properties: %Section {
     %item($Properties),
     %item($"has property"),
     %item($implies),
+    %item($negation),
     %item($conjunction),
     %item($disjunction),
     %item($"generalized conjunction"),

@@ -1,12 +1,12 @@
 %../../../../../logics/hlm%
 
-$"dependently equal"(
+$equal(
   I: %Set(auto = %true),
   _1: %Binder(
     #(i: %Element(I)),
     #(S: %Set(auto = %true))
   ),
-  ≃: %Element($"Dependent equality"(
+  ≃: %Element($"Heterogenous equality"(
     I = I,
     _1 = {
       #(i: %Element(I)),
@@ -23,7 +23,7 @@ $"dependently equal"(
   ),
   definition = [%structural(
     ≃,
-    $"Dependent equality"(
+    $"Heterogenous equality"(
       I = I,
       _1 = {
         #(i: %Element(I)),
@@ -31,7 +31,7 @@ $"dependently equal"(
       }
     ),
     [{
-      constructor = $"Dependent equality".equality,
+      constructor = $"Heterogenous equality".equality,
       parameters = #(
         _2: %Binder(
           #(
