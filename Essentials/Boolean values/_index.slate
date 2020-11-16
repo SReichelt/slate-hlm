@@ -5,6 +5,10 @@ $"Boolean values": %Section {
   items = [
     %item($"Boolean values"),
     %item($true),
+    %item($false),
+    %item($"is true"),
+    %item($"Set of boolean values only contains true and false"),
+    %item($"Exactly two boolean values", type = 'corollary'),
     %item($negation),
     %item($conjunction),
     %item($disjunction)

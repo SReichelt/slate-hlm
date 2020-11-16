@@ -1,0 +1,114 @@
+%../../../../logics/hlm%
+
+/**
+ * @references * https://coq.inria.fr/library/Coq.Bool.Bool.html#Is_true
+ *             * https://leanprover-community.github.io/mathlib_docs/core/init/coe.html#coe_bool_to_Prop
+ */
+$"is true"(b: %Element($"Boolean values")): %Predicate {
+  notation = $Property(
+    operand = b,
+    property = %neg('true', 'false')
+  ),
+  definition = [
+    %structural(
+      b, $"Boolean values",
+      [{
+        constructor = $"Boolean values".value,
+        parameters = #(p: %Prop),
+        value = p
+      }]
+    ),
+    %equals(b, $true),
+    %not(%equals(b, $false))
+  ],
+  equivalenceProofs = [
+    {
+      from = 1,
+      to = 2,
+      parameters = #(_1: %Constraint(%structural(
+        b, $"Boolean values",
+        [{
+          constructor = $"Boolean values".value,
+          parameters = #(p: %Prop),
+          value = p
+        }]
+      ))),
+      goal = %equals(b, $true),
+      steps = #(_: %UseCases(caseProofs = [{
+        parameters = #(
+          q: %Prop,
+          _2: %Constraint(%equals(
+            b,
+            $"Boolean values".value(p = q)
+          )),
+          _3: %Constraint(q)
+        ),
+        goal = %equals(b, $true),
+        steps = #(_: %ProveBySubstitution(
+          #(_: %Consider(_2)),
+          1,
+          %equals(
+            $"Boolean values".value(p = q),
+            $true
+          ),
+          proof = {steps = #(_: %ProveDef(proof = {
+            goal = q,
+            steps = #()
+          }))}
+        ))
+      }]))
+    },
+    {
+      from = 2,
+      to = 3,
+      parameters = #(_1: %Constraint(%equals(b, $true))),
+      goal = %not(%equals(b, $false)),
+      steps = #(_: %ProveByContradiction({
+        parameters = #(_2: %Constraint(%equals(b, $false))),
+        steps = #(
+          _: %Substitute(
+            #(_: %Consider(_1)),
+            1,
+            result = %equals($true, $false)
+          ),
+          _: %UseDef(result = %equiv(%and, %or))
+        )
+      }))
+    },
+    {
+      from = 3,
+      to = 1,
+      parameters = #(_1: %Constraint(%not(%equals(b, $false)))),
+      goal = %structural(
+        b, $"Boolean values",
+        [{
+          constructor = $"Boolean values".value,
+          parameters = #(p: %Prop),
+          value = p
+        }]
+      ),
+      steps = #(_: %ProveCases(caseProofs = [{
+        parameters = #(
+          q: %Prop,
+          _2: %Constraint(%equals(
+            b,
+            $"Boolean values".value(p = q)
+          ))
+        ),
+        goal = q,
+        steps = #(
+          _: %Consider(_1),
+          _: %Substitute(
+            #(_: %Consider(_2)),
+            1,
+            result = %not(%equals(
+              $"Boolean values".value(p = q),
+              $false
+            ))
+          ),
+          _: %UseDef
+        )
+      }]))
+    }
+  ]
+}

@@ -7,7 +7,7 @@ $disjunction(a,b: %Element($"Boolean values")): %ExplicitOperator {
     space = ' '
   ),
   definition = [$"Boolean values".value(p = %or(
-    $true(b = a),
-    $true(b = b)
+    $"is true"(b = a),
+    $"is true"(b = b)
   ))]
 }

@@ -1,0 +1,6 @@
+%../../../../logics/hlm%
+
+$false: %ExplicitOperator {
+  notation = '⊥',
+  definition = [$"Boolean values".value(p = %or)]
+}

@@ -1,0 +1,46 @@
+%../../../../logics/hlm%
+
+$"Set of boolean values only contains true and false": %StandardTheorem {
+  claim = %setEquals(
+    $"Boolean values",
+    %enumeration($true, $false)
+  ),
+  proofs = [{steps = #(_: %ProveEquivalence([
+    {
+      from = 1,
+      to = 2,
+      steps = #(_: %ProveDef(proof = {
+        goal = %forall(
+          #(b: %Element($"Boolean values")),
+          %in(
+            b,
+            %enumeration($true, $false)
+          )
+        ),
+        steps = #(_: %ProveForAll({
+          parameters = #(b: %Element($"Boolean values")),
+          steps = #(_: %ProveDef(proof = {
+            goal = %or(
+              %equals(b, $true),
+              %equals(b, $false)
+            ),
+            steps = #(_: %ProveByContradiction({
+              to = 1,
+              parameters = #(_1: %Constraint(%not(%equals(b, $false)))),
+              goal = %equals(b, $true),
+              steps = #(_: %State(
+                $"is true"(b = b),
+                proof = {steps = #(_: %ProveDef)}
+              ))
+            }))
+          }))
+        }))
+      }))
+    },
+    {
+      from = 2,
+      to = 1,
+      steps = #()
+    }
+  ]))}]
+}

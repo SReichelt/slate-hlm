@@ -7,7 +7,7 @@ $conjunction(a,b: %Element($"Boolean values")): %ExplicitOperator {
     space = ' '
   ),
   definition = [$"Boolean values".value(p = %and(
-    $true(b = a),
-    $true(b = b)
+    $"is true"(b = a),
+    $"is true"(b = b)
   ))]
 }

@@ -1,0 +1,12 @@
+%../../../../logics/hlm%
+
+[
+  $~Numbers = $../Numbers
+]
+
+$"Exactly two boolean values": %StandardTheorem {
+  claim = %equals(
+    $~Numbers/Cardinal/"Cardinal numbers".cardinality(S = $"Boolean values"),
+    $~Numbers/Natural/number(value = 2)
+  )
+}

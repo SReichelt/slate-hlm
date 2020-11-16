@@ -23,6 +23,6 @@ $"Boolean values": %Construction {
   notation = '𝓑𝓸𝓸𝓵',
   rewrite = {
     parameter = #(b: %Element($"Boolean values")),
-    value = $"Boolean values".value(p = $true(b = b))
+    value = $"Boolean values".value(p = $"is true"(b = b))
   }
 }
