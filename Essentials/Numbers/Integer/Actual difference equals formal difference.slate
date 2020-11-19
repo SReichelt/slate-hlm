@@ -1,7 +1,8 @@
 %../../../../../logics/hlm%
 
 [
-  $~"Natural numbers" = $../Natural/"Natural numbers"
+  $~"Natural numbers" = $../Natural/"Natural numbers",
+  $~sum = $../Natural/sum
 ]
 
 /**
@@ -11,5 +12,34 @@ $"Actual difference equals formal difference"(n,m: %Element($~"Natural numbers")
   claim = %equals(
     $Integers.difference(n = n, m = m),
     $difference(a = n, b = m)
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %equals(
+      $~sum(
+        m = n,
+        n = $~sum(
+          m = $~"Natural numbers".zero,
+          n = m
+        )
+      ),
+      $~sum(m = n, n = m)
+    ),
+    steps = #(_: %ProveBySubstitution(
+      #(_: %UseTheorem(
+        $../Natural/"Left-addition of zero is neutral"(n = m),
+        result = %equals(
+          $~sum(
+            m = $~"Natural numbers".zero,
+            n = m
+          ),
+          m
+        )
+      )),
+      1,
+      %equals(
+        $~sum(m = n, n = m),
+        $~sum(m = n, n = m)
+      )
+    ))
+  }))}]
 }

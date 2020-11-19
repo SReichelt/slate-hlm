@@ -10,5 +10,18 @@ $"Left composition with identity is neutral"(
       g = $identity(X = Y)
     ),
     f
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(x: %Element(X)),
+      %equals(
+        $value(X = X, Y = Y, f = f, x = x),
+        $value(X = X, Y = Y, f = f, x = x)
+      )
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(x: %Element(X)),
+      steps = #()
+    }))
+  }))}]
 }

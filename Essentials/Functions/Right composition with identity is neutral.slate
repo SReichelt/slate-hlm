@@ -11,5 +11,18 @@ $"Right composition with identity is neutral"(
       g = f
     ),
     f
-  )
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(x: %Element(X)),
+      %equals(
+        $value(X = X, Y = Y, f = f, x = x),
+        $value(X = X, Y = Y, f = f, x = x)
+      )
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(x: %Element(X)),
+      steps = #()
+    }))
+  }))}]
 }
