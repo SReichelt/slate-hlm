@@ -24,8 +24,7 @@ $"Addition of a fixed number is injective"(
           steps = #(
             _: %Consider(_1),
             _: %Substitute(
-              #(_: %Consider(_2)),
-              1,
+              _2, 1,
               result = %equals(
                 $sum(
                   m = a,
@@ -55,8 +54,7 @@ $"Addition of a fixed number is injective"(
           steps = #(
             _: %Consider(_1),
             _: %Substitute(
-              #(_: %Consider(_3)),
-              1,
+              _3, 1,
               result = %equals(
                 $sum(
                   m = a,

@@ -53,8 +53,7 @@ $"Sum is associative lemma"(l,m,n: %Element($"Natural numbers")): %StandardTheor
               )
             ),
             _: %ProveBySubstitution(
-              #(_: %Consider(_1)),
-              1,
+              _1, 1,
               %equals(
                 $"Natural numbers".successor(n = $sum(
                   m = l,

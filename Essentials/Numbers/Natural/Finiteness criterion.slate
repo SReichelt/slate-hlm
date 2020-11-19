@@ -262,10 +262,7 @@ $"Finiteness criterion"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
                         $~"Segment (less or equal)"(n = $number(value = 0))
                       )
                     ),
-                    _: %Substitute(
-                      #(_: %Consider(_2)),
-                      2
-                    )
+                    _: %Substitute(_2, 2)
                   )
                 }
               )

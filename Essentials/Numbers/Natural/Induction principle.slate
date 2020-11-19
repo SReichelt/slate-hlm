@@ -133,8 +133,7 @@ $"Induction principle"(M: %Subset($"Natural numbers")): %EquivalenceTheorem {
         )
       ),
       steps = #(_: %ProveBySubstitution(
-        #(_: %Consider(_1)),
-        1,
+        _1, 1,
         %and(
           %in(
             $number(value = 0),

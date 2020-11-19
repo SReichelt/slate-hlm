@@ -166,10 +166,7 @@ $finite(S: %Set): %Predicate {
             }))}
           ),
           _: %Consider(l),
-          _: %Substitute(
-            #(_: %Consider(_1)),
-            1
-          )
+          _: %Substitute(_1, 1)
         )
       }))
     },

@@ -27,8 +27,7 @@ $"Equality is extensional"(
         )
       ),
       steps = #(_: %ProveBySubstitution(
-        #(_: %Consider(_1)),
-        2,
+        _1, 2,
         %forall(
           #(p: %Element($Properties(S = S))),
           %equiv(
@@ -61,8 +60,7 @@ $"Equality is extensional"(
           %equals(t, t)
         )),
         _: %ProveBySubstitution(
-          #(_: %Consider(_2)),
-          1,
+          _2, 1,
           %equals(t, t)
         )
       )

@@ -25,7 +25,7 @@ $"Actual difference equals formal difference"(n,m: %Element($~"Natural numbers")
       $~sum(m = n, n = m)
     ),
     steps = #(_: %ProveBySubstitution(
-      #(_: %UseTheorem(
+      %UseTheorem(
         $../Natural/"Left-addition of zero is neutral"(n = m),
         result = %equals(
           $~sum(
@@ -34,7 +34,7 @@ $"Actual difference equals formal difference"(n,m: %Element($~"Natural numbers")
           ),
           m
         )
-      )),
+      ),
       1,
       %equals(
         $~sum(m = n, n = m),

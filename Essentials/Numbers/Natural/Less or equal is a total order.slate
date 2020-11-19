@@ -114,8 +114,7 @@ $"Less or equal is a total order": %StandardTheorem {
               )),
               _: %UseExists(#(y: %Element($"Natural numbers"))),
               _4: %Substitute(
-                #(_: %Consider(_3)),
-                2,
+                _3, 2,
                 result = %equals(
                   $sum(
                     m = %associative($sum(m = m, n = x)),
@@ -147,8 +146,7 @@ $"Less or equal is a total order": %StandardTheorem {
               ),
               _: %Consider(_3),
               _: %Substitute(
-                #(_: %Consider(_6)),
-                1,
+                _6, 1,
                 result = %equals(
                   $sum(
                     m = m,

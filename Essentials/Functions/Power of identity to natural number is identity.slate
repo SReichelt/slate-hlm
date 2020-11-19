@@ -59,8 +59,7 @@ $"Power of identity to natural number is identity"(
               )
             ),
             _: %ProveBySubstitution(
-              #(_: %Consider(_1)),
-              1,
+              _1, 1,
               %equals(
                 $composition(
                   X = X, Y = X, Z = X,

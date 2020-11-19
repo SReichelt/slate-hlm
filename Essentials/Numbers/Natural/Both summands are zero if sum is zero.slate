@@ -45,8 +45,7 @@ $"Both summands are zero if sum is zero"(
               steps = #(
                 _: %Consider(_1),
                 _: %Substitute(
-                  #(_: %Consider(_3)),
-                  1,
+                  _3, 1,
                   result = %equals(
                     $sum(
                       m = m,
@@ -68,8 +67,7 @@ $"Both summands are zero if sum is zero"(
     ),
     _: %Consider(_1),
     _: %Substitute(
-      #(_: %Consider(_2)),
-      1,
+      _2, 1,
       result = %equals(
         $sum(
           m = m,

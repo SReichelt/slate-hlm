@@ -45,8 +45,7 @@ $"is true"(b: %Element($"Boolean values")): %Predicate {
         ),
         goal = %equals(b, $true),
         steps = #(_: %ProveBySubstitution(
-          #(_: %Consider(_2)),
-          1,
+          _2, 1,
           %equals(
             $"Boolean values".value(p = q),
             $true
@@ -67,8 +66,7 @@ $"is true"(b: %Element($"Boolean values")): %Predicate {
         parameters = #(_2: %Constraint(%equals(b, $false))),
         steps = #(
           _: %Substitute(
-            #(_: %Consider(_1)),
-            1,
+            _1, 1,
             result = %equals($true, $false)
           ),
           _: %UseDef(result = %equiv(%and, %or))
@@ -99,8 +97,7 @@ $"is true"(b: %Element($"Boolean values")): %Predicate {
         steps = #(
           _: %Consider(_1),
           _: %Substitute(
-            #(_: %Consider(_2)),
-            1,
+            _2, 1,
             result = %not(%equals(
               $"Boolean values".value(p = q),
               $false

@@ -50,8 +50,7 @@ $"Sum is commutative lemma"(m,n: %Element($"Natural numbers")): %StandardTheorem
               )
             ),
             _: %ProveBySubstitution(
-              #(_: %Consider(_1)),
-              1,
+              _1, 1,
               %equals(
                 $"Natural numbers".successor(n = $sum(m = x, n = m)),
                 $sum(

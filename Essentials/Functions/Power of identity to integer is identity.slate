@@ -85,7 +85,7 @@ $"Power of identity to integer is identity"(
             $identity(X = X)
           ),
           steps = #(_: %ProveBySubstitution(
-            #(_: %UseTheorem(
+            %UseTheorem(
               $"Identity is its own inverse"(X = X),
               result = %equals(
                 $inverse(
@@ -94,7 +94,7 @@ $"Power of identity to integer is identity"(
                 ),
                 $identity(X = X)
               )
-            )),
+            ),
             1,
             %equals(
               $"power to natural number"(

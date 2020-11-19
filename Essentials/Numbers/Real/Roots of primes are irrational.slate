@@ -56,7 +56,7 @@ $"Roots of primes are irrational"(
         )
       ),
       _: %Substitute(
-        #(_: %UseTheorem(
+        %UseTheorem(
           $"Power base quotient law"(b = b, a = a, n = n),
           result = %equals(
             $power(
@@ -68,7 +68,7 @@ $"Roots of primes are irrational"(
               b = $power(a = a, n = n)
             )
           )
-        )),
+        ),
         1,
         result = %equals(
           p,
@@ -106,7 +106,7 @@ $"Roots of primes are irrational"(
       ),
       _4: %UseTheorem(
         $~"Prime and power divisibility criterion"(p = p, a = b, n = n),
-        input = #(_: %Consider(_7)),
+        input = _7,
         result = $~divisible(a = p, b = b)
       ),
       _8: %State(
@@ -155,8 +155,7 @@ $"Roots of primes are irrational"(
               proof = {steps = #(
                 _: %Consider(_2),
                 _: %Substitute(
-                  #(_: %Consider(_5)),
-                  2,
+                  _5, 2,
                   result = %equals(
                     $~product(
                       a = p,
@@ -185,8 +184,7 @@ $"Roots of primes are irrational"(
                   )
                 )),
                 _6: %Substitute(
-                  #(_: %Consider(_3)),
-                  2,
+                  _3, 2,
                   result = %equals(
                     $~product(
                       a = p,
@@ -232,7 +230,7 @@ $"Roots of primes are irrational"(
       ),
       _: %UseTheorem(
         $~"Prime and power divisibility criterion"(p = p, a = a, n = n),
-        input = #(_: %Consider(_8)),
+        input = _8,
         result = $~divisible(a = p, b = a)
       ),
       _: %State(

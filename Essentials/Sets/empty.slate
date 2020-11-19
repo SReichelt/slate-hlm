@@ -44,8 +44,7 @@ $empty(S: %Set): %Predicate {
         parameters = #(x: %Element(S)),
         steps = #(
           _: %Substitute(
-            #(_: %Consider(_1)),
-            1,
+            _1, 1,
             result = %in(x, $"Empty set")
           ),
           _: %UseDef
@@ -105,8 +104,7 @@ $empty(S: %Set): %Predicate {
             $~"Cardinal numbers".cardinality(S = $"Empty set")
           ),
           proof = {steps = #(_: %ProveBySubstitution(
-            #(_: %Consider(_1)),
-            2,
+            _1, 2,
             %equals(
               $~"Cardinal numbers".cardinality(S = S),
               $~"Cardinal numbers".cardinality(S = S)
@@ -114,10 +112,10 @@ $empty(S: %Set): %Predicate {
           ))}
         ),
         _: %Substitute(
-          #(_: %State(%setEquals(
+          %State(%setEquals(
             $~"Segment (less)"(n = $~number(value = 0)),
             $"Empty set"
-          ))),
+          )),
           2,
           result = %equals(
             $~"Cardinal numbers".cardinality(S = S),
@@ -125,13 +123,13 @@ $empty(S: %Set): %Predicate {
           )
         ),
         _: %Substitute(
-          #(_: %State(
+          %State(
             %equals(
               $~"Cardinal numbers".cardinality(S = $~"Segment (less)"(n = $~number(value = 0))),
               $~number(value = 0)
             ),
             proof = {steps = #(_: %ProveDef)}
-          )),
+          ),
           1
         )
       )
@@ -148,8 +146,7 @@ $empty(S: %Set): %Predicate {
         μ = $~number(value = 0)
       ),
       steps = #(_: %ProveBySubstitution(
-        #(_: %Consider(_1)),
-        1,
+        _1, 1,
         $~"less or equal"(
           κ = $~number(value = 0),
           μ = $~number(value = 0)
