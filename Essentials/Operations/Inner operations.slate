@@ -15,10 +15,7 @@ $"Inner operations"(X: %Set(auto = %true)): %SetOperator {
     notation = $FunctionDeclaration(
       function = ∗,
       operands = [
-        $MultiplicationLikeOperator(
-          symbol = '×',
-          operands = [X, X]
-        ),
+        $CrossOperator(operands = [X, X]),
         X
       ]
     ),

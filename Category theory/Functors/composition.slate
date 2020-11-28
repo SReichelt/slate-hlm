@@ -27,10 +27,7 @@ $composition(
   F: %Element($Functors(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓)),
   G: %Element($Functors(u = v, v = w, 𝓒 = 𝓓, 𝓓 = 𝓔))
 ): %ExplicitOperator {
-  notation = $MultiplicationLikeOperator(
-    symbol = '∘',
-    operands = [G, F]
-  ),
+  notation = $CompositionOperator(operands = [G, F]),
   definition = [$Functors(u = u, v = w, 𝓒 = 𝓒, 𝓓 = 𝓔).functor(
       _1 = {
         #(𝐗: %Element($~Objects(u = u, 𝓒 = 𝓒))),

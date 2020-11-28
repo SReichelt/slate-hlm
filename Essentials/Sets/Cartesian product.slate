@@ -32,8 +32,5 @@ $"Cartesian product"(S,T: %Set(auto = %true, embedSubsets = %true)): %Constructi
     }
   }
 
-  notation = $MultiplicationLikeOperator(
-    symbol = '×',
-    operands = [S, T]
-  )
+  notation = $CrossOperator(operands = [S, T])
 }

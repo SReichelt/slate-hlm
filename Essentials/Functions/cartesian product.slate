@@ -12,10 +12,7 @@ $"cartesian product"(
   f: %Element($Functions(X = V, Y = W)),
   g: %Element($Functions(X = X, Y = Y))
 ): %ExplicitOperator {
-  notation = $MultiplicationLikeOperator(
-    symbol = '×',
-    operands = [f, g]
-  ),
+  notation = $CrossOperator(operands = [f, g]),
   definition = [$Functions(
       X = $~"Cartesian product"(S = V, T = X),
       Y = $~"Cartesian product"(S = W, T = Y)

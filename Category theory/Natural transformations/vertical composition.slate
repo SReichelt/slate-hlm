@@ -28,10 +28,7 @@ $"vertical composition"(
   η: %Element($"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = G)),
   ε: %Element($"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = G, G = H))
 ): %ExplicitOperator {
-  notation = $MultiplicationLikeOperator(
-    symbol = '∘',
-    operands = [ε, η]
-  ),
+  notation = $CompositionOperator(operands = [ε, η]),
   definition = [$"Infranatural transformations"(u = u, v = v, 𝓒 = 𝓒, 𝓓 = 𝓓, F = F, G = H).transformation(_1 = {
       #(𝐗: %Element($../Objects(u = u, 𝓒 = 𝓒))),
       {n = $../composition(

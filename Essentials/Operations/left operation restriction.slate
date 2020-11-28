@@ -22,10 +22,7 @@ $"left operation restriction"(
   notation = $PostfixUnaryOperator(
     symbol = $SubSup(
       body = '∣',
-      sub = $MultiplicationLikeOperator(
-        symbol = '×',
-        operands = [X, A]
-      )
+      sub = $CrossOperator(operands = [X, A])
     ),
     operand = ∗,
     minParenLevel = 3

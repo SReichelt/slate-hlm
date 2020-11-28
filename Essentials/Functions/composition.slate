@@ -13,10 +13,7 @@ $composition(
   f: %Element($Functions(X = X, Y = Y)),
   g: %Element($Functions(X = Y, Y = Z))
 ): %ExplicitOperator {
-  notation = $MultiplicationLikeOperator(
-    symbol = '∘',
-    operands = [g, f]
-  ),
+  notation = $CompositionOperator(operands = [g, f]),
   definition = [$Functions(X = X, Y = Z).function(_1 = {
       #(x: %Element(X)),
       {y = $value(

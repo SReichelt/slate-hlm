@@ -17,10 +17,7 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
   )): %Constructor {
     notation = $Parens(
       body = $FunctionBody(
-        domain = $MultiplicationLikeOperator(
-          symbol = '×',
-          operands = [X, Y]
-        ),
+        domain = $CrossOperator(operands = [X, Y]),
         codomain = Z,
         parameter = $Tuple(items = [x, y]),
         value = z
@@ -40,10 +37,7 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
       parameter = #(∗: %Expr),
       notation = $FunctionDefinition(
         function = ∗,
-        domain = $MultiplicationLikeOperator(
-          symbol = '×',
-          operands = [X, Y]
-        ),
+        domain = $CrossOperator(operands = [X, Y]),
         codomain = Z,
         parameter = $Tuple(items = [x, y]),
         value = z
@@ -87,10 +81,7 @@ $Operations(X,Y,Z: %Set(auto = %true)): %Construction {
     notation = $FunctionDeclaration(
       function = ∗,
       operands = [
-        $MultiplicationLikeOperator(
-          symbol = '×',
-          operands = [X, Y]
-        ),
+        $CrossOperator(operands = [X, Y]),
         Z
       ]
     ),

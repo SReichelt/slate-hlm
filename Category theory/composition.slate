@@ -23,10 +23,7 @@ $composition(
   f: %Element($Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐗, 𝐘 = 𝐘)),
   g: %Element($Morphisms(u = u, 𝓒 = 𝓒, 𝐗 = 𝐘, 𝐘 = 𝐙))
 ): %ExplicitOperator {
-  notation = $MultiplicationLikeOperator(
-    symbol = '∘',
-    operands = [g, f]
-  ),
+  notation = $CompositionOperator(operands = [g, f]),
   definition = [%structuralCases(
     𝓒,
     $Categories(u = u),
