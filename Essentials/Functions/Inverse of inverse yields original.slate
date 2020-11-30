@@ -21,7 +21,7 @@ $"Inverse of inverse yields original"(
         ),
         $identity(X = X)
       ),
-      steps = #(g: %UseTheorem($inverse(X = X, Y = Y, f = f)))
+      steps = #(g: %UseImplicitOperator($inverse(X = X, Y = Y, f = f)))
     }
   ))}]
 }

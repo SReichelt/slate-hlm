@@ -12,5 +12,29 @@ $"Application of function and inverse is neutral"(
       x = $value(X = X, Y = Y, f = f, x = x)
     ),
     x
-  )
+  ),
+  proofs = [{steps = #(
+    _: %UseImplicitOperator(
+      $inverse(X = X, Y = Y, f = f),
+      result = %equals(
+        $composition(
+          X = X, Y = Y, Z = X, f = f,
+          g = $inverse(X = X, Y = Y, f = f)
+        ),
+        $identity(X = X)
+      )
+    ),
+    _: %UseDef(result = %forall(
+      #(z: %Element(X)),
+      %equals(
+        $value(
+          X = Y, Y = X,
+          f = $inverse(X = X, Y = Y, f = f),
+          x = $value(X = X, Y = Y, f = f, x = z)
+        ),
+        z
+      )
+    )),
+    _: %UseForAll({z = x})
+  )}]
 }
