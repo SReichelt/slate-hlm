@@ -15,12 +15,12 @@ $"Iterated operations"(X: %Set(auto = %true)): %Construction {
     e: %Element(X),
     _1: %Constraint($~"commutative monoid"(M = X, ∗ = ∗, e = e))
   ): %Constructor {
-    notation = $Parens(
-      body = $Operator(
+    notation = $Constructor(
+      name = 'bigop',
+      arguments = [$Operator(
         symbol = ∗,
         operands = [e, $MiddleEllipsis]
-      ),
-      style = '[]'
+      )]
     ),
     equalityDefinition = {
       leftParameters = #(
