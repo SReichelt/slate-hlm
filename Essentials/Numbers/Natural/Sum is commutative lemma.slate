@@ -18,16 +18,7 @@ $"Sum is commutative lemma"(m,n: %Element($"Natural numbers")): %StandardTheorem
               n = m
             )
           ),
-          steps = #(_: %UseTheorem(
-            $"Left-addition of zero is neutral"(n = m),
-            result = %equals(
-              $sum(
-                m = $"Natural numbers".zero,
-                n = m
-              ),
-              m
-            )
-          ))
+          steps = #(_: %UseTheorem($"Left-addition of zero is neutral"(n = m)))
         }
       },
       {
@@ -58,16 +49,7 @@ $"Sum is commutative lemma"(m,n: %Element($"Natural numbers")): %StandardTheorem
                   n = m
                 )
               ),
-              proof = {steps = #(_: %UseTheorem(
-                $"Successor can be pulled over addition"(m = x, n = m),
-                result = %equals(
-                  $sum(
-                    m = $"Natural numbers".successor(n = x),
-                    n = m
-                  ),
-                  $"Natural numbers".successor(n = $sum(m = x, n = m))
-                )
-              ))}
+              proof = {steps = #(_: %UseTheorem($"Successor can be pulled over addition"(m = x, n = m)))}
             )
           )
         }
