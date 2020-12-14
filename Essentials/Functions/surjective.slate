@@ -5,7 +5,7 @@
  *             * https://mathworld.wolfram.com/Surjection.html
  *             * https://proofwiki.org/wiki/Definition:Surjection
  *             * https://ncatlab.org/nlab/show/surjection
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.surjective
+ *             * https://leanprover-community.github.io/mathlib_docs/init/function.html#function.surjective
  */
 $surjective(
   X,Y: %Set(auto = %true),

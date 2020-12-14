@@ -5,7 +5,7 @@
 ]
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.le_of_dvd
+ * @references * https://leanprover-community.github.io/mathlib_docs/init/data/nat/lemmas.html#nat.le_of_dvd
  */
 $"Divisors are less or equal"(
   m,n: %Element($~"Positive numbers"),

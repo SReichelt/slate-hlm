@@ -4,7 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Commutative_property
  *             * https://mathworld.wolfram.com/Commutative.html
  *             * https://proofwiki.org/wiki/Definition:Commutative/Operation
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#commutative
+ *             * https://leanprover-community.github.io/mathlib_docs/init/logic.html#commutative
  */
 $commutative(
   X,Z: %Set(auto = %true),

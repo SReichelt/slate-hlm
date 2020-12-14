@@ -2,7 +2,7 @@
 
 /**
  * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.opp
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.neg
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/int/basic.html#int.neg
  */
 $inverse(a: %Element($Integers)): %ExplicitOperator {
   notation = $NegationOperator(operand = a),

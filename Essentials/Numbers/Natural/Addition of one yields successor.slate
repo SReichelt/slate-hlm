@@ -5,7 +5,7 @@
  *
  *          The proof works by unfolding the definitions of `$sum` and 1.
  *
- * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.add_one
+ * @references * https://leanprover-community.github.io/mathlib_docs/init/data/nat/basic.html#nat.add_one
  */
 $"Addition of one yields successor"(n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(

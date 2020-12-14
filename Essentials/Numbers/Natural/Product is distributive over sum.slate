@@ -5,7 +5,7 @@
 ]
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.distrib
+ * @references * https://leanprover-community.github.io/mathlib_docs/init/data/nat/lemmas.html#nat.distrib
  */
 $"Product is distributive over sum": %StandardTheorem {
   claim = $../../Operations/distributive(

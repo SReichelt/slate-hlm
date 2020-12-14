@@ -2,7 +2,7 @@
 
 /**
  * @references * https://coq.inria.fr/library/Coq.Bool.Bool.html#Is_true
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/coe.html#coe_bool_to_Prop
+ *             * https://leanprover-community.github.io/mathlib_docs/init/coe.html#coe_bool_to_Prop
  */
 $"is true"(b: %Element($"Boolean values")): %Predicate {
   notation = $Property(

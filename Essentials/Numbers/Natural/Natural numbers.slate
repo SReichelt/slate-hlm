@@ -11,7 +11,7 @@
  *             * https://ncatlab.org/nlab/show/natural+number
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html
  *             * https://coq.inria.fr/library/Coq.NArith.BinNat.html
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#nat
+ *             * https://leanprover-community.github.io/mathlib_docs/init/core.html#nat
  *             * http://oeis.org/A001477
  */
 $"Natural numbers": %Construction {

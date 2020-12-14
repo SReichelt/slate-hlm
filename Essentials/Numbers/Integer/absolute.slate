@@ -9,7 +9,7 @@
  *             * https://mathworld.wolfram.com/AbsoluteValue.html
  *             * https://proofwiki.org/wiki/Definition:Absolute_Value
  *             * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.abs
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.nat_abs
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/int/basic.html#int.nat_abs
  */
 $absolute(a: %Element($Integers)): %ExplicitOperator {
   notation = $Parens(style = '||', body = a),

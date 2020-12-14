@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Bijection
  *             * https://proofwiki.org/wiki/Bijection_iff_Left_and_Right_Inverse
  *             * https://ncatlab.org/nlab/show/bijection
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.bijective
+ *             * https://leanprover-community.github.io/mathlib_docs/init/function.html#function.bijective
  *             * https://leanprover-community.github.io/mathlib_docs/logic/function/basic.html#function.bijective_iff_has_inverse
  */
 $bijective(

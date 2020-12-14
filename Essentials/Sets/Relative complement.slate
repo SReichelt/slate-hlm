@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Set_Difference
  *             * http://metamath.tirix.org/df-dif.html
  *             * http://metamath.tirix.org/dfdif2.html
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.diff
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/set.html#set.diff
  */
 $"Relative complement"(
   U: %Set(auto = %true),

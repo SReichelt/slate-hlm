@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Preordering
  *             * https://ncatlab.org/nlab/show/preorder
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Preorder
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/order.html#preorder
+ *             * https://leanprover-community.github.io/mathlib_docs/init/algebra/order.html#preorder
  */
 $preorder(
   S: %Set(auto = %true),

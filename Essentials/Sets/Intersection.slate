@@ -9,7 +9,7 @@
  *             * https://ncatlab.org/nlab/show/intersection
  *             * http://metamath.tirix.org/df-in.html
  *             * http://metamath.tirix.org/dfin5.html
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/set.html#set.inter
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/set.html#set.inter
  */
 $Intersection(
   U: %Set(auto = %true),

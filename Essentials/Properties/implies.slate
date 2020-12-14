@@ -4,7 +4,7 @@
  * @remarks This definition is the equivalent of ⊆.
  *
  * @references * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#contains (for endorelations only)
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#subrelation (ditto)
+ *             * https://leanprover-community.github.io/mathlib_docs/init/logic.html#subrelation (ditto)
  */
 $implies(
   S: %Set(auto = %true),

@@ -11,7 +11,7 @@
  *             * https://mathworld.wolfram.com/LexicographicOrder.html
  *             * https://proofwiki.org/wiki/Definition:Lexicographic_Order
  *             * https://ncatlab.org/nlab/show/lexicographic+order
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/wf.html#prod.lex
+ *             * https://leanprover-community.github.io/mathlib_docs/init/wf.html#prod.lex
  */
 $"lexicographical order"(
   S,T: %Set(auto = %true),

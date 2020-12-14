@@ -13,7 +13,7 @@
  *             * https://proofwiki.org/wiki/Definition:Finite_Sequence
  *             * https://ncatlab.org/nlab/show/free+monoid
  *             * https://coq.inria.fr/library/Coq.Init.Datatypes.html#list
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#list
+ *             * https://leanprover-community.github.io/mathlib_docs/init/core.html#list
  */
 $"Finite sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(

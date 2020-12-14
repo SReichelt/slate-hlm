@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.zero_le
+ * @references * https://leanprover-community.github.io/mathlib_docs/init/data/nat/basic.html#nat.zero_le
  */
 $"Zero is the smallest number"(n: %Element($"Natural numbers")): %StandardTheorem {
   claim = $"less or equal"(

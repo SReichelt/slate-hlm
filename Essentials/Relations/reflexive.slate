@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Reflexive_Relation
  *             * https://ncatlab.org/nlab/show/reflexive+relation
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Reflexive
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#reflexive
+ *             * https://leanprover-community.github.io/mathlib_docs/init/logic.html#reflexive
  */
 $reflexive(
   S: %Set(auto = %true),

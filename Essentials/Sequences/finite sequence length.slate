@@ -2,7 +2,7 @@
 
 /**
  * @references * https://coq.inria.fr/library/Coq.Init.Datatypes.html#length
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/list/basic.html#list.length
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/list/basic.html#list.length
  */
 $"finite sequence length"(
   S: %Set(auto = %true),

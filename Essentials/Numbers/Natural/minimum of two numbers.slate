@@ -3,7 +3,7 @@
 /**
  * @references * https://proofwiki.org/wiki/Definition:Min_Operation
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html#min
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/functions.html#min
+ *             * https://leanprover-community.github.io/mathlib_docs/init/algebra/functions.html#min
  */
 $"minimum of two numbers"(m,n: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $Function(

@@ -16,7 +16,7 @@
  *             * https://proofwiki.org/wiki/Definition:Ordered_Tuple/On_Set
  *             * https://ncatlab.org/nlab/show/tuple
  *             * https://coq.inria.fr/library/Coq.Vectors.VectorDef.html
- *             * https://leanprover-community.github.io/mathlib_docs/core/data/vector.html#vector (finite) or https://leanprover-community.github.io/mathlib_docs/data/seq/seq.html#seq (infinite)
+ *             * https://leanprover-community.github.io/mathlib_docs/data/vector.html#vector (finite) or https://leanprover-community.github.io/mathlib_docs/data/seq/seq.html#seq (infinite)
  */
 $Tuples(
   S: %Set(auto = %true),

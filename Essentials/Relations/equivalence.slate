@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Equivalence_Relation
  *             * https://ncatlab.org/nlab/show/equivalence+relation
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Equivalence
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#equivalence
+ *             * https://leanprover-community.github.io/mathlib_docs/init/logic.html#equivalence
  */
 $equivalence(
   S: %Set(auto = %true),

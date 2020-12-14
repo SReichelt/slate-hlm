@@ -6,7 +6,7 @@
  *
  * @references * https://en.wikipedia.org/wiki/Function_(mathematics)#Functional_notation
  *             * https://coq.inria.fr/library/Coq.Program.Basics.html#apply
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.app
+ *             * https://leanprover-community.github.io/mathlib_docs/init/function.html#function.app
  */
 $value(
   X,Y: %Set(auto = %true),

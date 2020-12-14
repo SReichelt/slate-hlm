@@ -7,7 +7,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Monoid#Examples
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.add_monoid
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/nat/lemmas.html#nat.add_monoid
  */
 $"natural numbers with addition": %ExplicitOperator {
   notation = $Tuple(items = ['ℕ', '+']),

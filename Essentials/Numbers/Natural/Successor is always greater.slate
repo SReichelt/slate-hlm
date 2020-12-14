@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.lt_succ_self
+ * @references * https://leanprover-community.github.io/mathlib_docs/init/data/nat/lemmas.html#nat.lt_succ_self
  */
 $"Successor is always greater"(n: %Element($"Natural numbers")): %StandardTheorem {
   claim = $less(

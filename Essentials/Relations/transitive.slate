@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Transitive_Relation
  *             * https://ncatlab.org/nlab/show/transitive+relation
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Transitive
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#transitive
+ *             * https://leanprover-community.github.io/mathlib_docs/init/logic.html#transitive
  */
 $transitive(
   S: %Set(auto = %true),

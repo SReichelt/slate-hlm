@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Natural_Number_Addition_Commutes_with_Zero
  *             * https://coq.inria.fr/library/Coq.Arith.PeanoNat.html#Nat.add_0_l
  *             * https://coq.inria.fr/library/Coq.NArith.BinNat.html#N.add_0_l
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.zero_add
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/nat/basic.html#nat.zero_add
  */
 $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(

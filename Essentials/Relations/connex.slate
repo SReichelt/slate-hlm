@@ -4,7 +4,7 @@
  * @references * https://en.wikipedia.org/wiki/Connex_relation
  *             * https://proofwiki.org/wiki/Definition:Total_Relation
  *             * https://ncatlab.org/nlab/show/total+relation
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#total
+ *             * https://leanprover-community.github.io/mathlib_docs/init/logic.html#total
  */
 $connex(
   S: %Set(auto = %true),

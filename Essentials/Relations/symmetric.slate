@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Symmetric_Relation
  *             * https://ncatlab.org/nlab/show/symmetric+relation
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Symmetric
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#symmetric
+ *             * https://leanprover-community.github.io/mathlib_docs/init/logic.html#symmetric
  */
 $symmetric(
   S: %Set(auto = %true),

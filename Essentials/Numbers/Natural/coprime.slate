@@ -11,7 +11,7 @@
  *             * https://mathworld.wolfram.com/RelativelyPrime.html
  *             * https://proofwiki.org/wiki/Definition:Coprime/Integers
  *             * https://coq.inria.fr/library/Coq.ZArith.Znumtheory.html#rel_prime (for integers)
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/gcd.html#nat.coprime
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/nat/gcd.html#nat.coprime
  */
 $coprime(m,n: %Element($"Natural numbers")): %Predicate {
   notation = $MultiProperty(

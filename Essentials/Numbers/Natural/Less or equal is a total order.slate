@@ -9,7 +9,7 @@
 
 /**
  * @references * https://en.wikipedia.org/wiki/Natural_number#Order
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.linear_order
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/nat/lemmas.html#nat.linear_order
  */
 $"Less or equal is a total order": %StandardTheorem {
   claim = $../../Relations/"total order"(

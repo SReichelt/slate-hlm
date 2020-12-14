@@ -3,7 +3,7 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Proofs_involving_the_addition_of_natural_numbers#Proof_of_associativity
  *             * https://proofwiki.org/wiki/Natural_Number_Addition_is_Associative
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/lemmas.html#nat.add_assoc
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/nat/lemmas.html#nat.add_assoc
  */
 $"Sum is associative": %StandardTheorem {
   claim = $../../Operations/associative(

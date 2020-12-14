@@ -1,5 +1,9 @@
 %../../../../../../logics/hlm%
 
+[
+  $~Integers = $../Integers
+]
+
 $Multiples(n: %Element($../../Natural/"Natural numbers")): %SetOperator {
   notation = $Operator(
     symbol = '',
@@ -7,8 +11,14 @@ $Multiples(n: %Element($../../Natural/"Natural numbers")): %SetOperator {
     space = '',
     minParenLevel = 3
   ),
-  definition = [%extendedSubset(
-    #(z: %Element($../Integers)),
-    $../product(a = n, b = z)
-  )]
+  definition = [
+    %extendedSubset(
+      #(z: %Element($~Integers)),
+      $../product(a = n, b = z)
+    ),
+    %subset(
+      #(a: %Element($~Integers)),
+      $../divisible(a = n, b = a)
+    )
+  ]
 }

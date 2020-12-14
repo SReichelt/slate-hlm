@@ -1,7 +1,7 @@
 %../../../../../logics/hlm%
 
 /**
- * @references * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.mul_comm
+ * @references * https://leanprover-community.github.io/mathlib_docs/init/data/int/basic.html#int.mul_comm
  */
 $"Product is commutative": %StandardTheorem {
   claim = $../../Operations/commutative(

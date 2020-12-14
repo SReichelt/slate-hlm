@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Antisymmetric_Relation
  *             * https://ncatlab.org/nlab/show/antisymmetric+relation
  *             * https://coq.inria.fr/library/Coq.Sets.Relations_1.html#Antisymmetric
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/logic.html#anti_symmetric
+ *             * https://leanprover-community.github.io/mathlib_docs/init/logic.html#anti_symmetric
  */
 $antisymmetric(
   S: %Set(auto = %true),

@@ -7,7 +7,7 @@
  *             * https://proofwiki.org/wiki/Definition:Truth_Value
  *             * https://ncatlab.org/nlab/show/truth+value
  *             * https://coq.inria.fr/library/Coq.Bool.Bool.html
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#bool
+ *             * https://leanprover-community.github.io/mathlib_docs/init/core.html#bool
  */
 $"Boolean values": %Construction {
   $value(p: %Prop): %Constructor {

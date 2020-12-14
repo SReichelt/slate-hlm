@@ -5,7 +5,7 @@
  *             * https://proofwiki.org/wiki/Definition:Power_(Algebra)#Natural_Numbers
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html#pow
  *             * https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.pow
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.pow
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/nat/basic.html#nat.pow
  */
 $power(m,n: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $SubSup(body = m, sup = n),

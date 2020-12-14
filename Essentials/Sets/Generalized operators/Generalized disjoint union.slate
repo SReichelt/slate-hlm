@@ -8,7 +8,7 @@
  * @remarks In HLM, the disjoint union additionally needs to be equipped with a "heterogenous equality" `≃` that allows us to ask whether `%equals(s, t)` given `%equals(j, k)`.
  *
  * @references * https://en.wikipedia.org/wiki/Disjoint_union#Set_theory_definition
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#sigma
+ *             * https://leanprover-community.github.io/mathlib_docs/init/core.html#sigma
  */
 $"Generalized disjoint union"(
   I: %Set,

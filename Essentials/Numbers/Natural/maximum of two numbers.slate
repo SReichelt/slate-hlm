@@ -3,7 +3,7 @@
 /**
  * @references * https://proofwiki.org/wiki/Definition:Max_Operation
  *             * https://coq.inria.fr/library/Coq.Init.Nat.html#max
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/algebra/functions.html#max
+ *             * https://leanprover-community.github.io/mathlib_docs/init/algebra/functions.html#max
  */
 $"maximum of two numbers"(m,n: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $Function(

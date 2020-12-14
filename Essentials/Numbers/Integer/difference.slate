@@ -7,7 +7,7 @@
 
 /**
  * @references * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.sub
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.has_sub
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/int/basic.html#int.has_sub
  */
 $difference(a,b: %Element($Integers)): %ExplicitOperator {
   notation = $SubtractionOperator(operands = [a, b]),

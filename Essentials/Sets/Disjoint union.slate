@@ -11,7 +11,7 @@
  *             * https://mathworld.wolfram.com/DisjointUnion.html
  *             * https://proofwiki.org/wiki/Definition:Disjoint_Union_(Set_Theory)
  *             * https://ncatlab.org/nlab/show/disjoint+union#special_cases
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#sum
+ *             * https://leanprover-community.github.io/mathlib_docs/init/core.html#sum
  */
 $"Disjoint union"(S,T: %Set(auto = %false, embedSubsets = %true)): %Construction {
   $left(s: %Element(S)): %Constructor {

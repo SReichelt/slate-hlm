@@ -11,7 +11,7 @@
  * @references * https://en.wikipedia.org/wiki/Integer#Construction
  *             * https://proofwiki.org/wiki/Definition:Addition/Integers
  *             * https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#Z.add
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/int/basic.html#int.add
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/int/basic.html#int.add
  */
 $sum(a,b: %Element($Integers)): %ExplicitOperator {
   notation = $AdditionOperator(operands = [a, b]),

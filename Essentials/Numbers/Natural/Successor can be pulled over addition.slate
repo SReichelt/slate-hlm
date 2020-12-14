@@ -3,7 +3,7 @@
 /**
  * @references * https://coq.inria.fr/library/Coq.Arith.PeanoNat.html#Nat.add_succ_l
  *             * https://coq.inria.fr/library/Coq.NArith.BinNat.html#N.add_succ_l
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/data/nat/basic.html#nat.succ_add
+ *             * https://leanprover-community.github.io/mathlib_docs/init/data/nat/basic.html#nat.succ_add
  */
 $"Successor can be pulled over addition"(m,n: %Element($"Natural numbers")): %StandardTheorem {
   claim = %equals(

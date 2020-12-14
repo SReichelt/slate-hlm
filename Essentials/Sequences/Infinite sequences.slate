@@ -17,7 +17,7 @@
  *             * https://proofwiki.org/wiki/Definition:Sequence/Infinite_Sequence
  *             * https://ncatlab.org/nlab/show/sequence
  *             * https://coq.inria.fr/library/Coq.Lists.Streams.html#Stream
- *             * https://leanprover-community.github.io/mathlib_docs/core/data/stream.html#stream
+ *             * https://leanprover-community.github.io/mathlib_docs/data/stream.html#stream
  */
 $"Infinite sequences"(S: %Set(auto = %true)): %Construction {
   $sequence(_1: %Binder(

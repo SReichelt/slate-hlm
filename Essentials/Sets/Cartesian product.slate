@@ -7,7 +7,7 @@
  *             * https://mathworld.wolfram.com/CartesianProduct.html
  *             * https://proofwiki.org/wiki/Definition:Cartesian_Product
  *             * https://ncatlab.org/nlab/show/cartesian+product
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/core.html#prod
+ *             * https://leanprover-community.github.io/mathlib_docs/init/core.html#prod
  */
 $"Cartesian product"(S,T: %Set(auto = %true, embedSubsets = %true)): %Construction {
   $pair(

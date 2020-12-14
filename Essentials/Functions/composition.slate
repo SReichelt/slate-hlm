@@ -6,7 +6,7 @@
  *             * https://proofwiki.org/wiki/Definition:Composition_of_Mappings
  *             * https://ncatlab.org/nlab/show/composition
  *             * https://coq.inria.fr/library/Coq.Program.Basics.html#compose
- *             * https://leanprover-community.github.io/mathlib_docs/core/init/function.html#function.comp
+ *             * https://leanprover-community.github.io/mathlib_docs/init/function.html#function.comp
  */
 $composition(
   X,Y,Z: %Set(auto = %true),
