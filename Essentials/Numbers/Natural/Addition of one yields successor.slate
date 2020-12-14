@@ -3,8 +3,6 @@
 /**
  * @remarks This proposition justifies the notation for the successor constructor.
  *
- *          The proof works by unfolding the definitions of `$sum` and 1.
- *
  * @references * https://leanprover-community.github.io/mathlib_docs/init/data/nat/basic.html#nat.add_one
  */
 $"Addition of one yields successor"(n: %Element($"Natural numbers")): %StandardTheorem {
@@ -15,11 +13,5 @@ $"Addition of one yields successor"(n: %Element($"Natural numbers")): %StandardT
       n = $number(value = 1)
     )
   ),
-  proofs = [{
-    goal = %equals(
-      $"Natural numbers".successor(n = n),
-      $"Natural numbers".successor(n = n)
-    ),
-    steps = #()
-  }]
+  proofs = [{steps = #()}]
 }

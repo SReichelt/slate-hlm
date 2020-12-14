@@ -21,13 +21,7 @@ $"Power of identity to natural number is identity"(
     [
       {
         constructor = $~"Natural numbers".zero,
-        value = {
-          goal = %equals(
-            $identity(X = X),
-            $identity(X = X)
-          ),
-          steps = #()
-        },
+        value = {steps = #()},
         rewrite = %true
       },
       {

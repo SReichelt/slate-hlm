@@ -21,13 +21,7 @@ $"Left-addition of zero is neutral"(n: %Element($"Natural numbers")): %StandardT
     [
       {
         constructor = $"Natural numbers".zero,
-        value = {
-          goal = %equals(
-            $"Natural numbers".zero,
-            $"Natural numbers".zero
-          ),
-          steps = #()
-        }
+        value = {steps = #()}
       },
       {
         constructor = $"Natural numbers".successor,
