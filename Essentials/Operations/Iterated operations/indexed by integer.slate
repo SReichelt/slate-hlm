@@ -4,6 +4,7 @@
   $~Integers = $../../Numbers/Integer/Integers,
   $~Numbers = $../../Numbers,
   $~difference = $../../Numbers/Integer/difference,
+  $~"maximum of two numbers" = $../../Numbers/Integer/"maximum of two numbers",
   $~number = $../../Numbers/Natural/number,
   $~sum = $../../Numbers/Integer/sum
 ]
@@ -26,14 +27,20 @@ $"indexed by integer"(
   ),
   definition = [$"indexed by natural number"(
     X = X, ⨂ = ⨂,
-    n = $~sum(
-      a = %associative($~difference(a = k, b = j)),
-      b = $~number(value = 1)
-    ),
-    _1 = {
-      #(i: %Element($~Numbers/Natural/Subsets/"Segment (less)"(n = $~sum(
+    n = $~"maximum of two numbers"(
+      a = $~sum(
         a = %associative($~difference(a = k, b = j)),
         b = $~number(value = 1)
+      ),
+      b = $~number(value = 0)
+    ),
+    _1 = {
+      #(i: %Element($~Numbers/Natural/Subsets/"Segment (less)"(n = $~"maximum of two numbers"(
+        a = $~sum(
+          a = %associative($~difference(a = k, b = j)),
+          b = $~number(value = 1)
+        ),
+        b = $~number(value = 0)
       )))),
       {a = a[i = $~sum(a = i, b = j)]}
     }

@@ -1,0 +1,26 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Max_Operation
+ *             * https://coq.inria.fr/library/Coq.Init.Nat.html#max
+ *             * https://leanprover-community.github.io/mathlib_docs/init/algebra/functions.html#max
+ */
+$"maximum of two numbers"(a,b: %Element($Integers)): %ExplicitOperator {
+  notation = $Function(
+    function = 'max',
+    arguments = [a, b]
+  ),
+  definition = [
+    $maximum(S = %enumeration(a, b)),
+    %cases([
+      {
+        formula = $"less or equal"(b = a, a = b),
+        value = a
+      },
+      {
+        formula = $less(a = a, b = b),
+        value = b
+      }
+    ])
+  ]
+}

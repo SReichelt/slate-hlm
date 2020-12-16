@@ -24,6 +24,10 @@ $Integer: %Section {
     %item($"Addition of a fixed number is injective"),
     %item($"Multiplication of a nonzero number is injective"),
     %item($"Power base product law"),
+    %item($minimum),
+    %item($"minimum of two numbers"),
+    %item($maximum),
+    %item($"maximum of two numbers"),
     %subsection($"Iterated operators", 'Iterated operators'),
     %subsection($Prime, 'Prime Numbers'),
     %item($coprime)

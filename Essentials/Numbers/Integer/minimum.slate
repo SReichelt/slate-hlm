@@ -1,0 +1,39 @@
+%../../../../../logics/hlm%
+
+[
+  $~Sets = $../../Sets
+]
+
+/**
+ * @references * https://en.wikipedia.org/wiki/Maxima_and_minima#In_relation_to_sets
+ *             * https://mathworld.wolfram.com/Minimum.html
+ *             * https://proofwiki.org/wiki/Definition:Minimal/Ordered_Set
+ */
+$minimum(
+  S: %Subset($Integers),
+  _1: %Constraint($~Sets/finite(S = S)),
+  _2: %Constraint(%not($~Sets/empty(S = S)))
+): %ImplicitOperator {
+  notation = $Function(
+    function = 'min',
+    arguments = [S]
+  ),
+  parameter = #(m: %Element(S)),
+  definition = [
+    %forall(
+      #(a: %Element(S)),
+      $"less or equal"(a = m, b = a)
+    ),
+    %forall(
+      #(
+        b: %Element(S),
+        _2: %Constraint($"less or equal"(a = b, b = m))
+      ),
+      %equals(b, m)
+    ),
+    %not(%exists(
+      #(c: %Element(S)),
+      formula = $less(a = c, b = m)
+    ))
+  ]
+}

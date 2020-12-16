@@ -1,0 +1,25 @@
+%../../../../../logics/hlm%
+
+/**
+ * @references * https://proofwiki.org/wiki/Definition:Min_Operation
+ *             * https://leanprover-community.github.io/mathlib_docs/init/algebra/functions.html#min
+ */
+$"minimum of two numbers"(a,b: %Element($Integers)): %ExplicitOperator {
+  notation = $Function(
+    function = 'min',
+    arguments = [a, b]
+  ),
+  definition = [
+    $maximum(S = %enumeration(a, b)),
+    %cases([
+      {
+        formula = $"less or equal"(a = a, b = b),
+        value = a
+      },
+      {
+        formula = $less(b = a, a = b),
+        value = b
+      }
+    ])
+  ]
+}

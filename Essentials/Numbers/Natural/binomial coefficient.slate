@@ -4,7 +4,7 @@
  * @remarks We use this definition of the binomial coefficient because it does not need any well-definedness proof. It can then easily be proved to be equal to the standard definition (see `$"Binomial coefficient equality"`).
  *
  * @references * https://en.wikipedia.org/wiki/Pascal%27s_rule
- *             * https://leanprover-community.github.io/mathlib_docs/data/nat/basic.html#nat.choose
+ *             * https://leanprover-community.github.io/mathlib_docs/data/nat/choose/basic.html#nat.choose
  */
 $"binomial coefficient"(n,k: %Element($"Natural numbers")): %ExplicitOperator {
   notation = $BinomialCoefficient(top = n, bottom = k),
