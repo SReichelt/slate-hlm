@@ -4,8 +4,7 @@
   $~Carrier = $../Carrier,
   $~Natural = $../../../Essentials/Numbers/Natural,
   $~number = $../../../Essentials/Numbers/Natural/number,
-  $~"power to natural number" = $../"power to natural number",
-  $~product = $../product
+  $~"power to natural number" = $../"power to natural number"
 ]
 
 /**
@@ -15,13 +14,10 @@
  *             * https://ncatlab.org/nlab/show/binomial+theorem#combinatorial_interpretation
  *             * https://leanprover-community.github.io/mathlib_docs/data/nat/choose/sum.html#add_pow
  */
-$"Binomial theorem"(
+$"Binomial theorem for commutative semirings"(
   𝐑: %Element($../Semirings),
+  _1: %Constraint($../commutative(𝐑 = 𝐑)),
   a,b: %Element($~Carrier(𝐑 = 𝐑)),
-  _1: %Constraint(%equals(
-    $~product(𝐑 = 𝐑, a = a, b = b),
-    $~product(𝐑 = 𝐑, a = b, b = a)
-  )),
   n: %Element($~Natural/"Natural numbers")
 ): %StandardTheorem {
   claim = %equals(
@@ -43,7 +39,7 @@ $"Binomial theorem"(
         {a = $../"product with natural number"(
           𝐑 = 𝐑,
           n = $~Natural/"binomial coefficient"(n = n, k = k),
-          a = %associative($~product(
+          a = %associative($../product(
             𝐑 = 𝐑,
             a = $~"power to natural number"(
               𝐑 = 𝐑, a = a,
