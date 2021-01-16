@@ -1,0 +1,76 @@
+%../../../../logics/hlm%
+
+$"Composition of injective functions is injective"(
+  X,Y,Z: %Set,
+  f: %Element($Functions(X = X, Y = Y)),
+  _1: %Constraint($injective(X = X, Y = Y, f = f)),
+  g: %Element($Functions(X = Y, Y = Z)),
+  _2: %Constraint($injective(X = Y, Y = Z, f = g))
+): %StandardTheorem {
+  claim = $injective(
+    X = X, Y = Z,
+    f = $composition(X = X, Y = Y, Z = Z, f = f, g = g)
+  ),
+  proofs = [{steps = #(_: %ProveDef(proof = {
+    goal = %forall(
+      #(
+        a,b: %Element(X),
+        _3: %Constraint(%equals(
+          $value(
+            X = Y, Y = Z, f = g,
+            x = $value(X = X, Y = Y, f = f, x = a)
+          ),
+          $value(
+            X = Y, Y = Z, f = g,
+            x = $value(X = X, Y = Y, f = f, x = b)
+          )
+        ))
+      ),
+      %equals(a, b)
+    ),
+    steps = #(_: %ProveForAll({
+      parameters = #(
+        a,b: %Element(X),
+        _4: %Constraint(%equals(
+          $value(
+            X = Y, Y = Z, f = g,
+            x = $value(X = X, Y = Y, f = f, x = a)
+          ),
+          $value(
+            X = Y, Y = Z, f = g,
+            x = $value(X = X, Y = Y, f = f, x = b)
+          )
+        ))
+      ),
+      steps = #(
+        _: %Consider(_2),
+        _7: %UseDef(result = %forall(
+          #(
+            c,d: %Element(Y),
+            _5: %Constraint(%equals(
+              $value(X = Y, Y = Z, f = g, x = c),
+              $value(X = Y, Y = Z, f = g, x = d)
+            ))
+          ),
+          %equals(c, d)
+        )),
+        _7: %UseForAll({
+          c = $value(X = X, Y = Y, f = f, x = a),
+          d = $value(X = X, Y = Y, f = f, x = b)
+        }),
+        _: %Consider(_1),
+        _: %UseDef(result = %forall(
+          #(
+            x,y: %Element(X),
+            _6: %Constraint(%equals(
+              $value(X = X, Y = Y, f = f, x = x),
+              $value(X = X, Y = Y, f = f, x = y)
+            ))
+          ),
+          %equals(x, y)
+        )),
+        _: %UseForAll({x = a, y = b})
+      )
+    }))
+  }))}]
+}
