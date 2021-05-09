@@ -7,7 +7,7 @@
 /**
  * @references * https://en.wikipedia.org/wiki/Maxima_and_minima#In_relation_to_sets
  *             * https://mathworld.wolfram.com/Minimum.html
- *             * https://proofwiki.org/wiki/Definition:Minimal/Ordered_Set
+ *             * https://proofwiki.org/wiki/Definition:Smallest/Ordered_Set
  */
 $minimum(
   S: %Subset($Integers),
